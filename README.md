@@ -19,9 +19,6 @@ Binary packages can be downloaded in the gCube website download section: https:/
 --------
 
 This work has been partially supported by the following European projects:
-
-The projects leading to this software have received funding from a series of    
-European Union programmes including:                                            
 * DILIGENT (FP6, grant no. 004260)                                                 
 * D4Science (FP7, grant no. 212488)
 * D4Science-II (FP7, grant no. 239019)
