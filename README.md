@@ -19,11 +19,17 @@ Binary packages can be downloaded in the gCube website download section: https:/
 --------
 
 This work has been partially supported by the following European projects:
-* DILIGENT (FP6-2003-IST-2)
-* D4Science (FP7-INFRA-2007-1.2.2)
-* D4Science-II (FP7-INFRA-2008-1.2.2)
-* iMarine (FP7-INFRASTRUCTURES-2011-2)
-* EUBrazilOpenBio (FP7-ICT-2011-EU-Brazil) 
-* Parthenos (H2020-INFRADEV-1-2014-1)
-* BlueBridge (H2020-EINFRA-2015-1)
 
+The projects leading to this software have received funding from a series of    
+European Union programmes including:                                            
+* DILIGENT (FP6, grant no. 004260)                                                 
+* D4Science (FP7, grant no. 212488)
+* D4Science-II (FP7, grant no. 239019)
+* ENVRI (FP7, grant no. 283465)
+* EUBrazilOpenBio (FP7, grant no. 288754)
+* iMarine (FP7, grant no. 283644);                                                             
+* BlueBRIDGE (H2020, grant no. 675680)
+* EGIEngage (H2020, grant no. 654142)
+* ENVRIplus (H2020, grant no. 654182)
+* Parthenos (H2020, grant no. 654119)
+* SoBigData (H2020, grant no. 654024)
