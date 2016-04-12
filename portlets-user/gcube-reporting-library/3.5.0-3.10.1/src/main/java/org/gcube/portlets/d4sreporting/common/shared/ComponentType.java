@@ -1,0 +1,45 @@
+package org.gcube.portlets.d4sreporting.common.shared;
+/**
+ * @author Massimiliano Assante, ISTI-CNR - massimiliano.assante@isti.cnr.it
+ */
+public enum ComponentType {
+
+	TOC,
+	BIBLIO,
+	
+	IMAGE, 
+	FAKE_TEXTAREA, 
+	STATIC_IMAGE, 
+	DYNA_IMAGE, 
+	
+	TITLE, 
+	BODY,
+	BODY_NOT_FORMATTED,
+	HEADING_1, 
+	HEADING_2, 
+	HEADING_3, 
+	HEADING_4,
+	HEADING_5,
+	
+	COMMENT,
+	ATTRIBUTE_MULTI,
+	ATTRIBUTE_UNIQUE,
+	ATTRIBUTE,
+	INSTRUCTION,
+	
+	HIDDEN_FIELD,
+	
+	TIME_SERIES,
+	FLEX_TABLE,
+	
+	BODY_TABLE_IMAGE,
+	
+	REPEAT_SEQUENCE,
+	REPEAT_SEQUENCE_DELIMITER,
+	REPEAT_SEQUENCE_INNER,
+	
+	TUPLE,
+	REPORT_REFERENCE,
+		
+	PAGEBREAK;
+}

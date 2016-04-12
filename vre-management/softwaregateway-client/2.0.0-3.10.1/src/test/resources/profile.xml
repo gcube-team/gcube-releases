@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+        <ID/>
+        <Type>Service</Type>
+	<Scopes>
+	      <Scope>/gcube/devsec</Scope>
+	</Scopes>
+        <Profile>
+                <Description>Test profile registration software gateway</Description>
+                <Class>TestProfile</Class>
+                <Name>TestSGClient</Name>
+                <Version>1.0.0</Version>
+                <Packages>
+                        <Software>
+                                <Name>TestPackageName</Name>
+                                <Version>1.0.0</Version>
+                                <MavenCoordinates>
+                                        <groupId>org.gcube.contentmanagement</groupId>
+                                        <artifactId>storage-manager-core</artifactId>
+                                        <version>1.0.0</version>
+                                </MavenCoordinates>
+                                <Shareable level="VO" />
+            			<Type>library</Type>
+                                <Files>
+                                        <File>test-service-1.2.0.jar</File>
+                                </Files>
+                        </Software>
+                </Packages>
+        </Profile>
+</Resource>

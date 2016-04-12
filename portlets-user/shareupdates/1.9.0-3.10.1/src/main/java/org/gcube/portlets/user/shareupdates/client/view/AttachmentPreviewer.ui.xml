@@ -1,0 +1,58 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.image-preview {
+		align: left;
+		margin: 5px;
+		display: inline;
+		height: 40px;
+		width: 40px;
+		overflow: hidden;
+		float: left;
+	}
+	
+	.attach-result {
+		margin-top: 5px;
+		vertical-align: top;
+		display: inline-block;
+		font-size: 10px;
+		font-weight: bold;
+	}
+	
+	.image-result {
+		margin-left: 4px;
+		width: 10px;
+		vertical-align: middle;
+	}
+	
+	.container-style {
+		padding: 5px;
+		font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+		background-clip: border-box;
+		background-color: #FBFBFB;
+		background-image: none;
+		border: 1px solid #DDD;
+		border-radius: 4px;
+		width: 579px;
+		margin: 5px;
+		display: inline-block;
+	}
+	
+	.label-style {
+		overflow-x: hidden;
+		width: 200px
+	}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.container-style}" ui:field="attachmentContainer">
+		<g:Image styleName="{style.image-preview}" ui:field="imagePreview"></g:Image>
+		<g:VerticalPanel styleName="{style.attach-result}">
+			<g:Label ui:field="fileNameLabel" styleName="{style.label-style}"></g:Label>
+			<g:HorizontalPanel ui:field="attachmentResult">
+				<g:Label ui:field="resultLabel"></g:Label>
+				<g:Image styleName="{style.image-result}" ui:field="resultImage"></g:Image>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+		<g:HTML ui:field="deleteAttachment"></g:HTML>
+	</g:HTMLPanel>
+</ui:UiBinder> 

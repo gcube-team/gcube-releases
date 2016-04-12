@@ -1,0 +1,195 @@
+/** Add css rules here for your application. */
+@import url('searchportlet/old-dialog.css');
+
+ .gwt-Button {
+         margin: 7px 5px !important;
+ }
+
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+.deleteButton {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+	background: url(images/field_delete.png) no-repeat;
+	cursor: pointer;
+}
+
+.createFieldButton {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+	background: url(images/field_add.png) no-repeat;
+	cursor: pointer;
+}
+
+.createKeywordButton {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+	background: url(images/keyword_add.png) no-repeat;
+	cursor: pointer;
+}
+
+.deleteKeywordButton {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+	background: url(images/keyword_delete.png) no-repeat;
+	cursor: pointer;
+}
+
+.addSPButton {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+	background: url(images/property_add.png) no-repeat;
+	cursor: pointer;
+}
+
+.addPPButton {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+	background: url(images/property_add.png) no-repeat;
+	cursor: pointer;
+}
+
+.addCapButton {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+	background: url(images/cap_add.png) no-repeat;
+	cursor: pointer;
+}
+
+.refreshButton {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+	background: url(images/refresh.png) no-repeat;
+	cursor: pointer;
+}
+
+.resetButton {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+	background: url(images/reset.png) no-repeat;
+	cursor: pointer;
+}
+
+.email-button {
+	font-size:smaller;
+	background-color: inherit;
+	border: 0px;
+	padding: 0px;
+	cursor: pointer;
+	color: green;
+	text-aling: right;
+}
+
+.dialogBox-message {
+	font-family: Arial Unicode MS,Arial,sans-serif;
+	color: black;
+	direction: ltr;
+    font-size: 12px;
+    padding: 1px;
+}
+
+.dialogBox-footer {
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.gwt-DialogBox.mydialogBox {
+    background-color: #C4D5E8;
+    border: 1px solid #C4D5E8;
+}
+
+.gwt-DialogBox.mydialogBox .dialogTop .dialogTopCenterInner .Caption {
+	background:none;
+	background-color: #C4D5E8;
+	border-width: 0px;
+}
+
+.gwt-DialogBox.mydialogBox .dialogTopLeft {
+	background: none;
+}
+
+.gwt-DialogBox.mydialogBox .dialogTopRight {
+	background: none;
+}
+
+.gwt-DialogBox.mydialogBox .dialogMiddleLeft {
+	background: none;
+}
+
+.gwt-DialogBox.mydialogBox .dialogMiddleRight {
+	background: none;
+}
+
+.gwt-DialogBox.mydialogBox .dialogBottomLeft {
+	background: none;
+}
+
+.gwt-DialogBox.mydialogBox .dialogBottomRight {
+	background: none;
+}
+
+.gwt-DialogBox.mydialogBox .dialogMiddleCenter {
+	background: none;
+}
+
+.gwt-DialogBox.mydialogBox .dialogBottomCenter {
+	background: none;
+}
+
+.gwt-DialogBox.mydialogBox .dialogTop .dialogTopCenterInner {
+	height: 30px;
+	overflow: hidden;
+}
+
+.gwt-TabPanelBottom .myTabPanel {
+	border-top-color: #92C1F0;
+}
+
+/** Most GWT widgets already have a style name defined */
+/*.gwt-DialogBox {
+  background-color: #C4D5E8;
+ background: none repeat-x scroll 0 0 #FFFFFF; 
+  border: medium none;
+	padding-bottom: 4px;
+}
+
+.gwt-DialogBox .Caption {
+	color: #15428B;
+	font: bold 11px tahoma,arial,verdana,sans-serif;
+	font-size: 12px;
+	border-bottom: 1px solid #BBBBBB;
+	border-top: 5px solid #D0E4F6;
+	cursor: default;
+	padding: 4px 4px 4px 8px;
+}*/

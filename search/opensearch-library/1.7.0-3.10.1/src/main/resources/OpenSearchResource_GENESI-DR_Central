@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>46d795f0-a0b6-11df-a728-9d138b2a71fd</ID>
+  <Type>GenericResource</Type>
+  <Scopes>
+    <Scope>/gcube/devsec</Scope>
+  </Scopes>
+  <Profile>
+    <SecondaryType>OpenSearchResource</SecondaryType>
+    <Name>OpenSearchResource_GENESI-DR_Central</Name>
+    <Description>Generic resource containing info for the GENESI-DR central site external repository</Description>
+    <Body>
+      <OpenSearchResource>
+        <name>GENESI-DR</name>
+        <descriptionDocumentURI>http://central-site.genesi-dr.eu/genesi/centralsite/description</descriptionDocumentURI>
+        <brokeredResults>true</brokeredResults>
+        <transformation>
+          <MIMEType>application/atom+xml</MIMEType>
+          <recordSplitXPath>*[local-name()='feed']/*[local-name()='entry']</recordSplitXPath>
+          <XSLTLink>OpenSearchXSLT_GENESI-DR_Central</XSLTLink>
+        </transformation>
+      </OpenSearchResource>
+    </Body>
+  </Profile>
+</Resource>

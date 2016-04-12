@@ -1,0 +1,229 @@
+<%
+/**
+ * Copyright (c) 2000-2011 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+%>
+
+<liferay-ui:toggle-area
+	id="toggle_id_journal_edit_article_extra"
+	showMessage='<%= LanguageUtil.get(pageContext, "advanced") + " &raquo;" %>'
+	hideMessage='<%= "&laquo; " + LanguageUtil.get(pageContext, "basic") %>'
+	align="right"
+>
+	<liferay-ui:panel-container cssClass="journal-extras" extended="<%= false %>" id="journalExtrasPanelContainer" persistState="<%= true %>">
+		<liferay-ui:panel defaultState="open" extended="<%= false %>" id="journalStructurePanel" persistState="<%= true %>" title='<%= LanguageUtil.get(pageContext, "structure") %>'>
+			<aui:fieldset>
+				<div class="journal-form-presentation-label">
+					<aui:input name="structureId" type="hidden" value="<%= structureId %>" />
+					<aui:input name="structureName" type="hidden" value="<%= structureName %>" />
+					<aui:input name="structureDescription" type="hidden" value="<%= structureDescription %>" />
+					<aui:input name="structureXSD" type="hidden" value="<%= JS.encodeURIComponent(structureXSD) %>" />
+
+					<aui:field-wrapper label="name">
+						<span id="<portlet:namespace />structureNameLabel" class="structure-name-label">
+							<%= HtmlUtil.escape(structureName) %>
+
+							<c:if test="<%= Validator.isNotNull(structureId) %>">
+								<span class="default-link">(<a href="javascript:;" id="<portlet:namespace />loadDefaultStructure"><liferay-ui:message key="use-default" /></a>)</span>
+							</c:if>
+						</span>
+					</aui:field-wrapper>
+				</div>
+			</aui:fieldset>
+
+			<div id="<portlet:namespace />structureMessage" class="portlet-msg-alert structure-message aui-helper-hidden">
+				<aui:field-wrapper label="this-structure-has-not-been-saved">
+					<liferay-ui:message key="click-here-to-save-it-now" arguments='<%= new Object[] {"journal-save-structure-trigger", "#"} %>' />
+				</aui:field-wrapper>
+			</div>
+
+			<div class="structure-controls">
+				<span class="structure-buttons">
+					<aui:button cssClass="save-structure-button aui-helper-hidden" name="saveStructureBtn" type="button" value="save" />
+
+					<aui:button cssClass="edit-structure-button" name="editStructureBtn" type="button" value="edit" />
+				</span>
+
+				<span class="structure-links">
+					<a dataChangeStructureUrl="<portlet:renderURL windowState="<%= LiferayWindowState.POP_UP.toString() %>"><portlet:param name="struts_action" value="/journal/select_structure" /><portlet:param name="groupId" value="<%= String.valueOf(themeDisplay.getParentGroupId()) %>" /></portlet:renderURL>" href="javascript:;" id="<portlet:namespace />changeStructureBtn">
+						<liferay-ui:message key="choose" />
+					</a>
+				</span>
+			</div>
+
+			<div id="<portlet:namespace />journalComponentList" class="journal-article-component-list aui-helper-hidden">
+				<div class="component-group form-controls">
+					<div class="component-group-title">
+						<liferay-ui:message key="form-controls" />
+					</div>
+
+					<div class="journal-component journal-component-text" dataType="text">
+						<liferay-ui:message key="text-field" />
+					</div>
+
+					<div class="journal-component journal-component-textbox" dataType="text_box">
+						<liferay-ui:message key="text-box" />
+					</div>
+
+					<div class="journal-component journal-component-textarea" dataType="text_area">
+						<liferay-ui:message key="text-area" />
+					</div>
+
+					<div class="journal-component journal-component-boolean" dataType="boolean">
+						<liferay-ui:message key="checkbox" />
+					</div>
+
+					<div class="journal-component journal-component-list" dataType="list">
+						<liferay-ui:message key="selectbox" />
+					</div>
+
+					<div class="journal-component journal-component-multilist" dataType="multi-list">
+						<liferay-ui:message key="multi-selection-list" />
+					</div>
+				</div>
+
+				<br />
+
+				<div class="component-group form-controls">
+					<div class="component-group-title">
+						<liferay-ui:message key="application-fields" />
+					</div>
+
+					<div class="journal-component journal-component-imagegallery" dataType="image_gallery">
+						<liferay-ui:message key="image-gallery" />
+					</div>
+
+					<div class="journal-component journal-component-image" dataType="image">
+						<liferay-ui:message key="image-uploader" />
+					</div>
+
+					<div class="journal-component journal-component-documentlibrary" dataType="document_library">
+						<liferay-ui:message key="document-library" />
+					</div>
+				</div>
+
+				<br />
+
+				<div class="component-group form-controls">
+					<div class="component-group-title">
+						<liferay-ui:message key="misc" />
+					</div>
+
+					<div class="journal-component journal-component-linktolayout" dataType="link_to_layout">
+						<liferay-ui:message key="link-to-page" />
+					</div>
+
+					<div class="journal-component journal-component-selectionbreak" dataType="selection_break">
+						<liferay-ui:message key="selection-break" />
+					</div>
+				</div>
+			</div>
+		</liferay-ui:panel>
+
+		<liferay-ui:panel defaultState="open" extended="<%= false %>" id="journalTemplatePanel" persistState="<%= true %>" title='<%= LanguageUtil.get(pageContext, "template") %>'>
+			<aui:fieldset>
+				<div class="journal-form-presentation-label">
+					<c:choose>
+						<c:when test="<%= templates.isEmpty() %>">
+							<aui:input name="templateId" type="hidden" value="<%= templateId %>" />
+
+							<div id="selectTemplateMessage"></div>
+
+							<aui:button name="selectTemplateBtn" onClick='<%= renderResponse.getNamespace() + "openTemplateSelector();" %>' type="button" value="select" />
+						</c:when>
+						<c:otherwise>
+							<aui:field-wrapper label="template">
+								<liferay-ui:table-iterator
+									list="<%= templates %>"
+									listType="com.liferay.portlet.journal.model.JournalTemplate"
+									rowLength="3"
+									rowPadding="30"
+								>
+
+									<%
+									boolean templateChecked = false;
+
+									if (templateId.equals(tableIteratorObj.getTemplateId())) {
+										templateChecked = true;
+									}
+
+									if ((tableIteratorPos.intValue() == 0) && Validator.isNull(templateId)) {
+										templateChecked = true;
+									}
+									%>
+
+									<aui:input name='<%= "template" + tableIteratorObj.getTemplateId() + "_xsl" %>' type="hidden" value="<%= JS.encodeURIComponent(tableIteratorObj.getXsl()) %>" />
+
+									<liferay-util:buffer var="templateLabel">
+										<portlet:renderURL var="templateURL">
+											<portlet:param name="struts_action" value="/journal/edit_template" />
+											<portlet:param name="redirect" value="<%= currentURL %>" />
+											<portlet:param name="groupId" value="<%= String.valueOf(tableIteratorObj.getGroupId()) %>" />
+											<portlet:param name="templateId" value="<%= tableIteratorObj.getTemplateId() %>" />
+										</portlet:renderURL>
+
+										<aui:a href="<%= templateURL %>" label="<%= HtmlUtil.escape(tableIteratorObj.getName()) %>" id="structureName" />
+									</liferay-util:buffer>
+
+									<aui:input checked="<%= templateChecked %>" inlineField="<%= true %>" label="<%= templateLabel %>" name="templateId" type="radio" value="<%= tableIteratorObj.getTemplateId() %>" />
+
+									<c:if test="<%= tableIteratorObj.isSmallImage() %>">
+
+										<br />
+
+										<img border="0" hspace="0" src="<%= Validator.isNotNull(tableIteratorObj.getSmallImageURL()) ? tableIteratorObj.getSmallImageURL() : themeDisplay.getPathImage() + "/journal/template?img_id=" + tableIteratorObj.getSmallImageId() + "&t=" + ImageServletTokenUtil.getToken(tableIteratorObj.getSmallImageId()) %>" vspace="0" />
+									</c:if>
+								</liferay-ui:table-iterator>
+							</aui:field-wrapper>
+						</c:otherwise>
+					</c:choose>
+				</div>
+			</aui:fieldset>
+		</liferay-ui:panel>
+
+		<liferay-ui:panel defaultState="closed" extended="<%= false %>" id="journalSchedulePanel" persistState="<%= true %>" title='<%= LanguageUtil.get(pageContext, "schedule") %>'>
+			<liferay-ui:error exception="<%= ArticleDisplayDateException.class %>" message="please-enter-a-valid-display-date" />
+			<liferay-ui:error exception="<%= ArticleExpirationDateException.class %>" message="please-enter-a-valid-expiration-date" />
+
+			<aui:fieldset>
+				<aui:input formName="fm1" name="displayDate" value="<%= displayDate %>" />
+
+				<aui:input disabled="<%= neverExpire %>" formName="fm1" name="expirationDate" value="<%= expirationDate %>" />
+
+				<%
+				String taglibNeverExpireOnClick = renderResponse.getNamespace() + "disableInputDate('expirationDate', this.checked);";
+				%>
+
+				<aui:input inlineLabel="left" label="never-auto-expire" name="neverExpire" value="<%= neverExpire %>" onClick="<%= taglibNeverExpireOnClick %>" type="checkbox" />
+
+				<aui:input disabled="<%= neverReview %>" formName="fm1" name="reviewDate" value="<%= reviewDate %>" />
+
+				<%
+				String taglibNeverReviewOnClick = renderResponse.getNamespace() + "disableInputDate('reviewDate', this.checked);";
+				%>
+
+				<aui:input inlineLabel="left" name="neverReview" value="<%= neverReview %>" onClick="<%= taglibNeverReviewOnClick %>" type="checkbox" />
+			</aui:fieldset>
+		</liferay-ui:panel>
+	</liferay-ui:panel-container>
+</liferay-ui:toggle-area>
+
+<aui:script>
+	function <portlet:namespace />openTemplateSelector() {
+		if (confirm('<%= UnicodeLanguageUtil.get(pageContext, "selecting-a-template-will-change-the-structure,-available-input-fields,-and-available-templates") %>')) {
+			var templateWindow = window.open('<portlet:renderURL windowState="<%= LiferayWindowState.POP_UP.toString() %>"><portlet:param name="struts_action" value="/journal/select_template" /><portlet:param name="groupId" value="<%= String.valueOf(themeDisplay.getParentGroupId()) %>" /></portlet:renderURL>', 'template', 'directories=no,height=640,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,width=680');
+			void('');
+			templateWindow.focus();
+		}
+	}
+</aui:script>

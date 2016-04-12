@@ -1,0 +1,18 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portal.portal-distribution-bundle.3-0-3"
+		date="2014-09-16">
+		<Change>Updated Control Panel theme for hashtags</Change>
+		<Change>Updated gCube Applications Theme for hashtags</Change>
+		<Change>Updated iMarine Applications Theme for hashtags</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.portal-distribution-bundle.3-0-2"
+		date="2014-09-16">
+		<Change>Updated iMarine Applications Theme</Change>
+		<Change>Updated gCube Applications Theme</Change>
+		<Change>Updated portal ext props for sender email</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.portal-distribution-bundle.3-0-0"
+		date="2014-06-12">
+		<Change>Removed gCore</Change>
+	</Changeset>
+</ReleaseNotes>

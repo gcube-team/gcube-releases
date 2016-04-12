@@ -1,0 +1,76 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.search-portlet.1-5-0" date="2010-07-16">
+		<Change>GWT 2 and Liferay support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.1-6-0" date="2010-09-03">
+		<Change>Abstract search is available. Cross collection search is supported without the need of schema selection. 
+		Users can search though a list of common mapped fields depending on the current selected collections</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.1-7-0" date="2010-10-22">
+		<Change> Open search support </Change>
+		<Change> Custom Error Alert Window and error handling </Change>
+		<Change> Browse info messages have changed </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.1-8-0" date="2010-11-08">
+		<Change> Compatible with the new WorkspaceLightTree</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.1-8-1" date="2010-11-26">
+		<Change> Changes regarding the order of execution in some callbacks </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.1-9-0" date="2011-02-07">
+		<Change> Compatible with the new model of HomeLibrary </Change>
+		<Change> User interface redesign. The portlet's GUI has been redesigned to provide a more ease and user friendly environment </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.2-0-0" date="2011-05-06">
+		<Change> Fixed an issue with a pop-up window </Change>
+		<Change> GWT 2.2.0 compatible </Change>
+		<Change> Notification components are updated to be compatible with the GWT 2.2.0 </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.2-1-0" date="2011-07-01">
+		<Change> Compatible with the new Search System </Change>
+		<Change> Browse is enabled for more than one selected collections </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.2-2-0" date="2011-09-02">
+		<Change> Browsing distinct values is available for the new search </Change>
+		<Change> Refine search panel: see results of the same query is available. The way this is achieved is changed </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.2-3-0" date="2011-11-11">
+		<Change> Removed some alert messages and redirect always do the results page independent of the problem </Change>
+	</Changeset>
+		<Changeset component="org.gcube.portlets-user.search-portlet.2-4-0" date="2012-02-17">
+		<Change> GCube Guide tour is added to Search portlet. It also covers the collections portlet </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.2-5-0" date="2012-09-07">
+		<Change> Semantic search integration. A checkbox is added to decide if the native or the semantic results portlet will be used  </Change>
+		<Change> A configuration file is added. If semantic search should be enabled then a record should be added to the file for the specific scope name </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.2-5-1" date="2013-01-18">
+		<Change> Added a fallback solution for GWT2.4 and chrome 24 problem </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.2-5-2" date="2013-03-04">
+		<Change> Semantic search label is changed </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.3-0-0" date="2013-05-29">
+		<Change> SetRanking option is added to exploit fuse </Change>
+		<Change> Project is mavenized </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.3-1-0" date="2013-07-05">
+		<Change> Keep the state of the set ranking, and semantic enrichment options in the current session </Change>
+		<Change> Set to ASL the user's choice for the semantic enrichment in order to submit a different query </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.3-2-0" date="2013-10-21">
+		<Change> GWT version updated </Change>
+		<Change> Updated to the latest versions of HomeLibrary, WorkspaceLightTree and GuidedTour components </Change>
+		<Change> Renamed the portlet to Advanced Search Portlet </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.3-4-0" date="2014-06-04">
+		<Change> Updated the dependencies because of the gcore-free portal </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.3-5-0" date="2014-09-08">
+		<Change> Users can select to search per collection when they submit a search and retrieve the results separately </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.3-5-1" date="2014-10-22">
+		<Change> Updated the way the generic SQL query was submitted. This is used for queries saved to the workspace </Change>
+		<Change> xSearch redirect check box is visible based on the availability of the xSearch service at the current scope </Change>
+	</Changeset>
+</ReleaseNotes>

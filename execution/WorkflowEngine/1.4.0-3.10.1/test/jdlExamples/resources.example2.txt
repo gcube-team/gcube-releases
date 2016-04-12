@@ -1,0 +1,7 @@
+scope : /gcube/devsec
+jdl : Examples/jdl/jdlExample2.jdl
+chokeProgressEvents : false
+chokePerformanceEvents : false
+storePlans : true
+job.sh : Examples/jdl/job.sh
+sig.txt : Examples/jdl/sig.txt

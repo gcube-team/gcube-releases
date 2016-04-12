@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.widgets.fileupload.FileUpload' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/FileUpload/greet" class="org.gcube.portlets.widgets.fileupload.server.GreetingServiceImpl" />
+
+</module>

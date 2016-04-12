@@ -1,0 +1,17 @@
+/** Add css rules here for your application. */
+
+.popup-button {
+	font-size:smaller;
+	background-color: inherit;
+	border: 0px;
+	padding: 0px;
+	cursor: pointer;
+	color: green;
+	text-aling: right;
+}
+
+#UsersDiv .x-grid3-header-offset {
+	width: 100% !important;
+}
+	
+#UsersDiv .x-panel-bwrap > .x-panel-body.x-panel-body-noheader { height: auto !important; }

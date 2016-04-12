@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <OpenSearchResource> 
+            <name>Driver</name>
+            <descriptionDocumentURI>http://88.197.20.212:8280/web/openSearchDescriptor</descriptionDocumentURI>
+            <brokeredResults>false</brokeredResults>
+            <transformation>
+               <MIMEType>application/rss+xml</MIMEType>
+               <recordSplitXPath>*[local-name()='rss']/*[local-name()='channel']/*[local-name()='item']</recordSplitXPath>
+               <recordIdXPath>//*[local-name()='item']/*[local-name()='link']</recordIdXPath> 
+               <presentationInfo>   
+                  <presentable>  
+                     <fieldName>title</fieldName>    
+                     <expression>//*[local-name()='item']/*[local-name()='title']</expression> 
+                  </presentable>    
+                  <presentable>      
+                     <fieldName>creator</fieldName>
+                     <expression>//*[local-name()='item']/*[local-name()='author']</expression> 
+                  </presentable>  
+                  <presentable>      
+                     <fieldName>pubDate</fieldName>       
+                     <expression>//*[local-name()='item']/*[local-name()='pubDate']</expression>  
+                  </presentable>
+               </presentationInfo>                
+            </transformation> 
+</OpenSearchResource>

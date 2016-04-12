@@ -1,0 +1,20 @@
+body {
+	padding-top: 0px !important; 
+}
+
+html > .lfr-dockbar-pinned {
+	padding-top: 3.45em !important;
+}
+
+h1 {
+	font-size:30px !important;
+}
+
+h1.portlet-title {
+	font-size: 24px !important;
+}
+
+
+h1 small {
+	font-size:18px !important;
+}

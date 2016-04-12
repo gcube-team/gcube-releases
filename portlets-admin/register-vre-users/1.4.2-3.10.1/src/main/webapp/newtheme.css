@@ -1,0 +1,85 @@
+.x-menubar {
+	background: #FFF url(images/bg-pattern.png) repeat;
+}
+
+.x-panel-body-noheader {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.x-border-layout-ct {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.x-toolbar {
+	border-color: #226599;
+	background-color: #d0def0;
+}
+
+.x-tab-panel-header, .x-tab-panel-footer  {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px 5px 0 0;
+}
+
+.ext-strict .ext-webkit .x-small-editor .x-form-text {
+    height: 23px !important;
+    padding: 3px 6px;
+    font-size: 14px;
+    color: #999;
+    margin: 1px 0 0 1px;
+    
+}
+
+.x-small-editor .x-form-field-wrap .x-form-trigger {
+   visibility: hidden;
+}
+
+.x-panel-header {
+	background: #FFF url(images/bg-pattern.png) repeat !important;
+}
+
+.x-toolbar .xtb-sep {
+    background-image: none !important;
+    background-color: transparent;
+    margin: -2px;
+}
+
+.x-accordion-hd {
+	background-position: 0 0px;
+}
+
+.x-status-text {
+	color: #226599;
+	font-weight: bold !important;
+}
+
+.x-status-text-panel { 
+	border-color: transparent;
+}
+
+.x-component {
+	color: #226599;
+}
+
+.x-btn button { 
+	color: #226599;
+}
+
+
+.ext-el-mask-msg {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-width: 2px;
+	background-color: #FFF;
+	background-image: none;
+}
+
+.ext-el-mask-msg div {
+	border-color: transparent;
+	background-color: transparent;
+}
+

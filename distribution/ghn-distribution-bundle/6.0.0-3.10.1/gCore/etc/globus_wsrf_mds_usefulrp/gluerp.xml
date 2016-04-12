@@ -1,0 +1,18 @@
+<config xmlns="http://mds.globus.org/2004/10/gluerp-config">
+
+    <defaultProvider>none</defaultProvider>
+
+
+<!--
+
+To enable the use of ganglia to provide cluster information, replace the above
+with the following:
+
+<defaultProvider>java org.globus.mds.usefulrp.glue.GangliaElementProducer</defaultProvider>
+
+
+
+-->
+
+
+</config>

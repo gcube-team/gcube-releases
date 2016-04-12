@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.execution.workflowengine-client-library-lib.1.0.0" date="2013-10-16">
+		<Change>First version of the WorkflowEngine FW Client Library.</Change>
+	</Changeset>
+</ReleaseNotes>

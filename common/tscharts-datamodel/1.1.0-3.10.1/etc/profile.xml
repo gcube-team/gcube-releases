@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../xsd/service.xsd">
+	<ID/>
+	<Type>Library</Type>
+	<Profile>
+		<Description>Data Model Representation for TimeSeries charts</Description>
+		<Class>Common</Class>
+		<Name>TSChartDataModel</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>Data Model Representation for TimeSeries charts</Description>
+				<Name>TSChartDataModel</Name>
+				<Version>1.1.0</Version>
+				<Files>
+					<File>org.gcube.portlets.user.timeseries.charts.support.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

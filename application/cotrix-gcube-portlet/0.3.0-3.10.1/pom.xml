@@ -1,0 +1,212 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>org.cotrix</groupId>
+	<artifactId>cotrix-gcube</artifactId>
+	<version>0.3.0-3.10.1</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>cotrix-gcube-stubs</module>
+		<module>cotrix-gcube-portlet</module>
+		<module>cotrix-gcube-extension</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<dependencyManagement>
+
+		<dependencies>
+
+			<dependency>
+				<groupId>org.cotrix</groupId>
+				<artifactId>cotrix-gcube-stubs</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.cotrix</groupId>
+				<artifactId>cotrix-security</artifactId>
+				<version>${cotrix.version}</version>
+			</dependency>
+			
+			
+			<dependency>
+				<groupId>org.cotrix</groupId>
+				<artifactId>cotrix-io</artifactId>
+				<version>${cotrix.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.cotrix</groupId>
+				<artifactId>cotrix-test-common</artifactId>
+				<version>${cotrix.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.gcube.resources.discovery</groupId>
+				<artifactId>ic-client</artifactId>
+				<version>${ic.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.virtualrepository</groupId>
+				<artifactId>virtual-repository</artifactId>
+				<version>[1.1.0-SNAPSHOT,2.0.0-SNAPSHOT)</version>
+			</dependency>
+			
+			
+			<dependency>
+				<groupId>org.virtualrepository</groupId>
+				<artifactId>virtual-gcube-workspace</artifactId>
+				<version>[1.0.0-SNAPSHOT,2.0.0-SNAPSHOT)</version>
+			</dependency>
+
+		</dependencies>
+
+	</dependencyManagement>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>1.9.5</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<profiles>
+
+		<profile>
+
+			<id>fao-ci</id>
+
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+
+			<properties>
+				<cotrix.version>0.3.0-SNAPSHOT</cotrix.version>
+				<ic.version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</ic.version>
+			</properties>
+
+
+			<repositories>
+
+				<repository>
+					<snapshots />
+					<id>fips-snapshots</id>
+					<name>fips-snapshots</name>
+					<url>http://artifactory.fao.org/artifactory/fips</url>
+				</repository>
+
+				<repository>
+					<id>gcube-releases</id>
+					<name>gCube Releases</name>
+					<url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-releases</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				
+				<repository>
+					<id>gcube-snapshots</id>
+					<name>gCube Snapshots</name>
+					<url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-snapshots</url>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+
+				<repository>
+					<id>gcube-externals</id>
+					<name>gCube Externals</name>
+					<url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-externals</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+
+
+
+			<distributionManagement>
+				<repository>
+					<id>${dm.rel.id}</id>
+					<name>${dm.rel.id-name}</name>
+					<url>${dm.rel.id-url}</url>
+				</repository>
+				<snapshotRepository>
+					<id>${dm.snap.id}</id>
+					<name>${dm.snap.id-name}</name>
+					<url>${dm.snap.id-url}</url>
+				</snapshotRepository>
+			</distributionManagement>
+
+
+
+		</profile>
+		<profile>
+
+			<id>gcube-ci</id>
+
+
+			<properties>
+				<cotrix.version>[0.0.1-SNAPSHOT,1.0.0-SNAPSHOT)</cotrix.version>
+				<ic.version>[1.0.0-SNAPSHOT,2.0.0-SNAPSHOT)</ic.version>
+			</properties>
+
+			<distributionManagement>
+				<snapshotRepository>
+					<id>gcube-snapshots</id>
+					<name>gCube Snapshots</name>
+					<url>http://maven.research-infrastructures.eu:8081/nexus/content/repositories/gcube-snapshots</url>
+				</snapshotRepository>
+			</distributionManagement>
+
+		</profile>
+
+	</profiles>
+
+</project>

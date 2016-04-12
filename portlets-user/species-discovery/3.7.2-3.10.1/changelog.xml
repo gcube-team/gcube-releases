@@ -1,0 +1,102 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.3-7-2"
+		date="15-05-2015">
+		<Change>Changed dateformat at dd-MM-yyyy
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.3-7-1"
+		date="09-12-2014">
+		<Change>Removed openlayers dependency from pom
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.3-7-0"
+		date="04-06-2014">
+		<Change>Updated pom to support new portal configuration (gcube release
+			3.2)
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.3-6-0"
+		date="23-04-2014">
+		<Change>Portlet updated to support service updating</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.3-5-0"
+		date="24-10-2013">
+		<Change>Portlet updated to support GWT 2.5.1</Change>
+		<Change>Ticket 2224: was implemented</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.3-4-0"
+		date="06-09-2013">
+		<Change>Enhancements on GUI of SPD portlet was realized (view last
+			query, new expand button are available)
+		</Change>
+		<Change>The functionalities was updated in order to fit the changes in
+			the service client. New advanced options are now available: "Expand
+			with synonyms", "Unfold the taxa group by".
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.3-3-0"
+		date="09-07-2013">
+		<Change>Bug Fixed: on species classification
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.3-2-0"
+		date="29-05-2013">
+		<Change>Bug Fixed: #612 (SPD: Error when saving csv file in workspace)
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.3-1-0"
+		date="14-04-2013">
+		<Change>Synch with SPD service changes</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.3-0-0"
+		date="05-03-2013">
+		<Change>Ticket #1260: This component has been mavenized</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.2-3-0"
+		date="17-01-2013">
+		<Change>Ticket #986: Species Occurrence jobs / Re-submit job and
+			"info"
+		</Change>
+		<Change>Ticket #1002: SPD portlet persistence refactoring</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.2-2-0"
+		date="30-11-2012">
+		<Change>Ticket #508: Implementation of requirements resulting from
+			ticket #508
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.2-0-0"
+		date="13-09-2012">
+		<Change>Ticket #81: Implementation of requirements resulting from user
+			feedback
+		</Change>
+		<Change>Dynamic clustering of result set items</Change>
+		<Change>Revised the occurrence points visualization strategy through
+			the GIS Viewer
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.1-0-1"
+		date="23-07-2012">
+		<Change>Fixed 447: Map generation fails in Species Discovery Portlet
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.species-discovery.1-0-0"
+		date="04-05-2012">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

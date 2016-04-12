@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID/>
+	<Type>Library</Type>
+	<Profile>
+		<Description>G_CQLParser</Description>
+		<Class>G_CQLParser</Class>
+		<Name>G_CQLParser</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>G_CQLParser</Description>
+				<Name>G_CQLParser</Name>
+				<Version>1.1.0</Version>
+				<Files>
+					<File>G_CQLParser.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

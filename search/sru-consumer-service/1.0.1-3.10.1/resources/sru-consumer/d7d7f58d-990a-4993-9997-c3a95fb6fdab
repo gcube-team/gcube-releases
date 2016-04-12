@@ -1,0 +1,70 @@
+{
+  "presentables": [
+    "id",
+    "contributor",
+    "title",
+    "creator"
+  ],
+  "searchables": [
+    "id",
+    "contributor",
+    "title",
+    "creator"
+  ],
+  "recordIDField": "id",
+  "collectionID": "60c02e75-ca32-473c-883a-71c0337e1d3e",
+  "collections": [
+    "60c02e75-ca32-473c-883a-71c0337e1d3e"
+  ],
+  "fields": [
+    "60c02e75-ca32-473c-883a-71c0337e1d3e:unknown:p:id",
+    "60c02e75-ca32-473c-883a-71c0337e1d3e:unknown:p:contributor",
+    "60c02e75-ca32-473c-883a-71c0337e1d3e:unknown:p:title",
+    "60c02e75-ca32-473c-883a-71c0337e1d3e:unknown:p:creator",
+    "60c02e75-ca32-473c-883a-71c0337e1d3e:unknown:s:id",
+    "60c02e75-ca32-473c-883a-71c0337e1d3e:unknown:s:contributor",
+    "60c02e75-ca32-473c-883a-71c0337e1d3e:unknown:s:title",
+    "60c02e75-ca32-473c-883a-71c0337e1d3e:unknown:s:creator",
+    "60c02e75-ca32-473c-883a-71c0337e1d3e:unknown:s:allIndexes"
+  ],
+  "mapping": {
+    "contributor": "//*[local-name() \u003d \u0027contributor\u0027]",
+    "title": "//*[local-name() \u003d \u0027title\u0027]",
+    "creator": "//*[local-name() \u003d \u0027creator\u0027]"
+  },
+  "descriptionDocument": {
+    "schema": "http",
+    "host": "www.nla.gov.au",
+    "port": 80,
+    "servlet": "apps/srw/search/peopleaustralia",
+    "version": "1.1",
+    "maxRecords": 10,
+    "defaultRecordSchema": "info:srw/schema/1/dc-v1.1"
+  },
+  "scope": "/gcube/devNext",
+  "supportedRelations": [
+    "\u003c\u003d",
+    "\u003e\u003d",
+    "\u003e",
+    "\u003d",
+    "\u003c"
+  ],
+  "hostname": "jazzman.di.uoa.gr",
+  "created": {
+    "year": 2014,
+    "month": 5,
+    "dayOfMonth": 25,
+    "hourOfDay": 13,
+    "minute": 28,
+    "second": 8
+  },
+  "lastUpdated": {
+    "year": 2014,
+    "month": 5,
+    "dayOfMonth": 25,
+    "hourOfDay": 13,
+    "minute": 41,
+    "second": 37
+  },
+  "resourceID": "d7d7f58d-990a-4993-9997-c3a95fb6fdab"
+}

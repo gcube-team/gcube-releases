@@ -1,0 +1,18 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.join-vre.2.0.0"
+		date="2015-10-22">
+		<Change>Refactored to support virtual groups and related descriptions
+			through LR Custom Field</Change>
+		<Change>Refactored with GWT Bootstrap, new look and feel</Change>
+		<Change>Added support for showing external hosted VREso, see Feature #755</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.1.1.0"
+		date="2015-04-28">
+		<Change>Redesigned and restyles the way vre description is shown to
+			end users</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.1.0.0"
+		date="2015-03-02">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+  <!-- Main servlet of scheduler -->
+  <servlet>
+    <servlet-name>schedulerServlet</servlet-name>
+    <servlet-class>org.gcube.datatransfer.portlets.user.server.SchedulerServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>schedulerServlet</servlet-name>
+    <url-pattern>/schedulerportletmodule/scheduler</url-pattern>  
+  </servlet-mapping>
+  
+  <!-- quicktourServlet -->
+	<servlet>
+		<servlet-name>quicktourServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.guidedtour.server.TourServiceImpl</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>quicktourServlet</servlet-name>
+		<url-pattern>/schedulerportletmodule/quicktourServlet</url-pattern>
+	</servlet-mapping>
+    
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>SchedulerPortlet.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>

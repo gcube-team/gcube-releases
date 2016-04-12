@@ -1,0 +1,42 @@
+<Resource version="0.4.x">
+	<ID>03489ee0-240a-11e2-b212-c52eb951fce1</ID>
+	<Type>RuntimeResource</Type>
+	<Scopes>
+		<Scope>/gcube/devsec</Scope>
+	</Scopes>
+	<Profile>
+		<Category>DataSource</Category>
+		<Name>HTTP GCUBE SVN</Name>
+		<Description>GCUBE SVN REPOSITORY</Description>
+		<Platform>
+			<Name>apache</Name>
+			<Version>2</Version>
+			<MinorVersion>0</MinorVersion>
+			<RevisionVersion>0</RevisionVersion>
+			<BuildVersion>0</BuildVersion>
+		</Platform>
+		<RunTime>
+			<HostedOn>svn.research-infrastructures.eu/public/d4science/gcube/trunk
+			</HostedOn>
+			<GHN UniqueID="" />
+			<Status />
+		</RunTime>
+		<AccessPoint>
+			<Description>URL</Description>
+			<Interface>
+				<Endpoint EntryName="URL">http://svn.research-infrastructures.eu/public/d4science/gcube/trunk
+				</Endpoint>
+			</Interface>
+			<AccessData>
+				<Username />
+				<Password>6vW1u92cpdgHzYAgIurn9w==</Password>
+			</AccessData>
+			<Properties>
+				<Property>
+					<Name>folder</Name>
+					<Value encrypted="false">./</Value>
+				</Property>
+			</Properties>
+		</AccessPoint>
+	</Profile>
+</Resource>

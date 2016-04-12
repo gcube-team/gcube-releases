@@ -1,0 +1,125 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:VerticalPanel>
+		<g:cell>
+			<g:HTMLPanel>
+				<div id="breadcrumb">
+					<ul>
+						<li>
+							<span>Infrastructure and Theme</span>
+						</li>
+						<li>
+							<span>VREs checkup</span>
+						</li>
+						<li class="selected">
+							<span>Administrator account</span>
+						</li>
+						<li class="final">
+							<span>Finalize</span>
+						</li>
+					</ul>
+				</div>
+			</g:HTMLPanel>
+		</g:cell>
+		<g:cell>
+			<g:HTMLPanel styleName="wizardPanel">
+				<div class="wizardText">
+					<g:Label styleName="error-report" visible="false" ui:field="errorReport"></g:Label>
+				</div>
+
+				<div class="wizardTitle">
+					Administrator account creation
+				</div>
+				<g:HTML ui:field="searchHtml" styleName="wizardText">
+					Please, fill in the
+					few
+					information below, you may add more details by using the control
+					panel in a later moment, all fields in the form are required
+				</g:HTML>
+				<div class="wizardH2">
+					Login details
+				</div>
+				<div class="wizardText">
+
+				</div>
+				<div>
+					<table>
+						<tr height="23px">
+							<td width="175px">
+								<span class="wizardLabel">Email Address:</span>
+							</td>
+							<td>
+								<g:TextBox styleName="wizardTextBox" ui:field="email"></g:TextBox>
+							</td>
+							<td>
+								<span class="wizardComment">you will be using this to enter as
+									administrator</span>
+							</td>
+						</tr>
+						<tr height="23px">
+							<td width="175px">
+								<span class="wizardLabel">Password:</span>
+							</td>
+							<td>
+								<g:PasswordTextBox styleName="wizardTextBox password"
+									ui:field="password1" />
+							</td>
+							<td>
+								<span class="wizardComment">password must be 8 chars at least</span>
+							</td>
+						</tr>
+						<tr height="23px">
+							<td width="175px">
+								<span class="wizardLabel">Repeat Password:</span>
+							</td>
+							<td>
+								<g:PasswordTextBox styleName="wizardTextBox password"
+									ui:field="password2" />
+							</td>
+							<td>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="wizardH2">
+					Personal details
+				</div>
+				<div class="wizardText">
+					&nbsp; </div>
+				<div>
+					<table>
+						<tr height="23px">
+							<td width="175px">
+								<span class="wizardLabel">First Name:</span>
+							</td>
+							<td>
+								<g:TextBox styleName="wizardTextBox" ui:field="firstName" />
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr height="23px">
+							<td width="175px">
+								<span class="wizardLabel">Last Name:</span>
+							</td>
+							<td>
+								<g:TextBox styleName="wizardTextBox" ui:field="lastName" />
+							</td>
+							<td>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="wizardText">
+					&nbsp; </div>
+				<g:Button ui:field="createButton"> Create account </g:Button>
+			</g:HTMLPanel>
+		</g:cell>
+	</g:VerticalPanel>
+</ui:UiBinder> 

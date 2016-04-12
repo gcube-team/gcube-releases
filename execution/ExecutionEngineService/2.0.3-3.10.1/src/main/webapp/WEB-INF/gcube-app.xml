@@ -1,0 +1,14 @@
+<application mode="online">
+ 
+	<group>Execution</group>
+	<name>ExecutionEngineService</name>
+	<version>2.0.3</version>
+ 
+    <description>RESTful Version of ExecutionEngine</description>
+
+	<!-- <persistence location="/some/custom/location</persistence" /> -->
+
+	<exclude>/resources/</exclude>
+
+    
+</application>

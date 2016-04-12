@@ -1,0 +1,24 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="com.extjs.gxt.ui.GXT"/>
+	<inherits name="com.google.gwt.resources.Resources" />
+	
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-TRACE" />
+	
+	<!-- 
+	<set-property name="log_ConsoleLogger" value="ENABLED" />
+	<set-property name="log_DivLogger" value="ENABLED" />
+	<set-property name="log_GWTLogger" value="ENABLED" />
+	<set-property name="log_SystemLogger" value="ENABLED" />  -->
+	<!-- Not in GWT 2.6 <set-property name="log_FirebugLogger" value="ENABLED" 
+		/> -->
+		
+
+	<set-property name="log_ConsoleLogger" value="DISABLED" />
+	<set-property name="log_DivLogger" value="DISABLED" />
+	<set-property name="log_GWTLogger" value="DISABLED" />
+	<set-property name="log_SystemLogger" value="DISABLED" /> 
+	<!-- Not in GWT 2.6 <set-property name="log_FirebugLogger" value="DISABLED" 
+		/> -->
+	
+</module>

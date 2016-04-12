@@ -1,0 +1,14 @@
+<application mode="online">
+ 
+	<name>TreeService</name>
+	<group>HarvesterService</group>
+	<version>1.0</version>
+ 
+        <description>Service (w HTTP interface) to harvest information from Tree collections</description>
+ 
+        <!--<persistence location="/some/custom/location</persistence" />-->
+ 
+        <!--<exclude>/some/app/url</exclude>-->
+        <!--<exclude>/some/other/custom/url</exclude>-->
+ 
+</application>

@@ -1,0 +1,45 @@
+<Resource>
+	<ID/>
+	<Type/>
+	<Profile>
+		<SecondaryType>DTSTransformationProgram</SecondaryType>
+		<Name>GeoRowset_Transformer</Name>
+		<Description>Program creating geoRowsets</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.metadata.indexfeed.GeoRowset_Transformer</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter isOptional="false" name="schemaURI" value="-"/>
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="geoxslt" value="-" isOptional="false"/>
+							<Parameter name="indexType" value="-" isOptional="false"/>
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schemaURI" value="http://georowset.xsd"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>

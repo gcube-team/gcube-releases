@@ -1,0 +1,20 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="gr.uoa.di.madgik.visualisations.VisualisationsLibrary"/>
+	<stylesheet src="Collisions.css"/>
+	
+	<!-- 
+	<script src="code/collision/d3.geom.js"></script>
+	<script src="code/collision/d3.layout.js"></script>
+	<stylesheet src='code/collision/style.css' />		
+	<script src="code/collision/collision.js"></script>
+	 -->
+	
+<!-- 
+	<entry-point class="gr.uoa.di.madgik.visualisations.Collisions.client.Collisions" />
+ -->
+	
+	<source path="client" />
+  	<public path="public" />
+	
+</module>

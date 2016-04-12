@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.execution.resourceregistry-configuration-vo-nonupdaters.1-0-0" date="2013-10-10">
+   		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>
+

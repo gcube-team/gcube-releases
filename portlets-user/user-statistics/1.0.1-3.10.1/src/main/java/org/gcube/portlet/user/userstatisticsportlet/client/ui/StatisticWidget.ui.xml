@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.statistic-container {
+		display: inline-block;
+		vertical-align: top;
+		height: 60px;
+		width: auto;
+	}
+	
+	.statistic-header {
+		font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+			sans-serif;
+		font-size: 12px;
+		color: #8899A6;
+		letter-spacing: 0.02em;
+		overflow: hidden;
+		text-transform: uppercase;
+		margin-top: 15px;
+		margin-bottom: 2px;
+		text-align: center;
+		vertical-align: text-top;
+	}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.statistic-container}"
+		ui:field="container">
+		<g:Label styleName="{style.statistic-header}" ui:field="header" />
+		<g:FlowPanel ui:field="containerValues">
+			<!-- Content goes here -->
+		</g:FlowPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

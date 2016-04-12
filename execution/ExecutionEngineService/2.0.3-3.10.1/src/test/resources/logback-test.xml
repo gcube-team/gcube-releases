@@ -1,0 +1,16 @@
+<configuration>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d %-5p [%t] %c:%L- %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="org.gcube.execution" level="TRACE" />
+	<logger name="org.gcube.datatransformation" level="TRACE" />
+	<logger name="gr.uoa.di.madgik" level="TRACE" />
+	<logger name="gr.uoa.di.madgik.environment.gcube.GCubeAccountingFrameworkProvider" level="INFO" />
+
+	<root level="WARN">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>

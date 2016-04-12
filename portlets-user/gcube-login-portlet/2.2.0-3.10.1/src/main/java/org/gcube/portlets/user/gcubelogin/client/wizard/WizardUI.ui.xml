@@ -1,0 +1,151 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:style>
+		.border {
+			border: 1px solid #CCC;
+		}
+	</ui:style>
+	<g:VerticalPanel>
+		<g:cell>
+			<g:HTMLPanel>
+				<div id="breadcrumb">
+					<ul>
+						<li class="selected">
+							<span>Infrastructure and Theme</span>
+						</li>
+						<li>
+							<span>VREs checkup</span>
+						</li>
+						<li>
+							<span>Administrator account</span>
+						</li>
+						<li class="final">
+							<span>Finalize</span>
+						</li>
+					</ul>
+					</div>
+			</g:HTMLPanel>
+		</g:cell>
+		<g:cell>
+			<g:HTMLPanel styleName="wizardPanel">
+				<div class="wizardTitle">
+					Please enter your infrastructure name (root VO)
+				</div>
+				<div class="wizardText">
+					Just fill in the information below and you'll be on
+					your way to
+					using
+					the portal over your infrastructure.
+					<br />
+					If you configured the $CATALINA_HOME/conf/infrastructure.properties file already you can load
+					the
+					configuration by clicking on this button:
+					<g:Button ui:field="loadButton">Load
+						configuration</g:Button>
+
+				</div>
+				<div class="wizardH2">
+					Information Needed
+				</div>
+				<div class="wizardText">
+					Please provide the following information.
+				</div>
+				<div>
+					<table>
+						<tr height="23px">
+							<td width="175px">
+								<span class="wizardLabel">Infrastructure Name:</span>
+							</td>
+							<td>
+								<g:TextBox styleName="wizardTextBox" ui:field="infraName" />
+							</td>
+							<td>
+								<span class="wizardComment">e.g. d4science.research-infrastructures.eu (do
+									not use white spaces)</span>
+							</td>
+						</tr>
+						<tr height="23px">
+							<td width="175px">
+								<span class="wizardLabel">Starting Scope(s):</span>
+							</td>
+							<td>
+								<g:TextBox styleName="wizardTextBox" ui:field="voNames" />
+							</td>
+							<td>
+								<span class="wizardComment">please use comma separated values in case of
+									multiple scopes, e.g. FARM,Ecosystem</span>
+							</td>
+						</tr>
+						<!-- Check config row -->
+						<tr height="23px">
+							<td width="175px">
+								<g:Button ui:field="checkButton">Check configuration</g:Button>
+							</td>
+							<td valign="middle">
+								<g:HTML ui:field="testResult" styleName="wizardComment">you can't run the
+									install until we checked your configuration</g:HTML>
+							</td>
+							<td>
+								<g:HTML ui:field="reportHtml" styleName="wizardComment"></g:HTML>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="wizardH2 padding-top">
+					Theme to apply
+				</div>
+				<div class="wizardText">
+					Please select one of the following theme:
+				</div>
+				<div>
+					<table>
+						<tr height="30px">
+							<td width="175px">
+								<span class="wizardLabel">
+									<g:RadioButton ui:field="genericRadioButton"
+										name="selectTheme">
+										gCube generic theme</g:RadioButton>
+								</span>
+							</td>
+							<td>
+								<span class="wizardComment">theme with no logo customization</span>
+							</td>
+							<td rowspan="3" width="275px" align="center">
+								<div class="{style.border} thumb-generic" style="width:150px; height:100px;">
+									<g:Label ui:field="label"></g:Label>
+								</div>
+							</td>
+						</tr>
+						<tr height="30px">
+							<td width="175px">
+								<span class="wizardLabel">
+									<g:RadioButton ui:field="imarineRadioButton"
+										name="selectTheme">
+										gCube iMarine theme</g:RadioButton>
+								</span>
+							</td>
+							<td>
+								<span class="wizardComment">please use this theme if you're member of the
+									iMarine EU Project</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="wizardH2">
+					Auto redirect
+				</div>
+				<div class="wizardLabel">
+					<g:CheckBox ui:field="autoRedirect"> Take me to VREs selection
+						automatically after login</g:CheckBox>
+					<span class="wizardComment padding-left">requires web server restart</span>
+				</div>
+
+				<g:Button ui:field="saveButton"> Next step </g:Button>
+			</g:HTMLPanel>
+		</g:cell>
+	</g:VerticalPanel>
+
+
+</ui:UiBinder> 

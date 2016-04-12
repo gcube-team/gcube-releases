@@ -1,0 +1,24 @@
+.helpFontSize {
+	font-size: 14px;
+}
+
+.token-title {
+	display: block;
+	font-size: 16px;
+	color: #555;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.token-frame {
+	padding: 10px 10px 0px;
+	background-color: #FFF;
+	border-radius: 6px !important;
+	-moz-border-radius: 6px !important;
+	-webkit-border-radius: 6px !important;
+	border: 1px solid #DBDBDB;
+}
+
+.info-button {
+	float: right;
+}

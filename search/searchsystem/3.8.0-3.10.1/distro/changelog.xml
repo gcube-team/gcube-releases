@@ -1,0 +1,50 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.search.searchsystem.2-0-0" date="2011-07-01">
+		<Change>First version of the Search System Library.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystem.2-1-0" date="2011-09-02">
+		<Change>Support for PROJECT *</Change>
+		<Change>Support for PROJECT DISTINCT</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystem.3-0-0" date="2011-12-20">
+		<Change>Caching for search plans</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystem.3-0-1" date="2012-04-11">
+		<Change>Fixed a build related bug that did not include etc files in the jar.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystem.3-1-0" date="2012-09-07">
+		<Change>Turned to Maven</Change>
+		<Change>Java logger replaced by slf4</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystem.3-1-1" date="2013-03-08">
+		<Change>Removed unused imports from PE2ngWorkflowAdaptor</Change>
+		<Change>Added ranges in pom.xml</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystem.3-2-0" date="2013-05-20">
+		<Change>Include data fusion</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystem.3-3-0" date="2013-10-25">
+		<Change>Speed Optimizations</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystem.3-4-0" date="2014-01-27">
+		<Change>Search with security identifiers has been added</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.search.searchsystem.3-6-0" date="2014-06-03">
+		<Change>Added helper functions to get fields, collection etc from ResourceRegistryAdapter</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.search.searchsystem.3-7-0" date="2014-06-03">
+		<Change>Added support for sru datasources</Change>
+		<Change>Added more helper functions on ResourceRegistryAdapter</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.search.searchsystem.3-7-1" date="2014-09-03">
+		<Change>Fixed a bug that ignored distinct parameter</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.search.searchsystem.3-8-0" date="2014-09-03">
+		<Change>correclty pass sids in execution plan</Change>
+	</Changeset>
+	
+</ReleaseNotes>

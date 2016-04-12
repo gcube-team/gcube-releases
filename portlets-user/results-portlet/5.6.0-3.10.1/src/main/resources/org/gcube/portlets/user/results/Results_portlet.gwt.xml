@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='results_portlet'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Inherit the default GWT style sheet. You can change -->
+	<!-- the theme of your GWT application by uncommenting -->
+	<!-- any one of the following lines. -->
+	<!-- inherits name='com.google.gwt.user.theme.standard.Standard'/ -->
+	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
+
+
+	<!-- Inherit gwt-dnd support -->
+	<inherits name="com.allen_sauer.gwt.dnd.gwt-dnd" />
+	
+	<inherits name='org.gcube.portlets.widget.collectionsindexedwords.IndexedCollectionsVisualizer' />
+	<!-- inherits gCube Widgets Library -->
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+
+	<!-- Add gwt-log support, default level `DEBUG` -->
+	<!-- <inherits name="com.allen_sauer.gwt.log.gwt-log-DEBUG" /> -->
+
+	<!-- For production, most teams prefer to set the default log level to `OFF` -->
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-OFF" />
+
+	<!-- inherits WorkspacePortletLightTree widget -->
+	<!-- <inherits name='org.gcube.portlets.widgets.lighttree.WorkspacePortletLightTree' 
+		/> -->
+
+	<!-- To Comment out -->
+	<!-- set-property name="user.agent" value="gecko1_8" /> -->
+
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='org.gcube.portlets.user.results.client.ResultsDisplayer' />
+
+	<stylesheet src='xmltreeviewer.css' />
+
+	<script src="scripts/jquery-1.7.2.min.js"></script>
+	<script src="scripts/xmltreeviewer.js"></script>
+
+	<!-- Specify the application specific style sheet. -->
+	<stylesheet src='../Results_portlet.css' />
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

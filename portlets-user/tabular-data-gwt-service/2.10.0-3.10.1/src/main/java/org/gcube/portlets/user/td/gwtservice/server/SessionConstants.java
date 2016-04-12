@@ -1,0 +1,130 @@
+package org.gcube.portlets.user.td.gwtservice.server;
+
+/**
+ * 
+ * @author "Giancarlo Panichi" email: <a
+ *         href="mailto:g.panichi@isti.cnr.it">g.panichi@isti.cnr.it</a>
+ *
+ */
+public class SessionConstants {
+	public static final String INFO_LOCALE="INFO_LOCALE";
+	
+	public static final String SCOPE_TO_CURRENT_TRID_MAP = "SCOPE_TO_CURRENT_TRID_MAP";
+	public static final String SCOPE_TO_CURRENT_TABULAR_RESOURCE_MAP = "SCOPE_TO_CURRENT_TABULAR_RESOURCE_MAP";
+	public static final String SCOPE_TO_CURRENT_TABULAR_RESOURCES_OPEN_MAP = "SCOPE_TO_CURRENT_TABULAR_RESOURCES_OPEN_MAP";
+
+	public static final String SCOPE_TO_OPERATIONS_TASKS_STARTED_MAP = "SCOPE_TO_OPERATIONS_TASKS_STARTED_MAP";
+	public static final String SCOPE_TO_OPERATIONS_TASKS_IN_BACKGROUND_MAP = "SCOPE_TO_OPERATIONS_TASKS_IN_BACKGROUND_MAP";
+	public static final String SCOPE_TO_OPERATIONS_TASKS_ABORTED_MAP = "SCOPE_TO_OPERATIONS_TASKS_ABORTED_MAP";
+	public static final String SCOPE_TO_OPERATIONS_TASKS_HIDDEN_MAP = "SCOPE_TO_OPERATIONS_TASKS_HIDDEN_MAP";
+
+	public static final String SCOPE_TO_TABULAR_RESOURCE_LIST_MAP = "SCOPE_TO_TABULAR_RESOURCE_LIST_MAP";
+
+	public static final String TDOPEN_SESSION = "TDOPEN_SESSION";
+
+	public static final String FILE_UPLOAD_MONITOR = "FILE_UPLOAD_MONITOR";
+
+	public static final String TR_TASK_MANAGER = "TR_TASK_MANAGER";
+
+	public static final String SDMX_REGISTRY_SOURCE = "SDMX_REGISTRY_SOURCE";
+
+	public static final String SDMX_CLIENT_ATTRIBUTE = "SDMX_CLIENT";
+	public static final String SDMX_IMPORT_SESSION = "SDMX_IMPORT";
+	public static final String SDMX_IMPORT_TABULAR_RESOURCE = "SDMX_IMPORT_TABULAR_RESOURCE";
+
+	public static final String SDMX_EXPORT_SESSION = "SDMX_EXPORT_SESSION";
+
+	public static final String CSV_IMPORT_SESSION = "CSV_IMPORT";
+	public static final String CSV_IMPORT_FILE_UPLOAD_SESSION = "CSV_IMPORT_FILE_UPLOAD";
+	public static final String CSV_IMPORT_TABULAR_RESOURCE = "CSV_IMPORT_TABULAR_RESOURCE";
+
+	public static final String CSV_EXPORT_SESSION = "CSV_EXPORT_SESSION";
+	public static final String CSV_EXPORT_END = "CSV_EXPORT_END";
+
+	public static final String JSON_EXPORT_SESSION = "JSON_EXPORT_SESSION";
+	public static final String JSON_EXPORT_END = "JSON_EXPORT_END";
+
+	public static final String CLONE_TABULAR_RESOURCE_SESSION = "CLONE_TABULAR_RESOURCE_SESSION";
+
+	public static final String CHANGE_COLUMN_TYPE_SESSION = "CHANGE_COLUMN_TYPE_SESSION";
+
+	public static final String ADD_COLUMN_SESSION = "ADD_COLUMN_SESSION";
+
+	public static final String DELETE_COLUMN_SESSION = "DELETE_COLUMN_SESSION";
+
+	public static final String FILTER_COLUMN_SESSION = "FILTER_COLUMN_SESSION";
+
+	public static final String REPLACE_COLUMN_BY_EXPRESSION_SESSION = "REPLACE_COLUMN_BY_EXPRESSION_SESSION";
+
+	public static final String EDIT_ROW_SESSION = "EDIT_ROW_SESSION";
+
+	public static final String TASK_RESUBMIT_SESSION = "TASK_RESUBMIT_SESSION";
+
+	public static final String TASK_RESUME_SESSION = "TASK_RESUME_SESSION";
+
+	public static final String REPLACE_COLUMN_SESSION = "REPLACE_COLUMN_SESSION";
+
+	public static final String GROUPBY_SESSION = "GROUPBY_SESSION";
+
+	public static final String TIME_AGGREGATION_SESSION = "TIME_AGGREGATION_SESSION";
+
+	public static final String UNION_SESSION = "UNION_SESSION";
+
+	public static final String CHANGE_COLUMNS_POSITION_SESSION = "CHANGE_COLUMNS_POSITION_SESSION";
+
+	public static final String REPLACE_BY_EXTERNAL_SESSION = "REPLACE_BY_EXTERNAL_SESSION";
+
+	public static final String STATISTICAL_OPERATION_SESSION = "STATISTICAL_OPERATION_SESSION";
+
+	public static final String NORMALIZATION_SESSION = "NORMALIZATION_SESSION";
+
+	public static final String DENORMALIZATION_SESSION = "DENORMALIZATION_SESSION";
+
+	public static final String REPLACE_BATCH_COLUMN_SESSION = "REPLACE_BATCH_COLUMN_SESSION";
+
+	public static final String CHANGE_THE_COLUMN_LABEL_SESSION = "CHANGE_THE_COLUMN_LABEL_SESSION";
+
+	public static final String CHANGE_TABLE_TYPE_SESSION = "CHANGE_TABLE_TYPE_SESSION";
+
+	public static final String DELETE_ROWS_SESSION = "DELETE_ROWS_SESSION";
+
+	public static final String DUPLICATES_ROWS_SESSION = "DUPLICATES_ROWS_SESSION";
+
+	public static final String MAP_CREATION_SESSION = "MAP_CREATION_SESSION";
+
+	public static final String TEMPLATE_APPLY_SESSION = "TEMPLATE_APPLY_SESSION";
+
+	public static final String CODELISTS_PAGING_LOADED = "CODELISTS_PAGING_LOADED";
+	public static final String CODELISTS_PAGING_LOADED_FILTERED_COPY = "CODELISTS_PAGING_LOADED_FILTERED_COPY";
+	public static final String CODELISTS_PAGING_LOADED_FILTER = "CODELISTS_PAGING_LOADED_FILTER";
+
+	public static final String ROLLBACK_SESSION = "ROLLBACK_SESSION";
+
+	public static final String EXTRACT_CODELIST_SESSION = "EXTRACT_CODELIST_SESSION";
+
+	public static final String SPLIT_COLUMN_SESSION = "SPLIT_COLUMN_SESSION";
+
+	public static final String MERGE_COLUMN_SESSION = "MERGE_COLUMN_SESSION";
+
+	public static final String CODELIST_MAPPING_SESSION = "CODELIST_MAPPING_SESSION";
+	public static final String CODELIST_MAPPING_FILE_UPLOAD_SESSION = "CODELIST_MAPPING_FILE_UPLOAD_SESSION";
+
+	public static final String CHART_TOPRATING_SESSION = "CHART_TOPRATING_SESSION";
+
+	public static final String RESOURCE_SAVE_SESSION = "RESOURCE_SAVE_SESSION";
+
+	public static final String GEOSPATIAL_CREATE_COORDINATES_SESSION = "GEOSPATIAL_CREATE_COORDINATES_SESSION";
+
+	public static final String GEOSPATIAL_DOWNSCALE_CSQUARE_SESSION = "GEOSPATIAL_DOWNSCALE_CSQUARE_SESSION";
+
+	public static final String GEOMETRY_CREATE_POINT_SESSION = "GEOMETRY_CREATE_POINT_SESSION";
+	
+	public static final String RULES_ON_COLUMN_APPLY_AND_DETACH_SESSION = "RULES_ON_COLUMN_APPLY_AND_DETACH_SESSION";
+	
+	public static final String RULES_ON_COLUMN_DETACH_SESSION = "RULES_ON_COLUMN_DETACH_SESSION";
+	
+	public static final String RULES_ON_TABLE_APPLY_SESSION = "RULES_ON_TABLE_APPLY_SESSION";
+	
+	public static final String RULES_ON_TABLE_DETACH_SESSION = "RULES_ON_TABLE_DETACH_SESSION";
+
+}

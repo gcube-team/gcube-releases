@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/GCORELIBS"/>
+	<classpathentry kind="var" path="ECLIPSE_HOME"/>
+	<classpathentry kind="var" path="GLOBUS_LOCATION"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/JVM 1.5.0-leopard"/>
+	<classpathentry kind="lib" path="lib/xstream-1.3.1.jar"/>
+	<classpathentry kind="lib" path="/Users/strollo/Documents/works/CNR/gCore/lib/stax-1.2.0.jar"/>
+	<classpathentry kind="lib" path="/Dependencies/org.gcube.vremanagement.resourcebroker/org.gcube.vremanagement.resourcebroker.serialization.jar" sourcepath="/org.gcube.vremanagement.resourcebroker.serialization"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

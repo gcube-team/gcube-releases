@@ -1,0 +1,2 @@
+serviceClass: org.gcube.portlets.user.workspace.lighttree.client.WorkspaceService
+path: 51C928AF83683A55BFD8E40F6C191D86.gwt.rpc

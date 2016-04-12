@@ -1,0 +1,8 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-harmonization.occurrence-reconciliation.1-0-0" date="2012-10-18"> 
+		<Change>Occurrence reconciliation module first release</Change>
+	</Changeset> 
+	<Changeset component="org.gcube.data-harmonization.occurrence-reconciliation.1-0-1" date="2013-01-25"> 
+		<Change>Adapted to spd refactoring</Change>
+	</Changeset> 
+</ReleaseNotes>

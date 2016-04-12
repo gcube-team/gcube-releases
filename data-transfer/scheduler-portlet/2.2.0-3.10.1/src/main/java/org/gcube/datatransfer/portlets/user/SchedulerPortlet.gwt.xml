@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='schedulerportletmodule'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User'/>
+
+  <!-- Inherit the default GWT style sheet.  You can change           -->
+  <!-- the theme of your GWT application by uncommenting              -->
+  <!-- any one of the following lines.                                -->
+  <!-- <inherits name='com.google.gwt.user.theme.clean.Clean'/>       -->
+  <!-- <inherits name='com.google.gwt.user.theme.standard.Standard'/> -->
+  <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/>     -->
+  <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>         -->
+
+  <!-- Other module inherits  -->
+  <inherits name='com.sencha.gxt.ui.GXT'/>
+  <inherits name='com.sencha.gxt.chart.Chart'/>
+    <inherits name="com.sencha.gxt.examples.resources.Resources" />
+  <inherits name='com.kfuntak.gwt.json.serialization.GWTProJsonSerializer'/>
+  <inherits name='org.gcube.portlets.widgets.guidedtour.GuidedTour' />
+        
+<!-- TEMP FIX UNTIL GOING TO GWT 2.5 -->
+<!-- Fallback implementation, based on a timer -->
+<!-- <replace-with class="com.google.gwt.animation.client.AnimationSchedulerImplTimer">
+  <when-type-is class="com.google.gwt.animation.client.AnimationScheduler"/>
+  <any>
+    <when-property-is name="user.agent" value="ie6"/>
+    <when-property-is name="user.agent" value="ie8"/>
+    <when-property-is name="user.agent" value="ie9"/>
+    <when-property-is name="user.agent" value="safari"/>
+    <when-property-is name="user.agent" value="opera"/>
+  </any>
+</replace-with> -->
+
+<!-- Implementation based on mozRequestAnimationFrame -->
+<!-- <replace-with class="com.google.gwt.animation.client.AnimationSchedulerImplMozilla">
+  <when-type-is class="com.google.gwt.animation.client.AnimationScheduler"/>
+  <when-property-is name="user.agent" value="gecko1_8"/>
+</replace-with> -->
+<!-- ************* END ************* -->
+
+
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='org.gcube.datatransfer.portlets.user.client.SchedulerPortlet'/>
+  
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client'/>
+  <source path='shared'/>
+
+</module>

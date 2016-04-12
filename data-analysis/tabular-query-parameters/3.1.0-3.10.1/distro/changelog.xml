@@ -1,0 +1,12 @@
+<ReleaseNotes> 
+	<Changeset component="${groupId}.${artifactId}.1.0.0" date="2013-10-22"> 
+		<Change>First version</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.3.0.0" date="2013-02-19"> 
+		<Change>porting to cubeManager</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.3.0.0" date="2013-03-18"> 
+		<Change>selection parameter added</Change>
+		<Change>grouping parameter added</Change>
+	</Changeset>
+</ReleaseNotes>

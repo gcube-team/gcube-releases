@@ -1,0 +1,92 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def textFamily value('theme.listview.text.family');
+@def textSize value('theme.listview.text.size');
+@def textWeight value('theme.listview.text.weight');
+@def textColor value('theme.listview.text.color');
+@def itemLineHeight value('theme.listview.lineHeight');
+
+@def backgroundColor value('theme.listview.backgroundColor');
+
+@def borderWidth value('theme.listview.border.toString');
+@def borderColor value('theme.listview.border.color');
+@def borderStyle value('theme.listview.border.style');
+
+@def itemPadding value('theme.listview.item.padding');
+@def itemBorderWidth value('theme.listview.item.border.toString');
+@def itemBorderStyle value('theme.listview.item.border.style');
+@def itemBorderColor value('theme.listview.item.border.color');
+
+@def overItemPadding value('theme.listview.overItem.padding');
+@def overItemBorderWidth value('theme.listview.overItem.border.toString');
+@def overItemBorderStyle value('theme.listview.overItem.border.style');
+@def overItemBorderColor value('theme.listview.overItem.border.color');
+
+@def selectedItemPadding value('theme.listview.selectedItem.padding');
+@def selectedItemBorderWidth value('theme.listview.selectedItem.border.toString');
+@def selectedItemBorderStyle value('theme.listview.selectedItem.border.style');
+@def selectedItemBorderColor value('theme.listview.selectedItem.border.color');
+
+
+.view {
+  outline: 0 none;
+  position: relative;
+
+  background-color: backgroundColor;
+
+  border-width: borderWidth;
+  border-style: borderStyle;
+  border-color: borderColor;
+
+  overflow-y: auto;
+}
+
+@sprite .item {
+  gwt-image: 'itemBackground';
+  height:auto;
+
+  color: textColor;
+  font-family: textFamily;
+  font-size: textSize;
+  font-weight: textWeight;
+  line-height: itemLineHeight;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+
+
+  border-width: itemBorderWidth;
+  border-style: itemBorderStyle;
+  border-color: itemBorderColor;
+
+  padding: itemPadding;
+}
+
+@sprite .over {
+  gwt-image: 'itemOverBackground';
+  height:auto;
+
+  border-width: overItemBorderWidth;
+  border-style: overItemBorderStyle;
+  border-color: overItemBorderColor;
+
+  padding: overItemPadding;
+}
+
+@sprite .sel {
+  gwt-image: 'itemSelectedBackground';
+  height:auto;
+
+  border-width: selectedItemBorderWidth;
+  border-style: selectedItemBorderStyle;
+  border-color: selectedItemBorderColor;
+
+  padding: selectedItemPadding;
+}
+

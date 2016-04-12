@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user-management>
+	<root-vo>
+		<role
+			description="This role allows the user to manage gCube hosting nodes resources allocated to one infrastructure."
+			name="Site-Manager" />
+		<role
+			description="This role allows the user to deploy and manage all resources allocated to one infrastructure and to manage its users."
+			name="Infrastructure-Manager" />
+		<role
+			description="This role allows the production support team members to manage the resources of one particular VO/VRE"
+			name="Production-Support" />
+	</root-vo>
+	<vo>
+		<role
+			description="This role allows the user to deploy and manage all resources allocated to one VO and to manage its users."
+			name="VO-Admin" />
+		<role
+			description="This role allows the user to deploy and manage all resources allocated to one VRE and to manage its users."
+			name="VRE-Manager" />
+		<role
+			description="This role allows the user to manage the data resources allocated to one VO."
+			name="Data-Manager" />
+		<role
+			description="This role allows the user to define the resources that should compose a future VRE and ask for its deployment."
+			name="VRE-Designer" />
+		<role
+			description="This role allows the production support team members to manage the resources of one particular VO/VRE"
+			name="Production-Support" />
+	</vo>
+	<vre>
+		<role
+			description="This role allows the user to deploy and manage all resources allocated to one VRE and to manage its users."
+			name="VRE-Manager" />
+		<role
+			description="This role allows the user to access one VRE and consume all resources associated to the VRE."
+			name="VRE-User" />
+		<role
+			description="This role allows the production support team members to manage the resources of one particular VO/VRE"
+			name="Production-Support" />
+	</vre>
+</user-management>

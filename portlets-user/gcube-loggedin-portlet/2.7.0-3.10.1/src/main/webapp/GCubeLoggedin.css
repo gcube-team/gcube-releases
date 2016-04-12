@@ -1,0 +1,70 @@
+/** Add css rules here for your application. */
+
+#vre-header-container {
+	border-bottom: 1px solid #ccc;
+}
+
+#vre-header-container ul {
+	margin: 6px 2px 0px;
+	padding: 1px;
+	height: 23px;
+}
+
+#vre-header li {
+	display: inline;
+	list-style-type: none;
+	border-right: 1px solid #ccc;
+	padding: 7px 20px 4px;	
+}
+
+#vre-header li a {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #666;
+	text-decoration: none;	
+}
+
+#vre-header li a span {
+	background-image: url('images/home.png');
+	background-repeat: no-repeat;
+	background-position: 50% 80%;
+}
+
+#vre-header li a:hover {
+	color: #A94440;	
+	opacity: 0.8;
+}
+
+.description {
+	padding: 10px;
+}
+
+table {
+	border-collapse: separate !important;
+	border-spacing: 0;
+}
+
+.envhome-frame {
+	background: #FFF;
+	border-radius: 6px !important;
+	-moz-border-radius: 6px !important;
+	-webkit-border-radius: 6px !important;
+	border: 1px solid #DBDBDB;
+}
+
+.imageVRE {
+	float: left;
+	width: 150px;
+	margin-right: 5px;
+}
+
+.leaveButton {
+	border: 1px solid #EBCCD1;
+	border-radius: 4px;
+	margin: 20px;
+	padding: 15px;
+	background-color: #F2DEDE;
+	color: #A94440;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 14px;
+}

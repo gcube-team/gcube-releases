@@ -1,0 +1,38 @@
+<Resource>
+	<ID/>
+	<Type/>
+	<Profile>
+		<SecondaryType>DTSTransformationProgram</SecondaryType>
+		<Name>Zipper</Name>
+		<Description>Program creating zip and gzip files</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.misc.Zipper</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>*/*</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>application/zip</Mimetype>
+								<Parameters/>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>

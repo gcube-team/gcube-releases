@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>${description}</Description>
+		<Class>Search</Class>
+		<Name>searchsystemservice</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Name>searchsystemservice</Name>
+				<Version>3.3.0</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.search</groupId>
+					<artifactId>searchsystemservice</artifactId>
+					<version>3.3.0</version>
+				</MavenCoordinates>
+				<Files>
+					<File>searchsystemservice-3.3.0.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

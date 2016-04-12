@@ -1,0 +1,67 @@
+<%
+/**
+ * Copyright (c) 2000-2011 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+%>
+
+.aui-field-wrapper {
+	clear: both;
+	overflow: hidden;
+}
+
+.aui-form-button.aui-input-disabled input, .aui-form-button.aui-input-disabled button {
+	background: #F5F5F5 url(../images/forms/button.png) repeat-x 0 0;
+	color: #ccc;
+}
+
+.aui-form-button.aui-input-disabled input:hover, .aui-form-button.aui-input-disabled button:hover {
+	background: #F5F5F5 url(../images/forms/button.png) repeat-x 0 0;
+	border-color: #DEDEDE #BFBFBF #BFBFBF #DEDEDE;
+	color: #ccc;
+	cursor: auto;
+}
+
+.aui-form-validator-error-container {
+	background: url(<%= themeImagesPath %>/messages/error.png) no-repeat scroll 6px 50% #FDD;
+	border: 1px solid #F00;
+	display: block;
+	font-weight: normal;
+	margin: 3px 0;
+	padding: 6px;
+	padding-left: 30px;
+}
+
+.lfr-input-text, .aui-form .aui-fieldset .aui-field.lfr-input-text-container input {
+	width: <%= ModelHintsConstants.TEXT_DISPLAY_WIDTH %>px;
+}
+
+.lfr-input-text.flexible, .lfr-input-text-container.flexible input {
+	width: auto;
+}
+
+.lfr-textarea, .aui-form .aui-fieldset .aui-field.lfr-textarea-container textarea {
+	height: <%= ModelHintsConstants.TEXTAREA_DISPLAY_HEIGHT %>px;
+	width: <%= ModelHintsConstants.TEXTAREA_DISPLAY_WIDTH %>px;
+}
+
+fieldset, .aui-form fieldset {
+	margin-bottom: 2em;
+}
+
+fieldset:last-child, .aui-form fieldset:last-child {
+	margin-bottom: 0;
+}
+
+.lfr-display-terms-search {
+	display: block;
+}

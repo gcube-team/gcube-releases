@@ -1,0 +1,22 @@
+<configuration debug="FALSE">
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="OFF">
+    <appender-ref ref="STDOUT" />
+  </root>
+  
+  <logger name="org.gcube.portlets.admin.software_upload_wizard.server" level="TRACE" />
+  <logger name="org.gcube.portlets.admin.software_upload_wizard.server.aslmanagers.DefaultASLSessionManager" level="ERROR" />
+  <logger name="org.gcube.portlets.admin.software_upload_wizard.server.importmanagers.ASLImportSessionManager" level="ERROR" />
+  <logger name="org.gcube.portlets.admin.software_upload_wizard.server.softwaremanagers.scope.ConfigurableScopeAvailable" level="ERROR" />
+  <logger name="org.gcube.portlets.admin.software_upload_wizard.server.util" level="ERROR" />
+<!--   <logger name="org.gcube.data.analysis.tabulardata.cube" level="TRACE" /> -->
+<!--   <logger name="org.gcube.data.analysis.tabulardata.cube.tablemanagers" level="OFF" /> -->
+</configuration>

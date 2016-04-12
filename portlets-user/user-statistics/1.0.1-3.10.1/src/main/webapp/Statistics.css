@@ -1,0 +1,86 @@
+.user-stats-frame {
+	padding: 10px;
+	background-color: #FFF;
+}
+
+.user-stats-frame-border {
+	border-radius: 6px !important;
+	-moz-border-radius: 6px !important;
+	-webkit-border-radius: 6px !important;
+	border: 1px solid #DBDBDB;
+}
+
+.user-image {
+	height: 70px;
+	width: auto;
+	border-radius: 6px;
+	padding: 2px;
+	color: #FFF;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.user-image-margin-right-vre {
+	margin-right: 5px;
+}
+
+.user-image-margin-right-root {
+	margin-right: 10px;
+}
+
+
+.user-image-editable:hover {
+	cursor: pointer;
+}
+
+.error-msg {
+	font-family: "Architects Daughter", arial, sans-serif;
+}
+
+.user-stats-title {
+	display: block;
+	font-size: 16px;
+	color: #555;
+	margin-bottom: 10px;
+}
+
+.statistic-value {
+	color: #0084B4 !important;
+	font-size: 14px;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+.statistic-value-inline {
+	color: #0084B4 !important;
+	font-size: 14px;
+	text-align: center;
+	vertical-align: bottom;
+	display: inline-block;
+}
+
+.loading-image-center {
+	display: block;
+	margin: auto auto;
+}
+
+.loading-image-center-small {
+	width: 20px;
+	height: auto;
+	display: block;
+	margin: auto auto;
+}
+
+.alert-icon-center {
+	display: block;
+	margin: auto auto;
+}
+
+.button-improve-profile {
+	margin: 0 0 0 20px;
+	font-family: Tahoma, Helvetica, Arial, sans-serif;
+	line-height: 12px;
+	font-size: 12px;
+	padding: 5px 15px;
+	font-weight: normal;
+}

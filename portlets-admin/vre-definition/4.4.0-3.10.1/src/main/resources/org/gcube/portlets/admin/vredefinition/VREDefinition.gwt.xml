@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='vredefinition'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User' />
+
+  <!-- inherits GCUBE Widgets						               -->
+  <inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' /> 
+  <inherits name="com.extjs.gxt.ui.GXT" />
+
+  <!-- Other module inherits                                      -->
+
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='org.gcube.portlets.admin.vredefinition.client.VREDefinition' />
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client' />
+  <source path='shared' />
+
+</module>

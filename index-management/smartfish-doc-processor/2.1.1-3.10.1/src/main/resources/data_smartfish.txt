@@ -1,0 +1,85 @@
+#management type
+CoManagement;Cogestion
+CommunityLed;Gérée par la population locale
+Local Government;Gouvernement local
+Marine Protected Areas;Zone marine protégée
+National Government;Gouvernement national
+None;Aucun
+Participatory Management;Cogestion participative
+Unknown;Inconnu
+None;Aucun
+Management Unit;Unité de gestion
+
+#exploitation status
+Depleted
+Fully exploited
+Recovering
+Moderately exploited
+Overexploited
+Uncertain
+Underexploited
+
+#sector
+Artisanal;Artisanale
+Traditional;traditionnelle
+Foreign fleet;Flotte étrangère
+Industrial;Industrielle
+Recreational;De loisir
+SemiIndustrial;Semiindustrielle
+Smallscale Commercial;Commerciale à petite échelle
+Sport;Sportive
+Subsistence;Subsistance
+Tournament Fishing;Compétition de pêche
+Other;Autre
+
+#access control
+None;Aucun
+Lottery;Loterie
+Licensing;Octroi de licences
+Group Decision;Décision de groupe
+Fisher registration;Enregistrement de pêcheur
+Prohibition;Interdiction
+Experimental license;Licence expérimentale
+
+#fishing control
+None;Aucun
+Effort Control;Contrôle de l'effort
+Gear Restrictions;Restrictions sur les engins
+Mesh Size;Grosseur de maille
+Closed Season;Périodes de fermeture
+Quota/Bag Limit;Quotas;limites de prises
+Reserve areas (e.g. nursery areas);Zones de réserve (les zones de reproduction, par exemple)
+Size Restrictions;Restrictions de taille
+Species Controls;Contrôle des espèces
+Traditional controls;Contrôles traditionnels
+Berried females prohibited;Femelles en œufs sont interdites
+Marine reserves (limited fishing allowed);Réserves marines (pêche limitée permise)
+Marine parks (no fishing - extractive use);Les parcs marins (pas de pêche - utilisation extractive)
+Rotational - Spatial management;Rotation - gestion spatiale
+Night fishing prohibited;La pêche de nuit interdite
+Chumming;Appâter
+Artificial attracting devices e.g. light;Dispositifs artificiels attirant par exemple la lumière
+Spatial restrictions;Restrictions spatiales
+Restricted entry
+Full-time fisheries observer
+Fishing is prohibited;La pêche est interdite
+Disembarkation restrictions;Controles des embarcation
+Mandatory position reporting;Rapport mandatoire de position
+Quota - Bag Limit;Quotas - limites de prises
+
+#enforcement methods
+Unknown;Inconnu
+None;Aucun
+Local Users;Utilisateurs locaux
+National Government Officers;Agents de gouvernement national
+Local Government Officers;Agents de gouvernement local
+Police;Police
+Militia;Milice
+Marine Protected Areas officers;Agents de zone marine protégée
+Navy;Marine
+National Fisheries officers;Agents nationaux de pêche
+National Coast Guard;La garde côtière nationale
+Fisheries Control Officers;Agents de contrôle de pêche
+
+
+

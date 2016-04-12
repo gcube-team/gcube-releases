@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	<display-name>AquaMapsPortlet</display-name>
+
+	<description>
+		Provides AquaMapsPortlet
+	</description>
+
+
+	<listener>
+		<listener-class>org.gcube.application.aquamaps.aquamapsportlet.servlet.Initializator</listener-class>
+	</listener>
+
+
+	<listener>
+		<listener-class>org.gcube.application.aquamaps.aquamapsportlet.servlet.listeners.SessionListener</listener-class>
+	</listener>
+
+
+	<!-- <servlet> <servlet-name>PortletServlet</servlet-name> <servlet-class>org.gridsphere.provider.portlet.jsr.PortletServlet</servlet-class> 
+		</servlet> -->
+	<servlet>
+		<servlet-name>AquaMapsPortletLocalImpl</servlet-name>
+		<servlet-class>org.gcube.application.aquamaps.aquamapsportlet.servlet.AquaMapsPortletLocalImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AquaMapsPortletRemoteImpl</servlet-name>
+		<servlet-class>org.gcube.application.aquamaps.aquamapsportlet.servlet.AquaMapsPortletRemoteImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>SpeciesServlet</servlet-name>
+		<servlet-class>org.gcube.application.aquamaps.aquamapsportlet.servlet.SpeciesServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>OccurrenceCellsServlet</servlet-name>
+		<servlet-class>org.gcube.application.aquamaps.aquamapsportlet.servlet.OccurrenceCellsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PhylogenyServlet</servlet-name>
+		<servlet-class>org.gcube.application.aquamaps.aquamapsportlet.servlet.PhylogenyServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>TreeServlet</servlet-name>
+		<servlet-class>org.gcube.application.aquamaps.aquamapsportlet.servlet.TreeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SelectionServlet</servlet-name>
+		<servlet-class>org.gcube.application.aquamaps.aquamapsportlet.servlet.SelectionServlet</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>JobServlet</servlet-name>
+		<servlet-class>org.gcube.application.aquamaps.aquamapsportlet.servlet.JobServlet</servlet-class>
+	</servlet>
+
+	<!-- quicktourServlet -->
+	<servlet>
+		<servlet-name>quicktourServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.guidedtour.server.TourServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- social -->
+
+	<servlet>
+		<servlet-name>appnewsServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.applicationnews.server.ApplicationServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- Session checker -->
+
+	<servlet>
+		<servlet-name>checkServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.sessionchecker.server.SessionCheckerServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- Workspace explorer -->
+	<servlet>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsexplorer.server.WorkspaceExplorerServiceImpl</servlet-class>
+	</servlet>
+ 
+	<servlet>
+		<servlet-name>GisViewerService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gcubegisviewer.server.GCubeGisViewerServletImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>MapGenerator</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gisviewer.server.MapGenerator</servlet-class>
+	</servlet>
+
+	<!-- SERVLET MAPPINGS -->
+	
+	
+	<servlet-mapping>
+		<servlet-name>MapGenerator</servlet-name>
+		<url-pattern>/aquamapsportlet/MapGenerator</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GisViewerService</servlet-name>
+		<url-pattern>/aquamapsportlet/GisViewerService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AquaMapsPortletLocalImpl</servlet-name>
+		<url-pattern>/aquamapsportlet/AquaMapsPortletLocalService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AquaMapsPortletRemoteImpl</servlet-name>
+		<url-pattern>/aquamapsportlet/AquaMapsPortletRemoteService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>SpeciesServlet</servlet-name>
+		<url-pattern>/aquamapsportlet/SpeciesServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OccurrenceCellsServlet</servlet-name>
+		<url-pattern>/aquamapsportlet/OccurrenceCellsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PhylogenyServlet</servlet-name>
+		<url-pattern>/aquamapsportlet/PhylogenyServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>TreeServlet</servlet-name>
+		<url-pattern>/aquamapsportlet/TreeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectionServlet</servlet-name>
+		<url-pattern>/aquamapsportlet/SelectionServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JobServlet</servlet-name>
+		<url-pattern>/aquamapsportlet/JobServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- quicktourServlet -->
+	<servlet-mapping>
+		<servlet-name>quicktourServlet</servlet-name>
+		<url-pattern>/aquamapsportlet/quicktourServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>appnewsServlet</servlet-name>
+		<url-pattern>/aquamapsportlet/appnews</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>checkServlet</servlet-name>
+		<url-pattern>/aquamapsportlet/checksession</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<url-pattern>/aquamapsportlet/WorkspaceExplorerService</url-pattern>
+	</servlet-mapping>
+</web-app>

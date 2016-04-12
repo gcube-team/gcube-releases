@@ -1,0 +1,9 @@
+<application mode="online">
+ 
+	<group>Search</group>
+	<name>SearchSystemService</name>
+	<version>3.3.0</version>
+ 
+    <description>Restful Version of SearchSystem</description>
+ 
+</application>

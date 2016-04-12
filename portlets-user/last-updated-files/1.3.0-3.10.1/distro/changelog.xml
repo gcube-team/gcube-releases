@@ -1,0 +1,17 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.last-updated-files.1-3-0"
+		date="2015-09-02">
+		<Change>Fix for VRE long name</Change>
+		<Change>Added 1 minute cache</Change>
+		<Change>Minor Restyle</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.last-updated-files.1-2-0"
+		date="2015-07-03">
+		<Change>Added set read for accounting #309</Change>
+	</Changeset>
+
+	<Changeset component="org.gcube.portlets-user.last-updated-files.1-1-0"
+		date="2014-12-18">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

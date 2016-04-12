@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="${build.finalName}.1-0-2" date="2013-01-29">
+		<Change>Bug Fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-http-infrastructure-login.1-0-0" date="2012-04-30">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-http-infrastructure-login.1-0-3" date="2013-03-04">
+		<Change>Bug fixes</Change>
+	</Changeset>
+</ReleaseNotes>

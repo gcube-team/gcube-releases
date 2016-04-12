@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.execution.${build.finalName}" date="2014-02-07">
+		<Change>Plan construction bug fix</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowHiveQLAdaptor.1-0-0" date="2013-10-25">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

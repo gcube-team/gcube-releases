@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel width="100%" styleName="contact-section" ui:field="panel">
+		<table>
+			<tr>
+				<td>
+					<g:Image height="20px" width="20px" ui:field="icon"></g:Image>
+				</td>
+				<td>
+					<g:HTML width="100%" ui:field="value" styleName="contact-section-value"></g:HTML>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

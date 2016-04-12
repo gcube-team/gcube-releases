@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="AquaMapsService"
+	targetNamespace="http://gcube-system.org/namespaces/application/aquamaps/aquamapsservice"
+	xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://gcube-system.org/namespaces/application/aquamaps/aquamapsservice"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+	xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+	xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+	xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+	xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+	xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:aqtypes="http://gcube-system.org/namespaces/application/aquamaps/types">
+	
+	<import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+
+	<types>
+		<xsd:schema targetNamespace="http://gcube-system.org/namespaces/application/aquamaps/aquamapsservice"
+			xmlns:tns="http://gcube-system.org/namespaces/application/aquamaps/aquamapsservice">
+			<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types"
+				schemaLocation="../gcube/common/core/types/GCUBETypes.xsd" />
+		<xsd:import namespace="http://gcube-system.org/namespaces/application/aquamaps/types"
+		 schemaLocation="AquaMapsTypes.xsd"/>
+		- 		<xsd:import namespace="http://gcube-system.org/namespaces/application/aquamaps/gistypes"
+				schemaLocation="GISTypes.xsd" />
+		
+
+			<!-- Request / Response Types-->
+
+			
+
+
+
+			<xsd:complexType name="calculateEnvelopeRequestType">
+				<xsd:sequence>
+					<xsd:element name="speciesID" type="xsd:string" />
+					<xsd:element name="FaoAreas" type="xsd:string" />
+					<xsd:element name="BoundingNorth" type="xsd:double" />
+					<xsd:element name="BoundingSouth" type="xsd:double" />
+					<xsd:element name="BoundingEast" type="xsd:double" />
+					<xsd:element name="BoundingWest" type="xsd:double" />
+					<xsd:element name="useFAO" type="xsd:boolean" />
+					<xsd:element name="useBounding" type="xsd:boolean" />
+					<xsd:element name="useBottomSeaTempAndSalinity" type="xsd:boolean" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="calculateEnvelopefromCellSelectionRequestType">
+				<xsd:sequence>
+					<xsd:element name="speciesID" type="xsd:string" />
+					<xsd:element name="cellIds" type="coretypes:stringArray" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			
+
+			<xsd:complexType name="getPhylogenyRequestType">
+				<xsd:sequence>
+					<xsd:element name="fieldList" type="aqtypes:fieldArray" />
+					<xsd:element name="toSelect" type="aqtypes:field"/>
+					<xsd:element name="pagedRequestSettings" type="aqtypes:pagedRequestSettings" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+
+
+
+
+
+			<xsd:complexType name="getSpeciesByFiltersRequestType">
+				<xsd:sequence>
+					<xsd:element name="genericSearchFilters" type="aqtypes:filterArray"/>
+					<xsd:element name="specieficFilters" type="aqtypes:filterArray" />
+					<xsd:element name="pagedRequestSettings" type="aqtypes:pagedRequestSettings" />
+					<xsd:element name="hspen" type="xsd:int" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			
+
+			<xsd:complexType name="getSpeciesEnvelopeRequestType">
+				<xsd:sequence>
+					<xsd:element name="speciesId" type="xsd:string"/>
+					<xsd:element name="hspenId" type="xsd:int"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			
+		
+
+
+
+
+			<!-- Request / Response elements -->
+
+			<xsd:element name="deleteSubmittedRequest" type="coretypes:stringArray" />
+			<xsd:element name="deleteSubmittedResponse" type="xsd:int" />
+
+			<xsd:element name="markSavedRequest" type="coretypes:stringArray" />
+			<xsd:element name="markSavedResponse" type="coretypes:VOID" />
+
+
+			<xsd:element name="calculateEnvelopeRequest" type="tns:calculateEnvelopeRequestType" />
+			<xsd:element name="calculateEnvelopeResponse" type="aqtypes:fieldArray" />
+
+			<xsd:element name="calculateEnvelopefromCellSelectionRequest"
+				type="tns:calculateEnvelopefromCellSelectionRequestType" />
+			<xsd:element name="calculateEnvelopefromCellSelectionResponse"
+				type="aqtypes:fieldArray" />
+
+
+ 
+			<xsd:element name="getObjectRequest" type="xsd:int" />
+			<xsd:element name="getObjectResponse" type="aqtypes:AquaMap" />
+
+			<xsd:element name="getRelatedFilesRequest" type="xsd:string" />
+			<xsd:element name="getRelatedFilesResponse" type="aqtypes:fileArray" />
+			
+			
+
+			<xsd:element name="submitJobRequest" type="aqtypes:job"/>
+			<xsd:element name="submitJobResponse" type="xsd:string"/>
+
+			<xsd:element name="getPhylogenyRequest" type="tns:getPhylogenyRequestType" />
+
+			<xsd:element name="getPhylogenyResponse" type="xsd:string" />
+
+
+
+			
+
+
+
+				<xsd:element name="getSpeciesByFiltersRequest" type="tns:getSpeciesByFiltersRequestType" />
+
+				<xsd:element name="getSpeciesByFiltersResponse" type="xsd:string" />
+
+
+			<xsd:element name="getSpeciesByFiltersASCSVRequest" type="tns:getSpeciesByFiltersRequestType" />
+
+				<xsd:element name="getSpeciesByFiltersASCSVResponse" type="xsd:string" />
+
+
+
+
+
+			<xsd:element name="getSpeciesEnvelopRequest" type="tns:getSpeciesEnvelopeRequestType" />
+			<xsd:element name="getSpeciesEnvelopResponse" type="aqtypes:fieldArray" />
+
+			<xsd:element name="loadSubmittedByIdRequest" type="xsd:int"/>
+			<xsd:element name="loadSubmittedByIdResponse" type="aqtypes:submitted"/>
+		
+			
+		</xsd:schema>
+	</types>
+
+	<!-- message part -->
+	
+
+	<message name="MarkSavedRequest">
+		<wsdl:part name="request" element="tns:markSavedRequest" />
+	</message>
+	<message name="MarkSavedResponse">
+		<wsdl:part name="response" element="tns:markSavedResponse" />
+	</message>
+
+	<message name="DeleteSubmittedRequest">
+		<wsdl:part name="request" element="tns:deleteSubmittedRequest" />
+	</message>
+	<message name="DeleteSubmittedResponse">
+		<wsdl:part name="response" element="tns:deleteSubmittedResponse" />
+	</message>
+
+	<message name="CalculateEnvelopeRequest">
+		<part name="request" element="tns:calculateEnvelopeRequest" />
+	</message>
+	<message name="CalculateEnvelopeResponse">
+		<part name="response" element="tns:calculateEnvelopeResponse" />
+	</message>
+
+	<message name="CalculateEnvelopefromCellSelectionRequest">
+		<part name="request" element="tns:calculateEnvelopefromCellSelectionRequest" />
+	</message>
+	<message name="CalculateEnvelopefromCellSelectionResponse">
+		<part name="response" element="tns:calculateEnvelopefromCellSelectionResponse" />
+	</message>
+
+ 
+	<message name="GetObjectRequest">
+		<part name="request" element="tns:getObjectRequest" />
+	</message>
+	<message name="GetObjectResponse">
+		<part name="response" element="tns:getObjectResponse" />
+	</message>
+<!-- 
+	<message name="GetRelatedFilesRequest">
+		<part name="request" element="tns:getRelatedFilesRequest" />
+	</message>
+	<message name="GetRelatedFilesResponse">
+		<part name="response" element="tns:getRelatedFilesResponse" />
+	</message>
+-->
+	<message name="SubmitJobRequest">
+		<part name="request" element="tns:submitJobRequest" />
+	</message>
+	<message name="SubmitJobResponse">
+		<part name="response" element="tns:submitJobResponse" />
+	</message>
+
+	
+
+	<message name="GetSpeciesEnvelopRequest">
+		<part name="request" element="tns:getSpeciesEnvelopRequest" />
+	</message>
+	<message name="GetSpeciesEnvelopResponse">
+		<part name="response" element="tns:getSpeciesEnvelopResponse" />
+	</message>
+
+	<message name="GetSpeciesByFiltersRequest">
+		<part name="request" element="tns:getSpeciesByFiltersRequest" />
+	</message>
+	<message name="GetSpeciesByFiltersResponse">
+		<part name="response" element="tns:getSpeciesByFiltersResponse" />
+	</message>
+
+	<message name="GetSpeciesByFiltersASCSVRequest">
+		<part name="request" element="tns:getSpeciesByFiltersASCSVRequest" />
+	</message>
+	<message name="GetSpeciesByFiltersASCSVResponse">
+		<part name="response" element="tns:getSpeciesByFiltersASCSVResponse" />
+	</message>
+
+
+
+	<message name="GetPhylogenyRequest">
+		<part name="request" element="tns:getPhylogenyRequest" />
+	</message>
+	<message name="GetPhylogenyResponse">
+		<part name="response" element="tns:getPhylogenyResponse" />
+	</message>
+
+
+
+	<message name="LoadSubmittedByIdRequest">
+		<part name="request" element="tns:loadSubmittedByIdRequest" />
+	</message>
+	<message name="LoadSubmittedByIdResponse">
+		<part name="response" element="tns:loadSubmittedByIdResponse" />
+	</message>
+
+
+
+
+
+	<portType name="AquaMapsServicePortType">
+
+		<!-- operation part -->
+
+		<wsdl:operation name="markSaved">
+			<input message="tns:MarkSavedRequest" />
+			<output message="tns:MarkSavedResponse" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="deleteSubmitted">
+			<input message="tns:DeleteSubmittedRequest" />
+			<output message="tns:DeleteSubmittedResponse" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="calculateEnvelope">
+			<input message="tns:CalculateEnvelopeRequest" />
+			<output message="tns:CalculateEnvelopeResponse" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="calculateEnvelopefromCellSelection">
+			<input message="tns:CalculateEnvelopefromCellSelectionRequest" />
+			<output message="tns:CalculateEnvelopefromCellSelectionResponse" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</wsdl:operation>
+
+  
+		<wsdl:operation name="getObject">
+			<input message="tns:GetObjectRequest" />
+			<output message="tns:GetObjectResponse" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</wsdl:operation>
+<!--  
+		<wsdl:operation name="getRelatedFiles">
+			<input message="tns:GetRelatedFilesRequest" />
+			<output message="tns:GetRelatedFilesResponse" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</wsdl:operation>
+-->
+		<wsdl:operation name="submitJob">
+			<input message="tns:SubmitJobRequest" />
+			<output message="tns:SubmitJobResponse" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="getSpeciesEnvelop">
+			<input message="tns:GetSpeciesEnvelopRequest" />
+			<output message="tns:GetSpeciesEnvelopResponse" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="getSpeciesByFilters">
+			<input message="tns:GetSpeciesByFiltersRequest" />
+			<output message="tns:GetSpeciesByFiltersResponse" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="getSpeciesByFiltersASCSV">
+			<input message="tns:GetSpeciesByFiltersASCSVRequest" />
+			<output message="tns:GetSpeciesByFiltersASCSVResponse" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</wsdl:operation>
+
+		<wsdl:operation name="getPhylogeny">
+			<input message="tns:GetPhylogenyRequest" />
+			<output message="tns:GetPhylogenyResponse" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</wsdl:operation>
+
+
+
+		<wsdl:operation name="loadSubmittedById">
+			<input message="tns:LoadSubmittedByIdRequest" />
+			<output message="tns:LoadSubmittedByIdResponse" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</wsdl:operation>
+		
+
+
+	</portType>
+
+</definitions>

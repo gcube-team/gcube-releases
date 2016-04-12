@@ -1,0 +1,10 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.application.aquamapsspeciesview.1-3-0" date="2013-09-27">
+		<Change>Mavenized</Change>
+		<Change>gwt 2.5.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application.aquamapsspeciesview.1-3-2" date="2015-09-28">
+		<Change>Integrated Workspace explorer</Change>
+		<Change>Integrated Session checker</Change>
+	</Changeset>	
+</ReleaseNotes>

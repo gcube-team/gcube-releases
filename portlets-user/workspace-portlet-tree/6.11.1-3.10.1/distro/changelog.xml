@@ -1,0 +1,255 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-11-0"
+		date="2016-01-20">
+		<Change>[Feature #1925] Added, new public link format:
+			http://host/storageID
+		</Change>
+		<Change>[Feature #1298] Update public link generation</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-10-1"
+		date="2015-12-16">
+		<Change>Bug Fixing - #1804; #1808; #1822; #1333</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-10-0"
+		date="2015-11-19">
+		<Change>[Feature #124] Remove a user from shared folder</Change>
+		<Change>[Feature #1259] Enhancement to workspace item history</Change>
+		<Change>[Bug #1373] Fixed: breadcrumb slowness on file upload
+			make
+			upload of files on parent folders
+		</Change>
+		<Change>[Incident #1338] Fixed: Workspace and ownership ... something
+			is wrong
+		</Change>
+		<Change>[Bug: #1459] Fixed: get link disabled</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-9-0"
+		date="2015-10-30">
+		<Change>[Bug #718] Fixed breadcrumb path</Change>
+		<Change>[Bug #546] Fixed bug</Change>
+		<Change>[Bug #531] Fixed issue on create folder</Change>
+		<Change>[Feature #429] Realized. Integrated with workspace-uploader
+		</Change>
+		<Change>[Bug #1270] Fixed. Workspace improvements: many rpc calls
+			after an delete multiple
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-8-0"
+		date="2015-07-06">
+		<Change>[Feature #129] Porting to HL 2.0
+		</Change>
+		<Change>[Feature #331] Public Link updated to show short link and
+			complete link
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-7-2"
+		date="2015-04-15">
+		<Change>Integrated with Contact Edit Permissions
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-7-1"
+		date="2014-10-29">
+		<Change>Added user storage usage
+		</Change>
+		<Change>Added notifications for: set folder Administrator, delete
+			shared folder
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-6-7"
+		date="2014-09-01">
+		<Change>Support Ticket #813: Broken Breadcrumb for long path
+		</Change>
+		<Change>Ticket #3053: Load current ACL stored to Shared Folder
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-6-6"
+		date="2014-07-02">
+		<Change>#2798 Sharing Panel usability improved
+		</Change>
+		<Change>Completed activity to
+			https://support.social.isti.cnr.it/ticket/126
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-6-5"
+		date="2014-06-04">
+		<Change>Added Trash:
+			https://issue.imarine.research-infrastructures.eu/ticket/2497
+		</Change>
+		<Change>Updated pom to support new portal configuration (gcube release
+			3.2)
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-6-4"
+		date="2014-05-22">
+		<Change>Fixed:
+			https://support.d4science.research-infrastructures.eu/ticket/843
+		</Change>
+		<Change>Added: item number in grid and trash. See:
+			https://issue.imarine.research-infrastructures.eu/ticket/282
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-6-2"
+		date="2014-3-17">
+		<Change>Management of My Special Folder</Change>
+		<Change>Added change permissions to VRE shared folder</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-6-0"
+		date="2014-2-07">
+		<Change>#2634 Workspace: support for setting permissions over shared
+			folders
+		</Change>
+		<Change>#2633 Workspace: support for VRE Shared Folders</Change>
+		<Change>#2290 Worskspace history operations: should support the
+			session validation
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-5-1"
+		date="2013-12-12">
+		<Change>Changed several labels into Logger
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-5-0"
+		date="2013-10-21">
+		<Change>#Ticket 2223. This project was enhancements to gwt 2.5.1
+		</Change>
+		<Change>GCF dependency was removed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-4-0"
+		date="2013-09-16">
+		<Change>Provide support for public link, Related ticket: #1993
+		</Change>
+		<Change>Link sharing and public link: generate a human-readable URL
+			via URL shortening, Related ticket: #1921
+		</Change>
+		<Change>Fixed bug on shared links, Ticket #630 </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-3-0"
+		date="2013-07-08">
+		<Change>Provide support for share link, Related ticket: #1504</Change>
+		<Change>Edit description on sharing, Related ticket: #1822 </Change>
+		<Change>Bugs fixed, Related Tickets: #628, #633, #630</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-2-0"
+		date="2013-05-29">
+		<Change>Provide support for accounting, related ticket: #1752</Change>
+		<Change>Enable notification for file upload in shared folder, related
+			ticket: #1732
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-1-0"
+		date="2013-04-19">
+		<Change>Workspace portlet was enhanced to meet the requests coming
+			from the User Community
+		</Change>
+		<Change>Related tickets: #1500, #1498, #320, #1487, #1499, #1501,
+			#1497, #1536
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.6-0-0"
+		date="2013-03-05">
+		<Change>#1247 The workspace tree was mavenized</Change>
+		<Change>#230, #205 The Workspace environment now supports the sharing
+			of folder between users
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.5-1-0"
+		date="2012-09-21">
+		<Change>Old Send Message removed, added support for new mail sender
+		</Change>
+		<Change>Bug fixed: upload file/archive</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.5-0-0"
+		date="2012-05-04">
+		<Change>#216 New version of Workspace Tree is developed using the GXT
+			framework
+		</Change>
+		<Change>#216 New tree is asynchronous</Change>
+		<Change>#216 Reviews tree GUI and adding new features</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.4-3-0"
+		date="2011-09-01">
+		<Change>#1740: ICIS / Download csv / added extension .xlw</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.4-2-0"
+		date="2011-07-01">
+		<Change>#1555: WorkflowTemplate and WorkflowReport required in
+			Workspace Portlet
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.4-1-0"
+		date="2011-05-06">
+		<Change>Synch with others changes in HomeLibrary</Change>
+		<Change>GWT 2.2.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.4-0-0"
+		date="2011-02-07">
+		<Change>Removed Workspace and Basket type, replaced with folder option
+		</Change>
+		<Change>Synch with others changes in HomeLibrary</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.3-2-1"
+		date="2010-11-09">
+		<Change>Added more checks on GWT model construction</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.3-2-0"
+		date="2010-10-22">
+		<Change>Enabled details panel for Report, ReportTemplate and
+			AquaMapsItem workspace items
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.3-1-0"
+		date="2010-09-03">
+		<Change>#36: ICIS / Workspace / Upload an archive</Change>
+		<Change>Merged ThumbnailServlet and ImageServlet</Change>
+		<Change>#774: Workspace portlet tree - Open Report / Template redirect
+			link not working
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.3-0-0"
+		date="2010-07-16">
+		<Change>Ported to GWT 2.0</Change>
+		<Change>Updated project structure to WebPortlet</Change>
+		<Change>Update to LifeRay portal</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.2-6-0"
+		date="2010-05-14">
+		<Change>#424: Workspace code refactoring an enanchement</Change>
+		<Change>refactored code</Change>
+		<Change>uniformed icons, no more specialized action icons</Change>
+		<Change>added more informations on items like AquaMapsItem, Report and
+			Report Template
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.2-5-0"
+		date="2010-01-29">
+		<Change>gcube release 1.7.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.2-4-0"
+		date="2009-11-30">
+		<Change>gcube release 1.6.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.2-3-0"
+		date="2009-11-16">
+		<Change>gcube release 1.5.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.2-2-0"
+		date="2009-10-16">
+		<Change>gcube release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.2-1-1"
+		date="2009-07-29">
+		<Change>gcube release 1.2.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.2-1-0"
+		date="2009-07-14">
+		<Change>gcube release 1.2.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.2-0-0"
+		date="2009-05-19">
+		<Change>gcube release 1.2.0 rc1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-tree.1-1-2"
+		date="2009-01-12">
+		<Change>first release</Change>
+	</Changeset>
+</ReleaseNotes>

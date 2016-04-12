@@ -1,0 +1,40 @@
+The gCube System - ${name}
+------------------------------------------------------------
+
+This work has been supported by the following European projects: iMarine (FP7-INFRASTRUCTURES-2011-2)
+
+Authors
+-------
+
+Mangiacrapa Francesco (francesco.mangiacrapa@isti.cnr.it), CNR Pisa, 
+Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo"
+
+  
+Version and Release Date
+------------------------
+
+v. ${version} (${release.date})
+
+Description
+-----------
+
+${project.description}
+  
+Download information
+--------------------
+Source code URL: ${scm.url}
+
+
+Documentation 
+-------------
+
+${project.description}
+
+
+Licensing
+---------
+
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.
+
+
+

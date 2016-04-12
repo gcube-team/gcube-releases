@@ -1,0 +1,38 @@
+<web-app>
+
+	<servlet>
+		<servlet-name>greetServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.admin.wfdocviewer.server.WorkflowDocServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>greetServlet</servlet-name>
+		<url-pattern>/workflowdocumentsviewer/greet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>WorkspaceLightService</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.lighttree.server.WorkspaceServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>WorkspaceLightService</servlet-name>
+		<url-pattern>/workflowdocumentsviewer/WorkspaceLightService</url-pattern>
+	</servlet-mapping>
+	<!-- quicktourServlet -->
+	<servlet>
+		<servlet-name>quicktourServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.guidedtour.server.TourServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>quicktourServlet</servlet-name>
+		<url-pattern>/workflowdocumentsviewer/quicktourServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>WorkflowDocumentsViewer.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

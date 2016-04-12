@@ -1,0 +1,86 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.tabular-data-gwt-service.2-10-0" date="2016-01-31">
+		<Change>Fixed SDMX Export no ExportMetadata is supported on service</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-gwt-service.2-9-0" date="2015-10-15">
+		<Change>Added support to WorkspaceExplorer [ticket #428]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-gwt-service.2-8-0" date="2015-07-03">
+		<Change>Added Delete Validations</Change>
+		<Change>Added creation date to template</Change>
+		<Change>Added notifications [issue #197]</Change>
+		<Change>Added support to multi column expressions [issue #81]</Change>
+		<Change>Added support to rules on table</Change>
+		<Change>Added support to storage id [issue #180]</Change>
+		<Change>Updated Licenses</Change>
+		<Change>Updated support to resources [issue #209]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-gwt-service.2-7-0" date="2015-04-30">
+		<Change>Added JobClassifier</Change>
+		<Change>Added PositionColumn</Change>
+		<Change>Added Open TR with parameter on url</Change>
+		<Change>Updated Geospatial operations</Change>
+		<Change>Updated Resource management</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-gwt-service.2-6-0" date="2015-02-16">
+		<Change>Updated background operation monitor</Change>
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+		<Change>Added editing on multiline</Change>
+		<Change>Added support to format type</Change>
+		<Change>Added Geospatial C-Square and Ocean Area</Change>
+		<Change>Added Point creation</Change>
+		<Change>Added Charts</Change>
+		<Change>Added support Tabular Resource on Multi Scope [issue #3237]
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-gwt-service.2-5-0" date="2014-10-31">
+		<Change>Updated Discard</Change>
+		<Change>Updated CSVExportSession</Change>
+		<Change>Added JSON Export</Change>
+		<Change>Added Uri Resolver</Change>
+		<Change>Added Multi Tab Management</Change>
+		<Change>Added Map Creation</Change>
+		<Change>Added Resource Management</Change>
+		<Change>Added Resume UI State</Change>
+		<Change>Added Time Aggregation</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-gwt-service.2-4-0" date="2014-09-12">
+		<Change>Added union</Change>
+		<Change>Added replace by expression</Change>
+		<Change>Added background monitor</Change>
+		<Change>Updated operation factory</Change>
+		<Change>Updated monitor</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-gwt-service.2-3-0" date="2014-06-05">
+		<Change>Added GroupBy</Change>
+		<Change>Added SecurtyException</Change>
+		<Change>Updated OperationInvocation</Change>
+		<Change>Updated Replace</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-gwt-service.2-2-0" date="2014-06-05">
+		<Change>Added replace batch operation</Change>
+		<Change>Added history</Change>
+		<Change>Added resubmit task</Change>
+		<Change>Added resume task</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-gwt-service.2-1-0" date="2014-04-04">
+		<Change>Added replace value operation</Change>
+		<Change>Added share</Change>
+		<Change>Added clone operation</Change>
+		<Change>Added retrieve of codelist</Change>
+		<Change>Added delete and apply template operation</Change>
+		<Change>Added the management of views</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-gwt-service.2-0-0" date="2014-02-01">
+		<Change>Added column delete operation</Change>
+		<Change>Added column change type operation</Change>
+		<Change>Added CSV Export operation</Change>
+		<Change>Added SDMX Export operation</Change>
+		<Change>Updated CSV Import operation</Change>
+		<Change>Updated SDMX Import operation</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-gwt-service.1-0-0" date="2013-10-18">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

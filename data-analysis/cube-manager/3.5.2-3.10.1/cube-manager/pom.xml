@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.data.analysis.tabulardata</groupId>
+		<artifactId>cube-manager-parent</artifactId>
+		<version>3.5.2-3.10.1</version>
+	</parent>
+	<artifactId>cube-manager</artifactId>
+	<name>Cube Manager</name>
+	<description>Component of Tabular Data that manages table creation/deletion on DB backend and keeps a hold of created tables and their structure and metadata.</description>
+	
+	<scm>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-analysis/tabulardata/cube-manager-parent/cube-manager/</url>
+	</scm>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>cube-manager-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>cube-manager-data</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>cube-manager-metadata</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>tabular-model-util</artifactId>
+		</dependency>
+	</dependencies>
+	
+	<build>
+		<plugins>
+				<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

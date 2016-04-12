@@ -1,0 +1,41 @@
+/** Add css rules here for your application. */
+
+
+body {
+	height:100%;
+	margin-top: -1px;
+}
+html{
+
+	height:100%;
+}
+divContainer{
+	margin-top: -1px;
+}
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+
+.dialogVPanel {
+  margin: 5px;
+}
+.imagePop {
+	outline:none;
+	border:none;
+	background-image: url(gxt/images/mine/blue-loading.png)!important;
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 40px;
+}
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
+

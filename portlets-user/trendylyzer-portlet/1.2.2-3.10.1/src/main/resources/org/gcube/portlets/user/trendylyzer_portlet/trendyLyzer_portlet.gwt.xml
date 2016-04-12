@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='trendyLyzer_portlet'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+<!-- 	<inherits name="com.google.gwt.logging.Logging"/> -->
+	<!-- To Comment out -->
+	<set-property name="user.agent" value="gecko1_8" />
+	<inherits name="com.extjs.gxt.ui.GXT" />
+	<inherits name='com.sencha.gxt.ui.GXT' />
+	<inherits name="org.gcube.portlets.user.tdw.TabularDataWidget" />
+	<inherits
+		name='org.gcube.portlets.widgets.lighttree.WorkspacePortletLightTree' />
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+	<!-- <inherits name='org.gcube.portlets.user.csvimportwizard.CSVImportWizard' 
+		/> -->
+	<!-- <inherits -->
+	<!-- name="org.gcube.portlets.user.csvimportwizard.ws.CSVImportWizardWorkspace" 
+		/> -->
+<!-- 	<inherits name="com.allen_sauer.gwt.log.gwt-log-TRACE" /> -->
+	
+
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.user.trendylyzer_portlet.client.TrendyLyzer_portlet' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+	<!-- <source path='resources' /> -->
+
+</module>

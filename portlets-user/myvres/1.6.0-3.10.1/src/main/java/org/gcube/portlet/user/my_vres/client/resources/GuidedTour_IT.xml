@@ -1,0 +1,164 @@
+
+<!-- this is your main configuration XML (example name GuidedTour.xml), the 
+	source tag have to link this file: -->
+<guidedtour width="780" height="450" usemask="false">
+	<title>Social Collaboration Facilities</title>
+	<guide>http://goo.gl/SXwcjh
+	</guide>
+	<themecolor>BLUE</themecolor>
+	<steps>
+		<step showTitle="true" v-alignment="ALIGN_TOP">
+			<title>Generale</title>
+			<bodies>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 0 10px; font-size: 14px; ">
+						<div style="padding-bottom: 25px;">
+							Questo portale offre tre caratteristiche per la collaborazione: <b>Ambienti Collaborativi</b>, servizi per <b>Social Networking</b> ed un <b>Workspace Condiviso</b>.
+						</div>
+						<div style="padding-bottom: 25px;">
+							Gli <b>Ambienti Collaborativi</b> sono ambienti di lavoro che offrono servizi selezionati in aggiunta a quelli di Social Networking	
+							ed al workspace condiviso. Ogni ambiente serve una community.  
+						</div>
+						<div style="padding-bottom: 25px;">
+							I servizi di <b>Social networking</b> mettono a disposizione una bacheca virtuale dove gli utenti possono scrivere, condividere link e file tra di loro.</div>
+						<div style="padding-bottom: 25px;">
+							Il <a href="/group/data-e-infrastructure-gateway/workspace" target="_blank"><b>Workspace Condiviso</b></a>, è un servizio per gestire file nel Cloud. 
+							Attraverso esso puoi gestire, caricare e cancellare file come meglio credi. 
+							Puoi <b>condividere cartelle</b> con qualsiasi utente per massimizzare la collaborazione tra utenti.	
+						</div>
+						<div style="padding-bottom: 10px;">
+							Scopri di più attraverso questo tour virtuale, clicca su Next.
+						</div>
+					</div>
+					]]>
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/1.jpg" />
+			</images>
+		</step>
+		<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Iscrizioni</title>
+			<bodies>
+				<body><![CDATA[
+					<div style="padding-bottom: 40px;">
+						<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+							<div style="padding-bottom: 40px;">
+								Puoi vedere gli <b>Ambienti Collaborativi</b> e le community disponibili nel Sistema cliccando su "Join New" nel menu sotto questa pagina. 
+							</div>		
+							<div style="padding-bottom: 40px;">
+								Per ogni <b>Ambienti Collaborativo</b> puoi chiedere la sottoscrizione.
+								La tua richiesta sarà assegnata ad una persona delegata dalla community ed approvata (a seconda dello scopo della community).								
+							</div>	
+							<div style="padding-bottom: 40px;">
+								Sarai notificato sia che la richiesta venga approvata che no, via email. 
+								Mentre la richiesta si trova in fase di approvazione l'icona relativa sarà segnalata come pendente (Pending).
+							</div>	
+							<div style="padding-bottom: 40px;">
+								In casi particolari potresti essere aggiunto automaticamente ad un ambiente, se questo succede verrai notificato via email.
+							</div>																															
+						</div>						
+					</div>
+					]]>
+					
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/6.jpg" />
+			</images>
+		</step>
+		<step showTitle="true" v-alignment="ALIGN_TOP">
+			<title>La Dockbar</title>
+			<bodies>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 0 10px; font-size: 14px; ">
+						<div style="padding-bottom: 10px;">
+							La Dockbar è <b>molto importante</b>, è sempre presente in alto e contiene 4 icone come mostrato in figura.
+						</div>
+						<div style="padding-bottom: 5px;">
+							Ogni icona punta ad una  <b>applicazione del Sistema</b>, per favore prenditi qualche secondo per capire dove si trova la Dockbar (in alto alla tua sinistra)	
+						</div>
+						<div style="padding-top: 5px;">	
+							<ul style="list-style-type: circle; padding-left: 10px;">
+								<li><b>Home Social</b> è la pagina dietro questo tour virtuale e contiene la tua bacheca personale (News Feed);</li>	
+								<li><b>Workspace</b> è l'applicazione per condividere i tuoi dati e per il tuo Cloud storage privato;</li>	
+								<li><b>Messages</b> permette di scambiare messaggi con gli altri utenti del sistema e di allegare grossi file dal workspace;</li>
+								<li><b>Notifications</b> ti tiene aggiornato su cosa succede nel Sistema (relativo a te). 
+								Per conoscere e <b>personalizzare il modo in cui vieni notificato</b>, guarda lo step successivo.</li>
+							</ul>	
+						</div>	
+						<div style="padding-top: 5px;">
+							<b>Nota bene:</b> quando ricevi una nuova notifica o messagio l'icona relativa diventa rossa.
+						</div>					
+					</div>
+					]]>
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/2.png" />
+			</images>
+		</step>
+		<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Notifiche</title>
+			<bodies>
+					<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">						
+						<div style="padding-bottom: 10px;">
+							 Per aprire le <b>Impostazioni di Notifica</b> vai alla pagina delle <a href="/group/data-e-infrastructure-gateway/notifications" target="_blank">Notifiche</a>
+							 e clicca "Notification Settings" come mostrato in figura nel rettangolo rosso. 			
+						</div>						
+					</div>
+					]]>
+				</body>
+					<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 20px;">
+							Le <b>impostazioni</b> sono molto <b>personalizzabili</b>. Per ogni tipo di Notifica generata dal Sistema puoi scegliere <b>se e come</b> essere notificato.
+						</div>
+						<div style="padding-bottom: 10px;">
+							 Per ogni tipo di Notifica puoi scegliere di essere notificato tramite questo <b>portale</b>, via <b>email</b> o <b>nessuna notifica</b> (cliccando OFF). 
+							 Di default quasi tutte le notifiche sono impostate ad ON. 				
+						</div>									
+					</div>
+					]]>
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/3.jpg" />
+				<image url="images/tour/4.jpg" />
+			</images>
+		</step>		
+		<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Condividere News</title>
+			<bodies>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 0 10px; font-size: 14px; ">
+						<div style="padding-bottom: 40px;">
+							Quando <b>condividi una news</b> puoi usare queste utility:
+							<div style="padding-top: 15px;"> 
+								Se <b>incolli un link</b> il Sistema cercherà di crearne un'anteprima.
+							</div>
+							<div style="padding-top: 15px;"> 
+								Per i <b>file</b> invece puoi usare l'icona di attachment.
+							</div> 
+							<div style="padding-top: 15px;">
+								Puoi anche usare la “@” per <b>menzionare</b> qualcuno. In questo caso "qualcuno" riceverà una notifica :)</div>
+							<div style="padding-top: 15px;">
+								Inoltre, se vuoi che <b>ognuno nel gruppo sia notificato</b> a proposito del tuo post, seleziona la +notification to members nel "Share with" menu.
+								Gli utenti saranno notificati  via email a meno che abbiano deciso di no nelle loro impostazioni.
+							</div>	
+							<div style="padding-top: 25px;">
+								Il Tour è finito, ricorda di cliccare "Don't show this again" <b>qui in basso</b> per non far apparire questo popup in futuro. Grazie per aver seguito il tour virtuale.
+							</div>																																							
+						</div>																																	
+					</div>					
+					]]>
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/5.jpg" />
+				<image url="images/tour/7.jpg" />			
+			</images>
+		</step>		
+	</steps>
+</guidedtour>

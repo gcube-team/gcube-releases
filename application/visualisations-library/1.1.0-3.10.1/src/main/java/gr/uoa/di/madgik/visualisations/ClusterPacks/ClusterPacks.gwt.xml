@@ -1,0 +1,10 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="gr.uoa.di.madgik.visualisations.VisualisationsLibrary"/>
+	
+	
+	<entry-point class="gr.uoa.di.madgik.visualisations.ClusterPacks.client.ClusterPacks"/>
+	
+	<source path="client" />
+	
+</module>

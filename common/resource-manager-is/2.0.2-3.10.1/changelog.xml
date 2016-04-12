@@ -1,0 +1,15 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.rest.resource-manager-is.2-0-2" date="2014-09-10">
+		<Change>Information Collector now supports memoization</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.rest.resource-manager-is.2-0-1" date="2014-06-30">
+		<Change>Fixed ISPublisher to publish resources in multiple scopes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.rest.resource-manager-is.1-0-0" date="2014-03-13">
+		<Change>Initial release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.rest.resource-manager-is.2-0-0" date="2014-06-04">
+		<Change>Changed RIDiscovererISimpl constructor so that the object is immutable</Change>
+		<Change>Added ISInformationCollector</Change>
+	</Changeset>
+</ReleaseNotes>

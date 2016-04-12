@@ -1,0 +1,30 @@
+package org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.evaluators;
+import java.io.File;
+import java.net.URL;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.LinkedHashMap;
+import java.io.StringWriter;
+import org.apache.commons.io.IOUtils;
+import org.apache.xmlbeans.XmlObject;
+import org.gcube.dataanalysis.wps.statisticalmanager.synchserver.bindings.*;
+import org.n52.wps.algorithm.annotation.*;
+import org.n52.wps.io.data.*;
+import org.n52.wps.io.data.binding.complex.*;
+import org.n52.wps.io.data.binding.literal.*;
+import org.n52.wps.server.*;import org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mapping.AbstractEcologicalEngineMapper;import org.n52.wps.server.*;import org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.*;
+@Algorithm(statusSupported=false, title="QUALITY_ANALYSIS", abstrakt="An evaluator algorithm that assesses the effectiveness of a distribution model by computing the Receiver Operating Characteristics (ROC), the Area Under Curve (AUC) and the Accuracy of a model", identifier="org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.evaluators.QUALITY_ANALYSIS", version = "1.1.0")
+public class QUALITY_ANALYSIS extends AbstractEcologicalEngineMapper implements IEvaluator{
+@ComplexDataInput(abstrakt="Name of the parameter: PositiveCasesTable. A Table containing positive cases [a http link to a table in UTF-8 encoding following this template: (HCAF) http://goo.gl/SZG9uM]", title="A Table containing positive cases [a http link to a table in UTF-8 encoding following this template: (HCAF) http://goo.gl/SZG9uM]", maxOccurs=1, minOccurs=1, identifier = "PositiveCasesTable", binding = GenericFileDataBinding.class)	public void setPositiveCasesTable(GenericFileData file) {inputs.put("PositiveCasesTable",file);}
+@ComplexDataInput(abstrakt="Name of the parameter: NegativeCasesTable. A Table containing negative cases [a http link to a table in UTF-8 encoding following this template: (HCAF) http://goo.gl/SZG9uM]", title="A Table containing negative cases [a http link to a table in UTF-8 encoding following this template: (HCAF) http://goo.gl/SZG9uM]", maxOccurs=1, minOccurs=1, identifier = "NegativeCasesTable", binding = GenericFileDataBinding.class)	public void setNegativeCasesTable(GenericFileData file) {inputs.put("NegativeCasesTable",file);}
+@LiteralDataInput(abstrakt="Name of the parameter: PositiveCasesTableKeyColumn. Positive Cases Table Key Column [the name of a column from PositiveCasesTable]", defaultValue="csquarecode", title="Positive Cases Table Key Column [the name of a column from PositiveCasesTable]", identifier = "PositiveCasesTableKeyColumn", maxOccurs=1, minOccurs=1, binding = LiteralStringBinding.class) public void setPositiveCasesTableKeyColumn(String data) {inputs.put("PositiveCasesTableKeyColumn",data);}
+@LiteralDataInput(abstrakt="Name of the parameter: NegativeCasesTableKeyColumn. Negative Cases Table Key Column [the name of a column from NegativeCasesTable]", defaultValue="csquarecode", title="Negative Cases Table Key Column [the name of a column from NegativeCasesTable]", identifier = "NegativeCasesTableKeyColumn", maxOccurs=1, minOccurs=1, binding = LiteralStringBinding.class) public void setNegativeCasesTableKeyColumn(String data) {inputs.put("NegativeCasesTableKeyColumn",data);}
+@ComplexDataInput(abstrakt="Name of the parameter: DistributionTable. A probability distribution table [a http link to a table in UTF-8 encoding following this template: (HSPEC) http://goo.gl/OvKa1h]", title="A probability distribution table [a http link to a table in UTF-8 encoding following this template: (HSPEC) http://goo.gl/OvKa1h]", maxOccurs=1, minOccurs=1, identifier = "DistributionTable", binding = GenericFileDataBinding.class)	public void setDistributionTable(GenericFileData file) {inputs.put("DistributionTable",file);}
+@LiteralDataInput(abstrakt="Name of the parameter: DistributionTableKeyColumn. Distribution Table Key Column [the name of a column from DistributionTable]", defaultValue="csquarecode", title="Distribution Table Key Column [the name of a column from DistributionTable]", identifier = "DistributionTableKeyColumn", maxOccurs=1, minOccurs=1, binding = LiteralStringBinding.class) public void setDistributionTableKeyColumn(String data) {inputs.put("DistributionTableKeyColumn",data);}
+@LiteralDataInput(abstrakt="Name of the parameter: DistributionTableProbabilityColumn. Distribution Table Probability Column [the name of a column from DistributionTable]", defaultValue="probability", title="Distribution Table Probability Column [the name of a column from DistributionTable]", identifier = "DistributionTableProbabilityColumn", maxOccurs=1, minOccurs=1, binding = LiteralStringBinding.class) public void setDistributionTableProbabilityColumn(String data) {inputs.put("DistributionTableProbabilityColumn",data);}
+@LiteralDataInput(abstrakt="Name of the parameter: PositiveThreshold. Positive acceptance threshold", defaultValue="0.8", title="Positive acceptance threshold", identifier = "PositiveThreshold", maxOccurs=1, minOccurs=1, binding = LiteralStringBinding.class) public void setPositiveThreshold(String data) {inputs.put("PositiveThreshold",data);}
+@LiteralDataInput(abstrakt="Name of the parameter: NegativeThreshold. Negative acceptance threshold", defaultValue="0.3", title="Negative acceptance threshold", identifier = "NegativeThreshold", maxOccurs=1, minOccurs=1, binding = LiteralStringBinding.class) public void setNegativeThreshold(String data) {inputs.put("NegativeThreshold",data);}
+
+@ComplexDataOutput(abstrakt="Output that is not predetermined", title="NonDeterministicOutput", identifier = "non_deterministic_output", binding = GenericXMLDataBinding.class)
+ public XmlObject getNon_deterministic_output() {return (XmlObject) outputs.get("non_deterministic_output");}
+@Execute	public void run() throws Exception {		super.run();	} }

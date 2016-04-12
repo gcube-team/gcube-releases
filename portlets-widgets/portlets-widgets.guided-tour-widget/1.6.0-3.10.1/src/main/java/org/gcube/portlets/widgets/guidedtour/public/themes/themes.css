@@ -1,0 +1,378 @@
+/**	basic theme color**/
+
+a.blue, span.blue {
+	color: #4D95CC;
+}
+
+a.magenta, span.magenta {
+	color: #CC009C;
+}
+
+a.silver, span.silver {
+	color: #444;
+}
+
+a.orange, span.orange {
+	color: #ff8121;
+}
+
+a.yellow, span.yellow {
+	color: #444;
+}
+
+a.green, span.green {
+	color: #009000;
+}
+
+a.black, span.black {
+	color: #000;
+}
+
+a.red, span.red {
+	color: #FF0000;
+}
+
+a.pink, span.pink {
+	color: #F99CF9;
+}
+
+a.khaki, span.khaki {
+	color: #CCC66C;
+}
+
+a.lime, span.lime {
+	color: #00FF00;
+}
+
+a.aquamarine, span.aquamarine {
+	color: #33CC99;
+}
+
+/**	breadcrumb theme **/
+.breadcrumbs li.magenta {
+	color: #CC009C;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.breadcrumbs li.silver {
+	color: #444;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.breadcrumbs li.orange {
+	color: #ff8121;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.breadcrumbs li.yellow {
+	color: #444;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.breadcrumbs li.green {
+	color: #009000;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.breadcrumbs li.black {
+	color: #000;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.breadcrumbs li.red {
+	color: #FF0000;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.breadcrumbs li.pink {
+	color: #F99CF9;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.breadcrumbs li.khaki {
+	color: #CCC66C;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.breadcrumbs li.lime {
+	color: #00FF00;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.breadcrumbs li.aquamarine {
+	color: #33CC99;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+/** dialog box magenta **/
+.gcube-magenta-DialogBox {
+	background: #FFFFFF none repeat-x scroll 0 0;
+	border: 4px solid #CC009C;
+}
+
+.gcube-magenta-DialogBox .dialogTop {
+	background: #CC009C;
+}
+
+.gcube-magenta-DialogBox .dialogMiddleLeft {
+	background: #CC009C;
+}
+
+.gcube-magenta-DialogBox .dialogMiddleRight {
+	background: #CC009C;
+}
+
+.gcube-magenta-DialogBox .dialogBottom {
+	background: #CC009C;
+}
+
+/** dialog box silver **/
+.gcube-silver-DialogBox {
+	background: #FFFFFF none repeat-x scroll 0 0;
+	border: 4px solid #f5f5f5;
+	-moz-box-shadow: -5px -5px 5px #BBB;
+	-webkit-box-shadow: -5px -5px 5px #BBB;
+	box-shadow: -5px -5px 5px #BBB;
+}
+
+.gcube-silver-DialogBox .dialogTop {
+	background: #f5f5f5;
+}
+
+.gcube-silver-DialogBox .dialogMiddleLeft {
+	background: #f5f5f5;
+}
+
+.gcube-silver-DialogBox .dialogMiddleRight {
+	background: #f5f5f5;
+}
+
+.gcube-silver-DialogBox .dialogBottom {
+	background: #f5f5f5;
+}
+
+.gcube-silver-DialogBox .Caption {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 20px;
+	color: #777;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.32);
+	padding-bottom: 5px;
+}
+/** dialog box yellow **/
+.gcube-yellow-DialogBox {
+	background: #FFFFFF none repeat-x scroll 0 0;
+	border: 4px solid #ffff00;
+	-moz-box-shadow: -5px -5px 5px #BBB;
+	-webkit-box-shadow: -5px -5px 5px #BBB;
+	box-shadow: -5px -5px 5px #BBB;
+}
+
+.gcube-yellow-DialogBox .dialogTop {
+	background: #ffff00;
+}
+
+.gcube-yellow-DialogBox .dialogMiddleLeft {
+	background: #ffff00;
+}
+
+.gcube-yellow-DialogBox .dialogMiddleRight {
+	background: #ffff00;
+}
+
+.gcube-yellow-DialogBox .dialogBottom {
+	background: #ffff00;
+}
+
+.gcube-yellow-DialogBox .Caption {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 20px;
+	color: #777;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.32);
+	padding-bottom: 5px;
+}
+
+/** dialog box orange **/
+.gcube-orange-DialogBox {
+	background: #FFFFFF none repeat-x scroll 0 0;
+	border: 4px solid #ff8121;
+}
+
+.gcube-orange-DialogBox .dialogTop {
+	background: #ff8121;
+}
+
+.gcube-orange-DialogBox .dialogMiddleLeft {
+	background: #ff8121;
+}
+
+.gcube-orange-DialogBox .dialogMiddleRight {
+	background: #ff8121;
+}
+
+.gcube-orange-DialogBox .dialogBottom {
+	background: #ff8121;
+}
+
+/** dialog box green **/
+.gcube-green-DialogBox {
+	background: #FFFFFF none repeat-x scroll 0 0;
+	border: 4px solid #009000;
+}
+
+.gcube-green-DialogBox .dialogTop {
+	background: #009000;
+}
+
+.gcube-green-DialogBox .dialogMiddleLeft {
+	background: #009000;
+}
+
+.gcube-green-DialogBox .dialogMiddleRight {
+	background: #009000;
+}
+
+.gcube-green-DialogBox .dialogBottom {
+	background: #009000;
+}
+
+/** dialog box black **/
+.gcube-black-DialogBox {
+	background: #FFFFFF none repeat-x scroll 0 0;
+	border: 4px solid #000;
+}
+
+.gcube-black-DialogBox .dialogTop {
+	background: #000;
+}
+
+.gcube-black-DialogBox .dialogMiddleLeft {
+	background: #000;
+}
+
+.gcube-black-DialogBox .dialogMiddleRight {
+	background: #000;
+}
+
+.gcube-black-DialogBox .dialogBottom {
+	background: #000;
+}
+
+/** dialog box red **/
+.gcube-red-DialogBox {
+	background: #FFFFFF none repeat-x scroll 0 0;
+	border: 4px solid #FF0000;
+}
+
+.gcube-red-DialogBox .dialogTop {
+	background: #FF0000;
+}
+
+.gcube-red-DialogBox .dialogMiddleLeft {
+	background: #FF0000;
+}
+
+.gcube-red-DialogBox .dialogMiddleRight {
+	background: #FF0000;
+}
+
+.gcube-red-DialogBox .dialogBottom {
+	background: #FF0000;
+}
+
+/** dialog pink  **/
+.gcube-pink-DialogBox {
+	background: #FFFFFF none repeat-x scroll 0 0;
+	border: 4px solid #F99CF9;
+}
+
+.gcube-pink-DialogBox .dialogTop {
+	background: #F99CF9;
+}
+
+.gcube-pink-DialogBox .dialogMiddleLeft {
+	background: #F99CF9;
+}
+
+.gcube-pink-DialogBox .dialogMiddleRight {
+	background: #F99CF9;
+}
+
+.gcube-pink-DialogBox .dialogBottom {
+	background: #F99CF9;
+}
+
+/** dialog khaki  **/
+.gcube-khaki-DialogBox {
+	background: #FFFFFF none repeat-x scroll 0 0;
+	border: 4px solid #CCC66C;
+}
+
+.gcube-khaki-DialogBox .dialogTop {
+	background: #CCC66C;
+}
+
+.gcube-khaki-DialogBox .dialogMiddleLeft {
+	background: #CCC66C;
+}
+
+.gcube-khaki-DialogBox .dialogMiddleRight {
+	background: #CCC66C;
+}
+
+.gcube-khaki-DialogBox .dialogBottom {
+	background: #CCC66C;
+}
+
+/** dialog lime  **/
+.gcube-lime-DialogBox {
+	background: #FFFFFF none repeat-x scroll 0 0;
+	border: 4px solid #00FF00;
+}
+
+.gcube-lime-DialogBox .dialogTop {
+	background: #00FF00;
+}
+
+.gcube-lime-DialogBox .dialogMiddleLeft {
+	background: #00FF00;
+}
+
+.gcube-lime-DialogBox .dialogMiddleRight {
+	background: #00FF00;
+}
+
+.gcube-lime-DialogBox .dialogBottom {
+	background: #00FF00;
+}
+/** dialog aquamarine  **/
+.gcube-aquamarine-DialogBox {
+	background: #FFFFFF none repeat-x scroll 0 0;
+	border: 4px solid #33CC99;
+}
+
+.gcube-aquamarine-DialogBox .dialogTop {
+	background: #33CC99;
+}
+
+.gcube-aquamarine-DialogBox .dialogMiddleLeft {
+	background: #33CC99;
+}
+
+.gcube-aquamarine-DialogBox .dialogMiddleRight {
+	background: #33CC99;
+}
+
+.gcube-aquamarine-DialogBox .dialogBottom {
+	background: #33CC99;
+}

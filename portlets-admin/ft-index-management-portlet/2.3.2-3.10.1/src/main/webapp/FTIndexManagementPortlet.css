@@ -1,0 +1,197 @@
+
+.gwt-StackPanel .gwt-StackPanelItem {
+	background-image: url(images/gray_gradient.gif);
+	background-repeat: repeat-x;
+	background-color: #EEEEEE;
+	width: 100px;
+	cursor: hand;
+}
+
+.gwt-StackPanel {
+	background-color: white;
+	border: 1px solid #AAAAAA;
+	width: 15em;
+}
+
+.gwt-ListBox {
+}
+.gwt-HorizontalSplitPanel {
+  border: 0px solid;
+}
+
+.gwt-HorizontalSplitPanel .hsplitter {
+  background-color: #666666;
+  cursor: move;
+}
+
+.gwt-HorizontalSplitPanel .left {
+  background-color: #E8EEF7;
+}
+
+.gwt-TabPanel {
+  border-top: 2px solid #EEEEEE;
+  border-left: 2px solid #EEEEEE;
+  border-right: 2px solid gray;
+  border-bottom: 2px solid gray;
+}
+
+
+.gwt-TabPanelBottom {
+  border-left: 2px solid #EEEEEE;
+  border-right: 2px solid gray;
+  border-bottom: 2px solid gray;
+  background-color: gainsboro;
+}
+
+
+.gwt-TabBar {
+  padding-top: 4px;
+/*  background-image: url(gray_gradient.gif);
+  background-repeat:repeat-x; */
+  background-color: gainsboro;
+  font-size: smaller;
+}
+
+/*
+.gwt-TabBar .gwt-TabBarFirst {
+  height: 100%;
+  border-bottom: 1px solid #AAAAAA;
+  padding-left: 3px;
+}
+*/
+
+.gwt-TabBar .gwt-TabBarRest {
+  border-bottom: 2px solid #FFFFFF;
+  padding-right: 3px;
+}
+
+.gwt-TabBar .gwt-TabBarItem {
+  border-top: 2px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
+  border-right: 2px solid gray;
+  border-bottom: 2px solid #FFFFFF;
+  padding: 2px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.gwt-TabBar .gwt-TabBarItem-selected {
+  font-weight: bold;
+  border-top: 2px solid #FFFFFF;
+  border-left: 2px solid #FFFFFF;
+  border-right: 2px solid gray;
+  border-style: solid solid none;
+  -moz-outline: none;
+  padding: 5px;
+  cursor: default;
+}
+
+
+.gwt-Tree {
+}
+
+.gwt-Tree .gwt-TreeItem span * {
+  margin: 0 4px;
+}
+
+.gwt-Tree .gwt-TreeItem {
+  font-size: 80%;
+  cursor: default;
+}
+
+.gwt-Tree .gwt-TreeItem span {
+  padding: 2px 0;
+}
+
+.gwt-Tree .gwt-TreeItem-selected span {
+	background-image: url(images/blue_gradient.gif);
+	background-repeat: repeat-x;
+}
+.gwt-DialogBox {
+  border: 2px outset;
+  background-color: white;
+}
+
+.gwt-DialogBox .Caption {
+  background-color: #C3D9FF;
+  padding: 3px;
+  margin: 2px;
+  font-weight: bold;
+  cursor: default;
+}
+
+.diligent-header{
+	background-image: url(images/gray_gradient.gif);
+	background-repeat:repeat-x;
+	font-size: 110%;
+}
+
+.diligent-success{
+	background-image: url(images/green_gradient.gif);
+	background-repeat:repeat-x;
+	font-size: 70%;
+}
+
+.diligent-error{
+	background-image: url(images/red_gradient.gif);
+	background-repeat:repeat-x;
+	font-size: 70%;
+}
+
+.diligent-selected {
+	background-image: url(blue_gradient.gif);
+	background-repeat: repeat-x;
+}
+
+.diligent-collection{
+	font-size: 65%;
+}
+
+.diligent-index-Detail {
+    border-left: 1px solid #AAAAAA;
+    border-right: 1px solid #AAAAAA;
+    border-bottom: 1px solid #AAAAAA;
+	margin-top: 4px;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.diligent-index-info {
+	font-size: 90%;
+}
+
+.diligent-warning-header {
+	background-color: red;
+	text-align: center;
+	font-size: 70%;
+}
+
+.diligent-index-List {
+	border: 1px solid #AAAAAA;
+	background-color: white;
+	font-size: 80%;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.diligent-indexType {
+	border: 1px solid #AAAAAA;
+	font-size: 80%;
+}
+
+.diligent-indexType-header {
+	background-color: #eeeeee;
+	border: 1px solid #AAAAAA;
+	font-size: 110%;
+}
+
+.diligent-indexTypeField-delete {
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	cursor: hand;
+	background-image: url( images/remove.png );
+	background-repeat: no-repeat;
+}
+
+

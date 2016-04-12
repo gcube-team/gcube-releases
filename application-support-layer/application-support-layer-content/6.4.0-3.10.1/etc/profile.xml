@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID/>
+	<Type>Library</Type>
+	<Profile>
+		<Description>ASLContent</Description>
+		<Class>ApplicationSupportLayer</Class>
+		<Name>ASLContent</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>ASLContent</Description>
+				<Name>ASLContent</Name>
+				<Version>4.1.1</Version>
+				<Dependencies>
+					<Dependency>
+						<Service>
+							<Class>ApplicationSupportLayer</Class>
+							<Name>ASLCore</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ASLCore</Package>
+						<Version>[3.0.0,4.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ApplicationSupportLayer</Class>
+							<Name>AccessLogger</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>AccessLogger</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ExternalSoftware</Class>
+							<Name>ehcache</Name>
+							<Version>1.05.00</Version>
+						</Service>
+						<Package>ehcache</Package>
+						<Version>1.05.00</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>InformationSystem</Class>
+							<Name>ISCache</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ISCache</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ContentManagement</Class>
+							<Name>SMSLibrary</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>SMSLibrary</Package>
+						<Version>[2.4.0,3.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ContentManagement</Class>
+							<Name>GCubeModelLibrary</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>GCubeModelLibrary</Package>
+						<Version>[2.0.0,3.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ContentManagement</Class>
+							<Name>GCubeDocumentLibrary</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>GCubeDocumentLibrary</Package>
+						<Version>[2.0.0,3.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>DataTransformation</Class>
+							<Name>DataTransformationService</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>DataTransformationServiceStubs</Package>
+						<Version>[2.0.0,3.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ContentManagement</Class>
+							<Name>StorageManagementService</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>StorageManagementService-stubs</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>Execution</Class>
+							<Name>OCRService</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>OCRService-stubs</Package>
+						<Version>[2.0.0,3.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+				</Dependencies>
+				<Files>
+					<File>ApplicationSupportLibraryContent.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

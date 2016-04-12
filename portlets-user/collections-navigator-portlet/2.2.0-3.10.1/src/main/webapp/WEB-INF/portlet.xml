@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<portlet-app xmlns='http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd' version='2.0'>
+	<portlet>
+		<description>CollectionsNavigatorPortlet</description>
+		<portlet-name>CollectionsNavigatorPortlet</portlet-name>
+		<display-name>CollectionsNavigatorPortlet</display-name>
+		<portlet-class>org.gcube.portlets.user.collectionsnavigatorportlet.portlet.CollectionsNavigatorPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>CollectionsNavigatorPortlet</title>
+			<short-title>CollectionsNavigatorPortlet</short-title>
+		</portlet-info>
+	</portlet>
+</portlet-app>

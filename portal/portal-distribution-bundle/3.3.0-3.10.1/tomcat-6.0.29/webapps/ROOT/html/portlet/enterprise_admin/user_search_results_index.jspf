@@ -1,0 +1,120 @@
+<%
+/**
+ * Copyright (c) 2000-2011 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+%>
+
+<%@ page import="com.liferay.portal.kernel.search.Document" %>
+<%@ page import="com.liferay.portal.kernel.search.Field" %>
+<%@ page import="com.liferay.portal.kernel.search.Hits" %>
+<%@ page import="com.liferay.portal.kernel.search.Sort" %>
+<%@ page import="com.liferay.portlet.expando.model.ExpandoBridge" %>
+<%@ page import="com.liferay.portlet.expando.model.ExpandoColumnConstants" %>
+<%@ page import="com.liferay.portlet.expando.util.ExpandoBridgeFactoryUtil" %>
+<%@ page import="com.liferay.portlet.expando.util.ExpandoBridgeIndexer" %>
+
+<%
+ExpandoBridge expandoBridge = ExpandoBridgeFactoryUtil.getExpandoBridge(company.getCompanyId(), User.class.getName());
+
+Enumeration<String> enu = expandoBridge.getAttributeNames();
+
+while (enu.hasMoreElements()) {
+	String attributeName = enu.nextElement();
+
+	UnicodeProperties properties = expandoBridge.getAttributeProperties(attributeName);
+
+	if (GetterUtil.getBoolean(properties.getProperty(ExpandoBridgeIndexer.INDEXABLE))) {
+		int type = expandoBridge.getAttributeType(attributeName);
+
+		if (type == ExpandoColumnConstants.STRING) {
+			if (searchTerms.isAdvancedSearch()) {
+				userParams.put(attributeName, ParamUtil.getString(request, attributeName));
+			}
+			else {
+				userParams.put(attributeName, searchTerms.getKeywords());
+			}
+		}
+	}
+}
+
+Sort sort = _getSort(searchContainer.getOrderByCol(), searchContainer.getOrderByType());
+
+Hits hits = null;
+
+if (searchTerms.isAdvancedSearch()) {
+	hits = UserLocalServiceUtil.search(company.getCompanyId(), searchTerms.getFirstName(), searchTerms.getMiddleName(), searchTerms.getLastName(), searchTerms.getScreenName(), searchTerms.getEmailAddress(), searchTerms.getActive(), userParams, searchTerms.isAndOperator(), searchContainer.getStart(), searchContainer.getEnd(), sort);
+}
+else {
+	hits = UserLocalServiceUtil.search(company.getCompanyId(), searchTerms.getKeywords(), searchTerms.getActive(), userParams, searchContainer.getStart(), searchContainer.getEnd(), sort);
+}
+
+results = _getResults(hits);
+total = hits.getLength();
+
+pageContext.setAttribute("results", results);
+pageContext.setAttribute("total", total);
+%>
+
+<%!
+private static List<User> _getResults(Hits hits) throws Exception {
+	List<User> users = new ArrayList<User>();
+
+	List<Document> hitsList = hits.toList();
+
+	for (Document doc : hitsList) {
+		long userId = GetterUtil.getLong(doc.get(Field.USER_ID));
+
+		try {
+			users.add(UserLocalServiceUtil.getUserById(userId));
+		}
+		catch (NoSuchUserException nsue) {
+			_log.error("User " + userId + " does not exist in the search index. Please reindex.");
+		}
+	}
+
+	return users;
+}
+
+private static Sort _getSort(String orderByCol, String orderByType) {
+	String sortField = "firstName";
+
+	if (Validator.isNotNull(orderByCol)) {
+		if (orderByCol.equals("email-address")) {
+			sortField = "emailAddress";
+		}
+		else if (orderByCol.equals("first-name")) {
+			sortField = "firstName";
+		}
+		else if (orderByCol.equals("job-title")) {
+			sortField = "jobTitle";
+		}
+		else if (orderByCol.equals("last-name")) {
+			sortField = "lastName";
+		}
+		else if (orderByCol.equals("screen-name")) {
+			sortField = "screenName";
+		}
+		else {
+			sortField = orderByCol;
+		}
+	}
+
+	if (Validator.isNull(orderByType)) {
+		orderByType = "asc";
+	}
+
+	return new Sort(sortField, Sort.STRING_TYPE, !orderByType.equalsIgnoreCase("asc"));
+}
+
+private static Log _log = LogFactoryUtil.getLog("portal-web.docroot.html.portlet.enterprise_admin.user_search_results_index.jspf");
+%>

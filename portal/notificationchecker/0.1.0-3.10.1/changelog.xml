@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portal.notificationchecker.0-1-0"
+		date="2013-01-13">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

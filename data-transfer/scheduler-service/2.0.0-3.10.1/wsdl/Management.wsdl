@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="Management"
+	targetNamespace="http://gcube-system.org/namespaces/datatransfer/scheduler/datatransferscheduler"
+	xmlns="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:tns="http://gcube-system.org/namespaces/datatransfer/scheduler/datatransferscheduler"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+    xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+    xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"	
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<import
+		namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		location="../gcube/common/core/providers/GCUBEProvider.wsdl" />
+
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+		location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+		location="../wsrf/notification/WS-BaseN.wsdl" />
+
+
+	<wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+
+	<types>
+		<xsd:schema
+			targetNamespace="http://gcube-system.org/namespaces/datatransfer/scheduler/datatransferscheduler"
+			xmlns:tns="http://gcube-system.org/namespaces/datatransfer/scheduler/datatransferscheduler"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults">
+    	
+  		<xsd:element name="about" type="xsd:string" />
+		<xsd:element name="aboutResponse" type="xsd:string" />	
+		
+  		<xsd:element name="getAddr" type="xsd:string" />
+		<xsd:element name="getAddrResponse" type="xsd:string" />		
+			
+ 		<xsd:element name="getAllTransfersInfo" type="xsd:string" />
+		<xsd:element name="getAllTransfersInfoResponse" type="xsd:string" />
+
+ 		<xsd:element name="getObjectsFromIS"  type="xsd:string" />
+		<xsd:element name="getObjectsFromISResponse" type="xsd:string" />
+
+ 		<xsd:element name="existAgentInIS" type="xsd:string" />
+		<xsd:element name="existAgentInISResponse" type="xsd:string" />
+
+ 		<xsd:element name="existAgentInDB" type="xsd:string" />
+		<xsd:element name="existAgentInDBResponse" type="xsd:string" />
+
+ 		<xsd:element name="getAgentStatistics" type="xsd:string" />
+		<xsd:element name="getAgentStatisticsResponse" type="xsd:string" />
+		
+		<xsd:element name="SampleFault" type="tns:SampleFault"/>
+			<xsd:complexType name="SampleFault">
+                <xsd:complexContent>
+                        <xsd:extension base="corefaults:GCUBEUnrecoverableFault"/>
+                </xsd:complexContent>
+        </xsd:complexType>	
+        	
+	</xsd:schema>
+	</types>
+	
+	<message name="aboutInputMessage">
+		<part name="request" element="tns:about"/>
+	</message>
+	<message name="aboutOutputMessage">
+		<part name="response" element="tns:aboutResponse"/>
+	</message>
+	<message name="getAddrInputMessage">
+		<part name="request" element="tns:getAddr"/>
+	</message>
+	<message name="getAddrOutputMessage">
+		<part name="response" element="tns:getAddrResponse"/>
+	</message>
+	
+	<message name="getAllTransfersInfoInputMessage">
+		<part name="request" element="tns:getAllTransfersInfo"/>
+	</message>
+	<message name="getAllTransfersInfoOutputMessage">
+		<part name="response" element="tns:getAllTransfersInfoResponse"/>
+	</message>
+	
+	<message name="getObjectsFromISInputMessage">
+		<part name="request" element="tns:getObjectsFromIS"/>
+	</message>
+	<message name="getObjectsFromISOutputMessage">
+		<part name="response" element="tns:getObjectsFromISResponse"/>
+	</message>
+	
+		<message name="existAgentInISInputMessage">
+		<part name="request" element="tns:existAgentInIS"/>
+	</message>
+	<message name="existAgentInISOutputMessage">
+		<part name="response" element="tns:existAgentInISResponse"/>
+	</message>
+	
+	<message name="existAgentInDBInputMessage">
+		<part name="request" element="tns:existAgentInDB"/>
+	</message>
+	<message name="existAgentInDBOutputMessage">
+		<part name="response" element="tns:existAgentInDBResponse"/>
+	</message>
+	
+	<message name="getAgentStatisticsInputMessage">
+		<part name="request" element="tns:getAgentStatistics"/>
+	</message>
+	<message name="getAgentStatisticsOutputMessage">
+		<part name="response" element="tns:getAgentStatisticsResponse"/>
+	</message>
+	
+		<message name="SampleFaultMessage"> 
+		<part name="fault" element="tns:SampleFault"/>
+	</message>
+	
+	<portType name="ManagementPortType">
+	
+		<operation name="about">
+			<input message="tns:aboutInputMessage"/>
+			<output message="tns:aboutOutputMessage"/>
+			<fault name="fault" message="tns:SampleFaultMessage"/>
+			<fault name="fault1" message="corefaults:GCUBEFaultMessage"/>
+		</operation>
+		
+		<operation name="getAddr">
+			<input message="tns:getAddrInputMessage"/>
+			<output message="tns:getAddrOutputMessage"/>
+		</operation>
+		
+		<operation name="getAllTransfersInfo">
+			<input message="tns:getAllTransfersInfoInputMessage"/>
+			<output message="tns:getAllTransfersInfoOutputMessage"/>
+		</operation>
+		
+		<operation name="getObjectsFromIS">
+			<input message="tns:getObjectsFromISInputMessage"/>
+			<output message="tns:getObjectsFromISOutputMessage"/>
+		</operation>
+		
+		<operation name="existAgentInIS">
+			<input message="tns:existAgentInISInputMessage"/>
+			<output message="tns:existAgentInISOutputMessage"/>
+		</operation>
+		
+		<operation name="existAgentInDB">
+			<input message="tns:existAgentInDBInputMessage"/>
+			<output message="tns:existAgentInDBOutputMessage"/>
+		</operation>
+		
+		<operation name="getAgentStatistics">
+			<input message="tns:getAgentStatisticsInputMessage"/>
+			<output message="tns:getAgentStatisticsOutputMessage"/>
+		</operation>
+	</portType>
+
+</definitions>

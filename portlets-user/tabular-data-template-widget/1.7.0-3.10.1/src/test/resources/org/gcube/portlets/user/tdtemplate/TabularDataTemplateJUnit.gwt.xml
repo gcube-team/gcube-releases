@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.user.tdtemplate.TabularDataTemplate' />
+
+  <!-- Specify the path to any remote services.                   -->
+<!--   <servlet path="/TabularDataTemplate/greet" class="org.gcube.portlets.user.tdtemplate.server.GreetingServiceImpl" /> -->
+
+</module>

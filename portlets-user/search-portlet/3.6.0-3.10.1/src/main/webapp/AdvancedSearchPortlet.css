@@ -1,0 +1,145 @@
+@import url('searchportletg/old-dialog.css');
+
+ .gwt-HTML {
+         padding: 5px;
+ }
+
+ .gwt-RadioButton label {
+         padding: 2px 5px;
+ }
+
+ .gwt-Button {
+         margin: 10px 5px !important;
+ }
+
+ .gwt-DecoratedTabBar {
+         margin-top: 10px;
+ }
+
+.gwt-TabPanel{
+}
+
+.gwt-TabPanelBottom{
+	height: 100%;
+}
+
+.gwt-DecoratedTabBar{
+	padding-top: 10px !important;
+}
+
+.gwt-DecoratedTabBar .gwt-TabBarItem {
+	margin-left: 6px;
+	border-collapse: separate;
+}
+
+.RefinePanel{
+	/* width: 100%; */
+	height: 20%;
+}
+
+.my-header{
+	background-image:url(images/blue_gradient.gif);
+	background-repeat:repeat-x;
+	font-size: 110%;
+}
+
+.stackHeader {
+text-align: left;
+vertical-align: middle;
+}
+
+.all-white {
+background-color: white;
+}
+
+.deleteButton {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+	background: url(images/delete.png) no-repeat;
+	cursor: pointer;
+}
+
+.basketTable-label {
+	color: green;
+	font-family: Arial, sans-serif;
+	font-size: medium;
+	font-style: bold;
+}
+
+.basketTable-text {
+	color: black;
+	font-family: Arial, sans-serif;
+	font-size: medium;
+	font-style: italic;
+}
+
+.addConditionButton {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 16px;
+	height: 16px;
+	background: url(images/addCondition.png) no-repeat;
+	cursor: pointer;
+}
+
+.basketButton {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 73px;
+	height: 18px;
+	background: url(images/home-root.gif) no-repeat;
+	cursor: pointer;
+}
+
+
+.queryButton {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 13px;
+	height: 14px;
+	background: url(images/explainQuery.gif) no-repeat;
+	cursor: pointer;
+}
+
+
+
+.info-button {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 15px;
+	height: 15px;
+	background: url(images/info.gif) no-repeat;
+	cursor: pointer;
+}
+
+.popup-button {
+	font-size:smaller;
+	background-color: inherit;
+	border: 0px;
+	padding: 0px;
+	cursor: pointer;
+	color: green;
+	text-aling: right;
+}
+
+.desc-popups-Popup {
+	border-bottom-width: medium;
+	border-right-width: medium;
+	border-left-width: thin;
+	border-top-width: thin;
+	border-bottom-style: groove;
+	border-right-style: groove;
+	border-left-style: solid;
+	border-top-style: solid;
+	background-repeat:repeat-x;
+	background-color:#f4fcf2;
+	font-size: 14px;
+	padding: 6px;
+}

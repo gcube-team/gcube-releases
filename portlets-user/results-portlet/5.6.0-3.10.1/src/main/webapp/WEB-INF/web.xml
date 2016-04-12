@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>Results-portlet
+	</display-name>
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>NewresultsetServiceImpl</servlet-name>
+		<servlet-class>org.gcube.portlets.user.results.server.servlet.NewresultsetServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>NewresultsetServiceImpl</servlet-name>
+		<url-pattern>/results_portlet/NewresultsetServiceImpl</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>WorkspaceLightService</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.lighttree.server.WorkspaceServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>WorkspaceLightService</servlet-name>
+		<url-pattern>/results_portlet/WorkspaceLightService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet> 
+     	<servlet-name>IndexClientCaller</servlet-name>
+		<servlet-class>org.gcube.portlets.widget.collectionsindexedwords.server.IndexClientCallerImpl</servlet-class>
+    </servlet>
+     
+	<servlet-mapping>
+	  <servlet-name>IndexClientCaller</servlet-name>
+	  <url-pattern>/results_portlet/IndexClientCaller</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

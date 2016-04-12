@@ -1,0 +1,50 @@
+<%
+/**
+ * Copyright (c) 2000-2011 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+%>
+
+<c:if test="<%= DLFileEntryPermission.contains(permissionChecker, fileEntry, ActionKeys.UPDATE) %>">
+	<c:choose>
+		<c:when test="<%= !fileEntry.isLocked() %>">
+			<portlet:actionURL var ="lockURL">
+				<portlet:param name="struts_action" value="/document_library/edit_file_entry" />
+				<portlet:param name="<%= Constants.CMD %>" value="<%= Constants.LOCK %>" />
+				<portlet:param name="redirect" value="<%= currentURL %>" />
+				<portlet:param name="folderId" value="<%= String.valueOf(fileEntry.getFolderId()) %>" />
+				<portlet:param name="name" value="<%= HtmlUtil.unescape(fileEntry.getName()) %>" />
+			</portlet:actionURL>
+
+			<liferay-ui:icon
+				image="lock"
+				url="<%= lockURL %>"
+			/>
+		</c:when>
+		<c:otherwise>
+			<c:if test="<%= fileEntry.hasLock(user.getUserId()) || permissionChecker.isCommunityAdmin(fileEntry.getGroupId()) %>">
+				<portlet:actionURL var ="unlockURL">
+					<portlet:param name="struts_action" value="/document_library/edit_file_entry" />
+					<portlet:param name="<%= Constants.CMD %>" value="<%= Constants.UNLOCK %>" />
+					<portlet:param name="redirect" value="<%= currentURL %>" />
+					<portlet:param name="folderId" value="<%= String.valueOf(fileEntry.getFolderId()) %>" />
+					<portlet:param name="name" value="<%= HtmlUtil.unescape(fileEntry.getName()) %>" />
+				</portlet:actionURL>
+
+				<liferay-ui:icon
+					image="unlock"
+					url="<%= unlockURL %>"
+				/>
+			</c:if>
+		</c:otherwise>
+	</c:choose>
+</c:if>

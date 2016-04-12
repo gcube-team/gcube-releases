@@ -1,0 +1,348 @@
+
+/* New resultser customization css */
+@import url(d4science.css);
+@import url(xmlverbatim.css);
+
+
+.resultItem {
+	margin-top: 12px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+
+	-moz-box-shadow: -5px -5px 5px #888;
+	-webkit-box-shadow: -5px -5px 5px #888;
+	box-shadow: -5px -5px 5px #888;
+}
+
+.d4sFrame-highlight {
+  filter:alpha(opacity=75);
+  -moz-opacity:.75;
+  opacity:.75;
+}
+
+.basket-highlight {
+  background-color:#C5ECFF;	
+    filter:alpha(opacity=20);
+  -moz-opacity:.20;
+  opacity:.20;
+}
+
+.text-selectable {
+   	cursor: pointer;
+	cursor:default;	
+}
+
+
+.selectable {
+	cursor: pointer;
+	cursor:hand;		
+}
+
+A:hover   { 
+  filter:alpha(opacity=50);
+  -moz-opacity:.50;
+  opacity:.50;
+  text-decoration: underline;
+} /* user hovers     */
+
+table td, select {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+} 
+
+.basketLabel {
+	color: black;
+	font-family: Arial, sans-serif;
+	font-size: large;
+	font-style: italic;
+}
+
+.queryLabel {
+	color: #99BBE8;
+	font-family: Arial, sans-serif;
+	font-size: medium;
+	font-style: italic;
+}
+
+.font-large {
+	font-size: 16px;
+}
+
+.recordsPanel {
+ 	margin-left:10px;
+}
+
+.basketitem-menu {
+	background: transparent;
+	border: 1px solid #4B0082;
+}
+
+.border {
+	border: 2px solid #4B0082;
+}
+
+.basketitem-menu-vertical table {
+    border-collapse: separate;
+    border-spacing: 3px;
+}
+
+.basketitem-menu .gwt-MenuItem {
+	cursor: pointer;
+	cursor:hand;	
+	color: #C5ECFF;
+	font-style: italic;
+}
+
+.basketitem-menu .gwt-MenuItem-selected {
+  background: #C5ECFF; 
+  color:  #0D70C6;
+}
+
+.gcube_basket_item_new {
+	background-color: #D9EBFF; 
+	border:1px solid #0D70C6;
+	color:#15428B;
+	font-family:tahoma,arial,verdana,sans-serif;
+	font-size:12px;
+	overflow:hidden;
+	margin-left: 2px;
+	margin-top: 2px;
+}
+
+
+.gwt-Button {	
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	border: 1px solid #7FC168;
+	height: 20px !important;
+	width: 80px;
+}
+.pathTextBox {
+	background: white;
+	border: 1px solid #7FC168;
+	padding: 1px;
+	color: gray;
+	font-family: Arial, sans-serif;
+	font-size: 11px;
+}
+.gwt-PopupPanel {
+ 	border: 2px solid #99BBE8;
+	padding: 3px;
+	background: white;
+	color: black;
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+}
+
+.gwt-DialogBox {
+ 	border: 1px solid gray;
+	background: white;
+	color: black;
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+}
+
+.gwt-DialogBox .Caption {
+  background: #e3e8f3;
+  cursor: default;
+  border-bottom: 1px solid #bbbbbb;
+  border-top: 5px solid #d0e4f6;
+}
+
+.gwt-Label {
+	color: black;
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+}
+
+.frame {
+	border: 1px solid gray;
+}
+
+.padding {
+	padding: 10px;
+}
+
+.setVisibilityOff {
+	visibility: hidden;
+}
+
+.setVisibilityOn {
+	margin-top:1px;
+	visibility: visible;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.closeButton {
+	cursor: pointer;
+	cursor:hand;
+}
+
+.selectable {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.wpTreeItem-backGround-highlight {
+	background-color: #d8f3d7;
+}
+
+.wpTreeItem-backGround {
+	background-color: white;
+}
+
+.cursor-move {
+	cursor: move;
+}
+
+.position-relative {
+	position:relative;
+}
+
+
+.gwt-TabBar {
+}
+.gwt-TabBar .gwt-TabBarFirst {
+  width: 5px;  /* first tab distance from the left */
+}
+.gwt-TabBar .gwt-TabBarRest {
+}
+.gwt-TabBar .gwt-TabBarItem {
+  margin-left: 6px;
+  padding: 3px 6px 3px 6px;
+  cursor: pointer;
+  cursor: hand;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  background: #d0e4f6;
+}
+.gwt-TabBar .gwt-TabBarItem-selected {
+  cursor: default;
+  background: #92c1f0;
+} 
+.gwt-TabPanel {
+}
+.gwt-TabPanelBottom {
+  border-color: #92c1f0;
+  border-style: solid;
+  border-width: 3px 2px 2px;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.mask {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9999999 !important;
+	background: url(images/mask.png) repeat scroll 0 0 transparent;
+}
+
+.metadata-table {
+	border-collapse: collapse;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	text-align: left;
+	width: 480px;
+}
+
+.metadata-table th {
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: #B9C9FE;
+	background-image: none;
+	background-origin: padding-box;
+	background-position: 0 0;
+	background-repeat: repeat;
+	background-size: auto auto;
+	border-bottom-color: #AABCFE; /*FFFFFF; */
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-top-color: #AABCFE;
+	border-top-style: solid;
+	border-top-width: 4px;
+	color: #6B0F75; /* 003399; */
+	font-size: 15px;
+	font-weight: normal;
+/*	padding-bottom: 8px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 8px; */
+}
+
+.metadata-table td {
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-color: #E8EDFF;
+	background-image: none;
+	background-origin: padding-box;
+	background-position: 0 0;
+	background-repeat: repeat;
+	background-size: auto auto;
+	border-bottom-color: #FFFFFF;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-top-color: transparent;
+	border-top-style: solid;
+	border-top-width: 1px;
+	color: #666699;
+/*	padding-bottom: 8px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 8px; */
+}
+
+.metadata-table tr:hover td {
+	background-color: #D0DAFD !important;
+	color: #333399 !important;
+}
+
+.metadata-table tr.metadata-style-odd td{
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-top-color: #E6E1E1;
+	border-top-style: solid;
+	border-top-width: 1px;
+	color: #003399;
+	font-size: 90%;
+	font-weight: normal;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 8px;
+	background-color: #EEEEEE;
+}
+
+.metadata-table tr.metadata-style-even td{
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-top-color: #E6E1E1;
+	border-top-style: solid;
+	border-top-width: 1px;
+	color: #003399;
+	font-size: 90%;
+	font-weight: normal;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 8px;
+	background-color: #EEEEFF;
+}
+
+.hyperlink_style_label {
+	cursor: pointer;
+	color: blue;
+}
+
+.hyperlink_style_label_selected {
+	color: red;
+}

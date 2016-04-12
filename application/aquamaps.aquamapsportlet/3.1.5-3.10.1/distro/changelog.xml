@@ -1,0 +1,16 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.application.aquamaps.aquamapsportlet.2-9-0" date="2013-09-27">
+		<Change>Mavenized</Change>
+		<Change>gwt 2.5.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application.aquamaps.aquamapsportlet.3-1-3" date="2014-12-09">
+		<Change>Fixed integration bug : Open layers</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application.aquamaps.aquamapsportlet.3-1-4" date="2015-07-14">
+		<Change>Fixed integration bug : HL</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application.aquamaps.aquamapsportlet.3-1-5" date="2015-09-28">
+		<Change>Integrated Workspace explorer</Change>
+		<Change>Integrated Session checker</Change>
+	</Changeset>
+</ReleaseNotes>

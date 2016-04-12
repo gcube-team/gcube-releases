@@ -1,0 +1,96 @@
+.gwt-Tree .gwt-StackPanelItem, .gwt-Tree .gwt-StackPanel, .gwt-Tree .gwt-StackPanelContent { border: none !important; padding: 0px !important; background: transparent !important; }
+
+.ks-popups-Popup {
+	background-image:url(images/green_gradient.gif);
+	border-bottom-width: medium;
+	border-right-width: medium;
+	border-left-width: thin;
+	border-top-width: thin;
+	border-bottom-style: groove;
+	border-right-style: groove;
+	border-left-style: solid;
+	border-top-style: solid;
+	background-repeat:repeat-x;
+	background-color: white;
+	font-size: 14px;
+	padding: 6px;
+}
+
+.desc-popups-Popup {
+	border-bottom-width: medium;
+	border-right-width: medium;
+	border-left-width: thin;
+	border-top-width: thin;
+	border-bottom-style: groove;
+	border-right-style: groove;
+	border-left-style: solid;
+	border-top-style: solid;
+	background-repeat:repeat-x;
+	background-color:#f4fcf2;
+	font-size: 14px;
+	padding: 6px;
+}
+
+.collection-moreLink {
+  font-size:smaller;
+  font-style:italic;
+}
+
+.question-button {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 15px;
+	height: 15px;
+	background: url(images/questionmark.gif) no-repeat;
+	cursor: pointer;
+}
+
+.go-button {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 19px;
+	height: 19px;
+	background: url(images/go_button.png) no-repeat;
+	cursor: pointer;
+}
+
+.refresh-button {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 21px;
+	height: 24px;
+	background: url(images/refresh.gif) no-repeat;
+	cursor: pointer;
+}
+
+.popup-button {
+	font-size:smaller;
+	background-color: inherit;
+	border: 0px;
+	padding: 0px;
+	cursor: pointer;
+}
+
+.select-button {
+	font-size:smaller;
+	background-color: inherit;
+	border: 1px;
+	padding: 1px;
+	cursor: pointer;
+}
+
+.hand {
+	cursor: pointer;
+}
+
+.check {
+	background-color: white;
+	border: 0px;
+	padding: 0px;
+	width: 19px;
+	height: 19px;
+	background: url(images/go_button.gif) no-repeat;
+}

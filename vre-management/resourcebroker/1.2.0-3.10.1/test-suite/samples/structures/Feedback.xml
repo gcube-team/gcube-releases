@@ -1,0 +1,37 @@
+<Feedback planID="r1u82qb9d9e0c5k2ue43cbq26f" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployFeedback ../../schema/deployFeedback.xsd"
+	xmlns="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployFeedback">
+  <Scope>/gcube/devsec</Scope>
+  <DeployNode>
+    <PackageGroup ID="1" service="service1">
+      <Package reuse="true" status="FAILED">
+        <ServiceClass>PkgServiceClass</ServiceClass>
+        <ServiceName>PkgServiceName</ServiceName>
+        <ServiceVersion>PkgServiceVersion</ServiceVersion>
+        <PackageName>PkgPackageName</PackageName>
+        <PackageVersion>PkgPackageVersion</PackageVersion>
+      </Package>
+      <GHN>d5a5af20-ac50-11de-a928-ab32081f9f00</GHN>
+    </PackageGroup>
+  </DeployNode>
+  <DeployNode>
+    <PackageGroup ID="2" service="service2">
+      <Package reuse="true" status="SUCCESS">
+        <ServiceClass>PkgServiceClass2</ServiceClass>
+        <ServiceName>PkgServiceName2</ServiceName>
+        <ServiceVersion>PkgServiceVersion2</ServiceVersion>
+        <PackageName>PkgPackageName2</PackageName>
+        <PackageVersion>PkgPackageVersion2</PackageVersion>
+      </Package>
+      <Package reuse="true" status="PARTIAL">
+        <ServiceClass>PkgServiceClass3</ServiceClass>
+        <ServiceName>PkgServiceName3</ServiceName>
+        <ServiceVersion>PkgServiceVersion3</ServiceVersion>
+        <PackageName>PkgPackageName3</PackageName>
+        <PackageVersion>PkgPackageVersion3</PackageVersion>
+      </Package>
+      <GHN>1f251d60-215f-11df-b9c5-8ea2ab6d6650</GHN>
+    </PackageGroup>
+  </DeployNode>
+</Feedback>

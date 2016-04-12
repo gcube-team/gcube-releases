@@ -1,0 +1,25 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-transfer.scheduler-portlet.1-0-0" date="2013-01-11" >
+			<Change>First release of the component</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.scheduler-portlet.1-1-0" date="2013-04-17" >
+			<Change>Moved to new StorageManager client version</Change>
+			<Change>Integrated VFS for smp protocol</Change>
+			<Change>Transfer to/from Storage manager</Change>
+			<Change>Browsing the agent nodes</Change>
+			<Change>Browsing the destination</Change>
+			<Change>Progress bar during the transfer for all the types</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.scheduler-portlet.2-0-0" date="2013-07-09" >
+			<Change>Added tree source management and transfers</Change>
+			<Change>new iconset</Change>
+	</Changeset>
+		<Changeset component="org.gcube.data-transfer.scheduler-portlet.2-1-0" date="2013-10-22" >
+			<Change>Adapted to new HomeLibrary and Guided Tour</Change>
+			<Change>Removed gCF deps</Change>
+			<Change>moved to GWT 2.5.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.scheduler-portlet.2-2-0" date="2014-06-06" >
+			<Change>adapted to new portal-bom</Change>
+	</Changeset>
+</ReleaseNotes>

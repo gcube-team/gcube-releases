@@ -1,0 +1,10 @@
+.xmltreeviewer { font-family: tahoma,arial,helvetica,sans-serif; font-size: 11px; padding: 5px; border: 1px solid #bbbbbb; background-color: #fafafa; overflow: auto; }
+.xmlpart { height: 16px; }
+.xmltextpart { white-space: nowrap; }
+.ib { display: inline-block; }
+.xmltvc { clear: both; }
+.ecHandle { width: 16px; height: 16px; background: url("icons/icons.png") no-repeat scroll 0 0 transparent; cursor: pointer; }
+.ecHandle.exp { background-position: 0 0; }
+.ecHandle.col { background-position: -16px 0; }
+.chCont { display: none; }
+.textval { color: #ff5555; }

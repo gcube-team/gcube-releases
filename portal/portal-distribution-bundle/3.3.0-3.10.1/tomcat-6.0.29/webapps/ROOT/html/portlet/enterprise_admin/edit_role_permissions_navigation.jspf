@@ -1,0 +1,226 @@
+<%
+/**
+ * Copyright (c) 2000-2011 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+%>
+
+<%
+List<Portlet> portlets = PortletLocalServiceUtil.getPortlets(company.getCompanyId(), includeSystemPortlets, false);
+
+portlets = ListUtil.sort(portlets, new PortletTitleComparator(application, locale));
+%>
+
+<aui:form action="<%= currentURL %>" name="resourceSelection">
+	<aui:fieldset>
+		<aui:select changesContext="<%= true %>" name="add-permissions" onchange='<%= renderResponse.getNamespace() + "addPermissions(this);" %>'>
+			<aui:option label="" />
+
+			<c:choose>
+				<c:when test="<%= role.getType() == RoleConstants.TYPE_COMMUNITY %>">
+					<optgroup label="<liferay-ui:message key="administration" />">
+
+						<%
+						editPermissionsURL.setParameter("portletResource", PortletKeys.ENTERPRISE_ADMIN_COMMUNITIES);
+						editPermissionsURL.setParameter("showModelResources", "1");
+						%>
+
+						<aui:option label="community-administration" selected="<%= _isCurrent(editPermissionsURL.toString(), portletResource, showModelResources) %>" value="<%= editPermissionsURL.toString() %>" />
+					</optgroup>
+				</c:when>
+				<c:when test="<%= role.getType() == RoleConstants.TYPE_ORGANIZATION %>">
+					<optgroup label="<liferay-ui:message key="administration" />">
+
+						<%
+						editPermissionsURL.setParameter("portletResource", PortletKeys.ENTERPRISE_ADMIN_ORGANIZATIONS);
+						editPermissionsURL.setParameter("showModelResources", "1");
+						%>
+
+						<aui:option label="organization-administration" selected="<%= _isCurrent(editPermissionsURL.toString(), portletResource, showModelResources) %>" value="<%= editPermissionsURL.toString() %>" />
+					</optgroup>
+				</c:when>
+				<c:otherwise>
+					<optgroup label="<liferay-ui:message key="portal" />">
+
+						<%
+						if (role.getType() == RoleConstants.TYPE_REGULAR) {
+							editPermissionsURL.setParameter("portletResource", PortletKeys.PORTAL);
+							editPermissionsURL.setParameter("showModelResources", "0");
+						%>
+
+							<aui:option label="general" selected="<%= _isCurrent(editPermissionsURL.toString(), portletResource, showModelResources) %>" value="<%= editPermissionsURL.toString() %>" />
+
+						<%
+						}
+
+						for (Portlet portlet : portlets) {
+							if (Validator.isNull(portlet.getPortletId()) || !_isPortalPortlet(portlet.getPortletId())) {
+								continue;
+							}
+
+							List<String> curModelResources = ResourceActionsUtil.getPortletModelResources(portlet.getPortletId());
+
+							if (!portlet.getPortletId().equals(PortletKeys.PORTAL) && curModelResources.isEmpty()) {
+								continue;
+							}
+
+							if ((role.getType() == RoleConstants.TYPE_COMMUNITY) && !_isCommunityPortlet(portlet.getPortletId())) {
+								continue;
+							}
+
+							if ((role.getType() == RoleConstants.TYPE_ORGANIZATION) && !_isOrganizationPortlet(portlet.getPortletId())) {
+								continue;
+							}
+
+							editPermissionsURL.setParameter("portletResource", portlet.getPortletId());
+							editPermissionsURL.setParameter("showModelResources", "1");
+						%>
+
+							<aui:option label="<%= PortalUtil.getPortletTitle(portlet, application, locale) %>" selected="<%= _isCurrent(editPermissionsURL.toString(), portletResource, showModelResources) %>" value="<%= editPermissionsURL.toString() %>" />
+
+						<%
+						}
+						%>
+
+					</optgroup>
+				</c:otherwise>
+			</c:choose>
+
+			<optgroup label="<liferay-ui:message key="content" />">
+
+				<%
+				for (Portlet portlet : portlets) {
+					if (Validator.isNull(portlet.getPortletId()) || _isPortalPortlet(portlet.getPortletId())) {
+						continue;
+					}
+
+					List<String> curModelResources = ResourceActionsUtil.getPortletModelResources(portlet.getPortletId());
+
+					if (curModelResources.isEmpty()) {
+						continue;
+					}
+
+					editPermissionsURL.setParameter("portletResource", portlet.getPortletId());
+					editPermissionsURL.setParameter("showModelResources", "1");
+				%>
+
+					<aui:option label="<%= PortalUtil.getPortletTitle(portlet, application, locale) %>" selected="<%= _isCurrent(editPermissionsURL.toString(), portletResource, showModelResources) %>" value="<%= editPermissionsURL.toString() %>" />
+
+				<%
+				}
+				%>
+
+			</optgroup>
+
+			<%
+			PortletCategory portletCategory = (PortletCategory)WebAppPool.get(String.valueOf(company.getCompanyId()), WebKeys.PORTLET_CATEGORY);
+
+			Set<String> hiddenPortletIds = portletCategory.getCategory(PortletCategoryConstants.NAME_HIDDEN).getPortletIds();
+			%>
+
+			<optgroup label="<liferay-ui:message key="applications" />">
+
+				<%
+				for (Portlet portlet : portlets) {
+					if (Validator.isNull(portlet.getPortletId()) || hiddenPortletIds.contains(portlet.getPortletId()) || portlet.isSystem()) {
+						continue;
+					}
+
+					editPermissionsURL.setParameter("portletResource", portlet.getPortletId());
+					editPermissionsURL.setParameter("showModelResources", "0");
+				%>
+
+					<aui:option label="<%= PortalUtil.getPortletTitle(portlet, application, locale) %>" selected="<%= _isCurrent(editPermissionsURL.toString(), portletResource, showModelResources) %>" value="<%= editPermissionsURL.toString() %>" />
+
+				<%
+				}
+				%>
+
+			</optgroup>
+			<optgroup label="<liferay-ui:message key="control-panel" />">
+
+				<%
+				for (Portlet portlet : portlets) {
+					if (Validator.isNull(portlet.getPortletId()) || Validator.isNull(portlet.getControlPanelEntryCategory())) {
+						continue;
+					}
+
+					editPermissionsURL.setParameter("portletResource", portlet.getPortletId());
+					editPermissionsURL.setParameter("showModelResources", "0");
+				%>
+
+					<aui:option label="<%= PortalUtil.getPortletTitle(portlet, application, locale) %>" selected="<%= _isCurrent(editPermissionsURL.toString(), portletResource, showModelResources) %>" value="<%= editPermissionsURL.toString() %>" />
+
+				<%
+				}
+				%>
+
+			</optgroup>
+		</aui:select>
+	</aui:fieldset>
+</aui:form>
+
+<%!
+private static final String[] _COMMUNITY_PORTLETS = {
+	PortletKeys.ENTERPRISE_ADMIN_COMMUNITIES,
+};
+
+private static final String[] _ORGANIZATION_PORTLETS = {
+	PortletKeys.ENTERPRISE_ADMIN_ORGANIZATIONS,
+};
+
+private static final String[] _PORTAL_PORTLETS = {
+	PortletKeys.ENTERPRISE_ADMIN,
+	PortletKeys.ENTERPRISE_ADMIN_COMMUNITIES,
+	PortletKeys.ENTERPRISE_ADMIN_MONITORING,
+	PortletKeys.ENTERPRISE_ADMIN_ORGANIZATIONS,
+	PortletKeys.ENTERPRISE_ADMIN_PASSWORD_POLICIES,
+	PortletKeys.ENTERPRISE_ADMIN_PLUGINS,
+	PortletKeys.ENTERPRISE_ADMIN_ROLES,
+	PortletKeys.ENTERPRISE_ADMIN_SETTINGS,
+	PortletKeys.ENTERPRISE_ADMIN_USER_GROUPS,
+	PortletKeys.ENTERPRISE_ADMIN_USERS
+};
+
+private boolean _isCommunityPortlet(String portletId) {
+	return ArrayUtil.contains(_COMMUNITY_PORTLETS, portletId);
+}
+
+private boolean _isCurrent(String url, String portletResource, boolean showModelResources) {
+	if (Validator.isNull(portletResource)) {
+		return false;
+	}
+
+	String showModelResourcesString = "0";
+
+	if (showModelResources) {
+		showModelResourcesString = "1";
+	}
+
+	if ((url.indexOf("portletResource=" + portletResource + StringPool.AMPERSAND) != -1) &&
+		(url.indexOf("showModelResources=" + showModelResourcesString) != -1)) {
+
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+private boolean _isOrganizationPortlet(String portletId) {
+	return ArrayUtil.contains(_ORGANIZATION_PORTLETS, portletId);
+}
+
+private boolean _isPortalPortlet(String portletId) {
+	return ArrayUtil.contains(_PORTAL_PORTLETS, portletId);
+}
+%>

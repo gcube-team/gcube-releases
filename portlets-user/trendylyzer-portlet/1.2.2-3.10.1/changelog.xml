@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.TrendyLyzer.1-0-2" date="2013-10-20">
+		<Change>update pom dependency</Change>
+	</Changeset>
+		<Changeset component="org.gcube.portlets-user.TrendyLyzer.1-0-1" date="2013-09-10">
+		<Change>fix test.user problem inside SessionUtil class</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.TrendyLyzer.1-0-0" date="2013-07-08">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

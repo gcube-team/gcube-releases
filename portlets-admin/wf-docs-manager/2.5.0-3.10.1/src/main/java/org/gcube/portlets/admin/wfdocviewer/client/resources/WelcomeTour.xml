@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guidedtour width="750" height="450" usemask="false">
+	<title>gCube Workflow Documents Manager</title>
+	<guide>https://gcube.wiki.gcube-system.org/gcube/index.php/User%27s_Guide</guide>
+	<themecolor>BLUE</themecolor>
+	<steps>
+		<step>
+			<title>Introduction</title>
+			<bodies>
+				<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+			<div style="padding-bottom: 60px;">
+				<b>gCube Workflow Documents Manager</b>
+				allows users to create Document Life-cycles.
+			</div>
+			<div style="padding-bottom: 50px;">
+				You can:
+				<ul><li> - <b>Associate</b> any gCube Report to a Workflow template;</li><li> - Select <b>permissions</b> for each workflow Step;
+				</li><li> - Select the <b>role(s) required</b> to forward to the next steps;</li><li> - <b>Monitor the status</b> of your Workflow Documents.</li></ul>
+			</div>
+			<div style="padding-bottom: 10px;">
+				<b>Take the opportunity</b>
+				to follow this quick tour to discover its
+				<b>most important features.</b>
+			</div>
+		</div>
+]]></body>
+			</bodies>
+			<images>
+				<image url="images/stepIntro.jpg" />
+			</images>
+		</step>
+<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Add Documents</title>
+			<bodies>
+				<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+				<div>
+				Click on Add New Document to start adding new documents. 
+			</div>
+	</div>
+]]></body>
+<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+			<div>
+				Associate your Report to an existing Workflow Template and select <b>file access permissions</b> for each Role in each Step.
+			</div>
+	</div>
+]]></body>
+			</bodies>
+			<images>
+				<image url="images/addDocuments.jpg" />
+				<image url="images/associate.jpg" />
+			</images>
+		</step>
+<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Monitor</title>
+			<bodies>
+				<body><![CDATA[
+<div style="line-height: 29px; padding: 10px; font-size: 14px; ">
+			<div style="padding-bottom: 120px;">
+				<b>Continuously monitor the status</b> of your workflow documents by selecting the <b>View Details</b> button (highlighted in the figure) from your workflow documents list.
+			</div>
+	</div>
+]]></body>
+
+			</bodies>
+			<images>
+				<image url="images/monitor.jpg" />
+			</images>
+</step>
+<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>User actions</title>
+			<bodies>
+				<body><![CDATA[
+<div style="line-height: 29px; padding: 10px; font-size: 14px; ">
+			<div style="padding-bottom: 60px;">
+				Check the actions of the users involved in a workflow document by selecting the <b>Show History</b> button (highlighted in the figure).
+			</div>
+	</div>
+]]></body>
+
+			</bodies>
+			<images>
+				<image url="images/userActions.jpg" />
+			</images>
+</step>
+	</steps>
+</guidedtour>

@@ -1,0 +1,19 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.application-support-layer.application-support-layer-vremanagement.5-2-0" date="2015-10-09">
+<Change>Added undeploy method</Change>
+</Changeset>
+<Changeset component="org.gcube.application-support-layer.application-support-layer-vremanagement.5-1-0" date="2014-04-07">
+<Change>Fixed wrong import</Change>
+<Change>POM updated</Change>
+</Changeset>
+<Changeset component="org.gcube.application-support-layer.application-support-layer-vremanagement.5-0-0" date="2013-10-21">
+<Change>Ported to Feather Weight Stack</Change>
+<Change>Removed GCF Dependency</Change>
+<Change>Logging with sl4j Enabled</Change>
+</Changeset>
+<Changeset component="org.gcube.application-support-layer.application-support-layer-vremanagement.3-2-0" date="2011-02-07">
+<Change>Added support to the new VRE Deployer portlet</Change>
+<Change>Added support to the new VRE Manager service</Change>
+</Changeset>
+
+</ReleaseNotes>

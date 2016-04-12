@@ -1,0 +1,9 @@
+scope # /gcube/devNext
+jdl # test/jdlExamples/jdlTextExtraction.jdl
+outputStoreMode # url # ftp://donald.di.uoa.gr/ # pe2ng # pe2ng2011
+chokeProgressEvents # false
+chokePerformanceEvents # false
+storePlans # true
+inData # textExtractionJob.sh # local # /home/gerasimos/workspace/WorkflowEngineServiceClient/test/jdlExamples/textExtractionJob.sh
+outData # job.out # url # ftp://donald.di.uoa.gr # pe2ng # pe2ng2011
+outData # job.err # url # ftp://donald.di.uoa.gr # pe2ng # pe2ng2011

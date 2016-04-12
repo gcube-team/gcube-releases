@@ -1,0 +1,23 @@
+<project> 
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+	  <artifactId>UserManagement</artifactId>
+	  <groupId>org.gcube.dvos.soa3</groupId>
+	  <version>0.6.1-3.10.1</version>
+	  <relativePath>..</relativePath>
+	</parent>
+    
+    <!-- 
+    <groupId>user-group-management</groupId>
+     -->
+    <artifactId>user-management-core</artifactId>
+    <!-- 
+    <packaging>jar</packaging>
+    <version>2.0</version>
+    -->
+    
+	<build>  
+	        <sourceDirectory>src</sourceDirectory>
+</build>
+</project>

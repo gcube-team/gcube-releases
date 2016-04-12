@@ -1,0 +1,18 @@
+.gcube_DialogBox {
+	border: 4px solid #99BBE8 !important;
+	border-radius: 3px !important;
+	-moz-border-radius: 3px !important;;
+	-webkit-border-radius: 3px !important;;
+}
+
+.gcube_DialogBox .dialogTop {
+	background: transparent url(gcube_images/white-top-bottom.gif) repeat-x
+		scroll 0 -1px !important;
+}
+
+.gcube_DialogBox .Caption {
+	color: #15428B !important;;
+}
+
+
+

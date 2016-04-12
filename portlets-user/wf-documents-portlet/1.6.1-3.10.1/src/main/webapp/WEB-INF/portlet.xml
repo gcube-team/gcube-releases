@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+	<portlet>
+		<portlet-name>wfdocslibrary</portlet-name>
+		<display-name>Workflow Documents Library</display-name>
+	        <portlet-class>org.gcube.portlets.user.workflowdocuments.server.portlet.WorkflowDocumentsPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/WEB-INF/jsp/WorkflowDocumentsPortlet_view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Workflow Documents Library</title>
+			<short-title>Workflow Documents Library</short-title>
+			<keywords>Workflow Documents Library</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>		
+	</portlet>
+</portlet-app>

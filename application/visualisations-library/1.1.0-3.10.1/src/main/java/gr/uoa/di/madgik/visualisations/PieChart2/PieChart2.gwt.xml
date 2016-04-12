@@ -1,0 +1,12 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="gr.uoa.di.madgik.visualisations.Raphael"/>
+	<stylesheet src="PieChart2.css"/>
+	
+	<!-- 
+	<entry-point class="gr.uoa.di.madgik.visualisations.PieChart2.client.PieChart2" />
+	 -->
+	
+	<source path="client" />
+  	<public path="public" />
+</module>

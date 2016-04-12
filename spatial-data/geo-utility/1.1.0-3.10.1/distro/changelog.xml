@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.spatial-data.geo-utility.1-1-0"
+		date="2016-02-09">
+		<Change>[Feature #2191] Updated NcWmsGetMetadata to retrieve z-axis property</Change>
+	</Changeset>
+	<Changeset component="org.gcube.spatial-data.geo-utility.1-0-0"
+		date="2016-01-26">
+		<Change>[Feature #2054] First Release</Change>
+	</Changeset>
+</ReleaseNotes>

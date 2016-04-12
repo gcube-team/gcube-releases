@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="XMLStorageAccess" targetNamespace="http://gcube-system.org/namespaces/informationsystem/collector/XMLStorageAccess" 
+	xmlns:tns="http://gcube-system.org/namespaces/informationsystem/collector/XMLStorageAccess"
+	xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+	xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"  
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"	
+	xmlns:wsrlw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl" 
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor" 	
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" 		 	
+	xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+	<wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+
+	<wsdl:types>
+  		<xsd:schema targetNamespace="http://gcube-system.org/namespaces/informationsystem/collector/XMLStorageAccess"
+    		xmlns:tns="http://gcube-system.org/namespaces/informationsystem/collector/XMLStorageAccess"
+    		xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+    		xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+			<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+	
+			<xsd:element name="VoidRequest" type="coretypes:VOID"/>
+			
+			<xsd:element name="VoidResponse" type="coretypes:VOID"/>
+			
+			<xsd:element name="VoidRestoreRequest" type="coretypes:VOID"/>
+			
+			<xsd:element name="VoidRestoreResponse" type="coretypes:VOID"/>
+			
+			<xsd:element name="VoidShutdownRequest" type="coretypes:VOID"/>
+			
+			<xsd:element name="VoidShutdownResponse" type="coretypes:VOID"/>
+			
+			<xsd:element name="VoidConnectRequest" type="coretypes:VOID"/>
+			
+			<xsd:element name="VoidConnectResponse" type="coretypes:VOID"/>
+			
+			<!-- FAULTS -->
+			<xsd:element name="XMLStorageNotAvailableFaultType">
+	 			<xsd:complexType>
+              	<xsd:complexContent>
+                    	<xsd:extension base="corefaults:GCUBEUnrecoverableFault">
+                        	<xsd:sequence/>                        
+                    	</xsd:extension>
+                	</xsd:complexContent>
+    			</xsd:complexType>
+			</xsd:element>
+								
+			<xsd:element name="BackupNotAvailableFaultType">
+	 			<xsd:complexType>
+              	<xsd:complexContent>
+                    	<xsd:extension base="corefaults:GCUBEUnrecoverableFault">
+                        	<xsd:sequence/>                        
+                    	</xsd:extension>
+                	</xsd:complexContent>
+    			</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="BackupFailedFaultType">
+	 			<xsd:complexType>
+              	<xsd:complexContent>
+                    	<xsd:extension base="corefaults:GCUBERetrySameFault">
+                        	<xsd:sequence/>                        
+                    	</xsd:extension>
+                	</xsd:complexContent>
+    			</xsd:complexType>
+			</xsd:element>	
+			
+			<xsd:element name="ShutdownFailedFaultType">
+	 			<xsd:complexType>
+              	<xsd:complexContent>
+                    	<xsd:extension base="corefaults:GCUBERetrySameFault">
+                        	<xsd:sequence/>                        
+                    	</xsd:extension>
+                	</xsd:complexContent>
+    			</xsd:complexType>
+			</xsd:element>		
+	
+		<xsd:element name="AlreadyConnectedFaultType">
+	 			<xsd:complexType>
+              	<xsd:complexContent>
+                    	<xsd:extension base="corefaults:GCUBERetrySameFault">
+                        	<xsd:sequence/>                        
+                    	</xsd:extension>
+                	</xsd:complexContent>
+    			</xsd:complexType>
+			</xsd:element>
+			
+		</xsd:schema>
+	  
+
+     </wsdl:types>
+
+	<!--============================================================
+
+                       M E S S A G E S
+                      
+  	============================================================-->
+ 	 <wsdl:message name="BackupInputMessage">
+        <part name="parameters" element="tns:VoidRequest"/>        
+  	</wsdl:message>
+  
+  	<wsdl:message name="BackupOutputMessage">
+        <part name="parameters" element="tns:VoidResponse"/>
+  	</wsdl:message>
+  	
+  	 <wsdl:message name="RestoreInputMessage">
+        <part name="parameters" element="tns:VoidRestoreRequest"/>        
+  	</wsdl:message>
+  
+  	<wsdl:message name="RestoreOutputMessage">
+        <part name="parameters" element="tns:VoidRestoreResponse"/>
+  	</wsdl:message>
+  	
+  	<wsdl:message name="ShutdownInputMessage">
+        <part name="parameters" element="tns:VoidShutdownRequest"/>        
+  	</wsdl:message>
+  
+  	<wsdl:message name="ShutdownOutputMessage">
+        <part name="parameters" element="tns:VoidShutdownResponse"/>
+  	</wsdl:message>
+  	
+  	<wsdl:message name="ConnectInputMessage">
+        <part name="parameters" element="tns:VoidConnectRequest"/>        
+  	</wsdl:message>
+  
+  	<wsdl:message name="ConnectOutputMessage">
+        <part name="parameters" element="tns:VoidConnectResponse"/>
+  	</wsdl:message>
+  	
+  	<wsdl:message name="XMLStorageNotAvailableFaultTypeMessage">
+	   <part name="fault" element="tns:XMLStorageNotAvailableFaultType"/>
+  	</wsdl:message>
+  	  	
+  	<wsdl:message name="BackupFailedFaultTypeMessage">
+	   <part name="fault" element="tns:BackupFailedFaultType"/>
+  	</wsdl:message>
+  	
+  	<wsdl:message name="ShutdownFailedFaultTypeMessage">
+	   <part name="fault" element="tns:ShutdownFailedFaultType"/>
+  	</wsdl:message>
+  	
+  	<wsdl:message name="BackupNotAvailableFaultTypeMessage">
+	   <part name="fault" element="tns:BackupNotAvailableFaultType"/>
+  	</wsdl:message>
+  	
+  	<wsdl:message name="AlreadyConnectedFaultTypeMessage">
+	   <part name="fault" element="tns:AlreadyConnectedFaultType"/>
+  	</wsdl:message>
+
+	<!--============================================================
+
+                       P O R T T Y P E
+                      
+  	 ============================================================-->
+  
+  <wsdl:portType name="XMLStorageAccessPortType">
+  
+     <wsdl:operation name="Backup">
+            <wsdl:input message="tns:BackupInputMessage"/>            
+            <wsdl:output message="tns:BackupOutputMessage"/>
+            <wsdl:fault name="fault" message="tns:XMLStorageNotAvailableFaultTypeMessage"/>
+            <wsdl:fault name="fault2" message="tns:BackupFailedFaultTypeMessage"/>
+     </wsdl:operation>
+    
+    
+      <wsdl:operation name="Restore">
+            <wsdl:input message="tns:RestoreInputMessage"/>            
+            <wsdl:output message="tns:RestoreOutputMessage"/>
+            <wsdl:fault name="fault" message="tns:XMLStorageNotAvailableFaultTypeMessage"/>
+            <wsdl:fault name="fault2" message="tns:BackupNotAvailableFaultTypeMessage"/>
+     </wsdl:operation>         
+    
+     <wsdl:operation name="Shutdown">
+            <wsdl:input message="tns:ShutdownInputMessage"/>            
+            <wsdl:output message="tns:ShutdownOutputMessage"/>
+            <wsdl:fault name="fault" message="tns:XMLStorageNotAvailableFaultTypeMessage"/>
+            <wsdl:fault name="fault2" message="tns:BackupFailedFaultTypeMessage"/>
+            <wsdl:fault name="fault3" message="tns:ShutdownFailedFaultTypeMessage"/>
+     </wsdl:operation>
+     
+    
+     <wsdl:operation name="Connect">
+            <wsdl:input message="tns:ConnectInputMessage"/>            
+            <wsdl:output message="tns:ConnectOutputMessage"/>
+            <wsdl:fault name="fault" message="tns:XMLStorageNotAvailableFaultTypeMessage"/>
+            <wsdl:fault name="fault2" message="tns:AlreadyConnectedFaultTypeMessage"/>
+     </wsdl:operation>
+    
+  </wsdl:portType>
+
+</wsdl:definitions>

@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-widgets.workspace-uploader.1-1-0"
+		date="2016-01-08">
+		<Change>Bug Fixed #1333</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.workspace-uploader.1-0-1"
+		date="2015-12-16">
+		<Change>Bug Fixed - https://support.d4science.org/issues/1824</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.workspace-uploader.1-0-0"
+		date="2015-08-07">
+		<Change>first release</Change>
+	</Changeset>
+</ReleaseNotes>

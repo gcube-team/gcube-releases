@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-access.queueManager.1-0-4" date="2012-11-30"> 
+		<Change>Added Connection status</Change>
+	</Changeset>  
+	<Changeset component="org.gcube.data-access.queueManager.1-0-1" date="2012-11-30"> 
+		<Change>Added ExceptionListener extension</Change>
+	</Changeset>  
+	<Changeset component="org.gcube.data-access.queueManager.1-0-0" date="2012-05-04"> 
+		<Change>species products discovery plugin framework release</Change>
+	</Changeset> 
+</ReleaseNotes>

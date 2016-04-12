@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>org.gcube.resourcemanagement</groupId>
+	<artifactId>resource-manager</artifactId>
+	<version>2.1.0-3.10.1</version>
+	<packaging>pom</packaging>
+
+	<name>Resource Manager Reactor</name>
+
+	<modules>
+		<!-- The repository module must be first in order to ensure
+    	 that the local repository is populated -->
+		<module>resource-manager-stubs</module>
+		<module>resource-manager-test-suite</module>
+		<module>resource-manager-service</module>
+	</modules>
+
+	<properties>
+		<wsdlDirectory>${project.basedir}/../wsdl</wsdlDirectory>
+		<wsdlOutputDirectory>${project.basedir}/../target/generated-sources/wsdl</wsdlOutputDirectory>
+		<configDirectory>${project.basedir}/../config</configDirectory>
+		<distroDirectory>${project.basedir}/../distro</distroDirectory>
+		<namespace>http://gcube-system.org/namespaces/vremanagement/resourcemanager</namespace>
+		<basepackage>org.gcube.vremanagement.resourcemanager</basepackage>
+	</properties>
+
+	<dependencyManagement>
+
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>gcf</artifactId>
+				<version>1.6.4-3.10.1</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+		</dependencies>
+
+	</dependencyManagement>
+
+	<build>
+
+		<!-- defines basic configuration for the service plugin -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.gcube.tools</groupId>
+					<artifactId>maven-service-plugin</artifactId>
+					<version>1.1.0</version>
+					<configuration>
+						<serviceId>resourcemanager</serviceId>
+						<basePackage>${basepackage}</basePackage>
+						<wsdlDirectory>${wsdlDirectory}</wsdlDirectory>
+						<wsdlOutputDirectory>${wsdlOutputDirectory}</wsdlOutputDirectory>
+						<configurationDirectory>${configDirectory}</configurationDirectory>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+				<plugins>
+				<!-- interpolates profiles and copies from distribution location to configuration 
+					location, where it is need for embedding into stub artifact, gar generation, 
+					and service archive. -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.6</version>
+					<executions>
+						<execution>
+							<id>copy-profile</id>
+							<goals>
+								<goal>copy-resources</goal>
+							</goals>
+							<phase>process-resources</phase>
+							<configuration>
+								<outputDirectory>${configDirectory}</outputDirectory>
+								<resources>
+									<resource>
+										<directory>${distroDirectory}</directory>
+										<includes>
+											<include>profile.xml</include>
+										</includes>
+										<filtering>true</filtering>
+									</resource>
+								</resources>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+	</build>
+</project>

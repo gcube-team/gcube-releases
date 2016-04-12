@@ -1,0 +1,53 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<g:HTMLPanel height="100%">
+		<table height="100%" width="100%">
+			<tr height="100%">
+				<td width="44%">
+					<table height="100%" width="100%">
+						<tr>
+							<td>
+								<g:HTML ui:field="title" styleName="theTitle"></g:HTML>
+							</td>
+						</tr>
+						<tr height="50%">
+							<td align="center">
+								<div style="line-height: 18px;">
+									<g:HTML ui:field="textHtml" styleName="textHtml"></g:HTML>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								<div style="width:100px; height:1px; border-top: 1px solid #CCC;"></div>
+							</td>
+						</tr>
+						<tr height="50%">
+							<td align="center">
+								<div style="line-height: 18px;">
+									<g:HTML ui:field="otherText" styleName="textHtml"></g:HTML>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td width="66%">
+					<table height="100%" width="100%" class="imageDiv">
+						<tr height="50%">
+							<td align="center">
+								<g:Image ui:field="topImage" styleName="imageShadow"></g:Image>
+							</td>
+						</tr>
+						<tr height="50%">
+							<td align="center">
+								<g:Image ui:field="otherImage" styleName="imageShadow"></g:Image>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

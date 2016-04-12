@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping
+	package="org.gcube_system.namespaces.data.analysis.statisticalmanager.types">
+
+	<class name="SMOperation" abstract="true">
+
+		<id name="operationId">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="operationType" />
+		<property name="portalLogin" />
+		<property name="submissionDate" />
+		<property name="completedDate" />
+		<property name="description" />
+		<property name="operationStatus" />
+
+		<many-to-one name="abstractResource" column="abstractResourceId"
+			unique="true" lazy="false" />
+
+		<union-subclass name="SMComputation">
+			<property name="title" />
+			<property name="algorithm" />
+			<property name="category" />
+			<property name="infrastructure" />
+		</union-subclass>
+
+		<union-subclass name="SMImport">
+			<property name="fileName" />
+		</union-subclass>
+		
+		<union-subclass name="SMSystemImport">
+		</union-subclass>
+
+	</class>
+
+</hibernate-mapping>

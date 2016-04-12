@@ -1,0 +1,8 @@
+<ReleaseNotes>
+    <Changeset component="org.gcube.data-publishing.document-store-lib.1-0-1" date="2016-04-09">
+		<Change></Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.document-store-lib.1-0-0" date="2016-02-08">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

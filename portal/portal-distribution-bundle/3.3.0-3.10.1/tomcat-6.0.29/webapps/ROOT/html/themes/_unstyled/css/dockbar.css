@@ -1,0 +1,202 @@
+.dockbar {
+}
+
+.dockbar:after {
+}
+
+.ie7 .dockbar {
+}
+
+.ie6 .dockbar, .ie6 .lfr-dockbar-pinned .dockbar {
+}
+
+.dockbar a {
+}
+
+.dockbar .menu-button-active {
+}
+
+.dockbar .menu-button-active a {
+}
+
+.dockbar .user-avatar .sign-out {
+}
+
+.dockbar ul {
+}
+
+.dockbar li li {
+}
+
+html > .lfr-dockbar-pinned {
+}
+
+.lfr-dockbar-pinned .dockbar {
+}
+
+.dockbar .pin-dockbar {
+}
+
+.ie6 .dockbar .pin-dockbar {
+}
+
+.pin-dockbar img {
+}
+
+.lfr-dockbar-pinned .pin-dockbar img {
+}
+
+.dockbar .user-portrait {
+}
+
+.dockbar .user-avatar img {
+}
+
+.dockbar .impersonating-user {
+}
+
+.dockbar .impersonating-user .user-links a {
+}
+
+/* ---------- Menus ---------- */
+
+.aui-dockbarmenu-hidden {
+}
+
+.dockbar .aui-toolbar {
+}
+
+.dockbar .user-toolbar {
+}
+
+.aui-underlay .portal-add-content {
+}
+
+.aui-underlay .portal-add-content .portlet-dd-placeholder {
+}
+
+.add-application .aui-widget-bd, .dockbar-messages .aui-widget-bd {
+}
+
+.add-application {
+}
+
+.lfr-has-sidebar #main-content {
+}
+
+.manage-layouts {
+}
+
+.my-places-menu {
+}
+
+.my-places-menu ul {
+}
+
+.my-places-menu ul, .my-places-menu li {
+}
+
+.my-places-menu a {
+}
+
+.my-places-menu .current-site {
+}
+
+.my-places-menu .current-site a {
+}
+
+.my-places-menu .current-site .site-type {
+}
+
+.my-places-menu .current-site a:hover, .my-places-menu a:hover .site-type {
+}
+
+.my-places-menu .site-name {
+}
+
+.my-places-menu .site-type {
+}
+
+.ie7 .my-places-menu .site-type {
+}
+
+.my-places-menu a:hover .site-type {
+}
+
+.ie7 .my-places-menu a {
+}
+
+.ie7 .my-places-menu .site-name {
+}
+
+.ie7 .my-places-menu .site-type {
+}
+
+.ie6 .my-places-menu {
+}
+
+.ie6 .my-places-menu a {
+}
+
+.dockbar .toggle-controls a {
+}
+
+.controls-hidden .toggle-controls a {
+}
+
+.dockbar .menu-button {
+}
+
+.dockbar .menu-button span {
+}
+
+.dockbar .add-content .menu-button span {
+}
+
+.dockbar .manage-content .menu-button span {
+}
+
+.dockbar .my-places .menu-button span {
+}
+
+.dockbar .staging-options .menu-button span {
+}
+
+.dockbar-messages-container {
+}
+
+.dockbar-messages {
+}
+
+.showing-messages .dockbar-messages {
+}
+
+.multiple-messages .dockbar-message {
+}
+
+.multiple-messages .first {
+}
+
+.add-content-menu .add-page a {
+}
+
+.add-content-menu .add-application a {
+}
+
+.manage-content-menu li a {
+}
+
+.manage-content-menu .manage-page a {
+}
+
+.manage-content-menu .page-layout a {
+}
+
+.manage-content-menu .sitemap a {
+}
+
+.manage-content-menu .settings a {
+}
+
+.manage-content-menu .control-panel a {
+}

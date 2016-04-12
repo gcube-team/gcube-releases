@@ -1,0 +1,136 @@
+.info-icon {
+	background-image: url(images/icons/information.png) !important;
+}
+
+.content-icon {
+	background-image: url(images/icons/content.png) !important;
+}
+
+.collections-icon {
+	background-image: url(images/icons/collections.png) !important;
+}
+
+.metadata-icon {
+	background-image: url(images/icons/metadata.png) !important;
+}
+
+.functionality-icon {
+	background-image: url(images/icons/functionality.png) !important;
+}
+
+.functionality-add-icon {
+	background-image: url(images/icons/functionality_add.png) !important;
+}
+
+.architecture-icon {
+	background-image: url(images/icons/architecture.png) !important;
+}
+
+.report-icon {
+	background-image: url(images/icons/report.png) !important;
+}
+
+.play-icon {
+	background-image: url(images/icons/play.png) !important;
+}
+
+.runninginstance-icon {
+	background-image: url(images/icons/runninginstance.png) !important;
+}
+
+.forward-icon {
+	background-image: url(images/icons/forward.png) !important;
+}
+
+.forward-icon-over {
+	opacity: 0.6;
+	filter: alpha(opacity =   60);
+}
+
+.forward-icon-disabled {
+	background-image: url(images/icons/forward.png) !important;
+}
+
+.backward-icon {
+	background-image: url(images/icons/backward.png) !important;
+}
+
+.backward-icon-over {
+	opacity: 0.6;
+	filter: alpha(opacity =   60);
+}
+
+.backward-icon-disabled {
+	background-image: url(images/icons/backward.png) !important;
+}
+
+.upload-icon {
+	background-image: url(images/icons/upload.png) !important;
+}
+
+.upload-icon-over {
+	opacity: 0.6;
+	filter: alpha(opacity =   60);
+}
+
+.upload-icon-disabled {
+	background-image: url(images/icons/upload.png) !important;
+}
+
+.label-wizard {
+	color: #15428B;
+	font-size: 20px ! important;
+	font-weight: bold ! important;
+	margin-top: 18px;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.23);
+}
+
+.functionalityText {
+	color: #444;
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+		sans-serif;
+	font-size: 12px;
+	padding-left: 5px;
+	padding-right: 10px;
+	text-align: justify;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.20);
+	line-height: 15px ! important;
+	padding-bottom: 10px;
+	overflow-y: auto;
+	height: 120px;
+}
+
+.resourceText {
+	color: #444;
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial, sans-serif;
+	font-size: 10px;
+	padding-left: 5px;
+	text-align: justify;
+}
+
+.theTitle {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 18px;
+	color: #333;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+.theResources {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 15px;
+	color: #333;
+	padding-bottom: 10px;
+	padding-top: 5px;
+	background-color: #fff;
+}
+
+.extres { 
+	background-image:url(images/ext_resource.png) !important; 
+	background-repeat: no-repeat;
+	font-weight: bold; 
+	color: #555; 
+	font-size: 12px; 
+	padding-left: 20px;
+	margin-left: 20px;
+}

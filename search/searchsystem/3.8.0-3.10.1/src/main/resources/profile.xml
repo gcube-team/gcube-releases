@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>Search System Library</Description>
+		<Class>Search</Class>
+		<Name>SearchSystem</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>Search System Library</Description>
+				<Name>SearchSystem</Name>
+				<Version>3.0.1</Version>
+				<Dependencies>
+					<Dependency>
+						<Service>
+ 							<Class>G_CQLParser</Class>
+   					        <Name>G_CQLParser</Name>
+                			<Version>1.0.0</Version>
+						</Service>
+						<Package>G_CQLParser</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>					
+					<Dependency>
+						<Service>
+ 							<Class>Execution</Class>
+   					        <Name>ResourceRegistry</Name>
+                			<Version>1.0.0</Version>
+						</Service>
+						<Package>ResourceRegistry</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>					
+					<Dependency>
+						<Service>
+ 							<Class>Execution</Class>
+   					        <Name>ResourceRegistry</Name>
+                			<Version>1.0.0</Version>
+						</Service>
+						<Package>RRModel</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+ 							<Class>Execution</Class>
+   					        <Name>ExecutionLibrariesSet</Name>
+                			<Version>1.0.0</Version>
+						</Service>
+						<Package>WorkflowSearchAdaptor</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ExternalSoftware</Class>
+							<Name>ehcache</Name>
+							<Version>1.05.00</Version>
+						</Service>
+						<Package>ehcache</Package>
+						<Version>1.05.00</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ExternalSoftware</Class>
+							<Name>slf4j</Name>
+							<Version>1.5.6</Version>
+						</Service>
+						<Package>slf4j</Package>
+						<Version>1.5.6</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>		
+				</Dependencies>
+				<Files><File>SearchSystem.jar</File></Files>
+			</Software>	
+		</Packages>
+	</Profile>
+</Resource>

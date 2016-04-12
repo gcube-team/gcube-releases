@@ -1,0 +1,147 @@
+<index-type name="default">
+	<field-list sort-xnear-stop-word-threshold="2E8">
+		<field name="file">
+			<type>file</type>
+			<index>yes</index>
+			<store>yes</store>
+			<return>no</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="file.author">
+			<index>no</index>
+			<store>yes</store>
+			<return>no</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="file.date">
+			<type>date</type>
+			<index>no</index>
+			<store>yes</store>
+			<return>no</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="file.content">
+			<type>file</type>
+			<index>no</index>
+			<store>yes</store>
+			<return>no</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="file.title">
+			<index>no</index>
+			<store>yes</store>
+			<return>no</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="creationDate">
+			<type>date</type>
+			<index>yes</index>
+			<store>yes</store>
+			<return>yes</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="modificationDate">
+			<type>date</type>
+			<index>yes</index>
+			<store>yes</store>
+			<return>yes</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="title">
+			<index>yes</index>
+			<store>yes</store>
+			<return>yes</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="mimeType">
+			<index>yes</index>
+			<store>yes</store>
+			<return>yes</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="path">
+			<index>yes</index>
+			<store>yes</store>
+			<return>yes</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="owner">
+			<index>yes</index>
+			<store>yes</store>
+			<return>yes</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="workspaceItemID">
+			<index>yes</index>
+			<store>yes</store>
+			<return>yes</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="size">
+			<type>long</type>
+			<index>yes</index>
+			<store>yes</store>
+			<return>yes</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="ObjectID">
+			<index>yes</index>
+			<store>yes</store>
+			<return>yes</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="gDocCollectionID">
+			<index>yes</index>
+			<store>yes</store>
+			<return>yes</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="gDocCollectionLang">
+			<index>yes</index>
+			<store>yes</store>
+			<return>yes</return>
+			<tokenize>yes</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+		<field name="S">
+			<index>no</index>
+			<store>yes</store>
+			<return>yes</return>
+			<tokenize>no</tokenize>
+			<sort>no</sort>
+			<boost>1.0</boost>
+		</field>
+	</field-list>
+</index-type>
+        

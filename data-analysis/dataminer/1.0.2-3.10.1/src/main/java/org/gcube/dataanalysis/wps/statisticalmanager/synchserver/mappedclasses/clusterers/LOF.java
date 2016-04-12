@@ -1,0 +1,28 @@
+package org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.clusterers;
+import java.io.File;
+import java.net.URL;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.LinkedHashMap;
+import java.io.StringWriter;
+import org.apache.commons.io.IOUtils;
+import org.apache.xmlbeans.XmlObject;
+import org.gcube.dataanalysis.wps.statisticalmanager.synchserver.bindings.*;
+import org.n52.wps.algorithm.annotation.*;
+import org.n52.wps.io.data.*;
+import org.n52.wps.io.data.binding.complex.*;
+import org.n52.wps.io.data.binding.literal.*;
+import org.n52.wps.server.*;import org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mapping.AbstractEcologicalEngineMapper;import org.n52.wps.server.*;import org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.*;
+@Algorithm(statusSupported=false, title="LOF", abstrakt="Local Outlier Factor (LOF). A clustering algorithm for real valued vectors that relies on Local Outlier Factor algorithm, i.e. an algorithm for finding anomalous data points by measuring the local deviation of a given data point with respect to its neighbours. A Maximum of 4000 points is allowed.", identifier="org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.clusterers.LOF", version = "1.1.0")
+public class LOF extends AbstractEcologicalEngineMapper implements IClusterer{
+@ComplexDataInput(abstrakt="Name of the parameter: PointsTable. Table containing points or observations. Max 4000 points [a http link to a table in UTF-8 encoding following this template: (GENERIC) A generic comma separated csv file in UTF-8 encoding]", title="Table containing points or observations. Max 4000 points [a http link to a table in UTF-8 encoding following this template: (GENERIC) A generic comma separated csv file in UTF-8 encoding]", maxOccurs=1, minOccurs=1, identifier = "PointsTable", binding = GenericFileDataBinding.class)	public void setPointsTable(GenericFileData file) {inputs.put("PointsTable",file);}
+@LiteralDataInput(abstrakt="Name of the parameter: FeaturesColumnNames. column Names for the features [a sequence of names of columns from PointsTable separated by | ]", defaultValue="", title="column Names for the features [a sequence of names of columns from PointsTable separated by | ]", identifier = "FeaturesColumnNames", maxOccurs=1, minOccurs=1, binding = LiteralStringBinding.class) public void setFeaturesColumnNames(String data) {inputs.put("FeaturesColumnNames",data);}
+@LiteralDataInput(abstrakt="Name of the parameter: PointsClusterLabel. table name of the resulting distribution", defaultValue="Cluster_", title="table name of the resulting distribution", identifier = "PointsClusterLabel", maxOccurs=1, minOccurs=1, binding = LiteralStringBinding.class) public void setPointsClusterLabel(String data) {inputs.put("PointsClusterLabel",data);}
+@LiteralDataInput(abstrakt="Name of the parameter: minimal_points_lower_bound. locality (usually called k): minimal number of nearest neighbors", defaultValue="2", title="locality (usually called k): minimal number of nearest neighbors", identifier = "minimal_points_lower_bound", maxOccurs=1, minOccurs=1, binding = LiteralIntBinding.class) public void setminimal_points_lower_bound(Integer data) {inputs.put("minimal_points_lower_bound",""+data);}
+@LiteralDataInput(abstrakt="Name of the parameter: minimal_points_upper_bound. maximum number of nearest neighbors to take into account for outliers evaluation", defaultValue="10", title="maximum number of nearest neighbors to take into account for outliers evaluation", identifier = "minimal_points_upper_bound", maxOccurs=1, minOccurs=1, binding = LiteralIntBinding.class) public void setminimal_points_upper_bound(Integer data) {inputs.put("minimal_points_upper_bound",""+data);}
+@LiteralDataInput(abstrakt="Name of the parameter: distance_function. the distance function to use in the calculation", allowedValues= {"euclidian distance","squared distance","cosine distance","inverted cosine distance","angle"}, defaultValue="euclidian distance", title="the distance function to use in the calculation", identifier = "distance_function", maxOccurs=1, minOccurs=1, binding = LiteralStringBinding.class) public void setdistance_function(String data) {inputs.put("distance_function",data);}
+@LiteralDataInput(abstrakt="Name of the parameter: lof_threshold. the LOF score threshold over which the point is an outlier (usually 2)", defaultValue="2", title="the LOF score threshold over which the point is an outlier (usually 2)", identifier = "lof_threshold", maxOccurs=1, minOccurs=1, binding = LiteralIntBinding.class) public void setlof_threshold(Integer data) {inputs.put("lof_threshold",""+data);}
+@ComplexDataOutput(abstrakt="Name of the parameter: OutputTable. Output cluster table [a http link to a table in UTF-8 ecoding following this template: (CLUSTER) http://goo.gl/PnKhhb]", title="Output cluster table [a http link to a table in UTF-8 ecoding following this template: (CLUSTER) http://goo.gl/PnKhhb]", identifier = "OutputTable", binding = CsvFileDataBinding.class)	public GenericFileData getOutputTable() {URL url=null;try {url = new URL((String) outputs.get("OutputTable")); return new GenericFileData(url.openStream(),"text/csv");} catch (Exception e) {e.printStackTrace();return null;}}
+@ComplexDataOutput(abstrakt="Output that is not predetermined", title="NonDeterministicOutput", identifier = "non_deterministic_output", binding = GenericXMLDataBinding.class)
+ public XmlObject getNon_deterministic_output() {return (XmlObject) outputs.get("non_deterministic_output");}
+@Execute	public void run() throws Exception {		super.run();	} }

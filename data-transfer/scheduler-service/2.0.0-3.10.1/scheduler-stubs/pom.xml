@@ -1,0 +1,195 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.gcube.data.transfer</groupId>
+    <artifactId>scheduler-parent</artifactId>
+    <version>2.0.0-3.10.1</version>
+    <relativePath>..</relativePath>
+  </parent>
+  <artifactId>scheduler-stubs</artifactId>
+  <name>The Data Transfer Scheduler Stubs</name>
+
+
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<!-- <version>2.5</version> -->
+				<executions>
+					<execution>
+						<id>copy-configuration</id>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<phase>process-resources</phase>
+						<configuration>
+							<outputDirectory>${project.build.outputDirectory}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>../config</directory>
+									<targetPath>META-INF</targetPath>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.gcube.tools</groupId>
+				<artifactId>maven-service-plugin</artifactId>
+				<configuration>
+					<wsdls>
+
+						<wsdl>
+							<name>Factory</name>
+							<relativePackage>stubs.datatransferscheduler</relativePackage>
+							<namespace>http://gcube-system.org/namespaces/datatransfer/scheduler/datatransferscheduler</namespace>
+						</wsdl>
+						<wsdl>
+							<name>Scheduler</name>
+							<relativePackage>stubs.datatransferscheduler</relativePackage>
+							<namespace>http://gcube-system.org/namespaces/datatransfer/scheduler/datatransferscheduler</namespace>
+						</wsdl>
+						<wsdl>
+							<name>Management</name>
+							<relativePackage>stubs.datatransferscheduler</relativePackage>
+							<namespace>http://gcube-system.org/namespaces/datatransfer/scheduler/datatransferscheduler</namespace>
+						</wsdl>
+					</wsdls>
+				</configuration>
+				<executions>
+					<execution>
+						<id>generate-stubs</id>
+						<goals>
+							<goal>stub-gen</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Adds stub folder as source folder after stub generation, using the 
+				build-helper plugin. NOTE: this operation is already carried out by the service-plugin, 
+				but the service-plugin does not have yet an m2e connector to notify m2e that 
+				a new source folder has been added. the build-helper plugin does, so by doing 
+				it redundantly here we keep Eclipse in line without manual intervention (which 
+				would have to be repeated at each project configuration update) -->
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${basedir}/target/generated-sources/stubs</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- adds @SuppressedWarnings to generated stub classes -->
+
+			<plugin>
+				<groupId>com.google.code.maven-replacer-plugin</groupId>
+				<artifactId>maven-replacer-plugin</artifactId>
+				<version>1.3.2</version>
+				<executions>
+					<execution>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>replace</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<includes>
+						<include>**/stubs/**/**/*.java</include>
+					</includes>
+
+					<regex>true</regex>
+					<regexFlags>
+						<regexFlag>MULTILINE</regexFlag>
+					</regexFlags>
+
+					<replacements>
+						<replacement>
+							<token>^public class</token>
+							<value>@SuppressWarnings("all") public class</value>
+						</replacement>
+					</replacements>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+		<pluginManagement>
+
+			<plugins>
+
+				<!-- Instructs m2e to generate stubs and add @SuppressWarning annotations 
+					on Eclipse workspace builds -->
+
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.gcube.tools</groupId>
+										<artifactId>maven-service-plugin</artifactId>
+										<versionRange>[1.0,)</versionRange>
+										<goals>
+											<goal>stub-gen</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>com.google.code.maven-replacer-plugin</groupId>
+										<artifactId>maven-replacer-plugin</artifactId>
+										<versionRange>[1.0,)</versionRange>
+										<goals>
+											<goal>replace</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+	</build>
+
+  <dependencies>
+  	<dependency>
+           <groupId>org.gcube.distribution</groupId>
+           <artifactId>ghn-core-runtime</artifactId>
+       </dependency>
+    <dependency>
+        <groupId>org.gcube.core</groupId>
+           <artifactId>gcf</artifactId>
+
+       </dependency>
+  </dependencies>
+
+</project>

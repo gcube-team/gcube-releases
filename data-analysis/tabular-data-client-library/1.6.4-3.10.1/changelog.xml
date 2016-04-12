@@ -1,0 +1,17 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-analysis.tabular-data-client-library.1-0-0" date="2013-10-25"> 
+		<Change>first release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.tabular-data-client-library.1-2-0" date="2013-02-11"> 
+		<Change>added proxy for the TemplateManager port type</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.tabular-data-client-library.1-6-1" date="2014-09-30"> 
+		<Change>added methods for resource management</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.tabular-data-client-library.1-6-2" date="2014-12-01"> 
+		<Change>added method call for executeSynchoperation in OperationManagerProxy</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.tabular-data-client-library.1-6-4" date="2015-6-30"> 
+		<Change>added methods for rules managing</Change>
+	</Changeset>
+</ReleaseNotes>

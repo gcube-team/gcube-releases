@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='WorkspaceExplorer'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- UNCOMMNET TO USE GWT 2.7 SUPER DEV MODE -->
+	<set-configuration-property name='xsiframe.failIfScriptTag'
+		value='FALSE' />
+
+	<script src="jquery-1.10.1.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+
+<!-- 	<stylesheet src='workspaceExplorer.css' /> -->
+
+	<!-- Inherit the default GWT style sheet. You can change -->
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+
+	<!-- Specify the app entry point class. -->
+	<!-- <entry-point class='org.gcube.portlets.widgets.wsexplorer.client.WorkspaceExplorer'/> -->
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+	<!--Override Bootstrap Css -->
+	<source path='resources' />
+	<replace-with
+		class="org.gcube.portlets.widgets.wsexplorer.resources.BootstrapConfigurator">
+		<when-type-is class="com.github.gwtbootstrap.client.ui.config.Configurator" />
+	</replace-with>
+	<public path="resources">
+		<exclude name="** /*.java" />
+		<exclude name="** /*.class" />
+	</public>
+</module>

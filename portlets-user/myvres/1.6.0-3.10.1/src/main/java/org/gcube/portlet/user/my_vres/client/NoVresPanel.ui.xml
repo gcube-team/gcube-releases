@@ -1,0 +1,12 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel>
+		<div class="NoVresStyle">
+			You are not subscribed to any environment, 
+			please begin by	
+			<a class="vrelink" href="/group/data-e-infrastructure-gateway/explore-research-environments/"><span class="important">joining</span></a> something.	<br /><br />
+			<a class="vrelink" href="/group/data-e-infrastructure-gateway/explore-research-environments/"><span class="important">Explore</span></a> the research environments available in the infrastructure.
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

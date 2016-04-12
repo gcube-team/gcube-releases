@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='softwareuploadwizard'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<!-- Inherit the default GWT style sheet. You can change -->
+	<!-- the theme of your GWT application by uncommenting -->
+	<!-- any one of the following lines. -->
+	<!-- <inherits name='com.google.gwt.user.theme.standard.Standard'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
+	<!-- Other module inherits -->
+	<inherits name="com.extjs.gxt.ui.GXT" />
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-INFO" />
+	<!-- <inherits name="com.allen_sauer.gwt.log.gwt-log-TRACE" / -->
+
+<!-- Commented line below to check if it's needed -->
+<!-- 	<inherits name="com.google.gwt.resources.Resources" /> -->
+	<inherits name='net.customware.gwt.dispatch.Dispatch' />
+
+	<set-property name="log_DivLogger" value="DISABLED" />
+
+	<!-- Specify the application specific style sheet. -->
+	<stylesheet src='SoftwareUploadWizardWidget.css' />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.admin.software_upload_wizard.client.SoftwareUploadWizard' />
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+</module>

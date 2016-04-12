@@ -1,0 +1,28 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.search.searchsystemservice.2-0-0" date="2011-07-01">
+		<Change>First version of the Search System Service.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystemservice.2-0-1" date="2011-12-20">
+		<Change>Uses the version of Search System library that supports cached plans.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystemservice.2-0-2" date="2012-09-07">
+		<Change>Turned to Maven</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystemservice.2-0-3" date="2013-01-08">
+		<Change>Changes for profile.xml interpolation</Change>
+		<Change>Dependency range changes in pom file</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystemservice.2-1-0" date="2013-10-25">
+		<Change>Changes related to the plan cache</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystemservice.3-0-0" date="2014-02-07">
+		<Change>First Release with rest api</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.search.searchsystemservice.3-2-0" date="2014-06-03">
+		<Change>Added get collections, get fields etc and SearchClient2 that uses Builder Pattern</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystemservice.3-3-0" date="2011-07-01">
+		<Change>Added getSearchableFields and getPresentable fields to support SRU-search-adapter</Change>
+	</Changeset>
+</ReleaseNotes>

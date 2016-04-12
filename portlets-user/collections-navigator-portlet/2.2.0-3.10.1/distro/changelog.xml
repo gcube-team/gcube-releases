@@ -1,0 +1,34 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.collections-navigator-portlet.1-4-0" date="2010-07-16">
+		<Change>GWT 2 and Liferay support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.collections-navigator-portlet.1-5-0" date="2010-10-22">
+		<Change>Scope helper added to support bookmarking</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.collections-navigator-portlet.1-6-0" date="2010-11-08">
+		<Change>Refreshing collections displays a loading message and removes the collections tree until the refresh is completed.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.collections-navigator-portlet.1-7-0" date="2011-05-06">
+		<Change>GWT 2.2.0 compatible</Change>
+		<Change>Notification components are updated to be compatible with GWT 2.2.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.collections-navigator-portlet.1-8-0" date="2011-07-01">
+		<Change>Compatible with the new search system</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.collections-navigator-portlet.1-8-1" date="2013-01-18">
+		<Change>Updated some deprecated GWT methods</Change>
+		<Change>Added a fallback solution for GWT 2.4 and Chrome 24 problem</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.collections-navigator-portlet.1-9-0" date="2013-03-06">
+		<Change>Handles the exceptions coming from asl-search component</Change>
+		<Change>Display error message when bridging is not completed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.collections-navigator-portlet.2-0-0" date="2013-07-25">
+		<Change>Changed the way collections are retrieved</Change>
+		<Change>Fixed a bug when browser's back button was clicked</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.collections-navigator-portlet.2-1-0" date="2013-10-21">
+		<Change>GWT version updated</Change>
+		<Change>Project is mavenized</Change>
+	</Changeset>
+</ReleaseNotes>

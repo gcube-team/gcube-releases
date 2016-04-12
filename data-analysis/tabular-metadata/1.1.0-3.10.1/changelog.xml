@@ -1,0 +1,8 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data.analysis.tabulardata.metadata.1.0.0" date="2013-10-21"> 
+		<Change>First version</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data.analysis.tabulardata.metadata.1.1.0" date="2013-02-11"> 
+		<Change>added contains method in MetadataHolder interface</Change>
+	</Changeset>
+</ReleaseNotes>

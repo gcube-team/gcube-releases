@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>URL Resolution Library</Description>
+		<Class>Execution</Class>
+		<Name>URLResolutionLibrary</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>URL Resolution Library</Description>
+				<Name>URLResolutionLibrary</Name>
+				<Version>1.0.0</Version>
+				<Dependencies>
+					<Dependency>
+						<Service>
+ 							<Class>ExternalSoftware</Class>
+   					        <Name>commons-codec</Name>
+                			<Version>1.3.0</Version>
+						</Service>
+						<Package>commons-codec</Package>
+						<Version>1.3.0</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+ 							<Class>ExternalSoftware</Class>
+   					        <Name>commons-logging</Name>
+                			<Version>1.1.0</Version>
+						</Service>
+						<Package>commons-logging</Package>
+						<Version>1.1.0</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>						
+					<Dependency>
+						<Service>
+ 							<Class>ExternalSoftware</Class>
+   					        <Name>commons-net</Name>
+                			<Version>2.0.0</Version>
+						</Service>
+						<Package>commons-net</Package>
+						<Version>2.0.0</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>					
+					<Dependency>
+						<Service>
+ 							<Class>ExternalSoftware</Class>
+   					        <Name>httpclient</Name>
+                			<Version>4.0.0</Version>
+						</Service>
+						<Package>httpclient</Package>
+						<Version>4.0.0</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>		
+					<Dependency>
+						<Service>
+ 							<Class>ExternalSoftware</Class>
+   					        <Name>httpcore</Name>
+                			<Version>4.0.1</Version>
+						</Service>
+						<Package>httpcore</Package>
+						<Version>4.0.1</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>	
+									
+					<Dependency>
+						<Service>
+ 							<Class>ExternalSoftware</Class>
+   					        <Name>httpcomponents-client</Name>
+                			<Version>4.1.2</Version>
+						</Service>
+						<Package>httpcomponents-client</Package>
+						<Version>4.1.2</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>					
+					<Dependency>
+						<Service>
+ 							<Class>ExternalSoftware</Class>
+   					        <Name>jglobus</Name>
+                			<Version>1.8.0</Version>
+						</Service>
+						<Package>jglobus</Package>
+						<Version>1.8.0</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					
+					<Dependency>
+						<Service>
+ 							<Class>ExternalSoftware</Class>
+   					        <Name>jsch</Name>
+                			<Version>0.1.46</Version>
+						</Service>
+						<Package>jsch</Package>
+						<Version>0.1.46</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					
+					<Dependency>
+						<Service>
+ 							<Class>ExternalSoftware</Class>
+   					        <Name>log4j</Name>
+                			<Version>1.2.8</Version>
+						</Service>
+						<Package>log4j</Package>
+						<Version>1.2.8</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+										
+					<Dependency>
+						<Service>
+ 							<Class>Commons</Class>
+   					        <Name>Bitlet</Name>
+                			<Version>1.0.0</Version>
+						</Service>
+						<Package>Bitlet</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>					
+							
+				</Dependencies>
+				<Files><File>URLResolutionLibrary.jar</File></Files>
+			</Software>	
+		</Packages>
+	</Profile>
+</Resource>

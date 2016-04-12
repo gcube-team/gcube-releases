@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment name="defaultServerConfig" 
+    xmlns="http://xml.apache.org/axis/wsdd/" 
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+    xmlns:aggr="http://mds.globus.org/aggregator/types">
+
+    <!-- Factory service -->
+    <service name="gcube/informationsystem/registry/RegistryFactory" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.informationsystem.registry.impl.porttypes.RegistryFactory"/>
+        <wsdlFile>share/schema/org.gcube.informationsystem.registry/RegistryFactory_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+        <parameter name="instance" value="gcube/informationsystem/registry/Registry"/> 
+   		<parameter name="providers" value="GCUBEProvider SubscribeProvider GetCurrentMessageProvider"/>
+   		<parameter name="loadOnStartup" value="true"/>
+		<!-- <parameter name="securityDescriptor" value="@config.dir@/security-descriptor-Factory.xml"/> -->
+		
+    </service>
+
+	<service name="gcube/informationsystem/registry/ResourceRegistration" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.informationsystem.registry.impl.porttypes.ResourceRegistration"/>
+        <wsdlFile>share/schema/org.gcube.informationsystem.registry/ResourceRegistration_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+        <parameter name="instance" value="gcube/informationsystem/registry/ResourceRegistration"/> 
+   		<parameter name="providers" value="GCUBEProvider SubscribeProvider GetCurrentMessageProvider"/>
+   		<parameter name="loadOnStartup" value="true"/>
+		
+    </service>
+</deployment>

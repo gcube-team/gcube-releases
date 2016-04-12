@@ -1,0 +1,11 @@
+<ReleaseNotes>
+    <Changeset component="org.gcube.accounting.accounting-analytics.1-2-0" date="${buildDate}">
+		<Change>Ready for ScopeProvider Removal #2194</Change>
+	</Changeset>
+    <Changeset component="org.gcube.accounting.accounting-analytics.1-1-0" date="2015-02-08">
+		<Change>Internal Changes due to Accounting Lib generalization #1746</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-analytics.1-0-0" date="2015-12-09">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

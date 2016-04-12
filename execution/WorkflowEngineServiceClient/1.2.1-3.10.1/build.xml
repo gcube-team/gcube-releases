@@ -1,0 +1,58 @@
+ <project default="compile" basedir=".">
+	<property environment="env" />
+	<property name="project.dist" value="dist"/>
+	<property name="project.build" value="build"/>
+	<property name="build.classes" value="${project.build}/classes"/>
+	<target name="compile" depends="clean ,setenv" description="Compile project source code">
+		<echo>Compiling project source code</echo>
+		<javac srcdir="."
+			destdir="${build.classes}"
+			classpathref="classpath"
+			debug="on"
+			optimize="on"
+			deprecation="on"/>
+	</target>
+	<target name="jar" depends="compile">
+		<jar destfile="${dist.jar.name}" basedir="${build.classes}" includes="**/*.class"/>
+		<move file="${dist.jar.name}" todir="${project.dist}" verbose="true"/>
+	</target>
+	<target name="setenv" description="Check for libraries and print out config information">
+		<mkdir dir="${project.dist}"/>
+		<mkdir dir="${project.build}"/>
+		<mkdir dir="${build.classes}"/>
+		<path id="classpath">
+			<pathelement location="${build.classes}"/>
+			<pathelement path="${java.class.path}"/>
+			<pathelement location="${environment.provider.lib}"/>
+			<pathelement location="${information.system.lib}"/>
+			<pathelement location="${storage.system.lib}"/>
+			<pathelement location="${workflow.engine.stubs}"/>
+			<fileset dir="${env.GLOBUS_LOCATION}/lib">
+				<include name="*.jar"/>
+			</fileset>
+		</path>
+	</target>
+	<target name="javadoc">
+		<javadoc access="public" 
+			author="true" 
+			destdir="Documentation/api" 
+			nodeprecated="false" 
+			nodeprecatedlist="false" 
+			noindex="false" 
+			nonavbar="false" 
+			notree="false" 
+			packagenames="*"
+			source="1.5" 
+			sourcepath="src" 
+			splitindex="true" 
+			use="false" 
+			version="true">
+			<fileset file="${environment.provider.lib}"/>
+			<fileset file="${information.system.lib}"/>
+			<fileset file="${storage.system.lib}"/>
+		</javadoc>
+	</target>
+	<target name="clean" description="Delete classes and existing library">
+		<delete quiet="true" dir="${project.build}"/>
+	</target>
+</project>

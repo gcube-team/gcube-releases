@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:m="urn:import:org.gcube.portlets.user.gcubewidgets.client.elements">
+	<g:HTMLPanel ui:field="mainPanel">
+		<table>
+			<tr>
+				<td>
+					<div class="manager-photo-details">
+						<a ui:field="imageRedirect" href="">
+							<g:Image title="Profile Picture" styleName="manager-user-photo"
+								url="" ui:field="avatarImage" />
+						</a>
+					</div>
+				</td>
+				<td>
+					<div class="manager-user-details">
+						<g:HTML styleName="manager-fullName" ui:field="userFullName"></g:HTML>
+						<g:HTML styleName="manager-headline" ui:field="headlineLabel"></g:HTML>
+						<g:HTML styleName="manager-institution" ui:field="institutionLabel"></g:HTML>
+					</div>
+				</td>
+			
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,130 @@
+/** Add css rules here for your application. */
+@import url('irbootstrapperportletg/old-dialog.css');
+
+.treeTable {
+	border-spacing: 20px 0px;
+}
+
+.success-icon {
+	background-image: url( images/success.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.error-icon {
+	background-image: url( images/error.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.warning-icon {
+	background-image: url( images/warning.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.information-icon {
+	background-image: url( images/information.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.cancel-icon {
+	background-image: url( images/cancel.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.fulfilled-icon {
+	background-image: url( images/fulfilled.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.running-icon {
+	background-image: url( images/running.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.refresh-icon {
+	background-image: url( images/refresh.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.filter-icon {
+	background-image: url( images/filter.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.start-icon {
+	background-image: url( images/start.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.start-disabled-icon {
+	background-image: url( images/start-disabled.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.start-many-icon {
+	background-image: url( images/start-many.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.start-many-disabled-icon {
+	background-image: url( images/start-many-disabled.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.stop-icon {
+	background-image: url( images/stop.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.stop-disabled-icon {
+	background-image: url( images/stop-disabled.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.remove-icon {
+	background-image: url( images/remove.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.remove-disabled-icon {
+	background-image: url( images/remove-disabled.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.clone-icon {
+	background-image: url( images/clone.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.clone-disabled-icon {
+	background-image: url( images/clone-disabled.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.view-icon {
+	background-image: url( images/view.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.view-disabled-icon {
+	background-image: url( images/view-disabled.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.new-icon {
+	background-image: url( images/new.png ) !important;
+	background-repeat: no-repeat;
+}
+
+.hide-tree-node {
+	display: none;	
+}
+
+.show-tree-node {
+	display: block;	
+}
+
+.gwt-HTML {
+         padding: 2px 5px;
+ }
+
+

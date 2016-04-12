@@ -1,0 +1,23 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.portlets-admin.vre-definition.4-4-0" date="2015-10-06">
+<Change>Fixed Bug #918 Edit mode is buggy</Change>
+</Changeset>
+<Changeset component="org.gcube.portlets-admin.vre-definition.4-3-0" date="2014-06-06">
+<Change>Ported to Feather Weight Stack Portal</Change>
+</Changeset>
+<Changeset component="org.gcube.portlets-admin.vre-definition.4-1-0" date="2013-10-21">
+<Change>Integrated Social Notifications for VRE Creations</Change>
+<Change>Ported to Feather Weight Stack</Change>
+<Change>Removed GCF Dependency</Change>
+<Change>Logging with sl4j Enabled</Change>
+</Changeset>
+<Changeset component="org.gcube.portlets-admin.vre-definition.3-5-0" date="2012-09-21">
+<Change>Adapted to the new resource manager</Change>
+<Change>Step collections removed ad no longer necessary</Change>
+</Changeset>
+<Changeset component="org.gcube.portlets-admin.vre-definition.3-4-0" date="2012-02-17">
+<Change>Adapted to GWT 2.4</Change>
+<Change>Minor Interface Restyling</Change>
+<Change>Added log actions for creation and open</Change>
+</Changeset>
+</ReleaseNotes>

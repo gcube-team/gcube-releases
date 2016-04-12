@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-analysis.statistical-manager-cl.2-0-0" date="2015-07-25"> 
+		<Change>Integration with SM 2.0.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.statistical-manager-cl.2-0-1" date="2016-02-19"> 
+		<Change>Integration issues fixed</Change>
+	</Changeset>
+</ReleaseNotes>

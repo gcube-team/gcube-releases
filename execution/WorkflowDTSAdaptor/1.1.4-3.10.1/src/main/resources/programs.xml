@@ -1,0 +1,464 @@
+<programs>
+<Resource>
+	<ID>1</ID>
+	<Type/>
+	<Profile>
+		<SecondaryType>DTSTransformationProgram</SecondaryType>
+		<Name>ImageMagickWrapperTP</Name>
+		<Description>Wrapper Program for ImageMagick</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.images.ImageMagickWrapper</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+                        <Sources>
+                            <Source>
+                                <Input id="TRInput0"/>
+                                <ContentType>
+                                    <Mimetype>image/jpeg</Mimetype>
+                                    <Parameters/>
+                                </ContentType>
+                            </Source>
+                        </Sources>
+                        <ProgramParameters>
+                        	<Parameter name="method" value="convert" isOptional="false" />
+                        </ProgramParameters>
+                        <Target>
+                            <Output id="TROutput"/>
+                            <ContentType>
+                                <Mimetype>image/png</Mimetype>
+                                <Parameters>
+                                    <Parameter isOptional="true" name="width" value="*"/>
+                                    <Parameter isOptional="true" name="height" value="*"/>
+                                </Parameters>
+                            </ContentType>
+                        </Target>
+                    </TransformationUnit>
+                    <TransformationUnit id="1" isComposite="false">
+                        <Sources>
+                            <Source>
+                                <Input id="TRInput0"/>
+                                <ContentType>
+                                    <Mimetype>image/jpeg</Mimetype>
+                                    <Parameters/>
+                                </ContentType>
+                            </Source>
+                        </Sources>
+                        <ProgramParameters>
+                        	<Parameter name="method" value="convert" isOptional="false" />
+                        </ProgramParameters>
+                        <Target>
+                            <Output id="TROutput"/>
+                            <ContentType>
+                                <Mimetype>image/gif</Mimetype>
+                                <Parameters>
+                                    <Parameter isOptional="true" name="width" value="*"/>
+                                    <Parameter isOptional="true" name="height" value="*"/>
+                                </Parameters>
+                            </ContentType>
+                        </Target>
+                    </TransformationUnit>
+                    <TransformationUnit id="2" isComposite="false">
+                        <Sources>
+                            <Source>
+                                <Input id="TRInput0"/>
+                                <ContentType>
+                                    <Mimetype>image/png</Mimetype>
+                                    <Parameters/>
+                                </ContentType>
+                            </Source>
+                        </Sources>
+                        <ProgramParameters>
+                        	<Parameter name="method" value="convert" isOptional="false" />
+                        </ProgramParameters>
+                        <Target>
+                            <Output id="TROutput"/>
+                            <ContentType>
+                                <Mimetype>image/jpeg</Mimetype>
+                                <Parameters>
+                                    <Parameter isOptional="true" name="width" value="*"/>
+                                    <Parameter isOptional="true" name="height" value="*"/>
+                                </Parameters>
+                            </ContentType>
+                        </Target>
+                    </TransformationUnit>
+                    <TransformationUnit id="3" isComposite="false">
+                        <Sources>
+                            <Source>
+                                <Input id="TRInput0"/>
+                                <ContentType>
+                                    <Mimetype>image/png</Mimetype>
+                                    <Parameters/>
+                                </ContentType>
+                            </Source>
+                        </Sources>
+                        <ProgramParameters>
+                        	<Parameter name="method" value="convert" isOptional="false" />
+                        </ProgramParameters>
+                        <Target>
+                            <Output id="TROutput"/>
+                            <ContentType>
+                                <Mimetype>image/gif</Mimetype>
+                                <Parameters>
+                                    <Parameter isOptional="true" name="width" value="*"/>
+                                    <Parameter isOptional="true" name="height" value="*"/>
+                                </Parameters>
+                            </ContentType>
+                        </Target>
+                    </TransformationUnit>
+                    <TransformationUnit id="4" isComposite="false">
+                        <Sources>
+                            <Source>
+                                <Input id="TRInput0"/>
+                                <ContentType>
+                                    <Mimetype>image/gif</Mimetype>
+                                    <Parameters/>
+                                </ContentType>
+                            </Source>
+                        </Sources>
+                        <ProgramParameters>
+                        	<Parameter name="method" value="convert" isOptional="false" />
+                        </ProgramParameters>
+                        <Target>
+                            <Output id="TROutput"/>
+                            <ContentType>
+                                <Mimetype>image/jpeg</Mimetype>
+                                <Parameters>
+                                    <Parameter isOptional="true" name="width" value="*"/>
+                                    <Parameter isOptional="true" name="height" value="*"/>
+                                </Parameters>
+                            </ContentType>
+                        </Target>
+                    </TransformationUnit>
+                    <TransformationUnit id="5" isComposite="false">
+                        <Sources>
+                            <Source>
+                                <Input id="TRInput0"/>
+                                <ContentType>
+                                    <Mimetype>image/gif</Mimetype>
+                                    <Parameters/>
+                                </ContentType>
+                            </Source>
+                        </Sources>
+                        <ProgramParameters>
+                        	<Parameter name="method" value="convert" isOptional="false" />
+                        </ProgramParameters>
+                        <Target>
+                            <Output id="TROutput"/>
+                            <ContentType>
+                                <Mimetype>image/png</Mimetype>
+                                <Parameters>
+                                    <Parameter isOptional="true" name="width" value="*"/>
+                                    <Parameter isOptional="true" name="height" value="*"/>
+                                </Parameters>
+                            </ContentType>
+                        </Target>
+                    </TransformationUnit>
+                    <TransformationUnit id="6" isComposite="false">
+                        <Sources>
+                            <Source>
+                                <Input id="TRInput0"/>
+                                <ContentType>
+                                    <Mimetype>image/tiff</Mimetype>
+                                    <Parameters/>
+                                </ContentType>
+                            </Source>
+                        </Sources>
+                        <ProgramParameters>
+                        	<Parameter name="method" value="convert" isOptional="false" />
+                        </ProgramParameters>
+                        <Target>
+                            <Output id="TROutput"/>
+                            <ContentType>
+                                <Mimetype>image/png</Mimetype>
+                                <Parameters>
+                                    <Parameter isOptional="true" name="width" value="*"/>
+                                    <Parameter isOptional="true" name="height" value="*"/>
+                                </Parameters>
+                            </ContentType>
+                        </Target>
+                    </TransformationUnit>
+                    <TransformationUnit id="7" isComposite="false">
+                        <Sources>
+                            <Source>
+                                <Input id="TRInput0"/>
+                                <ContentType>
+                                    <Mimetype>image/tiff</Mimetype>
+                                    <Parameters/>
+                                </ContentType>
+                            </Source>
+                        </Sources>
+                        <ProgramParameters>
+                        	<Parameter name="method" value="convert" isOptional="false" />
+                        </ProgramParameters>
+                        <Target>
+                            <Output id="TROutput"/>
+                            <ContentType>
+                                <Mimetype>image/jpeg</Mimetype>
+                                <Parameters>
+                                    <Parameter isOptional="true" name="width" value="*"/>
+                                    <Parameter isOptional="true" name="height" value="*"/>
+                                </Parameters>
+                            </ContentType>
+                        </Target>
+                    </TransformationUnit>
+                    <TransformationUnit id="8" isComposite="false">
+                        <Sources>
+                            <Source>
+                                <Input id="TRInput0"/>
+                                <ContentType>
+                                    <Mimetype>image/bmp</Mimetype>
+                                    <Parameters/>
+                                </ContentType>
+                            </Source>
+                        </Sources>
+                        <ProgramParameters>
+                        	<Parameter name="method" value="convert" isOptional="false" />
+                        </ProgramParameters>
+                        <Target>
+                            <Output id="TROutput"/>
+                            <ContentType>
+                                <Mimetype>image/png</Mimetype>
+                                <Parameters>
+                                    <Parameter isOptional="true" name="width" value="*"/>
+                                    <Parameter isOptional="true" name="height" value="*"/>
+                                </Parameters>
+                            </ContentType>
+                        </Target>
+                    </TransformationUnit>
+                    <TransformationUnit id="9" isComposite="false">
+                        <Sources>
+                            <Source>
+                                <Input id="TRInput0"/>
+                                <ContentType>
+                                    <Mimetype>image/png</Mimetype>
+                                    <Parameters/>
+                                </ContentType>
+                            </Source>
+                        </Sources>
+                        <ProgramParameters>
+                        	<Parameter name="method" value="convert" isOptional="false" />
+                        </ProgramParameters>
+                        <Target>
+                            <Output id="TROutput"/>
+                            <ContentType>
+                                <Mimetype>image/png</Mimetype>
+                                <Parameters>
+                                    <Parameter isOptional="true" name="width" value="*"/>
+                                    <Parameter isOptional="true" name="height" value="*"/>
+                                </Parameters>
+                            </ContentType>
+                        </Target>
+                    </TransformationUnit>
+                    <TransformationUnit id="10" isComposite="false">
+                        <Sources>
+                            <Source>
+                                <Input id="TRInput0"/>
+                                <ContentType>
+                                    <Mimetype>image/tiff</Mimetype>
+                                    <Parameters/>
+                                </ContentType>
+                            </Source>
+                        </Sources>
+                        <ProgramParameters>
+                        	<Parameter name="method" value="composite" isOptional="false" />
+                        	<Parameter name="dissolve" value="15" isOptional="false" />
+                        	<Parameter name="tile" value="-" isOptional="false" />
+                        </ProgramParameters>
+                        <Target>
+                            <Output id="TROutput"/>
+                            <ContentType>
+                                <Mimetype>image/tiff</Mimetype>
+                                <Parameters>
+                                    <Parameter isOptional="false" name="security" value="watermarking"/>
+                                    <Parameter isOptional="true" name="width" value="*"/>
+                                    <Parameter isOptional="true" name="height" value="*"/>
+                                </Parameters>
+                            </ContentType>
+                        </Target>
+                    </TransformationUnit>
+                </TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>
+<Resource>
+	<ID>2</ID>
+	<Type/>
+	<Profile>
+		<SecondaryType>DTSTransformationProgram</SecondaryType>
+		<Name>FtsRowset_Transformer</Name>
+		<Description>Program creating ftRowsets</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.metadata.indexfeed.FtsRowset_Transformer</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter isOptional="false" name="schemaURI" value="-"/>
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="xslt" value="-" isOptional="false"/>
+							<Parameter name="indexType" value="-" isOptional="false"/>
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schemaURI" value="http://ftrowset.xsd"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="1" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter isOptional="false" name="schemaURI" value="http://dublincore.org/documents/dces/"/>
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="xslt" value="$BrokerXSLT_dc_anylanguage_to_ftRowset_anylanguage" isOptional="false"/>
+							<Parameter name="indexType" value="ft_dc_1.0" isOptional="false"/>
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schemaURI" value="http://ftrowset.xsd"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="2" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter isOptional="false" name="schemaURI" value="http://www.gcube-system.org/resources/schema/iso/19115/iso19115.xsd"/>
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="xslt" value="$BrokerXSLT_ISO19115_anylanguage_to_ftRowset_anylanguage" isOptional="false"/>
+							<Parameter name="indexType" value="ft_ISO19115_1.0" isOptional="false"/>
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schemaURI" value="http://ftrowset.xsd"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="3" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter isOptional="false" name="schemaURI" value="http://eiDB.xsd"/>
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="xslt" value="$BrokerXSLT_eiDB_anylanguage_to_ftRowset_anylanguage" isOptional="false"/>
+							<Parameter name="indexType" value="ft_eiDB_1.0" isOptional="false"/>
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schemaURI" value="http://ftrowset.xsd"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="4" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter isOptional="false" name="schemaURI" value="http://es.xsd"/>
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="xslt" value="$BrokerXSLT_es_anylanguage_to_ftRowset_anylanguage" isOptional="false"/>
+							<Parameter name="indexType" value="ft_es_1.0" isOptional="false"/>
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schemaURI" value="http://ftrowset.xsd"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="5" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter isOptional="false" name="schemaURI" value="http://193.43.36.238:8282/fi/figis/devcon/schema/dc/qualifieddc.xsd"/>
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="xslt" value="$BrokerXSLT_FARM_dc_anylanguage_to_ftRowset_anylanguage" isOptional="false"/>
+							<Parameter name="indexType" value="ft_FARM_dc_1.0" isOptional="false"/>
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schemaURI" value="http://ftrowset.xsd"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>
+
+</programs>

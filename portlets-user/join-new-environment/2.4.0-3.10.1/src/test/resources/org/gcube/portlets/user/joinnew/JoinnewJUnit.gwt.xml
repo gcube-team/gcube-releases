@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.user.joinnew.Joinnew' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/Joinnew/greet" class="org.gcube.portlets.user.joinnew.server.JoinNewServiceImpl" />
+
+</module>

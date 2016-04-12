@@ -1,0 +1,122 @@
+<%
+/**
+ * Copyright (c) 2000-2011 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+%>
+
+.lfr-upload-container {
+	margin-bottom: 1em;
+	width: 450px;
+}
+
+.lfr-upload-container .upload-target a {
+	float: left;
+	margin-right: 15px;
+}
+
+.lfr-upload-container a.browse-button {
+	background-image: url(<%= themeImagesPath %>/dock/add_content.png);
+	background-repeat: no-repeat;
+}
+
+.lfr-upload-container a.upload-button {
+	background-image: url(<%= themeImagesPath %>/common/top.png);
+	background-repeat: no-repeat;
+}
+
+.lfr-upload-container a.clear-uploads {
+	background-image: url(<%= themeImagesPath %>/portlet/refresh.png);
+	background-repeat: no-repeat;
+}
+
+.lfr-upload-container a.cancel-uploads {
+	background-image: url(<%= themeImagesPath %>/common/close.png);
+	background-repeat: no-repeat;
+	float: right;
+	margin-right: 0;
+}
+
+.lfr-upload-container .upload-file {
+	background: #f0faf0 url(<%= themeImagesPath %>/file_system/small/jpg.png) no-repeat 5px 50%;
+	border-bottom: 1px solid #ccc;
+	display: block;
+	font-weight: bold;
+	margin-bottom: 1px;
+	padding: 5px;
+	padding-left: 25px;
+	position: relative;
+}
+
+.lfr-upload-container .upload-list-info {
+	margin: 5px 0;
+}
+
+.lfr-upload-container .upload-list-info h4 {
+	font-size: 1.3em;
+}
+
+.lfr-upload-container .cancel-button {
+	background-image: url(<%= themeImagesPath %>/common/delete.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	right: 5px;
+}
+
+.lfr-upload-container .upload-complete {
+	background-color: #E8EEF7;
+	background-image: url(<%= themeImagesPath %>/dock/my_place_current.png);
+	font-weight: normal;
+	opacity: 0.6;
+}
+
+.lfr-upload-container .upload-error {
+	background-color: #FDD;
+	background-image: url(<%= themeImagesPath %>/messages/error.png);
+	font-weight: normal;
+	opacity: 0.6;
+}
+
+.lfr-upload-container .upload-error .error-message {
+	position: absolute;
+	right: 5px;
+}
+
+.lfr-upload-container .upload-complete .cancel-button {
+	display: none;
+}
+
+.lfr-upload-container .file-uploading {
+	background-color: #ffc;
+}
+
+.lfr-upload-container .file-uploading .cancel-button {
+	top: 0;
+}
+
+.lfr-upload-container .progress-bar {
+	background: #fff;
+	border: 1px solid #83a8d9;
+	display: none;
+	height: 15px;
+}
+
+.lfr-upload-container .progress {
+	background: #8db2e3;
+	display: block;
+	height: 15px;
+	width: 0;
+}
+
+.lfr-upload-container .file-uploading .progress-bar {
+	display: block;
+}

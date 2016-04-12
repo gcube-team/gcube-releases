@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+			XML Schema for GCUBE
+			Runtime Resource Version 1.0 Last modified:
+			29/07/2011 Contact:
+			http://www.gcube-system.org
+		</xs:documentation>
+	</xs:annotation>
+	<xs:redefine schemaLocation="CommonTypeDefinitions.xsd">
+		<xs:complexType name="ProfileType">
+			<xs:complexContent>
+				<xs:restriction base="ProfileType">
+					<xs:sequence>
+						<xs:element name="Category" type="xs:string" />
+						<xs:element name="Name" type="xs:string" minOccurs="0"/>
+						<xs:element name="Version" type="xs:string" minOccurs="0"/>
+						<xs:element name="Description" type="xs:string" minOccurs="0" />
+						<xs:element name="Platform" type="PlatformDescription" />
+						<xs:element name="RunTime">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="HostedOn" type="xs:string" />
+									<xs:element ref="GHN" minOccurs="0" />
+									<xs:element name="Status" type="xs:string" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="AccessPoint" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Description" type="xs:string" minOccurs="0" />
+									<xs:element ref="Interface" />
+									<xs:element name="AccessData"  minOccurs="0">
+									<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Username" type="xs:string" minOccurs="0" />
+												<xs:element name="Password" type="xs:string" minOccurs="0"/>	
+										</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Properties" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="Property" minOccurs="1"  maxOccurs="unbounded"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>	
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:redefine>
+	
+	<xs:element name="Interface">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Endpoint">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="EntryName" type="xs:string" use="required" />
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GHN">
+		<xs:complexType>
+			<xs:attribute name="UniqueID" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Property">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Name" type="xs:string" />
+				<xs:element name="Value">
+				<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="encrypted" type="xs:boolean" default="false"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

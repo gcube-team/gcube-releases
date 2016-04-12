@@ -1,0 +1,13 @@
+<ReleaseNotes>
+
+	<Changeset component="portlets-widgets.pickitem-widget.1-1-0"
+		date="2015-07-14">
+		<Change>Ported to GWT 2.7.0</Change>
+		<Change>Fix for Bug #320, Users tagging does not work if @ is in the
+			middle of already typed text</Change>
+	</Changeset>
+	<Changeset component="portlets-widgets.pickitem-widget.1-0-0"
+		date="2013-10-21">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

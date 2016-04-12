@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>Bitlet</Description>
+		<Class>Commons</Class>
+		<Name>Bitlet</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>Bitlet</Description>
+				<Name>Bitlet</Name>
+				<Version>1.0.0</Version>
+				<Files><File>Bitlet.jar</File></Files>
+			</Software>	
+		</Packages>
+	</Profile>
+</Resource>

@@ -1,0 +1,47 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-content.2-2-3" date="2010-07-16">
+		<Change>Included declarations for OAI-PMH caches in ehcache configuration file</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-content.2-3-0" date="2010-09-03">
+		<Change>Added methods in DigitalObject class for keeping the name of the collection to which the digital object belongs</Change>
+		<Change>Added session constants</Change>
+		<Change>Added new ehcache declaration</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-content.2-4-0" date="2010-10-21">
+		<Change>Identify OpenSearch indices when retrieving information for the collections</Change>
+		<Change>Added OpenSearch query template information for every collection</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-content.2-5-0" date="2010-11-09">
+		<Change>Added methods to interact with new CM for content retrieval</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-content.2-6-0" date="2010-11-26">
+		<Change>Added collections cache manager - that periodically refreshes collections</Change>
+		<Change>Added methods for interaction with new CM</Change>
+		<Change>Removed caching of content in local disk for new cm</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-content.3-0-0" date="2010-05-06">
+		<Change>Refactored with new CM</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-content.3-1-0" date="2010-09-02">
+		<Change>Provide more information for Collections. Extended api</Change>
+		<Change>Extended DigitalObject and ResultSetConsumer api to satisfy more cases</Change>
+		<Change>Added Java property to settings.properties file</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-content.4-1-0" date="2011-09-26">
+		<Change>Extended API to provide functionality for Data Transformation</Change>
+		<Change>Extended API to provide functionality for OCR</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-content.4-1-1" date="2011-08-29">
+		<Change>Added functionality to handle all types of gcube content elements (alternatives, metadata, parts, etc.)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-content.4-1-3" date="2012-01-17">
+		<Change>Added functionality to handle non cms uris</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-content.4-2-0" date="2013-03-05">
+		<Change>Ehcache version is updated</Change>
+		<Change>Bug fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-content.5-0-0" date="2013-04-19">
+		<Change>Started the integration with the Tree Manager</Change>
+	</Changeset>
+</ReleaseNotes>

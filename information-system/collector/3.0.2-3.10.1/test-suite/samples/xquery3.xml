@@ -1,0 +1,5 @@
+declare namespace is = 'http://gcube-system.org/namespaces/informationsystem/registry';
+declare namespace gc = 'http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider';
+ for  $entry0ValueAuth in  collection("/db/Profiles/GHN")//Document/Data/is:Profile/Resource/Scopes/Scope 
+	let $result :=  $entry0ValueAuth/../.. where  ($result/ghnID/text()/string() eq "ad9cad70-3379-11df-b053-8612d6b1a894")  
+	return $result
