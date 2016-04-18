@@ -10,9 +10,9 @@ Website: https://www.gcube-system.org/
 
 --------
 
-This repository contains the source code of gCube releases. To get the code of a given release, you can simply switch to the corresponding tag in the repository.
+This repository contains the source code of gCube releases. Simply switch to the tag corresponding to the wanted release to download the code. Release notes are available in the [Releases page](https://github.com/gcube-system/gcube-releases/releases).
 
-Release notes are available in the [Releases page](https://github.com/gcube-system/gcube-releases/releases).
+Artefacts generated in the CI process ([Integration Infrastructure](https://wiki.gcube-system.org/gcube/Integration_Infrastructure)) are published on the gCube [Development](http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-snapshots/), [Staging](http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-staging/) and [Releasees](http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-releases/) Maven repositories. Further information to gCube build, testing and release processes can be found in the project [Wiki](https://wiki.gcube-system.org/gcube/Software_Integration_and_Distribution:_Overview)
 
 Binary packages can be downloaded in the gCube website download section: https://www.gcube-system.org/download
 
