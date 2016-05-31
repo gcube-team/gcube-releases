@@ -1,0 +1,374 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+	<!-- POM file generated with GWT webAppCreator -->
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>org.gcube.portlets.user</groupId>
+	<artifactId>trendylyzer-portlet</artifactId>
+	<packaging>war</packaging>
+	<version>1.2.2-3.11.0-126542</version>
+	<name>GWT Maven Archetype</name>
+
+	<properties>
+		<!-- Convenience property to set the GWT version -->
+		<gwtVersion>2.5.1</gwtVersion>
+		<!-- <gwtVersion>2.4.0</gwtVersion> -->
+		<distroDirectory>distro</distroDirectory>
+		<!-- GWT needs at least java 1.6 -->
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+
+		<!-- Don't let your Mac use a crazy non-standard encoding -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- Turn off javadoc for this component -->
+	    <maven.javadoc.skip>true</maven.javadoc.skip>
+	</properties>
+
+
+	<dependencies>
+
+		<!-- This dependency is needed and is need on TOP to use GWT UI BInder 
+			without old Xerces version of gCore complaining -->
+		
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>ic-client</artifactId>
+			<!-- <version>[1.0.0-SNAPSHOT,2.0.0-SNAPSHOT)</version> -->
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-scope</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-scope-maps</artifactId>
+			<version>1.0.4-3.11.0-128425</version>
+			<scope>compile</scope>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.gcube.core</groupId> -->
+<!-- 			<artifactId>gcf</artifactId> -->
+<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>xalan</groupId> -->
+		<!-- <artifactId>xalan</artifactId> -->
+		<!-- <version>2.7.1</version> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-fw-clients</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library-jcr</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.allen-sauer.gwt.log</groupId>
+			<artifactId>gwt-log</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<!-- <version>${gwtVersion}</version> -->
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-servlet</artifactId>
+			<!-- <version>${gwtVersion}</version> -->
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.portlets.widgets</groupId>
+			<artifactId>workspace-light-tree</artifactId>
+			<version>2.14.0-3.11.0-125963</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>aslcore</artifactId>
+
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.gcube.portal</groupId> -->
+		<!-- <artifactId>csvimportwizard</artifactId> -->
+		<!-- <groupId>org.gcube.portlets.user</groupId> -->
+
+		<!-- <artifactId>csv-import-wizard</artifactId> -->
+
+		<!-- <version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version> -->
+		<!-- <scope>provided</scope> -->
+
+		<!-- <scope>system</scope> -->
+
+		<!-- <systemPath>${webappDirectory}/WEB-INF/lib/csv-import-wizard-1.0.0-SNAPSHOT.jar</systemPath> -->
+
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.gcube.portal</groupId> -->
+		<!-- <groupId>org.gcube.portlets.user</groupId> -->
+
+		<!-- <artifactId>csv-import-wizard-workspace</artifactId> -->
+		<!-- <version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version> -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
+
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.gcube.portlets.user</groupId> -->
+		<!-- <artifactId>home-library</artifactId> -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
+
+		<!-- UCOMMENT THIS FOR RELEASE -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.gcube.portlets.user</groupId> -->
+		<!-- <artifactId>home-library-jcr</artifactId> -->
+		<!-- <version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version> -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.gcube.portlets.user</groupId> -->
+		<!-- <artifactId>home-library</artifactId> -->
+		<!-- <version>[4.0.0-SNAPSHOT,5.0.0-SNAPSHOT)</version> -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
+
+
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>accesslogger</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.extjs.gxt</groupId>
+			<artifactId>gxt</artifactId>
+			<version>2.2.5</version>
+
+		</dependency>
+		<dependency>
+			<groupId>com.sencha.gxt</groupId>
+			<artifactId>gxt</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+			<!-- <version>2.0</version> -->
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.gcube.dataanalysis</groupId>
+			<artifactId>ecological-engine</artifactId>
+			<version>1.9.0-3.11.0-126620</version>
+			<!-- <exclusions> -->
+			<!-- <exclusion> -->
+			<!-- <artifactId>rapidminer-custom</artifactId> -->
+			<!-- <groupId>org.gcube.common</groupId> -->
+			<!-- </exclusion> -->
+			<!-- <exclusion> -->
+			<!-- <artifactId>hibernate-spatial-postgis</artifactId> -->
+			<!-- <groupId>org.hibernatespatial</groupId> -->
+			<!-- </exclusion> -->
+			<!-- <exclusion> -->
+			<!-- <artifactId>hibernate-patched</artifactId> -->
+			<!-- <groupId>org.gcube.common</groupId> -->
+			<!-- </exclusion> -->
+			<!-- <exclusion> -->
+			<!-- <artifactId>hibernate-spatial</artifactId> -->
+			<!-- <groupId>org.hibernatespatial</groupId> -->
+			<!-- </exclusion> -->
+			<!-- <exclusion> -->
+			<!-- <artifactId>postgis</artifactId> -->
+			<!-- <groupId>org.postgis</groupId> -->
+			<!-- </exclusion> -->
+			<!-- <exclusion> -->
+			<!-- <artifactId>postgis-driver</artifactId> -->
+			<!-- <groupId>org.postgis</groupId> -->
+			<!-- </exclusion> -->
+			<!-- </exclusions> -->
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.gcube.portal</groupId>
+			<artifactId>custom-portal-handler</artifactId>
+			<!-- <version>[1.1.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version> -->
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.analysis</groupId>
+			<artifactId>statistical-manager-cl</artifactId>
+			<version>2.0.2-3.11.0-128170</version>
+		</dependency>
+
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>8.4-702.jdbc4</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-widget</artifactId>
+			<version>2.3.0-3.11.0-125985</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>gcube-widgets</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+			<!-- <version>2.0</version> -->
+			<!-- <scope>provided</scope> -->
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.7</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<!-- Generate compiled stuff in the folder used for developing mode -->
+		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
+
+		<plugins>
+
+			<!-- GWT Maven Plugin -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>2.5.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
+
+				<configuration>
+					<runTarget>TrendyLyzer_portlet.html</runTarget>
+					<hostedWebapp>${webappDirectory}</hostedWebapp>
+					<i18nMessagesBundle>org.gcube.portlets.user.trendylyzer_portlet.client.Messages</i18nMessagesBundle>
+					<extraJvmArgs>-Xmx1024m</extraJvmArgs>
+				</configuration>
+			</plugin>
+
+			<!-- Copy static web files before executing gwt:run -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>exploded</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<webappDirectory>${webappDirectory}</webappDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<!-- SA Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>profile.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-portal-bom</artifactId>
+				<version>LATEST</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

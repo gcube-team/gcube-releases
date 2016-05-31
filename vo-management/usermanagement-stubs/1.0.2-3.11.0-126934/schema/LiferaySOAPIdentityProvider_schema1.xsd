@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ws.usermanagement.vomanagement.gcube.org/" xmlns:tns="http://ws.usermanagement.vomanagement.gcube.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="GroupRetrievalFault" type="tns:GroupRetrievalFault"/>
+
+  <xs:element name="UserManagementPortalException" type="tns:UserManagementPortalException"/>
+
+  <xs:element name="UserManagementSystemException" type="tns:UserManagementSystemException"/>
+
+  <xs:element name="UserRetrievalFault" type="tns:UserRetrievalFault"/>
+
+  <xs:element name="listGroupsAndRolesByUserCustomField" type="tns:listGroupsAndRolesByUserCustomField"/>
+
+  <xs:element name="listGroupsAndRolesByUserCustomFieldResponse" type="tns:listGroupsAndRolesByUserCustomFieldResponse"/>
+
+  <xs:complexType name="listGroupsAndRolesByUserCustomField">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+      <xs:element name="arg1" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listGroupsAndRolesByUserCustomFieldResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:userModelRoleListCoupleWrapper" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="userModelRoleListCoupleWrapper">
+    <xs:sequence>
+      <xs:element name="roleModels" type="tns:roleModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="userModel" type="tns:userModel" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="roleModel">
+    <xs:sequence>
+      <xs:element name="completeName" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="roleId" type="xs:string" minOccurs="0"/>
+      <xs:element name="roleName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="userModel">
+    <xs:sequence>
+      <xs:element name="customAttrsMap">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="entry" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="key" minOccurs="0" type="xs:string"/>
+                  <xs:element name="value" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="email" type="xs:string" minOccurs="0"/>
+      <xs:element name="firstname" type="xs:string" minOccurs="0"/>
+      <xs:element name="fullname" type="xs:string" minOccurs="0"/>
+      <xs:element name="lastname" type="xs:string" minOccurs="0"/>
+      <xs:element name="screenName" type="xs:string" minOccurs="0"/>
+      <xs:element name="userId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UserManagementPortalException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UserManagementSystemException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GroupRetrievalFault">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UserRetrievalFault">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

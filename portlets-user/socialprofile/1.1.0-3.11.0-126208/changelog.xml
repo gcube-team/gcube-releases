@@ -1,0 +1,29 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlet.user.socialprofile.1-1-0"
+		date="2015-01-07">
+		<Change>Fixed import from LinkedIn problem when headline longer than
+			75 chars</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.socialprofile.1-0-0"
+		date="2014-11-23">
+		<Change>Added LinkedIn profile import feature</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.socialprofile.0-4-0"
+		date="2014-06-09">
+		<Change>Adapted to the new portal gCore Free</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.socialprofile.0-3-0"
+		date="2013-07-18">
+		<Change>Ported to GWT 251</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.socialprofile.0-2-0"
+		date="2013-07-18">
+		<Change>Added editing features for Professional Headline, Photo and
+			Company
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.socialprofile.0-1-0"
+		date="2013-01-13">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,12 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.search-portlet.0-1-0" date="2013-10-16">
+		<Change>First version of the portlet</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.1-0-0" date="2014-01-28">
+		<Change>Added the option to search either the system's native collections or the external ones</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.search-portlet.1-1-0" date="2014-04-02">
+		<Change>Only to options are available (Any or Filtering) so as not to confuse the end users</Change>
+		<Change>Several checks are done to avoid 'wrong' queries to be executed</Change>
+	</Changeset>
+</ReleaseNotes>

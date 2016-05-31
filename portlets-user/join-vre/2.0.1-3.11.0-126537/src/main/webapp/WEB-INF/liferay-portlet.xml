@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 5.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_5_2_0.dtd">
+<liferay-portlet-app>
+	<portlet>
+		<portlet-name>joinvre</portlet-name>
+		<!-- 
+		<configuration-action-class>
+			org.gcube.portlets.user.joinvre.server.portlet.JoinVREConfigurationActionImpl
+		</configuration-action-class>
+		-->
+		<layout-cacheable>false</layout-cacheable>
+		<instanceable>false</instanceable>
+		<ajaxable>false</ajaxable> 
+		<!-- LOCATION CSS HERE -->
+		<header-portlet-css>/JoinVRE.css</header-portlet-css>
+	</portlet>
+</liferay-portlet-app>

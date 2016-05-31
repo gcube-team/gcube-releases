@@ -1,0 +1,60 @@
+@import url('wfroles/old-dialog.css');
+
+
+.roles-ListRow td {
+	border-bottom: 1px solid #E2E2E2;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td.add-role-label {
+	text-align: left;
+}
+
+add-role-input {
+	border: 1px solid red;
+	border-collapse: collapse;
+	margin-right: 0px;
+	margin-left: auto;
+}
+
+td.roles-NavContainer {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+td.roles-ListMenu {
+	background-color: #D0E4F6;
+	padding-bottom: 6px;
+}
+
+td.roles-ListContainer {
+	padding-right: 10px;
+}
+
+.roles-HeaderContainer {
+	padding-right: 10px;
+}
+
+td.roles-ListCheckbox {
+	padding-right: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+td.roles-ListName {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.selectable {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.buttonsPanel {
+	padding: 3px;
+	margin: 3px;
+}

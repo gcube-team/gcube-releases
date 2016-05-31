@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<providers>
+    <default-provider class-name="org.apache.commons.vfs2.provider.url.UrlFileProvider"/>
+
+    <provider class-name="org.gcube.datatransfer.agent.impl.vfs2.SmpFileProvider">
+        <scheme name="smp"/>
+    </provider>
+    <extension-map extension="smp" scheme="smp"/>
+    
+</providers>

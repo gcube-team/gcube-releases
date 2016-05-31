@@ -1,0 +1,37 @@
+function showhelp {
+	echo "Requires couchapp installed and available on classpath."
+	echo "Install all map reduce on db identified from the url provided as input."
+	echo "If the target couchdb instance has security turned on the url must provide also the authentication information:"
+	echo "(e.g http[s]://<username>:<password>@<host>:<port>/<dbname>)"
+	echo -e "\nUsage:  installAll.sh -u <couchdb-database-url> [-h] \n"
+	echo " -u <couchdb-database-url> = The CouchDB URL (e.g http[s]://<username>:<password>@<host>:<port>/<dbname>)"
+	echo -e " -h  = shows this help.\n"
+}
+
+while getopts ":u:h" opt; do
+	case $opt in
+		u) URL=$OPTARG;;
+    	h) showhelp
+			exit 0 ;;
+		\?) echo -e "\nERROR:invalid option: -$OPTARG"; 
+			showhelp; 
+			echo -e "\naborting.\n" 
+			exit 1 >&2 ;;
+  	esac
+done
+
+if [ -z "${URL}" ]; then 
+	echo -e "\nERROR:please specify CouchDB Database URL with -u option" >&2
+	showhelp
+	echo -e "\naborting.\n"
+	exit 1
+fi
+
+echo "Going to install Map Reduce"
+
+#foreach( $designDocument in $designDocuments )
+couchapp push _design/$designDocument "${URL}"
+#end
+
+echo "Map Reduce Installed"
+

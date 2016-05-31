@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre6"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/jaxen-1.1.2.jar"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/slf4j-log4j12-1.6.0.jar"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/slf4j-api-1.6.0.jar"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/hibernate-spatial-postgis-1.0-M2.jar"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/hibernate-spatial-1.0-M2.jar"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/coro/Desktop/WorkFolder/Workspace/StatisticalLibSupportLibraries/lib/jts-1.10.jar"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/postgis-2.0.0SVN.jar"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/postgresql-8.4-702.jdbc4.jar"/>
+	<classpathentry kind="lib" path="/StatisticalLibSupportLibraries/lib/gson-1.7.1.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/EcologicalEngine"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

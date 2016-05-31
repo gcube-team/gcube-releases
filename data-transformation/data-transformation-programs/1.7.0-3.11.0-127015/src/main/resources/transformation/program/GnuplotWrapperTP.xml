@@ -1,0 +1,124 @@
+<Resource>
+	<ID />
+	<Type />
+	<Profile>
+		<SecondaryType>DTSTransformationProgram</SecondaryType>
+		<Name>GnuplotWrapperTP</Name>
+		<Description>Wrapper Program for Gnuplot</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.graphs.GnuplotWrapper</Class>
+					<GlobalProgramParameters />
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0" />
+								<ContentType>
+									<Mimetype />
+									<Parameters />
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="script" value="" isOptional="false" />
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput" />
+							<ContentType>
+								<Mimetype>image/svg+xml</Mimetype>
+								<Parameters />
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="1" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0" />
+								<ContentType>
+									<Mimetype />
+									<Parameters />
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="script" value="" isOptional="false" />
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput" />
+							<ContentType>
+								<Mimetype>image/png</Mimetype>
+								<Parameters />
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="2" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0" />
+								<ContentType>
+									<Mimetype />
+									<Parameters />
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="script" value="" isOptional="false" />
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput" />
+							<ContentType>
+								<Mimetype>image/gif</Mimetype>
+								<Parameters />
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="3" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0" />
+								<ContentType>
+									<Mimetype />
+									<Parameters />
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="script" value="" isOptional="false" />
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput" />
+							<ContentType>
+								<Mimetype>image/jpeg</Mimetype>
+								<Parameters />
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="4" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0" />
+								<ContentType>
+									<Mimetype />
+									<Parameters />
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="script" value="" isOptional="false" />
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput" />
+							<ContentType>
+								<Mimetype>application/postscript</Mimetype>
+								<Parameters />
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>

@@ -1,0 +1,45 @@
+function(doc) {
+	if(doc.usageRecordType == "TaskUsageRecord" || doc.recordType == "TaskUsageRecord"){
+		if((doc.operationCount && isNaN(Number(doc.operationCount))) || (doc._wallDuration && isNaN(Number(doc._wallDuration)))){
+			emit([0, "Invalid Value", doc.id], doc);
+			return;
+		}
+
+		var data = {};
+		data.operationCount = doc.operationCount ? Number(doc.operationCount) : 1;
+		data.duration = doc.duration ? Number(doc._wallDuration) : 1;
+		data.maxInvocationTime = doc.maxInvocationTime ? Number(doc.maxInvocationTime) : data.duration;
+		data.minInvocationTime = doc.minInvocationTime ? Number(doc.minInvocationTime) : data.duration;
+		
+		var propertiesKey = [];
+#foreach( $property in $properties )
+		propertiesKey.push(doc.$property);
+#end
+		
+#if( $slice )
+		var dataKey = getDataKey(Number(doc.creationTime)).slice(0, $slice);
+		var finalKey = dataKey.concat(propertiesKey);
+#else
+		var dataKey = getDataKey(Number(doc.creationTime));
+		var finalKey = propertiesKey.concat(dataKey);
+#end
+
+		finalKey.unshift(doc.scope);
+		
+		emit(finalKey, data);
+	}
+}
+
+
+function getDataKey(timestamp){
+	var date = new Date(timestamp);
+	var key = [];
+	key.push(date.getUTCFullYear());
+	key.push(date.getUTCMonth()+1);
+	key.push(date.getUTCDate());
+	key.push(date.getUTCHours());
+	key.push(date.getUTCMinutes());
+	key.push(date.getUTCSeconds());
+	key.push(date.getUTCMilliseconds());
+	return key;
+}

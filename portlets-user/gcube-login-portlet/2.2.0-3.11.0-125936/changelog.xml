@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlet.user.gcube-login.2-2-0"	date="2015-10-09">
+		<Change>Refactored code due to a bug in custom portal handler dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.gcube-login.2-1-0"	date="2014-06-26">
+		<Change>Ported to Feather Weight Stack Portal</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.gcube-login.2-0-0"
+		date="2013-10-21">
+		<Change>Ported to Feather Weight Stack</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+</ReleaseNotes>

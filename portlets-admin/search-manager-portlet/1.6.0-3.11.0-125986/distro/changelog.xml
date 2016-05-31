@@ -1,0 +1,32 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.search-manager-portlet.1-0-0" date="2011-07-01">
+		<Change>First release of the portlet for the Fields Management</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.search-manager-portlet.1-0-1" date="2011-08-22">
+		<Change>Fixed a problem with the name of the collection.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.search-manager-portlet.1-1-0" date="2011-09-21">
+		<Change>Collections IDs are replaced by their name in the UI. Searchables and presentables lists are updated</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.search-manager-portlet.1-2-0" date="2011-11-04">
+		<Change>Minor changes in the UI</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.search-manager-portlet.1-3-0" date="2012-02-17">
+		<Change>Indicators next to each field to help users quickly check the status of each field</Change>
+		<Change>Minor UI improvements</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.search-manager-portlet.1-4-0" date="2012-09-07">
+		<Change>Updates required due to Resource Registry changes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.search-manager-portlet.1-4-1" date="2013-01-18">
+		<Change>Fallback solution for GWT 2.4 and Chrome 24 problem</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.search-manager-portlet.1-5-0" date="2013-10-23">
+		<Change>Project is mavenized</Change>
+		<Change>GWT is updated</Change>
+		<Change>Added the functionality to reset resource registry information by clicking on a button</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.search-manager-portlet.1-6-0" date="2014-06-04">
+		<Change>Updated the dependencies because of the gcore-free portal</Change>
+	</Changeset>
+</ReleaseNotes>

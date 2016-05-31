@@ -1,0 +1,11 @@
+function(keys, values, rereduce){
+	var total = 0;
+	for(i=0; i<values.length; i++){
+		total = Number(total) + Number(values[i].operationCount);
+	}
+	
+	ret = {};
+	ret.operationCount = Number(total);
+	
+	return ret;
+}

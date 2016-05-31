@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>socialService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.socialprofile.server.SocialServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>socialService</servlet-name>
+		<url-pattern>/socialprofile/socialService</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>mailWisdgetServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsmail.server.WsMailServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>mailWisdgetServlet</servlet-name>
+		<url-pattern>/socialprofile/mailWisdgetServlet</url-pattern>
+	</servlet-mapping>
+<servlet>
+		<servlet-name>workspaceServiceImpl</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.lighttree.server.WorkspaceServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>workspaceServiceImpl</servlet-name>
+		<url-pattern>/socialprofile/WorkspaceLightService</url-pattern>
+	</servlet-mapping>
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>SocialProfile.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

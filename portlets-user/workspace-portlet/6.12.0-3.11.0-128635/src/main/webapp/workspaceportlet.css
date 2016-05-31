@@ -1,0 +1,432 @@
+@import url(http://fonts.googleapis.com/css?family=Architects+Daughter);
+
+@import url(newtheme.css);
+
+@import url(workspace/old-dialog.css);
+
+@import url(workspacebootstrap.min.css);
+
+#SearchAndFilter {
+	background-color: #d0def0;
+	/* Mozilla Firefox */
+/* 	background-image: -moz-linear-gradient(top, #DFEAF8 0%, #d0def0 100%); */
+/* 	/* Webkit (Safari/Chrome 10) */
+	*/
+	/* 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #DFEAF8), */
+/* 		color-stop(1, #d0def0)); */
+/* 	/* Webkit (Chrome 11+) */
+	*/
+	/* 	background-image: -webkit-linear-gradient(top, #DFEAF8 0%, #d0def0 100%); */
+/* 	/* W3C Markup, IE10 Release Preview */
+	*/
+	/* 	background-image: linear-gradient(to bottom, #DFEAF8 0%, #d0def0 100%); */
+/* 	/* IE10 Consumer Preview */
+	*/
+	/* 	background-image: -ms-linear-gradient(top, #DFEAF8 0%, #d0def0 100%); */
+}
+
+#VerticalPanelSearchAndFilter table {
+	background: none repeat scroll 0 0 #D0DEF0;
+}
+
+.nofeed-message {
+	line-height: 40px;
+	font-family: 'Architects Daughter', arial, sans-serif;
+	font-size: 15px;
+	text-align: center;
+	height: 350px;
+	background-color: white;
+}
+
+.x-form-text, textarea.x-form-field {
+	-moz-border-radius: 3px !important;
+	-webkit-border-radius: 3px !important;
+	border-radius: 3px !important;
+}
+
+.wizardButton {
+	height: 22px !important;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #F2F2F2 url(images/space.png) repeat-x scroll left top;
+	border-color: #BBB;
+	color: #464646;
+	font-size: 12px;
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+	cursor: hand;
+	margin-right: 5px;
+	margin-right: 3px;
+	padding: 1px;
+}
+
+.wizardButton[disabled]:hover, .wizardButton[disabled]:active,
+	.wizardButton[disabled] {
+	color: #CCC;
+	border-color: #BBB;
+	cursor: default;
+	opacity: 1.0;
+	background: #F2F2F2 url(images/space.png) repeat-x scroll left top;
+}
+
+.wizardButton:hover {
+	border-color: #222;
+	color: #222;
+	opacity: 0.8;
+}
+
+.wizardButton:active {
+	background: #e3e8f3 url(images/space.png) repeat-x scroll left top;
+}
+
+/** Example rules used by the template application (remove for your app) */
+.sendButton {
+	display: block;
+	font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+	width: 400px;
+}
+
+.dialogVPanel {
+	margin: 5px;
+}
+
+.serverResponseLabelError {
+	color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+	margin: 15px 6px 6px;
+}
+
+.button-link .x-btn-text {
+	cursor: pointer !important;
+	cursor: hand !important;
+	border: none !important;
+	/*Disable the button-style */
+	background-color: transparent !important;
+	background: none !important;
+	background-image: none !important;
+	padding: 0px !important;
+	/*color: #4784C3 !important;*/
+	color: black;
+	font-weight: bold;
+	/* text-decoration: underline !important; */
+}
+
+/* remove images */
+.button-link .x-btn-tl, .button-link .x-btn-tr, .button-link .x-btn-tc,
+	.button-link .x-btn-ml, .button-link .x-btn-mr, .button-link .x-btn-mc,
+	.button-link .x-btn-bl, .button-link .x-btn-br, .button-link .x-btn-bc
+	{
+	background-image: none !important;
+	/*boder: 1px !important;*/
+}
+
+.button-link .x-btn-tl i, .button-link .x-btn-tr i, .button-link .x-btn-tc i,
+	.button-link .x-btn-ml i, .button-link .x-btn-mr i, .button-link .x-btn-mc i,
+	.button-link .x-btn-bl i, .button-link .x-btn-br i, .button-link .x-btn-bc i
+	{
+	font-size: 0px;
+	/*background-color: red !important;*/
+}
+
+.button-link:hover {
+	background-color: #f5f5f5;
+	/*color: #ADD8E6;
+	background: #ffff00;
+	*/
+}
+
+/*
+.button-link .x-btn-text .x-btn-pressed{
+	
+	background-color: blue !important;
+	}
+	
+	*/
+/*
+.button-link .x-btn-tl .x-btn-pressed,
+.button-link .x-btn-tr .x-btn-pressed,
+.button-link .x-btn-tc .x-btn-pressed,
+.button-link .x-btn-ml .x-btn-pressed,
+.button-link .x-btn-mr .x-btn-pressed,
+.button-link .x-btn-mc .x-btn-pressed,
+.button-link .x-btn-bl .x-btn-pressed,
+.button-link .x-btn-br .x-btn-pressed,
+.button-link .x-btn-bc .x-btn-pressed {
+	 background-color: blue !important;
+}
+
+*/
+/*
+.button-link .x-btn-pressed{
+	font-size: 20px;
+}
+*/
+/* remove little dots in FF */
+/*
+.button-link:active {
+   color: #4AECFE !important;
+   text-decoration: underline !important;
+   background-color: #ADSDFS;
+}
+*/
+/*USED IN PATH NAVIGATION*/
+.button-hyperlink .x-btn-text {
+	cursor: pointer !important;
+	cursor: hand !important;
+	border: none !important;
+	/* Disable the button-style */
+	background-color: transparent !important;
+	background: none !important;
+	background-image: none !important;
+	padding: 0px !important;
+	color: #4784C3 !important;
+	font-size: 10px;
+	font-family: Serif, "Times New Roman", Georgia,;
+	/*color: black;*/ /*font-weight: bold;*/
+	text-decoration: underline !important;
+}
+
+/* remove images */
+.button-hyperlink .x-btn-tl, .button-hyperlink.x-btn-tr,
+	.button-hyperlink .x-btn-tc, .button-hyperlink .x-btn-ml,
+	.button-hyperlink .x-btn-mr, .button-hyperlink .x-btn-mc,
+	.button-hyperlink .x-btn-bl, .button-hyperlink .x-btn-br,
+	.button-hyperlink .x-btn-bc {
+	background-image: none !important;
+	background: none !important;
+}
+
+.button-hyperlink .x-btn-small .x-btn-mr, .button-hyperlink .x-btn-small .x-btn-ml,
+	.button-hyperlink .x-btn-small .x-btn-mc, .button-hyperlink .x-btn-small .x-btn-br,
+	.button-hyperlink .x-btn-small .x-btn-bl, .button-hyperlink .x-btn-small .x-btn-bc,
+	.button-hyperlink .x-btn-small .x-btn-tc, .button-hyperlink .x-btn-small .x-btn-tr,
+	.button-hyperlink .x-btn-small .x-btn-tl {
+	background-image: none !important;
+	background: none !important;
+}
+
+/* remove little dots in FF */
+.button-hyperlink .x-btn-tl i, .button-hyperlink .x-btn-tr i,
+	.button-hyperlink .x-btn-tc i, .button-hyperlink .x-btn-ml i,
+	.button-hyperlink .x-btn-mr i, .button-hyperlink .x-btn-mc i,
+	.button-hyperlink .x-btn-bl i, .button-hyperlink .x-btn-br i,
+	.button-hyperlink .x-btn-bc i {
+	font-size: 0px;
+}
+
+.img-link {
+	cursor: pointer !important;
+	cursor: hand !important;
+	/* text-decoration: underline !important; */
+}
+
+/*USED IN ATTACHMENTS*/
+.button-attachments .x-btn-text {
+	cursor: pointer !important;
+	/*  cursor: hand !important;*/
+	border: none !important;
+	/* Disable the button-style */
+	background-color: transparent !important;
+	background: none !important;
+	background-image: none !important;
+	padding: 0px !important;
+	/*  color: #4784C3 !important;*/
+	font-size: 10px;
+	font-family: Serif, "Times New Roman", Georgia,;
+	color: black;
+	/*font-weight: bold;*/
+/*  text-decoration: underline !important;*/
+}
+
+/* remove images */
+.button-attachments .x-btn-tl, .button-attachments.x-btn-tr,
+	.button-attachments .x-btn-tc, .button-attachments .x-btn-ml,
+	.button-attachments .x-btn-mr, .button-attachments .x-btn-mc,
+	.button-attachments .x-btn-bl, .button-attachments .x-btn-br,
+	.button-attachments .x-btn-bc {
+	background-image: none !important;
+	background: none !important;
+}
+
+/* remove little dots in FF */
+.button-attachments .x-btn-tl i, .button-attachments .x-btn-tr i,
+	.button-attachments .x-btn-tc i, .button-attachments .x-btn-ml i,
+	.button-attachments .x-btn-mr i, .button-attachments .x-btn-mc i,
+	.button-attachments .x-btn-bl i, .button-attachments .x-btn-br i,
+	.button-attachments .x-btn-bc i {
+	font-size: 0px;
+	background: none !important;
+}
+
+/* Format for the abstract search result list */
+.row-relevant.x-grid3-row .x-grid3-cell-inner {
+	/*background-color:gray; !important;*/
+	font-weight: bold !important;
+}
+
+.row-relevant.x-grid3-row-selected .x-grid3-cell-inner {
+	/*background-color:#48BF47 !important;*/
+	font-weight: bold !important;
+}
+
+.row-relevant.x-grid3-row-over { /*background-color:#48BF47 !important;
+ background-image:none !important;*/
+	
+}
+
+/* SmartFolder buttons */
+.smartButton {
+	color: #15428B;
+	cursor: pointer;
+	cursor: hand;
+	font-weight: normal;
+	font-size: 13px;
+	background: #FFF;
+	border-bottom: 1px inset #EDE;
+}
+
+.smartButton-selected {
+	background: #A9BFD3 !important;
+	color: whitesmoke;
+	font-weight: 500;
+}
+
+.myToolbar {
+	background-color: transparent !important;
+}
+
+.smartButton {
+	-webkit-transition: background-color .5s ease-in-out;
+	-moz-transition: background-color .5s ease-in-out;
+	-o-transition: background-color .5s ease-in-out;
+	transition: background-color .5s ease-in-out;
+}
+
+.smartButton:active, .smartButton:focus, .smartButton:hover {
+	background: #E2EBF5;
+	font-weight: 500;
+}
+
+.button-hyperlink .x-btn-text {
+	top: -4px;
+	!
+	important;
+}
+
+.myWebDavStyle {
+	font-family: Arial, "Times New Roman", Times;
+	font-size: 12px;
+}
+
+.Breadcrumbs-Personal {
+	font-family: Arial, "Times New Roman", Georgia, Serif;
+	font-size: 12px;
+	list-style: none outside none;
+	margin-bottom: 3px;
+	margin-left: 2px;
+	margin-top: 3px;
+	padding: 5px !important;
+}
+
+.Breadcrumbs-Personal li {
+	display: inline-block;
+}
+
+.Breadcrumbs-Personal .active {
+	color: #999999;
+	text-decoration: none;
+}
+
+.Breadcrumbs-Personal .divider {
+	color: #AABBCC;
+	padding: 0 5px;
+}
+
+.Breadcrumbs-Personal a {
+	color: #226599;
+	text-decoration: none;
+}
+
+.Breadcrumbs-Personal a:hover {
+	text-decoration: underline;
+}
+
+.bSearchIn {
+	cursor: pointer;
+}
+
+#dnd_target_outer {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#dnd_target_inner {
+	width: 50%;
+	height: 50%;
+	top: 25%;
+	margin: 0 auto;
+	position: relative;
+	/* 	background: orange; */
+}
+
+.right-position {
+	/* 	top: 20px; */
+	text-align: right;
+	/* 	margin-top: 10px; */
+/*     color: red; */
+}
+
+.thirty_percent {
+	width: 33%;
+}
+
+.margin-right-10 {
+	margin-right: 10px;
+}
+
+.margin-left-5 {
+	margin-left: 5px;
+}
+
+.alert_ws_features {
+	background: #FFF !important;
+	border: 1px solid #99BBE8 !important;
+	color: #226599 !important;
+	margin-bottom: 5px !important;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	width: 95%;
+	/*     height: 27px !important; */
+}
+
+.alert_ws_features .close {
+	top: 6px !important;
+}
+
+#check_features_donotshowagain {
+	margin-right: 2px;
+	vertical-align: middle;
+}
+
+#text-search {
+	margin-right: 3px;
+	width: 325px !important;
+}
+
+#text-search>input:first-child {
+	height: 18px !important;
+	width: 319px !important;
+	padding: 1px 2px;
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>taxonomyServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.speciesdiscovery.server.TaxonomySearchServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>taxonomyServlet</servlet-name>
+		<url-pattern>/speciesdiscovery/taxonomy</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ResultRowTable</servlet-name>
+		<servlet-class>org.gcube.portlets.user.speciesdiscovery.server.ResultRowTable</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ResultRowTable</servlet-name>
+		<url-pattern>/speciesdiscovery/ResultRowTable</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TaxonomyRowTable</servlet-name>
+		<servlet-class>org.gcube.portlets.user.speciesdiscovery.server.TaxonomyRowTable</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TaxonomyRowTable</servlet-name>
+		<url-pattern>/speciesdiscovery/TaxonomyRowTable</url-pattern>
+	</servlet-mapping>
+
+	<!-- GisViewer Servlets -->
+	<servlet>
+		<servlet-name>GisViewerService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gcubegisviewer.server.GCubeGisViewerServletImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GisViewerService</servlet-name>
+		<url-pattern>/speciesdiscovery/GisViewerService</url-pattern>
+	</servlet-mapping>
+
+	<!-- GISVIEWER MAP GENERATOR -->
+	<servlet>
+		<servlet-name>MapGenerator</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gisviewer.server.MapGenerator</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MapGenerator</servlet-name>
+		<url-pattern>/speciesdiscovery/MapGenerator</url-pattern>
+	</servlet-mapping>
+
+	<!-- Workspace Light Tree servlet -->
+	<servlet>
+		<servlet-name>WorkspaceLightService</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.lighttree.server.WorkspaceServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>WorkspaceLightService</servlet-name>
+		<url-pattern>/speciesdiscovery/WorkspaceLightService</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/speciesdiscovery/junithost/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/org.gcube.portlets.user.speciesdiscovery.SpeciesDiscoveryJUnit/junithost/*</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>SpeciesDiscovery.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

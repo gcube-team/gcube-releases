@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="common-gcube-calls-1.0.1-3.11.0-126334" date="2015-09-24">
+		<Change>MethodInterceptor added</Change>
+		<Change>AuthorizationInterceptor added</Change>
+	</Changeset>
+	<Changeset component="common-gcube-calls-1.0.1-3.11.0-126334" date="2013-10-24">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

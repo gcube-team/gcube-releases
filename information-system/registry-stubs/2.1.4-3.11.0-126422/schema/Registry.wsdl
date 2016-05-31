@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="Registry"
+    targetNamespace="http://gcube-system.org/namespaces/informationsystem/registry"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="http://gcube-system.org/namespaces/informationsystem/registry"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+    xmlns:wsrlw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+    xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+    xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+    xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" location="../gcube/common/core/providers/GCUBEProvider.wsdl"/>
+
+<wsdl:import 
+    namespace=
+    "http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+    location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+
+<wsdl:import 
+    namespace=
+    "http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl"
+    location="../wsrf/lifetime/WS-ResourceLifetime.wsdl" />
+    
+<wsdl:import 
+    namespace=
+    "http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+    location="../wsrf/notification/WS-BaseN.wsdl"/>
+
+<!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+<types>
+<xsd:schema targetNamespace="http://gcube-system.org/namespaces/informationsystem/registry"
+    xmlns:tns="http://gcube-system.org/namespaces/informationsystem/registry"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   
+
+<!--  RESOURCE PROPERTIES -->
+
+	
+		<!-- <xsd:element name="Profile" type="xsd:anyType"/> -->
+		<xsd:element name="Profile" type="xsd:string"/>
+		
+		<xsd:element name="NotificationProfile" type="xsd:string"/>
+		                
+		 <xsd:element name="getProfileString">
+	              	<xsd:complexType/>
+         </xsd:element>
+        
+	     <xsd:element name="getProfileStringResponse" type="xsd:string"/>
+		
+		<xsd:element name="ProfileResourceProperties">
+
+        <xsd:complexType>
+               <xsd:sequence>
+                      <xsd:element ref="tns:Profile" minOccurs="1" maxOccurs="1"/>
+                      <xsd:element ref="tns:NotificationProfile" minOccurs="1" maxOccurs="1"/>
+              </xsd:sequence>
+        </xsd:complexType>
+        
+        </xsd:element>
+
+</xsd:schema>
+</types>
+
+
+<message name="GetProfileAsStringInputMessage">
+        <part name="parameters" element="tns:getProfileString"/>
+</message>
+<message name="GetProfileAsStringOutputMessage">
+        <part name="parameters" element="tns:getProfileStringResponse"/>
+</message>
+
+
+
+<!--============================================================
+
+                       P O R T T Y P E
+                      
+  ============================================================-->
+<portType name="RegistryPortType" 
+    wsdlpp:extends="wsrlw:ImmediateResourceTermination
+	            	wsrlw:ScheduledResourceTermination
+		    		wsntw:NotificationProducer
+		    		provider:GCUBEProvider"
+    wsrp:ResourceProperties="tns:ProfileResourceProperties">
+        
+		<operation name="getProfileAsString">
+                <input message="tns:GetProfileAsStringInputMessage"/>
+                <output message="tns:GetProfileAsStringOutputMessage"/>
+        </operation>
+</portType>
+
+</definitions>

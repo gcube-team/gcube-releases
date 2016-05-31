@@ -1,0 +1,281 @@
+<%
+/**
+ * Copyright (c) 2000-2011 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+%>
+
+<%
+PortletURL publishToLiveURL = renderResponse.createRenderURL();
+
+publishToLiveURL.setWindowState(LiferayWindowState.EXCLUSIVE);
+publishToLiveURL.setPortletMode(PortletMode.VIEW);
+
+publishToLiveURL.setParameter("struts_action", "/communities/export_pages");
+publishToLiveURL.setParameter(Constants.CMD, "publish_to_live");
+publishToLiveURL.setParameter("tabs1", tabs1);
+publishToLiveURL.setParameter("pagesRedirect", portletURL.toString() + "&" + renderResponse.getNamespace() + "tabs4=" + tabs4 + "&" + renderResponse.getNamespace() + "selPlid=" + selPlid);
+publishToLiveURL.setParameter("groupId", String.valueOf(groupId));
+publishToLiveURL.setParameter("selPlid", String.valueOf(selPlid));
+
+PortletURL publishToRemoteURL = PortletURLUtil.clone(publishToLiveURL, renderResponse);
+
+publishToRemoteURL.setParameter(Constants.CMD, "publish_to_remote");
+%>
+
+<liferay-ui:error exception="<%= RemoteExportException.class %>">
+
+	<%
+	RemoteExportException ree = (RemoteExportException)errorException;
+	%>
+
+	<c:if test="<%= ree.getType() == RemoteExportException.BAD_CONNECTION %>">
+		<%= LanguageUtil.format(pageContext, "could-not-connect-to-address-x.-please-verify-that-the-specified-port-is-correct-and-that-the-remote-server-is-configured-to-accept-requests-from-this-server", "<em>" + ree.getURL() + "</em>") %>
+	</c:if>
+	<c:if test="<%= ree.getType() == RemoteExportException.NO_GROUP %>">
+		<%= LanguageUtil.format(pageContext, "remote-group-with-id-x-does-not-exist", ree.getGroupId()) %>
+	</c:if>
+	<c:if test="<%= ree.getType() == RemoteExportException.NO_LAYOUTS %>">
+		<liferay-ui:message key="no-pages-are-selected-for-export" />
+	</c:if>
+</liferay-ui:error>
+
+<c:choose>
+	<c:when test="<%= liveGroup.isStaged() %>">
+		<div class="portlet-msg-alert">
+			<liferay-ui:message key="the-staging-environment-is-activated-changes-have-to-be-published-to-make-them-available-to-end-users" />
+		</div>
+
+		<c:if test="<%= !liveGroup.isStagedRemotely() && (pagesCount > 0) %>">
+			<input type="button" value="<liferay-ui:message key="view-pages" />" onClick="var stagingGroupWindow = window.open('<%= viewPagesURL %>'); void(''); stagingGroupWindow.focus();" />
+		</c:if>
+
+		<c:choose>
+			<c:when test="<%= workflowEnabled %>">
+				<c:if test="<%= (selPlid > 0) && (proposal == null) %>">
+					<portlet:actionURL var="proposalURL">
+						<portlet:param name="struts_action" value="/communities/edit_proposal" />
+						<portlet:param name="tabs1" value="<%= tabs1 %>" />
+						<portlet:param name="<%= Constants.CMD %>" value="<%= Constants.ADD %>" />
+						<portlet:param name="redirect" value="<%= currentURL %>" />
+						<portlet:param name="pagesRedirect" value='<%= portletURL.toString() + "&" + renderResponse.getNamespace() + "tabs4=" + tabs4 + "&" + renderResponse.getNamespace() + "selPlid=" + selPlid %>' />
+						<portlet:param name="groupId" value="<%= String.valueOf(liveGroupId) %>" />
+						<portlet:param name="className" value="<%= Layout.class.getName() %>" />
+						<portlet:param name="classPK" value="<%= String.valueOf(selPlid) %>" />
+					</portlet:actionURL>
+
+					<%
+					JSONArray jsonReviewers = JSONFactoryUtil.createJSONArray();
+
+					Role role = RoleLocalServiceUtil.getRole(company.getCompanyId(), workflowRoleNames[0]);
+
+					LinkedHashMap userParams = new LinkedHashMap();
+
+					if (liveGroup.isOrganization()) {
+						userParams.put("usersOrgs", new Long(liveGroup.getOrganizationId()));
+					}
+					else {
+						userParams.put("usersGroups", new Long(liveGroupId));
+					}
+
+					userParams.put("userGroupRole", new Long[] {new Long(liveGroupId), new Long(role.getRoleId())});
+
+					List<User> reviewers = UserLocalServiceUtil.search(company.getCompanyId(), null, null, userParams, QueryUtil.ALL_POS, QueryUtil.ALL_POS, (OrderByComparator)null);
+
+					if (reviewers.isEmpty()) {
+						if (liveGroup.isCommunity()) {
+							role = RoleLocalServiceUtil.getRole(company.getCompanyId(), RoleConstants.COMMUNITY_OWNER);
+						}
+						else {
+							role = RoleLocalServiceUtil.getRole(company.getCompanyId(), RoleConstants.ORGANIZATION_OWNER);
+						}
+
+						userParams.put("userGroupRole", new Long[] {new Long(liveGroupId), new Long(role.getRoleId())});
+
+						reviewers = UserLocalServiceUtil.search(company.getCompanyId(), null, null, userParams, QueryUtil.ALL_POS, QueryUtil.ALL_POS, (OrderByComparator)null);
+					}
+
+					for (User reviewer : reviewers) {
+						JSONObject jsonReviewer = JSONFactoryUtil.createJSONObject();
+
+						jsonReviewer.put("userId", reviewer.getUserId());
+						jsonReviewer.put("fullName", reviewer.getFullName());
+
+						jsonReviewers.put(jsonReviewer);
+					}
+					%>
+
+					<input type="button" value="<liferay-ui:message key="propose-publication" />" onClick="Liferay.LayoutExporter.proposeLayout({url: '<%= proposalURL.toString().replace('"','\'') %>', namespace: '<portlet:namespace />', reviewers: <%= StringUtil.replace(jsonReviewers.toString(), '"', '\'') %>, title: '<liferay-ui:message key="proposal-description" />'});" />
+				</c:if>
+
+				<c:if test="<%= liveGroup.isStagedRemotely() && GroupPermissionUtil.contains(permissionChecker, liveGroupId, ActionKeys.MANAGE_STAGING) %>">
+					<input type="button" value="<liferay-ui:message key="publish-to-remote-live" />" onClick="Liferay.LayoutExporter.publishToLive({title: '<%= UnicodeLanguageUtil.get(pageContext, "publish-to-remote-live") %>', url: '<%= publishToRemoteURL %>'});" />
+				</c:if>
+			</c:when>
+			<c:otherwise>
+				<c:if test="<%= !liveGroup.isStagedRemotely() %>">
+					<input type="button" value="<liferay-ui:message key="publish-to-live-now" />" onClick="Liferay.LayoutExporter.publishToLive({title: '<%= UnicodeLanguageUtil.get(pageContext, "publish-to-live-now") %>', url: '<%= publishToLiveURL %>'});" />
+
+					<%
+					publishToLiveURL.setParameter("schedule", String.valueOf(true));
+					%>
+
+					<input type="button" value="<liferay-ui:message key="schedule-publication-to-live" />" onClick="Liferay.LayoutExporter.publishToLive({title: '<%= UnicodeLanguageUtil.get(pageContext, "schedule-publication-to-live") %>', url: '<%= publishToLiveURL %>'});" />
+				</c:if>
+
+				<c:if test="<%= liveGroup.isStagedRemotely() %>">
+					<input type="button" value="<liferay-ui:message key="publish-to-remote-live-now" />" onClick="Liferay.LayoutExporter.publishToLive({title: '<%= UnicodeLanguageUtil.get(pageContext, "publish-to-remote-live-now") %>', url: '<%= publishToRemoteURL %>'});" />
+
+					<%
+					publishToRemoteURL.setParameter("schedule", String.valueOf(true));
+					%>
+
+					<input type="button" value="<liferay-ui:message key="schedule-publication-to-remote-live" />" onClick="Liferay.LayoutExporter.publishToLive({title: '<%= UnicodeLanguageUtil.get(pageContext, "schedule-publication-to-remote-live") %>', url: '<%= publishToRemoteURL %>'});" />
+				</c:if>
+			</c:otherwise>
+		</c:choose>
+
+
+		<c:if test="<%= !liveGroup.isStagedRemotely() %>">
+			<portlet:renderURL windowState="<%= LiferayWindowState.EXCLUSIVE.toString() %>" var="importLayoutsURL">
+				<portlet:param name="struts_action" value="/communities/export_pages" />
+				<portlet:param name="<%= Constants.CMD %>" value="copy_from_live" />
+				<portlet:param name="tabs1" value="<%= tabs1 %>" />
+				<portlet:param name="pagesRedirect" value='<%= portletURL.toString() + "&" + renderResponse.getNamespace() + "tabs4=" + tabs4 + "&" + renderResponse.getNamespace() + "selPlid=" + selPlid %>' />
+				<portlet:param name="groupId" value="<%= String.valueOf(liveGroupId) %>" />
+			</portlet:renderURL>
+
+			<input type="button" value="<liferay-ui:message key="copy-from-live" />" onClick="Liferay.LayoutExporter.publishToLive({title: '<%= UnicodeLanguageUtil.get(pageContext, "copy-from-live") %>', url: '<%= importLayoutsURL %>'});" />
+		</c:if>
+
+		<br /><br />
+	</c:when>
+	<c:when test="<%= (portletName.equals(PortletKeys.COMMUNITIES) || portletName.equals(PortletKeys.ENTERPRISE_ADMIN) || portletName.equals(PortletKeys.ENTERPRISE_ADMIN_ORGANIZATIONS) || portletName.equals(PortletKeys.ENTERPRISE_ADMIN_COMMUNITIES) || portletName.equals(PortletKeys.ENTERPRISE_ADMIN_USER_GROUPS) || portletName.equals(PortletKeys.ENTERPRISE_ADMIN_USERS) || portletName.equals(PortletKeys.GROUP_PAGES) || selGroup.isLayoutSetPrototype() || selGroup.isStagingGroup()) && (pagesCount > 0) %>">
+		<input type="button" value="<liferay-ui:message key="view-pages" />" onClick="var liveGroupWindow = window.open('<%= viewPagesURL %>'); void(''); liveGroupWindow.focus();" />
+
+		<br /><br />
+	</c:when>
+</c:choose>
+
+<table class="lfr-table" width="100%">
+<tr>
+	<c:if test="<%= !group.isLayoutPrototype() %>">
+		<td class="lfr-top">
+			<liferay-util:include page="/html/portlet/communities/tree_js.jsp">
+				<liferay-util:param name="treeId" value="layoutsTree" />
+			</liferay-util:include>
+		</td>
+	</c:if>
+	<td class="lfr-top" width="75%">
+
+		<%
+		PortletURL breadcrumbURL = PortletURLUtil.clone(portletURL, renderResponse);
+		%>
+
+		<c:if test="<%= !group.isLayoutPrototype() && (selLayout != null) %>">
+			<liferay-ui:header
+				title="<%= selLayout.getName(locale) %>"
+			/>
+		</c:if>
+
+		<%
+		String tabs3Names = "page";
+
+		if (!group.isLayoutPrototype()) {
+			tabs3Names += ",children";
+		}
+
+		if ((selLayout != null) && (permissionChecker.isOmniadmin() || PropsValues.LOOK_AND_FEEL_MODIFIABLE)) {
+			tabs3Names += ",look-and-feel";
+		}
+
+		if ((selLayout != null) && !PortalUtil.isLayoutParentable(selLayout)) {
+			tabs3Names = StringUtil.replace(tabs3Names, "children,", StringPool.BLANK);
+		}
+
+		if (!StringUtil.contains(tabs3Names, tabs3)) {
+			if (selLayout == null) {
+				tabs3 = "children";
+			}
+			else {
+				tabs3 = "page";
+			}
+		}
+
+		PortletURL tabs3PortletURL = PortletURLUtil.clone(portletURL, renderResponse);
+
+		tabs3PortletURL.setParameter("tabs4", "");
+		%>
+
+		<c:if test="<%= (selLayout != null) %>">
+			<liferay-ui:tabs
+				names="<%= tabs3Names %>"
+				param="tabs3"
+				url='<%= portletURL.toString() + "&" + renderResponse.getNamespace() + "selPlid=" + selPlid %>'
+			/>
+		</c:if>
+
+		<liferay-ui:error exception="<%= LayoutHiddenException.class %>" message="your-first-page-must-not-be-hidden" />
+		<liferay-ui:error exception="<%= LayoutNameException.class %>" message="please-enter-a-valid-name" />
+
+		<liferay-ui:error exception="<%= LayoutParentLayoutIdException.class %>">
+
+			<%
+			LayoutParentLayoutIdException lplide = (LayoutParentLayoutIdException)errorException;
+			%>
+
+			<c:if test="<%= lplide.getType() == LayoutParentLayoutIdException.NOT_PARENTABLE %>">
+				<liferay-ui:message key="a-page-cannot-become-a-child-of-a-page-that-is-not-parentable" />
+			</c:if>
+
+			<c:if test="<%= lplide.getType() == LayoutParentLayoutIdException.SELF_DESCENDANT %>">
+				<liferay-ui:message key="a-page-cannot-become-a-child-of-itself" />
+			</c:if>
+
+			<c:if test="<%= lplide.getType() == LayoutParentLayoutIdException.FIRST_LAYOUT_TYPE %>">
+				<liferay-ui:message key="the-resulting-first-page-must-have-one-of-the-following-types" />: <%= PortalUtil.getFirstPageLayoutTypes(pageContext) %>
+			</c:if>
+
+			<c:if test="<%= lplide.getType() == LayoutParentLayoutIdException.FIRST_LAYOUT_HIDDEN %>">
+				<liferay-ui:message key="the-resulting-first-page-must-not-be-hidden" />
+			</c:if>
+		</liferay-ui:error>
+
+		<liferay-ui:error exception="<%= LayoutTypeException.class %>">
+
+			<%
+			LayoutTypeException lte = (LayoutTypeException)errorException;
+			%>
+
+			<c:if test="<%= lte.getType() == LayoutTypeException.NOT_PARENTABLE %>">
+				<liferay-ui:message key="your-type-must-allow-children-pages" />
+			</c:if>
+
+			<c:if test="<%= lte.getType() == LayoutTypeException.FIRST_LAYOUT %>">
+				<liferay-ui:message key="your-first-page-must-have-one-of-the-following-types" />: <%= PortalUtil.getFirstPageLayoutTypes(pageContext) %>
+			</c:if>
+		</liferay-ui:error>
+
+		<c:choose>
+			<c:when test='<%= tabs3.equals("page") %>'>
+				<liferay-util:include page="/html/portlet/communities/edit_pages_page.jsp" />
+			</c:when>
+			<c:when test='<%= tabs3.equals("children") %>'>
+				<liferay-util:include page="/html/portlet/communities/edit_pages_children.jsp" />
+			</c:when>
+			<c:when test='<%= tabs3.equals("look-and-feel") %>'>
+				<liferay-util:include page="/html/portlet/communities/edit_pages_look_and_feel.jsp" />
+			</c:when>
+		</c:choose>
+	</td>
+</tr>
+</table>

@@ -1,0 +1,49 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.results-portlet.4-4-0"
+		date="2012-05-04">
+		<Change>Adapted to New HomeLibrary</Change>
+		<Change>Minor restyling</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.results-portlet.5-0-0" date="2013-04-19">
+		<Change>CM dependencies are removed</Change>
+		<Change>Compatible with the new ASL content library</Change>
+		<Change>The xml payload of an object is displayed using a generic viewer</Change>
+		<Change>Project is mavenized</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.results-portlet.5-1-0" date="2013-05-29">
+		<Change>Created a content visualizer for the OAI_DC objects</Change>
+		<Change>Created a metadata visualizer for the OAI_DC objects</Change>
+		<Change>Added the view metadata and view content option</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.results-portlet.5-2-0" date="2013-07-05">
+		<Change>Created a content visualizer for the FIGIS objects</Change>
+		<Change>Created a metadata visualizer for the FIGIS objects</Change>
+		<Change>Moved the view_metadata option from the tab menu to the options menu</Change>
+		<Change>Fixed the presentation of the "browse fields" operation results</Change>
+		<Change>Fixed the query that was sent to the from a browse field result</Change>
+		<Change>Fixed the "save query to basket" option</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.results-portlet.5-2-1" date="2013-09-13">
+		<Change>Browsable field name is used in the displayable query</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.results-portlet.5-3-0" date="2013-10-25">
+		<Change>Updates to the save results to basket functionality. A default 'basket' folder is used for saving objects</Change>
+		<Change>For each result object the actual content is also saved if it is of an known type</Change>
+		<Change>Fixed some issued related to the query label</Change>
+		<Change>GWT version is updated</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.results-portlet.5-4-0" date="2014-02-25">
+		<Change>Update in the search method of the ASL</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.results-portlet.5-5-0" date="2014-06-06">
+		<Change>Added the tagcloud visualization pop-up for each query</Change>
+		<Change>Added the navigation bar in the bottom to ease the results navigation</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.results-portlet.5-5-1" date="2014-08-28">
+		<Change>Minor change in the way the exceptions from workspace are handled. Avoid to throw exception if the store of external documents fail</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.results-portlet.5-5-2" date="2014-10-23">
+		<Change>Fixed a problem when the user was trying to save a query to the workspace</Change>
+		<Change>The actual query is now saved to the workspace</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,39 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:w="urn:import:org.gcube.portlets.user.gcubewidgets.client.elements"
+	xmlns:m="urn:import:org.gcube.portlets.user.newsfeed.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel styleName="comment-hidden" ui:field="mainPanel">
+		<table class="">
+			<tr>
+				<td width="30px" align="middle">
+					<g:Image styleName="member-photo" url="" ui:field="avatarImage"
+						width="30px" height="30px" />
+
+				</td>
+
+				<td>
+					<div id="comment-supercontainer">
+						<div id="comment-highlighterContainer">
+							<w:Div styleName="comment-highlighter" ui:field="highlighterDIV"></w:Div>
+						</div>
+						<div id="comment-inputContainer">
+							<m:SuperPosedTextArea styleName="post-comment" ui:field="commentTextArea" />
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right">
+					<g:Button ui:field="cancelButton" text="Cancel" />
+					<g:Button ui:field="submitButton" text="Comment" />
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

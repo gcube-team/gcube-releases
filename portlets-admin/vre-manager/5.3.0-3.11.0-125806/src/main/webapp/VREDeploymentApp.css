@@ -1,0 +1,71 @@
+@import url(d4scienceOrg.css);
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #777777;
+  margin: 40px 0px 70px;
+  text-align: center;
+}
+
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+  width: 400px;
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
+
+.pad-text{
+	padding: 2px;
+	background-color: #FFF !important;
+}
+
+.edit-icon { 
+	background-image:url(images/vre_edit.png) !important; 
+}
+
+.view-icon { 
+	background-image:url(images/vre_view.png) !important; 
+}
+
+.approve-icon { 
+	background-image:url(images/vre_approve.png) !important; 
+}
+.remove-icon { 
+	background-image:url(images/vre_remove.png) !important; 
+}
+.viewreport-icon { 
+	background-image:url(images/vre_viewreport.png) !important; 
+}
+.funcadd { 
+	font-weight: bold; 
+	color: #333; 
+	font-size: 12px; 
+	padding-left: 15px;
+}
+
+.extres { 
+	background-image:url(images/ext_resource.png) !important; 
+	background-repeat: no-repeat;
+	font-weight: bold; 
+	color: #555; 
+	font-size: 12px; 
+	padding-left: 20px;
+	margin-left: 20px;
+}

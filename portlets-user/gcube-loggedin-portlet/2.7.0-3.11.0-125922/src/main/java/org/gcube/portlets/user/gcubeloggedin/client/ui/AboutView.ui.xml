@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+
+	<g:HTMLPanel ui:field="htmlPanel" styleName="envhome-frame">
+		<div id="vre-header-container">
+			<ul id="vre-header">
+				<li>
+					<g:Anchor ui:field="backButton" href="#"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></g:Anchor>
+				</li>
+				<li id="removable-item-li">
+					<g:Anchor ui:field="leaveButton" href="#">Leave Group</g:Anchor>
+				</li>
+			</ul>
+		</div>
+		<g:HTML ui:field="description" styleName="description"></g:HTML>
+		<b:Button ui:field="seeMore" type="LINK" visible="false" >See more</b:Button>
+	</g:HTMLPanel>
+</ui:UiBinder> 

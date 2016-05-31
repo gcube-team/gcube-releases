@@ -1,0 +1,1213 @@
+<ROWSET colID="5b268db0-9d63-11de-8d8f-a04a2d1ca936" idxType="ft_2.0" lang="en">
+<ROW>
+<FIELD lang="en" name="title">Species Distribution Map: Class Gymnolaemata</FIELD>
+<FIELD lang="en" name="number">1</FIELD>
+<FIELD lang="en" name="identifier">ITS-155559</FIELD>
+<FIELD lang="en" name="identifier">ITS-155824</FIELD>
+<FIELD lang="en" name="identifier">ITS-155919</FIELD>
+<FIELD lang="en" name="identifier">ITS-155923</FIELD>
+<FIELD lang="en" name="identifier">ITS-156063</FIELD>
+<FIELD lang="en" name="identifier">ITS-156108</FIELD>
+<FIELD lang="en" name="identifier">ITS-156124</FIELD>
+<FIELD lang="en" name="identifier">ITS-156126</FIELD>
+<FIELD lang="en" name="identifier">ITS-156172</FIELD>
+<FIELD lang="en" name="identifier">ITS-156236</FIELD>
+<FIELD lang="en" name="identifier">ITS-156398</FIELD>
+<FIELD lang="en" name="identifier">ITS-156579</FIELD>
+<FIELD lang="en" name="identifier">ITS-206728</FIELD>
+<FIELD lang="en" name="identifier">SLB-98846</FIELD>
+<FIELD lang="en" name="coverage">Animalia</FIELD>
+<FIELD lang="en" name="coverage">Bryozoa</FIELD>
+<FIELD lang="en" name="coverage">Gymnolaemata</FIELD>
+<FIELD lang="en" name="coverage">Ctenostomata</FIELD>
+<FIELD lang="en" name="coverage">Cheilostomata</FIELD>
+<FIELD lang="en" name="coverage">Vesiculariidae</FIELD>
+<FIELD lang="en" name="coverage">Membraniporidae</FIELD>
+<FIELD lang="en" name="coverage">Calloporidae</FIELD>
+<FIELD lang="en" name="coverage">Bugulidae</FIELD>
+<FIELD lang="en" name="coverage">Bicellariellidae</FIELD>
+<FIELD lang="en" name="coverage">Scrupocellariidae</FIELD>
+<FIELD lang="en" name="coverage">Cribrilinidae</FIELD>
+<FIELD lang="en" name="coverage">Hippothoidae</FIELD>
+<FIELD lang="en" name="coverage">Microporellidae</FIELD>
+<FIELD lang="en" name="coverage">Celleporidae</FIELD>
+<FIELD lang="en" name="coverage">gracilis</FIELD>
+<FIELD lang="en" name="coverage">membranacea</FIELD>
+<FIELD lang="en" name="coverage">lineata</FIELD>
+<FIELD lang="en" name="coverage">dumerilii</FIELD>
+<FIELD lang="en" name="coverage">plumosa</FIELD>
+<FIELD lang="en" name="coverage">ciliata</FIELD>
+<FIELD lang="en" name="coverage">scruposa</FIELD>
+<FIELD lang="en" name="coverage">scrupea</FIELD>
+<FIELD lang="en" name="coverage">nitida</FIELD>
+<FIELD lang="en" name="coverage">brongniartii</FIELD>
+<FIELD lang="en" name="coverage">ciliata</FIELD>
+<FIELD lang="en" name="coverage">pumicosa</FIELD>
+<FIELD lang="en" name="coverage">reptans</FIELD>
+<FIELD lang="en" name="coverage">monotrema</FIELD>
+<FIELD lang="en" name="coverage">Bowerbankia</FIELD>
+<FIELD lang="en" name="coverage">Membranipora</FIELD>
+<FIELD lang="en" name="coverage">Callopora</FIELD>
+<FIELD lang="en" name="coverage">Callopora</FIELD>
+<FIELD lang="en" name="coverage">Bugula</FIELD>
+<FIELD lang="en" name="coverage">Bicellariella</FIELD>
+<FIELD lang="en" name="coverage">Scrupocellaria</FIELD>
+<FIELD lang="en" name="coverage">Scrupocellaria</FIELD>
+<FIELD lang="en" name="coverage">Membraniporella</FIELD>
+<FIELD lang="en" name="coverage">Chorizopora</FIELD>
+<FIELD lang="en" name="coverage">Microporella</FIELD>
+<FIELD lang="en" name="coverage">Cellepora</FIELD>
+<FIELD lang="en" name="coverage">Scrupocellaria</FIELD>
+<FIELD lang="en" name="coverage">Cupuladria</FIELD>
+<FIELD name="ObjectID">cms://5b268db0-9d63-11de-8d8f-a04a2d1ca936/5fa90890-9d63-11de-8d8f-a04a2d1ca936</FIELD></ROW>
+</ROWSET>
+<ROWSET colID="5b268db0-9d63-11de-8d8f-a04a2d1ca936" idxType="ft_2.0" lang="en">
+<ROW>
+<FIELD lang="en" name="title">Species Distribution Map: Class Polyplacophora</FIELD>
+<FIELD lang="en" name="number">2</FIELD>
+<FIELD lang="en" name="identifier">ITS-205343</FIELD>
+<FIELD lang="en" name="identifier">ITS-205344</FIELD>
+<FIELD lang="en" name="identifier">ITS-205353</FIELD>
+<FIELD lang="en" name="identifier">ITS-205354</FIELD>
+<FIELD lang="en" name="identifier">ITS-78821</FIELD>
+<FIELD lang="en" name="identifier">ITS-78835</FIELD>
+<FIELD lang="en" name="identifier">ITS-78851</FIELD>
+<FIELD lang="en" name="identifier">ITS-78899</FIELD>
+<FIELD lang="en" name="identifier">ITS-78901</FIELD>
+<FIELD lang="en" name="identifier">ITS-78958</FIELD>
+<FIELD lang="en" name="identifier">ITS-78979</FIELD>
+<FIELD lang="en" name="identifier">ITS-78988</FIELD>
+<FIELD lang="en" name="identifier">ITS-79013</FIELD>
+<FIELD lang="en" name="identifier">ITS-79014</FIELD>
+<FIELD lang="en" name="identifier">ITS-79015</FIELD>
+<FIELD lang="en" name="identifier">ITS-79023</FIELD>
+<FIELD lang="en" name="identifier">ITS-79032</FIELD>
+<FIELD lang="en" name="identifier">ITS-79039</FIELD>
+<FIELD lang="en" name="identifier">SLB-96429</FIELD>
+<FIELD lang="en" name="coverage">Animalia</FIELD>
+<FIELD lang="en" name="coverage">Mollusca</FIELD>
+<FIELD lang="en" name="coverage">Polyplacophora</FIELD>
+<FIELD lang="en" name="coverage">Lepidopleurida</FIELD>
+<FIELD lang="en" name="coverage">Chitonida</FIELD>
+<FIELD lang="en" name="coverage">Leptochitonidae</FIELD>
+<FIELD lang="en" name="coverage">Callochitonidae</FIELD>
+<FIELD lang="en" name="coverage">Acanthochitonidae</FIELD>
+<FIELD lang="en" name="coverage">Hanleyidae</FIELD>
+<FIELD lang="en" name="coverage">Mopaliidae</FIELD>
+<FIELD lang="en" name="coverage">Chitonidae</FIELD>
+<FIELD lang="en" name="coverage">asellus</FIELD>
+<FIELD lang="en" name="coverage">cancellatus</FIELD>
+<FIELD lang="en" name="coverage">septemvalvis</FIELD>
+<FIELD lang="en" name="coverage">fascicularis</FIELD>
+<FIELD lang="en" name="coverage">alveolus</FIELD>
+<FIELD lang="en" name="coverage">hanleyi</FIELD>
+<FIELD lang="en" name="coverage">albus</FIELD>
+<FIELD lang="en" name="coverage">lineata</FIELD>
+<FIELD lang="en" name="coverage">rubra</FIELD>
+<FIELD lang="en" name="coverage">apiculata</FIELD>
+<FIELD lang="en" name="coverage">tunicata</FIELD>
+<FIELD lang="en" name="coverage">muscosa</FIELD>
+<FIELD lang="en" name="coverage">squamosus</FIELD>
+<FIELD lang="en" name="coverage">marmoratus</FIELD>
+<FIELD lang="en" name="coverage">tuberculatus</FIELD>
+<FIELD lang="en" name="coverage">viridis</FIELD>
+<FIELD lang="en" name="coverage">stelleri</FIELD>
+<FIELD lang="en" name="coverage">pygmaea</FIELD>
+<FIELD lang="en" name="coverage">granifer</FIELD>
+<FIELD lang="en" name="coverage">Leptochiton</FIELD>
+<FIELD lang="en" name="coverage">Leptochiton</FIELD>
+<FIELD lang="en" name="coverage">Callochiton</FIELD>
+<FIELD lang="en" name="coverage">Acanthochitona</FIELD>
+<FIELD lang="en" name="coverage">Leptochiton</FIELD>
+<FIELD lang="en" name="coverage">Hanleya</FIELD>
+<FIELD lang="en" name="coverage">Ischnochiton</FIELD>
+<FIELD lang="en" name="coverage">Tonicella</FIELD>
+<FIELD lang="en" name="coverage">Tonicella</FIELD>
+<FIELD lang="en" name="coverage">Chaetopleura</FIELD>
+<FIELD lang="en" name="coverage">Katharina</FIELD>
+<FIELD lang="en" name="coverage">Mopalia</FIELD>
+<FIELD lang="en" name="coverage">Chiton</FIELD>
+<FIELD lang="en" name="coverage">Chiton</FIELD>
+<FIELD lang="en" name="coverage">Chiton</FIELD>
+<FIELD lang="en" name="coverage">Chiton</FIELD>
+<FIELD lang="en" name="coverage">Cryptochiton</FIELD>
+<FIELD lang="en" name="coverage">Acanthochitona</FIELD>
+<FIELD lang="en" name="coverage">Callistochiton</FIELD>
+<FIELD lang="en" name="coverage">white nothern chiton</FIELD>
+<FIELD lang="en" name="coverage">northern red chiton</FIELD>
+<FIELD lang="en" name="coverage">eastern beaded chiton</FIELD>
+<FIELD lang="en" name="coverage">black katy</FIELD>
+<FIELD lang="en" name="coverage">mossy chiton</FIELD>
+<FIELD lang="en" name="coverage">West Indian green chiton</FIELD>
+<FIELD lang="en" name="coverage">giant Pacific chiton</FIELD>
+<FIELD lang="en" name="coverage">striate glass-hair chiton</FIELD>
+<FIELD name="ObjectID">cms://5b268db0-9d63-11de-8d8f-a04a2d1ca936/6015fb30-9d63-11de-8d8f-a04a2d1ca936</FIELD></ROW>
+</ROWSET>
+<ROWSET colID="5b268db0-9d63-11de-8d8f-a04a2d1ca936" idxType="ft_2.0" lang="en">
+<ROW>
+<FIELD lang="en" name="title">Species Distribution Map: Class Cephalopoda</FIELD>
+<FIELD lang="en" name="number">3</FIELD>
+<FIELD lang="en" name="identifier">ITS-205716</FIELD>
+<FIELD lang="en" name="identifier">ITS-205726</FIELD>
+<FIELD lang="en" name="identifier">ITS-205728</FIELD>
+<FIELD lang="en" name="identifier">ITS-205731</FIELD>
+<FIELD lang="en" name="identifier">ITS-205733</FIELD>
+<FIELD lang="en" name="identifier">ITS-205738</FIELD>
+<FIELD lang="en" name="identifier">ITS-555984</FIELD>
+<FIELD lang="en" name="identifier">ITS-555986</FIELD>
+<FIELD lang="en" name="identifier">ITS-556020</FIELD>
+<FIELD lang="en" name="identifier">ITS-556046</FIELD>
+<FIELD lang="en" name="identifier">ITS-556052</FIELD>
+<FIELD lang="en" name="identifier">ITS-556061</FIELD>
+<FIELD lang="en" name="identifier">ITS-556070</FIELD>
+<FIELD lang="en" name="identifier">ITS-556082</FIELD>
+<FIELD lang="en" name="identifier">ITS-556118</FIELD>
+<FIELD lang="en" name="identifier">ITS-556160</FIELD>
+<FIELD lang="en" name="identifier">ITS-556194</FIELD>
+<FIELD lang="en" name="identifier">ITS-556195</FIELD>
+<FIELD lang="en" name="identifier">ITS-556201</FIELD>
+<FIELD lang="en" name="identifier">ITS-556203</FIELD>
+<FIELD lang="en" name="identifier">ITS-556204</FIELD>
+<FIELD lang="en" name="identifier">ITS-556220</FIELD>
+<FIELD lang="en" name="identifier">ITS-556228</FIELD>
+<FIELD lang="en" name="identifier">ITS-556275</FIELD>
+<FIELD lang="en" name="identifier">ITS-556284</FIELD>
+<FIELD lang="en" name="identifier">ITS-556308</FIELD>
+<FIELD lang="en" name="identifier">ITS-556329</FIELD>
+<FIELD lang="en" name="identifier">ITS-556336</FIELD>
+<FIELD lang="en" name="identifier">ITS-556359</FIELD>
+<FIELD lang="en" name="identifier">ITS-556369</FIELD>
+<FIELD lang="en" name="identifier">ITS-556377</FIELD>
+<FIELD lang="en" name="identifier">ITS-556402</FIELD>
+<FIELD lang="en" name="identifier">ITS-556464</FIELD>
+<FIELD lang="en" name="identifier">ITS-556524</FIELD>
+<FIELD lang="en" name="identifier">ITS-556527</FIELD>
+<FIELD lang="en" name="identifier">ITS-556552</FIELD>
+<FIELD lang="en" name="identifier">ITS-556571</FIELD>
+<FIELD lang="en" name="identifier">ITS-556576</FIELD>
+<FIELD lang="en" name="identifier">ITS-556645</FIELD>
+<FIELD lang="en" name="identifier">ITS-556649</FIELD>
+<FIELD lang="en" name="identifier">ITS-557222</FIELD>
+<FIELD lang="en" name="identifier">ITS-557223</FIELD>
+<FIELD lang="en" name="identifier">ITS-557348</FIELD>
+<FIELD lang="en" name="identifier">ITS-557350</FIELD>
+<FIELD lang="en" name="identifier">ITS-82334</FIELD>
+<FIELD lang="en" name="identifier">ITS-82338</FIELD>
+<FIELD lang="en" name="identifier">ITS-82343</FIELD>
+<FIELD lang="en" name="identifier">ITS-82348</FIELD>
+<FIELD lang="en" name="identifier">ITS-82353</FIELD>
+<FIELD lang="en" name="identifier">ITS-82355</FIELD>
+<FIELD lang="en" name="identifier">ITS-82364</FIELD>
+<FIELD lang="en" name="identifier">ITS-82371</FIELD>
+<FIELD lang="en" name="identifier">ITS-82372</FIELD>
+<FIELD lang="en" name="identifier">ITS-82374</FIELD>
+<FIELD lang="en" name="identifier">ITS-82375</FIELD>
+<FIELD lang="en" name="identifier">ITS-82401</FIELD>
+<FIELD lang="en" name="identifier">ITS-82405</FIELD>
+<FIELD lang="en" name="identifier">ITS-82419</FIELD>
+<FIELD lang="en" name="identifier">ITS-82425</FIELD>
+<FIELD lang="en" name="identifier">ITS-82430</FIELD>
+<FIELD lang="en" name="identifier">ITS-82438</FIELD>
+<FIELD lang="en" name="identifier">ITS-82440</FIELD>
+<FIELD lang="en" name="identifier">ITS-82462</FIELD>
+<FIELD lang="en" name="identifier">ITS-82476</FIELD>
+<FIELD lang="en" name="identifier">ITS-82501</FIELD>
+<FIELD lang="en" name="identifier">ITS-82508</FIELD>
+<FIELD lang="en" name="identifier">ITS-82521</FIELD>
+<FIELD lang="en" name="identifier">ITS-82523</FIELD>
+<FIELD lang="en" name="identifier">ITS-82524</FIELD>
+<FIELD lang="en" name="identifier">ITS-82527</FIELD>
+<FIELD lang="en" name="identifier">ITS-82538</FIELD>
+<FIELD lang="en" name="identifier">ITS-82540</FIELD>
+<FIELD lang="en" name="identifier">ITS-82587</FIELD>
+<FIELD lang="en" name="identifier">ITS-82603</FIELD>
+<FIELD lang="en" name="identifier">ITS-82636</FIELD>
+<FIELD lang="en" name="identifier">ITS-82646</FIELD>
+<FIELD lang="en" name="identifier">ITS-82648</FIELD>
+<FIELD lang="en" name="coverage">Animalia</FIELD>
+<FIELD lang="en" name="coverage">Mollusca</FIELD>
+<FIELD lang="en" name="coverage">Cephalopoda</FIELD>
+<FIELD lang="en" name="coverage">Sepiolida</FIELD>
+<FIELD lang="en" name="coverage">Teuthida</FIELD>
+<FIELD lang="en" name="coverage">Octopoda</FIELD>
+<FIELD lang="en" name="coverage">Sepiida</FIELD>
+<FIELD lang="en" name="coverage">Nautilida</FIELD>
+<FIELD lang="en" name="coverage">Spirulida</FIELD>
+<FIELD lang="en" name="coverage">Vampyromorphida</FIELD>
+<FIELD lang="en" name="coverage">Sepiolidae</FIELD>
+<FIELD lang="en" name="coverage">Ommastrephidae</FIELD>
+<FIELD lang="en" name="coverage">Cranchiidae</FIELD>
+<FIELD lang="en" name="coverage">Alloposidae</FIELD>
+<FIELD lang="en" name="coverage">Onychoteuthidae</FIELD>
+<FIELD lang="en" name="coverage">Sepiidae</FIELD>
+<FIELD lang="en" name="coverage">Idiosepiidae</FIELD>
+<FIELD lang="en" name="coverage">Loliginidae</FIELD>
+<FIELD lang="en" name="coverage">Octopodidae</FIELD>
+<FIELD lang="en" name="coverage">Neoteuthidae</FIELD>
+<FIELD lang="en" name="coverage">Psychroteuthidae</FIELD>
+<FIELD lang="en" name="coverage">Nautilidae</FIELD>
+<FIELD lang="en" name="coverage">Spirulidae</FIELD>
+<FIELD lang="en" name="coverage">Enoploteuthidae</FIELD>
+<FIELD lang="en" name="coverage">Pyroteuthidae</FIELD>
+<FIELD lang="en" name="coverage">Gonatidae</FIELD>
+<FIELD lang="en" name="coverage">Lepidoteuthidae</FIELD>
+<FIELD lang="en" name="coverage">Brachioteuthidae</FIELD>
+<FIELD lang="en" name="coverage">Histioteuthidae</FIELD>
+<FIELD lang="en" name="coverage">Bathyteuthidae</FIELD>
+<FIELD lang="en" name="coverage">Vampyroteuthidae</FIELD>
+<FIELD lang="en" name="coverage">dispar</FIELD>
+<FIELD lang="en" name="coverage">sagittatus</FIELD>
+<FIELD lang="en" name="coverage">eblanae</FIELD>
+<FIELD lang="en" name="coverage">megalops</FIELD>
+<FIELD lang="en" name="coverage">pfefferi</FIELD>
+<FIELD lang="en" name="coverage">atlanticus</FIELD>
+<FIELD lang="en" name="coverage">robsoni</FIELD>
+<FIELD lang="en" name="coverage">filippovae</FIELD>
+<FIELD lang="en" name="coverage">scolopes</FIELD>
+<FIELD lang="en" name="coverage">hedleyi</FIELD>
+<FIELD lang="en" name="coverage">notoides</FIELD>
+<FIELD lang="en" name="coverage">pelagica</FIELD>
+<FIELD lang="en" name="coverage">argentinus</FIELD>
+<FIELD lang="en" name="coverage">pellucida</FIELD>
+<FIELD lang="en" name="coverage">lessoniana</FIELD>
+<FIELD lang="en" name="coverage">mestus</FIELD>
+<FIELD lang="en" name="coverage">cultrata</FIELD>
+<FIELD lang="en" name="coverage">elliptica</FIELD>
+<FIELD lang="en" name="coverage">papuensis</FIELD>
+<FIELD lang="en" name="coverage">pfefferi</FIELD>
+<FIELD lang="en" name="coverage">smithi</FIELD>
+<FIELD lang="en" name="coverage">novaehollandiae</FIELD>
+<FIELD lang="en" name="coverage">rozella</FIELD>
+<FIELD lang="en" name="coverage">moschata</FIELD>
+<FIELD lang="en" name="coverage">oualaniensis</FIELD>
+<FIELD lang="en" name="coverage">gouldi</FIELD>
+<FIELD lang="en" name="coverage">litoralis</FIELD>
+<FIELD lang="en" name="coverage">antarcticus</FIELD>
+<FIELD lang="en" name="coverage">tasmanica</FIELD>
+<FIELD lang="en" name="coverage">australis</FIELD>
+<FIELD lang="en" name="coverage">papillata</FIELD>
+<FIELD lang="en" name="coverage">hieronis</FIELD>
+<FIELD lang="en" name="coverage">birostrata</FIELD>
+<FIELD lang="en" name="coverage">typica</FIELD>
+<FIELD lang="en" name="coverage">pygmaeus</FIELD>
+<FIELD lang="en" name="coverage">glacialis</FIELD>
+<FIELD lang="en" name="coverage">braggi</FIELD>
+<FIELD lang="en" name="coverage">morsei</FIELD>
+<FIELD lang="en" name="coverage">opipara</FIELD>
+<FIELD lang="en" name="coverage">whitleyana</FIELD>
+<FIELD lang="en" name="coverage">pompilius</FIELD>
+<FIELD lang="en" name="coverage">rhoda</FIELD>
+<FIELD lang="en" name="coverage">australis</FIELD>
+<FIELD lang="en" name="coverage">robsoni</FIELD>
+<FIELD lang="en" name="coverage">spirula</FIELD>
+<FIELD lang="en" name="coverage">pacifica</FIELD>
+<FIELD lang="en" name="coverage">macrosoma</FIELD>
+<FIELD lang="en" name="coverage">palpebrosa</FIELD>
+<FIELD lang="en" name="coverage">megaptera</FIELD>
+<FIELD lang="en" name="coverage">leucoptera</FIELD>
+<FIELD lang="en" name="coverage">orbignyana</FIELD>
+<FIELD lang="en" name="coverage">opalescens</FIELD>
+<FIELD lang="en" name="coverage">pealeii</FIELD>
+<FIELD lang="en" name="coverage">forbesii</FIELD>
+<FIELD lang="en" name="coverage">vulgaris</FIELD>
+<FIELD lang="en" name="coverage">felis</FIELD>
+<FIELD lang="en" name="coverage">giardi</FIELD>
+<FIELD lang="en" name="coverage">fabricii</FIELD>
+<FIELD lang="en" name="coverage">onyx</FIELD>
+<FIELD lang="en" name="coverage">magister</FIELD>
+<FIELD lang="en" name="coverage">robusta</FIELD>
+<FIELD lang="en" name="coverage">banksii</FIELD>
+<FIELD lang="en" name="coverage">adami</FIELD>
+<FIELD lang="en" name="coverage">riisei</FIELD>
+<FIELD lang="en" name="coverage">bonnellii</FIELD>
+<FIELD lang="en" name="coverage">abyssicola</FIELD>
+<FIELD lang="en" name="coverage">illecebrosus</FIELD>
+<FIELD lang="en" name="coverage">coindetii</FIELD>
+<FIELD lang="en" name="coverage">oxygonius</FIELD>
+<FIELD lang="en" name="coverage">bartramii</FIELD>
+<FIELD lang="en" name="coverage">gigas</FIELD>
+<FIELD lang="en" name="coverage">antillarum</FIELD>
+<FIELD lang="en" name="coverage">infernalis</FIELD>
+<FIELD lang="en" name="coverage">vulgaris</FIELD>
+<FIELD lang="en" name="coverage">arcticus</FIELD>
+<FIELD lang="en" name="coverage">cirrhosa</FIELD>
+<FIELD lang="en" name="coverage">verrucosa</FIELD>
+<FIELD lang="en" name="coverage">Heteroteuthis</FIELD>
+<FIELD lang="en" name="coverage">Todarodes</FIELD>
+<FIELD lang="en" name="coverage">Todaropsis</FIELD>
+<FIELD lang="en" name="coverage">Teuthowenia</FIELD>
+<FIELD lang="en" name="coverage">Helicocranchia</FIELD>
+<FIELD lang="en" name="coverage">Haliphron</FIELD>
+<FIELD lang="en" name="coverage">Moroteuthis</FIELD>
+<FIELD lang="en" name="coverage">Todarodes</FIELD>
+<FIELD lang="en" name="coverage">Euprymna</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Idiosepius</FIELD>
+<FIELD lang="en" name="coverage">Hyaloteuthis</FIELD>
+<FIELD lang="en" name="coverage">Illex</FIELD>
+<FIELD lang="en" name="coverage">Teuthowenia</FIELD>
+<FIELD lang="en" name="coverage">Sepioteuthis</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Metasepia</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Eledone</FIELD>
+<FIELD lang="en" name="coverage">Sthenoteuthis</FIELD>
+<FIELD lang="en" name="coverage">Nototodarus</FIELD>
+<FIELD lang="en" name="coverage">Ameloctopus</FIELD>
+<FIELD lang="en" name="coverage">Alluroteuthis</FIELD>
+<FIELD lang="en" name="coverage">Euprymna</FIELD>
+<FIELD lang="en" name="coverage">Sepioteuthis</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Sepiola</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Idiosepius</FIELD>
+<FIELD lang="en" name="coverage">Psychroteuthis</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Euprymna</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Nautilus</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Spirula</FIELD>
+<FIELD lang="en" name="coverage">Rossia</FIELD>
+<FIELD lang="en" name="coverage">Rossia</FIELD>
+<FIELD lang="en" name="coverage">Rossia</FIELD>
+<FIELD lang="en" name="coverage">Rossia</FIELD>
+<FIELD lang="en" name="coverage">Stoloteuthis</FIELD>
+<FIELD lang="en" name="coverage">Sepia</FIELD>
+<FIELD lang="en" name="coverage">Loligo</FIELD>
+<FIELD lang="en" name="coverage">Loligo</FIELD>
+<FIELD lang="en" name="coverage">Loligo</FIELD>
+<FIELD lang="en" name="coverage">Loligo</FIELD>
+<FIELD lang="en" name="coverage">Abraliopsis</FIELD>
+<FIELD lang="en" name="coverage">Pterygioteuthis</FIELD>
+<FIELD lang="en" name="coverage">Gonatus</FIELD>
+<FIELD lang="en" name="coverage">Gonatus</FIELD>
+<FIELD lang="en" name="coverage">Berryteuthis</FIELD>
+<FIELD lang="en" name="coverage">Moroteuthis</FIELD>
+<FIELD lang="en" name="coverage">Onychoteuthis</FIELD>
+<FIELD lang="en" name="coverage">Pholidoteuthis</FIELD>
+<FIELD lang="en" name="coverage">Brachioteuthis</FIELD>
+<FIELD lang="en" name="coverage">Histioteuthis</FIELD>
+<FIELD lang="en" name="coverage">Bathyteuthis</FIELD>
+<FIELD lang="en" name="coverage">Illex</FIELD>
+<FIELD lang="en" name="coverage">Illex</FIELD>
+<FIELD lang="en" name="coverage">Illex</FIELD>
+<FIELD lang="en" name="coverage">Ommastrephes</FIELD>
+<FIELD lang="en" name="coverage">Dosidicus</FIELD>
+<FIELD lang="en" name="coverage">Ornithoteuthis</FIELD>
+<FIELD lang="en" name="coverage">Vampyroteuthis</FIELD>
+<FIELD lang="en" name="coverage">Octopus</FIELD>
+<FIELD lang="en" name="coverage">Bathypolypus</FIELD>
+<FIELD lang="en" name="coverage">Eledone</FIELD>
+<FIELD lang="en" name="coverage">Graneledone</FIELD>
+<FIELD lang="en" name="coverage">odd bobtail</FIELD>
+<FIELD lang="en" name="coverage">European flying squid</FIELD>
+<FIELD lang="en" name="coverage">lesser flying squid</FIELD>
+<FIELD lang="en" name="coverage">rugose hooked squid</FIELD>
+<FIELD lang="en" name="coverage">Antarctic flying squid</FIELD>
+<FIELD lang="en" name="coverage">glassy flying squid</FIELD>
+<FIELD lang="en" name="coverage">Argentine shortfin squid</FIELD>
+<FIELD lang="en" name="coverage">bigfin reef squid</FIELD>
+<FIELD lang="en" name="coverage">reaper cuttlefish</FIELD>
+<FIELD lang="en" name="coverage">knifebone cuttlefish</FIELD>
+<FIELD lang="en" name="coverage">ovalbone cuttlefish</FIELD>
+<FIELD lang="en" name="coverage">Papuan cuttlefish</FIELD>
+<FIELD lang="en" name="coverage">flamboyant cuttlefish</FIELD>
+<FIELD lang="en" name="coverage">Smith's cuttlefish</FIELD>
+<FIELD lang="en" name="coverage">rosecone cuttlefish</FIELD>
+<FIELD lang="en" name="coverage">musky octopus</FIELD>
+<FIELD lang="en" name="coverage">purpleback flying squid</FIELD>
+<FIELD lang="en" name="coverage">Gould's flying squid</FIELD>
+<FIELD lang="en" name="coverage">Antarctic neosquid</FIELD>
+<FIELD lang="en" name="coverage">southern reef squid</FIELD>
+<FIELD lang="en" name="coverage">butterfly bobtail</FIELD>
+<FIELD lang="en" name="coverage">glacial squid</FIELD>
+<FIELD lang="en" name="coverage">slender cuttlefish</FIELD>
+<FIELD lang="en" name="coverage">Mimika bobtail squid</FIELD>
+<FIELD lang="en" name="coverage">magnificent cuttlefish</FIELD>
+<FIELD lang="en" name="coverage">Whitley's cuttlefish</FIELD>
+<FIELD lang="en" name="coverage">emperor nautilus</FIELD>
+<FIELD lang="en" name="coverage">southern cuttlefish</FIELD>
+<FIELD lang="en" name="coverage">ram's horn squid</FIELD>
+<FIELD lang="en" name="coverage">North Pacific bobtail</FIELD>
+<FIELD lang="en" name="coverage">stout bobtail</FIELD>
+<FIELD lang="en" name="coverage">warty bobtail squid</FIELD>
+<FIELD lang="en" name="coverage">big-fin bobtail squid</FIELD>
+<FIELD lang="en" name="coverage">butterfly bob tail</FIELD>
+<FIELD lang="en" name="coverage">pink cuttlefish</FIELD>
+<FIELD lang="en" name="coverage">opalescent inshore squid</FIELD>
+<FIELD lang="en" name="coverage">longfin inshore squid</FIELD>
+<FIELD lang="en" name="coverage">veined squid</FIELD>
+<FIELD lang="en" name="coverage">European squid</FIELD>
+<FIELD lang="en" name="coverage">roundear enope squid</FIELD>
+<FIELD lang="en" name="coverage">boreoatlantic gonate squid</FIELD>
+<FIELD lang="en" name="coverage">clawed armhook squid</FIELD>
+<FIELD lang="en" name="coverage">schoolmaster gonate squid</FIELD>
+<FIELD lang="en" name="coverage">robust clubhook squid</FIELD>
+<FIELD lang="en" name="coverage">hooked squid</FIELD>
+<FIELD lang="en" name="coverage">scaled squid</FIELD>
+<FIELD lang="en" name="coverage">common arm squid</FIELD>
+<FIELD lang="en" name="coverage">umbrella squid</FIELD>
+<FIELD lang="en" name="coverage">deepsea squid</FIELD>
+<FIELD lang="en" name="coverage">northern shortfin squid</FIELD>
+<FIELD lang="en" name="coverage">shortfin squid</FIELD>
+<FIELD lang="en" name="coverage">sharptail shortfin squid</FIELD>
+<FIELD lang="en" name="coverage">flying squid</FIELD>
+<FIELD lang="en" name="coverage">jumbo flying squid</FIELD>
+<FIELD lang="en" name="coverage">bird squid</FIELD>
+<FIELD lang="en" name="coverage">vampire squid</FIELD>
+<FIELD lang="en" name="coverage">common octopus</FIELD>
+<FIELD lang="en" name="coverage">North Atlantic octopus</FIELD>
+<FIELD lang="en" name="coverage">horned octopus</FIELD>
+<FIELD name="ObjectID">cms://5b268db0-9d63-11de-8d8f-a04a2d1ca936/6070ec70-9d63-11de-8d8f-a04a2d1ca936</FIELD></ROW>
+</ROWSET>
+<ROWSET colID="5b268db0-9d63-11de-8d8f-a04a2d1ca936" idxType="ft_2.0" lang="en">
+<ROW>
+<FIELD lang="en" name="title">Species Distribution Map: Class Bivalvia</FIELD>
+<FIELD lang="en" name="number">4</FIELD>
+<FIELD lang="en" name="identifier">ITS-205487</FIELD>
+<FIELD lang="en" name="identifier">ITS-205534</FIELD>
+<FIELD lang="en" name="identifier">ITS-205540</FIELD>
+<FIELD lang="en" name="identifier">ITS-205541</FIELD>
+<FIELD lang="en" name="identifier">ITS-205548</FIELD>
+<FIELD lang="en" name="identifier">ITS-205561</FIELD>
+<FIELD lang="en" name="identifier">ITS-205577</FIELD>
+<FIELD lang="en" name="identifier">ITS-205579</FIELD>
+<FIELD lang="en" name="identifier">ITS-205616</FIELD>
+<FIELD lang="en" name="identifier">ITS-205619</FIELD>
+<FIELD lang="en" name="identifier">ITS-205632</FIELD>
+<FIELD lang="en" name="identifier">ITS-205643</FIELD>
+<FIELD lang="en" name="identifier">ITS-205649</FIELD>
+<FIELD lang="en" name="identifier">ITS-205651</FIELD>
+<FIELD lang="en" name="identifier">ITS-205671</FIELD>
+<FIELD lang="en" name="identifier">ITS-567846</FIELD>
+<FIELD lang="en" name="identifier">ITS-568077</FIELD>
+<FIELD lang="en" name="identifier">ITS-568098</FIELD>
+<FIELD lang="en" name="identifier">ITS-655979</FIELD>
+<FIELD lang="en" name="identifier">ITS-655980</FIELD>
+<FIELD lang="en" name="identifier">ITS-79140</FIELD>
+<FIELD lang="en" name="identifier">ITS-79141</FIELD>
+<FIELD lang="en" name="identifier">ITS-79192</FIELD>
+<FIELD lang="en" name="identifier">ITS-79342</FIELD>
+<FIELD lang="en" name="identifier">ITS-79395</FIELD>
+<FIELD lang="en" name="identifier">ITS-79456</FIELD>
+<FIELD lang="en" name="identifier">ITS-79488</FIELD>
+<FIELD lang="en" name="identifier">ITS-79501</FIELD>
+<FIELD lang="en" name="identifier">ITS-79508</FIELD>
+<FIELD lang="en" name="identifier">ITS-79555</FIELD>
+<FIELD lang="en" name="identifier">ITS-79575</FIELD>
+<FIELD lang="en" name="identifier">ITS-79619</FIELD>
+<FIELD lang="en" name="identifier">ITS-79628</FIELD>
+<FIELD lang="en" name="identifier">ITS-79683</FIELD>
+<FIELD lang="en" name="identifier">ITS-79695</FIELD>
+<FIELD lang="en" name="identifier">ITS-79716</FIELD>
+<FIELD lang="en" name="identifier">ITS-79718</FIELD>
+<FIELD lang="en" name="identifier">ITS-79757</FIELD>
+<FIELD lang="en" name="identifier">ITS-79800</FIELD>
+<FIELD lang="en" name="identifier">ITS-79820</FIELD>
+<FIELD lang="en" name="identifier">ITS-79828</FIELD>
+<FIELD lang="en" name="identifier">ITS-79868</FIELD>
+<FIELD lang="en" name="identifier">ITS-79872</FIELD>
+<FIELD lang="en" name="identifier">ITS-79885</FIELD>
+<FIELD lang="en" name="identifier">ITS-80428</FIELD>
+<FIELD lang="en" name="identifier">ITS-80482</FIELD>
+<FIELD lang="en" name="identifier">ITS-80568</FIELD>
+<FIELD lang="en" name="identifier">ITS-80873</FIELD>
+<FIELD lang="en" name="identifier">ITS-80879</FIELD>
+<FIELD lang="en" name="identifier">ITS-80895</FIELD>
+<FIELD lang="en" name="identifier">ITS-80901</FIELD>
+<FIELD lang="en" name="identifier">ITS-80930</FIELD>
+<FIELD lang="en" name="identifier">ITS-80932</FIELD>
+<FIELD lang="en" name="identifier">ITS-80944</FIELD>
+<FIELD lang="en" name="identifier">ITS-80948</FIELD>
+<FIELD lang="en" name="identifier">ITS-80949</FIELD>
+<FIELD lang="en" name="identifier">ITS-81008</FIELD>
+<FIELD lang="en" name="identifier">ITS-81022</FIELD>
+<FIELD lang="en" name="identifier">ITS-81026</FIELD>
+<FIELD lang="en" name="identifier">ITS-81035</FIELD>
+<FIELD lang="en" name="identifier">ITS-81122</FIELD>
+<FIELD lang="en" name="identifier">ITS-81226</FIELD>
+<FIELD lang="en" name="identifier">ITS-81251</FIELD>
+<FIELD lang="en" name="identifier">ITS-81263</FIELD>
+<FIELD lang="en" name="identifier">ITS-81264</FIELD>
+<FIELD lang="en" name="identifier">ITS-81320</FIELD>
+<FIELD lang="en" name="identifier">ITS-81343</FIELD>
+<FIELD lang="en" name="identifier">ITS-81464</FIELD>
+<FIELD lang="en" name="identifier">ITS-81479</FIELD>
+<FIELD lang="en" name="identifier">ITS-81482</FIELD>
+<FIELD lang="en" name="identifier">ITS-81484</FIELD>
+<FIELD lang="en" name="identifier">ITS-81491</FIELD>
+<FIELD lang="en" name="identifier">ITS-81492</FIELD>
+<FIELD lang="en" name="identifier">ITS-81496</FIELD>
+<FIELD lang="en" name="identifier">ITS-81499</FIELD>
+<FIELD lang="en" name="identifier">ITS-81503</FIELD>
+<FIELD lang="en" name="identifier">ITS-81504</FIELD>
+<FIELD lang="en" name="identifier">ITS-81578</FIELD>
+<FIELD lang="en" name="identifier">ITS-81581</FIELD>
+<FIELD lang="en" name="identifier">ITS-81594</FIELD>
+<FIELD lang="en" name="identifier">ITS-81634</FIELD>
+<FIELD lang="en" name="identifier">ITS-81694</FIELD>
+<FIELD lang="en" name="identifier">ITS-81743</FIELD>
+<FIELD lang="en" name="identifier">ITS-81787</FIELD>
+<FIELD lang="en" name="identifier">ITS-81862</FIELD>
+<FIELD lang="en" name="identifier">SLB-101168</FIELD>
+<FIELD lang="en" name="identifier">SLB-102993</FIELD>
+<FIELD lang="en" name="identifier">SLB-103105</FIELD>
+<FIELD lang="en" name="identifier">SLB-103189</FIELD>
+<FIELD lang="en" name="identifier">SLB-103197</FIELD>
+<FIELD lang="en" name="identifier">SLB-103217</FIELD>
+<FIELD lang="en" name="identifier">SLB-103271</FIELD>
+<FIELD lang="en" name="identifier">SLB-103288</FIELD>
+<FIELD lang="en" name="identifier">SLB-103317</FIELD>
+<FIELD lang="en" name="identifier">SLB-103533</FIELD>
+<FIELD lang="en" name="identifier">SLB-108898</FIELD>
+<FIELD lang="en" name="identifier">SLB-111985</FIELD>
+<FIELD lang="en" name="identifier">SLB-112072</FIELD>
+<FIELD lang="en" name="identifier">SLB-112167</FIELD>
+<FIELD lang="en" name="identifier">SLB-112945</FIELD>
+<FIELD lang="en" name="identifier">SLB-114279</FIELD>
+<FIELD lang="en" name="identifier">SLB-114368</FIELD>
+<FIELD lang="en" name="identifier">SLB-88582</FIELD>
+<FIELD lang="en" name="identifier">SLB-88586</FIELD>
+<FIELD lang="en" name="identifier">SLB-88592</FIELD>
+<FIELD lang="en" name="identifier">SLB-88612</FIELD>
+<FIELD lang="en" name="identifier">SLB-88615</FIELD>
+<FIELD lang="en" name="identifier">SLB-88625</FIELD>
+<FIELD lang="en" name="identifier">SLB-88632</FIELD>
+<FIELD lang="en" name="identifier">SLB-88640</FIELD>
+<FIELD lang="en" name="identifier">SLB-88643</FIELD>
+<FIELD lang="en" name="identifier">SLB-88669</FIELD>
+<FIELD lang="en" name="identifier">SLB-88726</FIELD>
+<FIELD lang="en" name="identifier">SLB-88747</FIELD>
+<FIELD lang="en" name="identifier">SLB-88749</FIELD>
+<FIELD lang="en" name="identifier">SLB-88782</FIELD>
+<FIELD lang="en" name="identifier">SLB-88784</FIELD>
+<FIELD lang="en" name="identifier">SLB-88797</FIELD>
+<FIELD lang="en" name="identifier">SLB-88800</FIELD>
+<FIELD lang="en" name="identifier">SLB-88817</FIELD>
+<FIELD lang="en" name="identifier">SLB-88832</FIELD>
+<FIELD lang="en" name="identifier">SLB-88838</FIELD>
+<FIELD lang="en" name="identifier">SLB-88840</FIELD>
+<FIELD lang="en" name="identifier">SLB-88950</FIELD>
+<FIELD lang="en" name="identifier">SLB-88955</FIELD>
+<FIELD lang="en" name="identifier">SLB-88965</FIELD>
+<FIELD lang="en" name="identifier">SLB-88984</FIELD>
+<FIELD lang="en" name="identifier">SLB-88991</FIELD>
+<FIELD lang="en" name="identifier">SLB-89135</FIELD>
+<FIELD lang="en" name="identifier">SLB-89154</FIELD>
+<FIELD lang="en" name="identifier">SLB-89159</FIELD>
+<FIELD lang="en" name="identifier">SLB-89162</FIELD>
+<FIELD lang="en" name="identifier">SLB-89173</FIELD>
+<FIELD lang="en" name="identifier">SLB-89177</FIELD>
+<FIELD lang="en" name="identifier">SLB-89187</FIELD>
+<FIELD lang="en" name="identifier">SLB-89196</FIELD>
+<FIELD lang="en" name="identifier">SLB-89203</FIELD>
+<FIELD lang="en" name="identifier">SLB-89210</FIELD>
+<FIELD lang="en" name="identifier">SLB-89215</FIELD>
+<FIELD lang="en" name="identifier">SLB-89220</FIELD>
+<FIELD lang="en" name="identifier">SLB-89223</FIELD>
+<FIELD lang="en" name="identifier">SLB-89227</FIELD>
+<FIELD lang="en" name="identifier">SLB-89235</FIELD>
+<FIELD lang="en" name="identifier">SLB-89240</FIELD>
+<FIELD lang="en" name="identifier">SLB-89267</FIELD>
+<FIELD lang="en" name="identifier">SLB-89281</FIELD>
+<FIELD lang="en" name="identifier">SLB-89288</FIELD>
+<FIELD lang="en" name="identifier">SLB-89310</FIELD>
+<FIELD lang="en" name="identifier">SLB-89312</FIELD>
+<FIELD lang="en" name="identifier">SLB-89322</FIELD>
+<FIELD lang="en" name="identifier">SLB-89329</FIELD>
+<FIELD lang="en" name="identifier">SLB-89466</FIELD>
+<FIELD lang="en" name="identifier">SLB-89579</FIELD>
+<FIELD lang="en" name="identifier">SLB-89602</FIELD>
+<FIELD lang="en" name="identifier">SLB-89615</FIELD>
+<FIELD lang="en" name="identifier">SLB-89670</FIELD>
+<FIELD lang="en" name="identifier">SLB-89680</FIELD>
+<FIELD lang="en" name="identifier">SLB-89691</FIELD>
+<FIELD lang="en" name="identifier">SLB-92357</FIELD>
+<FIELD lang="en" name="identifier">SLB-92362</FIELD>
+<FIELD lang="en" name="identifier">SLB-92373</FIELD>
+<FIELD lang="en" name="identifier">SLB-92392</FIELD>
+<FIELD lang="en" name="identifier">SLB-92396</FIELD>
+<FIELD lang="en" name="identifier">SLB-92404</FIELD>
+<FIELD lang="en" name="identifier">SLB-92456</FIELD>
+<FIELD lang="en" name="identifier">SLB-92472</FIELD>
+<FIELD lang="en" name="identifier">SLB-92491</FIELD>
+<FIELD lang="en" name="identifier">SLB-92529</FIELD>
+<FIELD lang="en" name="identifier">SLB-92530</FIELD>
+<FIELD lang="en" name="identifier">SLB-92541</FIELD>
+<FIELD lang="en" name="identifier">SLB-92551</FIELD>
+<FIELD lang="en" name="identifier">SLB-92657</FIELD>
+<FIELD lang="en" name="identifier">SLB-92681</FIELD>
+<FIELD lang="en" name="identifier">SLB-92738</FIELD>
+<FIELD lang="en" name="identifier">SLB-92757</FIELD>
+<FIELD lang="en" name="identifier">SLB-98271</FIELD>
+<FIELD lang="en" name="identifier">SLB-98277</FIELD>
+<FIELD lang="en" name="identifier">SLB-98348</FIELD>
+<FIELD lang="en" name="identifier">SLB-98357</FIELD>
+<FIELD lang="en" name="identifier">SLB-98375</FIELD>
+<FIELD lang="en" name="identifier">SLB-98376</FIELD>
+<FIELD lang="en" name="identifier">SLB-98400</FIELD>
+<FIELD lang="en" name="identifier">SLB-98405</FIELD>
+<FIELD lang="en" name="identifier">SLB-98406</FIELD>
+<FIELD lang="en" name="identifier">SLB-98413</FIELD>
+<FIELD lang="en" name="identifier">SLB-98432</FIELD>
+<FIELD lang="en" name="identifier">SLB-98608</FIELD>
+<FIELD lang="en" name="identifier">SLB-98616</FIELD>
+<FIELD lang="en" name="identifier">SLB-98623</FIELD>
+<FIELD lang="en" name="coverage">Animalia</FIELD>
+<FIELD lang="en" name="coverage">Mollusca</FIELD>
+<FIELD lang="en" name="coverage">Bivalvia</FIELD>
+<FIELD lang="en" name="coverage">Nuculoida</FIELD>
+<FIELD lang="en" name="coverage">Arcoida</FIELD>
+<FIELD lang="en" name="coverage">Mytiloida</FIELD>
+<FIELD lang="en" name="coverage">Ostreoida</FIELD>
+<FIELD lang="en" name="coverage">Veneroida</FIELD>
+<FIELD lang="en" name="coverage">Pholadomyoida</FIELD>
+<FIELD lang="en" name="coverage">Pterioida</FIELD>
+<FIELD lang="en" name="coverage">Limoida</FIELD>
+<FIELD lang="en" name="coverage">Myoida</FIELD>
+<FIELD lang="en" name="coverage">Pteriomorpha</FIELD>
+<FIELD lang="en" name="coverage">Nuculidae</FIELD>
+<FIELD lang="en" name="coverage">Arcidae</FIELD>
+<FIELD lang="en" name="coverage">Mytilidae</FIELD>
+<FIELD lang="en" name="coverage">Anomiidae</FIELD>
+<FIELD lang="en" name="coverage">Lucinidae</FIELD>
+<FIELD lang="en" name="coverage">Astartidae</FIELD>
+<FIELD lang="en" name="coverage">Cardiidae</FIELD>
+<FIELD lang="en" name="coverage">Mactridae</FIELD>
+<FIELD lang="en" name="coverage">Veneridae</FIELD>
+<FIELD lang="en" name="coverage">Pandoridae</FIELD>
+<FIELD lang="en" name="coverage">Tellinidae</FIELD>
+<FIELD lang="en" name="coverage">Pteriidae</FIELD>
+<FIELD lang="en" name="coverage">Pinnidae</FIELD>
+<FIELD lang="en" name="coverage">Nuculanidae</FIELD>
+<FIELD lang="en" name="coverage">Cucullaeidae</FIELD>
+<FIELD lang="en" name="coverage">Pectinidae</FIELD>
+<FIELD lang="en" name="coverage">Limidae</FIELD>
+<FIELD lang="en" name="coverage">Ostreidae</FIELD>
+<FIELD lang="en" name="coverage">Fimbriidae</FIELD>
+<FIELD lang="en" name="coverage">Pharidae</FIELD>
+<FIELD lang="en" name="coverage">Donacidae</FIELD>
+<FIELD lang="en" name="coverage">Psammobiidae</FIELD>
+<FIELD lang="en" name="coverage">Semelidae</FIELD>
+<FIELD lang="en" name="coverage">Arcticidae</FIELD>
+<FIELD lang="en" name="coverage">Petricolidae</FIELD>
+<FIELD lang="en" name="coverage">Myidae</FIELD>
+<FIELD lang="en" name="coverage">Corbulidae</FIELD>
+<FIELD lang="en" name="coverage">Pholadidae</FIELD>
+<FIELD lang="en" name="coverage">Teredinidae</FIELD>
+<FIELD lang="en" name="coverage">Carditidae</FIELD>
+<FIELD lang="en" name="coverage">Philobryidae</FIELD>
+<FIELD lang="en" name="coverage">Thyasiridae</FIELD>
+<FIELD lang="en" name="coverage">Lyonsiidae</FIELD>
+<FIELD lang="en" name="coverage">Siliculidae</FIELD>
+<FIELD lang="en" name="coverage">Thraciidae</FIELD>
+<FIELD lang="en" name="coverage">Kelliellidae</FIELD>
+<FIELD lang="en" name="coverage">Noetiidae</FIELD>
+<FIELD lang="en" name="coverage">Corbiculidae</FIELD>
+<FIELD lang="en" name="coverage">Mesodesmatidae</FIELD>
+<FIELD lang="en" name="coverage">Tridacnidae</FIELD>
+<FIELD lang="en" name="coverage">Glycymerididae</FIELD>
+<FIELD lang="en" name="coverage">Isognomonidae</FIELD>
+<FIELD lang="en" name="coverage">Malleidae</FIELD>
+<FIELD lang="en" name="coverage">Spondylidae</FIELD>
+<FIELD lang="en" name="coverage">Placunidae</FIELD>
+<FIELD lang="en" name="coverage">Chamidae</FIELD>
+<FIELD lang="en" name="coverage">Gryphaeidae</FIELD>
+<FIELD lang="en" name="coverage">Solenidae</FIELD>
+<FIELD lang="en" name="coverage">Solecurtidae</FIELD>
+<FIELD lang="en" name="coverage">Laternulidae</FIELD>
+<FIELD lang="en" name="coverage">sulcata</FIELD>
+<FIELD lang="en" name="coverage">tetragona</FIELD>
+<FIELD lang="en" name="coverage">adriaticus</FIELD>
+<FIELD lang="en" name="coverage">petagnae</FIELD>
+<FIELD lang="en" name="coverage">phaseolina</FIELD>
+<FIELD lang="en" name="coverage">patelliformis</FIELD>
+<FIELD lang="en" name="coverage">lucinalis</FIELD>
+<FIELD lang="en" name="coverage">divaricata</FIELD>
+<FIELD lang="en" name="coverage">digitaria</FIELD>
+<FIELD lang="en" name="coverage">glaucum</FIELD>
+<FIELD lang="en" name="coverage">angustior</FIELD>
+<FIELD lang="en" name="coverage">chione</FIELD>
+<FIELD lang="en" name="coverage">gallina</FIELD>
+<FIELD lang="en" name="coverage">fasciata</FIELD>
+<FIELD lang="en" name="coverage">inaequivalvis</FIELD>
+<FIELD lang="en" name="coverage">balthica</FIELD>
+<FIELD lang="en" name="coverage">perna</FIELD>
+<FIELD lang="en" name="coverage">margaritifera</FIELD>
+<FIELD lang="en" name="coverage">bicolor</FIELD>
+<FIELD lang="en" name="coverage">muricata</FIELD>
+<FIELD lang="en" name="coverage">nucleus</FIELD>
+<FIELD lang="en" name="coverage">hanleyi</FIELD>
+<FIELD lang="en" name="coverage">pernula</FIELD>
+<FIELD lang="en" name="coverage">ovalis</FIELD>
+<FIELD lang="en" name="coverage">labiata</FIELD>
+<FIELD lang="en" name="coverage">galloprovincialis</FIELD>
+<FIELD lang="en" name="coverage">costulatus</FIELD>
+<FIELD lang="en" name="coverage">modiolus</FIELD>
+<FIELD lang="en" name="coverage">barbatus</FIELD>
+<FIELD lang="en" name="coverage">demissa</FIELD>
+<FIELD lang="en" name="coverage">bilocularis</FIELD>
+<FIELD lang="en" name="coverage">islandica</FIELD>
+<FIELD lang="en" name="coverage">varia</FIELD>
+<FIELD lang="en" name="coverage">maximus</FIELD>
+<FIELD lang="en" name="coverage">vitreus</FIELD>
+<FIELD lang="en" name="coverage">opercularis</FIELD>
+<FIELD lang="en" name="coverage">magellanicus</FIELD>
+<FIELD lang="en" name="coverage">caurinus</FIELD>
+<FIELD lang="en" name="coverage">ephippium</FIELD>
+<FIELD lang="en" name="coverage">lima</FIELD>
+<FIELD lang="en" name="coverage">subauriculata</FIELD>
+<FIELD lang="en" name="coverage">gigas</FIELD>
+<FIELD lang="en" name="coverage">virginica</FIELD>
+<FIELD lang="en" name="coverage">edulis</FIELD>
+<FIELD lang="en" name="coverage">spinifera</FIELD>
+<FIELD lang="en" name="coverage">bella</FIELD>
+<FIELD lang="en" name="coverage">fimbriata</FIELD>
+<FIELD lang="en" name="coverage">nuttallii</FIELD>
+<FIELD lang="en" name="coverage">groenlandicus</FIELD>
+<FIELD lang="en" name="coverage">crassum</FIELD>
+<FIELD lang="en" name="coverage">edule</FIELD>
+<FIELD lang="en" name="coverage">aculeata</FIELD>
+<FIELD lang="en" name="coverage">tuberculata</FIELD>
+<FIELD lang="en" name="coverage">solidissima</FIELD>
+<FIELD lang="en" name="coverage">elliptica</FIELD>
+<FIELD lang="en" name="coverage">solida</FIELD>
+<FIELD lang="en" name="coverage">patula</FIELD>
+<FIELD lang="en" name="coverage">directus</FIELD>
+<FIELD lang="en" name="coverage">siliqua</FIELD>
+<FIELD lang="en" name="coverage">calcarea</FIELD>
+<FIELD lang="en" name="coverage">tenuis</FIELD>
+<FIELD lang="en" name="coverage">palatam</FIELD>
+<FIELD lang="en" name="coverage">vittatus</FIELD>
+<FIELD lang="en" name="coverage">fervensis</FIELD>
+<FIELD lang="en" name="coverage">depressa</FIELD>
+<FIELD lang="en" name="coverage">plana</FIELD>
+<FIELD lang="en" name="coverage">islandica</FIELD>
+<FIELD lang="en" name="coverage">staminea</FIELD>
+<FIELD lang="en" name="coverage">pullastra</FIELD>
+<FIELD lang="en" name="coverage">rhomboides</FIELD>
+<FIELD lang="en" name="coverage">decussata</FIELD>
+<FIELD lang="en" name="coverage">exoleta</FIELD>
+<FIELD lang="en" name="coverage">lupinus</FIELD>
+<FIELD lang="en" name="coverage">mercenaria</FIELD>
+<FIELD lang="en" name="coverage">campechiensis</FIELD>
+<FIELD lang="en" name="coverage">simpsoni</FIELD>
+<FIELD lang="en" name="coverage">fulminatus</FIELD>
+<FIELD lang="en" name="coverage">maculata</FIELD>
+<FIELD lang="en" name="coverage">eucymata</FIELD>
+<FIELD lang="en" name="coverage">verrucosa</FIELD>
+<FIELD lang="en" name="coverage">undata</FIELD>
+<FIELD lang="en" name="coverage">truncata</FIELD>
+<FIELD lang="en" name="coverage">gibba</FIELD>
+<FIELD lang="en" name="coverage">crispata</FIELD>
+<FIELD lang="en" name="coverage">navalis</FIELD>
+<FIELD lang="en" name="coverage">paucicostata</FIELD>
+<FIELD lang="en" name="coverage">astartoides</FIELD>
+<FIELD lang="en" name="coverage">nitens</FIELD>
+<FIELD lang="en" name="coverage">debilis</FIELD>
+<FIELD lang="en" name="coverage">hodgsoni</FIELD>
+<FIELD lang="en" name="coverage">arcaeformis</FIELD>
+<FIELD lang="en" name="coverage">sublaevis</FIELD>
+<FIELD lang="en" name="coverage">longicaudata</FIELD>
+<FIELD lang="en" name="coverage">meridionalis</FIELD>
+<FIELD lang="en" name="coverage">cardiformis</FIELD>
+<FIELD lang="en" name="coverage">lactea</FIELD>
+<FIELD lang="en" name="coverage">domingensis</FIELD>
+<FIELD lang="en" name="coverage">costellifera</FIELD>
+<FIELD lang="en" name="coverage">annulata</FIELD>
+<FIELD lang="en" name="coverage">toreuma</FIELD>
+<FIELD lang="en" name="coverage">paytenorum</FIELD>
+<FIELD lang="en" name="coverage">fijiensis</FIELD>
+<FIELD lang="en" name="coverage">antiquata</FIELD>
+<FIELD lang="en" name="coverage">granosa</FIELD>
+<FIELD lang="en" name="coverage">ventricosa</FIELD>
+<FIELD lang="en" name="coverage">ferruginea</FIELD>
+<FIELD lang="en" name="coverage">avellana</FIELD>
+<FIELD lang="en" name="coverage">foliata</FIELD>
+<FIELD lang="en" name="coverage">fusca</FIELD>
+<FIELD lang="en" name="coverage">purpuratus</FIELD>
+<FIELD lang="en" name="coverage">ater</FIELD>
+<FIELD lang="en" name="coverage">japonica</FIELD>
+<FIELD lang="en" name="coverage">meretrix</FIELD>
+<FIELD lang="en" name="coverage">gallus</FIELD>
+<FIELD lang="en" name="coverage">australis</FIELD>
+<FIELD lang="en" name="coverage">canaliculus</FIELD>
+<FIELD lang="en" name="coverage">viridis</FIELD>
+<FIELD lang="en" name="coverage">penguin</FIELD>
+<FIELD lang="en" name="coverage">decussatus</FIELD>
+<FIELD lang="en" name="coverage">derasa</FIELD>
+<FIELD lang="en" name="coverage">delicatula</FIELD>
+<FIELD lang="en" name="coverage">semitorta</FIELD>
+<FIELD lang="en" name="coverage">tortuosa</FIELD>
+<FIELD lang="en" name="coverage">reevei</FIELD>
+<FIELD lang="en" name="coverage">pectunculus</FIELD>
+<FIELD lang="en" name="coverage">philippinarum</FIELD>
+<FIELD lang="en" name="coverage">auriculatus</FIELD>
+<FIELD lang="en" name="coverage">pectinata</FIELD>
+<FIELD lang="en" name="coverage">maculata</FIELD>
+<FIELD lang="en" name="coverage">perna</FIELD>
+<FIELD lang="en" name="coverage">albus</FIELD>
+<FIELD lang="en" name="coverage">malleus</FIELD>
+<FIELD lang="en" name="coverage">japonicum</FIELD>
+<FIELD lang="en" name="coverage">pleuronectes</FIELD>
+<FIELD lang="en" name="coverage">radula</FIELD>
+<FIELD lang="en" name="coverage">pallium</FIELD>
+<FIELD lang="en" name="coverage">flabellata</FIELD>
+<FIELD lang="en" name="coverage">vexillum</FIELD>
+<FIELD lang="en" name="coverage">squamata</FIELD>
+<FIELD lang="en" name="coverage">pyxidata</FIELD>
+<FIELD lang="en" name="coverage">singaporina</FIELD>
+<FIELD lang="en" name="coverage">squamosus</FIELD>
+<FIELD lang="en" name="coverage">imperialis</FIELD>
+<FIELD lang="en" name="coverage">placenta</FIELD>
+<FIELD lang="en" name="coverage">folium</FIELD>
+<FIELD lang="en" name="coverage">tigerina</FIELD>
+<FIELD lang="en" name="coverage">punctata</FIELD>
+<FIELD lang="en" name="coverage">lazarus</FIELD>
+<FIELD lang="en" name="coverage">pacifica</FIELD>
+<FIELD lang="en" name="coverage">semiorbiculata</FIELD>
+<FIELD lang="en" name="coverage">fragum</FIELD>
+<FIELD lang="en" name="coverage">hyotis</FIELD>
+<FIELD lang="en" name="coverage">crocea</FIELD>
+<FIELD lang="en" name="coverage">maculata</FIELD>
+<FIELD lang="en" name="coverage">achatina</FIELD>
+<FIELD lang="en" name="coverage">grandis</FIELD>
+<FIELD lang="en" name="coverage">noae</FIELD>
+<FIELD lang="en" name="coverage">trunculus</FIELD>
+<FIELD lang="en" name="coverage">staurella</FIELD>
+<FIELD lang="en" name="coverage">virgata</FIELD>
+<FIELD lang="en" name="coverage">foliacea</FIELD>
+<FIELD lang="en" name="coverage">remies</FIELD>
+<FIELD lang="en" name="coverage">scobinata</FIELD>
+<FIELD lang="en" name="coverage">cuneatus</FIELD>
+<FIELD lang="en" name="coverage">togata</FIELD>
+<FIELD lang="en" name="coverage">squamosa</FIELD>
+<FIELD lang="en" name="coverage">divaricatus</FIELD>
+<FIELD lang="en" name="coverage">scripta</FIELD>
+<FIELD lang="en" name="coverage">dispar</FIELD>
+<FIELD lang="en" name="coverage">tumidum</FIELD>
+<FIELD lang="en" name="coverage">castrensis</FIELD>
+<FIELD lang="en" name="coverage">dorsatus</FIELD>
+<FIELD lang="en" name="coverage">ornata</FIELD>
+<FIELD lang="en" name="coverage">reticulata</FIELD>
+<FIELD lang="en" name="coverage">tiara</FIELD>
+<FIELD lang="en" name="coverage">lacteus</FIELD>
+<FIELD lang="en" name="coverage">semistriatus</FIELD>
+<FIELD lang="en" name="coverage">barbata</FIELD>
+<FIELD lang="en" name="coverage">bimaculata</FIELD>
+<FIELD lang="en" name="coverage">lithophaga</FIELD>
+<FIELD lang="en" name="coverage">nobilis</FIELD>
+<FIELD lang="en" name="coverage">pesfelis</FIELD>
+<FIELD lang="en" name="coverage">glabra</FIELD>
+<FIELD lang="en" name="coverage">gaederopus</FIELD>
+<FIELD lang="en" name="coverage">decussata</FIELD>
+<FIELD lang="en" name="coverage">fragilis</FIELD>
+<FIELD lang="en" name="coverage">colbecki</FIELD>
+<FIELD lang="en" name="coverage">elliptica</FIELD>
+<FIELD lang="en" name="coverage">notorcadensis</FIELD>
+<FIELD lang="en" name="coverage">Nucula</FIELD>
+<FIELD lang="en" name="coverage">Arca</FIELD>
+<FIELD lang="en" name="coverage">Modiolus</FIELD>
+<FIELD lang="en" name="coverage">Gregariella</FIELD>
+<FIELD lang="en" name="coverage">Modiolula</FIELD>
+<FIELD lang="en" name="coverage">Pododesmus</FIELD>
+<FIELD lang="en" name="coverage">Loripes</FIELD>
+<FIELD lang="en" name="coverage">Lucinella</FIELD>
+<FIELD lang="en" name="coverage">Digitaria</FIELD>
+<FIELD lang="en" name="coverage">Cerastoderma</FIELD>
+<FIELD lang="en" name="coverage">Lutraria</FIELD>
+<FIELD lang="en" name="coverage">Callista</FIELD>
+<FIELD lang="en" name="coverage">Chamelea</FIELD>
+<FIELD lang="en" name="coverage">Clausinella</FIELD>
+<FIELD lang="en" name="coverage">Pandora</FIELD>
+<FIELD lang="en" name="coverage">Macoma</FIELD>
+<FIELD lang="en" name="coverage">Perna</FIELD>
+<FIELD lang="en" name="coverage">Pinctada</FIELD>
+<FIELD lang="en" name="coverage">Pinna</FIELD>
+<FIELD lang="en" name="coverage">Pinna</FIELD>
+<FIELD lang="en" name="coverage">Nucula</FIELD>
+<FIELD lang="en" name="coverage">Nucula</FIELD>
+<FIELD lang="en" name="coverage">Nuculana</FIELD>
+<FIELD lang="en" name="coverage">Anadara</FIELD>
+<FIELD lang="en" name="coverage">Cucullaea</FIELD>
+<FIELD lang="en" name="coverage">Mytilus</FIELD>
+<FIELD lang="en" name="coverage">Musculus</FIELD>
+<FIELD lang="en" name="coverage">Modiolus</FIELD>
+<FIELD lang="en" name="coverage">Modiolus</FIELD>
+<FIELD lang="en" name="coverage">Geukensia</FIELD>
+<FIELD lang="en" name="coverage">Septifer</FIELD>
+<FIELD lang="en" name="coverage">Chlamys</FIELD>
+<FIELD lang="en" name="coverage">Chlamys</FIELD>
+<FIELD lang="en" name="coverage">Pecten</FIELD>
+<FIELD lang="en" name="coverage">Delectopecten</FIELD>
+<FIELD lang="en" name="coverage">Aequipecten</FIELD>
+<FIELD lang="en" name="coverage">Placopecten</FIELD>
+<FIELD lang="en" name="coverage">Patinopecten</FIELD>
+<FIELD lang="en" name="coverage">Anomia</FIELD>
+<FIELD lang="en" name="coverage">Lima</FIELD>
+<FIELD lang="en" name="coverage">Limatula</FIELD>
+<FIELD lang="en" name="coverage">Crassostrea</FIELD>
+<FIELD lang="en" name="coverage">Crassostrea</FIELD>
+<FIELD lang="en" name="coverage">Ostrea</FIELD>
+<FIELD lang="en" name="coverage">Myrtea</FIELD>
+<FIELD lang="en" name="coverage">Ctena</FIELD>
+<FIELD lang="en" name="coverage">Fimbria</FIELD>
+<FIELD lang="en" name="coverage">Clinocardium</FIELD>
+<FIELD lang="en" name="coverage">Serripes</FIELD>
+<FIELD lang="en" name="coverage">Laevicardium</FIELD>
+<FIELD lang="en" name="coverage">Cerastoderma</FIELD>
+<FIELD lang="en" name="coverage">Acanthocardia</FIELD>
+<FIELD lang="en" name="coverage">Acanthocardia</FIELD>
+<FIELD lang="en" name="coverage">Spisula</FIELD>
+<FIELD lang="en" name="coverage">Spisula</FIELD>
+<FIELD lang="en" name="coverage">Spisula</FIELD>
+<FIELD lang="en" name="coverage">Siliqua</FIELD>
+<FIELD lang="en" name="coverage">Ensis</FIELD>
+<FIELD lang="en" name="coverage">Ensis</FIELD>
+<FIELD lang="en" name="coverage">Macoma</FIELD>
+<FIELD lang="en" name="coverage">Tellina</FIELD>
+<FIELD lang="en" name="coverage">Quidnipagus</FIELD>
+<FIELD lang="en" name="coverage">Donax</FIELD>
+<FIELD lang="en" name="coverage">Gari</FIELD>
+<FIELD lang="en" name="coverage">Gari</FIELD>
+<FIELD lang="en" name="coverage">Scrobicularia</FIELD>
+<FIELD lang="en" name="coverage">Arctica</FIELD>
+<FIELD lang="en" name="coverage">Protothaca</FIELD>
+<FIELD lang="en" name="coverage">Venerupis</FIELD>
+<FIELD lang="en" name="coverage">Tapes</FIELD>
+<FIELD lang="en" name="coverage">Tapes</FIELD>
+<FIELD lang="en" name="coverage">Dosinia</FIELD>
+<FIELD lang="en" name="coverage">Dosinia</FIELD>
+<FIELD lang="en" name="coverage">Mercenaria</FIELD>
+<FIELD lang="en" name="coverage">Mercenaria</FIELD>
+<FIELD lang="en" name="coverage">Pitar</FIELD>
+<FIELD lang="en" name="coverage">Pitar</FIELD>
+<FIELD lang="en" name="coverage">Macrocallista</FIELD>
+<FIELD lang="en" name="coverage">Callista</FIELD>
+<FIELD lang="en" name="coverage">Venus</FIELD>
+<FIELD lang="en" name="coverage">Mysia</FIELD>
+<FIELD lang="en" name="coverage">Mya</FIELD>
+<FIELD lang="en" name="coverage">Corbula</FIELD>
+<FIELD lang="en" name="coverage">Zirfaea</FIELD>
+<FIELD lang="en" name="coverage">Teredo</FIELD>
+<FIELD lang="en" name="coverage">Acanthocardia</FIELD>
+<FIELD lang="en" name="coverage">Cyclocardia</FIELD>
+<FIELD lang="en" name="coverage">Adacnarca</FIELD>
+<FIELD lang="en" name="coverage">Genaxinus</FIELD>
+<FIELD lang="en" name="coverage">Limatula</FIELD>
+<FIELD lang="en" name="coverage">Lyonsia</FIELD>
+<FIELD lang="en" name="coverage">Philobrya</FIELD>
+<FIELD lang="en" name="coverage">Propeleda</FIELD>
+<FIELD lang="en" name="coverage">Thracia</FIELD>
+<FIELD lang="en" name="coverage">Pseudokellya</FIELD>
+<FIELD lang="en" name="coverage">Striarca</FIELD>
+<FIELD lang="en" name="coverage">Acar</FIELD>
+<FIELD lang="en" name="coverage">Timoclea</FIELD>
+<FIELD lang="en" name="coverage">Ctenoides</FIELD>
+<FIELD lang="en" name="coverage">Globivenus</FIELD>
+<FIELD lang="en" name="coverage">Codakia</FIELD>
+<FIELD lang="en" name="coverage">Wallucina</FIELD>
+<FIELD lang="en" name="coverage">Anadara</FIELD>
+<FIELD lang="en" name="coverage">Anadara</FIELD>
+<FIELD lang="en" name="coverage">Arca</FIELD>
+<FIELD lang="en" name="coverage">Anadara</FIELD>
+<FIELD lang="en" name="coverage">Arca</FIELD>
+<FIELD lang="en" name="coverage">Barbatia</FIELD>
+<FIELD lang="en" name="coverage">Barbatia</FIELD>
+<FIELD lang="en" name="coverage">Argopecten</FIELD>
+<FIELD lang="en" name="coverage">Aulacomya</FIELD>
+<FIELD lang="en" name="coverage">Corbicula</FIELD>
+<FIELD lang="en" name="coverage">Meretrix</FIELD>
+<FIELD lang="en" name="coverage">Paphia</FIELD>
+<FIELD lang="en" name="coverage">Paphies</FIELD>
+<FIELD lang="en" name="coverage">Perna</FIELD>
+<FIELD lang="en" name="coverage">Perna</FIELD>
+<FIELD lang="en" name="coverage">Pteria</FIELD>
+<FIELD lang="en" name="coverage">Ruditapes</FIELD>
+<FIELD lang="en" name="coverage">Tridacna</FIELD>
+<FIELD lang="en" name="coverage">Chlamys</FIELD>
+<FIELD lang="en" name="coverage">Trisidos</FIELD>
+<FIELD lang="en" name="coverage">Trisidos</FIELD>
+<FIELD lang="en" name="coverage">Glycymeris</FIELD>
+<FIELD lang="en" name="coverage">Tucetona</FIELD>
+<FIELD lang="en" name="coverage">Modiolus</FIELD>
+<FIELD lang="en" name="coverage">Modiolus</FIELD>
+<FIELD lang="en" name="coverage">Atrina</FIELD>
+<FIELD lang="en" name="coverage">Pinctada</FIELD>
+<FIELD lang="en" name="coverage">Isognomon</FIELD>
+<FIELD lang="en" name="coverage">Malleus</FIELD>
+<FIELD lang="en" name="coverage">Malleus</FIELD>
+<FIELD lang="en" name="coverage">Amusium</FIELD>
+<FIELD lang="en" name="coverage">Amusium</FIELD>
+<FIELD lang="en" name="coverage">Decatopecten</FIELD>
+<FIELD lang="en" name="coverage">Gloripallium</FIELD>
+<FIELD lang="en" name="coverage">Annachlamys</FIELD>
+<FIELD lang="en" name="coverage">Bractechlamys</FIELD>
+<FIELD lang="en" name="coverage">Chlamys</FIELD>
+<FIELD lang="en" name="coverage">Minnivola</FIELD>
+<FIELD lang="en" name="coverage">Volachlamys</FIELD>
+<FIELD lang="en" name="coverage">Spondylus</FIELD>
+<FIELD lang="en" name="coverage">Spondylus</FIELD>
+<FIELD lang="en" name="coverage">Placuna</FIELD>
+<FIELD lang="en" name="coverage">Dendostrea</FIELD>
+<FIELD lang="en" name="coverage">Codakia</FIELD>
+<FIELD lang="en" name="coverage">Codakia</FIELD>
+<FIELD lang="en" name="coverage">Chama</FIELD>
+<FIELD lang="en" name="coverage">Chama</FIELD>
+<FIELD lang="en" name="coverage">Beguina</FIELD>
+<FIELD lang="en" name="coverage">Fragum</FIELD>
+<FIELD lang="en" name="coverage">Hyotissa</FIELD>
+<FIELD lang="en" name="coverage">Tridacna</FIELD>
+<FIELD lang="en" name="coverage">Mactra</FIELD>
+<FIELD lang="en" name="coverage">Mactra</FIELD>
+<FIELD lang="en" name="coverage">Solen</FIELD>
+<FIELD lang="en" name="coverage">Arca</FIELD>
+<FIELD lang="en" name="coverage">Donax</FIELD>
+<FIELD lang="en" name="coverage">Tellina</FIELD>
+<FIELD lang="en" name="coverage">Tellina</FIELD>
+<FIELD lang="en" name="coverage">Tellina</FIELD>
+<FIELD lang="en" name="coverage">Tellina</FIELD>
+<FIELD lang="en" name="coverage">Tellina</FIELD>
+<FIELD lang="en" name="coverage">Donax</FIELD>
+<FIELD lang="en" name="coverage">Gari</FIELD>
+<FIELD lang="en" name="coverage">Gari</FIELD>
+<FIELD lang="en" name="coverage">Solecurtus</FIELD>
+<FIELD lang="en" name="coverage">Circe</FIELD>
+<FIELD lang="en" name="coverage">Gafrarium</FIELD>
+<FIELD lang="en" name="coverage">Gafrarium</FIELD>
+<FIELD lang="en" name="coverage">Lioconcha</FIELD>
+<FIELD lang="en" name="coverage">Tapes</FIELD>
+<FIELD lang="en" name="coverage">Lioconcha</FIELD>
+<FIELD lang="en" name="coverage">Periglypta</FIELD>
+<FIELD lang="en" name="coverage">Placamen</FIELD>
+<FIELD lang="en" name="coverage">Loripes</FIELD>
+<FIELD lang="en" name="coverage">Donax</FIELD>
+<FIELD lang="en" name="coverage">Barbatia</FIELD>
+<FIELD lang="en" name="coverage">Glycymeris</FIELD>
+<FIELD lang="en" name="coverage">Lithophaga</FIELD>
+<FIELD lang="en" name="coverage">Pinna</FIELD>
+<FIELD lang="en" name="coverage">Chlamys</FIELD>
+<FIELD lang="en" name="coverage">Chlamys</FIELD>
+<FIELD lang="en" name="coverage">Spondylus</FIELD>
+<FIELD lang="en" name="coverage">Ctena</FIELD>
+<FIELD lang="en" name="coverage">Anodontia</FIELD>
+<FIELD lang="en" name="coverage">Adamussium</FIELD>
+<FIELD lang="en" name="coverage">Laternula</FIELD>
+<FIELD lang="en" name="coverage">Lissarca</FIELD>
+<FIELD lang="en" name="coverage">olive green cockle</FIELD>
+<FIELD lang="en" name="coverage">Baltic macoma</FIELD>
+<FIELD lang="en" name="coverage">South American rock mussel</FIELD>
+<FIELD lang="en" name="coverage">Pacific pearl-oyster</FIELD>
+<FIELD lang="en" name="coverage">bicolor pen shell</FIELD>
+<FIELD lang="en" name="coverage">prickly pen shell</FIELD>
+<FIELD lang="en" name="coverage">northern nutclam</FIELD>
+<FIELD lang="en" name="coverage">blood ark</FIELD>
+<FIELD lang="en" name="coverage">hooked ark</FIELD>
+<FIELD lang="en" name="coverage">Bay mussel</FIELD>
+<FIELD lang="en" name="coverage">northern horsemussel</FIELD>
+<FIELD lang="en" name="coverage">ribbed mussel</FIELD>
+<FIELD lang="en" name="coverage">box mussel</FIELD>
+<FIELD lang="en" name="coverage">Iceland scallop</FIELD>
+<FIELD lang="en" name="coverage">great Atlantic scallop</FIELD>
+<FIELD lang="en" name="coverage">queen scallop</FIELD>
+<FIELD lang="en" name="coverage">deep sea scallop</FIELD>
+<FIELD lang="en" name="coverage">giant Pacific sea scallop</FIELD>
+<FIELD lang="en" name="coverage">spiny fileclam</FIELD>
+<FIELD lang="en" name="coverage">giant cupped oyster</FIELD>
+<FIELD lang="en" name="coverage">American cupped oyster</FIELD>
+<FIELD lang="en" name="coverage">divergent lucine</FIELD>
+<FIELD lang="en" name="coverage">common basket lucina</FIELD>
+<FIELD lang="en" name="coverage">Greenland smoothcockle</FIELD>
+<FIELD lang="en" name="coverage">smooth cockle</FIELD>
+<FIELD lang="en" name="coverage">common edible cockle</FIELD>
+<FIELD lang="en" name="coverage">Moroccan cockles</FIELD>
+<FIELD lang="en" name="coverage">Atlantic surfclam</FIELD>
+<FIELD lang="en" name="coverage">American jack knife clam</FIELD>
+<FIELD lang="en" name="coverage">chalky macoma</FIELD>
+<FIELD lang="en" name="coverage">palate tellin</FIELD>
+<FIELD lang="en" name="coverage">ocean quahog</FIELD>
+<FIELD lang="en" name="coverage">decussate venus</FIELD>
+<FIELD lang="en" name="coverage">northern quahog</FIELD>
+<FIELD lang="en" name="coverage">southern hardshell clam</FIELD>
+<FIELD lang="en" name="coverage">Calico clam</FIELD>
+<FIELD lang="en" name="coverage">warty venus</FIELD>
+<FIELD lang="en" name="coverage">truncate softshell</FIELD>
+<FIELD lang="en" name="coverage">great piddock</FIELD>
+<FIELD lang="en" name="coverage">naval shipworm</FIELD>
+<FIELD lang="en" name="coverage">white miniature ark</FIELD>
+<FIELD lang="en" name="coverage">antique ark</FIELD>
+<FIELD lang="en" name="coverage">granular ark</FIELD>
+<FIELD lang="en" name="coverage">ventricose ark</FIELD>
+<FIELD lang="en" name="coverage">rusty ark</FIELD>
+<FIELD lang="en" name="coverage">hazelnut ark</FIELD>
+<FIELD lang="en" name="coverage">decussate ark</FIELD>
+<FIELD lang="en" name="coverage">almond ark</FIELD>
+<FIELD lang="en" name="coverage">Peruvian calico scallop</FIELD>
+<FIELD lang="en" name="coverage">Asiatic hard clam</FIELD>
+<FIELD lang="en" name="coverage">Asian brown mussel</FIELD>
+<FIELD lang="en" name="coverage">penguin wing oyster</FIELD>
+<FIELD lang="en" name="coverage">smooth giant clam</FIELD>
+<FIELD lang="en" name="coverage">half-propellor ark</FIELD>
+<FIELD lang="en" name="coverage">propellor ark</FIELD>
+<FIELD lang="en" name="coverage">Reeve's bittersweet</FIELD>
+<FIELD lang="en" name="coverage">comb bittersweet</FIELD>
+<FIELD lang="en" name="coverage">Philippine horse mussel</FIELD>
+<FIELD lang="en" name="coverage">eared horse mussel</FIELD>
+<FIELD lang="en" name="coverage">comb pen shell</FIELD>
+<FIELD lang="en" name="coverage">rayed tree oyster</FIELD>
+<FIELD lang="en" name="coverage">white hammer oyster</FIELD>
+<FIELD lang="en" name="coverage">black hammer oyster</FIELD>
+<FIELD lang="en" name="coverage">saucer scallop</FIELD>
+<FIELD lang="en" name="coverage">Asian moon scallop</FIELD>
+<FIELD lang="en" name="coverage">flatribbed scallop</FIELD>
+<FIELD lang="en" name="coverage">royal cloak scallop</FIELD>
+<FIELD lang="en" name="coverage">leopard scallop</FIELD>
+<FIELD lang="en" name="coverage">distant scallop</FIELD>
+<FIELD lang="en" name="coverage">scaly Pacific scallop</FIELD>
+<FIELD lang="en" name="coverage">box scallop</FIELD>
+<FIELD lang="en" name="coverage">Singapore scallop</FIELD>
+<FIELD lang="en" name="coverage">Ducal thorny oyster</FIELD>
+<FIELD lang="en" name="coverage">imperial thorny oyster</FIELD>
+<FIELD lang="en" name="coverage">windowpane oyster</FIELD>
+<FIELD lang="en" name="coverage">leaf oyster</FIELD>
+<FIELD lang="en" name="coverage">Pacific tiger lucine</FIELD>
+<FIELD lang="en" name="coverage">punctate lucine</FIELD>
+<FIELD lang="en" name="coverage">Lazarus jewel box</FIELD>
+<FIELD lang="en" name="coverage">reflexed jewel box</FIELD>
+<FIELD lang="en" name="coverage">halfround cardita</FIELD>
+<FIELD lang="en" name="coverage">honeycomb oyster</FIELD>
+<FIELD lang="en" name="coverage">crocus giant clam</FIELD>
+<FIELD lang="en" name="coverage">maculated troughshell</FIELD>
+<FIELD lang="en" name="coverage">agate troughshell</FIELD>
+<FIELD lang="en" name="coverage">grand razor shell</FIELD>
+<FIELD lang="en" name="coverage">Noah's ark</FIELD>
+<FIELD lang="en" name="coverage">truncate donax</FIELD>
+<FIELD lang="en" name="coverage">cross tellin</FIELD>
+<FIELD lang="en" name="coverage">virgate tellin</FIELD>
+<FIELD lang="en" name="coverage">foliated tellin</FIELD>
+<FIELD lang="en" name="coverage">Remies tellin</FIELD>
+<FIELD lang="en" name="coverage">rasp tellin</FIELD>
+<FIELD lang="en" name="coverage">cuneate donax</FIELD>
+<FIELD lang="en" name="coverage">courtesan sunset clam</FIELD>
+<FIELD lang="en" name="coverage">squamose sunset clam</FIELD>
+<FIELD lang="en" name="coverage">divaricate short razor</FIELD>
+<FIELD lang="en" name="coverage">script venus</FIELD>
+<FIELD lang="en" name="coverage">discrepant venus</FIELD>
+<FIELD lang="en" name="coverage">tumid venus</FIELD>
+<FIELD lang="en" name="coverage">Camp pitar venus</FIELD>
+<FIELD lang="en" name="coverage">turgid venus</FIELD>
+<FIELD lang="en" name="coverage">Ornate pitar venus</FIELD>
+<FIELD lang="en" name="coverage">reticulated venus</FIELD>
+<FIELD lang="en" name="coverage">tiar venus</FIELD>
+<FIELD name="ObjectID">cms://5b268db0-9d63-11de-8d8f-a04a2d1ca936/60c30410-9d63-11de-8d8f-a04a2d1ca936</FIELD></ROW>
+</ROWSET>

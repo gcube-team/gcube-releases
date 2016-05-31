@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>${description}</Description>
+		<Class>PortletUser</Class>
+		<Name>${artifactId}</Name>
+		<Version>${version}</Version>
+		<Packages>
+			<Software>
+				<Name>${artifactId}</Name>
+				<Version>${version}</Version>
+				<MavenCoordinates>
+					<groupId>${groupId}</groupId>
+					<artifactId>${artifactId}</artifactId>
+					<version>${version}</version>
+				</MavenCoordinates>
+				<Files>
+					<File>target/${build.finalName}.war</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<!-- <Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="service.xsd"> -->
+<!-- 	<ID/> -->
+<!-- 	<Type>Service</Type> -->
+<!-- 	<Profile> -->
+<!-- 		<Description>Trendylyzer Portlet</Description> -->
+<!-- 		<Class>PortletsUser</Class> -->
+<!-- 		<Name>TrendylyzerPortlet</Name> -->
+<!-- 		<Version>1.0.0</Version> -->
+<!-- 		<Packages> -->
+<!-- 			<Software> -->
+<!-- 				<Description>Trendylyzer Portlet</Description> -->
+<!-- 				<Name>TrendylyzerPortlet</Name> -->
+<!-- 				<Version>1.0.0</Version> -->
+<!-- 				<InstallScripts> -->
+<!-- 					<File>installPortlet.sh</File> -->
+<!-- 				</InstallScripts> -->
+<!-- 				<Dependencies> -->
+<!-- 					<Dependency> -->
+<!-- 						<Service> -->
+<!-- 							<Class>ApplicationSupportLayer</Class> -->
+<!-- 							<Name>ASLCore</Name> -->
+<!-- 							<Version>1.1.0</Version> -->
+<!-- 						</Service> -->
+<!-- 						<Package>ASLCore</Package> -->
+<!-- 						<Version>[2.0.0,3.0.0)</Version> -->
+<!-- 						<Scope level="GHN"/> -->
+<!-- 						<Optional>false</Optional> -->
+<!-- 					</Dependency> -->
+<!-- 					<Dependency> -->
+<!-- 						<Service> -->
+<!-- 							<Class>Portal</Class> -->
+<!-- 							<Name>WorkspacePortletLightTree</Name> -->
+<!-- 							<Version>1.0.0</Version> -->
+<!-- 						</Service> -->
+<!-- 						<Package>WorkspacePortletLightTree</Package> -->
+<!-- 						<Version>[2.0.0,3.0.0)</Version> -->
+<!-- 						<Scope level="GHN"/> -->
+<!-- 						<Optional>false</Optional> -->
+<!-- 					</Dependency> -->
+<!-- 				</Dependencies> -->
+<!-- 				<Files> -->
+<!-- 					<File>lib/trendylyzer-portlet.war</File> -->
+<!-- 					<File>build.xml</File> -->
+<!-- 					<File>build.properties</File> -->
+<!-- 				</Files> -->
+<!-- 			</Software> -->
+<!-- 		</Packages> -->
+<!-- 	</Profile> -->
+<!-- </Resource> -->

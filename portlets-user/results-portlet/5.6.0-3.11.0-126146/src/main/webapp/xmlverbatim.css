@@ -1,0 +1,47 @@
+.xmlverb-default          { color: #333333; background-color: #ffffff;
+                            font-family: monospace }
+.xmlverb-element-name     { color: #990000 }
+.xmlverb-element-nsprefix { color: #666600 }
+.xmlverb-attr-name        { color: #660000 }
+.xmlverb-attr-content     { color: #000099; font-weight: bold }
+.xmlverb-ns-name          { color: #666600 }
+.xmlverb-ns-uri           { color: #330099 }
+.xmlverb-text             { color: #000000; font-weight: bold }
+.xmlverb-comment          { color: #006600; font-style: italic }
+.xmlverb-pi-name          { color: #006600; font-style: italic }
+.xmlverb-pi-content       { color: #006666; font-style: italic }
+
+
+.navbar{
+	border-top-style:solid;
+	border-bottom-style:solid;
+	border-left-width:0px;
+	border-right-width:0px;
+	border-top-width:1px;
+	border-bottom-width:1px;
+	border-color:black;
+	background-image: url(gray_gradient.gif);
+	background-color:#EEEEEE;
+	padding:4pt;
+	margin-top:10px;
+	margin-bottom:5px;
+	margin-left:0;
+	margin-right:0;
+}
+
+/*.resourceList {
+	border: 1px solid #AAAAAA;
+	background-color: white;
+	font-size: 100%;
+	cursor: pointer;
+	cursor: hand;
+	height: 120%;
+}*/
+
+.resourceList {
+	border: 1px solid #AAAAAA;
+	background-color: white;
+	font-size: 80%;
+	cursor: pointer;
+	cursor: hand;
+}

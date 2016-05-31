@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.tabular-data-replacebyexternal-widget.1-2-0" date="2015-07-03">
+		<Change>Updated dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-replacebyexternal-widget.1-1-0" date="2015-04-30">
+		<Change>Updated dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-replacebyexternal-widget.1-0-0" date="2015-02-16">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

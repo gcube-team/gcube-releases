@@ -1,0 +1,58 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:m="urn:import:org.gcube.portlets.user.shareupdates.client.view"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui" xmlns:j="urn:import:org.gcube.portlets.widgets.fileupload.client.view">
+	<ui:style>
+	.attachment-container {
+		width: 600px;
+	}
+	</ui:style>
+	<g:HTMLPanel ui:field="mainPanel">
+		<table class="share-updates-table">
+			<tr>
+				<td class="share-updates-photo-cell">
+					<g:Image styleName="share-updates-member-photo" url=""
+						ui:field="avatarImage" />
+				</td>
+				<td class="share-updates-cell">
+					<div id="supercontainer">
+						<div id="highlighterContainer">
+							<div id="highlighter">
+							</div>
+						</div>
+						<div id="inputContainer">
+							<m:SuperPosedTextArea styleName="postTextArea"
+								ui:field="shareTextArea" />
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<j:UploadProgressPanel ui:field="uploadProgress"></j:UploadProgressPanel>
+		<m:Placeholder ui:field="preview" styleName="{style.attachment-container}"></m:Placeholder>
+		<m:SaveInWorkspaceBox ui:field="saveInWorkspaceCheckbox"></m:SaveInWorkspaceBox>
+		<table class="share-updates-table">
+			<tr>
+				<td class="share-updates-photo-cell">
+				</td>
+				<td class="share-updates-cell">
+					<b:Form>
+						<b:Fieldset>
+							<b:ControlGroup>
+								<g:ListBox styleName="wizardListbox" ui:field="privacyLevel"
+									visible="false" />
+								<g:ListBox styleName="wizardListbox" ui:field="notifyListbox"
+									visible="false" />
+
+								<b:Button ui:field="attachButton" icon="UPLOAD_ALT"
+									visible="false" />
+								<b:Button ui:field="submitButton" type="INFO" width="52px"
+									text="Share" visible="false" />
+							</b:ControlGroup>
+						</b:Fieldset>
+					</b:Form>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

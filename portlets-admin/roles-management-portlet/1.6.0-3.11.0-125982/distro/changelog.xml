@@ -1,0 +1,31 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.roles-management-portlet.1-1-0" date="2010-09-03">
+		<Change>GWT 2 and Liferay support</Change>
+		<Change>Integrated with the new Users management library</Change>
+		<Change>At role creation time while typing the allowed roles' names are proposed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.roles-management-portlet.1-2-0" date="2010-10-22">
+		<Change>Exceptions' handling</Change>
+		<Change>Custom Error Alert window for exceptions</Change>
+		<Change>Interface enhancements</Change>
+		<Change>Resizing of the main panel</Change>
+		<Change>Grid and other windows are updated to support roles' description</Change>
+		<Change>scope helper added</Change>
+		<Change>Portlet does not allow the deletion of system roles</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.roles-management-portlet.1-3-0" date="2011-05-06">
+		<Change>GWT 2.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.roles-management-portlet.1-4-0" date="2011-09-30">
+		<Change>Validation of a given role name. The name cannot contain the space character.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.roles-management-portlet.1-4-1" date="2012-02-17">
+		<Change>Labels are updated to be aligned with the iMarine portal</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.roles-management-portlet.1-5-0" date="2013-01-17">
+		<Change>Uses customPortalHandler to retrieve the support email address</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.roles-management-portlet.1-6-0" date="2013-10-21">
+		<Change>GWT version is updated</Change>
+	</Changeset>
+</ReleaseNotes>

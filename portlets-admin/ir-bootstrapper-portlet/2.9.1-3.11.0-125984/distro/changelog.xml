@@ -1,0 +1,60 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.1-1-0" date="2010-07-16">
+		<Change>GWT 2 and liferay support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.1-2-0" date="2011-05-2">
+		<Change>compatible with the new CM model.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.1-3-0" date="2011-07-01">
+		<Change>Compatible with the new Index service</Change>
+		<Change>Supports batch jobs submission</Change>
+		<Change>Jobs can ask for user input values at runtime</Change>
+		<Change>FullText and Forward indexing is based on GCUBECollections and their views</Change>
+		<Change>Open search data source resource creation is updated. the opensearchDataSource service is used</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.1-3-1" date="2011-07-29">
+		<Change>The open search task is updated so that the user can provide a ws-resource ID to add a new provider under the given ID</Change>
+		<Change>Job designer editor is updated to support user labels.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.2-1-0" date="2013-03-04">
+		<Change>A new task for fulltext indexing using the new fulltext index node is added</Change>
+	</Changeset>
+		<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.2-2-0" date="2013-04-18">
+		<Change>The fulltext indexing accepts as input collections from the Tree manager service</Change>
+		<Change>A new task for the new forward index is added</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.2-2-1" date="2013-05-28">
+		<Change>The forward index task accepts collections from the Tree manager service</Change>
+		<Change>The functionality to add a new forward index under the same node has been implemented</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.2-3-0" date="2013-07-05">
+		<Change>Removed all the types, datatypes and tasks that were using the old CM and index services</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.2-4-0" date="2013-10-21">
+		<Change>GWT version is updated</Change>
+		<Change>Use of the IC, index, DTS and OpenSearch client libraries instead of the services</Change>
+		<Change>Removed any unused task type</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.2-5-0" date="2014-01-27">
+		<Change>Changed the way the GCubeCollection data type is retrieved. It now uses generic resources with "DataSource" data type and type "opensearch"</Change>
+		<Change>Added the update tasks for the fulltext and forward indices</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.2-6-0" date="2014-03-27">
+		<Change>Updated the Full text tasks so as to use the new index and dts clients</Change>
+		<Change>Removed the Forward index tasks</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.2-7-0" date="2014-05-19">
+		<Change>Updated the OpenSearch task so as to use the new client</Change>
+		<Change>Added a clear button that deletes the persisted logs</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.2-8-0" date="2014-06-30">
+		<Change>Added support for the index creation of relational DB Data sources</Change>
+		<Change>Added support for the resource creation of the SRU Data sources</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.2-9-0" date="2014-09-02">
+		<Change>Added support for the index creation of the workspace documents</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ir-bootstrapper-portlet.2-9-1" date="2014-11-07">
+		<Change>Minor change in the resource retrieval</Change>
+	</Changeset>
+</ReleaseNotes>

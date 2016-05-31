@@ -1,0 +1,194 @@
+<definitions name="GHNManager"
+    targetNamespace="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager"
+    xmlns:tns="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager"
+    xmlns:common="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager/common"
+    xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+	xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" 
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+    <wsdl:documentation>
+    </wsdl:documentation>
+
+   <wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+
+
+<!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+<types>
+<xsd:schema targetNamespace="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager">
+
+	<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+	<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>		
+	
+	<xsd:complexType name="addScopeInputParams">
+		<xsd:sequence>
+			<xsd:element name="scope" type="coretypes:scope" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="map" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+		
+	<xsd:element name="RemoveScopeInput" type="coretypes:scope" />
+	
+	<xsd:element name="AddScopeInput" type="tns:addScopeInputParams" />
+		
+	<xsd:complexType name="scopeRIParams">
+		<xsd:sequence>			
+			<xsd:element name="clazz" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="scope" type="coretypes:scope" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="AddRIScopeInput" type="tns:scopeRIParams" />
+	
+	<xsd:complexType name="RIData">
+		<xsd:sequence>			
+			<xsd:element name="clazz" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	
+	<xsd:element name="DeactivateRIInput" type="tns:RIData" />
+	
+	<xsd:element name="ActivateRIInput" type="tns:RIData" />
+	
+	
+	<xsd:element name="RemoveRIScopeInput" type="tns:scopeRIParams" />
+	
+	<xsd:element name="booleanResponse" type="xsd:boolean" />
+	 
+	<xsd:element name="shutdownOptions">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="restart" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="clean" type="xsd:boolean" minOccurs="0" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	 
+	 <xsd:element name="VOID" type="coretypes:VOID" />
+	 
+  </xsd:schema>
+</types>
+  
+
+<!--============================================================
+
+                       M E S S A G E S
+                      
+  ============================================================-->
+	<message name="addScopeInputMessage">
+		<part name="request" element="tns:AddScopeInput"/>
+	</message>
+	<message name="addScopeOutputMessage">
+		<part name="response" element="tns:booleanResponse"/>
+	</message>
+	
+	<message name="removeScopeInputMessage">
+		<part name="request" element="tns:RemoveScopeInput"/>
+	</message>
+	
+	<message name="removeScopeOutputMessage">
+		<part name="response" element="tns:booleanResponse"/>
+	</message>
+	
+	<message name="addScopeRIInputMessage">
+		<part name="request" element="tns:AddRIScopeInput"/>
+	</message>
+	<message name="addScopeRIOutputMessage">
+		<part name="response" element="tns:booleanResponse"/>
+	</message>
+	
+	<message name="activateRIInputMessage">
+		<part name="request" element="tns:ActivateRIInput"/>
+	</message>
+	<message name="activateRIOutputMessage">
+		<part name="response" element="tns:booleanResponse"/>
+	</message>
+	
+	<message name="deactivateRIInputMessage">
+		<part name="request" element="tns:DeactivateRIInput"/>
+	</message>
+	<message name="deactivateRIOutputMessage">
+		<part name="response" element="tns:booleanResponse"/>
+	</message>
+
+	<message name="removeScopeRIInputMessage">
+		<part name="request" element="tns:RemoveRIScopeInput"/>
+	</message>
+	<message name="removeScopeRIOutputMessage">
+		<part name="response" element="tns:booleanResponse"/>
+	</message>
+	<message name="shutdownInputMessage">
+		<part name="response" element="tns:shutdownOptions"/>
+	</message>
+	<message name="voidMessage">
+		<part name="request" element="tns:VOID"/>
+	</message>
+
+<!--============================================================
+
+                       P O R T T Y P E
+                      
+  ============================================================-->
+<portType name="GHNManagerPortType">
+
+	<operation name="addScope">
+		<wsdl:documentation>Add a new scope to the GHN</wsdl:documentation>
+		<input message="tns:addScopeInputMessage"/>
+		<output message="tns:addScopeOutputMessage"/>
+		<fault name="GCUBEUnrecoverableFault" message="corefaults:GCUBEUnrecoverableFaultMessage"></fault>
+	</operation>
+
+	<operation name="removeScope">
+		<wsdl:documentation>Remove a scope from the GHN</wsdl:documentation>
+		<input message="tns:removeScopeInputMessage"/>
+		<output message="tns:removeScopeOutputMessage"/>
+		<fault name="GCUBEUnrecoverableFault" message="corefaults:GCUBEUnrecoverableFaultMessage"></fault>
+	</operation>
+	
+	<operation name="addRIToScope">
+		<wsdl:documentation>Add a new scope to a RI hosted on the GHN</wsdl:documentation>
+		<input message="tns:addScopeRIInputMessage"/>
+		<output message="tns:addScopeRIOutputMessage"/>
+		<fault name="GCUBEUnrecoverableFault" message="corefaults:GCUBEUnrecoverableFaultMessage"></fault>
+	</operation>	
+
+	<operation name="removeRIFromScope">
+		<wsdl:documentation>Remove a scope from a RI hosted on the GHN</wsdl:documentation>
+		<input message="tns:removeScopeRIInputMessage"/>
+		<output message="tns:removeScopeRIOutputMessage"/>
+		<fault name="GCUBEUnrecoverableFault" message="corefaults:GCUBEUnrecoverableFaultMessage"></fault>
+	</operation>
+	
+	<operation name="activateRI">
+		<wsdl:documentation>Activate a RI hosted on the GHN</wsdl:documentation>
+		<input message="tns:activateRIInputMessage"/>
+		<output message="tns:activateRIOutputMessage"/>
+		<fault name="GCUBEUnrecoverableFault" message="corefaults:GCUBEUnrecoverableFaultMessage"></fault>
+	</operation>
+	
+	<operation name="deactivateRI">
+		<wsdl:documentation>Deactivate a RI hosted on the GHN</wsdl:documentation>
+		<input message="tns:deactivateRIInputMessage"/>
+		<output message="tns:deactivateRIOutputMessage"/>
+		<fault name="GCUBEUnrecoverableFault" message="corefaults:GCUBEUnrecoverableFaultMessage"></fault>
+	</operation>
+	
+	<operation name="shutdown">
+		<wsdl:documentation>Shutdown the GHN</wsdl:documentation>
+		<input message="tns:shutdownInputMessage"/>
+		<output message="tns:voidMessage"/>
+		<fault name="GCUBEUnrecoverableFault" message="corefaults:GCUBEUnrecoverableFaultMessage"></fault>
+	</operation>
+	
+</portType>
+
+</definitions>

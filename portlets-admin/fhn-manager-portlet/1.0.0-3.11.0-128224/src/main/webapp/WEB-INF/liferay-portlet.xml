@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<liferay-portlet-app>
+	<portlet>
+		<portlet-name>FHNManager</portlet-name>
+		<layout-cacheable>false</layout-cacheable> 
+		<instanceable>false</instanceable>
+		<ajaxable>false</ajaxable>
+		<!-- LOCATION CSS HERE -->
+<!--                  <header-portlet-css>/css/test.css</header-portlet-css> -->
+	</portlet>
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+</liferay-portlet-app>

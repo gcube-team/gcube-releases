@@ -1,0 +1,7 @@
+Job  Setup job.setup.submit
+Job  Work1 job.work1.submit
+Job  Work2 job.work2.submit
+Job  Final job.finalize.submit
+
+PARENT Setup CHILD Work1 Work2
+PARENT Work1 Work2 CHILD Final

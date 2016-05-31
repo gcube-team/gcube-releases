@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>greetServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.questions.server.QuestionsServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>mailWisdgetServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsmail.server.WsMailServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>WorkspaceLightService</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.lighttree.server.WorkspaceServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>greetServlet</servlet-name>
+		<url-pattern>/questions/greet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>mailWisdgetServlet</servlet-name>
+		<url-pattern>/questions/mailWisdgetServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>WorkspaceLightService</servlet-name>
+		<url-pattern>/questions/WorkspaceLightService</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>Questions.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

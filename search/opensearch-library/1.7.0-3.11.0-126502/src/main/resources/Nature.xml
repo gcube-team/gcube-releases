@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchResource>
+	<name>Nature.com</name>
+	<descriptionDocumentURI>http://www.nature.com/opensearch/opensearch.xml</descriptionDocumentURI>
+	<brokeredResults>false</brokeredResults>
+	<transformation>
+		<MIMEType>application/atom+xml</MIMEType>
+		<recordSplitXPath>*[local-name()='feed']/*[local-name()='entry']</recordSplitXPath>
+		<recordIdXPath>//*[local-name()='entry']/*[local-name()='id']</recordIdXPath>
+		 <presentationInfo>  
+	          <presentable>
+	          	<fieldName>title</fieldName>
+	          	<expression>//*[local-name()='entry']/*[namespace-uri()='http://purl.org/dc/elements/1.1/' and local-name()='title']</expression>
+	          </presentable>
+        </presentationInfo>
+	</transformation>
+</OpenSearchResource>

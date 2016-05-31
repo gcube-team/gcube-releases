@@ -1,0 +1,21 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+<!-- 	<inherits name="com.google.gwt.user.theme.standard.Standard"/> -->
+	
+	<inherits name="org.gcube.portlets.user.gcubewidgets.WidgetFactory"/>
+
+
+	<inherits name="gr.uoa.di.madgik.visualisations.WordCloudGroup.WordCloudGroup"/> 
+<!-- 	<inherits name="gr.uoa.di.madgik.visualisations.Tree.Tree"/>  -->
+<!-- 	<inherits name="gr.uoa.di.madgik.visualisations.ClusterPacks.ClusterPacks" /> -->
+	
+
+<!-- 	<entry-point class="org.gcube.portlets.widget.collectionsindexedwords.client.IndexedCollectionsVisualizer"/> -->
+ 	
+<!--  	<inherits name="com.google.gwt.resources.Resources" /> -->
+
+	<source path="client" />
+	<source path="shared" />
+  	<public path="public" />
+
+</module>

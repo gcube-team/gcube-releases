@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='guidedtour'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Other module inherits -->
+	<!-- inherits GCUBE Widgets -->
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+	<!-- Specify the app entry point class. -->
+	<entry-point class='org.gcube.portlets.widgets.guidedtour.client.GuidedTour' />
+	<!-- inherits GuidedTour Resources -->
+	<inherits name='org.gcube.portlets.widgets.guidedtour.resources.GuidedTourResources' />
+
+	<!-- Specify the application specific style sheet. -->
+	<stylesheet src='GuidedTour.css' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='socialprofile'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<!-- To Comment out -->
+	<!-- <set-property name="user.agent" value="gecko1_8" /> -->
+	<!-- Other module inherits -->
+	<!-- inherits GCUBE Widgets -->
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+	<inherits name='org.gcube.portlets.widgets.wsmail.WsMail_Widget' />
+	<inherits name='org.gcube.portal.databook.GCubeSocialNetworking' />
+	<inherits name="net.eliasbalasis.tibcopagebus4gwt.tibcopagebus4gwt" />
+	<inherits name="org.jsonmaker.gwt.Gwt_jsonmaker" />
+	<inherits
+		name="net.eliasbalasis.tibcopagebus4gwt.testsubscriber.TestSubscriber" />
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.user.socialprofile.client.SocialProfile' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

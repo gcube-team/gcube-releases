@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Class>Application</Class>
+		<Name>AquaMapsService</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Main>
+				<Name>aquamapsservice-service</Name>
+				<Version>5.0.5-SNAPSHOT</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.application</groupId>
+					<artifactId>aquamapsservice-service</artifactId>
+					<version>5.0.5-SNAPSHOT</version>
+				</MavenCoordinates>
+				<GARArchive>aquamapsservice-service-5.0.5-SNAPSHOT.gar</GARArchive>
+				<PortType>
+					<Name>gcube/application/aquamaps/aquamapsservice/AquaMapsService</Name>
+				</PortType>
+				<PortType>
+					<Name>gcube/application/aquamaps/aquamapsservice/DataManagement</Name>
+				</PortType>
+				<PortType>
+					<Name>gcube/application/aquamaps/aquamapsservice/PublisherService</Name>
+				</PortType>
+			</Main>
+			<Software>
+				<Name>aquamapsservice-stubs</Name>
+				<Version>5.0.5-SNAPSHOT</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.application</groupId>
+					<artifactId>aquamapsservice-stubs</artifactId>
+					<version>5.0.5-SNAPSHOT</version>
+				</MavenCoordinates>
+				<Type>library</Type>
+				<Files>
+					<File>aquamapsservice-stubs-5.0.5-SNAPSHOT.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

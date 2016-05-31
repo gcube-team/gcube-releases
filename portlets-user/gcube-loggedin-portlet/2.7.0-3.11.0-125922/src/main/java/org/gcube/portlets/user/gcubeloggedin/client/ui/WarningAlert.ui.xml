@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:m="urn:import:org.gcube.portlets.user.gcubewidgets.client.elements">
+	<ui:style>
+		.alert {
+			border: 1px solid #FAEBCC;
+			border-radius: 4px;
+			margin: 20px;
+			padding: 15px;
+			background-color: #FCF8D4;
+			color: #8A6D3F;
+			font-family: 'Helvetica Neue', Arial, sans-serif;
+			font-size: 14px;
+		}
+		
+		.profile-link {
+			font-weight: bold;
+		}
+		
+		.profile-link:hover {
+			cursor: pointer;
+			cursor: hand;
+			text-decoration: underline;
+		}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.alert}">
+		<div ui:field="errorMessage"></div>
+		<m:Span ui:field="confirmHandler" styleName="{style.profile-link}"></m:Span>
+		<span> or </span>
+		<m:Span ui:field="cancelHandler" styleName="{style.profile-link}"></m:Span>		
+	</g:HTMLPanel>
+</ui:UiBinder> 

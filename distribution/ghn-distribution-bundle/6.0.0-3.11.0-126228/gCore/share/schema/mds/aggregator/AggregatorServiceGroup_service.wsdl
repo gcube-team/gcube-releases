@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Portions of this file Copyright 1999-2005 University of Chicago
+Portions of this file Copyright 1999-2005 The University of Southern California.
+
+This file or a portion of this file is licensed under the
+terms of the Globus Toolkit Public License, found at
+http://www.globus.org/toolkit/download/license.html.
+If you redistribute this file, with or without
+modifications, you must include this notice in the file.
+-->
+<wsdl:definitions name="AggregatorServiceGroup" targetNamespace="http://mds.globus.org/aggregator/service" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:binding="http://mds.globus.org/aggregator/bindings" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://mds.globus.org/aggregator/bindings" location="AggregatorServiceGroup_bindings.wsdl"/>
+  <wsdl:service name="AggregatorServiceGroupService">
+    <wsdl:port name="AggregatorServiceGroupPortTypePort" binding="binding:AggregatorServiceGroupPortTypeSOAPBinding">
+      <soap:address location="http://localhost:8080/wsrf/services/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

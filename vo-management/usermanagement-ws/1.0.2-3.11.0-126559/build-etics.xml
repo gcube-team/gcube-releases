@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+
+<!--
+This build file is used to build liferay portlets in gCube project.
+
+This script is suitable for performing builds either on ETICS or
+on your development local machine.
+
+In case you are using this script on your local machine, please make sure:
+- (*) GWT_HOME is set and points to the gwt distribution directory
+- (*) PORTAL_HOME is set and points to the portal distribution directory
+- all other needed dependencies (e.g. other gcube services/stubs) are 
+  in CLASSPATH environment variable
+
+* only if your portlet depends on it
+-->
+
+<project name="usermanagement" basedir="." default="war">
+
+	<!-- load properties from file -->
+	<property file="build.properties"/>
+	
+	<!-- load environment variables -->
+	<property environment="env"/>
+
+	<property name="author" value="Ciro Formisano (ENG)" />
+	<property name="core-jar.filename" value="org.gcube.vo-management.usermanagement-core" />
+	<property name="war.filename" value="usermanagement-ws" />
+	<property name="core.classes.dir" location="${core.build.dir}/classes" />
+	<property name="ws.classes.dir" location="${ws.build.dir}/WEB-INF/classes" />
+	<property name="ws.tmp.lib.dir" location="${ws.build.dir}/WEB-INF/lib" />
+	
+	
+	
+	<!-- ================================================================== -->
+	<!-- ===                       SET CLASSPATH                        === -->
+	<!-- ================================================================== -->	
+	<path id="portal.classpath"/>
+
+	<path id="sourcepath">
+		<pathelement location="${ws.src.dir}"/>
+		<pathelement location="${core.src.dir}"/>
+	</path>
+
+	
+	<path id="classpath">
+		<path refid="portal.classpath"/>
+	</path>
+	
+
+	<target name="check-env">
+		<condition property="portal-env-exist">
+				<not>
+					<equals arg1="${env.PORTAL_HOME}" arg2="$${env.PORTAL_HOME}"/>
+				</not>
+		</condition>
+	</target>
+	
+	
+	<target name="set-portal-env" depends="check-env" if="portal-env-exist">
+		<path id="portal.classpath">
+			<fileset dir="${env.PORTAL_HOME}" includes="*.jar"/>
+		</path>
+	</target>	
+	
+	<target name="setenv" depends="set-portal-env">
+		<!-- print out the computed classpath -->
+		<pathconvert 
+			pathsep="${line.separator}|-- " 
+			property="classpath.echo"
+			refid="classpath"
+		/>
+		<echo message="Computed Classpath"/>
+		<echo message="|-- ${classpath.echo}"/>
+	</target>
+	
+	
+	
+	<!-- ================================================================== -->
+	<!-- ===                           CLEAN                            === -->
+	<!-- ================================================================== -->	
+	<target name="clean">
+		<delete dir="${javadoc.dir}"/>
+		<delete dir="${core.build.dir}"/>
+		<delete dir="${ws.classes.dir}"/>
+		<delete dir="${ws.build.dir}"/>
+		<delete dir="${war.dir}"/>
+		<delete dir="${javadoc.dir}"/>
+	</target>
+
+	
+	<!-- ================================================================== -->
+	<!-- ===                           COMPILE                          === -->
+	<!-- ================================================================== -->		
+
+
+	<target name="ws-compile" depends="create-ws-temp-dir">
+		<mkdir dir="${ws.classes.dir}"/>
+		<!-- step 2: compile java classes -->
+		<javac compiler="${javac.compiler}" debug="${javac.debug}" deprecation="${javac.deprecation}" destdir="${ws.classes.dir}"
+				nowarn="${javac.nowarn}"
+				srcdir="${ws.src.dir}">
+					<classpath>
+						<path refid="portal.classpath"/>
+						<fileset dir="${ws.lib.dir}/"> 
+							<include name="*.jar" />
+						</fileset>
+					</classpath>
+			</javac>
+	</target>
+	
+
+
+	<!-- ================================================================== -->
+	<!-- ===                            JAR                             === -->
+	<!-- ================================================================== -->	
+
+	
+
+	
+	<target name="create-ws-temp-dir">
+		<!-- mkdir dir="${ws.build.dir}"/ -->
+		<copy  todir="${ws.build.dir}" overwrite="true">
+			<fileset dir="${ws.web.dir}"/>
+		</copy>
+		<!--
+		<mkdir dir="${ws.tmp.lib.dir}"/>
+		<copy  todir="${ws.tmp.lib.dir}" overwrite="true">
+			<fileset dir="${ws.lib.dir}"/>
+			 fileset file="${core.build.dir}/*.jar"/
+		</copy>
+		-->
+	</target>
+	
+
+	<!-- ================================================================== -->
+	<!-- ===                            WAR                             === -->
+	<!-- ================================================================== -->	
+	
+	
+	<target name="war" depends="ws-compile">
+		<mkdir dir="${war.dir}"/>
+		
+		<jar
+			basedir="${ws.build.dir}"
+			destfile="${war.dir}/${war.filename}.war"
+		>
+			<manifest>
+			  <attribute name="Built-By" value="${author}"/>
+			</manifest>
+		</jar>
+	</target>
+
+	
+	<!-- ================================================================== -->
+	<!-- ===                            JAVADOC                         === -->
+	<!-- ================================================================== -->	
+	<target name="javadoc" depends="setenv">
+		<mkdir dir="${javadoc.dir}"/>
+		<javadoc sourcepathref="sourcepath"
+			classpathref="classpath"
+			destdir="${javadoc.dir}"
+			author="true"
+			version="true"
+			splitindex="true"
+			use="true"
+			maxmemory="180m"
+			windowtitle="${javadoc.windowtitle}"
+			doctitle="${javadoc.doctitle}">
+		</javadoc>
+	</target>
+	
+	
+	<!-- ================================================================== -->
+	<!-- ===                        D4S-DEPLOY                          === -->
+	<!-- ================================================================== -->	
+	<target name="d4s-deploy" depends="war">
+		<copy file="${war.dir}/${war.filename}.war" todir="${env.CATALINA_HOME}/../deploy" overwrite="true" />
+	</target>
+</project>

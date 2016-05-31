@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portal.threadlocal-vars-cleaner.1-0-0" date="2016-05-02">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

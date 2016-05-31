@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE web-app -->
+<!-- PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" -->
+<!-- "http://java.sun.com/dtd/web-app_2_3.dtd"> -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>TrendyLyzerServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.trendylyzer_portlet.server.TrendyLyzerServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TrendyLyzerServlet</servlet-name>
+		<url-pattern>/trendyLyzer_portlet/trendylyzer</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>TrendyLyzer_portlet.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- DOWNLOAD SERVLET -->
+
+	<servlet>
+		<servlet-name>DownloadService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.trendylyzer_portlet.server.DownloadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DownloadService</servlet-name>
+		<url-pattern>/trendyLyzer_portlet/DownloadService</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- TABULAR DATA WIDGET -->
+	<servlet>
+		<servlet-name>tdwService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdw.server.TabularDataServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>tdwService</servlet-name>
+		<url-pattern>/trendyLyzer_portlet/tdw</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>tdwServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdw.server.TabularDataServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>tdwServlet</servlet-name>
+		<url-pattern>/trendyLyzer_portlet/tdwdata</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>WorkspaceService</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.lighttree.server.WorkspaceServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WorkspaceService</servlet-name>
+		<url-pattern>/trendyLyzer_portlet/WorkspaceLightService</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>

@@ -1,0 +1,45 @@
+The gCube System
+------------------------------------------------------------
+
+${gcube.description}
+ 
+${gcube.funding}
+
+
+Version
+--------------------------------------------------
+${version} (${buildDate})
+ 
+Please see the file named "changelog.xml" in this directory for the release notes.
+
+
+Authors
+-------
+
+ 
+Massimiliano Assante (massimiliano.assante-AT-isti.cnr.it), Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo" - CNR, Pisa (Italy).
+
+
+Maintainers
+-----------
+ 
+Massimiliano Assante (massimiliano.assante-AT-isti.cnr.it), Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo" - CNR, Pisa (Italy).
+ 
+ 
+Documentation
+-------------
+
+Documentation is available on - line from the Projects Documentation wiki:
+
+ {gcube.wikiRoot}/gcube/GCube_Portal_Installation
+
+
+Support 
+--------------------------------------------------
+Bugs and support requests can be reported in the gCube issue tracking tool:
+    ${gcube.issueTracking}
+ 
+ 
+Licensing
+--------------------------------------------------
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.

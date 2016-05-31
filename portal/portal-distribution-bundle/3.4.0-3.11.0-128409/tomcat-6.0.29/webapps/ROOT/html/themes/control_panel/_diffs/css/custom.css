@@ -1,0 +1,528 @@
+@import url(../../classic/css/custom_common.css);
+
+/* ---- FORMS ------- */
+input {
+	background-color: #FFF;
+}
+
+input#searchbox:focus { 
+	 outline: none;
+	 background-color: #66757f;
+    -webkit-transition: background-color .5s ease-in-out;
+	-moz-transition: background-color .5s ease-in-out;
+	-o-transition: background-color .5s ease-in-out;
+	transition: background-color .5s ease-in-out;
+	
+}
+
+.searchbox-style {
+	background: #a3acb2 url(../images/custom/searchbox.png) no-repeat 0 50%;
+	border: 1px solid;
+	border-color: transparent !important;
+	color: whitesmoke;
+	font-weight: normal;
+	font-size: 12px;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	height: 23px;
+	width: 195px;
+	padding: 0px !important;
+	margin: 0px;
+	padding-left: 3px !important;
+	
+	-webkit-transition: background-color .5s ease-in-out;
+	-moz-transition: background-color .5s ease-in-out;
+	-o-transition: background-color .5s ease-in-out;
+	transition: background-color .5s ease-in-out;
+}
+
+.dockbar {
+	font-size: 13px;
+	padding: 1px 5px;
+	position: relative;
+	z-index: 300;
+	background-color: #F5F5F5;
+	background-image: none;
+	border-bottom-color: #CCCCCC;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	color: #222222;
+	height: 32px; 
+	left: 0;
+	min-width: 980px;
+}
+
+.dockbar .user-avatar img {
+	vertical-align: middle;
+	width: 25px;
+	height: 25px !important;
+	margin-top: -2px;
+}
+
+.dockbar .user-avatar {
+	margin-top: 3px;
+}
+
+
+.dockbar ul {
+    margin-top: 2px;
+}
+
+/* Dockbar menu */
+.dockbar .menu-button-active {
+	background-color: #D7D7D7;
+	background-image: none;
+	background-repeat: no-repeat;
+}
+
+.dockbar .manage-content .menu-button span {
+	background-image: url("../images/custom/settings.png");
+}
+
+.dockbar .my-places .menu-button span {
+	background-image: url("../images/custom/goto.png");
+}
+
+.dockbar .add-content .menu-button span {
+	background-image: url("../images/custom/add.png");
+}
+
+.dockbar a {
+	color: #222222;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.dockbar .social-notification a img:hover {
+	opacity: 0.6;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.dockbar .menu-button {
+	background-image: url("../images/custom/expand.png");
+}
+
+.dockbar .menu-button-active {
+	background-color: #D7D7D7;
+	background-image: none;
+	text-shadow: none;
+}
+
+.dockbar .menu-button-active a {
+	color: #222222;
+	text-shadow: none;
+	background-repeat: no-repeat;
+}
+
+.dockbar .menu-button-active .menu-button {
+	box-shadow: none;
+}
+
+.dockbar .user-toolbar {
+	float: right;
+	margin-top: 3px;
+}
+
+.user-fullname {
+	text-decoration: none;
+}
+
+.aui-menu-content,.lfr-menu-list ul {
+	background-color: #F5F5F5;
+	background-image: none;
+	border: 1px solid;
+	border-color: #AEAFB1 #777879 #777879 #AEAFB1;
+	padding: 2px 0;
+}
+
+.my-places-menu ul,.my-places-menu li {
+	display: block;
+	margin: 1px;
+	padding: 0;
+}
+
+.aui-menu-content li a,.lfr-menu-list ul li a {
+	color: #22222;
+	display: block;
+	padding: 4px 20px;
+	text-decoration: none;
+}
+
+.aui-menu-content li a.aui-focus,.lfr-menu-list ul a.aui-focus,.lfr-menu-expanded li a:focus
+	{
+	background-color: #D7D7D7;
+	color: #222222;
+	text-shadow: none;
+	border: 1px solid #D7D7D7;
+}
+
+.aui-menu-content a,.lfr-menu-list li a,.lfr-actions .lfr-trigger,.lfr-actions .lfr-trigger strong
+	{
+	font-weight: bold;
+	text-shadow: none;
+}
+
+/* selected */
+.my-places-menu .current-site {
+	border: none;
+}
+
+.my-places-menu .current-site a {
+	background-color: #AAA;
+	background-image: none;
+	color: #FFF;
+	padding-left: 20px;
+	text-shadow: none;
+}
+
+.my-places-menu .current-site .site-type {
+	color: #FFF;
+}
+
+.my-places-menu .current-site a:hover,.my-places-menu a:hover .site-type
+	{
+	color: #FFF;
+	text-shadow: none;
+}
+
+/* ---End  gCube Custom Dockbar ---*/
+
+/* ---------- Base styles ---------- */
+
+body {
+	background: #FFF;
+	font-size: 11px;
+}
+
+a {
+	color: #369;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #06C;
+	text-decoration: none;
+}
+
+/* ---------- Main content body ---------- */
+
+#wrapper {
+	background: transparent url(../images/custom/body_bg.png) repeat-x scroll 0 0;
+	padding-top: 20px;
+}
+
+#content {
+	background: #FFF;
+	border: 5px solid #FFF;
+	margin: 20px auto;
+	width: 976px;
+}
+
+html > .lfr-dockbar-pinned {
+	padding-top: 2em;
+}
+
+/* ---------- Banner ---------- */
+
+#heading {
+	margin: 0 auto;
+	width: 976px;
+}
+
+#heading .company-title {
+	margin: 0;
+	background: url(../images/custom/default_logo.png) no-repeat 0 50%;
+	height: 50px;
+}
+
+#banner #heading .logo {
+	background: none;
+	color: #444;
+	top: 5px;
+	color: #666666;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 36px;
+	font-weight: bold;	
+	text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.40);
+	padding-left: 100px;
+	text-indent: 0;
+	width: auto;
+	text-decoration: none;
+	text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.40);
+	text-rendering: optimizelegibility;
+}
+
+#skip-to-content {
+	color: #FFF;
+}
+
+#skip-to-content:focus {
+	clip: auto;
+	right: 1em;
+	z-index: 1000;
+}
+
+/* ---------- Control panel ---------- */
+
+.lfr-ctrl-panel {
+	width: 100%;
+}
+
+.lfr-ctrl-panel h2 {
+	margin: 0;
+}
+
+.lfr-ctrl-panel .panel-page-menu {
+	background-color: #DBE1E3;
+	background-image: url(../images/control_panel/panel_shadow.png);
+	background-position: 100% 0;
+	background-repeat: repeat-y;
+}
+
+.lfr-ctrl-panel .panel-page-menu .aui-column-content {
+	padding: 0;
+}
+
+.ie6 .lfr-ctrl-panel .panel-page-menu {
+	background-image: none;
+}
+
+.lfr-ctrl-panel .portal-add-content, .lfr-ctrl-panel .portal-add-content .lfr-panel-container {
+	background: none;
+	border-width: 0;
+}
+
+.lfr-ctrl-panel .user-greeting {
+	display: none;
+}
+
+#panel-manage-my .lfr-panel-title span {
+	background: transparent url(../images/common/admin.png) no-repeat 0 50%;
+	padding-left: 25px;
+}
+
+#panel-manage-content .lfr-panel-title span {
+	background: transparent url(../images/common/community_icon.png) no-repeat 0 50%;
+	padding-left: 25px;
+}
+
+.lfr-ctrl-panel .user-greeting .sign-out {
+	color: #600;
+	font-size: 10px;
+	font-weight: normal;
+	margin-left: 25px;
+}
+
+.lfr-ctrl-panel .current-community {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.lfr-ctrl-panel .current-community span {
+	font-weight: bold;
+}
+
+.lfr-ctrl-panel .panel-page-body.panel-page-frontpage .lfr-panel-titlebar {
+	margin-top: 0;
+}
+
+.lfr-ctrl-panel .panel-page-body.panel-page-frontpage .portlet-msg-info {
+	margin-left: 15px;
+}
+
+.lfr-ctrl-panel .panel-page-body-menu {
+	background-color: #F3F5F5;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.lfr-ctrl-panel .panel-page-body-content {
+	padding-left: 0;
+}
+
+.lfr-ctrl-panel .panel-page-body-menu .aui-column-last {
+	text-align: right;
+}
+
+.lfr-ctrl-panel .panel-page-body-menu .aui-column-content {
+	line-height: 34px;
+	padding: 0 15px;
+}
+
+.lfr-ctrl-panel .lfr-add-content {
+	background: url(../images/common/category_bg.png) repeat-x 0 0;
+	margin: 0;
+}
+
+.lfr-ctrl-panel .lfr-add-content .lfr-panel-titlebar {
+	background: url(../images/arrows/05_down.png) no-repeat 5px 50%;
+	font-size: 14px;
+}
+
+.lfr-ctrl-panel .lfr-add-content .lfr-panel-titlebar span {
+	display: block;
+	line-height: 26px;
+	margin: 0 5px 0 0;
+}
+
+.lfr-ctrl-panel .lfr-panel-titlebar {
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1.3;
+	margin: 0;
+	overflow: hidden;
+}
+
+.lfr-ctrl-panel .lfr-panel-title {
+	line-height: 1.5;
+	padding-left: 5px;
+}
+
+.ie6 .lfr-ctrl-panel .panel-page-category .lfr-panel-titlebar {
+	padding-bottom: 5px;
+}
+
+.lfr-ctrl-panel .panel-page-category.closed li ul {
+	display: none;
+}
+
+.lfr-ctrl-panel .panel-page-category {
+	border-width: 0;
+}
+
+.lfr-ctrl-panel .panel-page-category .lfr-panel-titlebar {
+	background: transparent url(../images/common/category_bg.png) repeat-x scroll 0 0;
+	border-bottom-width: 0;
+	margin: 0;
+}
+
+.lfr-ctrl-panel .panel-page-category .category-portlets a {
+	color: #888;
+	display: block;
+	font-size: 12px;
+	line-height: 22px;
+	padding: 0 6px;
+}
+
+.ie6 .lfr-ctrl-panel .panel-page-category .category-portlets a {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	zoom: 1;
+}
+
+.lfr-ctrl-panel .panel-page-category .category-portlets a:hover {
+	background-color: #4EA9DA;
+	color: #FFF;
+}
+
+.js .lfr-ctrl-panel .toggle-menu {
+	background: url(../images/arrows/05_down.png) no-repeat scroll 5px 50%;
+	display: block;
+	float: left;
+	height: 20px;
+	padding: 0;
+	width: 20px;
+}
+
+.js .lfr-ctrl-panel .panel-page-category.closed .toggle-menu {
+	background-image: url(../images/arrows/05_right.png);
+	display: block;
+}
+
+.lfr-ctrl-panel .panel-page-category.selected a {
+	color: #000;
+}
+
+.lfr-ctrl-panel .panel-page-category a img {
+	margin-right: 3px;
+}
+
+.lfr-ctrl-panel .panel-page-category .selected-portlet {
+	background: #BCC7CA url(../images/common/selected_portlet_bg.png) repeat-x 0 0;
+	border-bottom: 1px solid #ECF0F1;
+}
+
+.lfr-ctrl-panel .panel-page-category .selected-portlet a {
+	background: transparent url(../images/common/selected_portlet_arrow.png) no-repeat right 50%;
+	border: 1px solid #7A8487;
+	border-left: none;
+	border-right: none;
+	color: #000;
+	font-weight: bold;
+}
+
+.lfr-ctrl-panel .portlet {
+	border: none;
+	padding: 0 0 10px 15px;
+}
+
+.lfr-ctrl-panel .portlet-topper {
+	background-color: #BCC7CA;
+	border-bottom: none;
+	margin: 0;
+}
+
+.lfr-ctrl-panel .portlet-title {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 34px;
+	padding: 0 10px;
+}
+
+.lfr-ctrl-panel .portlet-title img {
+	cursor: pointer;
+}
+
+.lfr-ctrl-panel .portlet-icons {
+	display: none;
+}
+
+.lfr-ctrl-panel .portlet-content {
+	padding: 0;
+	padding-top: 10px;
+}
+
+.lfr-title-scope-selector {
+	background-color: #FFF;
+	border: 1px solid #BBB;
+	margin-left: 3em;
+	padding: 0 0.5em;
+}
+
+/* ---------- Manage portal ---------- */
+
+.lfr-ctrl-panel #panel-manage-portal .lfr-panel-titlebar {
+	background: url(../images/common/category_portal_bg.png) repeat-x 0 0;
+}
+
+.lfr-ctrl-panel #panel-manage-portal .selected-portlet a {
+	background-color: #9BAA95;
+}
+
+.lfr-ctrl-panel.panel-manage-portal .panel-page-menu {
+	background-color: #DCE3DB;
+}
+
+.lfr-ctrl-panel.panel-manage-portal .portlet-topper {
+	background-color: #9BAA95;
+}
+
+/* ---------- Manage server ---------- */
+
+.lfr-ctrl-panel #panel-manage-server .lfr-panel-titlebar {
+	background: url(../images/common/category_server_bg.png) repeat-x 0 0;
+}
+
+.lfr-ctrl-panel #panel-manage-server .selected-portlet a {
+	background-color: #CABCC9;
+}
+
+.lfr-ctrl-panel.panel-manage-server .panel-page-menu {
+	background-color: #E3DBE3;
+}
+
+.lfr-ctrl-panel.panel-manage-server .portlet-topper {
+	background-color: #CABCC9;
+}

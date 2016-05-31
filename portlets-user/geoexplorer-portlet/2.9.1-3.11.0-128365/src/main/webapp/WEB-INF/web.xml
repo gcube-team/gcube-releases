@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>GeoExplorerPortlet.html</welcome-file>
+	</welcome-file-list>
+
+
+	<listener>
+    	<description>sessionListener</description>
+	    <listener-class>
+	       org.gcube.portlets.user.geoexplorer.server.SessionListener
+	    </listener-class>
+	</listener>
+
+
+	<!-- Servlets -->
+	<!--  GEOEXPLORER -->
+	<servlet>
+		<servlet-name>GeoExplorerService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gcubegeoexplorer.server.GCubeGeoExplorerServletImpl</servlet-class> <!-- // for gcube mode -->
+		<!-- <servlet-class>org.gcube.portlets.user.geoexplorer.server.DefaultGeoExplorerServiceImpl</servlet-class> 
+			// for normal mode -->
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GeoExplorerService</servlet-name>
+		<url-pattern>/geoexplorerportlet/GeoExplorerService</url-pattern>
+	</servlet-mapping>
+	
+
+	<!-- GISVIEWER -->
+	<servlet>
+		<servlet-name>GisViewerService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gcubegisviewer.server.GCubeGisViewerServletImpl</servlet-class> <!-- // for gcube mode -->
+		<!-- <servlet-class>org.gcube.portlets.user.gisviewer.server.DefaultGisViewerServiceImpl</servlet-class> 
+			// for normal mode -->
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GisViewerService</servlet-name>
+		<url-pattern>/geoexplorerportlet/GisViewerService</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- GEOEXPLORER MAP PREVIEW -->
+	<servlet>
+		<servlet-name>MapPreviewGenerator</servlet-name>
+		<servlet-class>org.gcube.portlets.user.geoexplorer.server.MapPreviewGenerator</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MapPreviewGenerator</servlet-name>
+		<url-pattern>/geoexplorerportlet/MapPreviewGenerator</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- METADATA ISO 19139 VIEWERS -->
+
+	<servlet>
+		<servlet-name>MetadataISO19139View</servlet-name>
+		<servlet-class>org.gcube.portlets.user.geoexplorer.server.MetadataISO19139View</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MetadataISO19139View</servlet-name>
+		<url-pattern>/geoexplorerportlet/MetadataISO19139View</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MetadataISO19139SourceView</servlet-name>
+		<servlet-class>org.gcube.portlets.user.geoexplorer.server.MetadataISO19139SourceView</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MetadataISO19139SourceView</servlet-name>
+		<url-pattern>/geoexplorerportlet/MetadataISO19139SourceView</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>SummaryMetadataISO19139View</servlet-name>
+		<servlet-class>org.gcube.portlets.user.geoexplorer.server.SummaryMetadataISO19139View</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SummaryMetadataISO19139View</servlet-name>
+		<url-pattern>/geoexplorerportlet/SummaryMetadataISO19139View</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>EmbeddedGeonetworkMetadataISO19139View</servlet-name>
+		<servlet-class>org.gcube.portlets.user.geoexplorer.server.EmbeddedGeonetworkMetadataISO19139View</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmbeddedGeonetworkMetadataISO19139View</servlet-name>
+		<url-pattern>/geoexplorerportlet/EmbeddedGeonetworkMetadataISO19139View</url-pattern>
+	</servlet-mapping>
+	
+
+
+
+
+	<!-- GISVIEWER MAP GENERATOR -->
+	<servlet>
+		<servlet-name>MapGenerator</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gisviewer.server.MapGenerator</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MapGenerator</servlet-name>
+		<url-pattern>/geoexplorerportlet/MapGenerator</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Workspace Light Tree servlet -->
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>WorkspaceService</servlet-name> -->
+<!-- 		<servlet-class>org.gcube.portlets.widgets.lighttree.server.WorkspaceServiceImpl</servlet-class> -->
+<!-- 	</servlet> -->
+
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>WorkspaceService</servlet-name> -->
+<!-- 		<url-pattern>/geoexplorerportlet/WorkspaceLightService</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+	
+	<!-- Workspace Explorer-->
+	<servlet>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsexplorer.server.WorkspaceExplorerServiceImpl</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<url-pattern>/geoexplorerportlet/WorkspaceExplorerService</url-pattern>
+	</servlet-mapping>
+
+</web-app>

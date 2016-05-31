@@ -1,0 +1,38 @@
+<Resource>
+	<ID/>
+	<Type/>
+	<Profile>
+		<SecondaryType>DTSTransformationProgram</SecondaryType>
+		<Name>DocToTextTransformer</Name>
+		<Description>Program transforming MSWord Documents to plain text</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.applications.DocToTextConverter</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>application/msword</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/plain</Mimetype>
+								<Parameters/>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>

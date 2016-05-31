@@ -1,0 +1,11 @@
+scope # /gcube/devNext
+jdl # test/jdlExamples/jdlExample2.jdl
+outputStoreMode # url # ftp://donald.di.uoa.gr/up # pe2ng # pe2ng2011
+chokeProgressEvents # false
+chokePerformanceEvents # false
+storePlans # true
+inData # job.sh # url # ftp://meteora.di.uoa.gr/d5s/job.sh
+inData # sig.txt # url # ftp://meteora.di.uoa.gr/d5s/sig.txt
+outData # job.out # url # ftp://donald.di.uoa.gr # pe2ng # pe2ng2011
+outData # job.err # url # ftp://donald.di.uoa.gr # pe2ng # pe2ng2011
+outData # job.output # url # ftp://donald.di.uoa.gr # pe2ng # pe2ng2011

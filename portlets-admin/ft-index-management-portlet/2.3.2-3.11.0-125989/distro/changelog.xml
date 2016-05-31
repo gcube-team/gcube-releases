@@ -1,0 +1,38 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.ft-index-management-portlet.1-2-0" date="2010-07-16">
+		<Change>GWT 2 and Liferay support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ft-index-management-portlet.1-3-0" date="2010-10-22">
+		<Change>Scope helper added</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ft-index-management-portlet.1-4-0" date="2011-05-06">
+		<Change>Compatible with the new CMS. It uses the gDL to retrieve the available metadata views</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ft-index-management-portlet.1-5-0" date="2011-07-01">
+		<Change>Compatible with the new FullText index service.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ft-index-management-portlet.2-0-0" date="2013-03-04">
+		<Change>Compatible with the new FullTextIndexNode service.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ft-index-management-portlet.2-1-0" date="2013-05-29">
+		<Change>Project is mavenized</Change>
+		<Change>Querying an index issue has been fixed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ft-index-management-portlet.2-2-0" date="2013-10-21">
+		<Change>GWT version is updated</Change>
+		<Change>Use of the IC and index client libraries instead of the services</Change>
+		<Change>Added the functionality to remove the index for a specific collection and not for the while node</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ft-index-management-portlet.2-2-1" date="2014-01-24">
+		<Change>Feed locator method is updated</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ft-index-management-portlet.2-3-0" date="2014-03-28">
+		<Change>Portlet is now using the new index client library</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ft-index-management-portlet.2-3-1" date="2014-06-04">
+		<Change>Changes in pom.xml to fix a jar clash issue</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.ft-index-management-portlet.2-3-2" date="2014-10-08">
+		<Change>Updated the index removal method for a specific collection</Change>
+	</Changeset>
+</ReleaseNotes>

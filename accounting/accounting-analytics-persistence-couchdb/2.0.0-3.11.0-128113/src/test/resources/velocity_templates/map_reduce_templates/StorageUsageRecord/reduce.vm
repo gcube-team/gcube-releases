@@ -1,0 +1,14 @@
+function(keys, values, rereduce){
+	var total = 0;
+	var dataVolume = 0;
+	for(i=0; i<values.length; i++){
+		total = Number(total) + Number(values[i].operationCount);
+		dataVolume = Number(dataVolume) + Number(values[i].dataVolume);
+	}
+	
+	ret = {};
+	ret.operationCount = Number(total);
+	ret.dataVolume = Number(dataVolume);
+
+	return ret;
+}

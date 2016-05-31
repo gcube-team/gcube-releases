@@ -1,0 +1,35 @@
+The gCube System - SOA3 USER MANAGEMENT LIBRARY
+------------------------------------------------------------
+
+This work is partially funded by the European Commission in the
+context of the D4Science project (www.d4science.eu), under the 1st call of FP7 IST priority.
+
+
+
+Authors
+-------
+
+* Nunzio Andrea Galante (nunzioandrea.galante@eng.it),Ciro Formisano (ciro.formisano@eng.it) ENGINEERING Ingegneria Informatica s.p.a.
+
+Version and Release Date
+------------------------
+
+v 0.1, 31/07/2015
+  
+
+Description
+-----------
+
+OCCI Library
+
+Licensing
+---------
+
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.
+
+Documentation
+-------------
+
+Documentation is available on - line from the Projects Documentation wiki:
+
+https://gcube.wiki.gcube-system.org/gcube/index.php/Policy_Definition_Portlet

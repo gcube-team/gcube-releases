@@ -1,0 +1,17 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.search.operatorlibrary-1.3.1-3.11.0-126502" date="2014-02-07">
+		<Change>Hive operators bug fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.operatorlibrary.1-3-0" date="2013-10-25">
+		<Change>Added Select, Partition, GradualMerge, Transform operators</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.operatorlibrary.1-2-0" date="2013-05-21">
+		<Change>Support for Fuse operator</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.operatorlibrary.1-1-0" date="2012-02-17">
+		<Change>Support for configurable buffer capacity in Join, Merge and Distinct operators</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.operatorlibrary.1-0-0" date="2011-07-01">
+		<Change>Search operator library. Replaces corresponding services. gRS2 and field model compliant</Change>
+	</Changeset>
+</ReleaseNotes>

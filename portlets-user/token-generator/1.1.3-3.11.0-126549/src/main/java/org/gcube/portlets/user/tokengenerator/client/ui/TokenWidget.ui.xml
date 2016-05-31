@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:m="urn:import:org.gcube.portlets.user.tokengenerator.client.ui">
+	<g:HTMLPanel styleName="token-frame" ui:field="tokenPanel">
+		<g:HorizontalPanel width="100%">
+			<g:Label ui:field="header" styleName="token-title"></g:Label>
+			<b:Popover  ui:field="popover">
+				<b:Button ui:field="infoButton" type="LINK" icon="INFO"></b:Button>
+			</b:Popover>
+		</g:HorizontalPanel>
+		<m:LoadingText ui:field="loader" visible="false" />
+		<b:Form type="VERTICAL">
+			<g:VerticalPanel width="100%" ui:field="placeHolder"></g:VerticalPanel>
+			<b:Button ui:field="generateButton">Generate Token</b:Button>
+		</b:Form>
+	</g:HTMLPanel>
+</ui:UiBinder> 

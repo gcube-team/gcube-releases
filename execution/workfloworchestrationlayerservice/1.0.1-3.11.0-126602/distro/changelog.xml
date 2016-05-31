@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.execution.workfloworchestrationlayerservice.1.0.1" date="2014-01-20">
+		<Change>Added range to the gcf dependency.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.workfloworchestrationlayerservice.1.0.0" date="2013-10-16">
+		<Change>First version of the Workflow Orchestration Layer Service.</Change>
+	</Changeset>
+</ReleaseNotes>

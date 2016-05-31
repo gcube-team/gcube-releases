@@ -1,0 +1,5 @@
+# Module messages
+# RPC service class, partial path of RPC policy file
+org.gcube.portlets.user.messages.client.rpc.MessagesService, 43AD2A365B347278E477DB7A743D87BD.gwt.rpc
+org.gcube.portlets.user.wsmail.client.WsMailService, D42880104EA78B7FEAEFA1E63C03956A.gwt.rpc
+org.gcube.portlets.user.workspace.lighttree.client.WorkspaceService, 51C928AF83683A55BFD8E40F6C191D86.gwt.rpc

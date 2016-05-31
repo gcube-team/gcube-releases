@@ -1,0 +1,397 @@
+<%
+/**
+ * Copyright (c) 2000-2011 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+%>
+
+<br />
+
+<liferay-ui:panel-container cssClass="page-extra-settings" extended="<%= true %>" id="pageExtraSettingsPanelContainer" persistState="<%= true %>">
+	<liferay-ui:panel defaultState="closed" title='<%= LanguageUtil.get(pageContext, "meta-tags") %>'>
+		<table class="lfr-table">
+		<tr>
+			<td></td>
+			<td>
+				<liferay-ui:message key="default-language" />: <%= defaultLocale.getDisplayName(defaultLocale) %>
+			</td>
+			<td>
+				<liferay-ui:message key="localized-language" />:
+
+				<select id="<portlet:namespace />metaLanguageId" onChange="<portlet:namespace />updateMetaLanguage();">
+					<option value="" />
+
+					<%
+					for (int i = 0; i < locales.length; i++) {
+						if (locales[i].equals(defaultLocale)) {
+							continue;
+						}
+
+						String optionStyle = StringPool.BLANK;
+
+						if (Validator.isNotNull(selLayout.getTypeSettingsProperties().getProperty("meta-robots_" + LocaleUtil.toLanguageId(locales[i]))) ||
+							Validator.isNotNull(selLayout.getTypeSettingsProperties().getProperty("meta-keywords_" + LocaleUtil.toLanguageId(locales[i]))) ||
+							Validator.isNotNull(selLayout.getTypeSettingsProperties().getProperty("meta-description_" + LocaleUtil.toLanguageId(locales[i])))) {
+
+							optionStyle = "style=\"font-weight: bold;\"";
+						}
+					%>
+
+						<option <%= (currentLanguageId.equals(LocaleUtil.toLanguageId(locales[i]))) ? "selected" : "" %> value="<%= LocaleUtil.toLanguageId(locales[i]) %>" <%= optionStyle %>><%= locales[i].getDisplayName(locale) %></option>
+
+					<%
+					}
+					%>
+
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<br />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<liferay-ui:message key="description" />
+			</td>
+			<td>
+
+				<%
+				String selLayoutProperty = "typeSettingsProperties(meta-description_" + defaultLanguageId + ")";
+				%>
+
+				<textarea class="lfr-textarea" name="TypeSettingsProperties--meta-description_<%= defaultLanguageId %>--" wrap="soft" style="width: 300px;"><bean:write name="SEL_LAYOUT" property="<%= selLayoutProperty %>" /></textarea>
+			</td>
+			<td>
+
+				<%
+				for (int i = 0; i < locales.length; i++) {
+					if (locales[i].equals(defaultLocale)) {
+						continue;
+					}
+				%>
+
+					<input class="lfr-textarea" id="<portlet:namespace />meta-description_<%= LocaleUtil.toLanguageId(locales[i]) %>" name="TypeSettingsProperties--meta-description_<%= LocaleUtil.toLanguageId(locales[i]) %>--" type="hidden" value='<%= GetterUtil.getString(selLayout.getTypeSettingsProperties().getProperty("meta-description_" + LocaleUtil.toLanguageId(locales[i]))) %>'>
+
+				<%
+				}
+				%>
+
+				<textarea class="<%= currentLocale.equals(defaultLocale) ? "aui-helper-hidden" : "" %> lfr-textarea" id="<portlet:namespace />meta-description_temp" name="TypeSettingsProperties--meta-description_temp--" onChange="<portlet:namespace />onDescriptionChanged();" style="width: 300px;" wrap="soft"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<br />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<liferay-ui:message key="keywords" />
+			</td>
+			<td>
+
+				<%
+				selLayoutProperty = "typeSettingsProperties(meta-keywords_" + defaultLanguageId + ")";
+				%>
+
+				<textarea class="lfr-textarea" name="TypeSettingsProperties--meta-keywords_<%= defaultLanguageId %>--" wrap="soft" style="width: 300px;"><bean:write name="SEL_LAYOUT" property="<%= selLayoutProperty %>" /></textarea>
+			</td>
+			<td>
+
+				<%
+				for (int i = 0; i < locales.length; i++) {
+					if (locales[i].equals(defaultLocale)) {
+						continue;
+					}
+				%>
+
+					<input class="lfr-textarea" id="<portlet:namespace />meta-keywords_<%= LocaleUtil.toLanguageId(locales[i]) %>" name="TypeSettingsProperties--meta-keywords_<%= LocaleUtil.toLanguageId(locales[i]) %>--" type="hidden" value='<%= GetterUtil.getString(selLayout.getTypeSettingsProperties().getProperty("meta-keywords_" + LocaleUtil.toLanguageId(locales[i]))) %>'>
+
+				<%
+				}
+				%>
+
+				<textarea class="<%= currentLocale.equals(defaultLocale) ? "aui-helper-hidden" : "" %> lfr-textarea" id="<portlet:namespace />meta-keywords_temp" name="TypeSettingsProperties--meta-keywords_temp--" onChange="<portlet:namespace />onKeywordsChanged();" style="width: 300px;" wrap="soft"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<br />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<liferay-ui:message key="robots" />
+			</td>
+			<td>
+
+				<%
+				selLayoutProperty = "typeSettingsProperties(meta-robots_" + defaultLanguageId + ")";
+				%>
+
+				<textarea class="lfr-textarea" name="TypeSettingsProperties--meta-robots_<%= defaultLanguageId %>--" wrap="soft" style="width: 300px;"><bean:write name="SEL_LAYOUT" property="<%= selLayoutProperty %>" /></textarea>
+			</td>
+			<td>
+
+				<%
+				for (int i = 0; i < locales.length; i++) {
+					if (locales[i].equals(defaultLocale)) {
+						continue;
+					}
+				%>
+
+					<input class="lfr-textarea" id="<portlet:namespace />meta-robots_<%= LocaleUtil.toLanguageId(locales[i]) %>" name="TypeSettingsProperties--meta-robots_<%= LocaleUtil.toLanguageId(locales[i]) %>--" type="hidden" value='<%= GetterUtil.getString(selLayout.getTypeSettingsProperties().getProperty("meta-robots_" + LocaleUtil.toLanguageId(locales[i]))) %>'>
+
+				<%
+				}
+				%>
+
+				<textarea class="<%= currentLocale.equals(defaultLocale) ? "aui-helper-hidden" : "" %> lfr-textarea" id="<portlet:namespace />meta-robots_temp" name="TypeSettingsProperties--meta-robots_temp--" onChange="<portlet:namespace />onRobotsChanged();" style="width: 300px;" wrap="soft"></textarea>
+			</td>
+		</tr>
+		</table>
+	</liferay-ui:panel>
+
+	<liferay-ui:panel defaultState="closed" extended="<%= true %>" id="pageJavascriptPanel" persistState="<%= true %>" title='<%= LanguageUtil.get(pageContext, "javascript") %>'>
+		<table class="lfr-table">
+		<tr>
+			<td>
+				<liferay-ui:message key="javascript-1" />
+			</td>
+			<td>
+				<textarea class="lfr-textarea" name="TypeSettingsProperties--javascript-1--" wrap="soft" style="width: 300px;"><bean:write name="SEL_LAYOUT" property="typeSettingsProperties(javascript-1)" /></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<br />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<liferay-ui:message key="javascript-2" />
+			</td>
+			<td>
+				<textarea class="lfr-textarea" name="TypeSettingsProperties--javascript-2--" wrap="soft" style="width: 300px;"><bean:write name="SEL_LAYOUT" property="typeSettingsProperties(javascript-2)" /></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<br />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<liferay-ui:message key="javascript-3" />
+			</td>
+			<td>
+				<textarea class="lfr-textarea" name="TypeSettingsProperties--javascript-3--" wrap="soft" style="width: 300px;"><bean:write name="SEL_LAYOUT" property="typeSettingsProperties(javascript-3)" /></textarea>
+			</td>
+		</tr>
+		</table>
+	</liferay-ui:panel>
+
+	<c:if test="<%= PortalUtil.isLayoutSitemapable(selLayout) %>">
+		<liferay-ui:panel defaultState="closed" extended="<%= true %>" id="pageRobotsPanel" persistState="<%= true %>" title='<%= LanguageUtil.get(pageContext, "robots") %>'>
+
+			<%
+			boolean include = GetterUtil.getBoolean(selLayout.getTypeSettingsProperties().getProperty("sitemap-include"), true);
+			String changeFrequency = selLayout.getTypeSettingsProperties().getProperty("sitemap-changefreq", "daily");
+			%>
+
+			<table class="lfr-table">
+			<tr>
+				<td>
+					<liferay-ui:message key="include" />
+				</td>
+				<td>
+					<select name="TypeSettingsProperties--sitemap-include--">
+						<option <%= (include) ? "selected" : "" %> value="1"><liferay-ui:message key="yes" /></option>
+						<option <%= (!include) ? "selected" : "" %> value="0"><liferay-ui:message key="no" /></option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<liferay-ui:message key="page-priority" /> (0.0 - 1.0)
+				</td>
+				<td>
+					<input name="TypeSettingsProperties--sitemap-priority--" size="3" type="text" value="<bean:write name="SEL_LAYOUT" property="typeSettingsProperties(sitemap-priority)" />" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<liferay-ui:message key="change-frequency" />
+				</td>
+				<td>
+					<select name="TypeSettingsProperties--sitemap-changefreq--">
+						<option <%= (changeFrequency.equals("always")) ? "selected" : "" %> value="always"><liferay-ui:message key="always" /></option>
+						<option <%= (changeFrequency.equals("hourly")) ? "selected" : "" %> value="hourly"><liferay-ui:message key="hourly" /></option>
+						<option <%= (changeFrequency.equals("daily")) ? "selected" : "" %> value="daily"><liferay-ui:message key="daily" /></option>
+						<option <%= (changeFrequency.equals("weekly")) ? "selected" : "" %> value="weekly"><liferay-ui:message key="weekly" /></option>
+						<option <%= (changeFrequency.equals("monthly")) ? "selected" : "" %> value="monthly"><liferay-ui:message key="monthly" /></option>
+						<option <%= (changeFrequency.equals("yearly")) ? "selected" : "" %> value="yearly"><liferay-ui:message key="yearly" /></option>
+						<option <%= (changeFrequency.equals("never")) ? "selected" : "" %> value="never"><liferay-ui:message key="never" /></option>
+					</select>
+				</td>
+			</tr>
+			</table>
+		</liferay-ui:panel>
+	</c:if>
+</liferay-ui:panel-container>
+
+<aui:script>
+	var robotsChanged = false;
+	var keywordsChanged = false;
+	var descriptionChanged = false;
+	var lastMetaLanguageId = "<%= currentLanguageId %>";
+
+	function <portlet:namespace />onRobotsChanged() {
+		robotsChanged = true;
+	}
+
+	function <portlet:namespace />onKeywordsChanged() {
+		keywordsChanged = true;
+	}
+
+	function <portlet:namespace />onDescriptionChanged() {
+		descriptionChanged = true;
+	}
+
+	Liferay.provide(
+		window,
+		'<portlet:namespace />updateMetaLanguage',
+		function() {
+			var A = AUI();
+
+			var robotsNode = A.one('#<portlet:namespace />meta-robots_temp');
+			var keywordsNode = A.one('#<portlet:namespace />meta-keywords_temp');
+			var descriptionNode = A.one('#<portlet:namespace />meta-description_temp');
+
+			if (lastMetaLanguageId != "<%= defaultLanguageId %>") {
+				if (robotsChanged) {
+					var robotsValue = (robotsNode && robotsNode.val()) || '';
+
+					var lastRobotsNode = A.one('#<portlet:namespace />meta-robots_' + lastMetaLanguageId);
+
+					if (lastRobotsNode) {
+						lastRobotsNode.val(robotsValue);
+					}
+
+					robotsChanged = false;
+				}
+
+				if (keywordsChanged) {
+					var keywordsValue = (keywordsNode && keywordsNode.val()) || '';
+
+					var lastKeywordsNode = A.one('#<portlet:namespace />meta-keywords_' + lastMetaLanguageId);
+
+					if (lastKeywordsNode) {
+						lastKeywordsNode.val(keywordsValue);
+					}
+
+					keywordsChanged = false;
+				}
+
+				if (descriptionChanged) {
+					var descriptionValue = (descriptionNode && descriptionNode.val()) || '';
+
+					var lastDescriptionNode = A.one('#<portlet:namespace />meta-description_' + lastMetaLanguageId);
+
+					if (lastDescriptionNode) {
+						lastDescriptionNode.val(descriptionValue);
+					}
+
+					descriptionChanged = false;
+				}
+			}
+
+			var selLanguageId = '';
+
+			for (var i = 0; i < document.<portlet:namespace />fm.<portlet:namespace />metaLanguageId.length; i++) {
+				if (document.<portlet:namespace />fm.<portlet:namespace />metaLanguageId.options[i].selected) {
+					selLanguageId = document.<portlet:namespace />fm.<portlet:namespace />metaLanguageId.options[i].value;
+
+					break;
+				}
+			}
+
+			var action = 'hide';
+
+			if (selLanguageId != '') {
+				<portlet:namespace />updateMetaLanguageTemps(selLanguageId);
+
+				action = 'show';
+			}
+
+			if (robotsNode) {
+				robotsNode[action]();
+			}
+
+			if (keywordsNode) {
+				keywordsNode[action]();
+			}
+
+			if (descriptionNode) {
+				descriptionNode[action]();
+			}
+
+			lastMetaLanguageId = selLanguageId;
+		},
+		['aui-base']
+	);
+
+	Liferay.provide(
+		window,
+		'<portlet:namespace />updateMetaLanguageTemps',
+		function(lang) {
+			var A = AUI();
+
+			if (lang != "<%= defaultLanguageId %>") {
+				var robotsNode = A.one('#<portlet:namespace />meta-robots_' + lang);
+				var keywordsNode = A.one('#<portlet:namespace />meta-keywords_' + lang);
+				var descriptionNode = A.one('#<portlet:namespace />meta-description_' + lang);
+				var defaultRobotsNode = A.one('#<portlet:namespace />meta-robots_<%= defaultLanguageId %>');
+				var defaultKeywordsNode = A.one('#<portlet:namespace />meta-keywords_<%= defaultLanguageId %>');
+				var defaultDescriptionNode = A.one('#<portlet:namespace />meta-description_<%= defaultLanguageId %>');
+
+				var robotsValue = (robotsNode && robotsNode.val()) || '';
+				var keywordsValue = (keywordsNode && keywordsNode.val()) || '';
+				var descriptionValue = (descriptionNode && descriptionNode.val()) || '';
+				var defaultRobotsValue = (defaultRobotsNode && defaultRobotsNode.val()) || '';
+				var defaultKeywordsValue = (defaultKeywordsNode && defaultKeywordsNode.val()) || '';
+				var defaultDescriptionValue = (defaultDescriptionNode && defaultDescriptionNode.val()) || '';
+
+				var robotsTempNode = A.one('#<portlet:namespace />meta-robots_temp');
+				var keywordsTempNode = A.one('#<portlet:namespace />meta-keywords_temp');
+				var descriptionTempNode = A.one('#<portlet:namespace />meta-description_temp');
+
+				if (robotsTempNode) {
+					robotsTempNode.val(robotsValue || defaultRobotsValue);
+				}
+
+				if (keywordsTempNode) {
+					keywordsTempNode.val(keywordsValue || defaultKeywordsValue)
+				}
+
+				if (descriptionTempNode) {
+					descriptionTempNode.val(descriptionValue || defaultDescriptionValue);
+				}
+			}
+		},
+		['aui-base']
+	);
+
+	<portlet:namespace />updateMetaLanguageTemps(lastMetaLanguageId);
+</aui:script>

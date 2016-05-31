@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="common-events-1.0.0"  date="2013-10-24">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="common-events-1.0.1-3.11.0-126364"  date="2014-02-18">
+		<Change>Minor bug fixes</Change>
+	</Changeset>
+</ReleaseNotes>

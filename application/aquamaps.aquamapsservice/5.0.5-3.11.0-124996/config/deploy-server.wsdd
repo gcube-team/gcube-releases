@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment name="defaultServerConfig" 
+    xmlns="http://xml.apache.org/axis/wsdd/" 
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+   <service name="gcube/application/aquamaps/aquamapsservice/AquaMapsService" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.application.aquamaps.aquamapsservice.impl.AquaMapsService"/>
+        <wsdlFile>share/schema/aquamapsservice/AquaMapsService_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+        <parameter name="providers" value="GCUBEProvider"/>
+        <parameter name="loadOnStartup" value="true"/>
+       	<!--<parameter name="securityDescriptor" value="@config.dir@/security_descriptor.xml"/> -->
+    </service>
+    <service name="gcube/application/aquamaps/aquamapsservice/DataManagement" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.application.aquamaps.aquamapsservice.impl.DataManagement"/>
+        <wsdlFile>share/schema/aquamapsservice/DataManagement_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+        <parameter name="providers" value="GCUBEProvider"/>
+        <parameter name="loadOnStartup" value="true"/>
+       	<!--<parameter name="securityDescriptor" value="@config.dir@/security_descriptor.xml"/> -->
+    </service>
+   <service name="gcube/application/aquamaps/aquamapsservice/PublisherService" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.application.aquamaps.aquamapsservice.impl.PublisherService"/>
+        <wsdlFile>share/schema/aquamapsservice/PublisherService_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+        <parameter name="providers" value="GCUBEProvider"/>
+        <parameter name="loadOnStartup" value="true"/>
+       	<!--<parameter name="securityDescriptor" value="@config.dir@/security_descriptor.xml"/> -->
+    </service>
+</deployment>

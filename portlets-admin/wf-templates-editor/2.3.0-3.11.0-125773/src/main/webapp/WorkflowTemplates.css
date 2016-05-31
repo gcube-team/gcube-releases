@@ -1,0 +1,36 @@
+@import url('workflowtemplates/old-dialog.css');
+
+.wf-step {
+	background-image: url(images/step.png);
+}
+
+.border {
+	border: 1px solid black;
+}
+
+.southPanel {
+	border-top: 1px solid #99BBE8;
+	padding: 8px;
+}
+
+.westPanel {
+	padding: 8px;
+	border-right: 1px solid #99BBE8;
+}
+
+.splashDisplay {
+	font-size: 2em;
+	color: #666;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.23);
+}
+
+}
+.dropPanel {
+
+}
+
+.removePanel {
+  	font-size: 1.5em;
+	color: #FFF;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.23);
+}

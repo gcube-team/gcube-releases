@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+   
+<!--   <inherits name='org.gcube.portlets.user.trendylyzer_portlet.TrendyLyzer_portlet' /> -->
+
+
+<!--   <servlet path="/TrendyLyzer-portlet/trendylyzer" class="org.gcube.portlets.user.trendylyzer_portlet.server.TrendyLyzerServiceImpl" /> -->
+
+</module>

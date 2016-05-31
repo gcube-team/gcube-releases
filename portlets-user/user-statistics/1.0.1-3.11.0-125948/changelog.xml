@@ -1,0 +1,10 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.portlets-user.user-statistics.1-0-1"
+		date="2016-01-22">
+		<Change>Minor bug fix: long vre's name managed properly(Bug #2042)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user-statistics.1-0-0"
+		date="2015-12-9">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

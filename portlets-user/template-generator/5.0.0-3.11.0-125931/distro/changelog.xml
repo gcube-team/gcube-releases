@@ -1,0 +1,47 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.template-creator.5-0-0"
+		date="2015-09-29">
+		<Change>Replaced the Workspace light tree  with workspace explorer #813</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.template-creator.4-8-0"
+		date="2015-07-03">
+		<Change>Adapted to the new Home Library 2.0</Change>
+		<Change>Ported to GWT 270</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.template-creator.4-7-0"
+		date="2014-06-06">
+		<Change>Adapted to the new gCore Free bundle</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.template-creator.4-6-0"
+		date="2013-12-17">
+		<Change>Adapted to the new Reporting Library</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.template-creator.4-5-0"
+		date="2013-10-21">
+		<Change>Ported to GWT 251</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.template-creator.4-3-0"
+		date="2013-04-19">
+		<Change>fix for #1751 SpeciesFactSheets / Panel not scrollable
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.template-creator.4-2-0"
+		date="2013-04-19">
+		<Change>Session renew every 30 minutes automatically</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.template-creator.4-1-1"
+		date="2013-03-11">
+		<Change>Model completely rewritten</Change>
+		<Change>UI mostly redesigned</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.template-creator.3-5-0"
+		date="2013-01-13">
+		<Change>Added support for new Home Library</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.template-creator.3-4-0"
+		date="2012-05-04">
+		<Change>Added support for new Home Library</Change>
+	</Changeset>
+</ReleaseNotes>

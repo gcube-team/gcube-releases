@@ -1,0 +1,22 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.xsearch-portlet.1-1-2" date="28-01-2014">
+		<Change>Implemented new functionalities when clicking on identified entities</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.xsearch-portlet.1-1-2" date="12-12-2013">
+		<Change>Fixed issues described in ticket https://support.d4science.research-infrastructures.eu/ticket/748</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.xsearch-portlet.1-1-1" date="08-10-2013">
+		<Change>Removed any gCore-related dependencies, Use ic-client instead</Change>
+		<Change>Harmonized with GWT.2.5.1</Change>
+		<Change>GUI updates </Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.xsearch-portlet.1-1-0" date="08-07-2013">
+		<Change>Implementation of new xsearch-portlet algorithm for improved scalability/extensibility</Change>
+		<Change>Implementation of a queue for holding multiple xsearch-service instances retrieved through IS</Change>
+		<Change>Semantic entity enrichment of mined entities</Change>
+		<Change>GUI improvements</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.xsearch-portlet.1-0-2" date="18-04-2013">
+		<Change>Exploitation of IS for retrieving running Xsearch-service instances</Change>
+	</Changeset>
+</ReleaseNotes>

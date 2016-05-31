@@ -1,0 +1,91 @@
+<%
+/**
+ * Copyright (c) 2000-2011 Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+%>
+
+.js .taglib-social-bookmarks.visible {
+	background: #F0F5F7;
+}
+
+.js .taglib-social-bookmarks .show-bookmarks {
+	display: block;
+}
+
+.js .taglib-social-bookmarks.visible .show-bookmarks {
+}
+
+.js .taglib-social-bookmarks ul {
+	border: 1px solid #828F95;
+	border-left: none;
+	border-right: none;
+	display: none;
+}
+
+.js .taglib-social-bookmarks.visible ul {
+	display: block;
+}
+
+.taglib-social-bookmarks li {
+	float: left;
+	margin-right: 1em;
+}
+
+.taglib-social-bookmarks ul:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.ie .taglib-social-bookmarks ul {
+	height: 1%;
+}
+
+.taglib-social-bookmarks li a {
+	background: url() no-repeat 0 50%;
+	padding: 3px 2px 3px 20px;
+}
+
+.taglib-social-bookmarks a.taglib-social-bookmark-blinklist {
+	background-image: url(<%= themeImagesPath %>/social_bookmarks/blinklist.png);
+}
+
+.taglib-social-bookmarks a.taglib-social-bookmark-delicious {
+	background-image: url(<%= themeImagesPath %>/social_bookmarks/delicious.png);
+}
+
+.taglib-social-bookmarks a.taglib-social-bookmark-digg {
+	background-image: url(<%= themeImagesPath %>/social_bookmarks/digg.png);
+}
+
+.taglib-social-bookmarks a.taglib-social-bookmark-facebook {
+	background-image: url(<%= themeImagesPath %>/social_bookmarks/facebook.png);
+}
+
+.taglib-social-bookmarks a.taglib-social-bookmark-furl {
+	background-image: url(<%= themeImagesPath %>/social_bookmarks/furl.png);
+}
+
+.taglib-social-bookmarks a.taglib-social-bookmark-newsvine {
+	background-image: url(<%= themeImagesPath %>/social_bookmarks/newsvine.png);
+}
+
+.taglib-social-bookmarks a.taglib-social-bookmark-reddit {
+	background-image: url(<%= themeImagesPath %>/social_bookmarks/reddit.png);
+}
+
+.taglib-social-bookmarks a.taglib-social-bookmark-technorati {
+	background-image: url(<%= themeImagesPath %>/social_bookmarks/technorati.png);
+}

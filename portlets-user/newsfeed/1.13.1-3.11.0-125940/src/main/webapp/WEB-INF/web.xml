@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>newsServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.newsfeed.server.NewsServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>newsServlet</servlet-name>
+		<url-pattern>/newsfeed/newsServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>scopeService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gcubewidgets.server.ScopeServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>scopeService</servlet-name>
+		<url-pattern>/newsfeed/scopeService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>checkServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.sessionchecker.server.SessionCheckerServiceImpl</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>checkServlet</servlet-name>
+		<url-pattern>/newsfeed/checksession</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>NewsFeed.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

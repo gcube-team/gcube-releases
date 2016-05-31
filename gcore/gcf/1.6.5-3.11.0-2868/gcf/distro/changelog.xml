@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="gcf-1.4.0" date="2012-05-04">
+		<Change>switched to Maven for project management</Change>
+		<Change>integrated resource serializers/deserializers</Change>
+	</Changeset>
+	
+	<Changeset component="gcf-1.6.5" date="2016-05-14">
+		<Change>solved a bug on scope logging in the GCUBEHandle</Change>
+	</Changeset>
+
+</ReleaseNotes>

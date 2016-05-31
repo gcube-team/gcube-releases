@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.index.smartfish-webapp" date="2014-03-13">
+		<Change>Initial release</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.index.smartfish-webapp" date="2014-06-04">
+		<Change>Added french support, unicode query support, concept filter param, latest index client</Change>
+	</Changeset>
+</ReleaseNotes>

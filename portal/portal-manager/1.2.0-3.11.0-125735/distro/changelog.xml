@@ -1,0 +1,10 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="org.gcube.common.portal.portal-manager.1-1-0" date="2015-07-08">
+		<Change>Added method for getting portal email sender (from)</Change>
+		<Change>Added method for getting portal instance name</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.portal.portal-manager.1-0-0"	date="2013-10-21">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

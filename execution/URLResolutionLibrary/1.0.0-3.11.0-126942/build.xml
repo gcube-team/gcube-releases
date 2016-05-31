@@ -1,0 +1,79 @@
+<project default="compile" basedir=".">
+    <property name="project.build" value="build"/>
+    <property name="build.classes" value="${project.build}/classes"/>
+    <target name="compile" depends="clean , setenv" description="Compile project source code">
+        <echo>Compiling project source code</echo>
+        <javac srcdir="."
+            destdir="${build.classes}"
+            classpathref="classpath"
+            debug="on"
+            optimize="on"
+            deprecation="on"/>
+    </target>
+	<target name="jar" depends="compile">
+	    <jar destfile="URLResolutionLibrary.jar" basedir="${build.classes}" includes="**/*.class"/>
+	</target>
+	<target name="setenv" description="Check for libraries and print out config information">
+        <mkdir dir="${project.build}"/>
+        <mkdir dir="${build.classes}"/>
+        <path id="classpath">
+            <pathelement location="${build.classes}"/>
+            <fileset dir="${commons-codec.location}">
+				<include name="*.jar"/>
+        	</fileset>
+        	<fileset dir="${commons-logging.location}">
+				<include name="*.jar"/>
+        	</fileset>
+        	<fileset dir="${commons-net.location}">
+				<include name="*.jar"/>
+        	</fileset>
+        	<fileset dir="${httpclient.location}">
+				<include name="*.jar"/>
+        	</fileset>
+        	<fileset dir="${httpclient-cache.location}">
+				<include name="*.jar"/>
+        	</fileset>
+        	<fileset dir="${httpcore.location}">
+				<include name="*.jar"/>
+        	</fileset>
+        	<fileset dir="${httpmime.location}">
+        		<include name="*.jar"/>
+        	</fileset>
+        	<fileset dir="${jftp.location}">
+				<include name="*.jar"/>
+        	</fileset>
+        	<fileset dir="${jsch.location}">
+        		<include name="*.jar"/>
+        	</fileset>
+        	<fileset dir="${log4j.location}">
+        		<include name="*.jar"/>
+        	</fileset>
+        	<fileset dir="${bitlet.location}">
+        		<include name="*.jar"/>
+        	</fileset>
+            <pathelement path="${java.class.path}"/>
+        </path>
+    </target>
+	 
+		<target name="javadoc">
+			<javadoc access="public" 
+				author="true" 
+				destdir="doc/api" 
+				nodeprecated="false" 
+				nodeprecatedlist="false" 
+				noindex="false" 
+				nonavbar="false" 
+				notree="false" 
+				packagenames="gr.uoa.di.madgik.urlresolutionlibrary" 
+				source="1.5" 
+				sourcepath="./src/" 
+				splitindex="true" 
+				use="true" 
+				version="true">
+			</javadoc>
+		</target>
+	
+    <target name="clean" description="Delete classes and existing library">
+        <delete quiet="true" dir="${project.build}"/>
+    </target>
+</project>

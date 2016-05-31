@@ -1,0 +1,12 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="geonetwork.1-0-0" date="2013-03-01">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset  component="geonetwork.2-1-1" date="2015-05-25">
+		<Change>Integration fixes</Change>
+	</Changeset>
+	<Changeset  component="geonetwork.2-1-2" date="2016-04-27">
+		<Change>Integration fixes</Change>
+	</Changeset>
+</ReleaseNotes>

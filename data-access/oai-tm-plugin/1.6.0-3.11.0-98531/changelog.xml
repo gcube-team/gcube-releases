@@ -1,0 +1,26 @@
+<ReleaseNotes>
+	<Changeset component="oai-tm-plugin-1.6.0-3.11.0-98531" date="2014-06-30">
+		<Change>Fixed bugs in resumptionToken</Change>
+	</Changeset>
+	<Changeset component="oai-tm-plugin-1.6.0-3.11.0-98531" date="2014-02-14">
+		<Change>Fixing bugs</Change>
+	</Changeset>
+	<Changeset component="oai-tm-plugin-1.6.0-3.11.0-98531" date="2013-12-13">
+		<Change>Fixing bugs</Change>
+	</Changeset>
+	<Changeset component="oai-tm-plugin-1.6.0-3.11.0-98531" date="2013-10-18">
+		<Change>Fixing bug in harvesting</Change>
+	</Changeset>
+	<Changeset component="oai-tm-plugin-1.6.0-3.11.0-98531" date="2013-05-29">
+		<Change>Setting cardinality and lastupdate</Change>
+	</Changeset>
+	<Changeset component="oai-tm-plugin-1.6.0-3.11.0-98531" date="2013-04-19">
+		<Change>Create valid collections</Change>
+	</Changeset>
+	<Changeset component="oai-tm-plugin-1.6.0-3.11.0-98531" date="2013-03-05">
+		<Change>Load parameters</Change>
+	</Changeset>
+	<Changeset component="oai-tm-plugin-1.6.0-3.11.0-98531" date="2013-01-17">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

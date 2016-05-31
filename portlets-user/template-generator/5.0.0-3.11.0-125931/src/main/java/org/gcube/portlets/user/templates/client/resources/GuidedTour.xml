@@ -1,0 +1,75 @@
+
+<!-- this is your main configuration XML (example name
+GuidedTour.xml), the source tag have to link this file:
+-->
+<guidedtour width="780" height="450" usemask="false">
+	<title>gCube Template Creator</title>
+	<guide>https://gcube.wiki.gcube-system.org/gcube/index.php/Common_Functionality#Template_Creation
+	</guide>
+	<themecolor>BLUE</themecolor>
+	<steps>
+		<step showTitle="true" v-alignment="ALIGN_TOP">
+			<title>gCube Reporting</title>
+			<bodies>
+				<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 14px; "><div style="padding-bottom: 40px;"><b>gCube Reporting</b> allows users to create Reports and generate different export formats (OpenXML, HTML, PDF) ) based on results retrieved from the infrastructure.</div><div style="padding-bottom: 40px;">gCube Templates are dynamically and statically completed.</div><div style="padding-bottom: 40px;">gCube Templates are loaded by the <b>gCube Report Generator</b> to produce actual reports.</div><div style="padding-bottom: 10px;"><b>Discover</b> gCube Reporting features through this quick tour.</div></div>
+]]></body>
+			</bodies>
+			<images>
+				<image url="images/tour/tour_1.jpg" />
+			</images>
+		</step>
+		<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Toolbox</title>
+			<bodies>
+				<body><![CDATA[
+<div style="line-height: 19px; font-size: 16px; padding: 10px;"><div style="padding-bottom: 90px;"><b>Define</b> your template by selecting from the Toolbox components.</div><div style="padding-bottom: 80px;">Choose from <b>several components:</b><br /><span style="font-style: italic;">title, headings, images, tables </span> and much more!</b></div><div style="padding-bottom: 10px;">Choose from <b>two different layouts:</b>: one column or double columns for each section.</div></div>
+]]></body>
+			</bodies>
+			<images>
+				<image url="images/tour/tour2.jpg" />
+			</images>
+		</step>
+		<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>ToC &amp; Reporting</title>
+			<bodies>
+				<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 16px; "><div style="padding-bottom: 10px;">Add a dynamic component for automatic <b>Table Of Content</b> creation.</div></div>
+<]]></body>
+				<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 16px; "><div style="padding-bottom: 10px;"><b>Format text</b> as you would in a word processor using the Formatting Bar.</div></div>
+]]></body>
+			</bodies>
+			<images>
+				<image url="images/tour/tourToc.jpg" />
+				<image url="images/tour/tourFormat.jpg" />
+			</images>
+		</step>
+		<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Tables</title>
+			<bodies>
+				<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 16px; "><div style="padding-bottom: 80px;">Add static or dynamic <b>Tables</b>.</div></div>
+<]]></body>
+				<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 16px; "><div style="padding-bottom: 10px;"><b>Merge</b> table cells, add/remove rows and much more!</div></div>
+]]></body>
+			</bodies>
+			<images>
+				<image url="images/tour/tour3_1.jpg" />
+				<image url="images/tour/tour3_2.jpg" />
+			</images>
+		</step>
+		<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Sections</title>
+			<bodies>
+				<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 16px; "><div style="padding-bottom: 70px;">Divide your template into various <b>Sections.</b></div><div style="padding-bottom: 50px;">Sections can be <b>imported</b> and/or <b>exported</b> from existing reports or templates.</div></div>
+]]></body>
+			</bodies>
+			<images>
+				<image url="images/tour/tour4.jpg" />
+			</images>
+		</step>
+	</steps>
+</guidedtour>

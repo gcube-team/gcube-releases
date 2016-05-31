@@ -1,0 +1,25 @@
+<Resource>
+  <ID></ID>
+  <Type>Service</Type>
+  <Profile>
+    <Description>Portal bundle for gCube to easily setup a gCube Liferay portal</Description>
+    <Class>Portal</Class>
+    <Name>Portal-bundle</Name>
+    <Version>2.4.0</Version>
+    <Packages>
+      <Software deployable="true">
+        <Description>gCube Liferay bundle</Description>
+        <Name>Portal-bundle</Name>
+        <Version>2.4.0</Version>
+        <MultiVersion value="false"/>
+        <Mandatory level="GHN"/>
+        <Shareable level="VO"/>
+        <Type>application</Type>
+        <Files>
+          <File>org.gcube.portal.portal-bundle.tar.gz</File>
+        </Files>
+      </Software>
+    </Packages>
+    <SpecificData></SpecificData>
+  </Profile>
+</Resource>

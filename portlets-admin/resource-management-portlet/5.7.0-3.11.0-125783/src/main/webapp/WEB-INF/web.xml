@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>ServiceProxy</servlet-name>
+		<servlet-class>org.gcube.portlets.admin.resourcemanagement.server.ServiceProxyImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServiceProxy</servlet-name>
+		<url-pattern>/resourcemanagementportlet/ServiceProxy</url-pattern>
+	</servlet-mapping>
+
+	<!-- Sweeper -->
+	<servlet>
+		<servlet-name>sweeperServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.admin.resourcesweeper.server.SweeperServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>sweeperServlet</servlet-name>
+		<url-pattern>/resourcemanagementportlet/sweeper</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- SUW -->
+	<filter>
+		<filter-name>guiceFilter</filter-name>
+		<filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>guiceFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<listener>
+		<listener-class>org.gcube.portlets.admin.software_upload_wizard.server.BootstrapListener</listener-class>
+	</listener>
+
+	<!-- AuthZ -->
+	<filter>
+		<filter-name>AuthFilter</filter-name>
+		<filter-class>org.gcube.resourcemanagement.support.shared.util.TokenFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AuthFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<!-- IS Health -->
+	<servlet>
+		<servlet-name>isHealthServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.admin.ishealthmonitor.server.ISMonitorServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>isHealthServlet</servlet-name>
+		<url-pattern>/resourcemanagementportlet/ishealth</url-pattern>
+	</servlet-mapping>
+
+	<!-- Activation Record Widgets -->
+	<servlet>
+		<servlet-name>arServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.admin.server.ARServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>arServlet</servlet-name>
+		<url-pattern>/resourcemanagementportlet/activeservice</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/resourcemanagementportlet/junithost/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/org.gcube.portlets.admin.resourcemanagement.ResourceManagementPortletJUnit/junithost/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>ResourceManagementPortlet.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

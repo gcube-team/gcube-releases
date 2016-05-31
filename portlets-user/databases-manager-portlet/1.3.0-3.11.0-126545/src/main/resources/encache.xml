@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	         xsi:noNamespaceSchemaLocation="ehcache.xsd"
+	         updateCheck="true" monitoring="autodetect"
+	         dynamicConfig="true">
+	         
+
+<defaultCache
+	            maxEntriesLocalHeap="10000"
+	            eternal="false"
+	            timeToIdleSeconds="120"
+	            timeToLiveSeconds="120"
+	            diskSpoolBufferSizeMB="30"
+	            maxEntriesLocalDisk="10000000"
+	            diskExpiryThreadIntervalSeconds="120"
+	            memoryStoreEvictionPolicy="LRU"
+	            statistics="false">
+	          </defaultCache>
+	 
+	    <cache name="DBCache"
+               maxBytesLocalHeap="200m"
+               maxBytesLocalDisk="2g"
+	           eternal="false"
+	           diskSpoolBufferSizeMB="30"
+	           timeToIdleSeconds="0"
+	           timeToLiveSeconds="172800"
+	           memoryStoreEvictionPolicy="LRU"
+	           transactionalMode="off"
+	           overflowToDisk="true"
+	           diskPersistent="false"
+	           >
+	    </cache>
+
+
+</ehcache>

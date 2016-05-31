@@ -1,0 +1,13 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.admin.wf-documents-portlet.1-5-0"
+		date="2013-10-21">
+		<Change>Ported to GWT 251</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.wf-documents-portlet.1-4-0"
+		date="2013-05-29">
+		<Change>Added Step Description</Change>
+		<Change>Minor restyling performed</Change>
+	</Changeset>
+</ReleaseNotes>

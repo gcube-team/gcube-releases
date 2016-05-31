@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.accounting.accounting-analytics-persistence-couchdb.2-0-0" date="2016-05-30">
+		<Change>Implemented new API for top values #2253</Change>
+	</Changeset>
+   <Changeset component="org.gcube.accounting.accounting-analytics-persistence-couchdb.1-2-0" date="2015-04-08">
+		<Change>Ready for ScopeProvider Removal #2194</Change>
+	</Changeset>
+   <Changeset component="org.gcube.accounting.accounting-analytics-persistence-couchdb.1-1-0" date="2015-02-08">
+		<Change>Internal Changes due to Accounting Lib generalization #1746</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-analytics-persistence-couchdb.1-0-0" date="2015-12-09">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

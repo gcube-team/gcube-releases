@@ -1,0 +1,22 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.token-generator.1-1-2"
+		date="2016-02-29">
+		<Change>Minor bug fixes.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.token-generator.1-1-1"
+		date="2016-01-22">
+		<Change>Bug fix: alert the user when the service is not available.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.token-generator.1-1-0"
+		date="2016-01-15">
+		<Change>Added copy-to-clipboard and hide/show mechanisms for hiding
+			the token.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.token-generator.1-0-0"
+		date="2015-09-28">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

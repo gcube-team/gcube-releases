@@ -1,0 +1,12 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-analysis.operation-sdmx.2-1-1" date="2015-05-21"> 
+		<Change>Integration fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-sdmx.2-0-0" date="2013-11-14"> 
+		<Change>Ported to model 3.0</Change>
+		<Change>Updated to latest worker API</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-sdmx.1-0-0" date="2013-10-25"> 
+		<Change>First version</Change>
+	</Changeset>
+</ReleaseNotes>

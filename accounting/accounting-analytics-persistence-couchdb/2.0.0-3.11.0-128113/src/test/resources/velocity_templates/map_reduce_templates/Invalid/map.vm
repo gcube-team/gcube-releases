@@ -1,0 +1,6 @@
+function(doc) {
+	if(!doc.usageRecordType && !doc.recordType){
+		emit([0, "No Record Type", doc.id], doc);
+		return;
+	}
+}

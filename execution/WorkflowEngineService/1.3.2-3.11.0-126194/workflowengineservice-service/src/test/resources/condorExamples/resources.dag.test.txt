@@ -1,0 +1,14 @@
+scope # /gcube/devsec
+chokeProgressEvents # false
+chokePerformanceEvents # false
+storePlans # true
+isDag # true
+retrieveJobClassAd # true
+timeout # -1
+pollPeriod # 60000
+submit # submit.condor # test/condorExamples/submit.dag.condor
+executable # simple # test/condorExamples/simple # local
+inData # job.finalize.submit # test/condorExamples/job.finalize.submit # local 
+inData # job.setup.submit # test/condorExamples/job.setup.submit # local
+inData # job.work1.submit # test/condorExamples/job.work1.submit # local
+inData # job.work2.submit # test/condorExamples/job.work2.submit # local

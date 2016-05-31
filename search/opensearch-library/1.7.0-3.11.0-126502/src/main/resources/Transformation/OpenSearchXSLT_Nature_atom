@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>36dd7390-b04c-11df-b3bd-9293ef4ee8e9</ID>
+  <Type>GenericResource</Type>
+  <Profile>
+    <SecondaryType>OpenSearchXSLT</SecondaryType>
+    <Name>OpenSearchXSLT_Nature_atom</Name>
+    <Description>test XSLT to transform OpenSearch atom responses of the Nature external repository.</Description>
+    <Body>
+      <xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        <xsl:template match="*[local-name()='entry']">
+          <record>
+            <xsl:value-of select="*[local-name()='title']"/>
+          </record>
+        </xsl:template>
+      </xsl:transform>
+    </Body>
+  </Profile>
+</Resource>

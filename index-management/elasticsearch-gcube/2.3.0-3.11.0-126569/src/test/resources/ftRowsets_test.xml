@@ -1,0 +1,12 @@
+<ROWSET colID="aa268db0-9d63-11de-8d8f-a04a2d1ca936" idxType="ft_test" lang="en">
+<ROW>
+<FIELD lang="en" name="mykey">key1</FIELD>
+<FIELD lang="en" name="myvalue">value1</FIELD>
+<FIELD name="ObjectID">cms://5b268db0-9d63-11de-8d8f-a04a2d1ca936/5fa90890-9d63-11de-8d8f-a04a2d1ca936</FIELD></ROW>
+</ROWSET>
+<ROWSET colID="aa268db0-9d63-11de-8d8f-a04a2d1ca936" idxType="ft_test" lang="en">
+<ROW>
+<FIELD lang="en" name="mykey">key2</FIELD>
+<FIELD lang="en" name="myvalue">value2</FIELD>
+<FIELD name="ObjectID">cms://6b268db0-9d63-11de-8d8f-a04a2d1ca936/5fa90890-9d63-11de-8d8f-a04a2d1ca936</FIELD></ROW>
+</ROWSET>

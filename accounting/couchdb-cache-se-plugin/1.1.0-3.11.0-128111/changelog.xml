@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.accounting.couchdb-cache-se-plugin.1.1.0" date="2016-05-30">
+		<Change>Re-implemented plugin using new accounting analytics library</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.accounting.couchdb-cache-se-plugin.1.0.0" date="2016-02-08">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

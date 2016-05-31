@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>SearchServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.searchportlet.server.SearchServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>WorkspaceLightService</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.lighttree.server.WorkspaceServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- quicktourServlet -->
+	<servlet>
+		<servlet-name>quicktourServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.guidedtour.server.TourServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>quicktourServlet</servlet-name>
+		<url-pattern>/searchportletg/quicktourServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>SearchServlet</servlet-name>
+		<url-pattern>/searchportletg/SearchServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>WorkspaceLightService</servlet-name>
+		<url-pattern>/searchportletg/WorkspaceLightService</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>SearchPortletG.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

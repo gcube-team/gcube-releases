@@ -1,0 +1,17 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.questions.1-2-0"
+		date="2015-08-29">
+		<Change>Minor Restyle</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.questions.1-1-0"
+		date="2015-04-29">
+		<Change>Replaced non consistent image-button for sending message with
+			actual button
+		</Change>
+		<Change>Ported to GWT 270</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.questions.1-0-0"
+		date="2014-12-09">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

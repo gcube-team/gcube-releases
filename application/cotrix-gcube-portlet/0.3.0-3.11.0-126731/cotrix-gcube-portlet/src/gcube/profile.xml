@@ -1,0 +1,24 @@
+<Resource version="0.4.x">
+    <ID>dec27470-447e-11e2-a749-e3b17e68146a</ID>
+    <Type>GenericResource</Type>
+    <Scopes>
+        <Scope>/gcube</Scope>   
+    </Scopes>
+    <Profile>
+        <SecondaryType>ApplicationProfile</SecondaryType>   
+        <Name>Cotrix</Name>
+        <Description>Cotrix application</Description>
+        <Body>
+            <AppId>org.cotrix</AppId>
+            <ThumbnailURL>http://ftp.d4science.org/apps/profiles/cotrix.png</ThumbnailURL>
+            <EndPoint>
+                <Scope>/gcube/devsec/devVRE</Scope>
+                <URL>/group/devvre/cotrix</URL>
+            </EndPoint>
+            <EndPoint>
+                <Scope>/gcube/devNext/NextNext</Scope>
+                <URL>/group/nextnext/cotrix</URL>
+            </EndPoint>
+        </Body>
+    </Profile>
+</Resource>

@@ -1,0 +1,164 @@
+
+ table {
+	border-collapse: separate !important;
+	border-spacing: 0;
+}
+div.portlet-content {
+	padding-top: 0px;
+}
+
+.notification-btn {
+	font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	display: inline-block;
+	width: 175px;
+	text-decoration: none;
+	margin-bottom: 0;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	color: #3B5998;
+	background-color: transparent;
+	line-height: 1.33;
+	border-radius: 6px;
+	margin: 0 0 -20px 0;
+}
+
+.notification-btn:hover {
+	opacity: 0.8;
+	text-decoration: underline;
+}
+
+a.link,a.link:active,a.link:visited {
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+		sans-serif;
+	font-size: 12px;
+	cursor: pointer;
+	cursor: hand;
+	text-decoration: none;
+	color: #3B5998;
+}
+
+a.link:hover {
+	opacity: 0.8;
+	text-decoration: underline;
+}
+
+.new-notifications-show {
+	opacity: 1;
+	background: #D6E2FC;
+	height: 38px;
+}
+
+
+.day-wrapper {
+	width: 100%;
+	border-bottom-color: #DADADA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	padding: 15px 7px 3px;
+}
+
+.day-label {
+	color: #444444;
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+		sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 13px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.single-notification-table {
+	width: 920px;
+	padding: 5px;
+	border-bottom: 1px solid #EFEFEF;
+}
+
+
+.unread-notification {
+	background-color: #e8effa;
+}
+
+
+.no-notification-message {
+	line-height: 40px;
+	font-family: 'Architects Daughter', arial, sans-serif;
+	font-size: 15px;
+}
+
+.notification-photo {
+	display: block;
+	padding: 2px;
+	border: none;
+}
+
+.user-notification-time {
+	width: 99%;
+	color: #999;
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+		sans-serif;
+	font-size: 12px;
+	padding: 1px 10px;
+	white-space: nowrap;
+}
+
+.gwt-CheckBox {
+	margin: 5px;
+	padding: 5px;
+}
+
+.gwt-CheckBox label {
+	padding: 5px;
+}
+.user-notification {
+	width: 99%;
+	color: #333;
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+		sans-serif;
+	font-size: 12px;
+	border-color: #999;
+	border-width: 1px;
+	letter-spacing: normal;
+}
+
+.user-notification-comment {
+	width: 99%;
+	color: #666;
+	font: italic 12px 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial, sans-serif;
+	border-color: #999;
+	border-width: 1px;
+	letter-spacing: normal;
+}
+
+.gwt-CheckBox {
+    margin-right: 0;
+    padding-right: 0;
+}
+.floatingLeft {
+	float:left;
+}
+
+.floatingRight {
+	float:right;
+}
+
+.paddingRight {
+	padding-right: 15px;
+}
+
+.paddingLeft {
+	padding-left: 15px;
+}
+
+.displayInline {
+	display: inline;
+}

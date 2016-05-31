@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>9e53ac60-a0b6-11df-bd51-e9b3f0b0d0ac</ID>
+  <Type>GenericResource</Type>
+  <Scopes>
+    <Scope>/gcube/devsec</Scope>
+  </Scopes>
+  <Profile>
+    <SecondaryType>OpenSearchResource</SecondaryType>
+    <Name>OpenSearchResource_GENESI-DR_Dataset_OGC_WMS</Name>
+    <Description>Generic resource containing info for the GENESI-DR OGC:WMS external repository</Description>
+    <Body>
+      <OpenSearchResource>
+        <name>GENESI-DR Dataset: OGC:WMS</name>
+        <descriptionDocumentURI>http://dr-site.genesi-dr.eu/genesi/sinanet/ogc:wms/description/</descriptionDocumentURI>
+        <brokeredResults>false</brokeredResults>
+        <transformation>
+          <MIMEType>application/atom+xml</MIMEType>
+          <recordSplitXPath>*[local-name()='feed']/*[local-name()='entry']</recordSplitXPath>
+          <recordIdXPath>//*[local-name()='entry']/*[local-name()='id']</recordIdXPath>
+          <XSLTLink>OpenSearchXSLT_identity</XSLTLink>
+        </transformation>
+      </OpenSearchResource>
+    </Body>
+  </Profile>
+</Resource>

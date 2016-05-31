@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.vre-management.smart-executor-hello-world-plugin.1.0.0" date="2015-02-05">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

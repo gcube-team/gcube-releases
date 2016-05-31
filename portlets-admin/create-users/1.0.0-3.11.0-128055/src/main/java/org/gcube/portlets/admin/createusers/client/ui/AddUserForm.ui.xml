@@ -1,0 +1,120 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.form-main-style {
+		margin-left: 10px;
+	}
+	
+	.fieldset-border-style {
+		border: 1px groove #444;
+		-webkit-box-shadow: 0px 0px 0px 0px #000;
+		box-shadow: 0px 0px 0px 0px #000;
+		padding: 10px;
+	}
+	
+	.legend-style {
+		width: auto;
+		padding: 10px;
+		margin-bottom: 0px;
+	}
+	
+	@external .form-horizontal .control-label;
+	.form-horizontal .control-label {
+		margin-bottom: 15px;
+		text-align: left;
+	}
+	
+	@external .form-horizontal .input-large;
+	.form-horizontal .input-large {
+		width: 95%;
+		margin-bottom: 15px;
+	}
+	
+	.block-alert-style {
+		margin-top: 10px;
+		padding: 10px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<b:Form type="HORIZONTAL" styleName="{style.form-main-style}"
+			ui:field="form">
+			<b:Fieldset styleName="{style.fieldset-border-style}">
+
+				<b:Legend styleName="{style.legend-style}">
+					Insert User Information
+					<small>* is required</small>
+				</b:Legend>
+
+				<b:ControlGroup>
+
+					<b:ControlLabel for="email" title="User's email">
+						<font color="red">*</font>
+						E-mail:
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" placeholder="E-mail"
+							b:id="email" title="User's email" ui:field="emailTextbox" />
+					</b:Controls>
+
+					<b:ControlLabel for="name" title="User's name">
+						<font color="red">*</font>
+						Name:
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" placeholder="Name"
+							b:id="name" title="User's name" ui:field="nameTextbox" />
+					</b:Controls>
+
+					<b:ControlLabel for="surname" title="User's surname">
+						<font color="red">*</font>
+						Surname:
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" placeholder="Surname"
+							b:id="surname" title="User's surname" ui:field="surnameTextbox" />
+					</b:Controls>
+
+					<b:ControlLabel for="company" title="User's company">Institution/Organization:</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" placeholder="Institution/Organization"
+							b:id="company" title="User's Institution/Organization" ui:field="companyTextbox" />
+					</b:Controls>
+
+					<b:ControlLabel for="sendmail"
+						title="Send a notification mail to the user">Send mail:</b:ControlLabel>
+					<b:Controls>
+						<b:CheckBox b:id="sendmail" title="Send a notification mail to the user"
+							checked="true" ui:field="sendMailCheckbox"></b:CheckBox>
+					</b:Controls>
+
+					<!-- <b:ControlLabel title="User's gender">Gender</b:ControlLabel> -->
+					<!-- <b:Controls> -->
+					<!-- <b:RadioButton b:id="gender" checked="true" title="Male" -->
+					<!-- ui:field="maleCheckbox" name="gender">Male</b:RadioButton> -->
+					<!-- <b:RadioButton b:id="gender" title="Female" -->
+					<!-- ui:field="femaleCheckbox" name="gender">Female</b:RadioButton> -->
+					<!-- </b:Controls> -->
+
+					<br></br>
+
+					<b:Controls>
+						<b:Button addStyleNames="btn" ui:field="submit" type="PRIMARY"
+							title="Add user" block="true">Add</b:Button>
+					</b:Controls>
+
+					<br></br>
+
+					<b:Image ui:field="performingRequest" visible="false"></b:Image>
+					
+					<b:AlertBlock type="ERROR" close="false" animation="true"
+						visible="false" ui:field="errorBlock" styleName="{style.block-alert-style}"></b:AlertBlock>
+
+					<b:AlertBlock type="SUCCESS" close="false" animation="true"
+						visible="false" ui:field="successBlock" styleName="{style.block-alert-style}"></b:AlertBlock>
+
+				</b:ControlGroup>
+			</b:Fieldset>
+		</b:Form>
+	</g:HTMLPanel>
+</ui:UiBinder> 

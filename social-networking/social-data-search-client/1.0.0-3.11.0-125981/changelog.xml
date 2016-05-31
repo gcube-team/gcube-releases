@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.socialnetworking.social-data-search-client.1-0-0"
+		date="2016-02-29">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

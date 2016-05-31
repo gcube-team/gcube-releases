@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>org.gcube.data-transformation</groupId>
+	<artifactId>data-transformation-library-pom</artifactId>
+	<version>2.1.8-3.11.0-126584</version>
+	<packaging>pom</packaging>
+
+	<name>DataTransformationLibrary-POM</name>
+	<description>A library for the Data Transformation Service</description>
+
+	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/branches/data-transformation/DataTransformationLibrary/2.1/${project.name}</connection>
+		<developerConnection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/branches/data-transformation/DataTransformationLibrary/2.1/${project.name}</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/branches/data-transformation/DataTransformationLibrary/2.1/${project.name}/</url>
+	</scm>
+
+	<modules>
+		<module>DataTransformationLibrary</module>
+		<module>DataTransformationLibrary-NODEPS</module>
+	</modules>
+
+	<properties>
+		<distroDirectory>distro</distroDirectory>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.common.rest</groupId>
+			<artifactId>resource-manager</artifactId>
+			<version>2.0.1-3.11.0-125822</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common.rest</groupId>
+			<artifactId>resource-manager-is</artifactId>
+			<version>2.0.2-3.11.0-126683</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.distribution</groupId>
+			<artifactId>axis-patched</artifactId>
+			<version>1.2RC</version>
+		</dependency>
+		<dependency>
+			<groupId>axis</groupId>
+			<artifactId>axis-jaxrpc</artifactId>
+			<version>1.2-RC2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.4</version>
+		</dependency>
+	</dependencies>
+
+</project>

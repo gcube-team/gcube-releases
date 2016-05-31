@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='JoinVRE'>
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.activity.Activity' />
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+
+<!-- 	<set-property name="user.agent" value="gecko1_8,safari" /> -->
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='org.gcube.portlets.user.joinvre.client.JoinVRE' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+	<add-linker name="xsiframe" />
+</module>

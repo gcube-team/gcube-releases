@@ -1,0 +1,24 @@
+#! /bin/sh
+#
+# Portions of this file Copyright 1999-2005 University of Chicago
+# Portions of this file Copyright 1999-2005 The University of Southern California.
+#
+# This file or a portion of this file is licensed under the
+# terms of the Globus Toolkit Public License, found at
+# http://www.globus.org/toolkit/download/license.html.
+# If you redistribute this file, with or without
+# modifications, you must include this notice in the file.
+#
+
+. ${GLOBUS_LOCATION}/etc/globus-devel-env.sh
+
+#execute the reboot scripts, if any
+REBOOT_SCRIPTS_FILE=${GLOBUS_LOCATION}/etc/org.gcube.common.vremanagement.deployer/reboot_scripts
+if [ -e $REBOOT_SCRIPTS_FILE ]; then
+	OLD_PWD=$PWD
+	chmod 700 $REBOOT_SCRIPTS_FILE; . $REBOOT_SCRIPTS_FILE
+	cd $OLD_PWD
+fi
+
+export GLOBUS_OPTIONS="$GCORE_START_OPTIONS $GLOBUS_OPTIONS"
+exec $GLOBUS_LOCATION/bin/globus-start-container -quiet "$@"

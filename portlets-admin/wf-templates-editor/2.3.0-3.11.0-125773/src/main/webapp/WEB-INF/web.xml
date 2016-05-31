@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <servlet-name>wftemplatesServlet</servlet-name>
+    <servlet-class>org.gcube.portlets.admin.wftemplates.server.WfTemplatesServiceImpl
+		</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>wftemplatesServlet</servlet-name>
+    <url-pattern>/workflowtemplates/wftemplates</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>remoteLoggingServiceImpl</servlet-name>
+    <servlet-class>com.google.gwt.libideas.logging.server.RemoteLoggingServiceImpl
+		</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>remoteLoggingServiceImpl</servlet-name>
+    <url-pattern>/workflowtemplates/logging</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>quicktourServlet</servlet-name>
+    <servlet-class>org.gcube.portlets.user.guidedtour.server.TourServiceImpl
+		</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>quicktourServlet</servlet-name>
+    <url-pattern>/workflowtemplates/quicktourServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>WorkflowTemplates.html</welcome-file>
+  </welcome-file-list>
+</web-app>

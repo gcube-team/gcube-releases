@@ -1,0 +1,32 @@
+package org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.generators;
+import java.io.File;
+import java.net.URL;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.LinkedHashMap;
+import java.io.StringWriter;
+import org.apache.commons.io.IOUtils;
+import org.apache.xmlbeans.XmlObject;
+import org.gcube.dataanalysis.wps.statisticalmanager.synchserver.bindings.*;
+import org.n52.wps.algorithm.annotation.*;
+import org.n52.wps.io.data.*;
+import org.n52.wps.io.data.binding.complex.*;
+import org.n52.wps.io.data.binding.literal.*;
+import org.n52.wps.server.*;import org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mapping.AbstractEcologicalEngineMapper;import org.n52.wps.server.*;import org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.*;
+@Algorithm(statusSupported=false, title="ICCAT_VPA", abstrakt="An algorithm for stock assessment of catch statistics published by the International Commission for the Conservation of Atlantic Tunas (ICCAT).  Produces summary statistics about a stock, involving assessment of fishing mortality, abundance, catch trend,  fecundity and recruitment. Developed by IFREMER and IRD. Contact persons: Sylvain Bonhommeau sylvain.bonhommeau@ifremer.fr,  Julien Barde julien.barde@ird.fr.", identifier="org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.generators.ICCAT_VPA", version = "1.1.0")
+public class ICCAT_VPA extends AbstractEcologicalEngineMapper implements IGenerator{
+@LiteralDataInput(abstrakt="Name of the parameter: StartYear. First year of the dataset temporal extent", defaultValue="1950", title="First year of the dataset temporal extent", identifier = "StartYear", maxOccurs=1, minOccurs=1, binding = LiteralIntBinding.class) public void setStartYear(Integer data) {inputs.put("StartYear",""+data);}
+@LiteralDataInput(abstrakt="Name of the parameter: EndYear. Last year of the dataset temporal extent", defaultValue="2013", title="Last year of the dataset temporal extent", identifier = "EndYear", maxOccurs=1, minOccurs=1, binding = LiteralIntBinding.class) public void setEndYear(Integer data) {inputs.put("EndYear",""+data);}
+@ComplexDataInput(abstrakt="Name of the parameter: CAAFile. Catch at Age Matrix (Number of Fish caught by year and for each age)", title="Catch at Age Matrix (Number of Fish caught by year and for each age)", maxOccurs=1, minOccurs=1, identifier = "CAAFile", binding = D4ScienceDataInputBinding.class)	public void setCAAFile(GenericFileData file) {inputs.put("CAAFile",file);}
+@ComplexDataInput(abstrakt="Name of the parameter: PCAAFile. Partial Catch at Age Matrix (Number of Fish caught by gear and year and for each age)", title="Partial Catch at Age Matrix (Number of Fish caught by gear and year and for each age)", maxOccurs=1, minOccurs=1, identifier = "PCAAFile", binding = D4ScienceDataInputBinding.class)	public void setPCAAFile(GenericFileData file) {inputs.put("PCAAFile",file);}
+@ComplexDataInput(abstrakt="Name of the parameter: CPUEFile. Table of Catch Per Unit of Effort used in the stock assessment", title="Table of Catch Per Unit of Effort used in the stock assessment", maxOccurs=1, minOccurs=1, identifier = "CPUEFile", binding = D4ScienceDataInputBinding.class)	public void setCPUEFile(GenericFileData file) {inputs.put("CPUEFile",file);}
+@ComplexDataInput(abstrakt="Name of the parameter: PwaaFile. Partial weight at age (Weight of Fish caught by gear and year and for each age)", title="Partial weight at age (Weight of Fish caught by gear and year and for each age)", maxOccurs=1, minOccurs=1, identifier = "PwaaFile", binding = D4ScienceDataInputBinding.class)	public void setPwaaFile(GenericFileData file) {inputs.put("PwaaFile",file);}
+@ComplexDataInput(abstrakt="Name of the parameter: waaFile. Fecundity at age (Fecundity of Fish caught by year and for each age)", title="Fecundity at age (Fecundity of Fish caught by year and for each age)", maxOccurs=1, minOccurs=1, identifier = "waaFile", binding = D4ScienceDataInputBinding.class)	public void setwaaFile(GenericFileData file) {inputs.put("waaFile",file);}
+@LiteralDataInput(abstrakt="Name of the parameter: shortComment. Free text for users to describe the current simulation", defaultValue=" ", title="Free text for users to describe the current simulation", identifier = "shortComment", maxOccurs=1, minOccurs=1, binding = LiteralStringBinding.class) public void setshortComment(String data) {inputs.put("shortComment",data);}
+@LiteralDataInput(abstrakt="Name of the parameter: nCPUE. Number of Catch Per Unit of Effort Time series to use", defaultValue="7", title="Number of Catch Per Unit of Effort Time series to use", identifier = "nCPUE", maxOccurs=1, minOccurs=1, binding = LiteralIntBinding.class) public void setnCPUE(Integer data) {inputs.put("nCPUE",""+data);}
+@LiteralDataInput(abstrakt="Name of the parameter: CPUE_cut. Identifier of the Catch Per Unit of Effort Time Serie to be shrunk", defaultValue="1", title="Identifier of the Catch Per Unit of Effort Time Serie to be shrunk", identifier = "CPUE_cut", maxOccurs=1, minOccurs=1, binding = LiteralIntBinding.class) public void setCPUE_cut(Integer data) {inputs.put("CPUE_cut",""+data);}
+@LiteralDataInput(abstrakt="Name of the parameter: n_remove_year. Number of the (last) years to be removed", defaultValue="1", title="Number of the (last) years to be removed", identifier = "n_remove_year", maxOccurs=1, minOccurs=1, binding = LiteralIntBinding.class) public void setn_remove_year(Integer data) {inputs.put("n_remove_year",""+data);}
+@LiteralDataInput(abstrakt="Name of the parameter: age_plus_group. Maximal age class of catches to be taken into account", defaultValue="10", title="Maximal age class of catches to be taken into account", identifier = "age_plus_group", maxOccurs=1, minOccurs=1, binding = LiteralIntBinding.class) public void setage_plus_group(Integer data) {inputs.put("age_plus_group",""+data);}
+@ComplexDataOutput(abstrakt="Output that is not predetermined", title="NonDeterministicOutput", identifier = "non_deterministic_output", binding = GenericXMLDataBinding.class)
+ public XmlObject getNon_deterministic_output() {return (XmlObject) outputs.get("non_deterministic_output");}
+@Execute	public void run() throws Exception {		super.run();	} }

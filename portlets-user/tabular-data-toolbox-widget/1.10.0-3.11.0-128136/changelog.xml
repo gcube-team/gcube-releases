@@ -1,0 +1,49 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.tabular-data-toolbox-widget.1-10-0" date="2016-05-01">
+		<Change>Fixed Layout</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-toolbox-widget.1-9-0" date="2015-10-15">
+		<Change>Updated wiki link</Change>
+		<Change>Updated i18N support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-toolbox-widget.1-8-0" date="2015-07-03">
+		<Change>Updated Layout</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-toolbox-widget.1-7-0" date="2015-04-30">
+		<Change>Updated i18n support</Change>
+		<Change>Added downscale C-Square</Change>
+		<Change>Added position column</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-toolbox-widget.1-6-0" date="2015-02-16">
+		<Change>Added create points panel</Change>
+		<Change>Added create C-Square and Ocean Area coordinates</Change>
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-toolbox-widget.1-5-0" date="2014-10-31">
+		<Change>Added Time Aggregation</Change>
+		<Change>Added Resources</Change>
+		<Change>Fixed dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-toolbox-widget.1-4-0" date="2014-09-12">
+		<Change>Added Background Tasks</Change>
+		<Change>Updated ToolBox</Change>
+		<Change>Updated pom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-toolbox-widget.1-3-0" date="2014-07-04">
+		<Change>Added GroupBy</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-toolbox-widget.1-2-0" date="2014-06-05">
+		<Change>Added Validation to ToolBox</Change>
+		<Change>Added History to ToolBox</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-toolbox-widget.1-1-0" date="2014-04-04">
+		<Change>Added HelpPanel to ToolBox</Change>
+		<Change>Added LabelColumnPanel to ToolBox</Change>
+		<Change>Added ChangeTableTypePanel to ToolBox</Change>
+		<Change>Added DuplicatesRowsPanel to ToolBox</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-toolbox-widget.1-0-0" date="2014-02-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

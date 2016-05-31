@@ -1,0 +1,138 @@
+/** Add css rules here for your application. */
+/** Example rules used by the template application (remove for your app) */
+/* h1 { */
+/* 	font-size: 2em; */
+/* 	font-weight: bold; */
+/* 	color: #777777; */
+/* 	margin: 40px 0px 70px; */
+/* 	text-align: center; */
+/* } */
+/* .sendButton { */
+/* 	display: block; */
+/* 	font-size: 16pt; */
+/* } */
+/* /** Most GWT widgets already have a style name defined */
+* /
+	/* .gwt-DialogBox { */ /* 	width: 400px; */ /* } */
+	/* .dialogVPanel { */ /* 	margin: 5px; */ /* } */
+	/* .serverResponseLabelError { */ /* 	color: red; */ /* } */
+	/* /** Set ids using widget.getElement().setId("idOfElement") */     *
+	/
+	/* #closeButton { */ /* 	margin: 15px 6px 6px; */ /* } */    
+
+table {
+	clear: none;
+}
+
+.vertical-margin {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.horizontal-margin {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.infoPanel {
+	padding: 5px 5px 5px 5px;
+	font-size: 1.1em;
+}
+
+.infoPanel ul {
+	margin-top: 0,5em;
+	margin-bottom: 1em;
+	margin-left: 1em;
+	list-style-type: circle;
+	list-style-position: inside;
+}
+
+.infoPanel p {
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+
+.infoPanel h1 {
+	font-size: 1.3em;
+	font-weight: bolder;
+/* 	margin-top: 1em; */
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.infoPanel h2 {
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+
+.infoPanel h3 {
+	font-size: 1.1em;
+	font-weight: bold;
+	font-style: italic;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+
+/* .x-tip p { */
+/* 	padding-top: 5px; */
+/* 	padding-bottom: 5px; */
+/* } */
+
+/* .x-tip ul { */
+/* 	padding-top: 5px; */
+/* 	padding-bottom: 5px; */
+/* 	list-style-type: disc; */
+/* 	list-style-position: inside; */
+/* } */
+
+.helpPanel {
+	margin: 5px 5px 5px 5px;
+	font-size: 12 px;
+}
+
+.helpPanel h1 {
+	font-size: 16px;
+	font-weight:bold;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.helpPanel h2 {
+	font-size: 13px;
+	font-weight:bold;
+	font-style: italic;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.helpPanel p {
+	margin-left:5px;
+	margin-right:5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.helpPanel ul {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left:5px;
+	list-style-type: disc;
+	list-style-position: inside;
+}
+
+div.loading div{
+	background-image: url("images/loading1.gif");
+	background-repeat: no-repeat;
+    background-position: 2px 3px;
+    padding-left: 25px;
+}
+
+.helpPanel table{
+	
+}

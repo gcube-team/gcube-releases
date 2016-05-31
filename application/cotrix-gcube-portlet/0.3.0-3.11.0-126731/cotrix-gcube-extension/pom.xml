@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.cotrix</groupId>
+		<artifactId>cotrix-gcube</artifactId>
+		<version>0.3.0-3.11.0-126731</version>
+	</parent>
+
+	<artifactId>cotrix-gcube-extension</artifactId>
+
+	<properties>
+		<distroDirectory>distro</distroDirectory>
+	</properties>
+	
+	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/trunk/application/${project.artifactId}</connection>
+		<developerConnection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/trunk/application/${project.artifactId}</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/trunk/application/${project.artifactId}</url>
+	</scm>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.cotrix</groupId>
+			<artifactId>cotrix-security</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.cotrix</groupId>
+			<artifactId>cotrix-io</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.cotrix</groupId>
+			<artifactId>cotrix-gcube-stubs</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.cotrix</groupId>
+			<artifactId>cotrix-test-common</artifactId>
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>org.virtualrepository</groupId>
+			<artifactId>virtual-repository</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.virtualrepository</groupId>
+			<artifactId>virtual-gcube-workspace</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.4</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+	</build>
+</project>

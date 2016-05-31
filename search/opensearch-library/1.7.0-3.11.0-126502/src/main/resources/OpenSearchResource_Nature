@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>d44fce80-b04b-11df-a542-c4de6d462c23</ID>
+  <Type>GenericResource</Type>
+  <Scopes>
+    <Scope>/gcube/devsec</Scope>
+  </Scopes>
+  <Profile>
+    <SecondaryType>OpenSearchResource</SecondaryType>
+    <Name>OpenSearchResource_Nature</Name>
+    <Description>Generic resource containing info for the Nature external repository. Used for testing</Description>
+    <Body>
+      <OpenSearchResource>
+        <name>Nature.com</name>
+        <descriptionDocumentURI>http://www.nature.com/opensearch/opensearch.xml</descriptionDocumentURI>
+        <brokeredResults>false</brokeredResults>
+        <transformation>
+          <MIMEType>application/atom+xml</MIMEType>
+          <recordSplitXPath>*[local-name()='feed']/*[local-name()='entry']</recordSplitXPath>
+          <recordIdXPath>//*[local-name()='entry']/*[local-name()='id']</recordIdXPath>
+          <XSLTLink>OpenSearchXSLT_Nature_atom</XSLTLink>
+        </transformation>
+      </OpenSearchResource>
+    </Body>
+  </Profile>
+</Resource>

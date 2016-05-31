@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	version="2.0">
+	<portlet>
+		<portlet-name>JoinNew</portlet-name>
+		<display-name>gCube Join New Portlet</display-name>
+	        <portlet-class>org.gcube.portlets.user.joinnew.server.portlet.LoginPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Join New Environment</title>
+			<short-title>JoinNew Portlet</short-title>
+			<keywords>JoinNew Portlet</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>portlet-setup-show-borders</name>
+				<value>true</value>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

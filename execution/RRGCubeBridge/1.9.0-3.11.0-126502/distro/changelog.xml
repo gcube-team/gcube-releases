@@ -1,0 +1,85 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.execution.RRGCubeBridge.1-9-0" date="2014-07-02">
+   		<Change>Added support for SRU datasources</Change>
+   		<Change>Optimized code on fields retrieval</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRGCubeBridge.1-8-0" date="2014-06-03">
+   		<Change>Resources are retrieved by resource-manager</Change>
+   		<Change>Changed logger to slf4j</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRGCubeBridge.1-7-0" date="2014-03-28">
+   		<Change>Changed to support non-tree collections (like Smartfish collection)</Change>
+   		<Change>Added support for new type of indexservice that merges FT and FW</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRGCubeBridge.1-6-0" date="2014-02-07">
+   		<Change>RR retrieves collections that are specified as generic resources with secondary type DataSource and stores their type (if any)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRGCubeBridge.1-5-0" date="2013-10-10">
+   		<Change>Removed ghn dependencies</Change>
+   		<Change>Fixed delete searchable and presentable fields functionality</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRGCubeBridge.1-4-3" date="2013-05-13">
+   		<Change>ForwardIndexNode support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRGCubeBridge.1-4-2" date="2013-04-01">
+   		<Change>Removed CM dependencies</Change>
+	</Changeset>
+   	<Changeset component="org.gcube.execution.RRGCubeBridge.1-4-1" date="2013-02-12">
+   		<Change>FullTextIndexNode support</Change>
+   	</Changeset>
+	<Changeset component="org.gcube.execution.RRGCubeBridge.1-4-0" date="2012-11-26">
+   		<Change>Added harvesting of tree manager collections</Change>
+   		<Change>Harvesting of deployed packages of a Hosting Node has been re-enabled after RRModel database schema changes</Change>
+   	</Changeset>
+	<Changeset component="org.gcube.execution.RRGCubeBridge.1-3-2" date="2013-02-12">
+   		<Change>FullTextIndexNode support</Change>
+   </Changeset>
+	<Changeset component="org.gcube.execution.RRGCubeBridge.1-3-1" date="2012-10-22">
+   		<Change>Removed harvesting of deployed packages of a Hosting Node because the large list of packages caused fail at bridging.</Change>
+   		<Change>Static configuration resources are now loaded when field directory is missing</Change>
+   </Changeset>
+	<Changeset component="org.gcube.execution.RRGCubeBridge.1-3-0" date="2012-05-04">
+   		<Change>Aligned to new datastore labels.</Change>
+		<Change>Aligned to latest resource model (data sources and bound service instances)</Change>
+		<Change>Removed logic which is now integrated into plugins.</Change>
+   </Changeset>
+   
+    <Changeset component="org.gcube.execution.RRGCubeBridge.1-2-2" date="2012-4-5">
+   		<Change>fix for ticket #404: scopes used while updating field generic resources are now the same as the scopes used during retrieval instead of the scopes specified in the generic resources themselves.</Change>
+   </Changeset>
+   
+   <Changeset component="org.gcube.execution.RRGCubeBridge.1-2-1" date="2012-1-27">
+   			<Change>Property pair representation for hosting nodes is aligned with latest version of RRModel.</Change>
+   			<Change>pe2ng port property extraction from hosting nodes is now performed correctly.</Change>
+   </Changeset>
+   
+   <Changeset component="org.gcube.execution.RRGCubeBridge.1-2-0" date="2011-11-04">
+		<Change>Support for in memory prefetching of element subset for increased query and loading time performance.</Change>
+		<Change>Support for in memory prefetching of element subset for increased query and loading time performance. Per-field representation or persisted model in separate 
+		generic resources in order ensure model serialization remains scalable</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.execution.RRGCubeBridge.1-1-0" date="2011-09-02">
+		<Change>Added element metadata support. Metadata contain either extra information on existing items or information on items not present in the infrastructure 
+		anymore, such as inactive DataSources. Metadata contain implementation agnostic properties, which can be read by whichever repository provider is operating at the 
+		given moment. Currently the only element metadata used concerns inactive DataSources. A grace period is defined for inactive DataSources, and after it has elapsed, 
+		all searchables and presentables referencing such DataSources are purged from the corresponding fields. This functionality is performed by the updater in an extra 
+		outgoing alignment step.</Change>
+		<Change>GCube repository provider optionally reads configuration such as inactive DataSource grace period and generic resource name and secondary type. In the absence of such 
+		configuration, the default values are used.</Change>
+		<Change>Added support for automatic field-searchable-presentable creation. The aforementioned entities will be created by an updater which has the feature enabled.
+		The feature can be enabled by the corresponding property in the gCube repository provider configuration file.</Change>
+	</Changeset>	
+	
+	<Changeset component="org.gcube.execution.RRGCubeBridge.1-0-1" date="2011-07-29">
+		<Change>Changed scope handling in order to solve #1705. In the context of a running container, the gHN scopes are being used except root infrastructure scopes.
+		 In client mode, the previous behavior is retained, whereby the working scopes of the provider are the start scopes of the container, plus all VRE scopes under 
+		 the latter.</Change>
+		 <Change>Fixed scope assignment issue in getDataSource</Change>
+	</Changeset>
+	
+   <Changeset component="org.gcube.execution.RRGCubeBridge.1-0-0" date="2011-07-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>
+

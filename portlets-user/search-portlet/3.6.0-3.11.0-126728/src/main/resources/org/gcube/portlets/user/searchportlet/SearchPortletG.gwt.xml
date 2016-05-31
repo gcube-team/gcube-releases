@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='searchportletg'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<inherits name="net.eliasbalasis.tibcopagebus4gwt.tibcopagebus4gwt" />
+	<inherits name="org.jsonmaker.gwt.Gwt_jsonmaker" />
+	<inherits
+		name="net.eliasbalasis.tibcopagebus4gwt.testsubscriber.TestSubscriber" />
+	<inherits
+		name='org.gcube.portlets.widgets.lighttree.WorkspacePortletLightTree' />
+
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+	<!-- inherits GCUBE Quick tour -->
+	<inherits name='org.gcube.portlets.widgets.guidedtour.GuidedTour' />
+	<!-- Inherit the default GWT style sheet. You can change -->
+	<!-- the theme of your GWT application by uncommenting -->
+	<!-- any one of the following lines. -->
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+
+	<!-- Add gwt-log support, default level `TRACE` -->
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-TRACE" />
+
+	<!-- Loggers Enabled by default -->
+	<set-property name="log_ConsoleLogger" value="DISABLED" />
+	<set-property name="log_DivLogger" value="DISABLED" />
+	<set-property name="log_FirebugLogger" value="DISABLED" />
+	<set-property name="log_GWTLogger" value="DISABLED" />
+	<set-property name="log_SystemLogger" value="DISABLED" />
+
+	<!-- Loggers Disabled by default -->
+	<set-property name="log_WindowLogger" value="DISABLED" />
+
+	<!-- Other module inherits -->
+
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.user.searchportlet.client.SearchPortletG' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+	<!-- Specify the stylesheet -->
+	<stylesheet src='AdvancedSearchPortlet.css' />
+</module>

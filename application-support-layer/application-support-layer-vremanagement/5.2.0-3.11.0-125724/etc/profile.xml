@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID/>
+	<Type>Library</Type>
+	<Profile>
+		<Description>ASLVRE</Description>
+		<Class>ApplicationSupportLayer</Class>
+		<Name>ASLVRE</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>ASLVRE</Description>
+				<Name>ASLVRE</Name>
+				<Version>2.0.3</Version>
+				<Dependencies>
+				<Dependency>
+						<Service>
+							<Class>ApplicationSupportLayer</Class>
+							<Name>ASLCore</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ASLCore</Package>
+						<Version>[2.0.0,3.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>InformationSystem</Class>
+							<Name>ISCache</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ISCache</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>VREManagement</Class>
+							<Name>SoftwareRepository</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>SoftwareRepository-stubs</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>VREManagement</Class>
+							<Name>VREModeler</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>VREModeler-stubs</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+				</Dependencies>
+				<Files>
+					<File>ApplicationSupportLibraryVRE.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

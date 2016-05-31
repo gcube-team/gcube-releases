@@ -1,0 +1,20 @@
+cp ${org.diligentproject.searchservice.searchlibrary_ResultSet}/lib/*.jar ${prefix}/ResultSetLibrary;
+cp ${org.diligentproject.searchservice.resultsetservice.moduleDir}/*.sh ${prefix}/ResultSetGarbageCollectorLibrary;
+cp ${org.diligentproject.searchservice.searchlibrary_GarbageCollector}/lib/*.jar ${prefix}/ResultSetGarbageCollectorLibrary;
+cp ${org.diligentproject.searchservice.searchlibrary}/lib/*.jar ${prefix}/SearchLibrary;
+cp ${googleapi.moduleDir}/*.jar ${prefix}/GoogleAPIFixed
+cp ${mysql-jdbc.moduleDir}/*.jar ${prefix}/MySQL_connector
+cp ${jaxb.moduleDir}/lib/jaxb1-impl.jar ${prefix}/jaxb1-impl;
+cp ${jaxb.moduleDir}/lib/jaxb-api.jar ${prefix}/jaxb-api;
+cp ${jaxb.moduleDir}/lib/jaxb-impl.jar ${prefix}/jaxb-impl;
+cp ${jaxb.moduleDir}/lib/jaxb-xjc.jar ${prefix}/jaxb-xjc;
+cp ${jaf.moduleDir}/jaf-1.1/activation.jar ${prefix}/activation; 
+cp ${jaxb.moduleDir}/lib/jsr173_api.jar ${prefix}/jsr173_api;
+cp ${jep.moduleDir}/jep-2.3.1/jep-2.3.1.jar ${prefix}/jep-2.3.1;
+cp ${castor.moduleDir}/castor-1.0.1/castor-1.0.1.jar ${prefix}/castor-1.0.1;
+cp ${moduleDir}/ServiceProfile_ResultSetService_Search.xml ${prefix}; 
+cp ${org.diligentproject.searchservice.resultsetservice.moduleDir}/README ${prefix} ; 
+cp ${org.diligentproject.searchservice.resultsetservice.moduleDir}/LICENSE ${prefix} ;
+cp ${org.diligentproject.searchservice.searchlibrary_ResultSetClient.moduleDir}/lib/*.jar ${prefix}/ResultSetClientLibrary;
+cp ${org.diligentproject.searchservice.resultsetservice.moduleDir}/*.gar ${prefix}/ResultSetService;
+cp ${org.diligentproject.searchservice.resultsetservice_stubs.moduleDir}/lib/*.jar ${prefix}/ResultSetService_stubs;

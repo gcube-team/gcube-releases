@@ -1,0 +1,20 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-access.home-library-webapp.1.0.0"
+		date="2015-07-01">
+		<Change>First commit</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.home-library-webapp.1.1.0"
+		date="2015-10-12">
+		<Change>Using jackrabbit locks</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.home-library-webapp.1.2.0"
+		date="2016-01-20">
+		<Change>Feature #1786: HomeLIbrary: Enhance Messages performance
+		</Change>
+	</Changeset>
+		<Changeset component="org.gcube.data-access.home-library-webapp.1.3.0"
+		date="2016-04-20">
+		<Change>Enhance HL performance
+		</Change>
+	</Changeset>
+</ReleaseNotes>

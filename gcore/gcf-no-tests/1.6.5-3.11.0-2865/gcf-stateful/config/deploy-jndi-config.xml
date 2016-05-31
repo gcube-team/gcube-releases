@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+
+
+	<service name="acme/sample">
+
+		<environment name="configDir" value="@config.dir@" type="java.lang.String"
+			override="false" />
+
+	</service>
+
+	<service name="acme/sample/factory" />
+
+	<service name="acme/sample/stateful">
+
+		<resource name="home" type="org.acme.sample.Home">
+			<resourceParams>
+				<parameter>
+					<name>factory</name>
+					<value>org.globus.wsrf.jndi.BeanFactory</value>
+				</parameter>
+				<parameter>
+					<name>resourceClass</name>
+					<value>org.acme.sample.Resource</value>
+				</parameter>
+				<parameter>
+					<name>persistenceDelegateClass</name>
+					<value>org.acme.sample.ResourcePersistenceDelegate</value>
+				</parameter>
+			</resourceParams>
+		</resource>
+
+		<environment name="frequentUserLimit" value="3"
+			type="java.lang.Integer" override="false" />
+	</service>
+
+</jndiConfig>

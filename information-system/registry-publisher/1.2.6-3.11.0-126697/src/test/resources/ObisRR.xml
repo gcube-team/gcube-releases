@@ -1,0 +1,49 @@
+<Resource version="0.4.x">
+   <ID>e6705ad0-fa8a-11e2-92fd-b6f8c481951b</ID>
+   <Type>RuntimeResource</Type>
+   <Scopes>
+      <Scope>/d4science.research-infrastructures.eu</Scope>
+      <Scope>/d4science.research-infrastructures.eu/gCubeApps</Scope>
+   </Scopes>
+   <Profile>
+      <Category>Database</Category>
+      <Name>Obis2Repository</Name>
+      <Description>Obis2Repository</Description>
+      <Platform>
+         <Name>postgres</Name>
+         <Version>8</Version>
+         <MinorVersion>4</MinorVersion>
+         <RevisionVersion>0</RevisionVersion>
+         <BuildVersion>0</BuildVersion>
+      </Platform>
+      <RunTime>
+         <HostedOn>obis2.i-marine.research-infrastructures.eu</HostedOn>
+         <GHN UniqueID="" />
+         <Status>READY</Status>
+      </RunTime>
+      <AccessPoint>
+         <Description>jdbc connection url</Description>
+         <Interface>
+            <Endpoint EntryName="jdbc">jdbc:postgresql://obis2.i-marine.research-infrastructures.eu:5432/obis</Endpoint>
+         </Interface>
+         <AccessData>
+            <Username>postgres</Username>
+            <Password>Db/lnp5cAPwrAfjqorqctA==</Password>
+         </AccessData>
+         <Properties>
+            <Property>
+               <Name>dialect</Name>
+               <Value encrypted="false">org.hibernate.dialect.PostgreSQLDialect</Value>
+            </Property>
+            <Property>
+               <Name>dbname</Name>
+               <Value encrypted="false">obis</Value>
+            </Property>
+            <Property>
+               <Name>driver</Name>
+               <Value encrypted="false">org.postgresql.Driver</Value>
+            </Property>
+         </Properties>
+      </AccessPoint>
+   </Profile>
+</Resource>

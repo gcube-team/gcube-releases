@@ -1,0 +1,7 @@
+Install Map Reduce with 
+    
+#foreach( $designDocument in $designDocuments )
+   	couchapp push _desing/$designDocument http://<username>:<password>@<host>:<port>/<dbname>
+#end
+    
+

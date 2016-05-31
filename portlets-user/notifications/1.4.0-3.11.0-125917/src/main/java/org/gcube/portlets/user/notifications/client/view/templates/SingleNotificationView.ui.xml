@@ -1,0 +1,23 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:e="urn:import:org.gcube.portlets.user.gcubewidgets.client.elements">
+	<g:HTMLPanel ui:field="mainPanel">
+		<table class="single-notification-table">
+			<tr>
+				<td valign="TOP" style="width: 30px;" align="middle">
+					<g:Image styleName="notification-photo" url=""
+						ui:field="notificationImage" width="30" height="30" />
+
+				</td>
+				<td valign="TOP" style="width: 50px;">
+					<e:Span styleName="user-notification-time" ui:field="timeArea" />
+				</td>
+				<td valign="TOP">
+					<e:Span styleName="user-notification" ui:field="notificationText" />
+					<e:Span styleName="user-notification" ui:field="goApp" />
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

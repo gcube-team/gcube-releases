@@ -1,0 +1,35 @@
+.topic-title {
+	display: block;
+	font-size: 16px;
+	color: #555;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.trending-frame {
+	padding: 10px;
+	background-color: #FFF;
+	border-radius: 6px !important;
+	-moz-border-radius: 6px !important;
+	-webkit-border-radius: 6px !important;
+	border: 1px solid #DBDBDB;
+}
+
+a.topiclink,a.topiclink:active,a.topiclink:visited {
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+		sans-serif;
+	font-size: 15px;
+	cursor: pointer;
+	cursor: hand;
+	text-decoration: none;
+	color: #3B5998;
+}
+
+a.topiclink:hover {
+	opacity: 0.8;
+	text-decoration: underline;
+}
+
+.hashtag-label {
+	padding: 0 5px 1px;
+}

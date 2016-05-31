@@ -1,0 +1,2 @@
+serviceClass: org.gcube.application.aquamaps.aquamapsspeciesview.client.rpc.AquaMapsSpeciesViewRemoteService
+path: 9E0DD79322A6AD935B08E6C8FD6FD02A.gwt.rpc

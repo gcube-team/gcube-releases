@@ -1,0 +1,21 @@
+/** Add css rules here for your application. */
+
+.popup-button {
+	font-size:smaller;
+	background-color: inherit;
+	border: 0px;
+	padding: 0px;
+	cursor: pointer;
+	color: green;
+	text-aling: right;
+}
+
+.addRoleButton {
+	background-color: white;
+	border: 0px;
+	padding: 12px;
+	width: 32px;
+	height: 32px;
+	background: url(images/addRole.png) no-repeat;
+	cursor: pointer;
+}

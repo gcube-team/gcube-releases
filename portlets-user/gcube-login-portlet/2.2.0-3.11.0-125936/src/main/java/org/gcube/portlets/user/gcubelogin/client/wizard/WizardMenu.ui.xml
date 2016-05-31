@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+				<div id="breadcrumb">
+					<ul>
+						<li>
+							<span>Infrastructure and Theme</span>
+						</li>
+						<li class="selected">
+							<span>VREs checkup</span>
+						</li>
+						<li>
+							<span>Administrator account</span>
+						</li>
+						<li class="final">
+							<span>Finalize</span>
+						</li>
+					</ul>
+					</div>
+			</g:HTMLPanel>
+</ui:UiBinder> 

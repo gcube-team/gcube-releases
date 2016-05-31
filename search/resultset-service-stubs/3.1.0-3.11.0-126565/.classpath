@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Dependencies/ResultSetService/ResultSetLibrary.jar"/>
+	<classpathentry kind="lib" path="/Dependencies/ResultSetService/ResultSetGarbageCollector.jar"/>
+	<classpathentry kind="lib" path="/Dependencies/ResultSetService/org.gcube.common.searchservice.resultsetservice.stubs.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/gCoreLib"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

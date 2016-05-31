@@ -1,0 +1,80 @@
+The gCube System - soa3-connector
+--------------------------------------------------
+ 
+Interface for managing policies on a XACML policy server
+ 
+ 
+This software is part of the gCube Framework (https://www.gcube-system.org/): an
+open-source software toolkit used for building and operating Hybrid Data
+Infrastructures enabling the dynamic deployment of Virtual Research Environments
+by favouring the realisation of reuse oriented policies.
+ 
+The projects leading to this software have received funding from a series of    
+European Union programmes including:                                            
+* the Sixth Framework Programme for Research and Technological Development -    
+DILIGENT (grant no. 004260);                                                    
+* the Seventh Framework Programme for research, technological development and   
+demonstration - D4Science (grant no. 212488), D4Science-II (grant no.           
+239019),ENVRI (grant no. 283465), EUBrazilOpenBio (grant no. 288754), iMarine   
+(grant no. 283644);                                                             
+* the H2020 research and innovation programme - BlueBRIDGE (grant no. 675680),  
+EGIEngage (grant no. 654142), ENVRIplus (grant no. 654182), Parthenos (grant 
+no. 654119), SoBigData (grant no. 654024);
+ 
+ 
+Version
+--------------------------------------------------
+ 
+0.5.0-3.11.0-125533 (2016-05-30)
+ 
+Please see the file named "changelog.xml" in this directory for the release notes.
+ 
+ 
+Authors
+--------------------------------------------------
+
+* Ciro Formisano (ciro.formisano-AT-eng.it) ENGINEERING Ingegneria Informatica s.p.a.
+
+Maintainers
+-----------
+ 
+* Ciro Formisano (ciro.formisano-AT-eng.it) ENGINEERING Ingegneria Informatica s.p.a. 
+ 
+Download information
+--------------------------------------------------
+ 
+Source code is available from SVN: 
+    http://svn.d4science.research-infrastructures.eu/gcube/trunk/vo-management/SOA3/Connector/soa3-connector
+ 
+Binaries can be downloaded from the gCube website: 
+   https://www.gcube-system.org/
+ 
+ 
+Installation
+--------------------------------------------------
+ 
+Installation documentation is available on-line in the gCube Wiki:
+      https://wiki.gcube-system.org/gcube/SOA3_HowTo
+ 
+Documentation 
+--------------------------------------------------
+ 
+Documentation is available on-line in the gCube Wiki:
+    https://wiki.gcube-system.org/gcube/SOA3_Connector
+    https://wiki.gcube-system.org/gcube/SOA3_Development_Plan 
+    https://wiki.gcube-system.org/gcube/SOA3_User_Management_Module
+ 
+Support 
+--------------------------------------------------
+ 
+Bugs and support requests can be reported in the gCube issue tracking tool:
+    https://support.d4science.org/projects/gcube/
+ 
+ 
+Licensing
+--------------------------------------------------
+ 
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.
+
+
+

@@ -1,0 +1,17 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.portlets.admin.wftemplates.2-2-0"
+		date="2014-06-06">
+		<Change>Ported to gCore Free Portal</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.wftemplates.2-1-0"
+		date="2013-10-21">
+		<Change>Ported to Feather Weight Stack</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.wftemplates.2-0-0"
+		date="2013-05-29">
+		<Change>fix for step name too long #1778</Change>
+		<Change>Minor restyling performed</Change>
+	</Changeset>
+</ReleaseNotes>

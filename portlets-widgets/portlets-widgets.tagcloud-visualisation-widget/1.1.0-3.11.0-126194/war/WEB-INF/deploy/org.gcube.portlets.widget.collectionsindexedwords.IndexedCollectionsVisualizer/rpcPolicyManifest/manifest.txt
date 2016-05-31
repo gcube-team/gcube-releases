@@ -1,0 +1,2 @@
+# Module org.gcube.portlets.widget.collectionsindexedwords.IndexedCollectionsVisualizer
+# RPC service class, partial path of RPC policy file

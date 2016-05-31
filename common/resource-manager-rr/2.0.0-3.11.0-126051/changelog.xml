@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.rest.resource-manager-rr.1-0-0" date="2014-03-13">
+		<Change>Initial release</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.common.rest.resource-manager-rr.2-0-0" date="2014-06-04">
+		<Change>Added hibernate support</Change>
+		<Change>Changed RIDiscovererRRimpl constructor so that the object is immutable</Change>
+		<Change>Added RRInformationCollector</Change>
+	</Changeset>
+</ReleaseNotes>

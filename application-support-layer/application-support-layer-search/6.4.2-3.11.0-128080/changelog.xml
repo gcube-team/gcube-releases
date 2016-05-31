@@ -1,0 +1,53 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-search.2-2-7" date="2010-07-16">
+		<Change>Included declarations for OAI-PMH caches in ehcache configuration file</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-search.2-3-0" date="2010-09-03">
+		<Change>Support for cross collection search, without the need for selecting schema from the user</Change>
+		<Change>Collection name inserted in digital objects for results coming from search</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-search.2-3-1" date="2010-09-29">
+		<Change>Improved construction of query for abstract fields</Change>
+		<Change>Added check in case the generic resource for abstract fields mapping is missing</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-search.2-4-0" date="2010-10-21">
+		<Change>Added utility for openSearch fields retrieval from query template</Change>
+		<Change>Itegrated OpenSearch</Change>
+		<Change>Improved AbstractFields query construction</Change>
+		<Change>Fixed problem once deselecting all the collections</Change>
+		<Change>Added methods to get the results from ResultSetConsumer without transforming them</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-search.2-4-1" date="2010-10-21">
+		<Change>Fixed bug when selecting collection group for external collections (opensearch)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-search.2-5-0" date="2010-11-26">
+		<Change>Several bug fixes in search functionality</Change>
+		<Change>Added method and functionality for the counting of results coming from browse</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-search.2-5-1" date="2011-01-14">
+		<Change>Added logging for openSearch and abstract search types</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-search.2-6-0" date="2011-05-06">
+		<Change>Refactored for new CM</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-search.3-1-0" date="2011-09-02">
+		<Change>Changes made in correspondence to changes in query language of Search Service</Change>
+		<Change>Added support for browsing distinct fields</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-search.3-1-4" date="2012-01-27">
+		<Change>Added Search Accounting Info functionality</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-search.3-1-5" date="2012-04-05">
+		<Change>Fixed bug causing NullPointerException when Multiple collections with different languages are chosen</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-search.3-1-6" date="2012-08-29">
+		<Change>Changed towards complying with new version of Resource Registry</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-search.3-1-7" date="2013-01-29">
+		<Change>Bug Fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-search.4-0-0" date="2013-04-19">
+		<Change>Added Generic Search</Change>
+		<Change>Extended the API by adding new functionality</Change>
+	</Changeset>
+</ReleaseNotes>

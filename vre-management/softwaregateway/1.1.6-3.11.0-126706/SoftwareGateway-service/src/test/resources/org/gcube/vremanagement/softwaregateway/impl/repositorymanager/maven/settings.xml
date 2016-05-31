@@ -1,0 +1,92 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+<servers>
+    <server>
+        <id>gcube-snapshots</id>
+        <username>gcube-user</username>
+        <password>maven</password>
+    </server>
+    <server>
+        <id>gcube-releases</id>
+        <username>gcube-user</username>
+        <password>maven</password>
+    </server>
+</servers>
+<profiles>
+    <profile>
+        <id>gcube</id>
+        <repositories>
+            <repository>
+                <id>gcube-snapshots</id>
+                <name>gCubeSnapshots</name>
+                <url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-snapshots</url>
+                <releases>
+                    <enabled>false</enabled>
+                </releases>
+                <snapshots>
+                    <enabled>true</enabled>
+                </snapshots>
+            </repository>
+            <repository>
+                <id>gcube-releases</id>
+                <name>gCube Releases</name>
+                <url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-releases</url>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+            </repository>
+	    <repository>
+                <id>gcube-staging</id>
+                <name>gCube Staging</name>
+                <url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-staging</url>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+            </repository>	
+            <repository>
+					<id>gcube-externals</id>
+					<name>gCube Externals</name>
+					<url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-externals</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+				</repository>
+        </repositories>
+        <pluginRepositories>
+            <pluginRepository>
+                <id>gcube-snapshots</id>
+                <name>gCube Snapshots</name>
+                <url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-snapshots</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+            </pluginRepository>
+            <pluginRepository>
+                <id>gcube-releases</id>
+                <name>gCube Releases</name>
+                <url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-releases</url>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+            </pluginRepository>
+        </pluginRepositories>
+    </profile>
+</profiles>
+<activeProfiles>
+    <activeProfile>gcube</activeProfile>
+</activeProfiles>
+</settings>

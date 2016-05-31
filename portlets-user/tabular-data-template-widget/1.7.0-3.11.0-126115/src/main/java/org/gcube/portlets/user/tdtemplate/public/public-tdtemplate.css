@@ -1,0 +1,274 @@
+@CHARSET "UTF-8";
+
+/* .gwt-DialogBox { */
+/* 	border: 2px outset; */
+/* 	background-color: white; */
+/* } */
+.TemplateOperationPanel {
+	border: 1px solid;
+}
+
+.FlexTableTemplate {
+	border-collapse: collapse;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 10px;
+	/* 	height: 350px; */ /*     border: 1px solid #CCCCCC; */
+	background-color: #FFFFFF;
+	text-align: center;
+	border: 1px solid #7A89B0;
+}
+
+.FlexTableTemplate-header-row>td {
+	background: none repeat scroll 0 0 #D1E6E7;
+	color: #003399;
+	font-size: 12px;
+	height: 50px;
+	font-weight: bold;
+	border: 1px solid #7A89B0;
+	/*     border: none; */
+/*     border-right: 1px solid #FFFFFF; */
+/*     border-left: 1px solid #FFFFFF; */
+}
+
+.FlexTableTemplate-other-rows>td {
+	color: #666699;
+	padding: 5px;
+	border: 1px solid #7A89B0;
+	/*     width: 115px; */
+/*     border-right: 1px solid #CCCCCC; */
+/*     border-left: 1px solid #CCC; */
+/*     border-top: 1px solid #CCC; */
+}
+
+.SmartTable {
+	width: 95%;
+	border: 1px solid;
+	background-color: #FF9273;
+	opacity: 0.9;
+	color: black;
+	margin: 5px;
+}
+
+.smartButton {
+	color: #15428B;
+	cursor: pointer;
+	cursor: hand;
+	font-weight: normal;
+	font-size: 13px;
+	background: #FFF;
+	/* 	border-bottom: 1px inset #EDE; */ /* 	width: 98%; */
+	margin: 2px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.smartButton-selected {
+	background: #A9BFD3 !important;
+	color: whitesmoke;
+	font-weight: 500;
+}
+
+.smartButton {
+	-webkit-transition: background-color .3s ease-in-out;
+	-moz-transition: background-color .3s ease-in-out;
+	-o-transition: background-color .3s ease-in-out;
+	transition: background-color .3s ease-in-out;
+}
+
+.smartButton:active,.smartButton:focus,.smartButton:hover {
+	background: #E2EBF5;
+	font-weight: 500;
+}
+
+.suggestionLabel {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 13px;
+	/* 	width: 98%;  */ /* 	background-color: #E6F1FF; */
+/* 	background-color: #fdfdfd; */
+	/* 	background-color: #FFFACD; */
+	text-align: left;
+	/* 	opacity: 0.8; */
+	padding: 5px;
+/* 	font-weight: bold; */
+/* 	font-style: italic; */
+}
+
+.suggestionLabel span {
+	font-weight: normal;
+}
+
+.custommarginleft {
+	margin-left: 15px;
+}
+
+.baloonPanel {
+	padding: 5px;
+	border: solid;
+	border-width: 2px;
+	border-color: rgb(200, 210, 240);
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	opacity: 0.0;
+	background-color: rgb(220, 230, 254);
+	color: black;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgb(225, 240, 254)
+		), to(rgb(200, 220, 244) ) );
+	background: -moz-linear-gradient(top, rgb(244, 244, 254),
+		rgb(230, 230, 245) );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgb(225,240,254)',
+		endColorstr='rgb(200,220,244)' );
+}
+
+.suggestionLabel2 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 9px;
+	background-color: #F5F5F5;
+	text-align: left;
+	opacity: 0.8;
+	padding: 5px;
+	cursor: pointer;
+	margin-left: 1px;
+}
+
+.suggestionLabel2 div {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 10px;
+/* 	font-weight: bold; */
+}
+
+.suggestionLabel2 span {
+	font-weight: normal;
+}
+
+.FilterFlexTableTemplate {
+	border-collapse: separate;
+	text-align: left;
+	border: 1px solid;
+	border-spacing: 5px;
+	border-color: #CCCCCC;
+}
+
+.FilterFlexTableTemplate>*>tr:FIRST-CHILD {
+	font-weight: bold;
+}
+
+.FilterFlexTableTemplate > * > tr:first-child > td {
+	border-color: 1px solid #FF9273;
+}
+
+
+.stepPanel-selected {
+	background: #A9BFD3 !important;
+	color: whitesmoke;
+	vertical-align: middle !important;
+}
+
+.stepPanel-unselected {
+	background: #FFF !important;
+	color: #CCC;
+	vertical-align: middle !important;
+	opacity: 0.8;
+}
+
+.FlexTableTemplateActions {
+	border-collapse: collapse;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 10px;
+	margin: 10px;
+	/* 	height: 350px; */ /*     border: 1px solid #CCCCCC; */
+	background-color: #FFFFFF;
+	text-align: center;
+	border: 1px solid #7A89B0;
+}
+
+.FlexTableTemplateActions-header-row>td {
+	background: none repeat scroll 0 0 #D1E6E7;
+	color: #003399;
+	font-size: 12px;
+	height: 50px;
+	font-weight: bold;
+	border: 1px solid #7A89B0;
+	/*     border: none; */
+/*     border-right: 1px solid #FFFFFF; */
+/*     border-left: 1px solid #FFFFFF; */
+}
+
+/**
+* ACTION COLUMN
+*/
+.FlexTableTemplateActions-header-row-action {
+	background: none repeat scroll 0 0 #FFE3A8 !important;
+}
+
+.FlexTableTemplateActions-other-rows>td {
+	color: #2b2b2b;
+	padding: 5px;
+	border: 1px solid #7A89B0;
+	/*     width: 115px; */
+/*     border-right: 1px solid #CCCCCC; */
+/*     border-left: 1px solid #CCC; */
+/*     border-top: 1px solid #CCC; */
+}
+
+.htmlLabel {
+	font-family: Sans-Serif, "Lucida Sans Unicode", "Lucida Grande";
+	font-size: 12px;
+/* 	background-color: #fdfdfd; */
+	text-align: left;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.htmlLabel span {
+	font-weight: normal;
+}
+
+
+.FlexTableTemplateHistory {
+	border-collapse: collapse;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 1px;
+	background-color: #FFFFFF;
+	text-align: center;
+	border: 1px solid #CCC;
+}
+
+.FlexTableTemplateHistory-header-row>td {
+	background: none repeat scroll 0 0 #e5e5e5;
+	color: #003399;
+	height: 50px;
+	font-weight: bold;
+	border: 1px solid #CCC;
+}
+
+.FlexTableTemplateHistory-other-rows>td {
+	color: #2b2b2b;
+	border: 1px solid #CCC;
+	padding: 5px;
+	font-size: 11px;
+	text-align: left;
+}
+
+.legend-columns {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 9px;
+	background-color: #F5F5F5;
+	text-align: left;
+	opacity: 0.8;
+	padding: 5px;
+	cursor: pointer;
+	margin-left: 1px;
+}
+
+.handOnHover:HOVER {
+	cursor: pointer;
+}
+
+.seeMoreStyle{
+	margin: 10px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 10px;
+}
+

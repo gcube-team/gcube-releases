@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<project default="deploy">
+	
+	<!-- environment -->
+	<property environment="env" />
+
+	<!-- external environment -->
+	<echo message="container.dir ->${env.GLOBUS_LOCATION}" level="info"/>
+	<property name="container.dir" value="${env.GLOBUS_LOCATION}" />
+	<property name="container.schema.dir" location="${container.dir}/share/schema" />
+
+	<!-- load non-standard tasks -->
+	<taskdef resource="ise/antelope/tasks/antlib.xml">
+	  <classpath>
+	    <pathelement location="${container.dir}/lib/AntelopeTasks_3.4.2.jar"/>
+	  </classpath>
+	</taskdef>
+	
+	<!-- discriminate between local and remote build -->
+	<property name="etics.build" value="true" />
+		
+	<!-- service-specific locations -->	
+	<property name="service.dir" location="." />
+	<property name="service.dir" location="." />
+	<property name="etc.dir.name" value="etc" />
+	<property name="etc.dir" value="${service.dir}/${etc.dir.name}" />
+	<property name="source.dir" value="${service.dir}/src" />
+	<property name="schema.dir.name" value="schema" />
+	<property name="schema.dir" location="${service.dir}/${schema.dir.name}"/>
+		
+	<!-- load input properties  -->
+	<property file="${etc.dir}/build.properties" />
+	<stringutil property="package.dir" string="${package}"><!-- derive package.dir from ${package} -->
+		<replace regex="\." replacement="/"/>
+	</stringutil>	
+	
+	<!-- file defaults -->
+	<property name="jarfile" value="${package}.jar" />	
+	
+	<if name="etics.build" value="true">	
+		<property name="build.location" location="${service.dir}" />
+		<property name="lib.location" value="${build.location}/lib" />
+			
+		<else>
+			<property name="build.location" location="${env.BUILD_LOCATION}" />
+			<property name="lib.location" value="${build.location}/${lib.dir}" />
+		</else>
+	</if>
+		
+	<!-- temporary build locations -->
+	<property name="build.dir" location="${build.location}/build" />
+	<property name="build.class.dir" location="${build.dir}/classes" />
+	<property name="build.lib.dir" location="${build.dir}/lib" />
+	<property name="build.schema.dir" location="${build.dir}/schema" />
+	<property name="build.schema.service.dir" location="${build.schema.dir}/${package}" />		
+	<property name="build.stubs.dir" location="${build.dir}/stubs-${package}" />
+	<property name="build.stubs.src.dir" location="${build.stubs.dir}/src" />
+	<property name="build.stubs.class.dir" location="${build.stubs.dir}/classes" />
+
+	<!-- misc defaults -->
+	<property name="java.debug" value="on" />
+	<property name="java.deprecation" value="off" />
+		
+	<!-- common filesets -->
+	<fileset dir="${build.lib.dir}" id="garjars" />
+	<property name="garjars.id" value="garjars" />
+	
+	<property name="stubs.dir.name" value="stubs" />	
+	
+		
+	<!-- initialisation tasks -->
+	<target name="init" depends="clean" description="creates build structures"> 
+	
+		<!-- input summary -->
+		<echo message="Root Package -> ${package}" level="info"/>
+		<echo message="Configuration -> ${etc.dir}" level="info"/>
+		<echo message="External dependencies -> ${lib.location}" level="info"/>
+
+		<!-- output summary -->
+		<echo message="Lib Jar -> ${jarfile}" level="info"/>
+		
+		<!-- create dependency location, if it does not exist already -->
+		<mkdir dir="${lib.location}" />
+		
+		<!-- create temporary build folders -->
+		<mkdir dir="${build.dir}" />
+		<!-- mkdir dir="${build.class.dir}" /-->
+		<delete dir="${build.lib.dir}" />
+		<mkdir dir="${build.lib.dir}" />
+		<!-- mkdir dir="${build.schema.service.dir}" /-->
+		<mkdir dir="${build.stubs.dir}" />
+		<mkdir dir="${build.stubs.src.dir}"/>
+		<mkdir dir="${build.stubs.class.dir}"/>	
+		<mkdir dir="${build.schema.service.dir}" />	
+		
+		<copy toDir="${build.schema.dir}">
+			<fileset dir="${schema.dir}"/>
+		</copy>		
+
+
+		<replaceregexp match="wsdlsoap:operation soapAction=&quot;&quot;" replace="wsdlsoap:operation soapAction=&quot;http://voms&quot;" flags="g" byline="true"> 	
+			<fileset dir="${build.schema.dir}" casesensitive="yes">
+  				<include name="**/*.wsdl"/>
+			</fileset> 
+		 </replaceregexp>
+	
+	
+	
+
+		
+		<!-- Populates library folder -->
+		<copy toDir="${build.lib.dir}">
+			<fileset dir="${lib.location}">
+				<exclude name="${jarfile.stubs}" />
+			</fileset>
+		</copy>
+		
+	</target>	
+	
+     <target name="generateStubs" depends="init" unless="axis-uptodate">
+		<echo message="build.stubs.src.dir ->${build.stubs.src.dir}" level="info"/>
+		<echo message="schema.dir ->${build.schema.dir}" level="info"/>		
+     
+         <java classname="org.apache.axis.wsdl.WSDL2Java" fork="true">
+             <arg line="-o ${build.stubs.src.dir} --noWrapped ${build.schema.dir}/${wsdl.1}.wsdl"/>
+ 			<classpath>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+					<exclude name="**/${jarfile.stubs}" />
+				</fileset>
+				<fileset dir="${container.dir}/lib">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+         </java>
+         
+          <java classname="org.apache.axis.wsdl.WSDL2Java" fork="true">
+             <arg line="-o ${build.stubs.src.dir} ${build.schema.dir}/${wsdl.2}.wsdl"/>
+ 			<classpath>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+					<exclude name="**/${jarfile.stubs}" />
+				</fileset>
+				<fileset dir="${container.dir}/lib">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+         </java>
+         
+         <java classname="org.apache.axis.wsdl.WSDL2Java" fork="true">
+             <arg line="-o ${build.stubs.src.dir} ${build.schema.dir}/${wsdl.3}.wsdl"/>
+ 			<classpath>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+					<exclude name="**/${jarfile.stubs}" />
+				</fileset>
+				<fileset dir="${container.dir}/lib">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+         </java>
+      
+         <java classname="org.apache.axis.wsdl.WSDL2Java" fork="true">
+             <arg line="-o ${build.stubs.src.dir} ${build.schema.dir}/${wsdl.4}.wsdl"/>
+ 			<classpath>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+					<exclude name="**/${jarfile.stubs}" />
+				</fileset>
+				<fileset dir="${container.dir}/lib">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+         </java>   
+         
+         <java classname="org.apache.axis.wsdl.WSDL2Java" fork="true">
+             <arg line="-o ${build.stubs.src.dir} ${build.schema.dir}/${wsdl.5}.wsdl"/>
+ 			<classpath>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+					<exclude name="**/${jarfile.stubs}" />
+				</fileset>
+				<fileset dir="${container.dir}/lib">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+         </java>         
+         
+     </target>
+     
+	<target name="buildStubs" depends="generateStubs" description="build service stubs">
+		<echo message="package.dir ->${package.dir}" level="info"/>
+		<echo message="stubs.dir.name ->${stubs.dir.name}" level="info"/>
+		<echo message="build.stubs.class.dir ->${build.stubs.class.dir}" level="info"/>
+				
+		<if name="stubs.dir.present">
+			<copy toDir="${build.stubs.src.dir}/${package.dir}/${stubs.dir.name}" overwrite="true">
+				<fileset dir="${stubs.dir}" casesensitive="yes">
+					<exclude name="**/*.class" />
+				</fileset>
+			</copy>
+		</if>
+		<javac srcdir="${build.stubs.src.dir}" destdir="${build.stubs.class.dir}" debug="${java.debug}" deprecation="${java.deprecation}" description="compile stub classes">
+			<include name="**/*.java" />
+			<classpath>				
+				<fileset dir="${container.dir}/lib">
+					<include name="*.jar" />
+					<exclude name="${jarfile.stubs}" />
+					<exclude name="${jarfile}" />
+				</fileset>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+					<exclude name="**/${jarfile.stubs}" />
+					<exclude name="**/${jarfile}" />
+				</fileset>
+			</classpath>
+		</javac>
+		<copy toDir="${build.stubs.class.dir}/META-INF" overwrite="false"><!-- copy configuration info as well -->
+			<fileset dir="${etc.dir}" casesensitive="yes" />
+		</copy>
+	</target>     
+     		
+
+	<target name="jarStubs" depends="doc">
+		<jar destfile="${build.lib.dir}/${jarfile}" basedir="${build.stubs.class.dir}" />
+	</target>	
+	
+	<target name="deploy" depends="jarStubs">
+		<if name="etics.build" value="false">	
+		<copy toDir="${container.dir}/lib" overwrite="true">
+			<fileset dir="${build.lib.dir}" casesensitive="yes" />
+		</copy>
+			<else>
+				<copy file="${build.lib.dir}/${jarfile}" toDir="${lib.location}"/>
+			</else>
+		</if>					
+	</target>
+	
+	<!-- javadoc tasks -->
+	<target name="doc" depends="buildStubs">
+		<javadoc access="public" author="true" sourcepath="${build.stubs.src.dir}" packagenames="*"
+			destdir="doc/api" nodeprecated="false" nodeprecatedlist="false" 
+			noindex="false" nonavbar="false" notree="false" 
+			source="1.5" 
+			splitindex="true" 
+			use="true" version="true" failonerror="false">
+			<classpath>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+				</fileset>
+				<fileset dir="${container.dir}/lib">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</javadoc>
+	</target>
+		
+	<target name="clean">
+		<echo message="build.location ->${env.BUILD_LOCATION}" level="info"/>
+	
+		<delete dir="${build.dir}" quiet="true"/>
+		<!-- delete file="${lib.location}/${jarfile}" quiet="true"/ -->
+	</target>
+		
+	<target name="createSoftwareArchive">
+		
+		<!-- must match package names in profile.xml -->		
+		<property name="stubs.packagename" value="voms-admin-stubs"/>
+		<property name="stubsA.dir" location="${prefix}/${stubs.packagename}"/>
+			
+		<!-- create directories -->
+		<mkdir dir="${prefix}"/>
+		<mkdir dir="${stubsA.dir}"/>
+		
+		<!-- profile -->
+		<copy file="${sa.stubs}/etc/profile.xml" todir="${prefix}"/>
+		
+		<!-- stubs stuff -->
+		<copy todir="${stubsA.dir}">
+			<fileset dir="${sa.stubs}/build/lib">
+				<include name="*.jar"/>
+			</fileset>
+			<fileset dir="${sa.stubs}">
+				<include name="doc/**"/>
+			</fileset>			
+		</copy>
+		<echo message="${sa.stubs.vcsroot}/${sa.stubs.tag}" file="${stubsA.dir}/svnpath.txt"/>
+		
+		<!-- doc stuff -->
+		<copy todir="${prefix}">
+			<fileset dir="${sa.stubs}">
+				<include name="README"/>
+				<include name="LICENSE"/>
+				<include name="MAINTAINERS"/>
+				<include name="CHANGELOG"/>
+				<include name="INSTALL"/>
+			</fileset>
+		</copy>
+	</target>		
+</project>

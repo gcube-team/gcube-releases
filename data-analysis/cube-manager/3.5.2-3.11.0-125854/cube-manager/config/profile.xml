@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>Component of Tabular Data that manages table creation/deletion on DB backend and keeps a hold of created tables and their structure and metadata.</Description>
+		<Class>DataAnalysis</Class>
+		<Name>cube-manager</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>Component of Tabular Data that manages table creation/deletion on DB backend and keeps a hold of created tables and their structure and metadata.</Description>
+				<Name>cube-manager</Name>
+				<Version>3.5.2-SNAPSHOT</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.data.analysis.tabulardata</groupId>
+					<artifactId>cube-manager</artifactId>
+					<version>3.5.2-SNAPSHOT</version>
+				</MavenCoordinates>
+				<Type>library</Type>
+				<Files>
+					<File>cube-manager-3.5.2-SNAPSHOT.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>
+
+

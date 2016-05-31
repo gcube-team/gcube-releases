@@ -1,0 +1,22 @@
+<ReleaseNotes>
+
+
+<Changeset component="org.gcube.portlets-admin.wf-docs-manager.2-4-0" date="2015-07-13">
+		<Change>Ported to Home Library 2.0</Change>
+	</Changeset>
+<Changeset component="org.gcube.portlets.admin.wf-docs-manager.2-3-0" date="2014-06-06">
+		<Change>Ported to gCore Free Portal</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.wf-docs-manager.2-1-0"
+		date="2013-10-21">
+		<Change>Ported to GWT 2.5.1</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.wf-docs-manager.2-0-0"
+		date="2013-05-29">
+		<Change>Fixed bug for ticket #1777, too many steps usability problem
+		</Change>
+		<Change>Minor restyling performed</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,8 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.portlets-user.guidedtour-widget.1-4-0" date="2013-10-21">
+<Change>Ported to Feather Weight Stack</Change>
+<Change>Updated to GWT 2.5.1</Change>
+<Change>Removed GCF Dependency</Change>
+<Change>Logging with sl4j Enabled</Change>
+</Changeset>
+</ReleaseNotes>

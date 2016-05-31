@@ -1,0 +1,40 @@
+.gcube_DialogBox {
+	border: 5px solid #99BBE8 !important;
+	border-radius: 1px !important;
+	-moz-border-radius: 1px !important;;
+	-webkit-border-radius: 1px !important;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.80);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.80);
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.80);
+}
+
+.gcube_DialogBox .dialogTop {
+	background: transparent url(gcube_images/white-top-bottom.gif) repeat-x
+		scroll 0 -1px !important;
+}
+
+.gcube_DialogBox .Caption {
+	color: #15428B !important;;
+}
+
+.gwt-Button {
+	text-decoration: none;
+	cursor: pointer;
+	cursor: hand;
+	background: url("gcube_images/hborder.png") repeat-x 0px -2077px
+		!important;
+	border: 1px solid #bbb !important;
+	border-bottom: 1px solid #a0a0a0 !important;
+	border-radius: 4px !important;
+	-moz-border-radius: 4px !important;;
+	-webkit-border-radius: 4px !important;
+	margin: 5px !important;
+}
+
+.gwt-Button:active {
+	border: 1px inset #ccc !important;
+}
+
+.gwt-Button:hover {
+	border-color: #939393 !important;;
+}

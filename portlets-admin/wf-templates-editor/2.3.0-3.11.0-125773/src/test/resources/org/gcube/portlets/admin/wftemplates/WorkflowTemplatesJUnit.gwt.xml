@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.admin.wftemplates.WorkflowTemplates' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/WorkflowTemplates/greet" class="org.gcube.portlets.admin.wftemplates.server.GreetingServiceImpl" />
+
+</module>

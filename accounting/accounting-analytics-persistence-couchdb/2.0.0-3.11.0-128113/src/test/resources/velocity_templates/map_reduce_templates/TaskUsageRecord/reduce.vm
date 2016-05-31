@@ -1,0 +1,24 @@
+function(keys, values, rereduce){
+	var maxInvocationTime = Number(values[0].maxInvocationTime);
+	var minInvocationTime = Number(values[0].minInvocationTime);
+	var total = 0;
+	var numerator = 0;
+	for(i=0; i<values.length; i++){
+		total += Number(values[i].operationCount);
+		numerator += Number(values[i].operationCount) * Number(values[i].duration);
+		if(maxInvocationTime<=values[i].maxInvocationTime){
+			maxInvocationTime = values[i].maxInvocationTime;
+		}
+		if(minInvocationTime>=values[i].minInvocationTime){
+			minInvocationTime = values[i].minInvocationTime;
+		}
+	}
+	
+	ret = {};
+	ret.operationCount = Number(total);
+	ret.duration = Number(numerator)/Number(total);
+	ret.maxInvocationTime = Number(maxInvocationTime);
+	ret.minInvocationTime = Number(minInvocationTime);
+
+	return ret;
+}

@@ -1,0 +1,5 @@
+<service-map scope='/gcube/secureVO' version="${project.version}">
+	<services>
+		<service name='XQueryAccessService' endpoint='https://node2.tsec.d4science.research-infrastructures.eu:8443/wsrf/services/gcube/informationsystem/collector/XQueryAccess' />
+	</services>
+</service-map>

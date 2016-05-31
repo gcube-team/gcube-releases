@@ -1,0 +1,46 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.execution.WorkflowDTSAdaptor.1-1-4" date="2015-02-16">
+		<Change>DataSource operator forwards exception</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowDTSAdaptor.1-1-3" date="2014-10-31">
+		<Change>minor bug fix</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowDTSAdaptor.1-1-2" date="2014-09-10">
+		<Change>Workflow create plan throws Exception</Change>
+		<Change>Input model changes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowDTSAdaptor.1-1-1" date="2014-07-04">
+		<Change>escape invalid xml chars in xml representation of a TU</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowDTSAdaptor.1-1-0" date="2014-06-11">
+		<Change>DTS starts when first object is received</Change>
+		<Change>Can run local</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowDTSAdaptor.1-0-7" date="2014-04-04">
+		<Change>Merger timeout bug</Change>
+		<Change>Merger polling time improved</Change>
+		<Change>added logs</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowDTSAdaptor.1-0-6" date="2014-02-07">
+		<Change>timeout bug fixed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowDTSAdaptor.1-0-5" date="2013-07-08">
+		<Change>indirect dependency to CML removed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowDTSAdaptor.1-0-4" date="2013-03-05">
+		<Change>Parameters bug fixed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowDTSAdaptor.1-0-3" date="2013-01-17">
+		<Change>Set scope to Operators properly</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowDTSAdaptor.1-0-2" date="2012-10-18">
+		<Change>Bug fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowDTSAdaptor.1-0-1" date="2012-09-07">
+		<Change>Integration with registry and node selection functionality.</Change>
+		<Change>Mavenized</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowDTSAdaptor.1-0-0" date="2012-05-14">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

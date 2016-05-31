@@ -1,0 +1,73 @@
+.framed {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	width: 200px;
+	height: 290px;
+	padding: 10px;
+	margin: 10px;
+	background: #FFF;
+	border-radius: 6px !important;
+	-moz-border-radius: 6px !important;
+	-webkit-border-radius: 6px !important;
+	border: 1px solid #DBDBDB;
+}
+
+.frame {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	padding: 10px;
+	margin: 10px;
+	background: #FFF;
+	border-radius: 6px !important;
+	-moz-border-radius: 6px !important;
+	-webkit-border-radius: 6px !important;
+	border: 1px solid #DBDBDB;
+}
+
+.user-photo {
+	padding: 5px;
+	border: 1px solid #E6E6E6;
+	width: 180px;
+	height: 175px;
+}
+
+.user-details {
+	padding: 5px;
+}
+
+.photo-details {
+	width: 200px;
+	text-align: center;
+}
+
+
+a.person-link {
+	color: #444444;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 18px;
+}
+
+a.person-link,a.person-link:visited {
+	cursor: pointer;
+	cursor: hand;
+	font-size: 16x;
+	text-decoration: none;
+	color: #3B5998;
+}
+
+a.person-link:hover {
+	opacity: 0.8;
+	font-size: 16x;
+	text-decoration: underline;
+}
+
+
+.headline {
+	font-size: 13px;
+	color: #444444;
+	line-height: 16px;
+}
+
+.institution {
+	font-size: 11px;
+	color: #444444;
+}

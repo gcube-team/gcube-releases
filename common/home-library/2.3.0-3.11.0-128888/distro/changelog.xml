@@ -1,0 +1,143 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.home-library.1-0-0"
+		date="2013-09-27">
+		<Change>moved to common subsystem</Change>
+		<Change>porting to featherweight stack</Change>
+		<Change>removed the ASL dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library.1-0-1"
+		date="2013-12-13">
+		<Change>Added gCubeItems</Change>
+		<Change>Added application folder</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library.1-1-0"
+		date="2014-02-07">
+		<Change>Moved to java 7</Change>
+		<Change>Added ACLs</Change>
+		<Change>Added groups, users and privileges manager</Change>
+		<Change>Added trash folder</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library.1-2-0"
+		date="2014-04-04">
+		<Change>Added locks in: unshare, move, remove and share operation.
+		</Change>
+		<Change>Removed clones in unshare and remove operations.</Change>
+		<Change>Added a default preview used when the original one is not
+			available.
+		</Change>
+		<Change>Moved from the "home-library" user to the real username to
+			call the StorageManager library (for accounting).
+		</Change>
+		<Change>Reduced calls to StorageManager library in upload operation,
+			using tmp files
+		</Change>
+		<Change>Removed clones when a shared folder is removed from the
+			workspace
+		</Change>
+		<Change>Added a private copy of an ex-shared folder for owner and
+			administrators
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library.1-2-1"
+		date="2014-05-22">
+		<Change>Added search by properties for gCube items.</Change>
+		<Change>Added id to trash items</Change>
+		<Change>Fixed bug updating a shared file</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library.1-3-0"
+		date="2014-06-06">
+		<Change>Added searchFullText method to Workspace</Change>
+		<Change>Better performance</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library.1-4-0"
+		date="2014-06-30">
+		<Change>Added progress number to filename when a file with the same
+			name already exists
+		</Change>
+		<Change>Added getAdministratos() in WorkspaceSharedFolder to retrieve
+			administrators of shared folders
+		</Change>
+		<Change>Added setAdmin() in WorkspaceSharedFolder to set
+			administrators
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library.1-5-0"
+		date="2014-09-10">
+		<Change>Changed Workspace.moveItem() method to return the new item,
+			instead of null.
+		</Change>
+		<Change>Added method isTrashed() to WorkspaceItem</Change>
+		<Change>Added method getPrivilege() to WorkspaceSharedFolder to
+			retrieve the privilege set on a shared folder.
+		</Change>
+		<Change>Added method setAdmins() to WorkspaceSharedFolder to set new
+			administrators and remove the old ones.
+		</Change>
+		<Change>Renamed setAdmin() in addAdmin() in WorkspaceSharedFolder.
+		</Change>
+	</Changeset>
+
+	<Changeset component="org.gcube.common.home-library.1-6-0"
+		date="2014-10-29">
+		<Change>Improved getUniqueName copying ang moving files
+		</Change>
+		<Change>Added WorkspaceItem.isTrashed() method</Change>
+		<Change>Added unescape saving remothePath to storage</Change>
+		<Change>Fixed in getPath() method in trashed items
+		</Change>
+		<Change>Added possibility to change permission in subfolders</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library.1-6-1"
+		date="2014-12-02">
+		<Change>Fixed Uri Resolver method</Change>
+		<Change>Added feature to move a shared folder in a private folder
+		</Change>
+		<Change>Added @Deprecation to unknown class</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library.1-7-0"
+		date="2015-02-13">
+		<Change>Fixed bug in WorkspaceItem: title and description were missing
+		</Change>
+		<Change>Fixed bug retrieving last items
+		</Change>
+		<Change>getACL() methods moved to Abstract Folder
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library.1-7-1"
+		date="2015-05-15">
+		<Change>Fixed bug creating a new VRE folder</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library.2-0-0"
+		date="2015-07-01">
+		<Change>Using http connections throught jackrabbit webapp instead of
+			rmi connections
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library.2-1-0"
+		date="2015-10-12">
+		<Change>WorkspaceMessageManager#sendMessageToPortalLogins method now
+			returns the messageId and not Void (#894)
+		</Change>
+		<Change>Workspace#searchByName limited to a specific folder (#739)
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library.2-2-0"
+		date="2016-01-20">
+		<Change>Feature #2020: Zip the contents of a folder without including
+			the folder itself;
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library.2-3-0"
+		date="2016-04-20">
+		<Change>Feature #2765: HL: add multiple properties to WorkspaceItem
+			constructor;
+		</Change>
+		<Change>Feature #2505: Home Library Enhancement: getting zip file for
+			list of WorkspaceItem;
+		</Change>
+		<Change>Feature #2646: HL: Remove portalLogin in UserManager methods;
+		</Change>
+		<Change>Feature #2458: HL: add mime type to MimeTypeUtil ;
+		</Change>
+	</Changeset>
+</ReleaseNotes>

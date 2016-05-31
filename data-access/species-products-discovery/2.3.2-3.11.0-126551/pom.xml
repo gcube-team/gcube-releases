@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>org.gcube.data.spd</groupId>
+	<artifactId>species-products-discovery</artifactId>
+	<version>2.3.2-3.11.0-126551</version>
+	<packaging>pom</packaging>
+	<name>species products discovery</name>
+	<modules>
+		<module>species-products-discovery-service</module>
+		<module>species-products-discovery-stubs</module>
+	</modules>
+
+	<properties>
+		<wsdlDirectory>${project.basedir}/../wsdl</wsdlDirectory>
+		<wsdlOutputDirectory>${project.basedir}/../target/generated-sources/wsdl</wsdlOutputDirectory>
+		<configDirectory>${project.basedir}/../config</configDirectory>
+		<distroDirectory>${project.basedir}/../distro</distroDirectory>
+		<namespace>http://gcube-system.org/namespaces/data/speciesproductsdiscovery</namespace>
+	</properties>
+
+	<dependencyManagement>
+
+		<dependencies>
+			
+			<dependency>
+           <groupId>org.gcube.distribution</groupId>
+           <artifactId>maven-bom</artifactId>
+           <version>LATEST</version>
+           <type>pom</type>
+           <scope>import</scope>		
+      </dependency>
+			
+
+
+		</dependencies>
+
+	</dependencyManagement>
+	
+	<dependencies>
+		<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>gcf</artifactId>
+			</dependency>
+	</dependencies>
+	
+	<build>
+
+		<!-- defines basic configuration for the service plugin -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.gcube.tools</groupId>
+					<artifactId>maven-service-plugin</artifactId>
+					<version>1.2.0</version>
+					<configuration>
+						<serviceId>species-products-discovery</serviceId>
+						<basePackage>org.gcube.data.spd</basePackage>
+						<wsdlDirectory>${wsdlDirectory}</wsdlDirectory>
+						<wsdlOutputDirectory>${wsdlOutputDirectory}</wsdlOutputDirectory>
+						<configurationDirectory>${configDirectory}</configurationDirectory>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.6</version>
+					<executions>
+						<execution>
+							<id>copy-profile</id>
+							<goals>
+								<goal>copy-resources</goal>
+							</goals>
+							<phase>process-resources</phase>
+							<configuration>
+								<outputDirectory>${configDirectory}</outputDirectory>
+								<resources>
+									<resource>
+										<directory>${distroDirectory}</directory>
+										<includes>
+											<include>profile.xml</include>
+										</includes>
+										<filtering>true</filtering>
+									</resource>
+								</resources>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>  
+			</plugins>
+		</pluginManagement>
+
+	</build>
+
+</project>

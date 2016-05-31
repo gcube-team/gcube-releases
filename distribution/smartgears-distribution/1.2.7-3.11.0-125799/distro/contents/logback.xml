@@ -1,0 +1,24 @@
+
+<configuration>
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOGFILE}/ghn.log</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{0}: %msg%n
+			</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOGFILE}/ghn.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<logger name="org.gcube" level="WARN" />
+	<logger name="org.gcube.smartgears" level="WARN" />
+	<logger name="org.gcube.common.events" level="WARN" />
+
+	<root level="WARN">
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>

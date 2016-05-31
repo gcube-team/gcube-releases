@@ -1,0 +1,1164 @@
+      <Body>
+            
+         <index-type name="default">
+                
+            <field-list sort-xnear-stop-word-threshold="2E8">
+                    
+               <field name="title">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+               
+               <field name="number">
+                  <type>integer</type>
+                  
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="creator">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="subject">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="description">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="contributor">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="date">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="type">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="format">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="identifier">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="language">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="relation">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="coverage">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="rights">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="alternative">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="tableOfContents">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="abstract">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="created">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="valid">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="available">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="issued">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="modified">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="dateAccepted">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="dateCopyrighted">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="dateSubmitted">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="extend">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="medium">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="isVersionOf">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="hasVersion">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="isReplacedBy">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="replaces">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="isRequiredBy">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="requires">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="isPartOf">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="hasPart">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="isReferencedBy">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="references">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="isFormatOf">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="hasFormat">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="conformsTo">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="spatial">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="temporal">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="audience">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="accrualMethod">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="accrualPeriodicity">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="accrualPolicy">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="instructionalMethod">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="provenance">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="rightsHolder">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="mediator">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="educationLevel">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="accessRights">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="license">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="bibliographicCitation">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="publisher">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="source">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="type">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="kingdom">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="phylum">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="class">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="order">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="family">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="id">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="picture">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="name">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="enName">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="esName">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="frName">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="scientificName">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="gDocCollectionID">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="gDocCollectionLang">
+                        
+                  <index>yes</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>yes</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                    
+               <field name="S">
+                        
+                  <index>no</index>
+                        
+                  <store>yes</store>
+                        
+                  <return>yes</return>
+                        
+                  <tokenize>no</tokenize>
+                        
+                  <sort>no</sort>
+                        
+                  <boost>1.0</boost>
+                    
+               </field>
+                
+            </field-list>
+            
+         </index-type>
+        
+      </Body>

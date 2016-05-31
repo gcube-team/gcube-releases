@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guidedtour width="750" height="450" usemask="false">
+	<title>gCube Workflow Template Editor</title>
+	<guide>https://gcube.wiki.gcube-system.org/gcube/index.php</guide>
+	<themecolor>BLUE</themecolor>
+	<steps>
+		<step>
+			<title>Introduction</title>
+			<bodies>
+				<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+			<div style="padding-bottom: 60px;">
+				<b>gCube Workflow Template Editor</b>
+				allows users to create Workflow Templates and associate them to actual workflows.
+			</div>
+			<div style="padding-bottom: 60px;">
+				gCube Workflow Templates can be loaded by the
+				<b>gCube Workflow Documents Manager</b>
+				to produce actual reports."
+			</div>
+			<div style="padding-bottom: 10px;">
+				<b>Take the opportunity</b>
+				to follow this quick tour to discover its
+				<b>most important features.</b>
+			</div>
+		</div>
+]]></body>
+			</bodies>
+			<images>
+				<image url="images/step1.jpg" />
+			</images>
+		</step>
+<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Add Steps</title>
+			<bodies>
+				<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+			<div style="padding-bottom: 60px;">
+				Click on Create New Button to start drawing your template.
+			</div>
+	</div>
+]]></body>
+<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+			<div">
+				Click on Add New Step to start adding steps. (see red rectangle in the picture)
+			</div>
+	</div>
+]]></body>
+			</bodies>
+			<images>
+				<image url="images/createNew.jpg" />
+				<image url="images/addStep.jpg" />
+			</images>
+		</step>
+<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Connect Steps</title>
+			<bodies>
+				<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+			<div style="padding-bottom: 60px;">
+				Position your mouse cursor <b>over any step</b> to make the (orange) drag handle appear.
+			</div>
+	</div>
+]]></body>
+				<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+			<div">
+				Drag it over the step you want to connect and select the role allowed for the edge. 
+			</div>
+	</div>
+]]></body>
+
+			</bodies>
+			<images>
+				<image url="images/dragHandle.jpg" />
+				<image url="images/dragit.jpg" />
+			</images>
+</step>
+<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Shape/Delete Arrows</title>
+			<bodies>
+				<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+			<div style="padding-bottom: 60px;">
+				You can shape arrows by using drag and drop over them.
+			</div>
+	</div>
+]]></body>
+				<body><![CDATA[
+<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+			<div">
+				 Right click on any arrow (edge) to show the available options.
+			</div>
+	</div>
+]]></body>
+
+			</bodies>
+			<images>
+				<image url="images/shape.jpg" />
+				<image url="images/deleteArrow.jpg" />
+			</images>
+</step>
+	</steps>
+</guidedtour>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchResource>
+	<name>Google</name>
+	<descriptionDocumentURI>http://www.di.uoa.gr/~grad0987/OpenSearchDD.xml</descriptionDocumentURI>
+	<brokeredResults>false</brokeredResults>
+	<transformation>
+		<MIMEType>foo/bar</MIMEType>
+		<recordSplitXPath>*[local-name()='feed']/*[local-name()='entry']</recordSplitXPath>
+		<XSLTLink>http://www.di.uoa.gr/~grad0987/xslt_example.xslt</XSLTLink>
+	</transformation>
+	<transformation>
+		<MIMEType>text/html</MIMEType>
+		<recordSplitXPath>*[local-name()='feed']/*[local-name()='entry']</recordSplitXPath>
+		<XSLTLink>http://www.di.uoa.gr/~grad0987/xslt_example.xslt</XSLTLink>
+	</transformation>
+	<security></security>
+</OpenSearchResource>

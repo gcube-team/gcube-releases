@@ -1,0 +1,10 @@
+/** Add css rules here for your application. */
+/*table {
+	border-spacing: 1px !important;
+	top: 0px !important;
+}*/
+
+ 
+#drop_target_inner {
+	background-image: url("statalgoimporter/images/upload_128.png") !important;
+}

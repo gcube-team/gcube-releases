@@ -1,0 +1,29 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.admin.software-upload-wizard.1-6-0" date="2016-03-09">
+		<Change>Updated distro folder</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.software-upload-wizard.1-5-0" date="2015-05-09">
+		<Change>Porting to GWT 2.7.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.software-upload-wizard.1-3-0" date="2014-06-09">
+		<Change>Porting to Featherweight Stack Portal</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.software-upload-wizard.1-2-0" date="2013-10-17">
+		<Change>Porting to Featherweight Stack</Change>
+		<Change>Updated dependency to software gateway client library</Change>
+		<Change>Porting to AslCore 4</Change>
+		<Change>Removed logging system injection at bootstrap and related
+			classes and Guice configuration</Change>
+		<Change>Removed usage of apache logging system in some classes
+		</Change>
+		<Change>Modified package creation in pom by removing javascript
+			compilation</Change>
+		<Change>Removed compiler configuration from pom, inherits from parent
+		</Change>
+		<Change>Imporved logging on server side</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.software-upload-wizard.1-1-0" date="2013-04-08">
+		<Change>Project mavenization</Change>
+		<Change>Removed the need to specify service class for webapps</Change>
+	</Changeset>
+</ReleaseNotes>

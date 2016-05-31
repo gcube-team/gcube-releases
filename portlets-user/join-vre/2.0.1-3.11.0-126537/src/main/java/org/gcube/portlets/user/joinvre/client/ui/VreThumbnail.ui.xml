@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.imageContainer {
+		height: 180px;
+		text-align: center;
+	}
+	
+	.image {
+		width: 180px;
+		position: relative;
+		top: 50%;
+		-ms-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%); 
+		transform: translateY(-50%);
+	}
+	</ui:style>
+	<b:Thumbnail size="3">
+		<g:SimplePanel styleName="{style.imageContainer}">
+			<b:Image ui:field="vreImage" styleName="{style.image}" />
+		</g:SimplePanel>
+		<b:Caption>
+			<b:Heading size="4" ui:field="vreName"></b:Heading>
+			<b:Paragraph ui:field="p">
+				<b:Button ui:field="joinButton"></b:Button>
+				<b:Button ui:field="vreInfoButton" type="INFO">Info</b:Button>
+			</b:Paragraph>
+		</b:Caption>
+	</b:Thumbnail>
+</ui:UiBinder> 

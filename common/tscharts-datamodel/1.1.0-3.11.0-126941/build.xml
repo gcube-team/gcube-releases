@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<project default="deploy" name="org.gcube.portlets.user.timeseries.charts.support">
+
+	<!-- environment -->
+	<property environment="env" />
+
+	<!-- external environment -->
+	<echo message="container.dir ->${env.GLOBUS_LOCATION}" level="info"/>
+	<property name="container.dir" value="${env.GLOBUS_LOCATION}" />
+	<property name="container.schema.dir" location="${container.dir}/share/schema" />
+
+	<!-- load non-standard tasks -->
+	<taskdef resource="ise/antelope/tasks/antlib.xml">
+		<classpath>
+			<pathelement location="${container.dir}/lib/AntelopeTasks_3.4.2.jar"/>
+		</classpath>
+	</taskdef>
+
+	<!-- discriminate between local and remote build -->
+	<property name="etics.build" value="false" />
+
+	<!-- service-specific locations -->
+	<property name="service.dir" location="." />
+	<property name="etc.dir.name" value="etc" />
+	<property name="etc.dir" value="${service.dir}/${etc.dir.name}" />
+	<property name="source.dir" value="${service.dir}/src" />
+
+
+	<!-- load input properties  -->
+	<property file="${etc.dir}/build.properties" />
+
+	<!-- file defaults -->
+	<property name="jarfile" value="${package}.jar" />
+
+	<if name="etics.build" value="true">
+		<property name="build.location" location="${service.dir}" />
+		<property name="lib.location" value="${build.location}/lib" />
+		<property name="gar.location" value="${lib.location}"/>
+		<else>
+			<property name="build.location" location="${env.BUILD_LOCATION}" />
+			<property name="lib.location" value="${build.location}/${lib.dir}" />
+			<property name="gar.location" value="${build.location}"/>
+		</else>
+	</if>
+
+	<!-- temporary build locations -->
+	<property name="build.dir" location="${build.location}/build" />
+	<property name="build.class.dir" location="${build.dir}/classes" />
+	<property name="build.lib.dir" location="${build.dir}/lib" />
+
+	<!-- misc defaults -->
+	<property name="java.debug" value="on" />
+	<property name="java.deprecation" value="off" />
+
+	<!-- common filesets -->
+	<fileset dir="${build.lib.dir}" id="garjars" />
+	<property name="garjars.id" value="garjars" />
+
+
+	<!-- initialisation tasks -->
+	<target name="init" depends="clean" description="creates build structures">
+
+		<!-- input summary -->
+		<echo message="Root Package -> ${package}" level="info"/>
+		<echo message="Configuration -> ${etc.dir}" level="info"/>
+		<echo message="External dependencies -> ${lib.location}" level="info"/>
+
+		<!-- output summary -->
+		<echo message="Lib Jar -> ${jarfile}" level="info"/>
+
+		<!-- create dependency location, if it does not exist already -->
+		<mkdir dir="${lib.location}" />
+
+		<!-- create temporary build folders -->
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${build.class.dir}" />
+		<delete dir="${build.lib.dir}" />
+		<mkdir dir="${build.lib.dir}" />
+
+		<!-- Populates library folder -->
+		<copy toDir="${build.lib.dir}">
+			<fileset dir="${lib.location}">
+				<exclude name="${jarfile.stubs}" />
+			</fileset>
+		</copy>
+
+	</target>
+
+	<target name="build" depends="init" >
+		<javac srcdir="${source.dir}" destdir="${build.class.dir}" debug="${java.debug}" deprecation="${java.deprecation}" description="compile stub classes">
+			<include name="**/*.java" />
+			<classpath>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+				</fileset>
+				<!-- the jars in the local lib folder will be included -->
+				<fileset dir="${service.dir}/lib">
+					<include name="*.jar" />
+				</fileset>
+				<fileset dir="${container.dir}/lib">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</javac>
+		<copy toDir="${build.class.dir}/META-INF" overwrite="false">
+			<!-- copy configuration info as well -->
+			<fileset dir="${etc.dir}" casesensitive="yes" />
+		</copy>
+	</target>
+
+	<target name="jar" depends="build">
+		<copy todir="${build.class.dir}">
+			<fileset dir="${source.dir}">
+				<include name="org/**/*.java"/>
+				<include name="org/**/*.xsd"/>
+				<include name="org/**/*.properties"/>
+				<include name="org/**/*.gwt.xml"/>
+			</fileset>
+		</copy>
+		<jar destfile="${lib.location}/${jarfile}" basedir="${build.class.dir}">
+			<include name="**/*.class" />
+			<include name="**/*.xsd"/>
+			<include name="**/*.java"/>
+			<include name="**/*.gwt.xml"/>
+		</jar>
+
+	</target>
+
+	<target name="deploy" depends="jar">
+		<if name="etics.build" value="false">
+			<copy file="${lib.location}/${jarfile}" toDir="${container.dir}/lib"/>
+			<else>
+				<copy file="${lib.location}/${jarfile}" toDir="${lib.location}"/>
+			</else>
+		</if>
+	</target>
+
+	<!-- javadoc tasks -->
+	<target name="doc">
+		<echo message="sources in ${source.dir} and package ${package}" />
+		<javadoc access="public" 
+			author="true" 
+			sourcepath="${source.dir}" 
+			packagenames="${package}.*"
+			destdir="doc/api" 
+			nodeprecated="false" 
+			nodeprecatedlist="false" 
+			noindex="false" 
+			nonavbar="false" 
+			notree="false"
+			source="1.5"
+			splitindex="true" 
+			use="true" 
+			version="true" 
+			failonerror="false">
+			<classpath>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+				</fileset>
+				<fileset dir="${container.dir}/lib">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</javadoc>
+	</target>
+
+	<target name="clean">
+		<delete dir="${build.dir}" quiet="true"/>
+		<delete file="${lib.location}/${jarfile}" quiet="true"/>
+	</target>
+
+
+</project>

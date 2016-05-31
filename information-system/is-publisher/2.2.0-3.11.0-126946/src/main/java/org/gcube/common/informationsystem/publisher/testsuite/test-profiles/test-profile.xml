@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<Resource>
+	<ID>61269980-ac00-11dd-849c-a435ef8854b6</ID>
+	<Type>GenericResource</Type>
+	<Profile>
+		<SecondaryType>test-profile</SecondaryType>
+		<Name>test-profile from ISPublisher test-suite</Name>
+		<Description>just a test</Description>
+		<Body> nobody </Body>
+	</Profile>
+</Resource>

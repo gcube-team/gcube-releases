@@ -1,0 +1,28 @@
+package org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.evaluators;
+import java.io.File;
+import java.net.URL;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.LinkedHashMap;
+import java.io.StringWriter;
+import org.apache.commons.io.IOUtils;
+import org.apache.xmlbeans.XmlObject;
+import org.gcube.dataanalysis.wps.statisticalmanager.synchserver.bindings.*;
+import org.n52.wps.algorithm.annotation.*;
+import org.n52.wps.io.data.*;
+import org.n52.wps.io.data.binding.complex.*;
+import org.n52.wps.io.data.binding.literal.*;
+import org.n52.wps.server.*;import org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mapping.AbstractEcologicalEngineMapper;import org.n52.wps.server.*;import org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.*;
+@Algorithm(statusSupported=false, title="MAPS_COMPARISON", abstrakt="An algorithm for comparing two OGC/NetCDF maps in seamless way to the user. The algorithm assesses the similarities between two geospatial maps by comparing them in a point-to-point fashion. It accepts as input the two geospatial maps (via their UUIDs in the infrastructure spatial data repository - recoverable through the Geoexplorer portlet) and some parameters affecting the comparison such as the z-index, the time index, the comparison threshold. Note: in the case of WFS layers it makes comparisons on the last feature column.", identifier="org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.evaluators.MAPS_COMPARISON", version = "1.1.0")
+public class MAPS_COMPARISON extends AbstractEcologicalEngineMapper implements IEvaluator{
+@LiteralDataInput(abstrakt="Name of the parameter: Layer_1. First Layer Title or UUID: The title or the UUID (preferred) of a layer indexed in the e-Infrastructure on GeoNetwork - You can retrieve it from GeoExplorer", defaultValue="", title="First Layer Title or UUID: The title or the UUID (preferred) of a layer indexed in the e-Infrastructure on GeoNetwork - You can retrieve it from GeoExplorer", identifier = "Layer_1", maxOccurs=1, minOccurs=1, binding = LiteralStringBinding.class) public void setLayer_1(String data) {inputs.put("Layer_1",data);}
+@LiteralDataInput(abstrakt="Name of the parameter: Layer_2. Second Layer Title or UUID: The title or the UUID (preferred)  of a second layer indexed in the e-Infrastructure on GeoNetwork - You can retrieve it from GeoExplorer", defaultValue="", title="Second Layer Title or UUID: The title or the UUID (preferred)  of a second layer indexed in the e-Infrastructure on GeoNetwork - You can retrieve it from GeoExplorer", identifier = "Layer_2", maxOccurs=1, minOccurs=1, binding = LiteralStringBinding.class) public void setLayer_2(String data) {inputs.put("Layer_2",data);}
+@LiteralDataInput(abstrakt="Name of the parameter: Z. value of Z. Default is 0, that means comparison will be at surface level", defaultValue="0", title="value of Z. Default is 0, that means comparison will be at surface level", identifier = "Z", maxOccurs=1, minOccurs=1, binding = LiteralIntBinding.class) public void setZ(Integer data) {inputs.put("Z",""+data);}
+@LiteralDataInput(abstrakt="Name of the parameter: ValuesComparisonThreshold. A comparison threshold for the values in the map. Null equals to 0.1", defaultValue="0.1", title="A comparison threshold for the values in the map. Null equals to 0.1", identifier = "ValuesComparisonThreshold", maxOccurs=1, minOccurs=1, binding = LiteralDoubleBinding.class) public void setValuesComparisonThreshold(Double data) {inputs.put("ValuesComparisonThreshold",""+data);}
+@LiteralDataInput(abstrakt="Name of the parameter: TimeIndex_1. First Layer Time Index. The default is the first", defaultValue="0", title="First Layer Time Index. The default is the first", identifier = "TimeIndex_1", maxOccurs=1, minOccurs=1, binding = LiteralIntBinding.class) public void setTimeIndex_1(Integer data) {inputs.put("TimeIndex_1",""+data);}
+@LiteralDataInput(abstrakt="Name of the parameter: TimeIndex_2. Second Layer Time Index. The default is the first", defaultValue="0", title="Second Layer Time Index. The default is the first", identifier = "TimeIndex_2", maxOccurs=1, minOccurs=1, binding = LiteralIntBinding.class) public void setTimeIndex_2(Integer data) {inputs.put("TimeIndex_2",""+data);}
+@LiteralDataInput(abstrakt="Name of the parameter: KThreshold. Threshold for K-Statistic: over this threshold values will be considered 1 for agreement calculation. Default is 0.5", defaultValue="0.5", title="Threshold for K-Statistic: over this threshold values will be considered 1 for agreement calculation. Default is 0.5", identifier = "KThreshold", maxOccurs=1, minOccurs=1, binding = LiteralDoubleBinding.class) public void setKThreshold(Double data) {inputs.put("KThreshold",""+data);}
+@ComplexDataOutput(abstrakt="Error Distribution", title="Error Distribution", identifier = "Error Distribution", binding = PngFileDataBinding.class)	public GenericFileData getDistribution_of_the_Error() {URL url=null;try {url = new URL((String) outputs.get("Error Distribution")); return new GenericFileData(url.openStream(),"image/png");} catch (Exception e) {e.printStackTrace();return null;}}
+@ComplexDataOutput(abstrakt="Output that is not predetermined", title="NonDeterministicOutput", identifier = "non_deterministic_output", binding = GenericXMLDataBinding.class)
+ public XmlObject getNon_deterministic_output() {return (XmlObject) outputs.get("non_deterministic_output");}
+@Execute	public void run() throws Exception {		super.run();	} }

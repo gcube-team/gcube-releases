@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.admin.fhn_manager_portlet.1-0-0"
+		date="2016-04-21">
+		<Change>First release</Change>
+	</Changeset>	
+</ReleaseNotes>

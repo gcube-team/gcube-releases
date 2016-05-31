@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="asl_http_access_management-1.4.0-3.11.0-126194" date="2012-04-26">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="asl_http_access_management-1.4.0-3.11.0-126194" date="2013-02-19">
+		<Change>OpenAccess configuration is retrieved only for a specific scope and not for all scopes</Change>
+		<Change>Deprecated methods are removed</Change>
+	</Changeset>
+</ReleaseNotes>

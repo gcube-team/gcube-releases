@@ -1,0 +1,13 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="gr.uoa.di.madgik.visualisations.VisualisationsLibrary"/>
+	<stylesheet src="RandomTree.css"/>
+	
+	
+	<!--
+	<entry-point class="gr.uoa.di.madgik.visualisations.RandomTree.client.RandomTree" />
+	-->
+	
+	<source path="client" />
+  	<public path="public" />
+</module>

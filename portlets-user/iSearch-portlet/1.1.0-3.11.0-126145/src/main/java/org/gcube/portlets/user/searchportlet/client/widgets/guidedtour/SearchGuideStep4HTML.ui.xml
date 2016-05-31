@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder">
+	<ui:style>
+		/* Add CSS here. See the GWT docs on UI Binder for more details */
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<div>
+		<div style="line-height: 15px; padding: 10px; font-size: 12px; ">
+			<div style="padding-bottom: 15px;"><b>Submit an Browse</b> after sellecting the collections</div>
+			<ul><li>Select the field to be used in browse</li>
+			<li>Select if the results will be displayed in ascending or descending order</li>
+			<li>Select the number of results per page</li>
+			<li>click on the <b>Browse Collection</b> button to browse the selected collections</li>
+			<li>click on the <b>Browse Field Values</b> button to retrieve the distinct values of the selected field</li></ul>
+		</div>
+	</div>
+</ui:UiBinder>

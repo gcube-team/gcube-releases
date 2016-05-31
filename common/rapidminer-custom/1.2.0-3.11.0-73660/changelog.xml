@@ -1,0 +1,6 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="org.gcube.common.rapidminer-custom.1-0-0" date="2011-02-04">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

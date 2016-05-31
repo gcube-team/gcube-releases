@@ -1,0 +1,12 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlet.user.contactinformation.1-1-0"
+		date="2015-10-20">
+		<Change>Fix for Bug #924 Contact Information portlet does not show
+			google hangout contact
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.contactinformation.1-0-0"
+		date="2014-09-09">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

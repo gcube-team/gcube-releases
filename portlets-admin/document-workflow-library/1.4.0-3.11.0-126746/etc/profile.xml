@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<Resource>
+	<ID></ID>
+	<Type>Library</Type>
+	<Profile>
+		<Description>.</Description>
+		<Class>PortletsAdmin</Class>
+		<Name>BDWMSuite-support-library</Name>
+			<Version>1.1.0</Version>
+			<Packages>
+				<Software>
+					<Description>Business Document Workflow Management Support Library</Description>
+					<Name>BDWMSuite-support-library</Name>
+					<Version>1.1.0</Version>
+					<Mandatory level="GHN"/>
+					<Shareable level="GHN"/>
+					<Type>library</Type>
+					<Files>
+						<File>lib/BDWMSuite-support-library.jar</File>
+					</Files>
+				</Software>
+			</Packages>
+			<SpecificData/>
+	</Profile>
+</Resource>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>StatisticalManagerServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.statisticalmanager.server.StatisticalManagerPortletServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>StatisticalManagerServlet</servlet-name>
+		<url-pattern>/statisticalmanager/statman</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>StatisticalManager.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- JUnit -->
+	<servlet>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/statisticalmanager/junithost/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- DOWNLOAD SERVLET -->
+
+	<servlet>
+		<servlet-name>DownloadService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.statisticalmanager.server.DownloadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DownloadService</servlet-name>
+		<url-pattern>/statisticalmanager/DownloadService</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- TABULAR DATA WIDGET -->
+	<servlet>
+		<servlet-name>tdwService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdw.server.TabularDataServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>tdwService</servlet-name>
+		<url-pattern>/statisticalmanager/tdw</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>tdwServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdw.server.TabularDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tdwServlet</servlet-name>
+		<url-pattern>/statisticalmanager/tdwdata</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Workspace Explorer -->
+	<servlet>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsexplorer.server.WorkspaceExplorerServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<url-pattern>/statisticalmanager/WorkspaceExplorerService</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- CSW IMPORT WIZARD -->
+	<!-- Servlets for CSV Import Wizard -->
+	<servlet>
+		<servlet-name>CSVImportService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.csvimportwizard.server.CSVImportServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CSVImportService</servlet-name>
+		<url-pattern>/statisticalmanager/CSVImportService</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CSVServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.csvimportwizard.server.CSVServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CSVServlet</servlet-name>
+		<url-pattern>/statisticalmanager/CSVServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Servlets for CSV Import Local -->
+	<servlet>
+		<servlet-name>LocalUploadServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.csvimportwizard.server.local.LocalUploadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LocalUploadServlet</servlet-name>
+		<url-pattern>/statisticalmanager/LocalUploadServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Servlets for CSV Import Wizard Workspace -->
+	<servlet>
+		<servlet-name>CSVImportServiceWorkspace</servlet-name>
+		<servlet-class>org.gcube.portlets.user.csvimportwizard.ws.server.ImportWizardWSServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CSVImportServiceWorkspace</servlet-name>
+		<url-pattern>/statisticalmanager/CSVImportServiceWorkspace</url-pattern>
+	</servlet-mapping>
+
+
+
+	<!-- Servlet for file Import -->
+	<servlet>
+		<servlet-name>ImportService</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.file_dw_import_wizard.server.ImportServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.file_dw_import_wizard.server.local.FileUploadServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>checkServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.sessionchecker.server.SessionCheckerServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ImportService</servlet-name>
+		<url-pattern>/statisticalmanager/ImportService</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<url-pattern>/statisticalmanager/FileUploadServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>checkServlet</servlet-name>
+		<url-pattern>/statisticalmanager/checksession</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>scopeService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gcubewidgets.server.ScopeServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>scopeService</servlet-name>
+		<url-pattern>/statisticalmanager/scopeService</url-pattern>
+	</servlet-mapping>
+
+</web-app>
