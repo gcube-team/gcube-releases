@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:wrapSetsRequest xmlns:ns2="http://gcube-system.org/namespaces/data/oaiplugin">
+	<url>http://aquacomm.fcla.edu/cgi/oai2</url>
+	<alternativesXPath>//*[local-name()='relation' and contains(.,'://')]</alternativesXPath>
+	<contentXPath>//*[local-name()='identifier' and contains(.,'://')]</contentXPath>
+	<titleXPath>//*[local-name()='title']</titleXPath>
+	<metadataFormat>oai_dc</metadataFormat>
+	<name>aquacomm</name>
+	<description>oai test collection</description>
+	<sets>7375626A656374733D48</sets>
+</ns2:wrapSetsRequest>

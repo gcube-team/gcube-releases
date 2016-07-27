@@ -1,0 +1,36 @@
+[
+	
+	{
+		"pluginName" : "HelloWorld",
+		"pluginFeatures" : {
+			"version" : "1.1.0"
+		},
+		"inputs" : {
+			"sleepTime" : 1000,
+			"test" : 1
+		}
+	},
+	
+	{
+		"pluginName" : "HelloWorld",
+		"inputs" : {
+			"sleepTime" : 1000,
+			"test" : 2
+		},
+		"scheduling" : {
+			"delay" : "2000",
+			"schedulingTimes" : "2",
+			"previuosExecutionsMustBeCompleted" : false
+		}
+	},
+	
+	{
+		"pluginName" : "HelloWorld",
+		"inputs" : {
+			"sleepTime" : 1000,
+			"test" : 3
+		},
+		"persist" : true
+	}
+	
+]

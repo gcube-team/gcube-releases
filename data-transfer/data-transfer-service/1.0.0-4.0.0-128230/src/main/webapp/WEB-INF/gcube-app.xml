@@ -1,0 +1,8 @@
+<application mode='online'>
+		<name>DTService</name>
+		<group>DataTransfer</group>
+		<version>1.0.0-SNAPSHOT</version>
+		<description>Direct Transfer service webapp</description>
+		<local-persistence location='target' />
+		<exclude>/*</exclude>
+</application>

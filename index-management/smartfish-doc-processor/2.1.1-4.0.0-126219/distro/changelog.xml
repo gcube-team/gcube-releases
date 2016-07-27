@@ -1,0 +1,19 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.index.smartfish-text-extractor.1-0-0" date="2014-03-13">
+		<Change>Initial release</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.index.smartfish-text-extractor.2-0-0" date="2014-06-04">
+		<Change>Added RestServiceExtractor</Change>
+		<Change>Changed the API of the extractor in order to offer each step of extraction as a method</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.index.smartfish-text-extractor.2-1-0" date="2014-06-30">
+		<Change>Extended the extractors to gather more info</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.index.smartfish-text-extractor.2-1-1" date="2014-09-15">
+		<Change>Fixed encoding problem</Change>
+	</Changeset>
+	
+</ReleaseNotes>

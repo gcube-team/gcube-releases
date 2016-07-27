@@ -1,0 +1,195 @@
+[
+	Type = "DAG";
+	ParsingMode="Bag";
+	ConnectionMode="Callback";//"KeepAlive";
+//	InputSandbox = {
+//		"runtimeIsolation/job.sh",
+//		"runtimeIsolation/sig.txt"
+//	};
+
+	NodesCollocation = false;
+//	Rank = other.GlueHostEstimatedTraversalTime;
+//	Requirements = other.GlueCEStateStatus == "Production";
+	Max_Running_Nodes=5;
+
+	Nodes = 
+	[
+		nodeA = 
+		[
+			Description = 
+			[
+				JobType = "Normal";
+				Executable = "job.sh";
+				Arguments = "Hello_World_Of_Diligent_from_Node_A...";
+				StdOutput = "job.out";
+				StdError = "job.err";
+				OutputSandbox = {
+					"job.err",
+					"job.out",
+					"job.output"
+				};
+				InputSandbox = {
+					"job.sh",
+					"sig.txt"
+				};
+				Environment = {
+					"TEST_ENV_VAR1=Environment Value1",
+					"TEST_ENV_VAR2=Environment Value2"
+				};
+				RetryCount=5;
+				RetryInterval =5000;
+			
+//				Rank = (other.GlueCEPolicyMaxRunningJobs-other.GlueCEStateRunningJobs);
+//				Requirements = other.GlueCEStateStatus == "Production" ;
+			];
+		];
+		nodeB = 
+		[
+			Description = 
+			[
+				JobType = "Normal";
+				Executable = "job.sh";
+				Arguments = "Hello_World_Of_Diligent_from_Node_B...";
+				StdOutput = "job.out";
+				StdError = "job.err";
+				OutputSandbox = {
+					"job.err",
+					"job.out",
+					"job.output"
+				};
+				InputSandbox = {
+					"job.sh",
+					"sig.txt"
+				};
+				Environment = {
+					"TEST_ENV_VAR1=Environment Value1",
+					"TEST_ENV_VAR2=Environment Value2"
+				};
+				RetryCount=5;
+				RetryInterval =5000;
+			
+//				Rank = (other.GlueCEPolicyMaxRunningJobs-other.GlueCEStateRunningJobs);
+//				Requirements = other.GlueCEStateStatus == "Production" ;
+			];
+		];
+		nodeC = 
+		[
+			Description = 
+			[
+				JobType = "Normal";
+				Executable = "job.sh";
+				Arguments = "Hello_World_Of_Diligent_from_Node_C...";
+				StdOutput = "job.out";
+				StdError = "job.err";
+				OutputSandbox = {
+					"job.err",
+					"job.out",
+					"job.output"
+				};
+				InputSandbox = {
+					"job.sh",
+					"sig.txt"
+				};
+				Environment = {
+					"TEST_ENV_VAR1=Environment Value1",
+					"TEST_ENV_VAR2=Environment Value2"
+				};
+				RetryCount=5;
+				RetryInterval =5000;
+			
+//				Rank = (other.GlueCEPolicyMaxRunningJobs-other.GlueCEStateRunningJobs);
+//				Requirements = other.GlueCEStateStatus == "Production" ;
+			];
+		];
+		nodeD = 
+		[
+			Description = 
+			[
+				JobType = "Normal";
+				Executable = "job.sh";
+				Arguments = "Hello_World_Of_Diligent_from_Node_D...";
+				StdOutput = "job.out";
+				StdError = "job.err";
+				OutputSandbox = {
+					"job.err",
+					"job.out",
+					"job.output"
+				};
+				InputSandbox = {
+					"job.sh",
+					"sig.txt"
+				};
+				Environment = {
+					"TEST_ENV_VAR1=Environment Value1",
+					"TEST_ENV_VAR2=Environment Value2"
+				};
+				RetryCount=5;
+				RetryInterval =5000;
+			
+//				Rank = (other.GlueCEPolicyMaxRunningJobs-other.GlueCEStateRunningJobs);
+//				Requirements = other.GlueCEStateStatus == "Production" ;
+			];
+		];
+		nodeE = 
+		[
+			Description = 
+			[
+				JobType = "Normal";
+				Executable = "job.sh";
+				Arguments = "Hello_World_Of_Diligent_from_Node_E...";
+				StdOutput = "job.out";
+				StdError = "job.err";
+				OutputSandbox = {
+					"job.err",
+					"job.out",
+					"job.output"
+				};
+				InputSandbox = {
+					"job.sh",
+					"sig.txt"
+				};
+				Environment = {
+					"TEST_ENV_VAR1=Environment Value1",
+					"TEST_ENV_VAR2=Environment Value2"
+				};
+				RetryCount=5;
+				RetryInterval =5000;
+			
+//				Rank = (other.GlueCEPolicyMaxRunningJobs-other.GlueCEStateRunningJobs);
+//				Requirements = other.GlueCEStateStatus == "Production" ;
+			];
+		];
+		nodeF = 
+		[
+			Description = 
+			[
+				JobType = "Normal";
+				Executable = "job.sh";
+				Arguments = "Hello_World_Of_Diligent_from_Node_F...";
+				StdOutput = "job.out";
+				StdError = "job.err";
+				OutputSandbox = {
+					"job.err",
+					"job.out",
+					"job.output"
+				};
+				InputSandbox = {
+					"job.sh",
+					"sig.txt"
+				};
+				Environment = {
+					"TEST_ENV_VAR1=Environment Value1",
+					"TEST_ENV_VAR2=Environment Value2"
+				};
+				RetryCount=5;
+				RetryInterval =5000;
+			
+//				Rank = (other.GlueCEPolicyMaxRunningJobs-other.GlueCEStateRunningJobs);
+//				Requirements = other.GlueCEStateStatus == "Production" ;
+			];
+		];
+	];
+	
+	Dependencies = {{nodeA,nodeB},{nodeA,nodeC},{nodeB,nodeD},{nodeC,nodeD},{nodeB,nodeE},{nodeC,nodeE},{nodeA,nodeD},{nodeD,nodeF}};
+//	Dependencies = {};
+]

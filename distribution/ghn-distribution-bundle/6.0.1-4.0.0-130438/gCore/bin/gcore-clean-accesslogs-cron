@@ -1,0 +1,9 @@
+#!/bin/bash
+. $HOME/.profile
+#remove duplicates
+crontab -l | grep -v "00 00 * * * $GLOBUS_LOCATION/bin/gcore-clean-accesslogs" > $HOME/oldcrontab
+echo  "00 00 * * * $GLOBUS_LOCATION/bin/gcore-clean-accesslogs" >> $HOME/oldcrontab
+crontab $HOME/oldcrontab
+rm -f $HOME/oldcrontab
+
+ 

@@ -1,0 +1,62 @@
+nexusurl=maven.research-infrastructures.eu/nexus
+group=org.gcube.distribution
+artifact=smartgears-distribution
+repo=gcube-release
+folder=$PWD
+
+function showhelp {
+  			   echo -e "\nusage:  download [-v <version>] [-o <folder>] [-s|-h] \n" 
+               echo    "  <version>          = the version to download."
+               echo    "                     = By default, this is the latest known version."
+			   echo    "  s                  = download a snapshot version."
+			   echo    "  <folder>           = download to specific folder."
+		       echo -e "  h                  = shows this help.\n"
+}
+
+while getopts ":v:o:sh" opt; do
+  case $opt in
+	v) version=$OPTARG;;
+	o) folder=$OPTARG;;
+	s) repo=gcube-snapshots;;
+    h) showhelp
+       exit 0 ;;
+	:)  echo -e "\nERROR:option -$OPTARG requires an argument." >&2 ; 
+				showhelp; 
+				echo -e "\naborting.\n"
+				exit 1;;
+	\?) echo -e "\nERROR:invalid option: -$OPTARG"; 
+			showhelp; 
+			echo -e "\naborting.\n" 
+			exit 1 >&2 ;;
+  esac
+done
+
+#######find latest version in target repo. could use LATEST but would not know how to reflect version in file name
+
+
+version_regexp=".*<baseVersion>\(.*\)</baseVersion>.*" 
+
+if [ -z "$version" ]; then 
+	version=`curl -silent -L "$nexusurl/service/local/artifact/maven/resolve?r=$repo&g=$group&a=$artifact&v=LATEST&e=tar.gz" | grep "$version_regexp" | sed "s|$version_regexp|\1|"` #(first extract matching line, then extract matching group)
+		if [ -z "$version" ]; then 
+			echo -e "\nERROR: cannot find a version to download in $repo." >&2
+			echo -e "\naborting.\n"
+			exit 1
+		fi
+fi
+
+
+
+echo -e "\ndownloading smartgears-distribution-$version.tar.gz to folder $folder ....\c" 
+
+
+http_code=`curl -s --create-dirs -o "$folder/smartgears-distribution-$version.tar.gz" -w "%{http_code}" -L "$nexusurl/service/local/artifact/maven/redirect?r=$repo&g=$group&a=$artifact&v=$version&e=tar.gz"`
+
+if [ ! "$http_code" = "200" ]; then 
+	echo -e "\n\nERROR: cannot download version $version from $repo." >&2
+	echo -e "\naborting.\n"
+	rm "smartgears-distribution-$version.tar.gz"
+	exit 1
+fi
+                         
+echo -e "done.\n"

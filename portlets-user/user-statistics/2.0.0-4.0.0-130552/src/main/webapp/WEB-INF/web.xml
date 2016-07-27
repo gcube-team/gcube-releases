@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>userStatisticsServlet</servlet-name>
+		<servlet-class>org.gcube.portlet.user.userstatisticsportlet.server.UserStatisticsServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>scopeService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gcubewidgets.server.ScopeServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>userStatisticsServlet</servlet-name>
+		<url-pattern>/statistics/statisticservice</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>scopeService</servlet-name>
+		<url-pattern>/statistics/scopeService</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>widgettourServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.widgettour.server.TourManagerServicesImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>widgettourServlet</servlet-name>
+		<url-pattern>/statistics/tourmanagerservice</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>Statistics.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

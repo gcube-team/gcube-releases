@@ -1,0 +1,453 @@
+@CHARSET "UTF-8";
+
+/*Used from suggestbox*/
+ul.multivalue-panel-suggest {
+	list-style-type: none;
+	overflow: hidden;
+	height: auto !important;
+	width: 380px;
+	border: 1px solid #CCC;
+	cursor: text;
+	font-size: 12px;
+	font-family: Verdana;
+	min-height: 1px;
+	z-index: 999;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+
+ul.multivalue-panel-suggest li input {
+	border: 0;
+	padding: 3px 8px;
+	background-color: white;
+	margin: 2px 0;
+	width: 100px;
+}
+
+
+li.multivalue-panel-token-ws {
+	overflow: hidden;
+	height: auto !important;
+	height: 1%;
+	margin: 3px;
+	padding: 1px 3px;
+	background-color: #E2E6F0;
+	border: 1px solid #9DACCC;
+	color: #1C2A47;
+	cursor: default;
+	font-size: 11px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	float: left;
+}
+
+li.multivalue-panel-token-ws-notselectable {
+	overflow: hidden;
+	height: auto !important;
+	height: 1%;
+	margin: 3px;
+	padding: 1px 3px;
+	background-color: white;
+	border: 1px solid #9DACCC;
+	color: #1C2A47;
+	cursor: default;
+	font-size: 11px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	float: left;
+}
+
+.notSelectable-ws {
+	background-color: #FFF !important;
+}
+
+li.multivalue-panel-token-ws p {
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+li.multivalue-panel-token-ws span {
+	color: #a6b3cf;
+	margin-left: 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.margin-right-flex{
+	margin-right: 8px;
+}
+
+.margint-top-flex{
+	margin-top: 10px;
+	margin-right: 8px;
+	
+}
+
+
+.wizardButton {
+	height: 22px !important;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #F2F2F2 url(white-grad.png) repeat-x scroll left top;
+	border-color: #BBB;
+	color: #464646;
+	font-size: 12px;
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+	cursor: hand;
+	margin-right: 5px;
+	margin-right: 3px;
+	padding-bottom: 1px;
+}
+
+.wizardButton[disabled]:hover,.wizardButton[disabled]:active,.wizardButton[disabled]
+	{
+	color: #CCC;
+	border-color: #BBB;
+	cursor: default;
+	opacity: 1.0;
+	background: #F2F2F2 url(white-grad.png) repeat-x scroll left top;
+}
+
+.wizardButton:hover {
+	border-color: #222;
+	color: #222;
+	opacity: 0.8;
+}
+
+.wizardButton:active {
+	background: #e3e8f3 url(white-grad.png) repeat-x scroll left top;
+}
+
+
+table.userssuggest {
+	/*background-color: #DFE8F6 !important;*/
+	font-family: verdana,arial,sans-serif;
+	font-size: 12px;
+	/*color:#333333;*/
+	border-width: 0px;
+	background-color: none;
+	border-collapse: collapse;
+	border-spacing: 0px;
+    width: 100%;
+    margin-bottom: 20px;
+	/*border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	*/
+}
+
+
+table.userssuggest td {
+	border-width: 0px;
+	border-style: solid;
+	/*border-color: #999999;*/
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height: 30px;
+	padding: 5px;
+}
+
+table.userssuggest th {
+	font-weight: bold;
+	font-size: 11px;
+	height: 30px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+
+
+/*************************** COPIED FROM WS MAIL WIDGET ***************************/
+/*
+.mail-div-table {
+    background-clip: border-box;
+    background-image: none;
+    background-origin: padding-box;
+    border-bottom: 1px solid #DADADA;
+    display: table;
+    padding: 7px;
+    width: 500px;
+}
+.mail-div-table-row {
+    display: table-row;
+    text-align: left;
+}
+.mail-div-table-col {
+    display: table-cell;
+    padding-right: 5px;
+    padding-top: 5px;
+    text-align: left;
+    vertical-align: middle;
+}
+.mail-div-table-col.labels {
+    color: #666666;
+    font-family: arial,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    width: 100px;
+}
+.error {
+    background-color: #FFC0CB;
+    color: #FFFFFF;
+    transition: background 0.45s ease-in-out 0s;
+}
+*/
+
+.dark-color {
+    background-color: #FFFFFF;
+    color: #333333;
+    transition: background 0.25s ease-in-out 0s;
+}
+.simple-tbox {
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    color: #000000;
+    font-family: 'Lucida Grande',Verdana,'Bitstream Vera Sans',Arial,sans-serif !important;
+    font-size: 12px !important;
+    padding: 4px 2px;
+    width: 496px;
+}
+
+.simple-tarea {
+    border-radius: 3px 3px 3px 3px;
+    height: 80px;
+}
+
+.gwt-SuggestBox {
+    border-color: #999999;
+    border-width: 1px;
+    color: #333333;
+    font-family: 'Lucida Grande',Verdana,'Bitstream Vera Sans',Arial,sans-serif;
+    font-size: 12px;
+    letter-spacing: normal;
+    padding: 4px 2px;
+    z-index: 1500;
+}
+.gwt-SuggestBoxPopup {
+    z-index: 10010;
+}
+.gwt-SuggestBoxPopup .item {
+    color: #333333;
+    cursor: default;
+    font-family: 'Lucida Grande',Verdana,'Bitstream Vera Sans',Arial,sans-serif;
+    font-size: 11px;
+    padding: 2px 6px;
+}
+.gwt-SuggestBoxPopup .item-selected {
+    background: none repeat scroll 0 0 #D3E1F1;
+}
+.gwt-SuggestBoxPopup .suggestPopupContent {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopCenter {
+    border-top: 1px solid #BBBBBB;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomCenter {
+    border-bottom: 1px solid #BBBBBB;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopCenterInner, .gwt-SuggestBoxPopup .suggestPopupBottomCenterInner {
+    height: 1px;
+    line-height: 1px;
+}
+.gwt-SuggestBoxPopup .suggestPopupMiddleLeft {
+    background-color: #FFFFFF;
+    border-left: 1px solid #BBBBBB;
+}
+.gwt-SuggestBoxPopup .suggestPopupMiddleRight {
+    background-color: #FFFFFF;
+    border-right: 1px solid #BBBBBB;
+}
+.gwt-SuggestBoxPopup .suggestPopupMiddleLeftInner, .gwt-SuggestBoxPopup .suggestPopupMiddleRightInner {
+    line-height: 1px;
+    width: 1px;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopLeftInner {
+    background-color: #FFFFFF;
+    height: 0;
+    width: 0;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopRightInner {
+    height: 0;
+    width: 0;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomLeftInner {
+    height: 0;
+    width: 0;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomRightInner {
+    height: 0;
+    width: 0;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopLeft {
+    background-color: #FFFFFF;
+    border-left: 1px solid #BBBBBB;
+    border-top: 1px solid #BBBBBB;
+    height: 5px;
+    width: 5px;
+}
+.gwt-SuggestBoxPopup .suggestPopupTopRight {
+    border-right: 1px solid #BBBBBB;
+    border-top: 1px solid #BBBBBB;
+    height: 5px;
+    width: 5px;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomLeft {
+    border-bottom: 1px solid #BBBBBB;
+    border-left: 1px solid #BBBBBB;
+    height: 5px;
+    width: 5px;
+}
+.gwt-SuggestBoxPopup .suggestPopupBottomRight {
+    border-bottom: 1px solid #BBBBBB;
+    border-right: 1px solid #BBBBBB;
+    height: 5px;
+    width: 5px;
+}
+
+
+html > body .gwt-SuggestBoxPopup {
+}
+* html .gwt-SuggestBoxPopup .suggestPopupTopLeftInner {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+* html .gwt-SuggestBoxPopup .suggestPopupTopRightInner {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+* html .gwt-SuggestBoxPopup .suggestPopupBottomLeftInner {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+* html .gwt-SuggestBoxPopup .suggestPopupBottomRightInner {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+
+.auto_suggest {
+    background-color: #FFFFFF;
+    height: 230px;
+    padding: 10px;
+    width: 100%;
+    z-index: 20;
+}
+/*
+ul.attach-panel-list {
+    background-color: #FFFFFF;
+    cursor: text;
+    font-family: Verdana;
+    font-size: 12px;
+    height: auto !important;
+    list-style-type: none;
+    margin: 0;
+    min-height: 1px;
+    overflow: hidden;
+    padding: 0;
+    width: 500px;
+    z-index: 999;
+}
+ul.attach-panel-list li input {
+    background-color: #FFFFFF;
+    border: 0 none;
+    margin: 2px 0;
+    padding: 3px 8px;
+    width: 100px;
+}
+li.attach-panel-token {
+    background-color: #FFFFCC;
+    background-image: url("images/clip.png");
+    background-repeat: no-repeat;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    color: #1C2A47;
+    cursor: default;
+    float: left;
+    font-size: 11px;
+    height: auto !important;
+    margin: 3px;
+    overflow: hidden;
+    padding: 1px 3px;
+}
+li.attach-panel-token p {
+    display: inline;
+    line-height: 15px;
+    margin: 0;
+    padding-left: 16px;
+}
+li.attach-panel-token span {
+    color: #A6B3CF;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 5px;
+}
+*/
+
+ul.multivalue-panel-list {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    cursor: text;
+    font-family: Verdana;
+    font-size: 12px;
+    height: auto !important;
+    list-style-type: none;
+    margin: 0;
+    min-height: 1px;
+    overflow: hidden;
+    padding: 0;
+    width: 500px;
+    z-index: 999;
+}
+ul.multivalue-panel-list li input {
+    background-color: #FFFFFF;
+    border: 0 none;
+    margin: 2px 0;
+    padding: 3px 8px;
+    width: 100px;
+}
+/*
+li.multivalue-panel-token {
+    background-color: #E2E6F0;
+    border: 1px solid #9DACCC;
+    border-radius: 5px 5px 5px 5px;
+    color: #1C2A47;
+    cursor: default;
+    float: left;
+    font-size: 11px;
+    height: auto !important;
+    margin: 3px;
+    overflow: hidden;
+    padding: 1px 3px;
+}
+
+.notSelectable {
+    background-color: #FFFFFF !important;
+}
+li.multivalue-panel-token p {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+li.multivalue-panel-token span {
+    color: #A6B3CF;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 5px;
+}
+*/
+
+/*************************** END COPIED FROM WS MAIL WIDGET ***************************/

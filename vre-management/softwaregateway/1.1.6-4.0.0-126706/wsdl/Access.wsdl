@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Access"
+    targetNamespace="http://gcube-system.org/namespaces/vremanagement/softwaregateway"
+    xmlns:tns="http://gcube-system.org/namespaces/vremanagement/softwaregateway"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+    xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <!-- xmlns:profiles="http://gcube-system.org/namespaces/common/core/profiles" -->
+    
+    
+    <import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" location="../gcube/common/core/providers/GCUBEProvider.wsdl"/>
+    <import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+    
+    <!--============================================================
+        
+        T Y P E S
+        
+        ============================================================-->
+	
+	   
+	<types>
+		<xsd:schema targetNamespace="http://gcube-system.org/namespaces/vremanagement/softwaregateway"
+           xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types">
+            
+            
+            <xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+            <!-- <xsd:import namespace="http://gcube-system.org/namespaces/common/core/profiles" schemaLocation="../gcube/common/core/profiles/service.xsd"/>
+            <xsd:import namespace="http://gcube-system.org/namespaces/common/core/profiles" schemaLocation="../gcube/common/core/profiles/CommonTypeDefinitions.xsd"/> -->
+            
+            <!-- REQUESTS AND RESPONSE ELEMENTS -->
+            
+            <xsd:complexType name="LocationItem" >
+				<xsd:all>
+					<xsd:element name="serviceClass" type="xsd:string"  />
+					<xsd:element name="serviceName" type="xsd:string"  />
+					<xsd:element name="serviceVersion" type="xsd:string"/>
+					<xsd:element name="packageName" type="xsd:string" />
+					<xsd:element name="packageVersion" type="xsd:string" />
+				</xsd:all>
+			</xsd:complexType>
+			
+			<xsd:element name="PackageCoordinates">
+			  <xsd:complexType>
+				<xsd:sequence>
+				    <xsd:element name="serviceClass" type="xsd:string"  />
+					<xsd:element name="serviceName" type="xsd:string"  />
+					<xsd:element name="serviceVersion" type="xsd:string"/>
+					<xsd:element name="packageName" type="xsd:string" />
+					<xsd:element name="packageVersion" type="xsd:string" />
+				</xsd:sequence>
+			   </xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="PluginCoordinates">
+			  <xsd:complexType>
+				<xsd:sequence>
+				    <xsd:element name="serviceClass" type="xsd:string"  />
+					<xsd:element name="serviceName" type="xsd:string"  />
+					<xsd:element name="serviceVersion" type="xsd:string"/>
+					<xsd:element name="packageName" type="xsd:string" />
+					<xsd:element name="packageVersion" type="xsd:string" />
+				</xsd:sequence>
+			   </xsd:complexType>
+			</xsd:element>
+			
+			
+			
+			<xsd:element name="SACoordinates">
+			  <xsd:complexType>
+				<xsd:sequence>
+				    <xsd:element name="serviceClass" type="xsd:string"  />
+					<xsd:element name="serviceName" type="xsd:string"  />
+					<xsd:element name="serviceVersion" type="xsd:string"/>
+					<xsd:element name="packageName" type="xsd:string" />
+					<xsd:element name="packageVersion" type="xsd:string" />
+				</xsd:sequence>
+			   </xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="DependenciesCoordinates">
+			  <xsd:complexType>
+				<xsd:sequence>
+				    <xsd:element name="serviceClass" type="xsd:string"  />
+					<xsd:element name="serviceName" type="xsd:string"  />
+					<xsd:element name="serviceVersion" type="xsd:string"/>
+					<xsd:element name="packageName" type="xsd:string" />
+					<xsd:element name="packageVersion" type="xsd:string" />
+				</xsd:sequence>
+			   </xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="getLocationResponse" type="xsd:string"/>
+			
+			<xsd:element name="getSALocationResponse" type="xsd:string"/>
+			
+			<xsd:element name="getDependenciesResponse" type="xsd:string"/>
+			
+			<xsd:element name="getPluginResponse" type="xsd:string"/>
+			
+			<xsd:element name="ServiceCoordinates">
+			  <xsd:complexType>
+				<xsd:sequence>
+				   <xsd:element name="serviceClass" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+					<xsd:element name="serviceName" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="false"/>
+					<xsd:element name="serviceVersion" type="xsd:string" minOccurs="1" maxOccurs="1" nillable="true"/>
+				</xsd:sequence>
+			   </xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="getPackageResponse">
+    			<xsd:complexType>
+    			    <xsd:sequence>
+        			    <xsd:element name="items" type="tns:LocationItem" minOccurs="0" maxOccurs="unbounded" />
+       				 </xsd:sequence>
+    			</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="getPluginResponse">
+    			<xsd:complexType>
+    			    <xsd:sequence>
+ 						<xsd:element name="items" type="tns:LocationItem" minOccurs="0" maxOccurs="unbounded" />       				 
+ 					</xsd:sequence>
+    			</xsd:complexType>
+			</xsd:element>
+			
+
+		</xsd:schema>
+    </types>
+    
+    
+    <!--============================================================
+        
+        M E S S A G E S
+        
+        ============================================================-->
+
+	
+	<message name="getLocationInputMessage">
+		<part name="request" element="tns:PackageCoordinates"/>
+	</message>
+		
+	<message name="getLocationOutputMessage">
+		<part name="response" element="tns:getLocationResponse"/>
+	</message>
+	
+	<message name="getLocationSAInputMessage">
+		<part name="request" element="tns:SACoordinates"/>
+	</message>
+		
+	<message name="getLocationSAOutputMessage">
+		<part name="response" element="tns:getSALocationResponse"/>
+	</message>
+	
+	<message name="getDependenciesInputMessage">
+		<part name="request" element="tns:DependenciesCoordinates"/>
+	</message>
+    
+    <message name="getDependenciesOutputMessage">
+		<part name="response" element="tns:getDependenciesResponse"/>
+	</message>
+    
+	
+	<message name="getPackageInputMessage">
+		<part name="request" element="tns:ServiceCoordinates"/>
+	</message>
+	
+	
+	<message name="getListPackageOutputMessage">
+    	<part name="parameters" element="tns:getPackageResponse" />
+	</message>
+
+	<message name="getPluginInputMessage">
+		<part name="request" element="tns:PluginCoordinates"/>
+	</message>
+		
+	<message name="getPluginOutputMessage">
+		<part name="response" element="tns:getPluginResponse"/>
+	</message>
+		
+	
+    <!--============================================================
+        
+        P O R T T Y P E
+        
+        ============================================================-->
+
+    <portType name="AccessPortType" wsdlpp:extends="provider:GCUBEProvider">
+		
+		<operation name="getLocation">
+			<input message="tns:getLocationInputMessage"/>
+			<output message="tns:getLocationOutputMessage"/>
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+		
+		<operation name="getSALocation">
+			<input message="tns:getLocationSAInputMessage"/>
+			<output message="tns:getLocationSAOutputMessage"/>
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+		
+		<operation name="getDependencies">
+			<!--input message="tns:getLocationInputMessage"/-->
+			<input message="tns:getDependenciesInputMessage"/>
+			<output message="tns:getDependenciesOutputMessage"/>
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+
+		
+		<operation name="getPackages">
+			<input message="tns:getPackageInputMessage"/>
+			<output message="tns:getListPackageOutputMessage"/>
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+		<operation name="getPlugins">
+			<input message="tns:getPluginInputMessage"/>
+			<output message="tns:getPluginOutputMessage"/>
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+    </portType>
+</definitions>

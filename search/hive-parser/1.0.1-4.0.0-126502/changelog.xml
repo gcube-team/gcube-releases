@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.search.hive-parser-1.0.1-4.0.0-126502" date="2014-02-07">
+		<Change>Bug fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.hive-parser.1-0-0" date="2013-10-25">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

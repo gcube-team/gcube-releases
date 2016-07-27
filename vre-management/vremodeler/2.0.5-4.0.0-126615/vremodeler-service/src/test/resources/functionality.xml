@@ -1,0 +1,304 @@
+<Resource version="0.4.x">
+    
+   <ID>38958210-70fb-11e1-b62e-89c6b95c020d</ID>
+    
+   <Type>GenericResource</Type>
+    
+   <Scopes>
+        
+      <Scope>/d4science.research-infrastructures.eu/gCubeApps</Scope>
+    
+   </Scopes>
+    
+   <Profile>
+        
+      <SecondaryType>VREModelerResource</SecondaryType>
+        
+      <Name>FuctionalitiesResource</Name>
+        
+      <Description>A Generic resource containing the functionalities requested to a VRE at design time</Description>
+        
+      <Body>
+            
+             
+         <MainFunctionalities>
+                
+            <MainFunctionality mandatory="true">
+                    
+               <Name>Base functionalities</Name>
+                    
+               <Description>Base functionalities for vre creation</Description>
+                    
+               <Functionalities>
+                        
+                  <Functionality>
+                            
+                     <Name>Authorization</Name>
+                            
+                     <Description>enables authorization in this vre</Description>
+                            
+                     <Services>
+                                
+                        <Service>
+                                    
+                           <ServiceName>AuthorizationService</ServiceName>
+                                    
+                           <ServiceClass>Common</ServiceClass>
+                                
+                        </Service>
+                            
+                     </Services>
+                        
+                  </Functionality>
+                    
+               </Functionalities>
+                
+            </MainFunctionality>
+                
+            <MainFunctionality>
+                    
+               <Name>BiolCube</Name>
+                    
+               <Description>This class of functions is for practitioners working with                        species occurrence data and taxonomic profiles. It helps them to                        generate new knowledge from this data (e.g. modeling and analyzing                        distribution data, comparing checklists, and producing maps).                </Description>
+                    
+               <Functionalities>
+                        
+                  <Functionality>
+                            
+                     <Name>Occurrence and Taxonomic Data Discovery</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with services for discovering and accessing species occurrence and                                        taxonomic data from major repositories and information systems. The                                        discovery mechanism is simple (based on species common names or                                        scientific names) yet powerful since it supports query expansion                                        and additional filters. The identified datasets are enriched with                                        links to other species, can be displayed on a map as well as saved                                        in standard formats (e.g. DarwinCore, DarwinCore-Archive, CSV) for                                        future uses.</Description>
+                            
+                     <SelectableResources>
+                                
+                        <RuntimeResource description="Biodiversity collections">
+                                    
+                           <Category>BiodiversityRepository</Category>
+                                
+                        </RuntimeResource>
+                            
+                     </SelectableResources>
+                        
+                  </Functionality>
+                        
+                  <Functionality>
+                            
+                     <Name>Occurrence Data Processing</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with services for species occurrence data processing, e.g.                                        performing set-oriented operations on such datasets.</Description>
+                        
+                  </Functionality>
+                        
+                  <Functionality>
+                            
+                     <Name>Species Distribution Modeling</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with services for building building a rich array of species                                        distribution models by relying on algorithms and approaches                                        including AquaMaps.</Description>
+                        
+                  </Functionality>
+                        
+                  <Functionality>
+                            
+                     <Name>Taxonomic Data Comparison</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with services for comparing two checklists.</Description>
+                        
+                  </Functionality>
+                    
+               </Functionalities>
+                
+            </MainFunctionality>
+                
+            <MainFunctionality>
+                    
+               <Name>ConnectCube</Name>
+                    
+               <Description>This class of functions is for practitioners wanting to                        produce information-rich objects, resulting from the aggregation and                        synthesis of data from multiple sources. It offers a comprehensive                        tool suite, which supports a collaborative, standards-oriented                        data-publication environment, including semantic technologies.                </Description>
+                    
+               <Functionalities>
+                        
+                  <Functionality>
+                            
+                     <Name>Activities Tracker</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment with services for flexible project management through an issue tracking tool, it features a Gantt chart and calendar.</Description>
+                        
+                  </Functionality>
+                        
+                  <Functionality>
+                            
+                     <Name>Enhanced Documents Management</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with services for creating and managing enhanced documents, i.e.                                        rich information objects resembling documents yet aggregating                                        multiple information sources. These services include services for                                        defining templates the documents should adhere as well as services                                        for defining and monitoring workflows driving the collaborative                                        production of these "documents".</Description>
+                        
+                  </Functionality>
+                        
+                  <Functionality>
+                            
+                     <Name>Information Objects Discovery</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with services for retrieving information objects from multiple                                        collections and information systems in a seamless way. These                                        services include semantic-based results visualisation and                                        consumption.</Description>
+                            
+                     <SelectableResources>
+                                
+                        <GenericResource description="Repositories and collections">
+                                    
+                           <SecondaryType>DataSource</SecondaryType>
+                                
+                        </GenericResource>
+                                
+                        <GenericResource description="Repositories and collections">
+                                    
+                           <SecondaryType>GCUBECollection</SecondaryType>
+                                
+                        </GenericResource>
+                            
+                     </SelectableResources>
+                        
+                  </Functionality>
+                        
+                  <Functionality>
+                            
+                     <Name>Messaging</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with services for exchanging messages among users. The services                                        resemble an email environment with the distinguishing feature of                                        being integrated with the rest, e.g., it is possible to send as                                        attachment any information object residing in the workspace without                                        consuming bandwidth.</Description>
+                        
+                  </Functionality>
+                        
+                  <Functionality>
+                            
+                     <Name>Shared Workspace</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with services resembling a folder-based file system for managing                                        information objects. The services support the sharing of folders                                        and items with coworkers as well as via URIs and WebDAV.                                </Description>
+                            
+                     <SelectableResources>
+                                
+                        <RuntimeResource description="Available Storage Nodes">
+                                    
+                           <Category>DataStorage</Category>
+                                
+                        </RuntimeResource>
+                            
+                     </SelectableResources>
+                        
+                  </Functionality>
+                        
+                  <Functionality>
+                            
+                     <Name>Social Networking Facilities</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with services conceptually close to the common facilities promoted                                        by social networks - e.g., posting news, commenting on posted news                                        - yet adapted to promote large scale collaboration and cooperation                                        on comprehensive scientific products, datasets, theories and tools.                                </Description>
+                            
+                     <SelectableResources>
+                                
+                        <GenericResource description="Social Features to Enable">
+                                    
+                           <SecondaryType>SocialFeature</SecondaryType>
+                                
+                        </GenericResource>
+                            
+                     </SelectableResources>
+                        
+                  </Functionality>
+                        
+                  <Functionality>
+                            
+                     <Name>Wiki</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment items with a WIKI allowing anyone to add, delete or revise content by using a web browser</Description>
+                        
+                  </Functionality>
+                    
+               </Functionalities>
+                
+            </MainFunctionality>
+                
+            <MainFunctionality>
+                    
+               <Name>GeosCube</Name>
+                    
+               <Description>This class of functions is for practitioners dealing with                        geospatial information. It helps them to properly access, consume,                        and produce data. For example, it allows them to perform data                        processing tasks via Web Processing Service standard, as well as                        visualizing and publishing such data via state-of-the-art techniques.                </Description>
+                    
+               <Functionalities>
+                        
+                  <Functionality>
+                            
+                     <Name>Geospatial Data Discovery</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with services for browsing and visualising geospatial data. In                                        particular, these include services to navigate, organize, search                                        and discovery layers from a GeoNetwork instance via the CSW                                        protocol. Moreover, these include services to interactively                                        explore, manipulate and analyse geospatial data.</Description>
+                        
+                  </Functionality>
+                        
+                  <Functionality>
+                            
+                     <Name>Geospatial Data Processing</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with services for executing a rich array of data processing tasks                                        on geospatial data.</Description>
+                        
+                  </Functionality>
+                    
+               </Functionalities>
+                
+            </MainFunctionality>
+                
+            <MainFunctionality>
+                    
+               <Name>StatsCube</Name>
+                    
+               <Description>This class of functions is for practitioners working with                        a rich array of information, ranging from observational data to                        statistical data. It is a complete data-life-cycle-supporting                        framework, including data validation, data enrichment, and efficient                        analytical tools.</Description>
+                    
+               <Functionalities>
+                        
+                  <Functionality>
+                            
+                     <Name>Code List Management</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with services for managing code lists, i.e. recognised controlled                                        vocabularies. These services include code lists creation (via                                        ingestion if they exists), curation and publishing.</Description>
+                        
+                  </Functionality>
+                        
+                  <Functionality>
+                            
+                     <Name>Statistical Service</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with an engine supporting a large array of statistical data                                        processing algorithms.</Description>
+                            
+                     <SelectableResources>
+                                
+                        <GenericResource description="Available Algorithms">
+                                    
+                           <SecondaryType>StatisticalManagerAlgorithm</SecondaryType>
+                                
+                        </GenericResource>
+                            
+                     </SelectableResources>
+                        
+                  </Functionality>
+                        
+                  <Functionality>
+                            
+                     <Name>Tabular Data Management</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with services for managing tabular data. These services include                                        tabular data creation, curation and publishing.</Description>
+                        
+                  </Functionality>
+                        
+                  <Functionality>
+                            
+                     <Name>Tabular Data Processing</Name>
+                            
+                     <Description>This function provides the Virtual Research Environment                                        with services for performing data mining tasks on tabular data.                                </Description>
+                        
+                  </Functionality>
+                    
+               </Functionalities>
+                
+            </MainFunctionality>
+            
+         </MainFunctionalities>
+        
+      </Body>
+    
+   </Profile>
+
+</Resource>

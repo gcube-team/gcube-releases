@@ -1,0 +1,9 @@
+<ReleaseNotes>
+   <Changeset component="org.gcube.search.sru.sru-consumer-service.1-0-1" date="2014-06-25">
+		<Change>Resultset is initialized with port range</Change>
+	</Changeset>
+   <Changeset component="org.gcube.search.sru.sru-consumer-service.1-0-0" date="2014-06-25">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="RStudioWrapper">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.user.rstudio_wrapper_portlet.RStudioWrapper' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/RStudioWrapper/greet" class="org.gcube.portlets.user.rstudio_wrapper_portlet.server.GreetingServiceImpl" />
+
+</module>

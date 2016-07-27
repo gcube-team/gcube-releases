@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='MapWidgetTD'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User' />
+
+  <!-- We need the JUnit module in the main module,               -->
+  <!-- otherwise eclipse complains (Google plugin bug?)           -->
+  <inherits name='com.google.gwt.junit.JUnit' />
+
+  <!-- Other module inherits                                      -->
+  <inherits name='com.sencha.gxt.ui.GXT' />
+  <inherits name="com.allen_sauer.gwt.log.gwt-log-TRACE" />
+ 
+  <inherits name='org.gcube.portlets.user.td.gwtservice.TDGWTService' />
+  <inherits name='org.gcube.portlets.user.td.wizardwidget.Wizard' />
+  <inherits name='org.gcube.portlets.user.td.monitorwidget.MonitorWidgetTD' />
+  
+  
+  <!-- Specify the app entry point class.                         -->
+  <!-- <entry-point class='org.gcube.portlets.user.mapwidget.client.MapWidgetTDEntry' /> -->
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client' />
+  <source path='shared' />
+  <!-- <source path='org.gcube.data.analysis.tabulardata.operation.worker'/> -->
+	
+</module>

@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portal.ldap-export-servlet.1-1-0"
+		date="2016-07-04">
+		<Change>Updated to use Liferay 6.2 API</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.ldap-export-servlet.1-0-0"
+		date="2015-12-11">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

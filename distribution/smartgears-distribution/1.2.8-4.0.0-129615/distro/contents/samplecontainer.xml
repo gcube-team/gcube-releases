@@ -1,0 +1,29 @@
+<container mode='offline'>
+	
+	<hostname>localhost</hostname>
+	<port>8080</port>
+	<infrastructure>gcube</infrastructure>
+	<vo>devNext</vo>
+
+	<site>
+		<country>it</country>
+		<location>rome</location>
+		<latitude>41.9000</latitude>
+		<longitude>12.5000</longitude>
+	</site>
+	
+	<property name='SmartGearsDistribution' value='${project.version}' />
+	<property name='SmartGearsDistributionBundle' value='UnBundled' />
+	
+	<!--
+		Add your own property value here.  This values will be published on
+		GHN porfile in /Profile/GHNDescription/RunTimeEnv/ tag.
+	-->
+	<!-- 
+		<property name='prop1' value='val1' /> 
+		<property name='prop2' value='val2' /> 
+	 -->
+
+	<publication-frequency>60</publication-frequency>
+
+</container>

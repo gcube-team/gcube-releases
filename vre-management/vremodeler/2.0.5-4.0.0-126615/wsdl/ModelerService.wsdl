@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="ModelerService"
+    targetNamespace="http://gcube-system.org/namespaces/vremanagement/vremodeler"
+    xmlns:tns="http://gcube-system.org/namespaces/vremanagement/vremodeler"
+  	xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+    xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+    xmlns:vretypes="http://gcube-system.org/namespaces/vremanagement/vremodeler/types">
+     
+     
+    <import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" location="../gcube/common/core/providers/GCUBEProvider.wsdl"/> 
+    <import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+  
+  
+ 
+
+    
+	<!--============================================================
+
+                      			T Y P E S
+
+	============================================================-->
+	
+	
+	<types>
+		<xsd:schema targetNamespace="http://gcube-system.org/namespaces/vremanagement/vremodeler"
+    xmlns:tns="http://gcube-system.org/namespaces/vremanagement/vremodeler">   	
+	    <xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+	    <xsd:import namespace="http://gcube-system.org/namespaces/vremanagement/vremodeler/types" schemaLocation="VRETypes.xsd"/>
+	    
+			
+			<!-- REQUESTS AND RESPONSES -->
+	
+			<xsd:element name="getDescriptionRequestMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="getDescriptionResponseMessage" type="vretypes:VREDescription"/>	
+			
+			<xsd:element name="setDescriptionRequestMessage" type="vretypes:VREDescription"/>
+			
+			<xsd:element name="setDescriptionResponseMessage" type="coretypes:VOID"/>
+
+			<xsd:element name="getQualityRequestMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="getQualityResponseMessage" type="xsd:string"/>
+			
+			<xsd:element name="setQualityRequestMessage" type="xsd:string"/>
+			
+			<xsd:element name="setQualityResponseMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="getFunctionalityResponseMessage" type="vretypes:FunctionalityList"/>
+			
+			<xsd:element name="getFunctionalityRequestMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="setFunctionalityResponseMessage" type="coretypes:VOID"/>
+			
+						
+			<xsd:element name="setFunctionalityRequestMessage" type="vretypes:SetFunctionality"/>
+			
+			<xsd:element name="getGHNResponseMessage" type="vretypes:FunctionalityNodes"/>
+			
+			<xsd:element name="getGHNRequestMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="setGHNResponseMessage" type="coretypes:VOID"/>
+			
+			<xsd:complexType name="GHNArray">
+				<xsd:sequence>
+					<xsd:element name="GHNElement" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+    		</xsd:complexType>
+			
+			<xsd:element name="setGHNRequestMessage" type="tns:GHNArray"/>
+			
+			<xsd:element name="setVREtoPendingStateRequestMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="setVREtoPendingStateResponseMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="deployVRERequestMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="deployVREResponseMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="undeployVRERequestMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="undeployVREResponseMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="renewVRERequestMessage" type="xsd:dateTime"/>
+			
+			<xsd:element name="renewVREResponseMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="checkStatusRequestMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="checkStatusResponseMessage" type="xsd:string"/>		
+			
+			<xsd:element name="setUseCloudResponseMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="setUseCloudRequestMessage" type="xsd:boolean"/>
+			
+			<xsd:element name="setCloudVMsResponseMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="setCloudVMsRequestMessage" type="xsd:int"/>
+			
+			<xsd:element name="getCloudVMsResponseMessage" type="xsd:int"/>
+			
+			<xsd:element name="getCloudVMsRequestMessage" type="coretypes:VOID"/>
+						
+			<xsd:element name="isUseCloudResponseMessage" type="xsd:boolean"/>
+			
+			<xsd:element name="isUseCloudRequestMessage" type="coretypes:VOID"/>
+			
+			<!--RESOURCE PROPERTIES -->
+			
+			<xsd:element name="Id" type="xsd:string"/>
+						
+			<xsd:element name="ModelerProperties">
+        	<xsd:complexType>
+               <xsd:sequence>
+                      <xsd:element ref="tns:Id" minOccurs="1" maxOccurs="1"/>
+               </xsd:sequence>
+        	</xsd:complexType>
+     		</xsd:element>
+			
+		</xsd:schema>
+    </types>    		
+    		
+    		
+    		
+
+	<!--============================================================
+
+                       M E S S A G E S
+                      
+  	============================================================-->
+	
+	<message name="GetDescriptionInputMessage">
+		<part name="request" element="tns:getDescriptionRequestMessage"/>
+	</message>
+	<message name="GetDescriptionOutputMessage">
+		<part name="response" element="tns:getDescriptionResponseMessage"/>
+	</message>
+	
+	<message name="SetDescriptionInputMessage">
+		<part name="request" element="tns:setDescriptionRequestMessage"/>
+	</message>
+	<message name="SetDescriptionOutputMessage">
+		<part name="response" element="tns:setDescriptionResponseMessage"/>
+	</message>
+
+	<message name="GetQualityInputMessage">
+		<part name="request" element="tns:getQualityRequestMessage"/>
+	</message>
+	<message name="GetQualityOutputMessage">
+		<part name="response" element="tns:getQualityResponseMessage"/>
+	</message>
+	
+	<message name="SetQualityInputMessage">
+		<part name="request" element="tns:setQualityRequestMessage"/>
+	</message>
+	<message name="SetQualityOutputMessage">
+		<part name="response" element="tns:setQualityResponseMessage"/>
+	</message>
+	
+	<message name="SetUseCloudInputMessage">
+		<part name="request" element="tns:setUseCloudRequestMessage"/>
+	</message>
+	<message name="SetUseCloudOutputMessage">
+		<part name="response" element="tns:setUseCloudResponseMessage"/>
+	</message>
+	
+	<message name="SetCloudVMsInputMessage">
+		<part name="request" element="tns:setCloudVMsRequestMessage"/>
+	</message>
+	<message name="SetCloudVMsOutputMessage">
+		<part name="response" element="tns:setCloudVMsResponseMessage"/>
+	</message>
+	
+	<message name="GetCloudVMsInputMessage">
+		<part name="request" element="tns:getCloudVMsRequestMessage"/>
+	</message>
+	<message name="GetCloudVMsOutputMessage">
+		<part name="response" element="tns:getCloudVMsResponseMessage"/>
+	</message>
+	
+	<message name="IsUseCloudInputMessage">
+		<part name="request" element="tns:isUseCloudRequestMessage"/>
+	</message>
+	<message name="IsUseCloudOutputMessage">
+		<part name="response" element="tns:isUseCloudResponseMessage"/>
+	</message>
+	
+	<message name="GetFunctionalityInputMessage">
+		<part name="request" element="tns:getFunctionalityRequestMessage"/>
+	</message>
+	<message name="GetFunctionalityOutputMessage">
+		<part name="response" element="tns:getFunctionalityResponseMessage"/>
+	</message>
+	
+	<message name="SetFunctionalityInputMessage">
+		<part name="request" element="tns:setFunctionalityRequestMessage"/>
+	</message>
+	<message name="SetFunctionalityOutputMessage">
+		<part name="response" element="tns:setFunctionalityResponseMessage"/>
+	</message>
+	
+	<message name="GetGHNInputMessage">
+		<part name="request" element="tns:getGHNRequestMessage"/>
+	</message>
+	<message name="GetGHNOutputMessage">
+		<part name="response" element="tns:getGHNResponseMessage"/>
+	</message>
+	
+	<message name="SetGHNInputMessage">
+		<part name="request" element="tns:setGHNRequestMessage"/>
+	</message>
+	<message name="SetGHNOutputMessage">
+		<part name="response" element="tns:setGHNResponseMessage"/>
+	</message>
+	
+	<message name="SetVREtoPendingStateInputMessage">
+		<part name="request" element="tns:setVREtoPendingStateRequestMessage"/>
+	</message>
+	<message name="SetVREtoPendingStateOutputMessage">
+		<part name="response" element="tns:setVREtoPendingStateResponseMessage"/>
+	</message>
+	
+	<message name="DeployVREInputMessage">
+		<part name="request" element="tns:deployVRERequestMessage"/>
+	</message>
+	<message name="DeployVREOutputMessage">
+		<part name="response" element="tns:deployVREResponseMessage"/>
+	</message>
+	
+	<message name="UndeployVREInputMessage">
+		<part name="request" element="tns:undeployVRERequestMessage"/>
+	</message>
+	<message name="UndeployVREOutputMessage">
+		<part name="response" element="tns:undeployVREResponseMessage"/>
+	</message>
+	
+	<message name="RenewVREInputMessage">
+		<part name="request" element="tns:renewVRERequestMessage"/>
+	</message>
+	<message name="RenewVREOutputMessage">
+		<part name="response" element="tns:renewVREResponseMessage"/>
+	</message>
+	
+	<message name="CheckStatusInputMessage">
+		<part name="request" element="tns:checkStatusRequestMessage"/>
+	</message>
+	<message name="checkStatusOutputMessage">
+		<part name="response" element="tns:checkStatusResponseMessage"/>
+	</message>
+	
+	
+	<!--============================================================
+
+                       P O R T T Y P E
+                      
+	============================================================-->
+
+	<portType name="ModelerServicePortType"
+		wsdlpp:extends="provider:GCUBEProvider"
+	   wsrp:ResourceProperties="tns:ModelerProperties">
+
+		<operation name="setDescription">
+			<input message="tns:SetDescriptionInputMessage"/>
+			<output message="tns:SetDescriptionOutputMessage"/>
+		</operation>
+		
+		<operation name="getDescription">
+			<input message="tns:GetDescriptionInputMessage"/>
+			<output message="tns:GetDescriptionOutputMessage"/>
+		</operation>
+		
+	
+		<operation name="setUseCloud">
+			<input message="tns:SetUseCloudInputMessage"/>
+			<output message="tns:SetUseCloudOutputMessage"/>
+		</operation>		
+		
+		<operation name="setCloudVMs">
+			<input message="tns:SetCloudVMsInputMessage"/>
+			<output message="tns:SetCloudVMsOutputMessage"/>
+		</operation>
+		
+		<operation name="getCloudVMs">
+			<input message="tns:GetCloudVMsInputMessage"/>
+			<output message="tns:GetCloudVMsOutputMessage"/>
+		</operation>
+		
+		<operation name="isUseCloud">
+			<input message="tns:IsUseCloudInputMessage"/>
+			<output message="tns:IsUseCloudOutputMessage"/>
+		</operation>
+				
+		<operation name="getQuality">
+			<input message="tns:GetQualityInputMessage"/>
+			<output message="tns:GetQualityOutputMessage"/>
+		</operation>
+		
+		<operation name="setQuality">
+			<input message="tns:SetQualityInputMessage"/>
+			<output message="tns:SetQualityOutputMessage"/>
+		</operation>
+		
+		<operation name="getFunctionality">
+			<input message="tns:GetFunctionalityInputMessage"/>
+			<output message="tns:GetFunctionalityOutputMessage"/>
+		</operation>
+		
+		<operation name="setFunctionality">
+			<input message="tns:SetFunctionalityInputMessage"/>
+			<output message="tns:SetFunctionalityOutputMessage"/>
+		</operation>
+		
+		<operation name="getFunctionalityNodes">
+			<input message="tns:GetGHNInputMessage"/>
+			<output message="tns:GetGHNOutputMessage"/>
+		</operation>
+		
+		<operation name="setGHNs">
+			<input message="tns:SetGHNInputMessage"/>
+			<output message="tns:SetGHNOutputMessage"/>
+		</operation>
+		
+		<operation name="setVREtoPendingState">
+			<input message="tns:SetVREtoPendingStateInputMessage"/>
+			<output message="tns:SetVREtoPendingStateOutputMessage"/>
+		</operation>
+		
+		<operation name="deployVRE">
+			<input message="tns:DeployVREInputMessage"/>
+			<output message="tns:DeployVREOutputMessage"/>
+		</operation>
+		
+		<operation name="undeployVRE">
+			<input message="tns:UndeployVREInputMessage"/>
+			<output message="tns:UndeployVREOutputMessage"/>
+		</operation>
+		
+		<operation name="renewVRE">
+			<input message="tns:RenewVREInputMessage"/>
+			<output message="tns:RenewVREOutputMessage"/>
+		</operation>
+		
+		<operation name="checkStatus">
+			<input message="tns:CheckStatusInputMessage"/>
+			<output message="tns:checkStatusOutputMessage"/>
+		</operation>
+	
+	</portType>
+
+
+
+</definitions>

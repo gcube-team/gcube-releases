@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>42b2b430-b5da-11df-a99a-b480cc858eca</ID>
+  <Type>GenericResource</Type>
+  <Scopes>
+    <Scope>/gcube/devsec</Scope>
+  </Scopes>
+  <Profile>
+    <SecondaryType>OpenSearchResource</SecondaryType>
+    <Name>OpenSearchResource_GENESI-DR_Dataset_MER_RR__1P</Name>
+    <Description>Generic resource containing info for the GENESI-DR MER_RR__1P external repository</Description>
+    <Body>
+      <OpenSearchResource>
+        <name>GENESI-DR Dataset: MER_RR__1P</name>
+        <descriptionDocumentURI>http://maps.terradue.com/drsite/envisat_meris/mer_rr__1p/description/</descriptionDocumentURI>
+        <brokeredResults>false</brokeredResults>
+        <transformation>
+          <MIMEType>application/atom+xml</MIMEType>
+          <recordSplitXPath>*[local-name()='feed']/*[local-name()='entry']</recordSplitXPath>
+          <recordIdXPath>//*[local-name()='entry']/*[local-name()='id']</recordIdXPath>
+          <XSLTLink>OpenSearchXSLT_identity</XSLTLink>
+        </transformation>
+      </OpenSearchResource>
+    </Body>
+  </Profile>
+</Resource>

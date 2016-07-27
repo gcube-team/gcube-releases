@@ -1,0 +1,10 @@
+<RunTimeEnv>			
+	<Variable>
+		<Key>Java WS Core</Key>
+		<Value>4.0.4</Value>
+	</Variable>
+	<Variable>
+       	<Key>GHN-distribution-version</Key>
+        <Value>6.0.1</Value>
+	</Variable>				
+</RunTimeEnv>	

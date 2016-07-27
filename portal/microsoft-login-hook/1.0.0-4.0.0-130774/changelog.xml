@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.linkedin.1-0-0" date="2016-07-25">
+		<Change>First release of the microsoft authentication hook</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,200 @@
+<gDTSTransformationProgram>
+	<Transformer>
+		<Class>org.gcube.datatransformation.datatransformationlibrary.programs.metadata.indexfeed.FtsRowset_Transformer</Class>
+		<GlobalProgramParameters />
+	</Transformer>
+	<TransformationUnits>
+		<TransformationUnit id="0" isComposite="false">
+			<Sources>
+				<Source>
+					<Input id="TRInput0" />
+					<ContentType>
+						<Mimetype>text/xml</Mimetype>
+						<Parameters>
+							<Parameter isOptional="false" name="schemaURI" value="-" />
+						</Parameters>
+					</ContentType>
+				</Source>
+			</Sources>
+			<ProgramParameters>
+				<Parameter isOptional="false" name="xslt" value="-" />
+				<Parameter isOptional="false" name="indexType" value="-" />
+			</ProgramParameters>
+			<Target>
+				<Output id="TROutput" />
+				<ContentType>
+					<Mimetype>text/xml</Mimetype>
+					<Parameters>
+						<Parameter isOptional="false" name="schemaURI" value="http://ftrowset.xsd" />
+					</Parameters>
+				</ContentType>
+			</Target>
+		</TransformationUnit>
+		<TransformationUnit id="1" isComposite="false">
+			<Sources>
+				<Source>
+					<Input id="TRInput0" />
+					<ContentType>
+						<Mimetype>text/xml</Mimetype>
+						<Parameters>
+							<Parameter isOptional="false" name="schemaURI" value="http://dublincore.org/documents/dces/" />
+						</Parameters>
+					</ContentType>
+				</Source>
+			</Sources>
+			<ProgramParameters>
+				<Parameter isOptional="false" name="xslt" value="$BrokerXSLT_dc_anylanguage_to_ftRowset_anylanguage" />
+				<Parameter isOptional="false" name="indexType" value="ft_dc_1.0" />
+			</ProgramParameters>
+			<Target>
+				<Output id="TROutput" />
+				<ContentType>
+					<Mimetype>text/xml</Mimetype>
+					<Parameters>
+						<Parameter isOptional="false" name="schemaURI" value="http://ftrowset.xsd" />
+					</Parameters>
+				</ContentType>
+			</Target>
+		</TransformationUnit>
+		<TransformationUnit id="2" isComposite="false">
+			<Sources>
+				<Source>
+					<Input id="TRInput0" />
+					<ContentType>
+						<Mimetype>text/xml</Mimetype>
+						<Parameters>
+							<Parameter isOptional="false" name="schemaURI" value="http://www.gcube-system.org/resources/schema/iso/19115/iso19115.xsd" />
+						</Parameters>
+					</ContentType>
+				</Source>
+			</Sources>
+			<ProgramParameters>
+				<Parameter isOptional="false" name="xslt" value="$BrokerXSLT_ISO19115_anylanguage_to_ftRowset_anylanguage" />
+				<Parameter isOptional="false" name="indexType" value="ft_ISO19115_1.0" />
+			</ProgramParameters>
+			<Target>
+				<Output id="TROutput" />
+				<ContentType>
+					<Mimetype>text/xml</Mimetype>
+					<Parameters>
+						<Parameter isOptional="false" name="schemaURI" value="http://ftrowset.xsd" />
+					</Parameters>
+				</ContentType>
+			</Target>
+		</TransformationUnit>
+		<TransformationUnit id="3" isComposite="false">
+			<Sources>
+				<Source>
+					<Input id="TRInput0" />
+					<ContentType>
+						<Mimetype>text/xml</Mimetype>
+						<Parameters>
+							<Parameter isOptional="false" name="schemaURI" value="http://eiDB.xsd" />
+						</Parameters>
+					</ContentType>
+				</Source>
+			</Sources>
+			<ProgramParameters>
+				<Parameter isOptional="false" name="xslt" value="$BrokerXSLT_eiDB_anylanguage_to_ftRowset_anylanguage" />
+				<Parameter isOptional="false" name="indexType" value="ft_eiDB_1.0" />
+			</ProgramParameters>
+			<Target>
+				<Output id="TROutput" />
+				<ContentType>
+					<Mimetype>text/xml</Mimetype>
+					<Parameters>
+						<Parameter isOptional="false" name="schemaURI" value="http://ftrowset.xsd" />
+					</Parameters>
+				</ContentType>
+			</Target>
+		</TransformationUnit>
+		<TransformationUnit id="4" isComposite="false">
+			<Sources>
+				<Source>
+					<Input id="TRInput0" />
+					<ContentType>
+						<Mimetype>text/xml</Mimetype>
+						<Parameters>
+							<Parameter isOptional="false" name="schemaURI" value="http://es.xsd" />
+						</Parameters>
+					</ContentType>
+				</Source>
+			</Sources>
+			<ProgramParameters>
+				<Parameter isOptional="false" name="xslt" value="$BrokerXSLT_es_anylanguage_to_ftRowset_anylanguage" />
+				<Parameter isOptional="false" name="indexType" value="ft_es_1.0" />
+			</ProgramParameters>
+			<Target>
+				<Output id="TROutput" />
+				<ContentType>
+					<Mimetype>text/xml</Mimetype>
+					<Parameters>
+						<Parameter isOptional="false" name="schemaURI" value="http://ftrowset.xsd" />
+					</Parameters>
+				</ContentType>
+			</Target>
+		</TransformationUnit>
+		<TransformationUnit id="5" isComposite="false">
+			<Sources>
+				<Source>
+					<Input id="TRInput0" />
+					<ContentType>
+						<Mimetype>text/xml</Mimetype>
+						<Parameters>
+							<Parameter isOptional="false" name="schemaURI" value="http://193.43.36.238:8282/fi/figis/devcon/schema/dc/qualifieddc.xsd" />
+						</Parameters>
+					</ContentType>
+				</Source>
+			</Sources>
+			<ProgramParameters>
+				<Parameter isOptional="false" name="xslt" value="$BrokerXSLT_FARM_dc_anylanguage_to_ftRowset_anylanguage" />
+				<Parameter isOptional="false" name="indexType" value="ft_FARM_dc_1.0" />
+			</ProgramParameters>
+			<Target>
+				<Output id="TROutput" />
+				<ContentType>
+					<Mimetype>text/xml</Mimetype>
+					<Parameters>
+						<Parameter isOptional="false" name="schemaURI" value="http://ftrowset.xsd" />
+					</Parameters>
+				</ContentType>
+			</Target>
+		</TransformationUnit>
+		<TransformationUnit id="6" isComposite="false">
+			<Sources>
+				<Source>
+					<Input id="TRInput0" />
+					<ContentType>
+						<Mimetype>text/xml</Mimetype>
+						<Parameters>
+							<Parameter isOptional="false" name="schemaURI" value="-" />
+						</Parameters>
+					</ContentType>
+				</Source>
+			</Sources>
+			<ProgramParameters>
+				<Parameter name="finalftsxslt" value="-" isOptional="false" />
+				<Parameter name="indexType" value="-" isOptional="false" />
+				<Parameter name="xslt" value="-" isOptional="true" />
+				<Parameter name="xslt:1" value="-" isOptional="true" />
+				<Parameter name="xslt:2" value="-" isOptional="true" />
+				<Parameter name="xslt:3" value="-" isOptional="true" />
+				<Parameter name="xslt:4" value="-" isOptional="true" />
+				<Parameter name="xslt:5" value="-" isOptional="true" />
+				<Parameter name="xslt:6" value="-" isOptional="true" />
+				<Parameter name="xslt:7" value="-" isOptional="true" />
+				<Parameter name="xslt:8" value="-" isOptional="true" />
+				<Parameter name="xslt:9" value="-" isOptional="true" />
+			</ProgramParameters>
+			<Target>
+				<Output id="TROutput" />
+				<ContentType>
+					<Mimetype>text/xml</Mimetype>
+					<Parameters>
+						<Parameter isOptional="false" name="schemaURI" value="http://ftrowset.xsd" />
+					</Parameters>
+				</ContentType>
+			</Target>
+		</TransformationUnit>
+	</TransformationUnits>
+</gDTSTransformationProgram>

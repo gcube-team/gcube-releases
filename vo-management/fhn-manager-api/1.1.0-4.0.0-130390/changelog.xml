@@ -1,0 +1,9 @@
+<ReleaseNotes>
+<Changeset component="fhn-manager-api.1-0-0" date="2016-07-26">
+  <Change>First Release</Change>
+</Changeset>
+<Changeset component="fhn-manager-api.1-1-0" date="2016-07-26">
+  <Change>Second Release</Change>
+  <Change>Minor changes on Node definition</Change>
+</Changeset>
+</ReleaseNotes>

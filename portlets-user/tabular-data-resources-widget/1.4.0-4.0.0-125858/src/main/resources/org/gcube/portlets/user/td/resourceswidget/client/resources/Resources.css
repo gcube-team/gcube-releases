@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+.cursor-zoom-in { 
+	cursor: zoom-in, auto;
+}
+
+.cursor-zoom-out {
+	cursor: zoom-out, auto;
+}
+

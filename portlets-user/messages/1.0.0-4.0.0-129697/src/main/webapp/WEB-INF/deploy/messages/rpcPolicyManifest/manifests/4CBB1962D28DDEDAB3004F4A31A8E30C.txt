@@ -1,0 +1,2 @@
+serviceClass: org.gcube.portlets.user.messages.client.rpc.MessagesService
+path: 43AD2A365B347278E477DB7A743D87BD.gwt.rpc

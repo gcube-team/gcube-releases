@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="${groupId}.${artifactId}.1-1-0" date="2016-06-24">
+		<Change>Removed maven-portal-bom as dependency
+		</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-1-0" date="2015-05-04">
+		<Change>Updated to support several Access Point for each Resolver
+		</Change>
+		<Change>Introduced Entry Names in Uri-Resolver-Map</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-0-0" date="2014-10-13">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Reporting"
+    targetNamespace="http://gcube-system.org/namespaces/vremanagement/resourcemanager/reporting"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="http://gcube-system.org/namespaces/vremanagement/resourcemanager/reporting"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+    xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:vretypes="http://gcube-system.org/common/vremanagement/types"
+    xmlns:wsrlw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"    
+    xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+    xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"  location="../gcube/common/core/providers/GCUBEProvider.wsdl"/>
+
+	<import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+	
+	<import namespace="http://gcube-system.org/common/vremanagement/types" location="VREManagementTypes.wsdl"/> 
+
+
+<!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+<types>
+<xsd:schema targetNamespace="http://gcube-system.org/namespaces/vremanagement/resourcemanager/reporting"
+    xmlns:tns="http://gcube-system.org/namespaces/vremanagement/resourcemanager/reporting"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   
+   <xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+   <xsd:import namespace="http://gcube-system.org/common/vremanagement/types" schemaLocation="VREManagementTypes.xsd"/>
+	   	
+  	<xsd:element name="targetScope" type="coretypes:scope"/>		 
+	
+    <xsd:element name="VOID">
+   		<xsd:complexType/>
+    </xsd:element>		
+  
+	<xsd:element name="sendReportParameters"> 
+    	<xsd:complexType>	
+			<xsd:sequence>
+				<xsd:element name="callbackID" type="xsd:string"/>
+                <xsd:element name="report" type="xsd:string"/>   
+                <xsd:element ref="tns:targetScope"/>                 
+		 	</xsd:sequence>
+  		</xsd:complexType>	
+	</xsd:element>	
+	
+	<xsd:element name="reportID" type="xsd:string"/>
+	
+	<xsd:element name="report" type="xsd:string"/>			
+	
+	<xsd:element name="NoSuchReportFaultType">
+		<xsd:complexType>
+              <xsd:complexContent>
+                    <xsd:extension base="corefaults:GCUBEUnrecoverableFault">
+                        <xsd:sequence/>                        
+                    </xsd:extension>
+                </xsd:complexContent>
+    	</xsd:complexType>
+	</xsd:element>	 	
+	<xsd:element name="InvalidScopeFaultType">
+		<xsd:complexType>
+              <xsd:complexContent>
+                    <xsd:extension base="corefaults:GCUBEUnrecoverableFault">
+                        <xsd:sequence/>                        
+                    </xsd:extension>
+                </xsd:complexContent>
+    	</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
+</types>
+
+ <!--============================================================
+
+                       M E S S A G E S
+
+  ============================================================-->
+
+   
+    <message name="ReportID">
+        <part name="request" element="tns:reportID"/>
+    </message>   
+	
+	<message name="SendReportInputMessage">
+        <part name="request" element="tns:sendReportParameters"/>
+    </message>        	
+    <message name="GetReportInputMessage">
+        <part name="request" element="tns:reportID"/>
+    </message>
+    <message name="GetReportResponseMessage">
+        <part name="request" element="tns:report"/>
+    </message>
+	<message name="VoidMessage">
+		<part name="response" element="tns:VOID"/>
+	</message>	
+	<message name="InvalidScopeFaultMessage">
+	   <part name="fault" element="vretypes:InvalidScopeFaultType"/>
+  	</message>
+	<message name="NoSuchReportFaultMessage">
+	   <part name="fault" element="tns:NoSuchReportFaultType"/>
+  	</message>
+<!--============================================================
+
+                       P O R T T Y P E
+                      
+  ============================================================-->
+<portType name="ReportingPortType" 
+    wsdlpp:extends="provider:GCUBEProvider">
+    
+    <operation name="SendReport">
+        <input message="tns:SendReportInputMessage"/>
+        <output message="tns:VoidMessage"/>
+        <fault name="fault" message="tns:InvalidScopeFaultMessage"	/>
+    </operation>
+    
+    <operation name="GetReport">
+        <input message="tns:GetReportInputMessage"/>
+        <output message="tns:GetReportResponseMessage"/>
+        <fault name="fault1" message="tns:InvalidScopeFaultMessage"/>
+        <fault name="fault2" message="tns:NoSuchReportFaultMessage"/>
+    </operation>
+
+</portType>
+
+</definitions>
+    

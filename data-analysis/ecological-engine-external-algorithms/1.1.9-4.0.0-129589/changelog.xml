@@ -1,0 +1,22 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="org.gcube.data-analysis.ecological-engine-external-algorithms.1-0-0"
+		date="2013-03-19">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="ecological-engine-external-algorithms-1.1.9-4.0.0-129589" date="2013-07-22">
+		<Change>Add TrendyLyzer algorithms and species/taxa procedures </Change>
+	</Changeset>
+	<Changeset component="ecological-engine-external-algorithms-1.1.9-4.0.0-129589" date="2013-10-22">
+		<Change>Fix problem in species/taxa procedures </Change>
+	</Changeset>
+	<Changeset component="ecological-engine-external-algorithms-1.1.9-4.0.0-129589" date="2014-09-05">
+		<Change>Geothermal analysis </Change>
+	</Changeset>
+	<Changeset component="ecological-engine-external-algorithms-1.1.9-4.0.0-129589" date="2015-06-30">
+		<Change>Introducing average annual precipitation</Change>
+	</Changeset>
+	<Changeset component="ecological-engine-external-algorithms-1.1.9-4.0.0-129589" date="2015-09-23">
+		<Change>Adding algorithms by univ Brazil</Change>
+	</Changeset>
+</ReleaseNotes>

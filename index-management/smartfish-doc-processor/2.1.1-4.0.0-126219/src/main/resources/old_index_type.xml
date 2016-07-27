@@ -1,0 +1,319 @@
+<index-type name="default">
+                <field-list sort-xnear-stop-word-threshold="2E8">
+                    <field name="title">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <return>yes</return>
+                        <highlightable>no</highlightable>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="text">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>yes</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="ObjectID">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="gDocCollectionID">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="gDocCollectionLang">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="fishery_local_name">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="type_of_vessel">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="gear_used">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="technology_used">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="species_scientific_name">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="species_english_name">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="country">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="provenance">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="management">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="access_control">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="fishing_control">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="exploitation_status">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="enforcement_method">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="sector">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="seasonality">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="authority">
+                        <index>yes</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="vessel_uri">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="seasonality_uri">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="authority_uri">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="management_uri">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="exploitation_status_uri">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="access_control_uri">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="fishing_control_uri">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="enforcement_method_uri">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="sector_uri">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="species_uri">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="country_uri">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="gear_uri">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="doc_uri">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>yes</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                    <field name="S">
+                        <index>no</index>
+                        <store>yes</store>
+                        <highlightable>no</highlightable>
+                        <return>yes</return>
+                        <tokenize>no</tokenize>
+                        <sort>no</sort>
+                        <boost>1.0</boost>
+                    </field>
+                </field-list>
+            </index-type>

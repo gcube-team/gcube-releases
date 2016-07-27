@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.2.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.2.0/distro-source/core/src/gwt-module.dtd">
+<module rename-to="datamanagementfacility">
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Inherit the default GWT style sheet. -->
+	<inherits name='com.google.gwt.user.theme.clean.Clean' />
+
+	<!-- Other module inherits -->
+	<inherits name="com.extjs.gxt.ui.GXT" />
+	<inherits name='org.gcube.portlets.widgets.applicationnews.ApplicationNews_Widget' />
+	<inherits name='org.gcube.portlets.user.csvimportwizard.CSVImportWizard'/>
+	<inherits name="org.gcube.portlets.user.csvimportwizard.ws.CSVImportWizardWorkspace" />	
+	<inherits name='org.gcube.portlets.widgets.sessionchecker.SessionChecker' />
+	<inherits name='org.gcube.portlets.widgets.wsexplorer.WorkspaceExplorer' />
+	
+	<!-- Specify the app entry point class.                         -->
+	<entry-point class='org.gcube.application.datamanagementfacilityportlet.client.DataManagementFacility' />
+	
+</module>

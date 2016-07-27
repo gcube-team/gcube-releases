@@ -1,0 +1,104 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.2-9-2"
+		date="2016-06-24">
+		<Change>New logo for GeoeExplorer
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.2-9-1"
+		date="2016-04-27">
+		<Change>Updated pom version to integrate the fix about token null read
+			from ASL in gcube-gisviewer
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.2-9-0"
+		date="2016-02-15">
+		<Change>[Feature #1990] GeoExplorer enhancements: WPS integration and
+			its subtask
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.2-9-0"
+		date="2016-01-04">
+		<Change>[Task: #1283] Added code to manage ncWMS and COLORSCALERANGE
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.2-7-0"
+		date="2015-09-25">
+		<Change>Updated to support geoexplorer and gis viewer fixs
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.2-6-2"
+		date="2014-12-05">
+		<Change>Updated to support new geoexplorer and gis viewer
+			facilities
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.2-6-1"
+		date="2014-12-05">
+		<Change>Updated to support new geoexplorer and gis viewer
+			facilities
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.2-6-0"
+		date="2014-09-01">
+		<Change>Updated to support new geoexplorer and gis viewer
+			functionality
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.2-5-0"
+		date="2014-06-04">
+		<Change>Updated to support new portal bom configurations
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.2-4-0"
+		date="2013-10-21">
+		<Change>#Ticket 2223. This project was enhancements to gwt 2.5.1
+		</Change>
+		<Change>GCF dependency was removed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.2-3-0"
+		date="2013-09-16">
+		<Change>Updated to support the enhancements of geoexplorer</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.2-2-0"
+		date="2013-07-09">
+		<Change>Updated to support the enhancements of geoexplorer</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.2-1-0"
+		date="2013-05-14">
+		<Change>#1363 Visualization of metadatas as ISO 10139 standard
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.2-0-0"
+		date="2013-03-05">
+		<Change>#1366 This component was mavenized</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.1-2-2"
+		date="2012-11-30">
+		<Change>Update</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.1-2-1"
+		date="2012-09-03">
+		<Change>Update</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.1-2-0"
+		date="2012-07-24">
+		<Change>Sync with GCubeGeoExplorer</Change>
+		<Change>Sync with GCubeGisViewer</Change>
+		<Change>Adding a new logo</Change>
+		<Change>Managing panels resize</Change>
+		<Change>Interface enhancement</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.1-1-0"
+		date="2012-05-04">
+		<Change>Added "Add External Wms to map" Interface</Change>
+		<Change>Bug Fixies</Change>
+		<Change>Integration with GCubeGeoExplorer</Change>
+		<Change>Integration with GCubeGisViewer</Change>
+		<Change>Integration with the export on the workspace funtionality
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.geoexplorer-portlet.1-0-0"
+		date="2012-04-05">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

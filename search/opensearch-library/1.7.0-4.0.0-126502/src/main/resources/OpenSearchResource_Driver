@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>5f8a0680-dad3-11df-b94e-b5f66b8b8a02</ID>
+  <Type>GenericResource</Type>
+  <Scopes>
+    <Scope>/d4science.research-infrastructures.eu/Ecosystem/DRIVER</Scope>
+  </Scopes>
+  <Profile>
+    <SecondaryType>OpenSearchResource</SecondaryType>
+    <Name>OpenSearchResource_Driver</Name>
+    <Description>Generic resource containing info for the Driver external repository</Description>
+    <Body>
+      <OpenSearchResource>
+        <name>Driver</name>
+        <descriptionDocumentURI>http://88.197.20.212:8280/web/openSearchDescriptor</descriptionDocumentURI>
+        <brokeredResults>false</brokeredResults>
+        <transformation>
+          <MIMEType>application/rss+xml</MIMEType>
+          <recordSplitXPath>*[local-name()='rss']/*[local-name()='channel']/*[local-name()='item']</recordSplitXPath>
+          <recordIdXPath>//*[local-name()='item']/*[local-name()='link']</recordIdXPath>
+          <XSLTLink>OpenSearchXSLT_identity</XSLTLink>
+        </transformation>
+      </OpenSearchResource>
+    </Body>
+  </Profile>
+</Resource>

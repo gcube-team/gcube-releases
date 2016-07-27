@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portal.social-networking-library-ws.1-2-0"
+		date="2016-06-10">
+		<Change>Support for new portal (gCube 4.0.0)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library-ws.1-1-0"
+		date="2016-04-10">
+		<Change>Minor bug fixes (look at support ticket #2971)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library-ws.1-0-0"
+		date="2015-12-21">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

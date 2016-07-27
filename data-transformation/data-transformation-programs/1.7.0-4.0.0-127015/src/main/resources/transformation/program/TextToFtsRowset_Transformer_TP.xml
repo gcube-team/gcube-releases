@@ -1,0 +1,40 @@
+<Resource>
+	<ID/>
+	<Type/>
+	<Profile>
+		<SecondaryType>DTSTransformationProgram</SecondaryType>
+		<Name>TextToFtsRowset_Transformer</Name>
+		<Description>Program creating Fts Rowsets from plain text</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.metadata.indexfeed.TextToFtsRowset_Transformer</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>text/plain</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schemaURI" value="http://ftrowset.xsd"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="Scheduler"
+	targetNamespace="http://gcube-system.org/namespaces/datatransfer/scheduler/datatransferscheduler"
+	xmlns="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:tns="http://gcube-system.org/namespaces/datatransfer/scheduler/datatransferscheduler"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+    xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+    xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"	
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<import
+		namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		location="../gcube/common/core/providers/GCUBEProvider.wsdl" />
+
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+		location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+		location="../wsrf/notification/WS-BaseN.wsdl" />
+
+
+	<wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+
+	<types>
+		<xsd:schema
+			targetNamespace="http://gcube-system.org/namespaces/datatransfer/scheduler/datatransferscheduler"
+			xmlns:tns="http://gcube-system.org/namespaces/datatransfer/scheduler/datatransferscheduler"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults">
+    
+	    <xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+	    	
+			
+			<xsd:simpleType name="FrequencyType">
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration  value="perMinute"/>
+   	 				<xsd:enumeration  value="perHour"/>
+   	 				<xsd:enumeration  value="perDay"/>
+   	 				<xsd:enumeration  value="perWeek"/>
+   	 				<xsd:enumeration  value="perMonth"/>
+   	 				<xsd:enumeration  value="perYear"/>
+     			</xsd:restriction>
+			</xsd:simpleType>
+			
+			<xsd:simpleType name="transferType">
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration  value="TreeBasedTransfer"/>
+   	 				<xsd:enumeration  value="FileBasedTransfer"/>
+   	 				<xsd:enumeration  value="LocalFileBasedTransfer"/>
+     			</xsd:restriction>
+			</xsd:simpleType>
+			
+			<xsd:simpleType name="storageType">
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration  value="LocalGHN"/>
+   	 				<xsd:enumeration  value="StorageManager"/>
+     			</xsd:restriction>
+			</xsd:simpleType>
+			
+			<xsd:simpleType name="storageAccessType">
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration  value="SHARED"/>
+   	 				<xsd:enumeration  value="PUBLIC"/>
+   	 				<xsd:enumeration  value="PRIVATE"/>
+     			</xsd:restriction>
+			</xsd:simpleType>
+	
+			<xsd:complexType name="RSLocator">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd:string">
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+			
+			<xsd:complexType name="SourceData">
+				<xsd:sequence>
+					<xsd:element name="type" type="tns:transferType" />
+					<xsd:element name="scope" type="xsd:string" />
+					<xsd:choice>
+						<xsd:element name="inputSource" type="tns:InputPattern" />
+						<xsd:element name="inputURIs" type="xsd:string" minOccurs="1" maxOccurs="unbounded"  />
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:complexType name="anyHolder">
+				<xsd:sequence>
+					<xsd:any processContents="skip" namespace="##any"
+						maxOccurs="1" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:complexType name="InputPattern">
+				<xsd:sequence>
+					<xsd:element name="pattern" type="tns:anyHolder"
+						nillable="true" minOccurs="0" />
+					<xsd:element name="sourceId" type="xsd:string"
+						nillable="true" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:complexType name="StorageManagerDetails">
+				<xsd:sequence>
+					<xsd:element name="serviceClass" type="xsd:string"   />
+					<xsd:element name="serviceName" type="xsd:string" />
+					<xsd:element name="Owner" type="xsd:string" />
+					<xsd:element name="accessType" type="tns:storageAccessType" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:complexType name="OutUriData">
+				<xsd:sequence>
+					<xsd:element name="OutUris" type="xsd:string"  minOccurs="1" maxOccurs="unbounded" />
+					<xsd:element name="overwrite" type="xsd:boolean" />
+					<xsd:element name="storageType" type="tns:storageType" />
+					<xsd:element name="storageManagerDetails" type="tns:StorageManagerDetails" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:complexType name="DestData">
+				<xsd:sequence>
+					<xsd:element name="type" type="xsd:string" />
+					<xsd:element name="scope" type="xsd:string" />
+					<xsd:choice>
+						<xsd:element name="outSourceId" type="xsd:string" />
+						<xsd:element name="outUri" type="tns:OutUriData" />
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:complexType>
+		
+			<xsd:complexType name="CancelTransferMessage">
+				<xsd:sequence>
+					<xsd:element name="TransferID" type="xsd:string" />
+					<xsd:element name="forceStop" type="xsd:boolean" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:complexType name="StartTransferMessage">
+				<xsd:sequence>
+					<xsd:element name="Source" type="tns:SourceData" />
+					<xsd:element name="Dest" type="tns:DestData" />
+					<xsd:element name="syncOp" type="xsd:boolean" />
+				</xsd:sequence>
+			</xsd:complexType>
+		
+		
+		<xsd:element name="storeInfoScheduler" type="xsd:string" />
+		<xsd:element name="storeInfoSchedulerResponse"  type="xsd:string" />
+		
+  		<xsd:element name="visit" type="coretypes:VOID" />
+		<xsd:element name="visitResponse" type="xsd:string" />		
+	
+		<xsd:element name="cancelScheduledTransfer" type="xsd:string" />
+		<xsd:element name="cancelScheduledTransferResponse"  type="xsd:string" />
+		
+		<xsd:element name="monitorScheduledTransfer" type="xsd:string" />
+		<xsd:element name="monitorScheduledTransferResponse"  type="xsd:string" />
+				
+		<xsd:element name="getScheduledTransferOutcomes" type="xsd:string" />
+		<xsd:element name="getScheduledTransferOutcomesResponse"  type="xsd:string" />
+
+  		<xsd:element name="printAllTransfersAndTransferObjs" type="coretypes:VOID" />
+		<xsd:element name="printAllTransfersAndTransferObjsResponse" type="xsd:string" />
+				
+        <!-- RESOURCE PROPERTIES  -->		  	
+		<xsd:element name="Name" type="xsd:string"/>
+        <xsd:element name="ActiveTransfers" type="xsd:string"/>
+        <xsd:element name="NumOfActiveTransfers" type="xsd:string"/>     
+       	 <xsd:element name="CheckDBThread" type="xsd:string"/>
+       		
+		
+		<xsd:element name="StatefulResourceProperties">
+		        <xsd:complexType>
+		               <xsd:sequence>                          
+	                      <xsd:element ref="tns:Name" minOccurs="1" maxOccurs="1"/>
+	                      <xsd:element ref="tns:ActiveTransfers" minOccurs="1" maxOccurs="unbounded"/>
+	                      <xsd:element ref="tns:NumOfActiveTransfers" minOccurs="1" maxOccurs="1"/>
+	                      <xsd:element ref="tns:CheckDBThread" minOccurs="1" maxOccurs="1"/>                     
+		               </xsd:sequence>
+		        </xsd:complexType>
+		</xsd:element>
+		     
+         <!-- complexType Example -->
+         <!--  
+         <xsd:element name="StatefulResourceProperties">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns:Name" minOccurs="1" maxOccurs="1"/>
+                        <xsd:element ref="tns:Visits" minOccurs="1" maxOccurs="1"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+          -->	
+            
+	</xsd:schema>
+	</types>
+
+	<message name="visitInputMessage">
+		<part name="request" element="tns:visit"/>
+	</message>
+	<message name="visitOutputMessage">
+		<part name="response" element="tns:visitResponse"/>
+	</message>
+	
+	<!--  storeInfoScheduler -->
+	<message name="storeInfoSchedulerInputMessage">
+				<part name="request" element="tns:storeInfoScheduler" />
+	</message>
+	<message name="storeInfoSchedulerOutputMessage">
+				<part name="response" element="tns:storeInfoSchedulerResponse" />
+	</message>
+
+	<!--  cancelScheduledTransfer -->
+	<message name="cancelScheduledTransferInputMessage">
+				<part name="request" element="tns:cancelScheduledTransfer" />
+	</message>
+	<message name="cancelScheduledTransferOutputMessage">
+				<part name="response" element="tns:cancelScheduledTransferResponse" />
+	</message>
+	
+		<!--  monitorScheduledTransfer -->
+	<message name="monitorScheduledTransferInputMessage">
+				<part name="request" element="tns:monitorScheduledTransfer" />
+	</message>
+	<message name="monitorScheduledTransferOutputMessage">
+				<part name="response" element="tns:monitorScheduledTransferResponse" />
+	</message>
+	
+	<!--  getScheduledTransferOutcomes -->
+	<message name="getScheduledTransferOutcomesInputMessage">
+				<part name="request" element="tns:getScheduledTransferOutcomes" />
+	</message>
+	<message name="getScheduledTransferOutcomesOutputMessage">
+				<part name="response" element="tns:getScheduledTransferOutcomesResponse" />
+	</message>
+		
+	<!--  printAllTransfersAndTransferObjs -->
+	<message name="printAllTransfersAndTransferObjsInputMessage">
+				<part name="request" element="tns:printAllTransfersAndTransferObjs" />
+	</message>
+	<message name="printAllTransfersAndTransferObjsOutputMessage">
+				<part name="response" element="tns:printAllTransfersAndTransferObjsResponse" />
+	</message>
+	
+	
+	<portType name="SchedulerPortType" 
+	wsdlpp:extends="wsntw:NotificationProducer provider:GCUBEProvider" 
+	wsrp:ResourceProperties="tns:StatefulResourceProperties">
+		
+	<!--  storeInfoScheduler -->
+	<operation name="storeInfoScheduler">
+			<input message="tns:storeInfoSchedulerInputMessage" />
+			<output message="tns:storeInfoSchedulerOutputMessage" />
+	</operation>
+	
+	<!--  cancelScheduledTransfer -->
+	<operation name="cancelScheduledTransfer">
+			<input message="tns:cancelScheduledTransferInputMessage" />
+			<output message="tns:cancelScheduledTransferOutputMessage" />
+	</operation>
+	
+	<!--  monitorScheduledTransfer -->
+	<operation name="monitorScheduledTransfer">
+			<input message="tns:monitorScheduledTransferInputMessage" />
+			<output message="tns:monitorScheduledTransferOutputMessage" />
+	</operation>	
+	
+	<!--  getScheduledTransferOutcomes -->
+	<operation name="getScheduledTransferOutcomes">
+			<input message="tns:getScheduledTransferOutcomesInputMessage" />
+			<output message="tns:getScheduledTransferOutcomesOutputMessage" />
+	</operation>
+	
+	
+	</portType>
+	
+
+</definitions>

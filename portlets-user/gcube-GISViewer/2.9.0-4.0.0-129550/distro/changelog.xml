@@ -1,0 +1,93 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.2-9-0"
+		date="2016-06-13">
+		<Change>Added scope provider reset
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.2-8-1"
+		date="2016-04-27">
+		<Change>Added code to set token in case of token null or empty read from ASL
+		</Change>
+		<Change>[Feature: #2107] Added method to read Runtime Resource for
+			DataMiner service
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.2-8-0"
+		date="2016-02-15">
+		<Change>[Feature: #2034] Added method to get gcube token for WPS
+			service
+		</Change>
+		<Change>[Feature: #2107] Added method to read Runtime Resource for
+			DataMiner service
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.2-7-0"
+		date="2016-01-04">
+		<Change>[Task: #1283] Added code to manage ncWMS layers
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.2-6-0"
+		date="2015-09-28">
+		<Change>Updated Runtime Resource reader from root scope to input scope
+		</Change>
+		<Change>[Feature #784] Gcube Geoexplorer: workspace explorer
+			integration
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.2-5-0"
+		date="2015-07-02">
+		<Change>[Feature #203] Updated transect invocation
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.2-4-0"
+		date="2014-12-05">
+		<Change>Updated to support new gis viewer facilities
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.2-3-0"
+		date="2014-09-01">
+		<Change>Updated to support new gis viewer facilities
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.2-2-0"
+		date="2014-06-04">
+		<Change>Updated to support new portal bom configurations
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.2-1-0"
+		date="2013-10-21">
+		<Change>#Ticket 2223. This project was enhancements to gwt 2.5.1
+		</Change>
+		<Change>GCF dependency was removed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.2-0-1"
+		date="2013-03-05">
+		<Change>New RPC is added to read default and base layers from Generic
+			Resource
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.2-0-0"
+		date="2013-03-05">
+		<Change>#1273 This component was mavenized</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.1-2-1"
+		date="2012-09-03">
+		<Change>Update</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.1-2-0"
+		date="2012-07-24">
+		<Change>Update</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.1-1-0"
+		date="2012-05-04">
+		<Change>Sync with GisViewer changes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.1-0-1"
+		date="2012-04-05">
+		<Change>Sync with GisViewerChanges</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-GISViewer.1-0-0"
+		date="2012-02-17">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

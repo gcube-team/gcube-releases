@@ -1,0 +1,56 @@
+ul#myTab {
+	margin-bottom : 0px;
+	border-bottom : none;
+	/* background-color : #eeeeee;
+	background : #eeeeee; */
+	background-color : #fff;
+	background : #fff;
+}
+ul#myTab > li.active a.tabTitle {
+	background : #019ad3;
+	background-color : #019ad3;
+	color : #fff;
+	font-size: 1.2em;
+}
+ul#myTab > li.active a.lineBeneathTabTitle {
+	background : #019ad3;
+	background-color : #019ad3;
+	color : #fff;
+}
+ul#myTab > li > a.lineBeneathTabTitle {
+	line-height: 0.8em;
+	font-size:0.8em;
+	padding: 0px 0px 10px 12px;
+	border-radius: 0px;
+}
+ul#myTab > li > a {
+	border: none;
+	padding-bottom: 5px;
+	background : #0271BE;
+	background-color : #0271BE;
+	color: #fff;
+}
+ul#myTab > li.active:hover > a.tabTitle,
+ul#myTab > li.active:hover > a.lineBeneathTabTitle {
+	background : #019ad3;
+	background-color : #019ad3;
+	color : #fff;
+	cursor: default;
+}
+ul#myTab > li > a.tabTitle{
+	font-size: 1.2em;
+}
+ul#myTab > li:hover > a.tabTitle {
+	background : #009AE5  ;
+	background-color : #009AE5  ;
+	color : #fff;
+}
+ul#myTab > li:hover > a.lineBeneathTabTitle {
+	background : #009AE5  ;
+	background-color : #009AE5  ;
+	color : #fff;
+	cursor: pointer;
+}
+#tabsForTables {
+	overflow : inherit;
+}

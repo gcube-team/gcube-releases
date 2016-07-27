@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	id="WebApp_ID" version="2.4"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>ReportGenerator-portlet</display-name>
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>ReportServiceImpl</servlet-name>
+		<servlet-class>org.gcube.portlets.user.reportgenerator.server.servlet.ReportServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ReportServiceImpl</servlet-name>
+		<url-pattern>/reports/ReportServiceImpl</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsexplorer.server.WorkspaceExplorerServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<url-pattern>/reports/WorkspaceExplorerService</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>checkServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.sessionchecker.server.SessionCheckerServiceImpl</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>checkServlet</servlet-name>
+		<url-pattern>/reports/checksession</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>uploadprogress</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.fileupload.server.UploadProgressServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>uploadprogress</servlet-name>
+		<url-pattern>/reports/uploadprogress</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DownloadService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.reportgenerator.server.servlet.DownloadImageServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DownloadService</servlet-name>
+		<url-pattern>/reports/DownloadService</url-pattern>
+	</servlet-mapping>
+
+	<!-- DO NOT CHANGE - DO NOT Replace URL PATTERN HERE -->
+	<servlet>
+		<servlet-name>upload</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.fileupload.server.UploadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>upload</servlet-name>
+		<url-pattern>/FileUpload/upload</url-pattern>
+	</servlet-mapping>
+
+	<!-- END DO NOT CHANGE -->
+
+
+	<servlet>
+		<servlet-name>remoteLoggerServiceImpl</servlet-name>
+		<servlet-class>com.allen_sauer.gwt.log.server.RemoteLoggerServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>remoteLoggerServiceImpl</servlet-name>
+		<url-pattern>/reports/gwt-log</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>convertServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.exporter.server.ReportExporterServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>convertServlet</servlet-name>
+		<url-pattern>/reports/convert</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DownloadEncryptedReport</servlet-name>
+		<servlet-class>org.gcube.portlets.user.reportgenerator.server.servlet.DownloadEncryptedReport</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DownloadEncryptedReport</servlet-name>
+		<url-pattern>/reports/downloadEncryptedReport</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>ReportGenerator.html</welcome-file>
+	</welcome-file-list>
+</web-app>

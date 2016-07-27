@@ -1,0 +1,61 @@
+package org.gcube.portlets.user.workspace.shared;
+
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class UserBean implements Serializable {
+	private String username;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private boolean cataloguePermission;
+	
+	public UserBean(String username, String firstName, String lastName,
+			String email, boolean cataloguePermission) {
+		super();
+		this.cataloguePermission = cataloguePermission;
+		this.username = username;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+	public UserBean() {
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public boolean hasCataloguePermission() {
+		return cataloguePermission;
+	}
+	public void setCataloguePermission(boolean cataloguePermission) {
+		this.cataloguePermission = cataloguePermission;
+	}
+
+	@Override
+	public String toString() {
+		return "UserBean [username=" + username + ", firstName=" + firstName
+				+ ", lastName=" + lastName + ", email=" + email
+				+ ", cataloguePermission=" + cataloguePermission + "]";
+	}
+}

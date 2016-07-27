@@ -1,0 +1,63 @@
+function showhelp {
+  			   echo -e "\nusage:  clean-app-state -a <app-name> [-g <ghn_home>] [-h] \n" 
+               echo    "  a                  = the application name whose state has to be cleaned"
+			   echo    "  g                  = the gHN directory."
+		       echo -e "  h                  = shows this help.\n"
+}
+
+while getopts ":a:g:xh" opt; do
+  case $opt in
+	g) ghnhome=$OPTARG;;
+	a) apps=$OPTARG;;
+    h) showhelp
+exit 0 ;;
+	:)  echo -e "\nERROR:option -$OPTARG requires an argument." >&2 ; 
+				showhelp; 
+				echo -e "\naborting.\n"
+				exit 1;;
+	\?) echo -e "\nERROR:invalid option: -$OPTARG"; 
+			showhelp; 
+			echo -e "\naborting.\n" 
+			exit 1 >&2 ;;
+  esac
+done
+
+
+if [ -z "$apps" ]; then
+	echo -e "\nERROR: apps parameter do not specified. please specify it with -a option" >&2
+	exit 1;
+fi
+
+if [ -z "$ghnhome" ]; then 
+	if [ -z "$GHN_HOME" ]; then 
+		echo -e "\nERROR:please specify the gHN directory (-g) or define the GHN_HOME env var." >&2
+		showhelp
+		echo -e "\naborting.\n"
+		exit 1
+	else
+		ghnhome=$GHN_HOME
+	fi
+fi
+
+
+if [ ! -d "$ghnhome/state/$apps" ]; then
+	echo -e "\nERROR: apps folder does not exist or is not a directory, aborting." >&2
+	exit 1;
+fi
+
+echo -e "\nRemoving resource profiles from the Information System\n"
+
+source ./load-env
+java org.gcube.smartgears.utils.sweeper.AppSweeperClient $apps  1>/dev/null 
+
+if [ "$?" != "0" ]; then
+		echo -e "\nCould no correctly sweep the profiles from the Information System"
+		echo -e "\nIn case of production deployment please contact the production admin"
+		echo -e "\nIn case of dev deployment you can remove the state by hand by removing the $GHN_HOME/state/$apps folder"
+		exit 1
+fi
+
+
+echo "Removing application state $ghnhome/state/$apps"
+#removing folder
+rm -rf $ghnhome/state/$apps

@@ -1,0 +1,24 @@
+#deployedSoftware: 
+#    - refId: s1
+#description: GenericWorker instance
+#version: 1.0.0
+#id: 2-2
+#---
+#deployedSoftware: 
+#    - refId: s1
+#    - refId: s2
+#description: GenericWorker and SmartExecutor instances
+#version: 1.0.0
+#id: 2-3
+#---
+deployedSoftware:
+    - refId: s2
+description: gCube Smart Executor
+creationDate: 06-Oct-2015
+version: 1.2.0
+id: 2-1
+minRam: 4294967296
+minCores: 1
+suggestedRam: 8589934592
+suggestedCores: 2
+

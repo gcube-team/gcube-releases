@@ -1,0 +1,11 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset
+		component="org.gcube.vre-management.resourcebroker-serialization.1-0-0"
+		date="2010-07-22">
+		<Change>First release</Change>
+		<Change>Split the serialization part to build a stand-alone library for accessing the RB.</Change>
+		<Change>This part will be integrated in the gCore branch 1.9.</Change>
+	</Changeset>
+
+</ReleaseNotes>

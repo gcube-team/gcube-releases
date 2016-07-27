@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='dataminermanager'>
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name="com.google.gwt.http.HTTP" />
+	
+	<!-- <inherits name='com.google.gwt.user.theme.clean.Clean' /> -->
+	<inherits name='com.sencha.gxt.ui.GXT' />
+	<!-- <inherits name="com.extjs.gxt.ui.GXT" /> -->
+	
+	<!-- <inherits name="com.google.gwt.logging.Logging" /> -->
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-TRACE" />  
+	
+	<!-- Debug CSS style -->
+	<set-configuration-property name="CssResource.style" value="pretty" 
+		/>
+
+	<!-- 
+	<inherits name="org.gcube.portlets.user.tdw.TabularDataWidget" />
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+	<inherits name='org.gcube.portlets.user.csvimportwizard.CSVImportWizard' /> -->
+	
+	<inherits name='org.gcube.portlets.widgets.sessionchecker.SessionChecker' />
+	<!-- 
+	<inherits
+		name="org.gcube.portlets.user.csvimportwizard.ws.CSVImportWizardWorkspace" />
+	-->
+	
+	<!-- inherits WorkspaceExplorer widget -->
+	<inherits name='org.gcube.portlets.widgets.wsexplorer.WorkspaceExplorer' />
+
+	<!-- inherits Wokspace Uploader widget -->
+	<inherits
+		name="org.gcube.portlets.widgets.workspaceuploader.WorkspaceUploader" />
+
+	<!-- 
+	<inherits name='org.gwtopenmaps.openlayers.OpenLayers' />
+	<inherits
+		name='org.gcube.portlets.widgets.file_dw_import_wizard.filedwimportwizard' />
+	<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+	-->
+
+	<!-- 
+	<replace-with class="org.gcube.portlets.user.dataminermanager.client.custom.Gxt2ZIndexXDOM">
+		<when-type-is class="com.sencha.gxt.core.client.dom.XDOM.XDOMImpl" />
+	</replace-with> -->
+	
+	<entry-point
+		class='org.gcube.portlets.user.dataminermanager.client.DataMinerManager' />
+	
+	<!-- 
+	<set-property name="log_ConsoleLogger" value="ENABLED" /> <set-property 
+		name="log_DivLogger" value="ENABLED" /> <set-property name="log_GWTLogger" 
+		value="ENABLED" /> <set-property name="log_SystemLogger" value="ENABLED" 
+		/>  -->
+	<!-- Not in GWT 2.6 <set-property name="log_FirebugLogger" value="ENABLED" 
+		/> -->
+
+  
+	<set-property name="log_ConsoleLogger" value="DISABLED" />
+	<set-property name="log_DivLogger" value="DISABLED" />
+	<set-property name="log_GWTLogger" value="DISABLED" />
+	<set-property name="log_SystemLogger" value="DISABLED" /> 
+	<!-- Not in GWT 2.6 <set-property name="log_FirebugLogger" value="DISABLED" 
+		/> -->
+	
+	
+	<source path='client' />
+	<source path='shared' />
+
+</module>

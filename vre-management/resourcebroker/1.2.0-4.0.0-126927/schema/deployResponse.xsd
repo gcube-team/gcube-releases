@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployResponse" 
+	xmlns:tns="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployResponse" 
+	elementFormDefault="qualified">
+
+    <element name="PlanResponse" type="tns:PlanResponseType"></element>
+    
+    <complexType name="PlanResponseType">
+    	<sequence>
+    		<element name="Scope" type="string" minOccurs="1"
+    			maxOccurs="1">
+    		</element>
+    		<element name="PackageGroup" type="tns:PackageGroupType"
+    			minOccurs="0" maxOccurs="unbounded">
+    		</element>
+    		<element name="Status" type="tns:StatusType" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    	<!-- 
+    		A deploy Response is supposed to be uniquelly identified by
+    		a randomly generated ID.
+    		Such a string should be contained between 18 and 64 characters.
+    	 -->
+    	<attribute name="deployID" use="required">
+    		<simpleType>
+    			<restriction base="string">
+    				<minLength value="18"></minLength>
+    				<maxLength value="64"></maxLength>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+
+
+    <complexType name="GHNListType">
+    	<sequence>
+    		<element name="GHN" type="string" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="PackageGroupType">
+    	<sequence>
+    		<element name="Package" type="tns:PackageType" minOccurs="1"
+    			maxOccurs="unbounded">
+    		</element>
+    		<element name="GHN" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    	</sequence>
+    	<attribute name="ID" type="string" use="required"></attribute>
+    	<attribute name="service" type="string" use="required"></attribute>
+    </complexType>
+
+    <complexType name="PackageType">
+    	<sequence>
+    		<element name="ServiceClass" type="string" minOccurs="1"
+    			maxOccurs="1">
+    		</element>
+    		<element name="ServiceName" type="string" minOccurs="1"
+    			maxOccurs="1">
+    		</element>
+    		<element name="ServiceVersion" type="string" minOccurs="1"
+    			maxOccurs="1">
+    		</element>
+    		<element name="PackageName" type="string" minOccurs="1"
+    			maxOccurs="1">
+    		</element>
+    		<element name="PackageVersion" type="string" minOccurs="1"
+    			maxOccurs="1">
+    		</element>
+    	</sequence>
+    	<attribute name="reuse" type="boolean" use="required"></attribute>
+    </complexType>
+
+
+    <!-- 
+    	Enumaration on possible scopes.
+     -->
+    <simpleType name="Scopes">
+		<restriction base="string">
+			<enumeration value="NONE"/>
+			<enumeration value="GHN"/>
+			<enumeration value="VRE"/>
+			<enumeration value="VO"/>
+		</restriction>
+	</simpleType>
+
+    <complexType name="StatusType">
+    	<sequence>
+    		<element name="ErrorMsg" type="string" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    	<attribute name="value" type="tns:StatusValueT" use="required"></attribute>
+    </complexType>
+
+    <simpleType name="StatusValueT">
+    	<restriction base="string">
+    		<enumeration value="SUCCESS"></enumeration>
+    		<enumeration value="FAILED"></enumeration>
+    	</restriction>
+    </simpleType>
+</schema>

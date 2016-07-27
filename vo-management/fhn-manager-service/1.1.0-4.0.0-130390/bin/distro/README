@@ -1,0 +1,62 @@
+The gCube System - ${name}
+--------------------------------------------------
+ 
+${description}
+ 
+ 
+${gcube.description}
+ 
+${gcube.funding}
+ 
+ 
+Version
+--------------------------------------------------
+ 
+${version} (${buildDate})
+ 
+Please see the file named "changelog.xml" in this directory for the release notes.
+ 
+ 
+Authors and Maintainers
+--------------------------------------------------
+ 
+* Nunzio Andrea Galante (nunzioandrea.galante-AT-eng.it), Engineering Ingegneria Informatica S.p.A., IT
+* Paolo Fabriani (paolo.fabriani-AT-eng.it), Engineering Ingegneria Informatica S.p.A., IT
+* Gabriele Giammatteo (gabriele.giammatteo-AT-eng.it), Engineering Ingegneria Informatica S.p.A., IT
+ 
+ 
+Download information
+--------------------------------------------------
+ 
+Source code is available from SVN: 
+    ${scm.url}
+ 
+Binaries can be downloaded from the gCube website: 
+   ${gcube.website}
+ 
+ 
+Documentation 
+--------------------------------------------------
+ 
+Documentation is available on-line in the gCube Documentation Wiki:
+    Developer Guide - ${gcube.wikiRoot}/
+    User Guide - ${gcube.wikiRoot}/
+    Admin Guide - ${gcube.wikiRoot}/ 
+ 
+Support 
+--------------------------------------------------
+ 
+Bugs and support requests can be reported in the gCube issue tracking tool:
+    ${gcube.issueTracking}
+ 
+ 
+Installation
+--------------------------------------------------
+ 
+Please see the file named "INSTALL" in this directory.
+ 
+ 
+Licensing
+--------------------------------------------------
+ 
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.

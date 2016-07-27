@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROWSET>
+	<INSERT>
+		<TUPLE>
+			<KEY>
+				<KEYNAME>title</KEYNAME>
+				<KEYVALUE>The giant resin bee making its way west: First record in
+					Kansas (Hymenoptera: Megachilidae)</KEYVALUE>
+			</KEY>
+			<KEY>
+				<KEYNAME>subject</KEYNAME>
+				<KEYVALUE>Invasive species</KEYVALUE>
+			</KEY>
+			<KEY>
+				<KEYNAME>subject</KEYNAME>
+				<KEYVALUE>bees</KEYVALUE>
+			</KEY>
+			<KEY>
+				<KEYNAME>subject</KEYNAME>
+				<KEYVALUE>Anthophila</KEYVALUE>
+			</KEY>
+			<KEY>
+				<KEYNAME>subject</KEYNAME>
+				<KEYVALUE>Apoidea</KEYVALUE>
+			</KEY>
+			<KEY>
+				<KEYNAME>subject</KEYNAME>
+				<KEYVALUE>potential distribution</KEYVALUE>
+			</KEY>
+			<KEY>
+				<KEYNAME>subject</KEYNAME>
+				<KEYVALUE>ecological modeling</KEYVALUE>
+			</KEY>
+			<KEY>
+				<KEYNAME>creator</KEYNAME>
+				<KEYVALUE>Hinojosa-Díaz,Ismael</KEYVALUE>
+			</KEY>
+			<KEY>
+				<KEYNAME>ObjectID</KEYNAME>
+				<KEYVALUE>http://gcube.data.d4science.org/tree/c9076f3f-be8d-43e2-9f02-de35e6d8f72c/10.3897124sep47sep35zookeys.1.17?scope=/gcube/devNext</KEYVALUE>
+			</KEY>
+			<KEY>
+				<KEYNAME>gDocCollectionID</KEYNAME>
+				<KEYVALUE>c9076f3f-be8d-43e2-9f02-de35e6d8f72c</KEYVALUE>
+			</KEY>
+			<KEY>
+				<KEYNAME>gDocCollectionLang</KEYNAME>
+				<KEYVALUE />
+			</KEY>
+			<VALUE>
+				<FIELD name="title">The giant resin bee making its way west: First
+					record in Kansas (Hymenoptera: Megachilidae)</FIELD>
+				<FIELD name="creator">Hinojosa-Díaz,Ismael</FIELD>
+				<FIELD name="subject">Invasive species</FIELD>
+				<FIELD name="subject">bees</FIELD>
+				<FIELD name="subject">Anthophila</FIELD>
+				<FIELD name="subject">Apoidea</FIELD>
+				<FIELD name="subject">potential distribution</FIELD>
+				<FIELD name="subject">ecological modeling</FIELD>
+				<FIELD name="ObjectID">http://gcube.data.d4science.org/tree/c9076f3f-be8d-43e2-9f02-de35e6d8f72c/10.3897124sep47sep35zookeys.1.17?scope=/gcube/devNext</FIELD>
+				<FIELD name="gDocCollectionID">c9076f3f-be8d-43e2-9f02-de35e6d8f72c</FIELD>
+				<FIELD name="gDocCollectionLang" />
+			</VALUE>
+		</TUPLE>
+	</INSERT>
+<ROWSET>

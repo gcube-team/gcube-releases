@@ -1,0 +1,106 @@
+.profile-section {
+	margin: 0px 5px 5px;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	background: #FFF;
+	border-bottom: 1px #CCC solid;
+}
+
+.profile-section-title {
+	padding: 1px 5px;
+	color: #333;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.summary {
+	padding: 1px 5px 5px;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #333;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	/* Non standard for webkit */
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+.user-details {
+	padding: 5px;
+}
+
+img.user-photo {
+	display: block;
+	padding: 2px;
+	border: 1px solid #E6E6E6;
+	min-width: 30px;
+	min-height: 30px;
+	width: 100px;
+	height: auto;
+}
+
+.full-name {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.edit {
+	border: 1px solid #999 !important;
+	cursor: text !important;
+	opacity: 1.0 !important;
+	width: 250px;
+}
+
+.import-edit-buttons-style {
+	margin-bottom: 5px !important;
+}
+
+.headline {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 16px;
+	color: #444444;
+}
+
+.institution {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 13px;
+	color: #444444;
+}
+
+.editImage {
+	background: url(images/edit.png) 0px 0px no-repeat;
+	height: 15px;
+	width: 15px;
+}
+
+.editImage:hover {
+	background: url(images/edit.png) 0px -16px no-repeat;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.editImage:active {
+	background: url(images/edit.png) 0px -32px no-repeat;
+}
+
+.editingArea {
+	max-width: 1024px;
+	width: 95% !important;
+}
+
+a.profile-link {
+	font-weight: bold;
+}
+
+a.profile-link, a.contact-link:visited {
+	font-weight: bold;
+}
+
+a.profile-link:hover {
+	cursor: pointer;
+	cursor: hand;
+	text-decoration: underline;
+}

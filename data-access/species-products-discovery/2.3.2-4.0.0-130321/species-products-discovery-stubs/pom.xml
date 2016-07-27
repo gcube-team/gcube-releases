@@ -1,0 +1,109 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>species-products-discovery</artifactId>
+		<groupId>org.gcube.data.spd</groupId>
+		<version>2.3.2-4.0.0-130321</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<artifactId>species-products-discovery-stubs</artifactId>
+	<name>species products discovery stubs</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+	    <dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>gcf</artifactId>
+		</dependency>
+	</dependencies>		
+	<build>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-config</id>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<phase>process-resources</phase>
+						<configuration>
+							<outputDirectory>${project.build.outputDirectory}/META-INF</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${configDirectory}</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.gcube.tools</groupId>
+				<artifactId>maven-service-plugin</artifactId>
+				<configuration>
+					<wsdls>
+						<wsdl>
+							<name>Manager</name>
+							<namespace>${namespace}</namespace>
+						</wsdl>
+						<wsdl>
+							<name>Occurrences</name>
+							<namespace>${namespace}</namespace>
+						</wsdl>
+						<wsdl>
+							<name>Classification</name>
+							<namespace>${namespace}</namespace>
+						</wsdl>
+						<wsdl>
+							<name>Executor</name>
+							<namespace>${namespace}</namespace>
+						</wsdl>
+						<wsdl>
+							<name>RemoteDispatcher</name>
+							<namespace>${namespace}</namespace>
+						</wsdl>
+					</wsdls>
+				</configuration>
+				<executions>
+					<execution>
+						<id>generate-stubs</id>
+						<goals>
+							<goal>stub-gen</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${basedir}/target/generated-sources/stubs</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+
+	</build>
+
+</project>

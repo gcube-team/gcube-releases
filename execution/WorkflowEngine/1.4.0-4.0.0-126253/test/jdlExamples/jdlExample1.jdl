@@ -1,0 +1,32 @@
+[
+	#test comment
+	#another test comment /*trying to fool the parser*/
+	Type = "Job";
+	JobType = "Normal";
+	Executable = "script.sh";
+	//more comments in line
+	Arguments = "60"; //another comment
+	StdOutput = "sim.out";
+	StdError = "sim.err"; /*multi-line in // single line comment */
+	UserTags = [
+		Group = "prod123";
+		Color = "green";
+	];
+	/*
+	hello there
+	another comment
+	#sigle line in multiline
+	which spans
+	multiple lines
+	*/
+	MyProxyServer = "skurut.cesnet.cz";
+	OutputSandbox = {
+		"sim.err",
+		"sim.out"
+	};
+	InputSandbox = {
+		"/home/fpacini/GUI/sbin/script.sh"
+	};
+	rank = (other.GlueCEPolicyMaxRunningJobs-other.GlueCEStateRunningJobs);
+	requirements = other.GlueCEStateStatus == "Production" ;
+]

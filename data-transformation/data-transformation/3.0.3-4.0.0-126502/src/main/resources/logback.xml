@@ -1,0 +1,53 @@
+<configuration>
+	<appender name="DTS-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${catalina.base}/logs/data-transformation-service.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>${catalina.base}/logs/data-transformation-service.%i.log</fileNamePattern>
+			<minIndex>1</minIndex>
+			<maxIndex>40</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>50MB</maxFileSize>
+		</triggeringPolicy>
+		<encoder>
+			<pattern>%d %-5p [%t] %c:%L- %m%n</pattern>
+		</encoder>
+	</appender>
+	<appender name="RR-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${catalina.base}/logs/resource-registry.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>${catalina.base}/logs/resource-registry.%i.log</fileNamePattern>
+			<minIndex>1</minIndex>
+			<maxIndex>40</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>50MB</maxFileSize>
+		</triggeringPolicy>
+		<encoder>
+			<pattern>%d %-5p [%t] %c:%L- %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="org.gcube.datatransformation" level="TRACE" additivity="false">
+		<appender-ref ref="DTS-FILE" />
+	</logger>
+	<logger name="gr.uoa.di.madgik.environment.gcube.GCubeAccountingFrameworkProvider" level="INFO" additivity="false">
+		<appender-ref ref="DTS-FILE" />
+	</logger>
+	<logger name="gr.uoa.di.madgik" level="TRACE" additivity="false">
+		<appender-ref ref="DTS-FILE" />
+	</logger>
+	<logger name="gr.uoa.di.madgik.rr" level="TRACE" additivity="false">
+		<appender-ref ref="RR-FILE" />
+	</logger>
+	<logger name="org.gcube.execution.rr" level="TRACE" additivity="false">
+		<appender-ref ref="RR-FILE" />
+	</logger>
+	<logger name="org.gcube.rest.resourcemanager.memoization" level="TRACE" additivity="false">
+		<appender-ref ref="DTS-FILE" />
+	</logger>
+	<root level="WARN">
+		<appender-ref ref="DTS-FILE" />
+		<appender-ref ref="RR-FILE" />
+	</root>
+</configuration>

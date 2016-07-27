@@ -1,0 +1,15 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.distribution.maven-smartgears-bom.1-0-3" date="${buildDate}">
+		<Change>Removed duplicated dependency</Change>
+		<Change>Added missing distro directory</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.maven-smartgears-bom.1-0-2" date="2016-05-18">
+		<Change>Closed range on dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.maven-smartgears-bom.1-0-1" date="2015-12-09">
+		<Change>Fixed dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.maven-smartgears-bom.1-0-0" date="2013-10-24">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

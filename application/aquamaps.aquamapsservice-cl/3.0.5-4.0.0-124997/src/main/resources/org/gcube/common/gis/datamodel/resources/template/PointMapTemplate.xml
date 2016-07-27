@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layer queryable="1" hidden="0" transect="0"
+				xmlns="http://www.opengeospatial.net/context"
+				xmlns:xlink="http://www.w3.org/1999/xlink"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:schemaLocation="http://www.opengeospatial.net/context context.xsd">
+			
+	<Server service="OGC:WMS" version="1.1.0" title="" type="geoserver" login="admin" pasword="gcube@geo2010">
+		<OnlineResource url="http://geoserver-dev.d4science-ii.research-infrastructures.eu/geoserver"/>
+	</Server>
+	<Name/>
+	<Title/>
+	<Abstract/>
+	<SRS>EPSG:4326</SRS>
+	<BaseLayer>false</BaseLayer>
+	<Trasparent>true</Trasparent>
+	<HasLegend>true</HasLegend>
+	<Selected>false</Selected>
+	<MaxExtent SRS="EPSG:4326" minx="-180.000000" miny="-90.000000" maxx="180.000000" maxy="90.000000"/>
+	<MinExtent SRS="EPSG:4326" minx="-180.000000" miny="-90.000000" maxx="180.000000" maxy="90.000000"/>
+	<Opacity>1.0</Opacity>
+	<Buffer>2</Buffer>
+	<Type>PointMap</Type>
+	<FormatList>
+		<Format current="1">image/png</Format>
+	</FormatList>
+	<StyleList/>
+	<Transect/>
+</Layer>

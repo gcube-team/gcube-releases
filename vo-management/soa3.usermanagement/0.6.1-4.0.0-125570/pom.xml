@@ -1,0 +1,33 @@
+<project> 
+	<modelVersion>4.0.0</modelVersion> 
+	
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+	
+	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/trunk/vo-management/SOA3/${project.artifactId}</connection>
+		<developerConnection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/trunk/vo-management/SOA3/${project.artifactId}</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/trunk/vo-management/SOA3/${project.artifactId}</url>
+	</scm>
+	
+	 <properties>
+	 	<baseDirectory>../</baseDirectory>
+		<distroDirectory>${baseDirectory}/distro</distroDirectory>
+		<description>LDAP based User Management API</description>
+	</properties>
+	
+	<groupId>org.gcube.dvos.soa3</groupId> 
+	<artifactId>UserManagement</artifactId> 
+	<version>0.6.1-4.0.0-125570</version> 
+	<packaging>pom</packaging>
+	
+	
+	<modules> 
+		<module>user-management-core</module> 
+		<module>ldapuser-management</module> 
+	</modules> 
+</project>

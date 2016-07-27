@@ -1,0 +1,44 @@
+<Resource version="0.4.x">
+   <ID></ID>
+   <Type>RuntimeResource</Type>
+   <Scopes>
+      <Scope>/d4science.research-infrastructures.eu</Scope>
+   </Scopes>
+   <Profile>
+      <Category>Database</Category>
+      <Name>StatisticalManagerDataBase</Name>
+      <Description>DB for Statistical Manager Service</Description>
+      <Platform>
+         <Name>postgres</Name>
+         <Version>8</Version>
+         <MinorVersion>4</MinorVersion>
+         <RevisionVersion>0</RevisionVersion>
+         <BuildVersion>0</BuildVersion>
+      </Platform>
+      <RunTime>
+         <HostedOn>db1.p.d4science.research-infrastructures.eu</HostedOn>
+         <GHN UniqueID="" />
+         <Status>READY</Status>
+      </RunTime>
+      <AccessPoint>
+         <Description>jdbc conection url</Description>
+         <Interface>
+            <Endpoint EntryName="jdbc">jdbc:postgresql://db1.p.d4science.research-infrastructures.eu/testdb</Endpoint>
+         </Interface>
+         <AccessData>
+            <Username>utente</Username>
+            <Password>UwNMZOK7FlIjGPR+NZCV6w==</Password>
+         </AccessData>
+      </AccessPoint>
+      <AccessPoint>
+         <Description>Hibernate connection url</Description>
+         <Interface>
+            <Endpoint EntryName="hibernate">jdbc:postgresql://db1.p.d4science.research-infrastructures.eu/dataSpace</Endpoint>
+         </Interface>
+         <AccessData>
+            <Username>utente</Username>
+            <Password>UwNMZOK7FlIjGPR+NZCV6w==</Password>
+         </AccessData>
+      </AccessPoint>
+   </Profile>
+</Resource>

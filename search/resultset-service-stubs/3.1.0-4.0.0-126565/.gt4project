@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gt4projectDescription>
+	<ProjectName>ResultSetService</ProjectName>
+	<Services>
+		<Service name="ResultSetService">
+			<PackageName>org.diligentproject.searchservice.resultsetservice</PackageName>
+			<Interface>ResultSet</Interface>
+			<BaseNamespace>http://diligentproject.org/searchservice/</BaseNamespace>
+			<ServicePath>diligentproject/searchservice</ServicePath>
+			<SchemaPathPortion>gt4ide</SchemaPathPortion>
+			<ServicePattern>0</ServicePattern>
+			<ImplementationSkeleton>0</ImplementationSkeleton>
+		</Service>
+	</Services>
+</gt4projectDescription>

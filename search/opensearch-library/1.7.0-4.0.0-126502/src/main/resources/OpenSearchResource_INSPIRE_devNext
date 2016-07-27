@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>e5200850-ab50-11e0-8699-94992c4f9e80</ID>
+  <Type>GenericResource</Type>
+  <Scopes>
+    <Scope>/d4science.research-infrastructures.eu/INSPIRE/HEPGateway</Scope>
+  </Scopes>
+  <Profile>
+    <SecondaryType>OpenSearchResource</SecondaryType>
+    <Name>OpenSearchResource_INSPIRE</Name>
+    <Description>Generic resource containing info for the INSPIRE external repository</Description>
+    <Body>
+      <OpenSearchResource>
+        <name>INSPIRE</name>
+        <descriptionDocumentURI>http://dl19.di.uoa.gr/opensearchdescription</descriptionDocumentURI>
+        <brokeredResults>false</brokeredResults>
+        <parameters>
+        	<parameter>
+        		<fieldName>allIndexes</fieldName>
+        		<qName>http%3A%2F%2Fa9.com%2F-%2Fspec%2Fopensearch%2F1.1%2F:searchTerms</qName>
+        	</parameter>
+        </parameters>
+        <transformation>
+          <MIMEType>application/rss+xml</MIMEType>
+          <recordSplitXPath>*[local-name()='rss']/*[local-name()='channel']/*[local-name()='item']</recordSplitXPath>
+          <recordIdXPath>//*[local-name()='item']/*[local-name()='guid']</recordIdXPath>
+          <presentationInfo>
+            <presentable>
+              <fieldName>title</fieldName>
+              <expression>//*[local-name()='item']/*[local-name()='title']</expression>
+            </presentable>
+            <presentable>
+              <fieldName>creator</fieldName>
+              <expression>//*[local-name()='item']/*[namespace-uri()='http://purl.org/dc/elements/1.1/' and local-name()='creator']</expression>
+            </presentable>
+          </presentationInfo>
+        </transformation>
+      </OpenSearchResource>
+    </Body>
+  </Profile>
+</Resource>

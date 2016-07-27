@@ -1,0 +1,283 @@
+body {
+	font-size: 10px;
+	width: 95%;
+	height: 95%;
+	padding: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	background-color: white;
+}
+
+table {
+	font-size: 10px;
+	border-width: 1px;
+	border-style: solid;
+	border-collapse: collapse;
+	border-color: gray;
+}
+
+/* th { */
+/* 	font-weight: bold; */
+/* 	color: white; */
+/*  	background-color: gray;  */
+/* } */
+td,td.name {
+	background-color: white;
+	border-width: 1px;
+	border-style: solid;
+	border-color: gray;
+	padding: 10px;
+}
+
+td.name {
+	vertical-align: top;
+	font-weight: bold;
+}
+
+td.index {
+	vertical-align: top;
+	font-style: italic;
+}
+
+td.warning {
+	color: #FF9900;
+}
+
+/* div.spacer { */
+/* 	clear: both; */
+/* 	height: 10px; */
+/* } */
+
+div{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+div.string{
+	color: green;
+}
+
+span {
+	float: left;
+	margin-right: 0px;
+}
+
+span.null {
+	font-style: italic;
+	color: red;
+}
+
+span.notdumped {
+	font-style: italic;
+	color: blue;
+}
+
+span.string {
+	color: green;
+}
+
+span.quote {
+	
+}
+
+span.primitive {
+	color: blue;
+}
+
+span.warning {
+	color: #FF9900;
+}
+
+span.error {
+	color: red;
+}
+
+.containerpreview {
+	height: 200px;
+	display: table;
+	text-align: center;
+	width: 100%;
+}
+
+.centercontainpreview {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+h1 {
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: #006699;
+}
+
+h2 {
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-size: 11px;
+	color: #039;
+}
+
+h3 {
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-size: 10px;
+	color: #039;
+}
+
+h4 {
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-size: 10px;
+	color: #039;
+}
+
+h5 {
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-size: 10px;
+	color: #039;
+}
+
+/* ------------------
+ styling for the tables 
+   ------------------   */
+#one-column-emphasis {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 11px;
+/* 	margin: 20px; */
+	margin-left: 5px;
+	margin-top: 5px;
+	/* 	width: 480px; */
+	text-align: left;
+	border-collapse: collapse;
+}
+
+#one-column-emphasis th {
+	font-size: 10px;
+	font-weight: normal;
+	padding: 7px 10px;
+	color: #039;
+}
+
+#one-column-emphasis td {
+	padding: 5px 10px;
+	color: #669;
+	border-top: 1px solid #e8edff;
+}
+/* .oce-first */
+/* { */
+/* 	background: #d0dafd; */
+/* 	border-right: 10px solid transparent; */
+/* 	border-left: 10px solid transparent; */
+/* } */
+.oce-first {
+	background: #d0dafd;
+	border-right: 10px solid transparent;
+	/* 	border-left: 10px solid transparent; */
+}
+
+#one-column-emphasis tr:hover td {
+	color: #339;
+	background: #eff2ff;
+}
+
+#gradient-style {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 45px;
+	width: 480px;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+#gradient-style th {
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe url('table-images/gradhead.png') repeat-x;
+	border-top: 2px solid #d3ddff;
+	border-bottom: 1px solid #fff;
+	color: #039;
+}
+
+#gradient-style td {
+	padding: 8px;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid #fff;
+	background: #e8edff url('table-images/gradback.png') repeat-x;
+}
+
+#gradient-style tfoot tr td {
+	background: #e8edff;
+	font-size: 12px;
+	color: #99c;
+}
+
+#gradient-style tbody tr:hover td {
+	background: #d0dafd url('table-images/gradhover.png') repeat-x;
+	color: #339;
+}
+
+#pattern-style-a {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 45px;
+	width: 480px;
+	text-align: left;
+	border-collapse: collapse;
+	background: url('table-images/pattern.png');
+}
+
+#pattern-style-a thead tr {
+	background: url('table-images/pattern-head.png');
+}
+
+#pattern-style-a th {
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	border-bottom: 1px solid #fff;
+	color: #039;
+}
+
+#pattern-style-a td {
+	padding: 8px;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+}
+
+#pattern-style-a tbody tr:hover td {
+	color: #339;
+	background: #fff;
+}
+
+#pattern-style-b {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 45px;
+	width: 480px;
+	text-align: left;
+	border-collapse: collapse;
+	background: url('table-images/patternb.png');
+}
+
+#pattern-style-b thead tr {
+	background: url('table-images/patternb-head.png');
+}
+
+#pattern-style-b th {
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	border-bottom: 1px solid #fff;
+	color: #039;
+}
+
+#pattern-style-b td {
+	padding: 8px;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+}
+
+#pattern-style-b tbody tr:hover td {
+	color: #339;
+	background: #cdcdee;
+}

@@ -1,0 +1,77 @@
+.questions-title {
+	display: block;
+	font-size: 16px;
+	color: #555;
+	font-weight: 400;
+	margin-bottom: 5px;
+}
+
+.manager-user-photo {
+	padding: 3px;
+	border: 1px solid #E6E6E6;
+	width: 50px;
+	height: 50px;
+}
+
+.manager-user-details {
+	min-width: 200px;
+	padding: 5px;
+}
+
+.manager-photo-details {
+	width: 70px;
+	text-align: center;
+}
+
+.manager-action {
+	padding: 10px 0px;
+}
+
+.manager-post-image:hover {
+	cursor: pointer;
+	cursor: hand;
+	opacity: 0.7;
+}
+
+a.manager-person-link {
+	color: #444444;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 18px;
+}
+
+a.manager-person-link, a.manager-person-link:visited {
+	cursor: pointer;
+	cursor: hand;
+	font-size: 16x;
+	text-decoration: none;
+	color: #3B5998;
+}
+
+a.manager-person-link:hover {
+	opacity: 0.8;
+	font-size: 16x;
+	text-decoration: underline;
+}
+
+.manager-headline {
+	font-size: 13px;
+	color: #444444;
+	line-height: 16px;
+	width: 200px;
+}
+
+.manager-institution {
+	font-size: 11px;
+	color: #444444;
+}
+
+.cancel-leave-button {
+	font-weight: bold;
+}
+
+.cancel-leave-button:hover {
+	cursor: pointer;
+	cursor: hand;
+	text-decoration: underline;
+}

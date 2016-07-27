@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Sencha GXT 3.1.1 - Sencha for GWT
+    Copyright(c) 2007-2014, Sencha, Inc.
+    licensing@sencha.com
+
+    http://www.sencha.com/products/gxt/license/
+
+-->
+<module>
+  <inherits name="com.sencha.gxt.widget.core.Core"/>
+  <inherits name="com.sencha.gxt.theme.base.Base"/>
+
+
+  <define-property name="gxt.css3.enabled" values="true,false"/>
+  <set-property name="gxt.css3.enabled" value="true" />
+
+  <!-- Only enable the css3 theme when requested explicitly in ff and recent webkit for now -->
+  <!-- This can be customized further after the inherits statement that lists this module -->
+  <set-property name="gxt.css3.enabled" value="false">
+    <any>
+      <when-property-is name="gxt.user.agent" value="ie6" />
+      <when-property-is name="gxt.user.agent" value="ie7" />
+      <when-property-is name="gxt.user.agent" value="ie8" />
+      <when-property-is name="gxt.user.agent" value="ie9" />
+      <when-property-is name="gxt.user.agent" value="gecko1_8" />
+      <when-property-is name="gxt.user.agent" value="safari3" />
+      <when-property-is name="gxt.user.agent" value="safari4" />
+    </any>
+  </set-property>
+
+</module>

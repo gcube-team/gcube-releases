@@ -1,0 +1,12 @@
+<ReleaseNotes>	
+	<Changeset component="org.gcube.portal.portal-bundle.3-6-0" date="2015-10-06">
+		<Change>Updated themes, added bootstrap support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.portal-bundle.3-3-0" date="2014-10-27">
+		<Change>Updated themes for hashtag support</Change>
+		<Change>Updated dockbar for hashtag support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.portal-bundle.3-0-0" date="2014-06-12">
+		<Change>gCube gCore Free Portal first release</Change>
+	</Changeset>
+</ReleaseNotes>

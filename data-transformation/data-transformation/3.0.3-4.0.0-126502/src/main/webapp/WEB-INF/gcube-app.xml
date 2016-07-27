@@ -1,0 +1,13 @@
+<application mode="online">
+
+	<group>DataTransformation</group>
+	<name>DataTransformationService</name>
+	<version>3.0.3</version>
+
+    <description>Restful Version of DataTransformation</description>
+
+	<!-- <persistence location="/some/custom/location</persistence" /> -->
+
+	<exclude>/resources/</exclude>
+
+</application>

@@ -1,0 +1,18 @@
+<ReleaseNotes>
+	<Changeset component="tree-manager-framework-1.0.0" date="2012-04-26">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="tree-manager-framework-2.0.0" date="2012-09-03">
+		<Change>updating a single tree returns the tree after update</Change>
+		<Change>updating many trees returns a stream of trees after update</Change>
+		<Change>refactored exceptions based on CL framework's</Change>
+	</Changeset>
+		<Changeset component="tree-manager-framework-3.0.1" date="2013-11-01">
+		<Change>internally refactored to eliminate dependencies on gCore stack, Tree Manager service, and Tree Manager Library</Change>
+		<Change>internally refactored to align with changes in dependencies</Change>
+		<Change>removed self-issuing bind requests</Change>
+	</Changeset>
+	<Changeset component="tree-manager-framework-3.0.1-4.0.0-125723" date="2013-05-29">
+		<Change>fixed notification handling for last time updates</Change>
+	</Changeset>
+</ReleaseNotes>

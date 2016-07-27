@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.gcube-url-shortener.1-0-2" date="2016-06-30">
+		<Change>removed maven portal bom dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.gcube-url-shortener.1-0-1" date="2016-04-26">
+		<Change>maven-bom replaced by portal-bom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.gcube-url-shortener.1-0-0" date="2014-10-13">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

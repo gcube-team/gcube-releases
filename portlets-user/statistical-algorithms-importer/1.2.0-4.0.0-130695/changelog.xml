@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.statistical-algorithms-importer.1-1-0" date="2016-05-01">
+		<Change>Fixed back button behavior [Ticket #3283]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.statistical-algorithms-importer.1-0-0" date="2016-02-28">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

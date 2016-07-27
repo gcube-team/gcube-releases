@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>492593b0-9e3c-11df-804d-df9e10a4dd23</ID>
+  <Type>GenericResource</Type>
+  <Profile>
+    <SecondaryType>OpenSearchXSLT</SecondaryType>
+    <Name>OpenSearchXSLT_Driver_rss</Name>
+    <Description>XSLT to transform OpenSearch RSS responses of the Driver external repository.</Description>
+    <Body>
+      <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        <xsl:output method="xml" version="1.0" omit-xml-declaration="yes"/>
+        <xsl:template match="*[local-name()='item']">
+          <record>
+            <xsl:value-of select="*[local-name()='title']"/>
+          </record>
+        </xsl:template>
+      </xsl:stylesheet>
+    </Body>
+  </Profile>
+</Resource>

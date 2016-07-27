@@ -1,0 +1,117 @@
+title
+text
+ObjectID
+gDocCollectionID
+gDocCollectionLang
+
+provenance
+species_english_name
+species_scientific_name
+
+country
+management
+technology_used
+bycatch
+incatch
+target
+discard
+gear
+vessel
+species
+thretened
+status
+authority
+fishing_control
+access_control
+management
+seasonality
+sector
+enforcement_method
+measure
+control
+method
+finance_mgmt_authority
+management_indicator
+decision_maker
+post_processing_method
+market
+other_income_source
+owner_of_access_right
+applicant_for_access_right
+
+
+country_fr
+title_fr
+fishery_local_name_fr
+vessel_fr
+applicant_for_access_right_fr
+owner_of_access_right_fr
+other_income_source_fr
+market_fr
+post_processing_method_fr
+decision_maker_fr
+gear_fr
+status_fr
+management_indicator_fr
+finance_mgmt_authority_fr
+access_control_fr
+fishing_control_fr
+enforcement_method_fr
+management_fr
+applicant_for_access_right_fr
+
+
+
+single_fields = ['title', 'text', 'ObjectID', 'gDocCollectionID', 'gDocCollectionLang', 'provenance', 'species_english_name', 'species_scientific_name']
+
+fr_fields = ['country_fr', 'title_fr', 'fishery_local_name_fr', 'vessel_fr', 'applicant_for_access_right_fr', 'owner_of_access_right_fr', 'other_income_source_fr', 'market_fr', 'post_processing_method_fr', 'decision_maker_fr', 'gear_fr', 'status_fr', 'management_indicator_fr', 'finance_mgmt_authority_fr', 'access_control_fr', 'fishing_control_fr', 'enforcement_method_fr', 'management_fr', 'applicant_for_access_right_fr']
+
+uri_fields = ['country', 'management', 'technology_used', 'bycatch', 'incatch', 'target', 'discard', 'gear', 'vessel', 'species', 'thretened', 'status', 'authority', 'fishing_control', 'access_control', 'management', 'seasonality', 'sector', 'enforcement_method', 'measure', 'control', 'method', 'finance_mgmt_authority', 'management_indicator', 'decision_maker', 'post_processing_method', 'market', 'other_income_source', 'owner_of_access_right', 'applicant_for_access_right']
+
+all_fields = single_fields + uri_fields + fr_fields
+
+
+print '<index-type name="default">'
+print '    <field-list sort-xnear-stop-word-threshold="2E8">'
+
+
+for field_name in all_fields:
+	print '        <field name="' + field_name + '">'
+	print '            <index>yes</index>'
+	print '            <store>yes</store>'
+	print '            <highlightable>no</highlightable>'
+	print '            <return>yes</return>'
+	print '            <tokenize>yes</tokenize>'
+	print '            <sort>no</sort>'
+	print '            <boost>1.0</boost>'
+	print '        </field>'
+	print
+
+
+for field_name in uri_fields:
+	print '        <field name="' + field_name + '_uris' + '">'
+	print '            <index>no</index>'
+	print '            <store>yes</store>'
+	print '            <highlightable>no</highlightable>'
+	print '            <return>yes</return>'
+	print '            <tokenize>yes</tokenize>'
+	print '            <sort>no</sort>'
+	print '            <boost>1.0</boost>'
+	print '        </field>'
+	print
+
+
+print '        <field name="S">'
+print '            <index>no</index>'
+print '            <store>yes</store>'
+print '            <highlightable>no</highlightable>'
+print '            <return>yes</return>'
+print '            <tokenize>yes</tokenize>'
+print '            <sort>no</sort>'
+print '            <boost>1.0</boost>'
+print '        </field>'
+print
+
+
+print '    </field-list>'
+print '</index-type>'

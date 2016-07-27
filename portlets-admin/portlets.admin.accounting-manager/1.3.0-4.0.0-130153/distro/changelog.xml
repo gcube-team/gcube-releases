@@ -1,0 +1,27 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.admin.accounting-manager.1-3-0"
+		date="2016-07-15">
+		<Change>Added CSV download [Ticket #4041]</Change>
+		<Change>Added Show Others option</Change>
+		<Change>Updated to Liferay 6.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.accounting-manager.1-2-0"
+		date="2016-05-01">
+		<Change>Added Top N Chart[Ticket #2251]</Change>
+		<Change>Fixed back button behavior[Ticket #3251]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.accounting-manager.1-1-0"
+		date="2016-01-31">
+		<Change>Added to Storage Accounting more formats for DataVolume axis
+			[Ticket #1831]
+		</Change>
+		<Change>Fixed on Storage Accounting the popup validation on filters
+			[Ticket #1832]
+		</Change>
+		<Change>Fixed library dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.accounting-manager.1-0-0"
+		date="2015-10-15">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

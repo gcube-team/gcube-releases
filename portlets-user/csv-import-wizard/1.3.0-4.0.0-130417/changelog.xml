@@ -1,0 +1,31 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.csvimportwizard.1-3-0"
+		date="2016-07-15">
+		<Change>Fixed Style</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.csvimportwizard.1-2-2"
+		date="2015-10-15">
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Fixed Pom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.csvimportwizard.1-2-1"
+		date="2014-06-05">
+		<Change>Updated to Java 7</Change>
+		<Change>Fixed pom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.csvimportwizard.1-2-0"
+		date="2013-10-10">
+		<Change>Mavenized</Change>
+		<Change>Updated to GWT 2.5.1</Change>
+		<Change>Improved rendering speed</Change>
+		<Change>Fixed "Skip invalid lines" selection when a new error is found
+		</Change>
+		<Change>#821: Handle commented header option</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.csvimportwizard.1-1-0"
+		date="2012-10-18">
+		<Change>Added support to custom comment char</Change>
+		<Change>Improved CSVTarget management</Change>
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

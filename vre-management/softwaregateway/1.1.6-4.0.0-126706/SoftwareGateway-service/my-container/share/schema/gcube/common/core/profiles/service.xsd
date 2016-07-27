@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+			XML Schema for gCube Services Version 0.5.0 Last modified:29/05/2009 Contact: http://www.gcube-system.org
+		</xs:documentation>
+	</xs:annotation>
+	<!-- SERVICE -->
+	<xs:redefine schemaLocation="CommonTypeDefinitions.xsd">
+		<xs:complexType name="ProfileType">
+			<xs:complexContent>
+				<xs:restriction base="ProfileType">
+					<xs:sequence>
+						<xs:element name="Description" type="xs:string" minOccurs="0"/>
+						<xs:element ref="Class"/>
+						<xs:element ref="Name"/>
+						<xs:element ref="Version"/>
+						<xs:element ref="Configuration" minOccurs="0"/>
+						<xs:element name="Dependencies" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Dependency" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="Class"/>
+												<xs:element ref="Name"/>
+												<xs:element ref="Version"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Packages">
+							<xs:complexType>
+								<xs:choice>
+									<xs:sequence>
+										<xs:element ref="Main"/>
+										<xs:element ref="Software" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+									<xs:element ref="Software" maxOccurs="unbounded"/>
+									<xs:sequence>
+										<xs:element ref="Plugin"/>
+										<xs:element ref="Software" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:choice>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="SpecificData" type="FreeTextType" minOccurs="0"/>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:redefine>
+	<xs:element name="Class" type="xs:string"/>
+	<xs:element name="Name" type="xs:string"/>
+	<xs:element name="Version" type="xs:string"/>
+	<xs:element name="Configuration">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Static" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Configs" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">
+										These configurations have to refer to predefined configuration files distributed with the MAIN package. 
+										At VRE	creation time, the VRE designer will choose one.
+								</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Config" type="ConfigurationType" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Template" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Params">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Param" type="TemplateParam" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Dynamic" minOccurs="0">
+					<xs:complexType/>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ConfigurationType">
+		<xs:sequence>
+			<xs:element name="File" type="xs:string"/>
+			<xs:element name="Description" type="xs:string"/>
+			<xs:element name="Label" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="default" type="xs:boolean" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="TemplateParam">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Description" type="xs:string"/>
+			<xs:element name="AllowedValues">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Value" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Description" type="xs:string"/>
+									<xs:element name="Literal" type="xs:string"/>
+									<xs:element name="Label" type="xs:string"/>
+								</xs:sequence>
+								<xs:attribute name="default" type="xs:boolean" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- PACKAGE -->
+	<xs:complexType name="Package">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Version" type="xs:string"/>
+			<xs:element name="MultiVersion" type="BooleanValueType" minOccurs="0"/>
+			<xs:element name="Mandatory" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute name="level" type="Scopes" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Shareable" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute name="level" type="Scopes" default="VO"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GHNRequirements" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="Requirement" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="InstallScripts" type="FileListType" minOccurs="0"/>
+			<xs:element name="UninstallScripts" type="FileListType" minOccurs="0"/>
+			<xs:element name="RebootScripts" type="FileListType" minOccurs="0"/>
+			<xs:element name="Dependencies" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="Dependency" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SpecificData" type="FreeTextType" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="deployable" type="xs:boolean" use="optional" default="true"/>
+	</xs:complexType>
+	<xs:element name="Dependency">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Service"/>
+				<xs:element name="Package" type="xs:string"/>
+				<xs:element name="Version" type="xs:string" default="1.0" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="Scope">
+					<xs:complexType>
+						<xs:attribute name="level" type="Scopes" use="optional" default="GHN"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Optional" type="xs:boolean"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Service">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Class"/>
+				<xs:element ref="Name"/>
+				<xs:element ref="Version" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="Scopes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="NONE"/>
+			<xs:enumeration value="GHN"/>
+			<xs:enumeration value="VRE"/>
+			<xs:enumeration value="VO"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="Requirement">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				- the "category" is represented by a tag name of a GHN profile 
+				- the "requirement" is one of the attributes defined for the selected category in the GHN profile 
+				- the "value" is the value of the selected attribute defined for the category in the GHN profile
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="category" type="xs:string" use="required"/>
+			<xs:attribute name="requirement" type="xs:string" use="required"/>
+			<xs:attribute name="value" type="xs:string" use="required"/>
+			<xs:attribute name="operator" type="OpType" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="OpType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="eq"/>
+			<xs:enumeration value="exist"/>
+			<xs:enumeration value="ge"/>
+			<xs:enumeration value="gt"/>
+			<xs:enumeration value="le"/>
+			<xs:enumeration value="lt"/>
+			<xs:enumeration value="ne"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="Main">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Package">
+					<xs:sequence>
+						<xs:element name="GARArchive" type="xs:string"/>
+						<xs:element name="ServiceEquivalenceFunctions" type="ServiceFunctionType" minOccurs="0"/>
+						<xs:element name="PortType" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Name" type="xs:string"/>
+									<xs:element name="Security" type="SecurityType" minOccurs="0"/>
+									<xs:element name="WSDL" type="FreeTextType"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ServiceFunctionType">
+		<xs:sequence>
+			<xs:element name="Function" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Name" type="xs:string"/>
+						<xs:element name="FormalParameters">
+							<xs:complexType>
+								<xs:sequence minOccurs="0" maxOccurs="unbounded">
+									<xs:element name="Name" type="xs:string"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Body" type="FreeTextType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Software">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Package">
+					<xs:sequence>
+						<xs:element name="Type" default="library" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="library"/>
+									<xs:enumeration value="application"/>
+									<xs:enumeration value="plugin"/>
+								</xs:restriction>
+							</xs:simpleType>						
+						</xs:element>											
+						<xs:choice>
+							<xs:element name="Files" type="FileListType"/>
+							<xs:element name="URI" type="xs:anyURI"/>
+						</xs:choice>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Plugin">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Package">
+					<xs:sequence>
+						<xs:element name="TargetService" minOccurs="1" maxOccurs="1">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="Service" minOccurs="1" maxOccurs="1"/>
+									<xs:element name="Package" type="xs:string" minOccurs="1" maxOccurs="1"/>
+									<xs:element name="Version" type="xs:string" minOccurs="1" maxOccurs="1"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="EntryPoint" type="xs:string" minOccurs="0"/>
+						<xs:element name="Files" type="FileListType"/>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="SecurityType">
+		<xs:sequence>
+			<xs:element name="Descriptor" type="FreeXMLType" minOccurs="0"/>
+			<xs:element name="Operations" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="Operation" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="Roles" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string"/>
+	</xs:complexType>
+	<xs:element name="Roles">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Role" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="value" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Operation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Roles" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string" use="required"/>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="description" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,94 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>org.gcube.execution</groupId>
+	<artifactId>workflowengineservice</artifactId>
+	<version>1.3.2-4.0.0-126194</version>
+	<packaging>pom</packaging>
+
+	<name>WorkflowEngineService</name>
+
+	<modules>
+		<module>workflowengineservice-service</module>
+		<module>workflowengineservice-stubs</module>
+	</modules>
+
+	<properties>
+		<wsdlDirectory>${project.basedir}/../wsdl</wsdlDirectory>
+		<wsdlOutputDirectory>${project.basedir}/../target/generated-sources/wsdl</wsdlOutputDirectory>
+		<configDirectory>${project.basedir}/../config</configDirectory>
+		<distroDirectory>${project.basedir}/../distro</distroDirectory>
+		<namespace>http://gcube.org/execution/workflowengine</namespace>
+	</properties>
+
+	<dependencyManagement>
+
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>gcf</artifactId>
+				<scope>provided</scope>
+				<version>1.6.5-4.0.0-2868</version>
+			</dependency>
+		</dependencies>
+
+	</dependencyManagement>
+
+	<build>
+
+		<!-- defines basic configuration for the service plugin -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.gcube.tools</groupId>
+					<artifactId>maven-service-plugin</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<serviceId>org.gcube.execution.workflowengine.service</serviceId>
+						<basePackage>org.gcube.execution.workflowengine.service</basePackage>
+						<wsdlDirectory>${wsdlDirectory}</wsdlDirectory>
+						<wsdlOutputDirectory>${wsdlOutputDirectory}</wsdlOutputDirectory>
+						<configurationDirectory>${configDirectory}</configurationDirectory>
+					</configuration>
+				</plugin>
+				
+				<!-- interpolates profiles and copies from distribution location to configuration 
+					location, where it is need for embedding into stub artifact, gar generation, 
+					and service archive. -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.6</version>
+					<executions>
+						<execution>
+							<id>copy-profile</id>
+							<goals>
+								<goal>copy-resources</goal>
+							</goals>
+							<phase>process-resources</phase>
+							<configuration>
+								<outputDirectory>${configDirectory}</outputDirectory>
+								<resources>
+									<resource>
+										<directory>${distroDirectory}</directory>
+										<includes>
+											<include>profile.xml</include>
+										</includes>
+										<filtering>true</filtering>
+									</resource>
+								</resources>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+	</build>
+</project>

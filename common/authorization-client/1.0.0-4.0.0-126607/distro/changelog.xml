@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="authorization-client-1.0.0" date="2015-05-18">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

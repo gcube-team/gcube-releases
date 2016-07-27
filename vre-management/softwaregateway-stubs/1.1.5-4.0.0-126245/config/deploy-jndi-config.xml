@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+		
+	<service name="gcube/vremanagement/softwaregateway">
+						
+		<!-- This permits less control allowing the submission from ETICS -->
+		<environment
+			name="eticsSubmission" 
+			value="true" 
+			type="java.lang.String"
+			override="false" />
+	
+		
+		<!-- HTTP server information -->
+		<environment
+			name="httpServerBasePath" 
+			value="jetty/webapps" 
+			type="java.lang.String"
+			override="false" />
+		
+		<environment
+			name="httpServerPort" 
+			value="6900" 
+			type="java.lang.String"
+			override="false" />
+		
+		
+		<!-- All parameter below are read at service startup time. You need to restart the container to apply changes -->
+		
+		<environment 
+			name="configDir" 
+	 		value="@config.dir@" 
+	 		type="java.lang.String"
+	 		override="false" />
+	
+		<environment 
+			name="profile" 
+			value="profile.xml" 
+			type="java.lang.String"
+			override="false" />
+		
+		
+		<!--    HSQL DB parameters and queries  -->
+		<environment 
+			name="username" 
+			value="sa" 
+			type="java.lang.String"
+			override="false" />
+		
+		<environment 
+			name="password" 
+			value="" 
+			type="java.lang.String"
+			override="false" />
+		
+		<environment 
+			name="dbFilename" 
+			value="db" 
+			type="java.lang.String"
+			override="false" />
+				
+		<environment 
+			name="queriesFile" 
+			value="dbQuery.xml" 
+			type="java.lang.String"
+			override="false" />
+		<!-- END HSQL DB parameters and queries -->
+		
+		
+		<!-- Temporary directory for store operation -->
+		<environment
+			name="tmpDir" 
+			value="tmp" 
+			type="java.lang.String"
+			override="false" />
+		
+		<!-- Directory where the pending packages are stored -->
+		<environment
+			name="pendingDir" 
+			value="pending" 
+			type="java.lang.String"
+			override="false" />
+		
+		
+		<environment
+			name="dependenciesSolverClass" 
+			value="org.gcube.vremanagement.softwaregateway.impl.repositorymanager.util.MavenDependenciesSolver" 
+			type="java.lang.String"
+			override="false" />
+			
+		<environment
+			name="webServerClass" 
+			value="org.gcube.vremanagement.softwaregateway.webserver.impl.jetty.JettyWebServer" 
+			type="java.lang.String"
+			override="false" />	
+		
+		<!--   Maven local service parameter   -->
+		<environment
+			name="mavenDir" 
+			value="maven" 
+			type="java.lang.String"
+			override="false" />
+			
+		<environment
+			name="mavenSettingsFileName" 
+			value="settings.xml" 
+			type="java.lang.String"
+			override="false" />
+		<!-- END Maven local service parameter -->
+		
+		
+		<!-- This directory, if not exist, must be created before service start -->
+		<!-- Maven HTTP relative directory. If you want to change this directory
+			 when the SR has installed some artifact you have to create a 
+			 symbolic link or copy the whole content  the new one-->
+		<environment
+			name="mavenRelativeDir" 
+			value="maven" 
+			type="java.lang.String"
+			override="false" />
+		
+		<!-- This directory, if not exist, must be created before service start -->
+		<!-- Report HTTP relative directory. If you want to change this directory
+			 when the SR has already worked you have to create a 
+			 symbolic link or copy the whole content to the new one -->
+		<environment
+			name="reportRelativeDir" 
+			value="report" 
+			type="java.lang.String"
+			override="false" />
+		
+		<!--   XSLT to be applied to report XML files  -->
+		<!-- XSLT service directory -->
+		<environment
+			name="xsltDir" 
+			value="xslt" 
+			type="java.lang.String"
+			override="false" />
+		<!-- XSLT for index.xml -->
+		<environment
+			name="indexXSLTfilename" 
+			value="index.xslt" 
+			type="java.lang.String"
+			override="false" />
+		<!-- CSS for index.xml -->
+		<environment
+			name="indexCSSfilename" 
+			value="styles.css" 
+			type="java.lang.String"
+			override="false" />
+		<!-- XSLT for single service archive report-->
+		<environment
+			name="reportXSLTfilename" 
+			value="report.xslt" 
+			type="java.lang.String"
+			override="false" />
+		<!-- END XSLT to be applied to report XML files -->
+		
+		
+		<!-- Javadoc check -->
+		<environment
+			name="relativeJavadocPath" 
+			value="doc/api" 
+			type="java.lang.String"
+			override="false" />
+		<!-- END Documentation check -->
+		
+		
+		
+		<!-- Name of the file containing SVN source code -->
+		<environment
+			name="sourceCodeLinkPathfilename" 
+			value="svnpath.txt" 
+			type="java.lang.String"
+			override="false" />
+		
+		
+	</service>
+
+
+	<service name="gcube/vremanagement/softwaregateway/Access">  
+    
+		<environment 
+			name="name" 
+			value="Access" 
+			type="java.lang.String"
+			override="false" />
+			
+		<environment 
+			name="settingsDirectory" 
+			value="tmp" 
+			type="java.lang.String"
+			override="false" />	
+      
+    </service>
+
+
+	<service name="gcube/vremanagement/softwaregateway/Registration">
+
+		<environment name="name" value="Registration" type="java.lang.String"
+			override="false" />
+	</service>
+
+</jndiConfig>

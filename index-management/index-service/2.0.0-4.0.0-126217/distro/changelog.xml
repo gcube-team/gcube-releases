@@ -1,0 +1,17 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.index.index-service.1-0-0" date="2014-03-13">
+		<Change>Initial release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.index-service.1-1-0" date="2014-06-03">
+		<Change>Meta index is recreated on init/load</Change>
+		<Change>Implemented frequent terms and deactivate service methods</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.index-service.1-1-1" date="2014-07-04">
+		<Change>Refresh is called instead of setCollectionsAndSet fields on collections/fields change. resources are saved on every refresh</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.index.index-service.2-0-0" date="2014-08-28">
+		<Change>Changed query from GET to POST</Change>
+		<Change>Added deleteDocuments method</Change>
+	</Changeset>
+</ReleaseNotes>

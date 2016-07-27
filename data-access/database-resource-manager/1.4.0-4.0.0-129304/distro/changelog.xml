@@ -1,0 +1,124 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.dataaccess.database-resource-manager.1-3-0"
+		date="2014-12-05">
+		<Change>method submitQuery modified in class DatabaseManagement in
+			order to return as output a file and a map. The map is truncated to
+			1000 rows if the result has more than 1000 rows.
+			method writeTableIntoFile reintroduced that performs the file writing and
+			the map generation.
+		</Change>
+		<Change>method submitQuery modified in class DatabaseManagement
+			adding
+			the UUID string to the submitQuery result file QueryResult
+			file
+		</Change>
+		<Change>samplings and submitQuery changed in order to return as a
+			result a map with column values truncated to 255 characters and a
+			file with the whole columns values in order to manage so to manage
+			big data properly and the conversion of a geometry data type in a
+			multipolygon representation applying the function st_astext() for a
+			database postgres.
+		</Change>
+		<Change> writeSubmitResultIntoFile method modified removing special
+			characters using regular expressions in order to write data in a file
+			correctly.
+		</Change>
+		<Change> total number rows returned as output for the result of the
+			submit Query operation:class DatabaseManagement modified
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.dataaccess.database-resource-manager.1-2-0"
+		date="2014-10-27">
+		<Change>class DBResource modified in order to remove for a resource
+			duplicated access points elements that have the same endpoint,
+			username and password values.
+		</Change>
+		<Change>method closeconnection in class DatabaseManager modified in
+			order to close the SessionFactory. Sampler class modified.
+		</Change>
+		<Change>bug fixed and related to samplings operation to manage column
+			uppercase names with a postgres database.
+		</Change>
+		<Change>for the getTableDetails operation column names recovered as
+			defined in their database's schema. PostgresTableStructure class
+			modified.
+		</Change>
+		<Change>bug fixed in class ConnectionManager for the submitquery
+			operation modified in order to manage the data geometry recovering
+			the related value as a sequence of hexadecimal characters and not as
+			a parsed multipolygon value.
+		</Change>
+		<Change>bug fixed in class DatabaseManagement for the submitquery
+			operation in order to truncate column values of the result to 255
+			character.
+		</Change>
+		<Change>bug fixed in Sampler class in computeSmartSampleWithThreshold
+			method. table name formatted as schema."table" in order to recover
+			the rows.
+		</Change>
+		<Change>
+			bug fixed for the submitQuery and sampling operation and
+			related to
+			column value truncated to 255 characters. If the final
+			quote has been
+			truncated the parsecvsstring method in the servlet does
+			not work
+			fine. Bug fixed adding the final quote. convertToJavaType
+			method in
+			DatabaseManagement class modified.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.dataaccess.database-resource-manager.1-1-0"
+		date="2014-09-10">
+		<Change>File DestinationDBHibernate.cfg.xml in "cfg" folder of the
+			project renamed in DestinationDBHibernateDBManager.cfg.xml and
+			correction in method initDBSession of the ConectionMannaager class in
+			order to specify this file name.
+		</Change>
+		<Change>bug fixed for the smart sampling on table scientific_names of
+			col2oct2010.Table name is overwritten when two iterations are
+			performed to extract 200 rows.Corrections in
+			computeSmartSampleWithThreshold.
+		</Change>
+		<Change>input parameters updated in the SubmitQuery method of
+			DatabaseManagement class.(input parameter on path file removed
+			because unusable)
+		</Change>
+		<Change>bug hibernate on join tables with same column
+			names.ConnectionManager and DatabaseManagement classes modified
+			adding the method "executeQueryJDBC" in ConnectionManager, used only
+			for the submitquery operation. The method uses JDBC.
+		</Change>
+		<Change>bug fixed in sampling operations with an attribute of geometry
+			type that slows the result visualization. Attributes truncated to 255
+			characters.
+		</Change>
+		<Change> bug fixed with the rand() function in the smart and random
+			sample for a database mysql with the computeSmartSampleWithThreshold
+			method
+		</Change>
+		<Change>bug fixed in Sampler and DatabaseOPerations classes to manage
+			case sensitive tables for database Postgres and for GetTableDetails
+		</Change>
+		<Change>class DatabaseManagement modified in order to not make
+			available the result in a file csv for submitquery and samplings
+			operations
+		</Change>
+		<Change>added a timeout database connection</Change>
+		<Change>bug fixed in samplings on table names that are keywords.The
+			name considered is schema.table for postgres and database.table for
+			mysql
+		</Change>
+		<Change>bug fixed in sampler in order to have an attributes header
+			with the same order defined in the database schema
+		</Change>
+		<Change>bug corrected in "showCreateTable" method of
+			MySQLTableStructure class.Result managed in a correct way using
+			aliasToEntityOrderedMapResultTransformer class
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.dataaccess.database-resource-manager.1-0-0"
+		date="2014-06-09">
+		<Change>first release</Change>
+	</Changeset>
+</ReleaseNotes>

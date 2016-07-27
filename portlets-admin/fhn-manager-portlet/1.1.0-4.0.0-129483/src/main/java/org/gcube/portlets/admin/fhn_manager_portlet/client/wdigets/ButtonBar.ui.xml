@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	
+	    <b:Navbar>
+        <b:Brand ui:field="title">Bootstrap</b:Brand>
+        <b:Nav><g:FocusPanel ui:field="reload"><g:HTMLPanel>
+       		<a class="btn" ><i class="fa fa-refresh"></i> Reload</a></g:HTMLPanel>
+       	</g:FocusPanel></b:Nav>
+        
+       	<b:Nav><g:FocusPanel ui:field="pinResource"><g:HTMLPanel>
+       		<a class="btn btn-info" ><i class="fa fa-thumb-tack"></i> Pin Resource</a></g:HTMLPanel>
+       	</g:FocusPanel></b:Nav>
+       	
+       	<b:Nav><g:FocusPanel ui:field="createNew"><g:HTMLPanel>
+       		<a class="btn btn-primary" ><i class="fa fa-magic"></i> Create New</a></g:HTMLPanel>
+       	</g:FocusPanel></b:Nav>
+       	<b:Nav><g:FocusPanel ui:field="deleteSelected"><g:HTMLPanel>
+       		<a class="btn btn-warning" ><i class="fa fa-trash-o fa-lg"></i> Delete</a></g:HTMLPanel>
+       	</g:FocusPanel></b:Nav>
+       	<b:Nav><g:FocusPanel ui:field="startNode" visible="false"><g:HTMLPanel>
+       		<a class="btn btn-success" ><i class="fa fa-play"></i> Start Node</a></g:HTMLPanel>
+       	</g:FocusPanel></b:Nav>
+       	<b:Nav><g:FocusPanel ui:field="stopNode" visible="false"><g:HTMLPanel>
+       		<a class="btn btn-danger" ><i class="fa fa-stop"></i> Stop Node</a></g:HTMLPanel>
+       	</g:FocusPanel></b:Nav>       
+    </b:Navbar>
+</ui:UiBinder> 

@@ -1,0 +1,77 @@
+<!-- 
+<DBProps>
+                
+            <sourcename>DionysusDB</sourcename>
+                
+            <propsname>CountriesTree</propsname>
+                
+            <table>
+                    
+               <name>country</name>
+                    
+               <sql>select * from country</sql>
+                
+            </table>
+                
+            <table>
+                    
+               <name>city</name>
+                    
+               <sql>select * from city</sql>
+                
+            </table>
+                
+            <table>
+                    
+               <name>countrylanguage</name>
+                    
+               <sql>select * from countrylanguage</sql>
+                
+            </table>
+                
+            <table>
+                    
+               <name>zipcodes</name>
+                    
+               <sql>select * from zipcodes</sql>
+                
+            </table>
+                
+            <edge>
+                    
+               <parent>country</parent>
+                    
+               <pkeys>code</pkeys>
+                    
+               <child>city</child>
+                    
+               <ckeys>countrycode</ckeys>
+                
+            </edge>
+                
+            <edge>
+                    
+               <parent>country</parent>
+                    
+               <pkeys>code</pkeys>
+                    
+               <child>countrylanguage</child>
+                    
+               <ckeys>countrycode</ckeys>
+                
+            </edge>
+                
+            <edge>
+                    
+               <parent>city</parent>
+                    
+               <pkeys>id</pkeys>
+                    
+               <child>zipcodes</child>
+                    
+               <ckeys>cityid</ckeys>
+                
+            </edge>
+            
+         </DBProps>
+-->

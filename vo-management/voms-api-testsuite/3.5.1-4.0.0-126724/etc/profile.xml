@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>
+			A suport library to manage VOMS server
+		</Description>
+		<Class>DVOS</Class>
+		<Name>voms-api</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>voms-api support library</Description>
+				<Name>voms-api</Name>
+				<Version>3.1.0</Version>
+				<Dependencies>
+					<Dependency>
+						<Service>
+							<Class>DVOS</Class>
+							<Name>voms-admin-stubs</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>voms-admin-stubs</Package>
+						<Version>2.0.1</Version>
+						<Scope level="GHN" />
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ExternalSoftware</Class>
+							<Name>voms-admin-server</Name>
+							<Version>2.0.15</Version>
+						</Service>
+						<Package>voms-admin-server</Package>
+						<Version>2.0.15</Version>
+						<Scope level="GHN" />
+						<Optional>false</Optional>
+					</Dependency>
+				</Dependencies>
+				<Files>
+					<File>org.gcube.vomanagement.voms-api.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

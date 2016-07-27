@@ -1,0 +1,200 @@
+/*************************************************
+*
+* GWT-BOOTSTRAP MINIMAL CSS FOR WORKSPACE EXPLORE
+*
+**************************************************/
+/* body { */
+/*     padding-top: 50px; */
+/* } */
+/* div.input-prepend > input, div.input-prepend > textarea, div.input-prepend > select, div.input-prepend > .uneditable-input { */
+/*     margin-bottom: 0; */
+/* } */
+/* div.input-append > input, div.input-append > textarea, div.input-append > select, div.input-append > .uneditable-input { */
+/*     margin-bottom: 0; */
+/* } */
+.gwt-PopupPanel .gwt-DatePicker {
+	width: 200px;
+}
+
+.gwt-SuggestBoxPopup {
+	z-index: 2100;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTop {
+	background-color: #FFFFFF;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupMiddle {
+	background-color: #FFFFFF;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottomCenter {
+	background-color: #FFFFFF;
+}
+
+.gwt-SuggestBoxPopup .item {
+	clear: both;
+	color: #333333;
+	cursor: pointer;
+	font-size: 110%;
+	font-weight: normal;
+	line-height: 20px;
+	padding: 3px 9px;
+	white-space: nowrap;
+}
+
+.gwt-SuggestBoxPopup .item-selected {
+	background-color: #0081C2;
+	background-image: linear-gradient(to bottom, #0088CC, #0077B3);
+	background-repeat: repeat-x;
+	color: #FFFFFF;
+	outline: 0 none;
+	text-decoration: none;
+}
+
+.gwt-TextBox-personal {
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+	border-radius: 4px;
+	color: #555555;
+	display: inline-block;
+	font-size: 14px;
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 10px;
+	padding: 4px 6px;
+	vertical-align: middle;
+}
+
+.form-inline input:FOCUS {
+	border-color: rgba(82, 168, 236, 0.8);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
+		rgba(82, 168, 236, 0.6);
+	outline: 0 none
+}
+
+.margin-right-5px {
+	margin-right: 5px;
+}
+
+/**** GWT DIALOG NEW STYLE****/
+.gwt-DialogBoxNew {
+	border: 8px solid #EEEEEE;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: none;
+	/* 	line-height: 7px; */
+	opacity: 1;
+	z-index: 2000;
+	background-color: #FFFFFF;
+	min-width: 250px;
+	max-width: 600px;
+}
+
+.gwt-DialogBoxNew .Caption {
+	background: none repeat scroll 0 0 #EEEEEE;
+	padding: 2px;
+	border-bottom: 1px solid #dadada;
+	cursor: default;
+	font-family: Arial Unicode MS, Arial, sans-serif !important;
+	font-size: 14px;
+}
+
+.gwt-DialogBoxNew table {
+	width: 100%;
+}
+
+.gwt-DialogBoxNew .dialogContent {
+	
+}
+
+.gwt-DialogBoxNew .dialogMiddleCenter {
+	padding: 3px;
+	background: white;
+}
+
+.gwt-DialogBoxNew .dialogBottomCenter {
+	
+}
+
+.gwt-DialogBoxNew .dialogMiddleLeft {
+	/*   background: url(images/vborder.png) repeat-y -31px 0px; */
+	
+}
+
+.gwt-DialogBoxNew .dialogMiddleRight {
+	/*  background: url(images/vborder.png) repeat-y -32px 0px;*/
+	
+}
+
+.gwt-DialogBoxNew .dialogTopLeft {
+	/*  background: url(images/circles.png) no-repeat -20px 0px;
+  -background: url(images/circles_ie6.png) no-repeat -20px 0px; */
+	background: none repeat scroll 0 0 #E4E4E4;
+}
+
+.gwt-DialogBoxNew .dialogTopRight {
+	/*   background: url(images/circles.png) no-repeat -28px 0px;
+  -background: url(images/circles_ie6.png) no-repeat -28px 0px; */
+	background: none repeat scroll 0 0 #E4E4E4;
+}
+
+.gwt-DialogBoxNew .dialogBottomLeft {
+	/*   background: url(images/circles.png) no-repeat 0px -36px;
+  -background: url(images/circles_ie6.png) no-repeat 0px -36px; */
+	
+}
+
+.gwt-DialogBoxNew .dialogBottomRight {
+	/*   background: url(images/circles.png) no-repeat -8px -36px;
+  -background: url(images/circles_ie6.png) no-repeat -8px -36px; */
+	
+}
+
+.gwt-DialogBoxNew-table-header {
+	text-align: left;
+	font-weight: bold;
+}
+
+.gwt-DialogBoxNew-table {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.gwt-DialogBoxNew-table td {
+	border-bottom: 1px solid #EEEEEE;
+	height: 50%;
+	text-align: left;
+	vertical-align: middle;
+	padding: 5px;
+}
+
+/**** END GWT DIALOG NEW STYLE ****/
+
+/*** TABLE ***/
+.table-explorer td, th {
+	overflow: hidden !important;
+}
+
+.table-explorer th {
+	text-align: center !important;
+}
+
+.table-explorer-vertical-middle td, th {
+	height: 50%;
+	vertical-align: middle !important;
+}
+
+
+/******* END TABLE ********/
+/* .adaptiveHeight {
+	Firefox
+	height: -moz-calc(100% - 40px);
+	WebKit
+	height: -webkit-calc(100% - 40px);
+	Opera
+	height: -o-calc(100% - 40px);
+	Standard
+	height: calc(100% - 40px);
+} */

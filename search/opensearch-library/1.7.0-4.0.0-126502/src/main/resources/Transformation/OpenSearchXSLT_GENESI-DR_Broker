@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>ab8ce180-b6a5-11df-b7c5-e86e6ce79b80</ID>
+  <Type>GenericResource</Type>
+  <Profile>
+    <SecondaryType>OpenSearchXSLT</SecondaryType>
+    <Name>OpenSearchXSLT_GENESI-DR_Broker</Name>
+    <Description>XSLT to transform OpenSearch responses retrieved from Terradue testbed central external repository to a list of brokered providers</Description>
+    <Body>
+      <xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        <xsl:output indent="yes" method="text"/>
+        <xsl:template match="*[local-name()='Series' and namespace-uri()='http://xmlns.com/2008/dclite4g#']">
+          <xsl:value-of select="*[local-name()='description' and namespace-uri()='http://purl.org/dc/elements/1.1/']/@*[local-name()='resource' and namespace-uri()='http://www.w3.org/1999/02/22-rdf-syntax-ns#']"/>
+        </xsl:template>
+      </xsl:transform>
+    </Body>
+  </Profile>
+</Resource>

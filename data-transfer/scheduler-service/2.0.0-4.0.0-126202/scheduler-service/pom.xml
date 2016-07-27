@@ -1,0 +1,231 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>scheduler-parent</artifactId>
+		<groupId>org.gcube.data.transfer</groupId>
+		<version>2.0.0-4.0.0-126202</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<artifactId>scheduler-service</artifactId>
+	<name>The Data Transfer Scheduler Service</name>
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.tools</groupId>
+			<artifactId>my-container</artifactId>
+			<version>2.0.1-4.0.0-126937</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.tools</groupId>
+			<artifactId>my-container</artifactId>
+			<version>2.0.1-4.0.0-126937</version>
+			<type>tar.gz</type>
+			<classifier>distro</classifier>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>gcf</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.transfer</groupId>
+			<artifactId>agent-library</artifactId>
+			<version>2.0.1-4.0.0-129282</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.transfer</groupId>
+			<artifactId>common</artifactId>
+			<version>2.0.1-4.0.0-129279</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.informationsystem</groupId>
+			<artifactId>is-client</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.informationsystem</groupId>
+			<artifactId>is-collector-stubs</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>2.2.8</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.transfer</groupId>
+			<artifactId>scheduler-db-interface</artifactId>
+			<version>2.1.0-4.0.0-126140</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.transfer</groupId>
+			<artifactId>scheduler-is-interface</artifactId>
+			<version>1.2.0-4.0.0-126141</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.transfer</groupId>
+			<artifactId>scheduler-library</artifactId>
+			<version>2.1.0-4.0.0-126143</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.transfer</groupId>
+			<artifactId>scheduler-stubs</artifactId>
+			<version>2.0.0-4.0.0-126202</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.transfer</groupId>
+			<artifactId>common-messaging</artifactId>
+			<version>1.1.0-4.0.0-126136</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.gcube.tools</groupId>
+				<artifactId>maven-service-plugin</artifactId>
+				<configuration>
+					<fullGar>true</fullGar>
+					<attachFullGar>false</attachFullGar>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-gar</id>
+						<goals>
+							<goal>gar-gen</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>install-my-container</id>
+						<phase>generate-test-resources</phase><!-- runs before tests -->
+						<configuration>
+							<includeArtifactIds>my-container</includeArtifactIds>
+							<includeTypes>tar.gz</includeTypes>
+							<overWriteIfNewer>false</overWriteIfNewer>
+							<outputDirectory>${project.basedir}</outputDirectory>
+							<markersDirectory>${project.basedir}</markersDirectory>
+						</configuration>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>../distro/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.maven.plugins
+										</groupId>
+										<artifactId>
+											maven-dependency-plugin
+										</artifactId>
+										<versionRange>[2.1,)</versionRange>
+										<goals>
+											<goal>copy</goal>
+											<goal>
+												unpack-dependencies
+											</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>local-deploy</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.gcube.tools</groupId>
+						<artifactId>maven-service-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>local-deploy</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>

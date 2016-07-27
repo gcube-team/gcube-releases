@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-analysis.statistical-manager-gcubews.1-0-0" date="2012-04-26">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.statistical-manager-gcubews.1-0-2" date="2012-06-25">
+		<Change>Update maven deps</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.statistical-manager-gcubews.2-1-0" date="2016-06-21">
+		<Change>One jms queue per scope</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,1 @@
+term.length() > 3 ? true : false

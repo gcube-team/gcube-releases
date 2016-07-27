@@ -1,0 +1,31 @@
+<Resource version="0.4.x">
+   <ID>3aa0e790-b609-11e1-959a-8f8c3e6664f5</ID>
+   <Type>Service</Type>
+   <Scopes>
+<!--       <Scope>/d4science.research-infrastructures.eu</Scope> -->
+<!--       <Scope>/d4science.research-infrastructures.eu/FARM</Scope> -->
+<!--       <Scope>/d4science.research-infrastructures.eu/gCubeApps</Scope> -->
+   </Scopes>
+   <Profile>
+      <Description>Test Profile: registry publisher test </Description>
+      <Class>Test</Class>
+      <Name>NameTest</Name>
+      <Version>1.0.0</Version>
+      <Packages>
+         <Software>
+            <Name>NameTest</Name>
+            <Version>1.0.0</Version>
+            <MavenCoordinates>
+               <groupId>org.gcube.test</groupId>
+               <artifactId>test-test-test</artifactId>
+               <version>1.0.0</version>
+            </MavenCoordinates>
+            <Shareable level="VO" />
+            <Type>library</Type>
+            <Files>
+               <File>test-test-test-1.0.0.jar</File>
+            </Files>
+         </Software>
+      </Packages>
+   </Profile>
+</Resource>

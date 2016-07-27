@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- When updating your version of GWT, you should also update this DTD reference, 
+	so that your app can take advantage of the latest GWT module capabilities. -->
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.5.0//EN"
+  "http://google-web-toolkit.googlecode.com/svn/tags/2.5.0/distro-source/core/src/gwt-module.dtd">
+<module rename-to='report_exporter_widget'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	
+	<inherits name='org.gcube.portlets.d4sreporting.common.Reporting' />
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.widgets.exporter.client.Report_exporter_widget' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

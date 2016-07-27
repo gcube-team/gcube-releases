@@ -1,0 +1,18 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.vo-management.usermanagement-core.1-0-0"
+		date="2010-09-03">
+		<Change>UserManagement lib for Liferay</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vo-management.usermanagement-core.1-1-0"
+		date="2010-10-27">
+		<Change>#82: UserManagement Portlet cannot assign role Production-Support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vo-management.usermanagement-core.1-1-1"
+		date="2010-11-09">
+		<Change>#120: Failed to Assign Production-Support role</Change>
+	</Changeset>
+		<Changeset component="org.gcube.vo-management.usermanagement-core.1-1-2"
+		date="2010-11-25">
+		<Change>#120: Failed to Assign Production-Support role</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ROWSET colID="c9076f3f-be8d-43e2-9f02-de35e6d8f72c" idxType="ft_SPD_1.0" lang="">
+	<ROW>
+		<FIELD name="title">The giant resin bee making its way west: First
+			record
+			in Kansas (Hymenoptera: Megachilidae)
+		</FIELD>
+		<FIELD name="creator">Hinojosa-Díaz,Ismael</FIELD>
+		<FIELD name="subject">Invasive species</FIELD>
+		<FIELD name="subject">bees</FIELD>
+		<FIELD name="subject">Anthophila</FIELD>
+		<FIELD name="subject">Apoidea</FIELD>
+		<FIELD name="subject">potential distribution</FIELD>
+		<FIELD name="subject">ecological modeling</FIELD>
+		<FIELD name="description">The invasive giant resin bee (Megachile sculpturalis
+			Smith) was first discovered in North America in 1994. A 2005 study
+			provided the first predictive ecological niche model for any bee
+			species and concluded that M. sculpturalis, then confined to the
+			eastern United States, would eventually spread as far south as
+			southern Florida, as far north as southern Ontario and Nova Scotia,
+			and as far west as South Dakota, western Kansas, and northwestern
+			Texas. Herein I provide the first record of M. sculpturalis from
+			northeastern Kansas, documenting that the species has indeed
+			continued
+			its westward expansion in North America and the new available records
+			entirely correspond to the earlier predictions.
+		</FIELD>
+		<FIELD name="publisher">Pensoft Publishers</FIELD>
+		<FIELD name="date">2008</FIELD>
+		<FIELD name="type">Short Communication</FIELD>
+		<FIELD name="format">text/html</FIELD>
+		<FIELD name="identifier">http://dx.doi.org/10.3897/zookeys.1.17</FIELD>
+		<FIELD name="identifier">http://www.pensoft.net/journals/zookeys/article/17/
+		</FIELD>
+		<FIELD name="source">ZooKeys 1: 67-71</FIELD>
+		<FIELD name="language">en</FIELD>
+		<FIELD name="relation">info:eu-repo/semantics/altIdentifier/pissn/1313-2989
+		</FIELD>
+		<FIELD name="relation">info:eu-repo/semantics/altIdentifier/eissn/1313-2970
+		</FIELD>
+		<FIELD name="rights">info:eu-repo/semantics/openAccess</FIELD>
+		<FIELD name="provenance">This item has been created by the gCube OAI-TM
+			plugin
+			via OAI-PMH metadata harvesting from the metadata provider ZooKeys at
+			http://oai.pensoft.euzookeys10.3897/zookeys.1.17
+		</FIELD>
+		<FIELD name="ObjectID">http://gcube.data.d4science.org/tree/c9076f3f-be8d-43e2-9f02-de35e6d8f72c/10.3897124sep47sep35zookeys.1.17?scope=/gcube/devNext
+		</FIELD>
+	</ROW>
+</ROWSET>

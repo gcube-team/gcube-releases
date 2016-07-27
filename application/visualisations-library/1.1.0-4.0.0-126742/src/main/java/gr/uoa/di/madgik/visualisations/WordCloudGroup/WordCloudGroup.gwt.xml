@@ -1,0 +1,22 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="gr.uoa.di.madgik.visualisations.VisualisationsLibrary"/>
+
+<!-- 	
+	<script src="code/wordcloudgroup/Sunburst/sunburst.js"></script>
+	<script src="code/wordcloudgroup/WordCloud/d3.layout.cloud.js"></script>
+	<script src="code/wordcloudgroup/WordCloud/cloud.js"></script>
+	
+	<stylesheet src="code/wordcloudgroup/WordCloud/cloud.css"/>
+	
+	<script src="code/wordcloudgroup/Toolbox.js"></script>
+	<stylesheet src="code/wordcloudgroup/docVis.css"/>
+ -->
+ 	
+
+	<entry-point class="gr.uoa.di.madgik.visualisations.WordCloudGroup.client.WordCloudGroup" />
+
+	
+	<source path="client" />
+  	<public path="public" />
+</module>

@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.users-management-portlet.3-0-0" date="2016-06-20">
+		<Change>First release of the redesigned portlet</Change>
+	</Changeset>
+</ReleaseNotes>

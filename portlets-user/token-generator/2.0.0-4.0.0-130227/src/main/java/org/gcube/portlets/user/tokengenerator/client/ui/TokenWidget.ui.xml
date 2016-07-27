@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:m="urn:import:org.gcube.portlets.user.tokengenerator.client.ui">
+	<g:HTMLPanel styleName="token-frame" ui:field="tokenPanel">
+		<g:SimplePanel width="100%">
+			<b:Popover ui:field="popover">
+				<b:Button ui:field="infoButton" type="LINK" icon="INFO_SIGN"
+					size="LARGE"></b:Button>
+			</b:Popover>
+		</g:SimplePanel>
+		<m:LoadingText ui:field="loader" visible="false" />
+		<g:VerticalPanel width="100%" ui:field="placeHolder">
+
+			<b:Form type="VERTICAL" ui:field="formTokenUsername">
+				<b:ControlGroup ui:field="currentUsernameInfo"
+					visible="false">
+					<b:ControlLabel for="username">
+						<b>Your Username</b>
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="XLARGE" b:id="username"
+							ui:field="currentUsername" readOnly="true"></b:TextBox>
+					</b:Controls>
+				</b:ControlGroup>
+				<b:ControlGroup>
+					<b:ControlLabel for="token">
+						<b>Your Token</b>
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="XLARGE" b:id="token" ui:field="tokenClear"
+							readOnly="true" visible="false"></b:TextBox>
+						<b:PasswordTextBox alternateSize="XLARGE" b:id="token"
+							ui:field="tokenHide" readOnly="true"></b:PasswordTextBox>
+					</b:Controls>
+				</b:ControlGroup>
+				<b:Button text="Show" ui:field="showToken"></b:Button>
+			</b:Form>
+
+			<b:Button ui:field="generateButton">Generate Token</b:Button>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

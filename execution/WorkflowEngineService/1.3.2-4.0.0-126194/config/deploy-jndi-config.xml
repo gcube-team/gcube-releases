@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+	<service name="execution/workflowengine">
+		<environment  name="configDir" value="@config.dir@"  type="java.lang.String" override="false" />
+		<environment  name="portRanges" value="{4000,4010}"  type="java.lang.String" override="false" />
+		<environment  name="useRandomPort" value="false"  type="java.lang.Boolean" override="false" />
+		<environment  name="providerInformationName" value="gr.uoa.di.madgik.environment.gcube.GCubeInformationSystemProvider"  type="java.lang.String" override="false" />
+		<environment  name="providerStorageName" value="gr.uoa.di.madgik.environment.gcube.GCubeStorageSystemProvider"  type="java.lang.String" override="false" />
+		<environment  name="providerReportingName" value="gr.uoa.di.madgik.environment.gcube.GCubeReportingFrameworkProvider" type="java.lang.String" override="false" />
+		<environment  name="localFSBuffer" value="/tmp/"  type="java.lang.String" override="false" />
+		<environment  name="retryOnErrorInterval" value="120000"  type="java.lang.Integer" override="false" />
+		<environment  name="retryOnErrorTimes" value="5"  type="java.lang.Integer" override="false" />
+		<environment  name="informationSystemRIContainerServiceClass" value="Execution"  type="java.lang.String" override="false" />
+		<environment  name="informationSystemRIContainerServiceName" value="ExecutionEngineService"  type="java.lang.String" override="false" />
+	    <environment  name="nodeSelector" value="gr.uoa.di.madgik.environment.is.nodeselector.LRUNodeSelector" type="java.lang.String" override="false" />
+		<environment  name="reportingFrameworkRIContainerServiceClass" value="Execution"  type="java.lang.String" override="false" />
+		<environment  name="reportingFrameworkRIContainerServiceName" value="WorkflowEngineService"  type="java.lang.String" override="false" />
+		<environment  name="reportingFrameworkRIContainerServiceJNDIName" value="execution/workflowengine"  type="java.lang.String" override="false" />
+		<environment  name="executionDirectoryCleanup" value="21600000"  type="java.lang.Long" override="false" />
+		<environment  name="JMSProviderName" value="gr.uoa.di.madgik.environment.madgik.providers.JMSNotificationHandlingProvider"  type="java.lang.String" override="false" />
+	</service>
+</jndiConfig>

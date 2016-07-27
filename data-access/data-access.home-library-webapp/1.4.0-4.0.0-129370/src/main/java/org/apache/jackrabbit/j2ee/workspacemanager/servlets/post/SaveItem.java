@@ -1,0 +1,119 @@
+package org.apache.jackrabbit.j2ee.workspacemanager.servlets.post;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.jcr.Repository;
+import javax.jcr.lock.LockException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.jackrabbit.core.SessionImpl;
+import org.apache.jackrabbit.j2ee.ConfigRepository;
+import org.apache.jackrabbit.j2ee.RepositoryAccessServlet;
+import org.apache.jackrabbit.j2ee.workspacemanager.ItemDelegateWrapper;
+import org.apache.jackrabbit.j2ee.workspacemanager.ServletParameter;
+import org.apache.jackrabbit.j2ee.workspacemanager.SessionManager;
+import org.gcube.common.homelibary.model.items.ItemDelegate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+
+
+public class SaveItem extends HttpServlet {
+
+	private static Logger logger = LoggerFactory.getLogger(SaveItem.class);
+	private static final long serialVersionUID = 1L;
+
+
+	public SaveItem() {
+		super();
+	}
+
+
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+
+		String login = request.getParameter(ServletParameter.LOGIN);
+		String sessionId = request.getParameter(ServletParameter.UUID);
+		final String user = request.getParameter(ConfigRepository.USER);
+		final char[] pass = request.getParameter(ConfigRepository.PASSWORD).toCharArray();
+
+		Repository rep = RepositoryAccessServlet.getRepository(getServletContext());
+
+		SessionImpl session = null;
+		XStream xstream = null;
+		String xmlConfig = null;
+		SessionManager sessionManager = null;
+		boolean exist = false;
+		try {
+			xstream = new XStream(new DomDriver("UTF-8"));
+
+			sessionManager = SessionManager.getInstance(rep);
+			exist = sessionManager.sessionExists(sessionId); 
+			if (exist){				
+				session = sessionManager.getSession(sessionId);
+				//				logger.info(sessionId + " already exists, get it");
+			}
+			else{				 
+				session = sessionManager.newSession(login, user, pass);
+				sessionId = session.toString();
+				//				logger.info(sessionId + " does not exist, a new session has been created " + session.toString());
+			}
+
+			ItemDelegate item = null;
+			try{
+
+				//					System.out.println(request.getInputStream().available());
+				item = (ItemDelegate) xstream.fromXML(request.getInputStream());
+				//					System.out.println(item.toString());
+				
+				logger.info("Servlet SaveItem called with parameters: [itemName: "+ item.getName() + " - by: " + login +"]");
+				
+				ItemDelegateWrapper wrapper = new ItemDelegateWrapper(item, "");
+				
+//				System.out.println("save item: " + item.toString());
+				ItemDelegate new_item = wrapper.save(session);
+
+				xmlConfig = xstream.toXML(new_item);
+				//response.setContentLength(xmlConfig.length());
+				out.println(xmlConfig);
+			} catch (LockException e) {
+				logger.error("Error saving item with id: " + item.getId(), e);
+				xmlConfig = xstream.toXML(e.toString());
+				//response.setContentLength(xmlConfig.length());
+				out.println(xmlConfig);
+			} catch (Exception e) {
+				e.printStackTrace();
+				logger.error("Error saving item with id: " + item.getId(), e);
+				xmlConfig = xstream.toXML(e.toString());
+				//	response.setContentLength(xmlConfig.length());
+				out.println(xmlConfig);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			logger.error("Error repository ex " + e.getMessage());
+			xmlConfig = xstream.toXML(e.toString());
+			//	response.setContentLength(xmlConfig.length());
+			out.println(xmlConfig);
+
+		} finally {
+			if (!exist){
+				sessionManager.releaseSession(sessionId);
+				//				logger.info("Released session " + sessionId);
+			}
+			out.close();
+			//	out.flush();
+		}
+	}
+
+
+}

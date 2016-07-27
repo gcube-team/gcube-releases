@@ -1,0 +1,31 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.distribution.ghn-distribution.3-6-0" date="2013-01-12">
+		<Change>Maven version of the GHN-distribution</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.ghn-distribution.3-7-0" date="2013-04-19">
+		<Change>Added FWS components and messaging-endpoint</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.ghn-distribution.3-7-1" date="2013-05-29">
+		<Change>added ghn-distribution-bundle 3.7.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.ghn-distribution.3-8-0" date="2013-07-09">
+		<Change>removed old CM deps</Change>
+		<Change>integrates ghn-distribution-bundle 3.8.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.ghn-distribution.3-8-1" date="2013-11-04">
+		<Change>Includes new version of FWS libs</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.ghn-distribution.4-0-0" date="2014-01-31">
+		<Change>JAVA 7 based version of the GHN</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.ghn-distribution.5-0-0" date="2014-09-09">
+		<Change>Support for secure containers.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.ghn-distribution.6-0-0" date="2015-10-28">
+		<Change>Support for authZ</Change>
+		<Change>Support for accounting</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.ghn-distribution.6-0-1" date="2016-06-28">
+		<Change>moved accounting from couchDb to couchBase</Change>
+	</Changeset>
+</ReleaseNotes>

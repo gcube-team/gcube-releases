@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>The ISCache Library</Description>
+		<Class>InformationSystem</Class>
+		<Name>ISCache</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>ISCache</Description>
+				<Name>ISCache</Name>
+				<Version>1.2.0</Version>
+				<Files><File>ISCache.jar</File></Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

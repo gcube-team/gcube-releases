@@ -1,0 +1,1 @@
+http://svn.d4science-ii.research-infrastructures.eu/gcube/trunk/data-access/asfis-spd-plugin

@@ -1,0 +1,6 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.portlets.widgets.switchbutton.1-0-0" date="2013-10-21">
+<Change>maven groupid renamed</Change>
+<Change>Ported to GWT 2.5.1</Change>
+</Changeset>
+</ReleaseNotes>

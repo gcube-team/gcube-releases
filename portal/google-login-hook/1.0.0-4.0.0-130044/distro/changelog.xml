@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.google.1-0-0" date="2016-03-15">
+		<Change>First release of the google authentication hook</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,55 @@
+<Resource>
+    <ID/>
+	<Type/>
+    <Profile>
+        <SecondaryType>DTSTransformationProgram</SecondaryType>
+        <Name>XSLT_GeoRowset_Composite_Transformer</Name>
+        <Description>Composite TP Transforming source metadata to a common schema and then transforming them again to georowsets</Description>
+        <Body>
+            <gDTSTransformationProgram>
+                <Transformer/>
+                <TransformationUnits>
+                    <TransformationUnit id="0" isComposite="true">
+                        <Sources>
+                            <Source>
+                                <Input id="TRInput0"/>
+                                <ContentType>
+                                    <Mimetype>text/xml</Mimetype>
+                                    <Parameters>
+                                    	<Parameter isOptional="false" name="schemaURI" value="-"/>
+                                	</Parameters>
+                                </ContentType>
+                            </Source>
+                        </Sources>
+                        <ProgramParameters>
+                        	<Parameter name="xslt" value="-" isOptional="false"/>
+                        	<Parameter name="geoxslt" value="-" isOptional="false"/>
+							<Parameter name="indexType" value="-" isOptional="false"/>
+                        </ProgramParameters>
+                        <Target>
+                            <Output id="TROutput"/>
+                            <ContentType>
+                                <Mimetype>text/xml</Mimetype>
+                                <Parameters>
+                                    <Parameter isOptional="false" name="schemaURI" value="http://georowset.xsd"/>
+                                </Parameters>
+                            </ContentType>
+                        </Target>
+                        <Composition>
+                            <ExtTransformationUnit tpid="$XSLT_Transformer" tuid="0">
+                                <TargetInput targetID="TRInput0" thisID="TRInput0"/>
+                                <TargetOutput targetID="TROutput" thisID="TRBridge0"/>
+                                <UnboundParameters/>
+                            </ExtTransformationUnit>
+                            <ExtTransformationUnit tpid="$GeoRowset_Transformer" tuid="0">
+                                <TargetInput targetID="TRInput0" thisID="TRBridge0"/>
+                                <TargetOutput targetID="TROutput" thisID="TROutput"/>
+                                <UnboundParameters/>
+                            </ExtTransformationUnit>
+                        </Composition>
+                    </TransformationUnit>
+                </TransformationUnits>
+            </gDTSTransformationProgram>
+        </Body>
+    </Profile>
+</Resource>

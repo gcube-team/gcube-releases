@@ -1,0 +1,38 @@
+<Resource>
+	<ID/>
+	<Type/>
+	<Profile>
+		<SecondaryType>DTSTransformationProgram</SecondaryType>
+		<Name>MEncoderWrapper_TP</Name>
+		<Description>Wrapper Program for MEncoder</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.video.MEncoderWrapper</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+                        <Sources>
+                            <Source>
+                                <Input id="TRInput0"/>
+                                <ContentType>
+                                    <Mimetype>application/x-troff-msvideo</Mimetype>
+                                    <Parameters/>
+                                </ContentType>
+                            </Source>
+                        </Sources>
+                        <ProgramParameters/>
+                        <Target>
+                            <Output id="TROutput"/>
+                            <ContentType>
+                                <Mimetype>video/x-flv</Mimetype>
+                                <Parameters/>
+                            </ContentType>
+                        </Target>
+                    </TransformationUnit>
+                </TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>
