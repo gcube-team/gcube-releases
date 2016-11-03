@@ -1,0 +1,33 @@
+<ReleaseNotes>
+	<Changeset component="common-smartgears-2.0.0" date="2016-03-10">
+		<Change>integration with Authorization 2.0</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-1.2.6" date="2015-12-22">
+		<Change>Added flush of accounting data</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-1.2.5" date="2015-12-22">
+		<Change>Changed accounting version</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-1.2.4" date="2015-10-06">
+		<Change>Transparent accounting added on service calls</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-1.2.3" date="2015-07-27">
+		<Change>Authorization token control added</Change>
+		<Change>Added support to HTTP Basic authorization</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-1.2.2" date="2015-04-27">
+		<Change>Fixed available space information on ghn profile</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-1.2.1" date="2014-02-13">
+		<Change>scopes can be removed from container</Change>
+		<Change>node profile set to static</Change>
+		<Change>internal adjustments for move to Java 7</Change>
+		<Change>wildcard allowed in exclude directives</Change>
+		<Change>domain corrected derived in gHN profile</Change>
+		<Change>cleaner shutdown</Change>
+		<Change>further improvement in shutdown handling</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-1.0.0" date="2013-10-24">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,20 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.vre-management.vremodeler.1-4-0" date="2010-2-7"> 
+		<Change>support for cloud deployment</Change> 
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.vremodeler.1-4-1" date="2011-4-18"> 
+		<Change>bug fixing for maintenance</Change> 
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.vremodeler.1-5-0" date="2011-5-6"> 
+		<Change>new CM support</Change> 
+	</Changeset> 
+	<Changeset component="org.gcube.vre-management.vremodeler.2-0-2" date="2013-10-25"> 
+		<Change>porting to the new report parsing</Change> 
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.vremodeler.2-0-3" date="2015-10-09"> 
+		<Change>filter on static ghn removed to support Smartgears nodes</Change> 
+	</Changeset> 
+	<Changeset component="org.gcube.vre-management.vremodeler.2-0-5" date="2015-10-09"> 
+		<Change>fixed a problem on initilaization query</Change> 
+	</Changeset>   
+</ReleaseNotes>

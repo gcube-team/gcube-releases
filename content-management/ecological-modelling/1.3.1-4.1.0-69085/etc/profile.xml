@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../xsd/service.xsd">
+	<ID />
+	<Type>Library</Type>
+	<Profile>
+		<Description>Ecological Modelling Library</Description>
+		<Class>ContentManagement</Class>
+		<Name>EcologicalModelling</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>Ecological Modelling Library</Description>
+				<Name>EcologicalModelling</Name>
+				<Version>1.3.1</Version>
+				<Dependencies>
+					<Dependency>
+						<Service>
+							<Class>Common</Class>
+							<Name>hibernate-patched</Name>
+							<Version>3.5.2</Version>
+						</Service>
+						<Package>hibernate-patched</Package>
+						<Version>3.5.2</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ExternalSoftware</Class>
+							<Name>postgresql-jdbc</Name>
+							<Version>8.04.00</Version>
+						</Service>
+						<Package>postgresql-jdbc</Package>
+						<Version>8.04.00</Version>
+						<Scope level="GHN" />
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ExternalSoftware</Class>
+							<Name>jaxen</Name>
+							<Version>1.1.0</Version>
+						</Service>
+						<Package>jaxen</Package>
+						<Version>1.1.0</Version>
+						<Scope level="GHN" />
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ExternalSoftware</Class>
+							<Name>jcommon</Name>
+							<Version>1.0.16</Version>
+						</Service>
+						<Package>jcommon</Package>
+						<Version>1.0.16</Version>
+						<Scope level="GHN" />
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>Common</Class>
+							<Name>rapidminer-custom</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>rapidminer-custom</Package>
+						<Version>1.0.0</Version>
+						<Scope level="GHN" />
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ExternalSoftware</Class>
+							<Name>hibernate-spatial-postgis</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>hibernate-spatial-postgis</Package>
+						<Version>1.0.0</Version>
+						<Scope level="GHN" />
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ExternalSoftware</Class>
+							<Name>hibernate-spatial</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>hibernate-spatial</Package>
+						<Version>1.0.0</Version>
+						<Scope level="GHN" />
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>DataAnalysis</Class>
+							<Name>ecological-engine</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ecological-engine</Package>
+						<Version>1.0.0</Version>
+						<Scope level="GHN" />
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ExternalSoftware</Class>
+							<Name>postgis</Name>
+							<Version>2.0.0</Version>
+						</Service>
+						<Package>postgis</Package>
+						<Version>2.0.0</Version>
+						<Scope level="GHN" />
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ExternalSoftware</Class>
+							<Name>jts</Name>
+							<Version>1.10.0</Version>
+						</Service>
+						<Package>jts</Package>
+						<Version>1.10.0</Version>
+						<Scope level="GHN" />
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+						 <Class>ExternalSoftware</Class>
+        			     <Name>slf4j</Name>
+        			     <Version>1.05.00</Version>
+						</Service>
+						<Package>slf4j</Package>
+						<Version>1.05.00</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+						 <Class>ExternalSoftware</Class>
+        			     <Name>google-gson</Name>
+        			     <Version>1.7.1</Version>
+						</Service>
+						<Package>google-gson</Package>
+						<Version>1.7.1</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+				</Dependencies>
+				<Files>
+					<File>lib/org.gcube.application.aquamaps.ecomodelling.generators.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

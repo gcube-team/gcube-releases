@@ -1,0 +1,46 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!-- This is the ldap config file for use by the authentication service -->
+	<bean id="authenticationContext" class="it.eng.rdlab.soa3.authn.rest.impl.LDAPAuthenticationContext">
+		<property name="url" value="ldap://127.0.0.1:1389" />
+		<property name="base" value="o=mojo" />
+		<property name="userDn" value="cn=Directory Manager" />
+		<property name="password" value="secret" />
+	</bean>
+	<bean id="userSearch"
+		class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
+		<constructor-arg value="ou=people" />
+		<constructor-arg value="(uid={0})" />
+		<constructor-arg ref="contextSource" />
+		<property name="searchSubtree" value="true" />
+	</bean>
+	<bean id="labels" class="it.eng.rdlab.soa3.config.beans.PropertiesNameBean">
+		<property name="ldapUrl" value="LDAP_URL" />
+		<property name="ldapBase" value="LDAP_BASE" />
+		<property name="ldapDN" value="LDAP_USER_DN" />
+		<property name="ldapPwd" value="LDAP_PASSWORD" />
+		<property name="caCert" value="CA_CERT" />
+		<property name="assertionSignatureValidation" value="ASSERTION_SIGNATURE_VALIDATION" />
+		<property name="assertionTimeValidation" value="ASSERTION_TIME_VALIDATION" />
+		<property name="assertionSourceUrl" value="SAML_ASSERTION_SOURCE_URL" />
+	</bean>
+	<bean id="configurationFile" class="it.eng.rdlab.soa3.config.beans.ConfigurationFileBean"  init-method="init">
+		<constructor-arg>
+			<value>/var/lib/tomcat7</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>conf/soa3/soa3.properties</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>/it/eng/rdlab/soa3/config/configuration.properties</value>
+		</constructor-arg>
+	</bean>
+	<bean id="defaults" class="it.eng.rdlab.soa3.config.beans.DefaultValues">
+		<property name="caCert" value="/etc/grid-security/certificates"/>
+		<property name="assertionSignatureValidation" value="true"/>
+		<property name="assertionTimeValidation" value="true"/>
+		<property name="assertionSourceUrl" value="http://localhost/Shibboleth.sso/GetAssertion"/>
+	</bean>
+</beans> 

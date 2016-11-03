@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.execution.workfloworchestrationlayer-client.1.0.0" date="2013-07-15">
+		<Change>Initial release</Change>
+	</Changeset>
+</ReleaseNotes>
+

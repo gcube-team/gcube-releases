@@ -1,0 +1,56 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.tabular-data-template-widget.1-7-1"
+		date="2016-06-30">
+		<Change>Minor glitch to fix combo width
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-template-widget.1-7-0"
+		date="2015-10-06">
+		<Change>[Bug 860] Fixed the GUI doesn't display the Flow after an
+			update.
+		</Change>
+		<Change>Changed labels</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-template-widget.1-6-0"
+		date="2015-5-26">
+		<Change>[Feature 253]Template Save as..</Change>
+		<Change>[Feature 252]Template Clone Column</Change>
+		<Change>Updated according to change to service impl</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-template-widget.1-5-0"
+		date="2015-5-26">
+		<Change>Updated expression wrapper to manage expression by value
+		</Change>
+		<Change>Fixed bug</Change>
+		<Change>Updated Template Helper</Change>
+		<Change>Added Multi Column Expression</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-template-widget.1-4-1"
+		date="2014-2-11">
+		<Change>Updated GWT Version</Change>
+		<Change>Added Exchange Column Position</Change>
+		<Change>Added Data Type Formats</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-template-widget.1-4-0"
+		date="2014-10-27">
+		<Change>#3100 Integrated FLOW</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-template-widget.1-3-3"
+		date="2014-06-27">
+		<Change>Updated to support changes provided from server model</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-template-widget.1-3-0"
+		date="2014-06-27">
+		<Change>Added scope to AuthorizationToken</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-template-widget.1-1-0"
+		date="2014-06-04">
+		<Change>Updated to support new portal bom configuration (gcube release
+			3.2)
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-template-widget.1-0-0"
+		date="2014-1-08">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

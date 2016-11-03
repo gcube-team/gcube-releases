@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<securityConfig xmlns="http://www.globus.org">
+
+
+<!--Authorization still not set for this service-->
+<authz value="none"/>
+
+<!--At least GSISecureConversation and all that clients may need to add -->
+<auth-method>
+	<GSISecureConversation/>
+</auth-method>
+
+<!--operates with delegation of caller's credentials-->
+<run-as>
+	<caller-identity/>
+</run-as>
+
+</securityConfig>

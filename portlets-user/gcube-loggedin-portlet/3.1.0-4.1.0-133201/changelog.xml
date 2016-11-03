@@ -1,0 +1,45 @@
+<ReleaseNotes>
+
+	<Changeset component="org.gcube.portlets-user.gcube-loggedin-portlet.3-1-0"
+		date="2016-09-23">
+		<Change>Added leave VRE option feature</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-loggedin-portlet.3-0-0"
+		date="2016-07-15">
+		<Change>Added possibility for VRE Manager to edit VRE Abstract text</Change>
+		<Change>Restyled and ported to Liferay 6.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-loggedin-portlet.2-7-0"
+		date="2015-09-28">
+		<Change>Restyled for new 3 col theme</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-loggedin-portlet.2-6-0"
+		date="2015-05-13">
+		<Change>Ported to GWT 2.7.0</Change>
+		<Change>Added show more option when VRE Description is too long
+		</Change>
+		<Change>Added client scope handler for preventing back button cache
+			problems</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-loggedin-portlet.2-5-0"
+		date="2014-11-13">
+		<Change>Restyled button positions</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-loggedin-portlet.2-4-0"
+		date="2014-09-16">
+		<Change>Added possibility for users to leave a VRE, if the VRE is not
+			mandatory to belong to
+		</Change>
+		<Change>VRE Managers get notified whenever a user leave a VRE</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-loggedin-portlet.2-3-0"
+		date="2014-06-06">
+		<Change>Ported to Feather Weight Stack Portal</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-loggedin-portlet.2-2-0"
+		date="2013-10-21">
+		<Change>Ported to Feather Weight Stack</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+</ReleaseNotes>

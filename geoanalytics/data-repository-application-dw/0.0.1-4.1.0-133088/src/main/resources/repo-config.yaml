@@ -1,0 +1,24 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 9090         
+  adminConnectors:
+    - type: http
+      port: 9091          
+
+# Logging settings.
+logging:
+
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: INFO
+  appenders:
+    - type: console
+#    - type: file
+#      currentLogFilename: ./timeline.log
+#      threshold: ALL
+#      archive: true
+#      archivedLogFilenamePattern: ./timeline-%d.log
+#      archivedFileCount: 5
+#      timeZone: UTC
+
+publicUrl: localhost:9090/datarepository        # WARNING: change publicUrl to your desired url  

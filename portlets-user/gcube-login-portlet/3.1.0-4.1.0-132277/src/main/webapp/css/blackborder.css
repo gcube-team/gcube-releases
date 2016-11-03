@@ -1,0 +1,69 @@
+.PanelBorder {
+}
+.PanelBorder .BlackBorder_topCenter{
+  background: url(../images/hborder.png) repeat-x 0px -12px;
+}
+.PanelBorder .BlackBorder_bottomCenter {
+  background: url(../images/hborder.png) repeat-x 0px -14px;
+}
+.PanelBorder .BlackBorder_middleLeft {
+  background: url(../images/vborder.png) repeat-y -12px 0px;
+  width: 5px;
+  height: 3px;
+}
+.PanelBorder .BlackBorder_middleRight {
+  background: url(../images/vborder.png) repeat-y -14px 0px;
+  width: 5px;
+  height: 3px;
+}
+.PanelBorder .BlackBorder_topLeftInner,
+.PanelBorder .BlackBorder_topRightInner,
+.PanelBorder .BlackBorder_bottomLeftInner,
+.PanelBorder .BlackBorder_bottomRightInner {
+  width: 5px;
+  height: 5px;
+  zoom: 1;
+}
+html>body .PanelBorder .BlackBorder_topLeft {
+  background: url(../images/corner.png) no-repeat 0px -36px;
+}
+html>body .PanelBorder .BlackBorder_topRight {
+  background: url(../images/corner.png) no-repeat -6px -36px;
+}
+html>body .PanelBorder .BlackBorder_bottomLeft {
+  background: url(../images/corner.png) no-repeat 0px -42px;
+}
+html>body .PanelBorder .BlackBorder_bottomRight {
+  background: url(../images/corner.png) no-repeat -6px -42px;
+}
+* html .PanelBorder .BlackBorder_topLeftInner {
+  width: 5px;
+  height: 5px;
+  margin-top: -36px;
+  overflow: hidden;
+  
+}
+* html .PanelBorder .BlackBorder_topRightInner {
+  width: 10px;
+  height: 5px;
+  margin-left: -6px;
+  margin-top: -36px;
+  overflow: hidden;
+  
+}
+* html .PanelBorder .BlackBorder_bottomLeftInner {
+  width: 5px;
+  height: 10px;
+  margin-left: 0px;
+  margin-top: -42px;
+  overflow: hidden;
+
+}
+* html .PanelBorder .BlackBorder_bottomRightInner {
+  width: 10px;
+  height: 10px;
+  margin-left: -6px;
+  margin-top: -42px;
+  overflow: hidden;
+
+}

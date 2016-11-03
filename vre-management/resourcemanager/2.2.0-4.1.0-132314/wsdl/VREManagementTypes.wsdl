@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="VREManagementTypes"
+    targetNamespace="http://gcube-system.org/common/vremanagement/types"
+    xmlns:tns="http://gcube-system.org/common/vremanagement/types"
+    xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+        xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+    
+    <import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+    
+<!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+<types>
+<xs:schema 
+   targetNamespace="http://gcube-system.org/common/vremanagement/types"
+   xmlns:tns="http://gcube-system.org/common/vremanagement/types">
+
+	<xs:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+	<xs:include schemaLocation="VREManagementTypes.xsd" />
+	
+			
+	<xs:element name="InvalidScopeFaultType">
+		<xs:complexType>
+              <xs:complexContent>
+                    <xs:extension base="corefaults:GCUBEUnrecoverableFault">
+                        <xs:sequence/>                        
+                    </xs:extension>
+                </xs:complexContent>
+    	</xs:complexType>
+	</xs:element>
+	
+
+</xs:schema>
+</types>
+
+<portType name="VREManagementTypesPortType" >
+
+</portType>
+</definitions>

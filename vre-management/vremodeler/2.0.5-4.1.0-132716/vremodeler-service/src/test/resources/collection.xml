@@ -1,0 +1,35 @@
+<Resource version="0.4.x">
+    
+   <ID>f7e075a0-9d84-11de-a010-bf56b4e46eb8</ID>
+    
+   <Type>GenericResource</Type>
+    
+   <Scopes>
+        
+      <Scope>/gcube/devsec</Scope>
+    
+   </Scopes>
+    
+   <Profile>
+        
+      <SecondaryType>GCUBECollection</SecondaryType>
+        
+      <Name>FARM AquaMaps: Species Maps</Name>
+        
+      <Description>FARM AquaMaps: Species Maps</Description>
+        
+      <Body>
+            
+         <CollectionInfo>
+                
+            <creationTime>2009-09-09T23:08:48.898+02:00</creationTime>
+                
+            <user>true</user>
+            
+         </CollectionInfo>
+        
+      </Body>
+    
+   </Profile>
+
+</Resource>

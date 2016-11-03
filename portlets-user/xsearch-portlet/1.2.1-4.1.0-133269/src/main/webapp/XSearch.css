@@ -1,0 +1,643 @@
+/* Formatting specific to the StockWatcher application */
+
+body {
+    padding:   0px;
+    margin: 0px;
+}
+
+.hitsLoadingError{
+    position: absolute;
+    left: 36%;
+    bottom: 50%;
+    font-size: 12px;
+    color: red;     
+    text-align: center;
+}
+
+.errorMessage { 
+    font-size: 12px;
+    color: red;
+    border: solid black 1px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.mask{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999999 !important;
+    background: url(images/mask.png) repeat scroll 0 0 transparent;
+}
+
+.metadataLabelStyle {
+    background: none repeat scroll 0 0 #92C1F0;
+    font-size: small;
+    font-weight: bold;
+    margin-left: 10px;
+    padding-left: 6px;
+    width: 135px;
+}
+
+.selectedPage{
+    color: red;
+    font-size:12px;
+    text-decoration: none;
+}
+
+.aClusterItem div div {
+    padding: 1px 0px 0px 7px !important;
+}
+
+/*.scrollPanel{
+    position: absolute;
+    left: 8px;
+    width: 98.5%;
+    height: 92%;
+    padding-top: 40px;
+    margin-bottom: 50px;
+}*/
+
+.scrollPanel {
+position: absolute;
+top: 9px;
+left: 9px;
+width: 98.5%;
+height: 94%;
+padding-top: 29px;
+margin-bottom: 50px;
+}
+
+.hitsTable{
+    border-collapse: collapse;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    /*border-left: 1px solid black;
+    border-right: 1px solid black;
+    width:529px;
+    height: 20px;*/	
+}
+
+.emptyRow{
+    color: white;	
+}
+
+.advancedSplit{
+
+    border-collapse:collapse;
+    border-bottom:1px solid black;
+
+}
+
+.em_minepage {
+    color: red;
+    font-size:10px;
+    text-decoration: none;
+}
+.absolutePanel{
+    width: 100%;
+    height: 563px;
+    padding-bottom: 27px;
+}
+
+.mainPanel{
+    width: 100%;
+    height: 464px;
+}
+
+
+.categoriesTree{
+    border-color: #92C1F0;
+    border-style: solid;
+    border-width: 3px 2px 2px;
+    overflow: hidden;
+    padding: 6px;
+}
+
+.metadataTree{
+    border-color: #92C1F0;
+    border-style: solid;
+    border-width: 3px 2px 2px;
+    overflow: hidden;
+    padding: 6px; 
+}
+
+/*
+.clustersTree{
+    border: 1px outset navy;
+    padding: 5px;
+    width: 160px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D9EBFF), color-stop(1, white) );
+    background: -moz-linear-gradient(center top , #D9EBFF, white) repeat scroll 0 0 #99BBE8;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+*/
+
+.tabPanelMining {
+    margin-bottom: 20px;
+}
+
+.tabPanelMining .gwt-TabPanelBottom {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D9EBFF), color-stop(1, white) );
+    background: -moz-linear-gradient(center top , #D9EBFF, white) repeat scroll 0 0 #99BBE8;
+    width:142px; 
+}
+
+.tabPanelClustering {
+    margin-bottom: 20px;
+    margin-right: 5px;
+}
+
+.tabPanelClustering .gwt-TabPanelBottom {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D9EBFF), color-stop(1, white) );
+    background: -moz-linear-gradient(center top , #D9EBFF, white) repeat scroll 0 0 #99BBE8;
+    width:142px; 
+}
+
+.tabPanelMetadata {
+    margin-bottom: 20px;
+}
+
+.tabPanelMetadata .gwt-TabPanelBottom {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D9EBFF), color-stop(1, white) );
+    background: -moz-linear-gradient(center top , #D9EBFF, white) repeat scroll 0 0 #99BBE8;
+    width:142px; 
+}
+
+.more{	
+    color: red;
+    text-align: right;
+}
+
+.findItsEntitiesLink{
+    color: red;
+}
+
+.bottomBorder{
+    border-collapse: collapse;
+    border-bottom: 1px solid black;
+    /*width:529px;
+    height: 20px;*/	
+}
+
+.clearLabel{
+    position: relative;
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size:10px;
+    z-index: 99;
+    padding-left:17px;
+}
+
+.selectedItemsTable{
+    height: 34px;
+    /*width: 212px;*/
+    white-space: nowrap;
+    padding-top: 5px;
+    overflow-x: hidden;
+}
+
+.hitTdTitleOneRow{
+    padding-left:20px;
+    padding-bottom:5px;
+    font-size: 12px;
+}
+.moveTop{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    color: red;
+    text-decoration:underline;
+    cursor: pointer;
+    font-size: 10px;
+    z-index: 99;
+}
+
+.objtitlespan {
+    padding-bottom:0px;
+    margin-bottom: 0px;
+}
+
+.objtitle {
+    font-size: 13px;
+    color: blue;
+    /*text-decoration: underline;*/
+    cursor: pointer;
+}
+
+.objsnippet {
+    font-size: 13px;
+}
+
+.treeLabels {
+    padding-bottom: 6px;
+    width: 160px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.cluster{
+    text-decoration:none;
+}
+
+.clusterItem {
+    margin-left: -15px;
+}
+
+
+.entity{
+    text-align: left;
+    text-decoration:none;
+    margin-left: -15px;
+}
+
+.metadata{
+    text-align: left;
+    text-decoration:none;
+    margin-left: -15px;
+}
+
+.treeItem{
+    padding: 1px 3px 3px 23px;
+}
+
+.query{
+    position: absolute;
+    right: 53.3%;
+    top: 0px;
+}
+
+.collections{
+    position: absolute;
+    right: 33%;
+    top: 12px;
+}
+
+.pagingPanel{
+    position: absolute;
+    bottom: 0px;
+    border: 1px solid #ccc;
+    background-color: white;
+    width: 100%;
+    float: none;
+    clear: both;
+    text-align: center;
+    height: 18px;
+}
+
+.pagingTable{
+    margin-left: 44%;
+}
+
+.pagging{
+    position: absolute;
+    bottom: 0px;
+    border: 1px solid #ccc;
+    background-color: white;
+    width: 100%;
+    float: none;
+    clear: both;
+    text-align: center;
+    height: 18px;
+}
+
+.pageNumbersFormat{
+    margin-right: 4px;
+}
+
+.previousPage{
+    margin-right: 4px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.nextPage{
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.moreResults{
+    margin-left: 4px;
+    font-size:15px;
+    color: blue;
+    cursor: pointer;
+    z-index: 99;
+    text-decoration: none;
+}
+
+.loading{
+    position: absolute;
+    left: 45%;
+    bottom: 50%;
+    font-size:10px;	
+}
+
+.about{
+    position: absolute;
+    right: 1px;
+    top: -2px;
+    text-decoration:underline;
+    cursor: pointer;
+    font-size: 8px;
+    background-color: white;
+}
+
+.bookmarklet {
+    position: absolute;
+    left: 2px;
+    top: 0px;
+    cursor: pointer;
+    font-size: 10px;
+    background-color: white;
+}
+
+.selectedItemLabel{
+    text-decoration: none;
+    font-weight: bold;
+    padding-left:4px;
+    padding-right:1px;
+    padding-top:7px;
+    padding-bottom: 2px;
+}
+
+.selecteditemcl {
+    padding-left:0px;
+    padding-right:4px;
+    padding-top:2px;
+    padding-bottom: 2px;
+    cursor: pointer;    
+}
+
+.gwt-TreeItem:hover {
+   cursor: text !important;
+}
+
+.selecteditemcl:hover {
+    cursor: text;    
+}
+
+.selecteditemclear {
+    position: absolute;
+    top: -3px;
+    left: 215px;
+    text-decoration: underline;
+    /*padding-left:0px;
+    padding-right:4px;
+    padding-top:2px;
+    padding-bottom: 2px;*/
+}
+
+.selectedItem{
+    background-color: lightgray;
+    border: thin solid black;
+    margin-right: 4px;
+    /*margin-bottom: 2px;
+    margin-top: 4px;*/
+}
+
+.selectedItemPanel{	
+   /* position: absolute;
+    top: 0px;
+    right: 80px;*/
+    margin-left: 26px;
+    padding: 2px;
+    border-bottom: 1px outset gray;
+    border-left: 1px outset gray;
+    border-right: 1px outset gray;
+    /*background-color: lemonchiffon;*/
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ddd), color-stop(1, white) );
+    background: -moz-linear-gradient(center top , #ccc, white) repeat scroll 0 0 #ccc;
+     border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    /*z-index: 96;*/
+}
+
+.selectedPage{
+    color: red;
+}
+
+.nonSelectedPage{
+    color: black;
+}
+
+.hitTdTitle {
+    padding-right: 5px;
+    text-align: right;
+    border-bottom: 1px solid #CBF;
+    font-weight: bold;
+    font-size:12px;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.hitTdValue {
+    border-left: 1px solid #ccc;
+    padding-left: 5px;
+    border-bottom: 1px solid #CBF;
+    font-size:12px;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.dialogTopCenterInner {
+    cursor: move;
+}
+
+.clusterClss {
+    
+}
+
+.infoPanelHorizontal{
+    position: absolute;
+    top: -3px;
+    margin-left: 20%;
+    z-index: 96;
+}
+
+.infoPanelCls {
+    border-left: 1px outset gray;
+    border-bottom: 1px outset gray;
+    border-right: 1px outset gray;
+    font-size: 12px;
+    /*margin-left: 24%;*/
+    padding: 2px;
+    /*position: absolute;*/
+    top: -3px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ddd), color-stop(1, white) );
+    background: -moz-linear-gradient(center top , #ccc, white) repeat scroll 0 0 #ccc;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    max-width: 500px;
+    /*z-index: 96;*/
+    min-width: 220px;
+}
+
+.infoTtl {
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 13px;
+}
+
+.infoDt {
+
+}
+
+.showall {
+    color: red;
+}
+
+.hiddenRows{
+    display: none;
+}
+
+/* Entity Enrichment Styles */
+
+.entitiesTree {
+    width: 142px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D9EBFF), color-stop(1, white) );
+    background: -moz-linear-gradient(center top , #D9EBFF, white) repeat scroll 0 0 #99BBE8;
+}
+
+.categoryItemCls {
+    clear: both;
+    margin-bottom: 15px;
+}
+
+.gwt-DialogBox {
+    width: 460px;
+    z-index: 99;
+    padding: 10px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 12px;
+    border: outset 1px gray;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.dialogVPanel {
+    margin: 5px;
+    width: 450px;
+}
+
+.dialogContent {
+
+}
+
+.serverResponseLabelError {
+    color: red;
+}
+
+#closeButton {
+    margin: 15px 6px 0px;
+}
+
+.ee_boxtitle {
+    font-size: 20px;
+    padding-bottom: 12px;
+    font-family: "Calibri";
+}
+
+.infoboxPropertyTable {
+    position:relative;
+    float: left;
+    padding: 5px;
+    margin: 6px;
+    border: 1px solid gray;
+    max-width: 450px;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+
+.infoboxPropertyTitle {
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+infoboxPropertyValues {
+    vertical-align: top;
+    margin-bottom: 10px;
+
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.uriInProperties {
+    font-size:14px;
+}
+
+.testPosition{
+    position: absolute;
+    top: 0px;
+}
+
+.gwt-TreeItem-selected {
+    background: none !important;  
+}
+
+.tabPanelObj {
+    margin-bottom: 15px;
+    min-width: 330px;
+}
+
+.tabPanelObj .gwt-TabPanelBottom {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D9EBFF), color-stop(1, white) );
+    background: -moz-linear-gradient(center top , #D9EBFF, white) repeat scroll 0 0 #99BBE8;    
+}
+
+.showalltext {
+    font-size: 13px;
+    color:red;
+}
+
+/* END ENTITY ENRICHMENT STYLES */
+
+
+
+.gwt-TabBar {
+}
+.gwt-TabBar .gwt-TabBarFirst {
+    width: 5px;  /* first tab distance from the left */
+}
+.gwt-TabBar .gwt-TabBarRest {
+}
+.gwt-TabBar .gwt-TabBarItem {
+    margin-left: 6px;
+    padding: 3px 6px 3px 6px;
+    cursor: pointer;
+    cursor: hand;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    background: #d0e4f6;
+}
+.gwt-TabBar .gwt-TabBarItem-selected {
+    cursor: default;
+    background: #92c1f0;
+} 
+.gwt-TabBar .gwt-TabBarItem-disabled {
+    cursor: default;
+    color: #999999;
+}
+.gwt-TabPanel {
+}
+.gwt-TabPanelBottom {
+    border-color: #92c1f0 !important;
+    border-style: solid !important;
+    border-width: 3px 2px 2px !important;
+    overflow: hidden !important;
+    padding: 6px !important;
+}

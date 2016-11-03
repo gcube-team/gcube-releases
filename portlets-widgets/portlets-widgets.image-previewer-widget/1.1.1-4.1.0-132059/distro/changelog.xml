@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-widgets.image-previewer-widget.1-1-1"	date="2016-11-02">
+		<Change>Minor fix</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.image-previewer-widget.1-1-0"	date="2016-04-02">
+		<Change>Removed GWT Standard css</Change>
+		<Change>Style changes</Change>
+		<Change>Responsive widget</Change>
+		<Change>Image orientation handled by means of the EXIF metadata</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.image-previewer-widget.1-0-0"	date="2016-01-22">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

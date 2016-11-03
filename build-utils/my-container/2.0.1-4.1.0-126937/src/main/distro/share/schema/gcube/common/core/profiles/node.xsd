@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+			XML Schema for gCube Services Version 1.2 Last modified:19/02/2008 Contact: http://www.gcube-system.org
+		</xs:documentation>
+	</xs:annotation>
+	
+	<xs:redefine schemaLocation="CommonTypeDefinitions.xsd">
+		<xs:complexType name="ProfileType">
+			<xs:complexContent>
+				<xs:restriction base="ProfileType">
+					<xs:sequence>
+						<xs:element name="Infrastructure" type="xs:string"/>
+						<xs:element ref="GHNDescription"/>
+						<xs:element ref="Site"/>
+						<xs:element name="DeployedPackages" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="Package" minOccurs="1" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:redefine>
+
+<xs:element name="GHNDescription">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Name" type="xs:string"/>
+				<xs:element name="Status" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Type"/>
+				<xs:element name="SecurityEnabled" type="BooleanValueType"/>
+				<!--<xs:element name="ManagementURL" type="xs:string" minOccurs="0"/>-->
+				<xs:element name="CredentialsExpireOn" type="xs:dateTime" minOccurs="0"/>
+				<xs:element ref="Architecture"/>
+				<xs:element ref="OperatingSystem"/>
+				<xs:element ref="Processor" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="NetworkAdapter" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Benchmark" minOccurs="0"/>
+				<xs:element ref="RunTimeEnv"/>
+				<xs:element ref="StorageDevice" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="StoragePartition" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="LocalFileSystem" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="RemoteFileSystem" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="StorageDevice2StoragePartition" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="StoragePartition2FileSystem" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Uptime" type="xs:string"/>
+				<xs:element ref="Load" minOccurs="0"/>
+				<xs:element ref="HistoricalLoad" minOccurs="0"/>
+				<xs:element ref="MainMemory"/>
+				<xs:element name="LocalAvailableSpace" type="xs:integer" minOccurs="0"/>
+				<xs:element name="LastUpdate" type="xs:dateTime"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Type">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+				Dynamic: the GHN supports dynamic deployment of new packages
+				Static: the GHN does not support dynamic deployment of new packages
+				SelfClening: the GHN supports dynamic deployment of new packages, but only for a short limited period
+			</xs:documentation>
+	</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Dynamic"/>
+				<xs:enumeration value="Static"/>
+				<xs:enumeration value="SelfCleaning"/>				
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	
+	<xs:element name="Architecture">
+		<xs:complexType>
+			<xs:attribute name="PlatformType" type="xs:string" use="required"/>
+			<xs:attribute name="SMPSize" type="xs:integer" use="required"/>
+			<xs:attribute name="SMTSize" type="xs:integer" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Benchmark">
+		<xs:complexType>
+			<xs:attribute name="SI00" type="xs:integer" use="required"/>
+			<xs:attribute name="SF00" type="xs:integer" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Load">
+		<xs:complexType>
+			<xs:attribute name="Last1Min" type="xs:double" use="optional"/>
+			<xs:attribute name="Last5Min" type="xs:double" use="optional"/>
+			<xs:attribute name="Last15Min" type="xs:double" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HistoricalLoad">
+		<xs:complexType>
+			<xs:attribute name="Last1H" type="xs:double" use="optional"/>
+			<xs:attribute name="Last1Day" type="xs:double" use="optional"/>
+			<xs:attribute name="Last1Week" type="xs:double" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MainMemory">
+		<xs:complexType>
+			<xs:attribute name="RAMSize" type="xs:integer"/>
+			<xs:attribute name="VirtualSize" type="xs:integer"/>
+			<xs:attribute name="RAMAvailable" type="xs:integer"/>
+			<xs:attribute name="VirtualAvailable" type="xs:integer"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="NetworkAdapter">
+		<xs:complexType>
+			<xs:attribute name="InboundIP" type="xs:string" use="required"/>
+			<xs:attribute name="OutboundIP" type="xs:string" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="IPAddress" type="xs:string" use="required"/>
+			<xs:attribute name="MTU" type="xs:integer" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="OperatingSystem">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="Release" type="xs:string" use="required"/>
+			<xs:attribute name="Version" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Processor">
+		<xs:complexType>
+			<xs:attribute name="Vendor" type="xs:string" use="required"/>
+			<xs:attribute name="Model" type="xs:string" use="required"/>
+			<xs:attribute name="ModelName" type="xs:string" use="required"/>
+			<xs:attribute name="Family" type="xs:string" use="required"/>
+			<xs:attribute name="ClockSpeedMhz" type="xs:decimal" use="required"/>
+			<xs:attribute name="Bogomips" type="xs:decimal" use="required"/>
+			<xs:attribute name="CacheL1" type="xs:integer" use="required"/>
+			<xs:attribute name="CacheL1I" type="xs:integer" use="required"/>
+			<xs:attribute name="CacheL1D" type="xs:integer" use="required"/>
+			<xs:attribute name="CacheL2" type="xs:integer" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="RunTimeEnv">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Variable" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="Key" type="xs:string" minOccurs="1" maxOccurs="1"/>
+								<xs:element name="Value" type="xs:string" minOccurs="1" maxOccurs="1"/>
+							</xs:sequence>
+						</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Site">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Location" type="xs:string"/>
+				<xs:element name="Country">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="2"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Latitude" type="xs:string"/>
+				<xs:element name="Longitude" type="xs:string"/>
+				<xs:element name="Domain" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="StorageDevice">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="Type" type="xs:string" use="required"/>
+			<xs:attribute name="TransferRate" type="xs:integer" use="required"/>
+			<xs:attribute name="Size" type="xs:integer" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="StorageDevice2StoragePartition">
+		<xs:complexType>
+			<xs:attribute name="StorageDeviceName" type="xs:string" use="required"/>
+			<xs:attribute name="StoragePartitionName" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="StoragePartition">
+		<xs:complexType>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="Size" type="xs:string" use="required"/>
+			<xs:attribute name="ReadRate" type="xs:integer" use="required"/>
+			<xs:attribute name="WriteRate" type="xs:integer" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="StoragePartition2FileSystem">
+		<xs:complexType>
+			<xs:attribute name="StoragePartitionName" type="xs:string" use="required"/>
+			<xs:attribute name="FileSystemName" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="RemoteFileSystem" type="FileSystemType" />
+	<xs:element name="LocalFileSystem" type="FileSystemType" />
+		<xs:complexType name="FileSystemType">	
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+			<xs:attribute name="Root" type="xs:string" use="required"/>
+			<xs:attribute name="Size" type="xs:integer" use="required"/>
+			<xs:attribute name="ReadOnly" type="xs:boolean" use="required"/>
+			<xs:attribute name="Type" type="xs:string" use="required"/>
+	</xs:complexType>
+	
+		
+	<xs:element name="Package">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PackageName" type="xs:string"/>
+				<xs:element name="PackageVersion" type="xs:string"/>				
+				<xs:element name="ServiceName" type="xs:string"/>
+				<xs:element name="ServiceClass" type="xs:string"/>
+				<xs:element name="ServiceVersion" type="xs:string"/>				
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>

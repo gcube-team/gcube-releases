@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="data-transfer-service-1.0.0" date="2016-02-22">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="data-transfer-service-1.1.0" date="2016-09-09">
+		<Change>Added Destination</Change>
+		<Change>Added Plugin</Change>
+	</Changeset>
+</ReleaseNotes>

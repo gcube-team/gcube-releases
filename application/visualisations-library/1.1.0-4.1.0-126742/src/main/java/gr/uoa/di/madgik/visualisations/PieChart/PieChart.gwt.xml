@@ -1,0 +1,17 @@
+<module>
+	<inherits name="gr.uoa.di.madgik.visualisations.VisualisationsLibrary"/>
+
+	<!-- 
+	<inherits name="com.google.gwt.user.User"/>
+	<stylesheet src="PieChart.css"/>
+	 -->
+	 
+	 
+	 
+	<!-- 
+	<script src="gr.uoa.di.madgik.visualisations/public/code/piechart/pie.js"></script>
+	 -->
+
+ 	<entry-point class="gr.uoa.di.madgik.visualisations.PieChart.client.PieChart" />
+
+</module>

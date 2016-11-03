@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="Classification"
+	targetNamespace="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+	xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:tns="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+	xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+	xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+	xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types">
+
+	<import
+		namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		location="../gcube/common/core/providers/GCUBEProvider.wsdl" />
+
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+		location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+
+	<wsdl:import namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" 
+		location="../wsrf/notification/WS-BaseN.wsdl"/>
+	
+
+	<wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+
+
+
+	<!--
+		============================================================ T Y P E S
+
+		============================================================
+	-->
+	<types>
+		<xsd:schema
+			targetNamespace="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+			xmlns:tns="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+			<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+				schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+
+			<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" />
+
+		
+			<xsd:element name="retrieveTaxonChildrenByTaxonIdRequest" type="xsd:string"/>
+			<xsd:element name="retrieveTaxonChildrenByTaxonIdResponse" type="xsd:string" />
+			
+			<xsd:element name="retrieveSynonymsByIdRequest" type="xsd:string"/>
+			<xsd:element name="retrieveSynonymsByIdResponse" type="xsd:string" />
+			
+			<xsd:element name="retrieveTaxonTreeByIdRequest" type="xsd:string"/>
+			<xsd:element name="retrieveTaxonTreeByIdResponse" type="xsd:string" />
+			
+			
+			<xsd:element name="getTaxaByIdsRequest" type="xsd:string"/>
+			<xsd:element name="getTaxaByIdsResponse" type="xsd:string" />	
+			
+			<xsd:element name="UnsupportedPluginFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="UnsupportedCapabilityFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="IdNotValidFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+	
+		</xsd:schema>
+	</types>
+	
+	<message name="RetrieveTaxonChildrenByTaxonIdRequest">
+		<part name="request" element="tns:retrieveTaxonChildrenByTaxonIdRequest" />
+	</message>
+	<message name="RetrieveTaxonChildrenByTaxonIdResponse">
+		<part name="response" element="tns:retrieveTaxonChildrenByTaxonIdResponse" />
+	</message>
+	
+	<message name="RetrieveSynonymsByIdRequest">
+		<part name="request" element="tns:retrieveSynonymsByIdRequest" />
+	</message>
+	<message name="RetrieveSynonymsByIdResponse">
+		<part name="response" element="tns:retrieveSynonymsByIdResponse" />
+	</message>
+	
+	<message name="RetrieveTaxonTreeByIdRequest">
+		<part name="request" element="tns:retrieveTaxonTreeByIdRequest" />
+	</message>
+	<message name="RetrieveTaxonTreeByIdResponse">
+		<part name="response" element="tns:retrieveTaxonTreeByIdResponse" />
+	</message>
+	
+	<message name="GetTaxaByIdsRequest">
+		<part name="request" element="tns:getTaxaByIdsRequest" />
+	</message>
+	<message name="GetTaxaByIdsResponse">
+		<part name="response" element="tns:getTaxaByIdsResponse" />
+	</message>
+   
+	<message name="IdNotValidFaultMessage">
+		<part name="fault" element="tns:IdNotValidFault" />
+	</message>
+
+	<message name="UnsupportedCapabilityFaultMessage">
+		<part name="fault" element="tns:UnsupportedCapabilityFault" />
+	</message>
+
+	<message name="UnsupportedPluginFaultMessage">
+		<part name="fault" element="tns:UnsupportedPluginFault" />
+	</message>
+
+	
+
+	<portType name="ClassificationPortType"> 
+		
+		<operation name="retrieveTaxonChildrenByTaxonId">
+			<input message="tns:RetrieveTaxonChildrenByTaxonIdRequest" />
+			<output message="tns:RetrieveTaxonChildrenByTaxonIdResponse" />
+			<fault name="unsupportedpluginfault" message="tns:UnsupportedPluginFaultMessage" />
+			<fault name="unsupportedcapabilityfault" message="tns:UnsupportedCapabilityFaultMessage" />
+			<fault name="idnotvalidfault" message="tns:IdNotValidFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+		<operation name="retrieveChildrenTreeById">
+			<input message="tns:RetrieveTaxonTreeByIdRequest" />
+			<output message="tns:RetrieveTaxonTreeByIdResponse" />
+			<fault name="unsupportedpluginfault" message="tns:UnsupportedPluginFaultMessage" />
+			<fault name="unsupportedcapabilityfault" message="tns:UnsupportedCapabilityFaultMessage" />
+			<fault name="idnotvalidfault" message="tns:IdNotValidFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+		<operation name="retrieveSynonymsById">
+			<input message="tns:RetrieveSynonymsByIdRequest" />
+			<output message="tns:RetrieveSynonymsByIdResponse" />
+			<fault name="unsupportedpluginfault" message="tns:UnsupportedPluginFaultMessage" />
+			<fault name="unsupportedcapabilityfault" message="tns:UnsupportedCapabilityFaultMessage" />
+			<fault name="idnotvalidfault" message="tns:IdNotValidFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+		<operation name="getTaxaByIds">
+			<input message="tns:GetTaxaByIdsRequest" />
+			<output message="tns:GetTaxaByIdsResponse" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+	</portType>
+
+
+</definitions>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<portlet-app>
+	<portlet>
+		<description>Workspace Portlet</description>
+		<portlet-name>WorkspacePortlet</portlet-name>
+		<display-name>WorkspacePortlet</display-name>
+		<portlet-class>org.gcube.portlets.user.workspace.portlet.WorkspacePortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>WorkspacePortlet</title>
+			<short-title>WorkspacePortlet</short-title>
+		</portlet-info>
+	</portlet>
+</portlet-app>

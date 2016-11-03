@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.application-support-layer.taskexecutionlogger.1-0-0" date="2013-12-10">
+		<Change>First version</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.taskexecutionlogger.1-1-0" date="2013-05-20">
+		<Change>Added a method that resets (deletes) the log file</Change>
+	</Changeset>
+</ReleaseNotes>

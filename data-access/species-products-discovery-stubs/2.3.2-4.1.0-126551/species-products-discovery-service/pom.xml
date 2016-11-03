@@ -1,0 +1,208 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>species-products-discovery</artifactId>
+		<groupId>org.gcube.data.spd</groupId>
+		<version>2.3.2-4.1.0-126551</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<artifactId>species-products-discovery-service</artifactId>
+	<name>species products discovery service</name>
+	<dependencies>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>gcf</artifactId>
+		</dependency>
+		<dependency>
+			<artifactId>species-products-discovery-stubs</artifactId>
+			<groupId>org.gcube.data.spd</groupId>
+			<version>2.3.2-4.1.0-126551</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.execution</groupId>
+			<artifactId>grs2library</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-core</artifactId>
+			<version>2.5.0-4.1.0-132751</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-wrapper</artifactId>
+			<version>2.4.0-4.1.0-132749</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>time-series-geotools</artifactId>
+			<version>1.6.0-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>rapidminer-custom</artifactId>
+					<groupId>org.gcube.common</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>spql-parser</artifactId>
+			<version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.9.5</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache-core</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources</groupId>
+			<artifactId>common-gcore-resources</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>ic-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>having-engine</artifactId>
+			<version>[1.0.0-SNAPSHOT,2.0.0-SNAPSHOT)</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>spd-plugin-framework</artifactId>
+			<version>[3.0.0-SNAPSHOT,4.0.0-SNAPSHOT)</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>spd-model</artifactId>
+			<version>[3.0.0-SNAPSHOT,4.0.0-SNAPSHOT)</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.dbinterface</groupId>
+			<artifactId>h2interface</artifactId>
+			<version>1.1.1-4.1.0-126605</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>csv4j</artifactId>
+			<version>1.2.0-4.1.0-130659</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.informationsystem</groupId>
+			<artifactId>is-notification</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.informationsystem</groupId>
+			<artifactId>notifier-stubs</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>gbif-spd-plugin</artifactId>
+			<version>[1.6.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- <dependency> <groupId>org.gcube.data.spd</groupId> <artifactId>obis-spd-plugin</artifactId> 
+			<version>[1.6.0-SNAPSHOT, 1.7.0-SNAPSHOT)</version> <scope>test</scope> </dependency> 
+			<dependency> <groupId>org.gcube.data.spd</groupId> <artifactId>brazilian-flora-spd-plugin</artifactId> 
+			<version>[1.5.0-SNAPSHOT, 1.6.0-SNAPSHOT)</version> <scope>test</scope> </dependency> 
+			<dependency> <groupId>org.gcube.data.spd</groupId> <artifactId>worms-spd-plugin</artifactId> 
+			<version>[1.6.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version> <scope>test</scope> </dependency> 
+			<dependency> <groupId>org.gcube.data.spd</groupId> <artifactId>catalogue-of-life-spd-plugin</artifactId> 
+			<version>[1.6.0-SNAPSHOT, 1.7.0-SNAPSHOT)</version> <scope>test</scope> </dependency> -->
+	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>local-deploy</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.gcube.tools</groupId>
+						<artifactId>maven-service-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>local-deploy</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<build>
+
+		<plugins>
+
+			<!-- builds Gar at install time -->
+			<plugin>
+				<groupId>org.gcube.tools</groupId>
+				<artifactId>maven-service-plugin</artifactId>
+				<configuration>
+					<fullGar>true</fullGar>
+					<attachFullGar>true</attachFullGar>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-gar</id>
+						<goals>
+							<goal>gar-gen</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>

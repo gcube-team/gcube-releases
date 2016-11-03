@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="PublisherService"
+	targetNamespace="http://gcube-system.org/namespaces/application/aquamaps/publisherservice"
+	xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:tns="http://gcube-system.org/namespaces/application/aquamaps/publisherservice"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+	xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+	xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+	xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+	xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+	xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:gistypes="http://gcube-system.org/namespaces/application/aquamaps/gistypes"
+	xmlns:aqtypes="http://gcube-system.org/namespaces/application/aquamaps/types">
+
+	<import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+
+	<types>
+		<xsd:schema
+			targetNamespace="http://gcube-system.org/namespaces/application/aquamaps/publisherservice"
+			xmlns:tns="http://gcube-system.org/namespaces/application/aquamaps/publisherservice">
+			<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types"
+				schemaLocation="../gcube/common/core/types/GCUBETypes.xsd" />
+			<xsd:import
+				namespace="http://gcube-system.org/namespaces/application/aquamaps/types"
+				schemaLocation="AquaMapsTypes.xsd" />
+			<xsd:import namespace="http://gcube-system.org/namespaces/application/aquamaps/gistypes"
+				schemaLocation="GISTypes.xsd" />
+				
+				
+				<xsd:simpleType name="bulkStatus">
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="PENDING" />
+					<xsd:enumeration value="ONGOING" />
+					<xsd:enumeration value="COMPLETED" />
+					<xsd:enumeration value="ERROR" />
+				</xsd:restriction>
+			</xsd:simpleType>
+				
+	 			<xsd:complexType name="retrieveMapsByCoverageRequestType">
+					<xsd:sequence>
+						<xsd:element name="speciesList" type="coretypes:stringArray"/>
+						<xsd:element name="resourceList" type="aqtypes:resourceArray"/>
+						<xsd:element name="includeCustomMaps" type="xsd:boolean"/>
+						<xsd:element name="includeGisLayers" type="xsd:boolean"/>						
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:complexType name="prepareBulkUpdatesFileRequestType">
+					<xsd:sequence>						
+						<xsd:element name="resourceList" type="aqtypes:resourceArray"/>
+						<xsd:element name="includeCustomMaps" type="xsd:boolean"/>
+						<xsd:element name="includeGisLayers" type="xsd:boolean"/>
+						<xsd:element name="fromTime" type="xsd:long" />						
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:complexType name="getJSONSubmittedByFiltersRequestType">
+					<xsd:sequence>
+						<xsd:element name="filters" type="aqtypes:fieldArray"/>
+						<xsd:element name="settings" type="aqtypes:pagedRequestSettings"/>
+					</xsd:sequence>
+				</xsd:complexType>
+	
+				<xsd:complexType name="getBulkUpdatesStatusResponseType">
+					<xsd:sequence>
+						<xsd:element name="rsLocator" type="xsd:string"/>
+						<xsd:element name="status" type="tns:bulkStatus"/>
+					</xsd:sequence>
+				</xsd:complexType>
+	
+	<!-- Message elements --> 
+	
+	<xsd:element name="retrieveMapsByCoverageRequest" type="tns:retrieveMapsByCoverageRequestType" />
+	<xsd:element name="retrieveMapsByCoverageResponse" type="aqtypes:mapArray" />
+	<xsd:element name="prepareBulkUpdatesFileRequest" type="tns:prepareBulkUpdatesFileRequestType" />
+	<xsd:element name="prepareBulkUpdatesFileResponse" type="xsd:string" />
+	
+	<xsd:element name="getBulkUpdatesStatusRequest" type="xsd:string" />
+	<xsd:element name="getBulkUpdatesStatusResponse" type="tns:getBulkUpdatesStatusResponseType" />
+	
+	<xsd:element name="getFileSetByIdRequest" type="xsd:string" />
+	<xsd:element name="getFileSetByIdResponse" type="aqtypes:fileArray" />
+	<xsd:element name="getLayerByIdRequest" type="xsd:string" />
+	<xsd:element name="getLayerByIdResponse" type="gistypes:layerInfoType" />
+	<xsd:element name="getJSONSubmittedByFiltersRequest" type="tns:getJSONSubmittedByFiltersRequestType" />
+	<xsd:element name="getJSONSubmittedByFiltersResponse" type="xsd:string" />
+
+
+		</xsd:schema>
+		
+	</types>
+
+
+	<!-- Messages --> 
+	
+	
+	<message name="RetrieveMapsByCoverageRequest">
+		<part name="request" element="tns:retrieveMapsByCoverageRequest" />
+	</message>
+	<message name="RetrieveMapsByCoverageResponse">
+		<part name="response" element="tns:retrieveMapsByCoverageResponse" />
+	</message>
+
+	<message name="PrepareBulkUpdatesFileRequest">
+		<part name="request" element="tns:prepareBulkUpdatesFileRequest" />
+	</message>
+	<message name="PrepareBulkUpdatesFileResponse">
+		<part name="response" element="tns:prepareBulkUpdatesFileResponse" />
+	</message>
+
+
+	<message name="GetBulkUpdatesStatusRequest">
+		<part name="request" element="tns:getBulkUpdatesStatusRequest" />
+	</message>
+	<message name="GetBulkUpdatesStatusResponse">
+		<part name="response" element="tns:getBulkUpdatesStatusResponse" />
+	</message>
+
+	<message name="GetFileSetByIdRequest">
+		<part name="request" element="tns:getFileSetByIdRequest" />
+	</message>
+	<message name="GetFileSetByIdResponse">
+		<part name="response" element="tns:getFileSetByIdResponse" />
+	</message>
+	
+	<message name="GetLayerByIdRequest">
+		<part name="request" element="tns:getLayerByIdRequest" />
+	</message>
+	<message name="GetLayerByIdResponse">
+		<part name="response" element="tns:getLayerByIdResponse" />
+	</message>
+	
+	<message name="GetJSONSubmittedByFiltersRequest">
+		<part name="request" element="tns:getJSONSubmittedByFiltersRequest" />
+	</message>
+	<message name="GetJSONSubmittedByFiltersResponse">
+		<part name="response" element="tns:getJSONSubmittedByFiltersResponse" />
+	</message>
+
+	<portType name="PublisherServicePortType">
+		<wsdl:operation name="RetrieveMapsByCoverage">
+			<wsdl:input message="tns:RetrieveMapsByCoverageRequest" />
+			<wsdl:output message="tns:RetrieveMapsByCoverageResponse" />
+			<wsdl:fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="PrepareBulkUpdatesFile">
+			<wsdl:input message="tns:PrepareBulkUpdatesFileRequest" />
+			<wsdl:output message="tns:PrepareBulkUpdatesFileResponse" />
+			<wsdl:fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="GetBulkUpdatesStatus">
+			<wsdl:input message="tns:GetBulkUpdatesStatusRequest" />
+			<wsdl:output message="tns:GetBulkUpdatesStatusResponse" />
+			<wsdl:fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="GetFileSetById">
+			<wsdl:input message="tns:GetFileSetByIdRequest" />
+			<wsdl:output message="tns:GetFileSetByIdResponse" />
+			<wsdl:fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="GetLayerById">
+			<wsdl:input message="tns:GetLayerByIdRequest" />
+			<wsdl:output message="tns:GetLayerByIdResponse" />
+			<wsdl:fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</wsdl:operation>
+		<wsdl:operation name="GetJSONSubmittedByFilters">
+			<wsdl:input message="tns:GetJSONSubmittedByFiltersRequest" />
+			<wsdl:output message="tns:GetJSONSubmittedByFiltersResponse" />
+			<wsdl:fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</wsdl:operation>
+		
+	</portType>
+</definitions>

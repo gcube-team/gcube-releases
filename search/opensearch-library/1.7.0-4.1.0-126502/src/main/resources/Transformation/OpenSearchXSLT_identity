@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>026709b0-ebfb-11df-9233-9cce477a9952</ID>
+  <Type>GenericResource</Type>
+  <Scopes>
+    <Scope>/d4science.research-infrastructures.eu/INSPIRE/HEPGateway</Scope>
+  </Scopes>
+  <Profile>
+    <SecondaryType>OpenSearchXSLT</SecondaryType>
+    <Name>OpenSearchXSLT_identity</Name>
+    <Description>Identity transformation</Description>
+    <Body>
+      <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        <xsl:output encoding="UTF-8" indent="yes" method="xml"
+          omit-xml-declaration="yes" version="1.0"/>
+        <xsl:template match="@*|node()">
+          <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+          </xsl:copy>
+        </xsl:template>
+      </xsl:stylesheet>
+    </Body>
+  </Profile>
+</Resource>

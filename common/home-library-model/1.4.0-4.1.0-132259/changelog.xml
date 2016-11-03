@@ -1,0 +1,18 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.home-library-model.1-0-0"
+		date="2015-07-01">
+		<Change>First commit</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-model.1-1-0"
+		date="2015-10-12">
+		<Change>Fixed bug in smart folders</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-model.1-2-0"
+		date="2016-04-20">
+		<Change>Removed MessageDelegate</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-model.1-3-0"
+		date="2016-06-23">
+		<Change>Added setSystemFolder and References</Change>
+	</Changeset>
+</ReleaseNotes>

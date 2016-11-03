@@ -1,0 +1,90 @@
+.portlet-login .accordion .accordion-heading > a, #signinmodal .accordion .accordion-heading > a{
+	display: block;
+    text-align: center;
+    text-decoration: none;
+    border-top: 2px rgb(2, 113, 190) solid;
+    margin-top: 5px;
+    color: rgb(2, 113, 190);
+}
+
+.portlet-login .accordion div.accordion-inner, #signinmodal .accordion div.accordion-inner {
+	border-top: none;
+}
+
+.portlet-login div.navigation, #signinmodal div.navigation {
+	background: white;
+	border-top: none;
+}
+
+.portlet-login input.login-identifier, .portlet-login input.login-password,
+#signinmodal input.login-identifier, #signinmodal input.login-password {
+	border-radius: 5px;
+	height: 25px;
+}
+
+.portlet-login button.login-sign-in-button, #signinmodal button.login-sign-in-button {
+    display : block;
+    background : rgb(2, 113, 190);
+    border-radius : 5px;
+    padding : 6px;
+    border : none;
+    box-shadow : 1px 1px 1px 1px rgba(0,0,0,0.5);
+    margin : auto;
+}
+
+.portlet-login .portlet-borderless-container .login-sign-in {
+	color: rgb(2, 113, 190);
+    margin: 0px 0px 15px 10px;
+}
+
+.portlet-login  .portlet-content-container .login-sign-in {
+    display:none;
+}
+
+.portlet-login .login-remember-me, #signinmodal .login-remember-me {
+	margin-top : 10px;
+	margin-left: 11px;
+}
+
+.portlet-login .login-remember-me > .control-group, #signinmodal .login-remember-me > .control-group {
+	margin-bottom: 10px;
+}
+
+.portlet-login .navigation li[role=presentation] > a,
+#signinmodal .navigation li[role=presentation] > a,
+.portlet-login .login-remember-me label,
+#signinmodal .login-remember-me label  {
+	color: #9E9696;
+}
+
+.portlet-login form, #signinmodal form{
+	margin : 0;
+}
+
+.portlet-login .taglib-icon-list li, #signinmodal .taglib-icon-list li{
+	float : none;
+}
+
+.portlet-login .navigation, #signinmodal .navigation{
+	padding : 0px 10px 10px 10px;
+}
+
+.portlet-login .custom-form-login-wrapper, #signinmodal .custom-form-login-wrapper{
+	text-align : center;
+}
+
+.portlet-login div.navigation > ul,
+#signinmodal div.navigation > ul{
+	text-align : center;	
+}
+
+.portlet-login .help-inline,
+#signinmodal .help-inline {
+	display : block;
+	padding-left : 0xp;
+}
+
+.portlet-login .social,
+#signinmodal .social {
+	margin-bottom: 5px;
+}

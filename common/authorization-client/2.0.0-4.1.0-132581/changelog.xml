@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="authorization-client-1.0.0" date="2015-05-18">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="authorization-client-2.0.0" date="2016-09-30">
+		<Change>moving to auth2</Change>
+	</Changeset>
+</ReleaseNotes>

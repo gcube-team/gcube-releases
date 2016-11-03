@@ -1,0 +1,101 @@
+percentage, isofficial, language, countrycode
+52.4,true,Pashto,AFG
+95.6,true,Dutch,NLD
+86.2,true,Papiamento,ANT
+97.9,true,Albaniana,ALB
+86,true,Arabic,DZA
+90.6,true,Samoan,ASM
+44.6,false,Spanish,AND
+37.2,false,Ovimbundu,AGO
+0,true,English,AIA
+95.7,false,Creole English,ATG
+42,true,Arabic,ARE
+96.8,true,Spanish,ARG
+93.4,true,Armenian,ARM
+76.7,false,Papiamento,ABW
+81.2,true,English,AUS
+89,true,Azerbaijani,AZE
+89.7,false,Creole English,BHS
+67.7,true,Arabic,BHR
+97.7,true,Bengali,BGD
+95.1,false,Bajan,BRB
+59.2,true,Dutch,BEL
+50.8,true,English,BLZ
+39.8,false,Fon,BEN
+100,true,English,BMU
+50,true,Dzongkha,BTN
+87.7,true,Spanish,BOL
+99.2,true,Serbo-Croatian,BIH
+75.5,false,Tswana,BWA
+97.5,true,Portuguese,BRA
+97.3,true,English,GBR
+0,true,English,VGB
+45.5,true,Malay,BRN
+83.2,true,Bulgariana,BGR
+50.2,false,Mossi,BFA
+98.1,true,Kirundi,BDI
+0,true,English,CYM
+89.7,true,Spanish,CHL
+0,true,Maori,COK
+97.5,true,Spanish,CRI
+43.9,false,Somali,DJI
+100,false,Creole English,DMA
+98,true,Spanish,DOM
+93,true,Spanish,ECU
+98.8,true,Arabic,EGY
+100,true,Spanish,SLV
+49.1,true,Tigrinja,ERI
+74.4,true,Spanish,ESP
+22.7,true,Zulu,ZAF
+31,false,Oromo,ETH
+0,true,English,FLK
+50.8,true,Fijian,FJI
+29.3,true,Pilipino,PHL
+100,true,Faroese,FRO
+35.8,false,Fang,GAB
+34.1,false,Malinke,GMB
+71.7,true,Georgiana,GEO
+52.4,false,Akan,GHA
+88.9,true,English,GIB
+100,false,Creole English,GRD
+87.5,true,Greenlandic,GRL
+95,false,Creole French,GLP
+37.5,true,English,GUM
+64.7,true,Spanish,GTM
+38.6,false,Ful,GIN
+36.4,false,Crioulo,GNB
+96.4,false,Creole English,GUY
+100,false,Haiti Creole,HTI
+97.2,true,Spanish,HND
+88.7,false,Canton Chinese,HKG
+0,true,Norwegian,SJM
+39.4,false,Javanese,IDN
+39.9,true,Hindi,IND
+77.2,true,Arabic,IRQ
+45.7,true,Persian,IRN
+98.4,true,English,IRL
+95.7,true,Icelandic,ISL
+63.1,true,Hebrew,ISR
+94.1,true,Italian,ITA
+0,false,Sunda,TMP
+92,true,German,AUT
+94.2,false,Creole English,JAM
+99.1,true,Japanese,JPN
+99.6,true,Arabic,YEM
+97.9,true,Arabic,JOR
+0,false,Chinese,CXR
+75.2,true,Serbo-Croatian,YUG
+88.6,true,Khmer,KHM
+19.7,false,Fang,CMR
+60.4,true,English,CAN
+100,false,Crioulo,CPV
+46,true,Kazakh,KAZ
+20.9,false,Kikuyu,KEN
+23.8,false,Gbaya,CAF
+92,true,Chinese,CHN
+59.7,true,Kirgiz,KGZ
+98.9,true,Kiribati,KIR
+99,true,Spanish,COL
+75,true,Comorian,COM
+51.5,false,Kongo,COG
+18,false,Luba,COD

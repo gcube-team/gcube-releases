@@ -1,0 +1,41 @@
+The gCube System - ${name}
+------------------------------------------------------------
+
+This work has been supported by the following European projects: iMarine (FP7-INFRASTRUCTURES-2011-2)
+
+Authors
+-------
+
+Luigi Fortunati (luigi.fortunati@isti.cnr.it), CNR Pisa, 
+Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo".
+  
+Version and Release Date
+------------------------
+
+v. 3.0.0 (20-09-2013) 
+
+Description
+-----------
+
+${description}
+
+  
+Download information
+--------------------
+
+
+
+Documentation 
+-------------
+
+wiki: http://gcube.wiki.gcube-system.org/gcube/index.php/GCube_SDMX_Statistical_Data_Dissemination_System
+
+
+
+Licensing
+---------
+
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.
+
+
+

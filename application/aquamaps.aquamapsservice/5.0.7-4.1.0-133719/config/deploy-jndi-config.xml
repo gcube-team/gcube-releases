@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+
+	<service name="gcube/application/aquamaps/aquamapsservice">
+	
+		<environment 
+		name="configDir" 
+	 	value="@config.dir@" 
+	 	type="java.lang.String"
+	 	override="false" />
+		 
+		<environment 
+		name="securityManagerClass" 
+	 	value="org.gcube.common.core.security.GCUBEServiceSecurityManagerImpl" 
+	 	type="java.lang.String"
+	 	override="false" />
+	 	
+	 	
+	 	<environment
+			name="httpServerBasePath" 
+			value="jetty/webapps" 
+			type="java.lang.String"
+			override="false" />
+		
+		<environment
+			name="httpServerPort" 
+			value="9003" 
+			type="java.lang.String"
+			override="false" />
+		
+	</service>
+	
+	
+	<service name="gcube/application/aquamaps/aquamapsservice/AquaMapsService">
+    	 	<environment 
+			name="frequentUserLimit" 
+	 		value="3" 
+	 		type="java.lang.Integer"
+	 		override="false" />
+	</service>
+	
+  	<service name="gcube/application/aquamaps/aquamapsservice/DataManagement">
+    	 	<environment 
+			name="frequentUserLimit" 
+	 		value="3" 
+	 		type="java.lang.Integer"
+	 		override="false" />
+	</service>
+	  
+	  <service name="gcube/application/aquamaps/aquamapsservice/PublisherService">
+    	 	<environment 
+			name="frequentUserLimit" 
+	 		value="3" 
+	 		type="java.lang.Integer"
+	 		override="false" />
+	</service>
+	  
+	  
+	  
+	  
+	  
+</jndiConfig>

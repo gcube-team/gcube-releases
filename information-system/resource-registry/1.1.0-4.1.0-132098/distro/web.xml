@@ -1,0 +1,9 @@
+<web-app>
+	<servlet>
+    	<servlet-name>org.gcube.informationsystem.resourceregistry.ResourceInitializer</servlet-name>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>org.gcube.informationsystem.resourceregistry.ResourceInitializer</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+</web-app>

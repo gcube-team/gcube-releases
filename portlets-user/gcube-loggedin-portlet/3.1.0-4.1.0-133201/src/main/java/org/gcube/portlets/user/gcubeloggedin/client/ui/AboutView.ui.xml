@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<b:Hero ui:field="mainPanel">
+		<b:Image ui:field="vreImage" />
+		<!-- The Caption is optional -->
+		<b:Caption>
+			<b:Heading size="3" ui:field="vreName">Thumbnail label</b:Heading>
+			<g:HTML ui:field="description">
+			</g:HTML>
+
+			<b:ControlGroup>
+				<b:Paragraph>
+					<b:Button type="LINK" visible="false" ui:field="seeMore">See more</b:Button>
+					<b:Button type="DEFAULT" visible="false" ui:field="editButton">Edit this text</b:Button>
+				</b:Paragraph>
+			</b:ControlGroup>
+		</b:Caption>
+	</b:Hero>
+</ui:UiBinder> 

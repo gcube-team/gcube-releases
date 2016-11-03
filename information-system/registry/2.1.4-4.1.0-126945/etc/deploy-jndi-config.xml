@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+
+	<service name="gcube/informationsystem/registry">
+
+		<environment name="configDir" value="@config.dir@" type="java.lang.String"
+			override="false" />
+		
+		<!--
+			<environment name="startScopes" value="" type="java.lang.String"
+			override="false" />
+		-->
+
+	</service>
+
+	<service name="gcube/informationsystem/registry/ResourceRegistration">
+
+		<environment name="name" value="ResourceRegistration" type="java.lang.String"
+			override="false" />
+	</service>
+	
+	<service name="gcube/informationsystem/registry/RegistryFactory">
+
+		<environment name="name" value="RegistryFactory" type="java.lang.String"
+			override="false" />
+
+		<environment name="RPDName" value="RegistryFactoryResourceProperties"
+			type="java.lang.String" override="false" />	
+
+		<resource name="home"
+			type="org.gcube.informationsystem.registry.impl.state.RegistryFactoryResourceHome">
+			<resourceParams>
+				<parameter>
+					<name>factory</name>
+					<value>org.globus.wsrf.jndi.BeanFactory</value>
+				</parameter>
+				<parameter>
+					<name>resourceClass</name>
+					<value>org.gcube.informationsystem.registry.impl.state.RegistryFactoryResource
+					</value>
+				</parameter>				
+
+			</resourceParams>
+
+		</resource>
+
+	</service>
+
+</jndiConfig>

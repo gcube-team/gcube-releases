@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="src/|build/|schema/|etc/|src/|lib/|pkgdata/|ServiceFiles/|design/|test/" kind="src" path=""/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/GCORELIBS"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/EXISTLIBS"/>
+	<classpathentry kind="lib" path="/Dependencies/ISCollector/org.gcube.informationsystem.collector.stubs.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GCF.1.1.0"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

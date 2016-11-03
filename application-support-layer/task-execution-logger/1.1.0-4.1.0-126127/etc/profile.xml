@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Library</Type>
+	<Profile>
+		<Description>Task Execution Logger</Description>
+		<Class>ApplicationSupportLayer</Class>
+		<Name>TaskExecutionLogger</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>Task Execution Logger</Description>
+				<Name>TaskExecutionLogger</Name>
+				<Version>1.0.0</Version>
+				<Files>
+					<File>TaskExecutionLogger.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

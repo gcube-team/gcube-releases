@@ -1,0 +1,8 @@
+/* OpenLayer Form fix */
+#wkt-geometry-text-area {
+	width: 400px !important;
+}
+
+#combo-geometry-type {
+	width: 406px !important;
+}

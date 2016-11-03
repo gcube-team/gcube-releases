@@ -1,0 +1,5 @@
+#ResultSetService before gcore. now this file is replaced by /etc/build.properties
+http\://gcube.org/namespaces/searchservice/ResultSetService=org.gcube.searchservice.resultsetservice.stubs
+http\://gcube.org/namespaces/searchservice/ResultSetService/bindings=org.gcube.searchservice.resultsetservice.stubs.bindings
+http\://gcube.org/namespaces/searchservice/ResultSetService/service=org.gcube.searchservice.resultsetservice.stubs.service
+

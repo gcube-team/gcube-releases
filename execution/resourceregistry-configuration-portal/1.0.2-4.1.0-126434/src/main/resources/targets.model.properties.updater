@@ -1,0 +1,45 @@
+repositoryProvider=org.gcube.execution.rr.bridge.GCubeRepositoryProvider
+repositoryProviderConfig=config.gcubebridge.properties
+
+bridgingPeriod = 10
+bridgingPeriodUnit = MINUTES
+
+shortBridgingPeriod = 2
+shortBridgingPeriodUnit = MINUTES 
+
+editableTargetsCount = 5
+editableTargets.0 = gr.uoa.di.madgik.rr.element.search.FieldDao
+editableTargets.1 = gr.uoa.di.madgik.rr.element.search.SearchableDao
+editableTargets.2 = gr.uoa.di.madgik.rr.element.search.PresentableDao
+editableTargets.3 = gr.uoa.di.madgik.rr.element.metadata.ElementMetadataDao
+editableTargets.4 = gr.uoa.di.madgik.rr.element.config.StaticConfigurationDao
+
+readonlyTargetsCount = 13
+readonlyTargets.0 = gr.uoa.di.madgik.rr.element.data.DataCollectionDao
+readonlyTargets.1 = gr.uoa.di.madgik.rr.element.infra.HostingNodeDao
+readonlyTargets.2 = gr.uoa.di.madgik.rr.element.functionality.FunctionalityDao
+readonlyTargets.3 = gr.uoa.di.madgik.rr.element.execution.ExecutionServerDao
+readonlyTargets.4 = gr.uoa.di.madgik.rr.element.execution.ExecutionServiceDao
+readonlyTargets.5 = gr.uoa.di.madgik.rr.element.execution.WorkflowServiceDao
+readonlyTargets.6 = gr.uoa.di.madgik.rr.element.search.index.FieldIndexContainerDao
+readonlyTargets.7 = gr.uoa.di.madgik.rr.element.search.index.FTIndexDao
+readonlyTargets.8 = gr.uoa.di.madgik.rr.element.search.index.OpenSearchDataSourceDao
+readonlyTargets.9 = gr.uoa.di.madgik.rr.element.search.index.SruConsumerDao
+readonlyTargets.10 = gr.uoa.di.madgik.rr.element.search.index.FTIndexServiceDao
+readonlyTargets.11 = gr.uoa.di.madgik.rr.element.search.index.OpenSearchDataSourceServiceDao
+readonlyTargets.12 = gr.uoa.di.madgik.rr.element.search.index.SruConsumerServiceDao
+
+updateTargetsCount = 4
+updateTargets.0 = gr.uoa.di.madgik.rr.element.search.index.FieldIndexContainerDao
+updateTargets.1 = gr.uoa.di.madgik.rr.element.search.index.FTIndexServiceDao
+updateTargets.2 = gr.uoa.di.madgik.rr.element.search.index.OpenSearchDataSourceDao
+updateTargets.3 = gr.uoa.di.madgik.rr.element.search.index.SruConsumerDao
+
+inmemoryTargetsCount = 7
+inmemoryTargets.0 = gr.uoa.di.madgik.rr.element.search.Field
+inmemoryTargets.1 = gr.uoa.di.madgik.rr.element.search.Searchable
+inmemoryTargets.2 = gr.uoa.di.madgik.rr.element.search.Presentable
+inmemoryTargets.3 = gr.uoa.di.madgik.rr.element.search.index.DataSource
+inmemoryTargets.4 = gr.uoa.di.madgik.rr.element.search.index.DataSourceService
+inmemoryTargets.5 = gr.uoa.di.madgik.rr.element.search.index.FieldIndexContainer
+inmemoryTargets.6 =  gr.uoa.di.madgik.rr.element.data.DataCollection

@@ -1,0 +1,4 @@
+for $RIs in collection("/db/Profiles/RunningInstance")//Document/Data/child::*[local-name()='Profile']/Resource
+where $RIs/ID eq '$1'
+return
+  $RIs/Profile/DeploymentData/Status/string()

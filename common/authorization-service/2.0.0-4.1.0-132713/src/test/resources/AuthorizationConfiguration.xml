@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Configuration>
+	<Rule path="/token/user" requiresToken="false">
+		<Entity type="IP" value="146.48.0.0" />
+	</Rule>
+	<Rule path="/apikey" requiresToken="true"/>
+	<Rule path="/policyManager" requiresToken="true"/>
+	<Rule path="/token/external" requiresToken="true"/>
+</Configuration>
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>workspaceUploaderService</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspaceuploader.server.WorkspaceUploaderServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>workspaceUploadServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspaceuploader.server.WorkspaceUploadServlet</servlet-class>
+	</servlet>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>workspaceUploadServletStream</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspaceuploader.server.WorkspaceUploadServletStream</servlet-class>
+	</servlet>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>workspaceUploaderWsUtil</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspaceuploader.server.WorkspaceUploaderWsUtil</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>workspaceUploaderService</servlet-name>
+		<url-pattern>/workspaceuploader/workspaceUploaderService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workspaceUploadServlet</servlet-name>
+		<url-pattern>/workspaceuploader/workspaceUploadServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workspaceUploadServletStream</servlet-name>
+		<url-pattern>/workspaceuploader/workspaceUploadServletStream</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workspaceUploaderWsUtil</servlet-name>
+		<url-pattern>/workspaceuploader/workspaceUploaderWsUtil</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>workspaceuploader.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

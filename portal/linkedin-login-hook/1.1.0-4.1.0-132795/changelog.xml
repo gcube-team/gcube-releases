@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.linkedin.1-0-0" date="2016-03-30">
+		<Change>First release of the linkedin authentication hook</Change>
+	</Changeset>
+	<Changeset component="gr.cite.linkedin.1-1-0" date="2016-09-25">
+		<Change>Updated to work with the multiple email addresses authentication mechanism</Change>
+	</Changeset>
+</ReleaseNotes>

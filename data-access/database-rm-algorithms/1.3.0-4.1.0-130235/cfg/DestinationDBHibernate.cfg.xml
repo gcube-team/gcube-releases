@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">org.postgresql.Driver</property>
+		<property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>			
+		<!-- <property name="connection.url">jdbc:postgresql://localhost/testdb</property> --> 
+		<!-- <property name="connection.url">jdbc:postgresql://146.48.87.169/testdb</property> -->
+		<property name="connection.url">jdbc:postgresql://obis2.i-marine.research-infrastructures.eu:5432/obis</property>
+		<property name="connection.username">gcube</property> -->
+		<property name="connection.password">d4science2</property>
+		<property name="connection.pool_size">1</property>
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+
+		<property name="c3p0.max_size">1</property> 
+		<property name="c3p0.max_statements">0</property> 
+		<property name="c3p0.min_size">1</property>
+		
+		<property name="c3p0.checkoutTimeout">1</property>
+		<property name="current_session_context_class">thread</property>
+
+	</session-factory>
+</hibernate-configuration>

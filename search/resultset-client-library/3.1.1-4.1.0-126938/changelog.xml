@@ -1,0 +1,7 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.search.resultset-client-library.3-1-1"
+		date="2010-07-16">
+		<Change>Fix WS service type check</Change>
+		<Change>Thread pool enhancement</Change>
+	</Changeset>
+</ReleaseNotes>

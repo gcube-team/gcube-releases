@@ -1,0 +1,40 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-transformation.data-transformation.3-0-3" date="2014-09-10">
+		<Change>Reset logs at the service startup</Change>
+		<Change>Push transformation is done always local</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation.3-0-2" date="2014-07-04">
+		<Change>DTS informs about timeout/exception</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation.3-0-1" date="2014-06-11">
+		<Change>logback in use</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation.3-0-0" date="2014-04-04">
+		<Change>Turned to RESTful service</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation.2-2-5" date="2014-02-07">
+		<Change>removed data handlers resource file</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation.2-2-4" date="2013-07-08">
+		<Change>remove unused sources, sinks and evaluators that depend on CML</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation.2-2-3" date="2013-01-17">
+		<Change>Profile</Change>
+		<Change>String scope</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation.2-2-2" date="2012-10-18">
+		<Change>Bug fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation.2-2-1" date="2012-09-07">
+		<Change>Mavenized</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation.2-2-0" date="2012-05-04">
+		<Change>Moved IOHandler from service to library</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation.2-1-0" date="2011-06-27">
+		<Change>Updated with handlers configurations for search updates</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation.1-0-0" date="2009-05-30">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

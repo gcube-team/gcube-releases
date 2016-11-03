@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.roles-management-portlet.2-0-0" date="2016-03-07">
+		<Change>First release of the re-implemented portlet</Change>
+	</Changeset>
+</ReleaseNotes>

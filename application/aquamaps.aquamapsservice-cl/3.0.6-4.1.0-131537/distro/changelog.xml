@@ -1,0 +1,12 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.application.aquamapsservice-cl.1-0-0" date="2011-10-10"> 
+		<Change>First release</Change> 
+	</Changeset>
+	<Changeset component="org.gcube.application.aquamapsservice-cl.3-5-0" date="2015-09-10"> 
+		<Change>Removed ResultSet dependency</Change> 
+	</Changeset>
+	<Changeset component="org.gcube.application.aquamapsservice-cl.3-0-6" date="2016-07-19"> 
+		<Change>Fixed #4775</Change>
+		<Change>Added bom</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,23 @@
+<Resource>
+    <ID/>
+    <Type>GenericResource</Type>   
+    <Profile>
+        <SecondaryType>ISFilters</SecondaryType>
+        <Name>ISFilters</Name>
+        <Description>Filtering rules applied on the IS at GCUBEResource registration time</Description>
+        <Body>
+            <Filters>
+                <Filter resourceType="GHN">
+                    <Target>GHNDescription/Name</Target>
+                    <Value>localhost</Value>
+                    <Operation>exclude_if_contains</Operation>
+                </Filter>
+                <Filter resourceType="RunningInstance">
+                    <Target>AccessPoint/RunningInstanceInterfaces/Endpoint</Target>
+                    <Value>localhost</Value>
+                    <Operation>exclude_if_contains</Operation>
+                </Filter>
+            </Filters>
+        </Body>
+    </Profile>
+</Resource>

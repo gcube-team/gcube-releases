@@ -1,0 +1,280 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+	
+	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/trunk/vo-management/SOA3/UserManagement/${project.artifactId}</connection>
+		<developerConnection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/trunk/vo-management/SOA3/UserManagement/${project.artifactId}</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/trunk/vo-management/SOA3/UserManagement/${project.artifactId}</url>
+	</scm>
+	
+	<properties>
+		<distroDirectory>distro</distroDirectory>
+		<description>Policy Management REST interfaces</description>
+		<warname>policyService</warname>
+	</properties>
+	
+	<groupId>org.gcube.dvos.soa3</groupId>
+	<artifactId>restful-policy-manager</artifactId>
+	<packaging>jar</packaging>
+	<version>0.1.2-4.1.0-126077</version>
+        
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		
+		<resources>
+				<resource>
+					<directory>src</directory>
+						<includes>
+							<include>log4j.xml</include>
+						</includes>
+					<targetPath>./</targetPath>
+				</resource>
+				<resource>
+					<directory>src/it/eng/rdlab/soa3/pm/connector/service/resources</directory>
+					<excludes>
+						<exclude>*.java</exclude>
+					</excludes>
+					<targetPath>it/eng/rdlab/soa3/pm/connector/service/resources</targetPath>
+				</resource>
+		</resources>
+		
+					  <plugins>
+	  
+	  	<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>profile.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+	  
+	  		<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+	  </plugins>
+		
+		
+		<pluginManagement>
+	
+			<plugins>
+  				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.4</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-ear-plugin</artifactId>
+					<version>2.3.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-ejb-plugin</artifactId>
+					<version>2.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>2.3</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-plugin-plugin</artifactId>
+					<version>2.5.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-rar-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.4.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>2.0.4</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.4.3</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.1-alpha-1</version>
+					<configuration>
+					<warName>${warname}</warName>
+					<webXml>WebContent/WEB-INF/web.xml</webXml>
+ 						<archive>
+							<manifest>
+								<addClasspath>true</addClasspath>
+								
+								<classpathPrefix>lib/</classpathPrefix>
+							</manifest>
+						</archive>
+						</configuration>
+				</plugin>						
+	 			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-j2ee-management_1.1_spec</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-jms_1.1_spec</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-core</artifactId>
+			<version>5.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.14</version>
+		</dependency>
+
+		<!-- Jersey dependencies -->
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>1.8</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-core</artifactId>
+			<version>1.8</version>
+		</dependency>
+		<!-- <dependency> <groupId>com.sun.grizzly</groupId> <artifactId>grizzly-servlet-webserver</artifactId> 
+			<version>1.9.18-i</version> </dependency> -->
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>jsr311-api</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<!-- Jersey client -->
+
+		<dependency>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>jersey-apache-client</artifactId>
+			<version>1.8</version>
+		</dependency>
+
+		<!-- JSON serialization support -->
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>1.8</version>
+		</dependency>
+		<!-- Jersey support for mime -->
+		<dependency>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>jersey-multipart</artifactId>
+			<version>1.8</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.lunatech.jax-doclets</groupId>
+			<artifactId>doclets</artifactId>
+			<version>0.9.0</version>
+		</dependency>
+		<!-- 3rd party jars -->
+		<dependency>
+		    <groupId>org.gcube.dvos.soa3</groupId>
+		    <artifactId>policy-management-api-interfaces</artifactId>
+		    <version>0.1.0-4.1.0-125546</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.gcube.dvos.soa3</groupId>
+		    <artifactId>policy-management-api-impl</artifactId>
+		    <version>0.1.1-4.1.0-125547</version>
+    		</dependency>
+
+
+	</dependencies>
+	
+
+
+</project>

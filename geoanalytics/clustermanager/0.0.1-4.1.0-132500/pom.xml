@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>gr.cite</groupId>
+	<artifactId>clustermanager</artifactId>
+	<version>0.0.1-4.1.0-132500</version>
+	<packaging>jar</packaging>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<gr.cite.geoanalytics.dataaccess-geoserverbridge-gsmanager.version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-geoserverbridge-gsmanager.version>
+		<gr.cite.geoanalytics.dataaccess-geoserverbridge.version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-geoserverbridge.version>
+		<org.apache.curator.curator-framework.version>2.10.0</org.apache.curator.curator-framework.version>
+		<org.apache.curator.curator-recipes.version>2.10.0</org.apache.curator.curator-recipes.version>
+		<org.junit.version>3.8.1</org.junit.version>
+		<log4j.version>1.2.17</log4j.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- zookeeper curator -->
+
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-framework</artifactId>
+			<version>${org.apache.curator.curator-framework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-recipes</artifactId>
+			<version>${org.apache.curator.curator-recipes.version}</version>
+		</dependency>
+
+		<!-- Testing -->
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${org.junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Logging -->
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<!-- GeoserverSpecific -->
+
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>dataaccess-geoserverbridgeprovider-gsmanager</artifactId>
+			<version>${gr.cite.geoanalytics.dataaccess-geoserverbridge-gsmanager.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>dataaccess-geoserverbridge</artifactId>
+			<version>${gr.cite.geoanalytics.dataaccess-geoserverbridge.version}</version>
+		</dependency>
+		
+		<!-- jackson -->
+		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.6.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.6.3</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

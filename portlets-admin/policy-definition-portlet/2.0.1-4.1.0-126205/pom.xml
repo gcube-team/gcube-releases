@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+	
+	<groupId>org.gcube.portlets.admin</groupId>
+	<artifactId>policy-management-portlet</artifactId>
+	<packaging>war</packaging>
+	<version>2.0.1-4.1.0-126205</version>
+	<name>Policy Definition</name>
+	<description>
+		gCube Policy Definition Portlet for policy management.
+	</description>
+	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/trunk/portlets/admin/${project.artifactId}</connection>
+		<developerConnection>scm:https://svn.d4science.research-infrastructures.eu/gcube/trunk/portlets/admin/${project.artifactId}</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/trunk/portlets/admin/${project.artifactId}</url>
+	</scm>
+	<properties>
+		<distroDirectory>distro</distroDirectory>
+	</properties>
+	
+	<repositories>
+		<repository>
+		   <id>vaadin-addons</id>
+		   <url>http://maven.vaadin.com/vaadin-addons</url>
+		</repository>
+	</repositories>
+
+	<dependencyManagement>
+	    <dependencies>
+			<dependency>
+	           <groupId>org.gcube.distribution</groupId>
+	           <artifactId>maven-portal-bom</artifactId>
+	           <version>3.1.0-4.1.0-132989</version>
+	           <type>pom</type>
+	           <scope>import</scope>		
+	      	</dependency>
+	    </dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin</artifactId>
+			<version>6.4.10</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.portal</groupId>
+			<artifactId>custom-portal-handler</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>ic-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.dvos.soa3</groupId>
+			<artifactId>policy-management-api-interfaces</artifactId>
+			<version>0.1.0-4.1.0-125546</version>
+		</dependency>	
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>2.3.4.Final</version>
+		</dependency>	
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jackson-provider</artifactId>
+			<version>1.1.GA</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>util-java</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+<dependency>
+	<groupId>com.liferay.portal</groupId>
+	<artifactId>portal-service</artifactId>
+
+</dependency>
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>aslcore</artifactId>
+		</dependency>
+		<dependency>
+		   <groupId>org.vaadin.addons.lazyquerycontainer</groupId>
+		   <artifactId>vaadin-lazyquerycontainer</artifactId>
+		   <version>1.2.11</version>
+		</dependency>
+	</dependencies>
+	
+		<build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>profile.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+	
+	
+</project>

@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="storagesystemlibrary-1.0.1-4.1.0-126256.1-0-1" date="2012-09-07">
+		<Change>Mavenized</Change>
+	</Changeset>
+</ReleaseNotes>

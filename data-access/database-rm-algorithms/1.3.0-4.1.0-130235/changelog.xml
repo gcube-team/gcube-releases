@@ -1,0 +1,71 @@
+<ReleaseNotes>
+
+	<Changeset
+		component="org.gcube.dataaccess.algorithms.database-rm-algorithms.1-3-0"
+		date="2014-12-05">
+		<Change>algorithm SubmitQuery modified in order to pass the string
+			pathfile to the submitQuery method of class DatabaseManagement in
+			order to generate a file and retrieve it from the statistical manager
+			with the map as output.
+		</Change>
+		<Change>Algorithms RandomSampleOnTable, SampleOnTable,
+			SmartSampleOnTable and SubmitQuery modified in order to manage the
+			file as output.
+		</Change>
+		<Change>total number rows returned as output for the result of the
+			submit Query operation: algorithm SubmitQuery modified
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.dataaccess.algorithms.database-rm-algorithms.1-2-0"
+		date="2014-10-27">
+		<Change>some algorithms modified to cope modifications applied in the
+			database-resource-manager component and regarding the management of
+			the same access
+			point for a resource and the database connection
+			shutdown.
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.dataaccess.algorithms.database-rm-algorithms.1-1-0"
+		date="2014-09-10">
+		<Change>SubmitQuery algorithm updated because input parameters
+			in the
+			SubmitQuery method of DatabaseManagement class have been updated
+		</Change>
+		<Change>timer added in the SubmitQuery algorithm that stops the query
+			execution after 30 minutes
+		</Change>
+		<Change>hibernate bug fixed and related to a join tables with same
+			columns names. Bug resolved using JDBC. GetConnection
+			method changed
+			in the SubmitQuery algorithm to create
+			the connection with JDBC
+		</Change>
+		<Change>method shutdown of algorithm SubmitQuery implemented in order
+			to allow a user to cancel a submit query operation
+		</Change>
+		<Change>bug fixed when two algorithms are submitted concurrently.Bug
+			related to map result's name. Bug fixed generating the name as
+			ResultsMap"+UUID.randomUUID()
+		</Change>
+		<Change>classes SubmitQuery, SampleOnTable, SmartSampleOnTable,
+			RandomSampleOnTable modified in order to not make available the
+			file
+			as result
+		</Change>
+		<Change>file DestinationDBHibernate modified to insert the property on
+			the timeout
+		</Change>
+		<Change>bug fixed on table names that are keywords.Method
+			GetTableDetails corrected to consider the name as schema.table for
+			postgres and database.table for mysql
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.dataaccess.algorithms.database-rm-algorithms.1-0-0"
+		date="2014-06-09">
+		<Change>first release</Change>
+	</Changeset>
+
+</ReleaseNotes>

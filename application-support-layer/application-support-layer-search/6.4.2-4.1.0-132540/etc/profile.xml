@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID/>
+	<Type>Library</Type>
+	<Profile>
+		<Description>ASLSearch</Description>
+		<Class>ApplicationSupportLayer</Class>
+		<Name>ASLSearch</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>ASLSearch</Description>
+				<Name>ASLSearch</Name>
+				<Version>3.1.5</Version>
+				<Dependencies>
+				<Dependency>
+						<Service>
+							<Class>ApplicationSupportLayer</Class>
+							<Name>ASLCore</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ASLCore</Package>
+						<Version>[3.0.0,4.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+				<Dependency>
+						<Service>
+							<Class>ApplicationSupportLayer</Class>
+							<Name>ASLContent</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ASLContent</Package>
+						<Version>[4.0.0,5.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ApplicationSupportLayer</Class>
+							<Name>ASLUP</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ASLUP</Package>
+						<Version>[3.0.0,4.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>					
+					<Dependency>
+						<Service>
+							<Class>ExternalSoftware</Class>
+							<Name>ehcache</Name>
+							<Version>1.05.00</Version>
+						</Service>
+						<Package>ehcache</Package>
+						<Version>1.05.00</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>InformationSystem</Class>
+							<Name>ISCache</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ISCache</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>Search</Class>
+							<Name>SearchSystemService</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>SearchSystemServiceStubs</Package>
+						<Version>[2.0.0,3.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>Execution</Class>
+							<Name>ResourceRegistry</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ResourceRegistry</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>Execution</Class>
+							<Name>ResourceRegistry</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>RRModel</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>G_CQLParser</Class>
+							<Name>G_CQLParser</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>G_CQLParser</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ApplicationSupportLayer</Class>
+							<Name>AccessLogger</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>AccessLogger</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+				</Dependencies>
+				<Files>
+					<File>ApplicationSupportLibrarySearch.jar</File>
+				</Files>
+			</Software>
+			
+			<Software deployable="true">
+				<Description>ASL Search Test Suite</Description>
+				<Name>ASLSearch-test-suite</Name>
+				<Version>1.0.0</Version>
+				<Files>
+					<File>readme.txt</File>
+					<File>AvailableCollections.java</File>
+					<File>GenericResources.java</File>
+					<File>Search.java</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

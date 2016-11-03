@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<properties>
+	<session-config>
+		<!-- session timout in minutes -->
+		<session-timeout>30</session-timeout>
+	</session-config>
+</properties>

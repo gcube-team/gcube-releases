@@ -1,0 +1,175 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>org.gcube.applicationsupportlayer</groupId>
+	<artifactId>asl-http-information-retrieval</artifactId>
+	<version>1.9.2-4.1.0-132665</version>
+	<packaging>war</packaging>
+
+	<name>aslHttpInformationRetrieval</name>
+	<description></description>
+
+	<scm>
+		<connection>scm:svn:https://svn.d4science-ii.research-infrastructures.eu/gcube/trunk/application-support-layer/aslHttpInformationRetrieval/1.0.0/${project.artifactId}</connection>
+		<developerConnection>scm:svn:https://svn.d4science-ii.research-infrastructures.eu/gcube/trunk/application-support-layer/aslHttpInformationRetrieval/1.0.0/${project.artifactId}</developerConnection>
+		<url>https://svn.d4science-ii.research-infrastructures.eu/gcube/trunk/application-support-layer/aslHttpInformationRetrieval/1.0.0/${project.artifactId}</url>
+	</scm>
+
+	<properties>
+		<distroDirectory>distro</distroDirectory>
+	</properties>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-portal-bom</artifactId>
+				<version>3.1.0-4.1.0-132989</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>aslcore</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>aslsearch</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>servlet-api</artifactId>
+		    <version>2.3</version>
+		    <scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+ 			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+		
+		<dependency> <!-- this is for overriding protal libs which clash with this -->
+			<groupId>commons-beanutils</groupId>
+  			<artifactId>commons-beanutils</artifactId>
+			<version>1.8.0</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency> <!-- this is for overriding protal libs which clash with this -->
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>2.0</version>
+			<scope>compile</scope>			
+		</dependency>
+		<dependency>
+		  <groupId>org.gcube.search</groupId>
+		  <artifactId>search-client-library</artifactId>
+		  <version>2.3.0-4.1.0-126193</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>asl_http_access_management</artifactId>
+			<version>1.4.0-4.1.0-129842</version>
+		</dependency>
+		
+	</dependencies>
+
+	<build>
+		<finalName>aslHttpInformationRetrieval</finalName>
+		<plugins>
+		
+			<plugin>
+		        <groupId>org.apache.tomcat.maven</groupId>
+		        <artifactId>tomcat7-maven-plugin</artifactId>
+		        <version>2.0</version>
+		        <configuration>
+		          <path>/${project.build.finalName}</path>
+		        </configuration>
+		    </plugin>
+		    
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<failOnMissingWebXml>true</failOnMissingWebXml>
+					<webXml>WebContent/WEB-INF/web.xml</webXml>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>profile.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+					  <finalName>${project.build.finalName}</finalName>
+					  <appendAssemblyId>false</appendAssemblyId>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+
+</project>

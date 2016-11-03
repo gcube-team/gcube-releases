@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+
+	<service name="gcube/vremanagement/ResourceManager/service">
+		<environment 
+			name="configDir" 
+		 	value="@config.dir@" 
+		 	type="java.lang.String"
+		 	override="false" />
+		 
+		 <environment 
+			name="resourceBrokerClass" 
+		 	value="org.gcube.vremanagement.resourcemanager.impl.brokerage.InternalBroker" 
+		 	type="java.lang.String"
+		 	override="false" />
+		 <!--   
+		 <environment 
+            name="startScopes" 
+            value="" 
+            type="java.lang.String"
+            override="false" />  -->
+		  					 	 
+	 </service>
+	 
+	<service name="gcube/vremanagement/ResourceManager">
+	
+		<environment 
+			name="name" 
+		 	value="ResourceManager" 
+		 	type="java.lang.String"
+		 	override="false" />
+		 			
+			
+		<resource name="home" type="org.gcube.vremanagement.resourcemanager.impl.state.ResourceManagerHome">				
+					<resourceParams>
+						<parameter>
+							<name>factory</name>
+							<value>org.globus.wsrf.jndi.BeanFactory</value>
+						</parameter>
+						<parameter>
+							<name>resourceClass</name>
+							<value>org.gcube.vremanagement.resourcemanager.impl.state.InstanceState</value>
+						</parameter>																		
+					</resourceParams>
+					
+			</resource>	
+	
+	</service>	
+	
+</jndiConfig>

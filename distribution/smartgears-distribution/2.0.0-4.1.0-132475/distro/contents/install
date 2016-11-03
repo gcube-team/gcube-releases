@@ -1,0 +1,270 @@
+#!/bin/bash
+
+#set distro to script's parent directory
+distro=$(cd ${0%/*} && echo $PWD/${0##*/})
+distro=$(dirname $distro)
+
+echo "distro:$distro"
+
+distrolibs=$distro/libs
+distroapps=$distro/apps
+distroscripts=$distro/scripts
+liblist=smartgears.list
+applist=smartgears-app.list
+
+function showhelp {
+  			   echo -e "\nusage:  install [-d <distro directory>] -s tomcat|<lib directory> -a [app directory] [-g gHN directory] [-x|-h] \n" 
+			   echo    "  <distro directory> = the directory with the distribution of SmartGears ${project.version}."
+			   echo    "                       By default, this is the parent directory of this script."
+			   echo    "  <lib directory>    = the directory with libraries shared by all applications in the target container."
+	    	   echo    "  <app directory>    = the directory with all the applications in the target container."
+			   echo    "  <gHN directory>    = the directory with logs and files related to the gCube Hosting Node."
+			   echo    "                       By default, this is value of the GHN_HOME env var."
+			   echo    "  tomcat             = Sets <lib directory> and <app directory> for a target Tomcat container."
+			   echo    "  x                  = dry run."
+		       echo -e "  h                  = shows this help.\n"
+}
+
+while getopts ":d:s:g:a:xh" opt; do
+  case $opt in
+	d) distro=$OPTARG;;
+    s) shared=$OPTARG;;
+    g) ghnhome=$OPTARG;;
+	a) apps=$OPTARG;;
+    x) dryrun="true";;
+    h) showhelp
+exit 0 ;;
+	:)  echo -e "\nERROR:option -$OPTARG requires an argument." >&2 ; 
+				showhelp; 
+				echo -e "\naborting.\n"
+				exit 1;;
+	\?) echo -e "\nERROR:invalid option: -$OPTARG"; 
+			showhelp; 
+			echo -e "\naborting.\n" 
+			exit 1 >&2 ;;
+  esac
+done
+
+if [ -z "$ghnhome" ]; then 
+	if [ -z "$GHN_HOME" ]; then 
+		echo -e "\nERROR:please specify the gHN directory (-g) or define the GHN_HOME env var." >&2
+		showhelp
+		echo -e "\naborting.\n"
+		exit 1
+	else
+		ghnhome=$GHN_HOME
+	fi
+fi
+if [ ! -d "$ghnhome" ]; then
+	if [ -z "$dryrun" ]; then 
+  		mkdir $ghnhome
+	fi
+fi
+
+ 
+#tomcat target
+if [ "$shared" = "tomcat" ]; then 
+	if [ -z "$CATALINA_HOME" ]; then
+        if [ -z "$WEB_CONTAINER_HOME" ] ; then
+		    echo -e "\nERROR: both CATALINA_HOME and WEB_CONTAINER_HOME are undefined." >&2
+		    showhelp
+		    echo -e "\naborting.\n"
+		    exit 1
+        else
+	        CATALINA_HOME=$WEB_CONTAINER_HOME
+	    fi
+    fi
+	shared=$CATALINA_HOME/lib
+	apps=$CATALINA_HOME/webapps
+fi
+
+#shared is set
+if [ -z "$shared" ]; then 
+	echo -e "\nERROR: shared directory is undefined (-s)." >&2
+	showhelp
+	echo -e "\naborting.\n"
+	exit 1
+fi
+
+#shared exists and is a directory
+if [ ! -d "$shared" ]; then
+	echo -e "\nERROR: shared folder does not exist or is not a directory, aborting." >&2
+	exit 1;
+fi
+
+#shared exists and is a directory
+if [ ! -d "$apps" ]; then
+	echo -e "\nERROR: apps folder does not exist or is not a directory, aborting." >&2
+	exit 1;
+fi
+
+#distrolibs exists and is a directory
+if [ ! -d "$distrolibs" ]; then
+	echo -e "\nERROR: distro libs does not exist or is not a directory, aborting."  
+	exit 1;
+fi
+
+#distroapps exists and is a directory
+if [ ! -d "$distroapps" ]; then
+	echo -e "\nERROR: distro apps does not exist or is not a directory, aborting."  
+	exit 1;
+fi
+
+echo -e "\nInstalling SmartGears ${project.version}\n"
+echo -e " target gHN directory    = $(cd $(dirname $ghnhome); pwd)/$(basename $ghnhome)"
+echo -e " target shared directory = $(cd $(dirname $shared); pwd)/$(basename $shared)"
+echo -e " target app directory    = $(cd $(dirname $apps); pwd)/$(basename $apps)"
+
+shopt -s nullglob
+
+#uninstall libraries
+if [ -f $shared/$liblist ]; then 
+	echo -e "\nuninstalling existing libraries \c"
+	while read line; do
+		if [ -z "$dryrun" ]; then 
+	  		rm $shared/$line 
+		fi
+	 echo -n "."
+	 sleep .01
+
+     done < $shared/$liblist  	
+	 if [ -z "$dryrun" ]; then 
+	  		rm $shared/$liblist
+	 fi	 
+	
+fi
+
+#uninstall apps
+if [ -f $shared/$applist ]; then 
+	echo -e "\nuninstalling existing apps \c"
+	while read line; do
+		if [ -z "$dryrun" ]; then 
+	  		 rm  $apps/$line
+             folder=${line:0:-4}
+             if [ ! -z "$folder" ]; then 
+             	rm -rf $apps/$folder
+             fi
+		fi
+	 echo -n "."
+	 sleep .01
+
+     done < $shared/$applist  	
+	 if [ -z "$dryrun" ]; then 
+	  		rm $shared/$applist
+	 fi	 
+	
+fi
+
+#install libraries
+echo -e "\ninstalling components            \c"
+for f in $distrolibs/*.*;
+	do
+	  if [ -z "$dryrun" ]; then 
+			cp $f $shared/ 	
+			basename $f >> $shared/$liblist
+		fi
+	  echo -n "."
+      sleep .01
+     done
+	
+	
+#install apps
+echo -e "\ninstalling applications          \c"
+for f in $distroapps/*;
+	do
+	  if [ -z "$dryrun" ]; then 
+	  		cp $f $apps/
+	  		basename $f >> $shared/$applist
+		fi
+	  echo -n "."
+    sleep .01
+	done
+	
+#install scripts
+echo -e "\ninstalling scripts               \c"
+if [ ! -d "$ghnhome/scripts" ]; then
+	if [ -z "$dryrun" ]; then 
+	  	mkdir $ghnhome/scripts
+	fi
+fi
+
+for f in $distroscripts/*;
+	do
+	  if [ -z "$dryrun" ]; then 
+	  		cp $f $ghnhome/scripts/
+		fi
+	echo -n "."
+    sleep .01
+	done
+
+
+
+
+
+
+#install config
+function escape_slashes {
+    sed 's/\//\\\//g' 
+}
+
+function change_line {
+    local OLD_LINE_PATTERN=$1; shift
+    local NEW_LINE=$1; shift
+    local FILE=$1
+
+    local NEW=$(echo "${NEW_LINE}" | escape_slashes)
+    sed -i '/'"${OLD_LINE_PATTERN}"'/s/.*/'"${NEW}"'/' "${FILE}"
+}
+
+
+function replace_property {
+	local PROPERTY=$1
+	#local OLD_LINE=$(sed -n "/${PROPERTY}/p" $ghnhome/container.xml)
+	local NEW_LINE=$(sed -n "/${PROPERTY}/p" $distro/container.xml)
+	#echo "Replacing property ${PROPERTY}:"
+	#echo $OLD_LINE
+	#echo $NEW_LINE
+	change_line "${PROPERTY}" "${NEW_LINE}" $ghnhome/container.xml
+	#echo "done."
+}
+
+echo -e "\ninstalling configuration         \c"
+if [ ! -s "$ghnhome/container.xml" ]; then
+	if [ -z "$dryrun" ]; then 
+		cp $distro/container.xml $ghnhome/
+	fi
+	echo -n "."
+    sleep .01
+else
+	if [ -z "$dryrun" ]; then 
+		#echo "Creating a backup copy of $ghnhome/container.xml"
+		cp $ghnhome/container.xml $ghnhome/container.xml.bck
+		
+		## Please note the ' at the end of SmartGearsDistribution property
+		## the ' is needed to exactly math the property otherwise also
+		## SmartGearsDistributionBundle is matched.
+		for property in "SmartGearsDistribution'" "SmartGearsDistributionBundle'"
+		do
+			replace_property $property
+		done
+	fi
+	echo -n "."
+    sleep .01
+fi
+if [ -z "$dryrun" ]; then 
+	 cat $distro/logback.xml | sed "s|\${LOGFILE}|$ghnhome|" > $shared/logback.xml
+	 echo -n "."
+    sleep .01
+fi
+
+#creating the symlink to shared and apps folder
+
+if [ -z "$dryrun" ]; then
+	ln -s $shared $ghnhome/lib
+fi
+
+if [ -z "$dryrun" ]; then
+	ln -s $apps $ghnhome/apps
+fi
+
+echo -e "\ndone.\n"

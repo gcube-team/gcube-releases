@@ -1,0 +1,110 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.form-main-style {
+		margin-left: 10px;
+	}
+	
+	.fieldset-border-style {
+		border: 1px groove #444;
+		-webkit-box-shadow: 0px 0px 0px 0px #000;
+		box-shadow: 0px 0px 0px 0px #000;
+		padding: 10px;
+	}
+	
+	.legend-style {
+		width: auto;
+		padding: 10px;
+		margin-bottom: 0px;
+	}
+	
+	@external .form-horizontal .input-large;
+	.form-horizontal .input-large {
+		width: 95%;
+	}
+	
+	.block-alert-style {
+		margin-top: 10px;
+		padding: 10px;
+		margin-bottom: 10px;
+	}
+	
+	.tagsPanelStyle {
+		display: inline-block;
+	}
+	
+	.add-resource-button {
+		float: right;
+	}
+	
+	.label-go-to-product {
+		display: inline-block;
+		vertical-align: middle;
+		font-weight: bold;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<b:Form type="HORIZONTAL" styleName="{style.form-main-style}"
+			ui:field="form">
+			<b:Fieldset styleName="{style.fieldset-border-style}">
+
+				<b:Legend styleName="{style.legend-style}">
+					Add Resource
+					<small>
+						<span style="color:red;">*</span>
+						is required
+					</small>
+				</b:Legend>
+
+				<b:ControlGroup>
+					<b:ControlLabel for="url" title="File url">
+						<font color="red">*</font>
+						URL:
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" placeholder="http://example.com/image.jpg"
+							b:id="url" title="Product's title" ui:field="resourceUrlTextBox" />
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup>
+					<b:ControlLabel for="name" title="Resource name">
+						<font color="red">*</font>
+						Name:
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" placeholder="my-image"
+							b:id="name" title="Resource name" ui:field="resourceNameTextBox" />
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup>
+					<b:ControlLabel for="description" title="Resource description">
+						Description:
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextArea alternateSize="LARGE"
+							placeholder="Some useful notes about data" b:id="description"
+							title="Resource description" ui:field="resourceDescriptionTextArea" />
+					</b:Controls>
+				</b:ControlGroup>
+
+				<!-- Alert blocks for info/errors -->
+				<b:AlertBlock type="INFO" animation="true" visible="false"
+					close="false" ui:field="infoBlock" styleName="{style.block-alert-style}"></b:AlertBlock>
+
+				<!-- Add resource button -->
+				<b:Button title="Add resource" ui:field="addResourceButton"
+					type="PRIMARY">Add</b:Button>
+
+			</b:Fieldset>
+		</b:Form>
+
+		<g:FlowPanel>
+			<g:Label styleName="{style.label-go-to-product}">Go to product</g:Label>
+			<b:Button title="Go to Product" ui:field="goToDatasetButton"
+				type="LINK" visible="true"></b:Button>
+		</g:FlowPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

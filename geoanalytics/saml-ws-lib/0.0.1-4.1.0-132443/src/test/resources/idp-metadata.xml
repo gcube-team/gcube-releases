@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" entityID="http://192.168.32.137:8080/idp/shibboleth">
+	<IDPSSODescriptor
+		protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+		<Extensions>
+			<shibmd:Scope regexp="false">cite-test.org</shibmd:Scope>
+		</Extensions>
+		<KeyDescriptor>
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIDMDCCAhigAwIBAgIVAIwVpIhu13whHWSdqYtTCdsZwxFSMA0GCSqGSIb3DQEB
+						BQUAMBwxGjAYBgNVBAMMEWlkcC5jaXRlLXRlc3Qub3JnMB4XDTE0MDkwODA4NTcz
+						MloXDTM0MDkwODA4NTczMlowHDEaMBgGA1UEAwwRaWRwLmNpdGUtdGVzdC5vcmcw
+						ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCZj6FJDghUlhDtII9bxtdl
+						dBcJaaYYReKvE5NSAoakqBIsUaE4gfXaBpg2hfAiF3R+9dZY7rCLUrtZMslxaZIR
+						RnV4LGKKysCVvl2AWmcsD+SnxQUgbgd/mo0K5b8kFJS3tfdwe4okFmk6LrYBH5uw
+						2LbyeOFr/V90+ug4E8zRaeoqj8LkrN1HXxOdq7MZIcIsig4QAUCZa+/RLIuaQGPu
+						Vldbxj3yVpr5M4Bz6EdP7o52HlifP7amko+aCndjufGRmawF5NDN4E2fwCUuG1u6
+						+BT9Njic/KnC5B7oAZ0poCv7a2WHUZZx/zn8yrw20MJ4I8HLw3diIy9wL3SLNavZ
+						AgMBAAGjaTBnMB0GA1UdDgQWBBQ/6lwMgj4k623rAabPY7pIDhCaLDBGBgNVHREE
+						PzA9ghFpZHAuY2l0ZS10ZXN0Lm9yZ4YoaHR0cHM6Ly9pZHAuY2l0ZS10ZXN0Lm9y
+						Zy9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQUFAAOCAQEAcTtcMxUuDHMBROr2
+						2RRnIT21NpEYUTir+UlaW+ZvCVzwki0FB4K8croHib29HmfmzEJuRLtn3xhE+Q/Y
+						Tz8/PpFNFqbh52/thT/VwpUQ5kyOIVxbdxaQZxT3dbZL1QJKkBbrjxTjMkpHVJmH
+						n3RNZBcsfMy4YX/zccS5PoBc0515E2IJyV+USeSElIne1Y2whknik2cDnDwAhADI
+						fGe+bNMpvk10llNXuJe2BHVPt9cQGmO+6Y7Yl2H6Z26Pk3lrXxdCOQGloyovDKTN
+						fNQQiXkAG1PUbG7LWBniWiDVRK7MzvGWd4kc7GsGWSjjdv+tTC9TsRLdAE1VEeER
+						QZswBg==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</KeyDescriptor>
+		<ArtifactResolutionService
+			Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding"
+			Location="http://192.168.32.137:8080/idp/profile/SAML1/SOAP/ArtifactResolution"
+			index="1" />
+		<ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+			Location="http://192.168.32.137:8080/idp/profile/SAML2/SOAP/ArtifactResolution"
+			index="2" />
+		<SingleLogoutService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="http://192.168.32.137:8080/idp/profile/SAML2/Redirect/SLO" />
+		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+			Location="http://192.168.32.137:8080/idp/profile/SAML2/POST/SLO" />
+		<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+			Location="http://192.168.32.137:8080/idp/profile/SAML2/SOAP/SLO" />
+		<NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+		<NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+		<SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest"
+			Location="http://192.168.32.137:8080/idp/profile/Shibboleth/SSO" />
+		<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+			Location="http://192.168.32.137:8080/idp/profile/SAML2/POST/SSO" />
+		<SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign"
+			Location="http://192.168.32.137:8080/idp/profile/SAML2/POST-SimpleSign/SSO" />
+		<SingleSignOnService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="http://192.168.32.137:8080/idp/profile/SAML2/Redirect/SSO" />
+	</IDPSSODescriptor>
+	<AttributeAuthorityDescriptor
+		protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+		<Extensions>
+			<shibmd:Scope regexp="false">cite-test.org</shibmd:Scope>
+		</Extensions>
+		<KeyDescriptor>
+			<ds:KeyInfo>
+				<ds:X509Data>
+					<ds:X509Certificate>MIIDMDCCAhigAwIBAgIVAIwVpIhu13whHWSdqYtTCdsZwxFSMA0GCSqGSIb3DQEB
+						BQUAMBwxGjAYBgNVBAMMEWlkcC5jaXRlLXRlc3Qub3JnMB4XDTE0MDkwODA4NTcz
+						MloXDTM0MDkwODA4NTczMlowHDEaMBgGA1UEAwwRaWRwLmNpdGUtdGVzdC5vcmcw
+						ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCZj6FJDghUlhDtII9bxtdl
+						dBcJaaYYReKvE5NSAoakqBIsUaE4gfXaBpg2hfAiF3R+9dZY7rCLUrtZMslxaZIR
+						RnV4LGKKysCVvl2AWmcsD+SnxQUgbgd/mo0K5b8kFJS3tfdwe4okFmk6LrYBH5uw
+						2LbyeOFr/V90+ug4E8zRaeoqj8LkrN1HXxOdq7MZIcIsig4QAUCZa+/RLIuaQGPu
+						Vldbxj3yVpr5M4Bz6EdP7o52HlifP7amko+aCndjufGRmawF5NDN4E2fwCUuG1u6
+						+BT9Njic/KnC5B7oAZ0poCv7a2WHUZZx/zn8yrw20MJ4I8HLw3diIy9wL3SLNavZ
+						AgMBAAGjaTBnMB0GA1UdDgQWBBQ/6lwMgj4k623rAabPY7pIDhCaLDBGBgNVHREE
+						PzA9ghFpZHAuY2l0ZS10ZXN0Lm9yZ4YoaHR0cHM6Ly9pZHAuY2l0ZS10ZXN0Lm9y
+						Zy9pZHAvc2hpYmJvbGV0aDANBgkqhkiG9w0BAQUFAAOCAQEAcTtcMxUuDHMBROr2
+						2RRnIT21NpEYUTir+UlaW+ZvCVzwki0FB4K8croHib29HmfmzEJuRLtn3xhE+Q/Y
+						Tz8/PpFNFqbh52/thT/VwpUQ5kyOIVxbdxaQZxT3dbZL1QJKkBbrjxTjMkpHVJmH
+						n3RNZBcsfMy4YX/zccS5PoBc0515E2IJyV+USeSElIne1Y2whknik2cDnDwAhADI
+						fGe+bNMpvk10llNXuJe2BHVPt9cQGmO+6Y7Yl2H6Z26Pk3lrXxdCOQGloyovDKTN
+						fNQQiXkAG1PUbG7LWBniWiDVRK7MzvGWd4kc7GsGWSjjdv+tTC9TsRLdAE1VEeER
+						QZswBg==</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+		</KeyDescriptor>
+		<AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding"
+			Location="http://192.168.32.137:8080/idp/profile/SAML1/SOAP/AttributeQuery" />
+		<AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+			Location="http://192.168.32.137:8080/idp/profile/SAML2/SOAP/AttributeQuery" />
+		<NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+		<NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+	</AttributeAuthorityDescriptor>
+</EntityDescriptor>

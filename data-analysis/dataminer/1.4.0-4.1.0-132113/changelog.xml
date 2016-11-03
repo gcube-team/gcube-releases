@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.dataanalysis.dataminer.1-1-0" date="2016-10-03">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

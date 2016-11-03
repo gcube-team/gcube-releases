@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<servlet>
+		<servlet-name>GitHubConnectorServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.githubconnector.server.GitHubConnectorServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>checkServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.sessionchecker.server.SessionCheckerServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>scopeService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gcubewidgets.server.ScopeServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GitHubConnectorServlet</servlet-name>
+		<url-pattern>/githubman/githubconnectorservice</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/githubman/junithost/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>checkServlet</servlet-name>
+		<url-pattern>/githubman/checksession</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>scopeService</servlet-name>
+		<url-pattern>/githubman/scopeService</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>GitHubConnector.html</welcome-file>
+	</welcome-file-list>
+</web-app>

@@ -1,0 +1,7 @@
+to compile:
+ ant garService
+ ant buildStubs
+ 
+to deploy: 
+ gcore-deploy-service org.gcube.common.vremanagement.deployer.gar
+ cp org.gcube.common.vremanagement.ghnmanager.stubs.jar

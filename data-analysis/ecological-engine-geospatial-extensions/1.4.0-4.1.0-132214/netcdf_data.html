@@ -1,0 +1,411 @@
+<!--Document specific SSI statements-->
+
+
+
+
+<!--Add any additional meta tags to the following variable.-->
+
+
+
+
+<!--This creates the header.-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- NODC Standard Header File, the HTML Version -->
+<head>
+  <title>World Ocean Atlas 2009 data in NetCDF format</title>
+  <meta name="Author" content="Olga Baranova">
+  <meta name="Description" content="/OC5/WOA09/netcdf_data.html">
+  
+  <meta name="keywords" lang="en-us" content="world ocean atlas 2009, climatogy, objectively analyzed fields and statistics, NetCDF">
+  
+  
+  <link rel="shortcut icon" href="/Images/favicon.ico">
+  <link href="/nodc.css" rel="stylesheet" type="text/css">
+  <link href="/ocl.css" rel="stylesheet" type="text/css">
+  <link href="/jc.css" rel="stylesheet" type="text/css">
+  <link href="/bs.css" rel="stylesheet" type="text/css">
+  <link href="/styles/jquery.qtip.css" rel="stylesheet" type="text/css" media="all" />
+  
+  
+  
+
+  <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+  <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/">
+  
+  <meta name="DC.title" lang="en" content="World Ocean Atlas 2009 data in NetCDF format">
+  <meta name="DC.creator" lang="en" content="US Department of Commerce, NOAA National Oceanographic Data Center">
+  <meta name="DCTERMS.modified" scheme="W3CDTF" content="2012-07-09">
+  <meta name="DC.language" scheme="RFC4646" content="en">
+  <meta name="DC.identifier" scheme="DCTERMS.URI" content="http://www.nodc.noaa.gov/OC5/WOA09/netcdf_data.html">
+  
+
+  <script type="text/javascript" src="/js_1/federated-analytics.js"></script>
+
+</head>
+<body class="whitebg"
+
+
+>
+<!-- Banner follows -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td colspan="2"><a href="http://www.noaa.gov"><img src="/Images/BS_noaalogo1.jpg" alt="National Oceanic and Atmospheric Administration" width="259" height="78" style="float:left; border:0;"></a><a href="/"><img src="/Images/BS_nodclogo1.jpg" alt="NODC, National Oceanographic Data Center" width="346" height="78" style="float:left; border:0;"></a><img src="/Images/BS_commercelogo1.jpg" alt="Department of Commerce" width="196" height="78"  style="float:right; border:0;"></td>
+  </tr>
+  <tr class="fillinblack noaainfo">
+    <td><div class="indent"><a href="http://www.nesdis.noaa.gov/"><img src="/Images/NESDIS_topgraphic.gif" alt="NOAA Satellite and Information Service" width="179" height="12" border="0" title="NOAA Satellite and Information Service"></a></div></td>
+    <td align="right"><form action="http://search.usa.gov/search" method="get">
+        <label>
+        <input type="radio" name="affiliate" checked="checked" value="nodc.noaa.gov">
+        NODC</label>
+        <label>
+        <input type="radio" name="affiliate" value="noaa.gov">
+        All of NOAA</label>
+        <input type="hidden" name="v:project" value="firstgov">
+        <input class="search" type="text" name="query" size="18" value="Search" onfocus="this.value=''">
+        <input class="go" src="/Images/go.gif" alt="Go search the NOAA or NODC Website" title="Go search the NOAA or NODC Website" type="image">
+    </form></td>
+  </tr>
+  
+</table>
+<!-- End of NODC Standard Header -->
+
+
+<table class="tablebordernodc" cellpadding="3" cellspacing="0" width="100%">
+<tbody><tr><td class="cookie" bgcolor="#ffffff" nowrap="nowrap">You are here: <a href="/" target="_top">NODC Home</a> &gt;
+<a href="/OC5/" target="_top">Ocean Climate Laboratory</a> &gt;
+<a href="/OC5/indprod.html" target="_top">OCL Products</a> &gt; 
+<a href="pr_woa09.html">WOA09</a> &gt;
+WOA09 data in NetCDF format
+</td>
+</tr></tbody></table>
+
+
+<div align="center">
+<br />
+<table width="80%">
+<tr><td align="center"><span class="head1">World Ocean Atlas 2009 Data in NetCDF format</span>
+<br /><span class="darkgreynotes">Data are available courtesy of Upendra Dadi.
+For any questions about this product, please e-mail <a href="mailto:OCL.help@noaa.gov" class="darkgreynotes">OCLhelp desk</a>.</span>
+</td></tr>
+<tr><td class="red"><hr size="1" align="center" />
+<!--The following netCDF-4 files are created using netCDF - 4.0.1 libraries. 
+Please make sure that you are using appropriate version of netCDF libraries to read the files. 
+NetCDF-3 libraries cannot read the files. -->The data can be accessed by using <a href="http://www.opendap.org/" class="red">OpenDAP</a> or 
+you can do simple analysis and visualization of the data using the NODC <a href="http://data.nodc.noaa.gov/las/getUI.do" class="red">Live Access Server</a>. 
+
+The THREDDS page below have an OpenDAP link to the netCDF files.
+<hr size="1" align="center" />
+</td></tr>
+</table>
+
+
+<table class="tableborder" border="1" cellspacing="0" cellpadding="4" width="80%">
+<tbody>
+<tr class="tablehd1">
+<td align="center">Grid Size</td><td align="center">Variable</td><td align="center">Time Period</td><td align="center">FTP Link to NetCDF file</td><td align="center">THREDDS Link</td>
+<td align="center">OpenDAP Metadata Link</td></tr>
+
+<tr><td rowspan="24" align="center" class="bold">1 DEGREE</td>
+<td rowspan="3" align="center" class="bold">Temperature</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/temperature_annual_1deg.nc">temperature_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/temperature_annual_1deg.nc">temperature_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/temperature_annual_1deg.nc.info">temperature_annual_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/temperature_seasonal_1deg.nc">temperature_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/temperature_seasonal_1deg.nc">temperature_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/temperature_seasonal_1deg.nc.info">temperature_seasonal_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="lleft"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/temperature_monthly_1deg.nc">temperature_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/temperature_monthly_1deg.nc">temperature_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/temperature_monthly_1deg.nc.info">temperature_monthly_1deg.nc.info</a></td></tr>
+
+<tr><td rowspan="3" align="center" class="bold">Salinity</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/salinity_annual_1deg.nc">salinity_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/salinity_annual_1deg.nc">salinity_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/salinity_annual_1deg.nc.info">salinity_annual_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/salinity_seasonal_1deg.nc">salinity_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/salinity_seasonal_1deg.nc">salinity_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/salinity_seasonal_1deg.nc.info">salinity_seasonal_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/salinity_monthly_1deg.nc">salinity_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/salinity_monthly_1deg.nc">salinity_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/salinity_monthly_1deg.nc.info">salinity_monthly_1deg.nc.info</a></td></tr>
+
+<tr><td rowspan="3" align="center" class="bold">Dissolved Oxygen</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/dissolved_oxygen_annual_1deg.nc">dissolved_oxygen_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/dissolved_oxygen_annual_1deg.nc">dissolved_oxygen_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/dissolved_oxygen_annual_1deg.nc.info">dissolved_oxygen_annual_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/dissolved_oxygen_seasonal_1deg.nc">dissolved_oxygen_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/dissolved_oxygen_seasonal_1deg.nc">dissolved_oxygen_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/dissolved_oxygen_seasonal_1deg.nc.info">dissolved_oxygen_seasonal_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/dissolved_oxygen_monthly_1deg.nc">dissolved_oxygen_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/dissolved_oxygen_monthly_1deg.nc">dissolved_oxygen_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/dissolved_oxygen_monthly_1deg.nc.info">dissolved_oxygen_monthly_1deg.nc.info</a></td></tr>
+
+<tr><td rowspan="3" align="center" class="bold">Oxygen Saturation</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/oxygen_saturation_annual_1deg.nc">oxygen_saturation_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/oxygen_saturation_annual_1deg.nc">oxygen_saturation_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/oxygen_saturation_annual_1deg.nc.info">oxygen_saturation_annual_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/oxygen_saturation_seasonal_1deg.nc">oxygen_saturation_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/oxygen_saturation_seasonal_1deg.nc">oxygen_saturation_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/oxygen_saturation_seasonal_1deg.nc.info">oxygen_saturation_seasonal_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/oxygen_saturation_monthly_1deg.nc">oxygen_saturation_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/oxygen_saturation_monthly_1deg.nc">oxygen_saturation_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/oxygen_saturation_monthly_1deg.nc.info">oxygen_saturation_monthly_1deg.nc.info</a></td></tr>
+
+<tr><td rowspan="3" align="center" class="bold">Apparent Oxygen <br />Utilization</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/apparent_oxygen_utilization_annual_1deg.nc">apparent_oxygen_utilization_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/apparent_oxygen_utilization_annual_1deg.nc">apparent_oxygen_utilization_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/apparent_oxygen_utilization_annual_1deg.nc.info">apparent_oxygen_utilization_annual_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/apparent_oxygen_utilization_seasonal_1deg.nc">apparent_oxygen_utilization_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/apparent_oxygen_utilization_seasonal_1deg.nc">apparent_oxygen_utilization_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/apparent_oxygen_utilization_seasonal_1deg.nc.info">apparent_oxygen_utilization_seasonal_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/apparent_oxygen_utilization_monthly_1deg.nc">apparent_oxygen_utilization_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/apparent_oxygen_utilization_monthly_1deg.nc">apparent_oxygen_utilization_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/apparent_oxygen_utilization_monthly_1deg.nc.info">apparent_oxygen_utilization_monthly_1deg.nc.info</a></td></tr>
+
+<tr><td rowspan="3" align="center" class="bold">Phosphate</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/phosphate_annual_1deg.nc">phosphate_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/phosphate_annual_1deg.nc">phosphate_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/phosphate_annual_1deg.nc.info">phosphate_annual_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/phosphate_seasonal_1deg.nc">phosphate_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/phosphate_seasonal_1deg.nc">phosphate_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/phosphate_seasonal_1deg.nc.info">phosphate_seasonal_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/phosphate_monthly_1deg.nc">phosphate_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/phosphate_monthly_1deg.nc">phosphate_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/phosphate_monthly_1deg.nc.info">phosphate_monthly_1deg.nc.info</a></td></tr>
+
+<tr><td rowspan="3" align="center" class="bold">Silicate</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/silicate_annual_1deg.nc">silicate_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/silicate_annual_1deg.nc">silicate_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/silicate_annual_1deg.nc.info">silicate_annual_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/silicate_seasonal_1deg.nc">silicate_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/silicate_seasonal_1deg.nc">silicate_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/silicate_seasonal_1deg.nc.info">silicate_seasonal_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/silicate_monthly_1deg.nc">silicate_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/silicate_monthly_1deg.nc">silicate_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/silicate_monthly_1deg.nc.info">silicate_monthly_1deg.nc.info</a></td></tr>
+
+<tr><td rowspan="3" align="center" class="bold">Nitrate</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/nitrate_annual_1deg.nc">nitrate_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/nitrate_annual_1deg.nc">nitrate_annual_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/nitrate_annual_1deg.nc.info">nitrate_annual_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/nitrate_seasonal_1deg.nc">nitrate_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/nitrate_seasonal_1deg.nc">nitrate_seasonal_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/nitrate_seasonal_1deg.nc.info">nitrate_seasonal_1deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/nitrate_monthly_1deg.nc">nitrate_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/nitrate_monthly_1deg.nc">nitrate_monthly_1deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/nitrate_monthly_1deg.nc.info">nitrate_monthly_1deg.nc.info</a></td></tr>
+
+<tr><td rowspan="24" align="center" class="bold">5 DEGREE</td>
+<td rowspan="3" align="center" class="bold">Temperature</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/temperature_annual_5deg.nc">temperature_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/temperature_annual_5deg.nc">temperature_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/temperature_annual_5deg.nc.info">temperature_annual_5deg.nc.info</a></td>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/temperature_seasonal_5deg.nc">temperature_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/temperature_seasonal_5deg.nc">temperature_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/temperature_seasonal_5deg.nc.info">temperature_seasonal_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/temperature_monthly_5deg.nc">temperature_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/temperature_monthly_5deg.nc">temperature_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/temperature_monthly_5deg.nc.info">temperature_monthly_5deg.nc.info</a></td></tr>
+
+<tr><td rowspan="3" align="center" class="bold">Salinity</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/salinity_annual_5deg.nc">salinity_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/salinity_annual_5deg.nc">salinity_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/salinity_annual_5deg.nc.info">salinity_annual_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/salinity_seasonal_5deg.nc">salinity_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/salinity_seasonal_5deg.nc">salinity_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/salinity_seasonal_5deg.nc.info">salinity_seasonal_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/salinity_monthly_5deg.nc">salinity_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/salinity_monthly_5deg.nc">salinity_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/salinity_monthly_5deg.nc.info">salinity_monthly_5deg.nc.info</a></td></tr>
+
+<tr><td rowspan="3" align="center" class="bold">Dissolved Oxygen</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/dissolved_oxygen_annual_5deg.nc">dissolved_oxygen_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/dissolved_oxygen_annual_5deg.nc">dissolved_oxygen_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/dissolved_oxygen_annual_5deg.nc.info">dissolved_oxygen_annual_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/dissolved_oxygen_seasonal_5deg.nc">dissolved_oxygen_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/dissolved_oxygen_seasonal_5deg.nc">dissolved_oxygen_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/dissolved_oxygen_seasonal_5deg.nc.info">dissolved_oxygen_seasonal_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/dissolved_oxygen_monthly_5deg.nc">dissolved_oxygen_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/dissolved_oxygen_monthly_5deg.nc">dissolved_oxygen_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/dissolved_oxygen_monthly_5deg.nc.info">dissolved_oxygen_monthly_5deg.nc.info</a></td></tr>
+
+<tr><td rowspan="3" align="center" class="bold">Oxygen Saturation</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/oxygen_saturation_annual_5deg.nc">oxygen_saturation_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/oxygen_saturation_annual_5deg.nc">oxygen_saturation_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/oxygen_saturation_annual_5deg.nc.info">oxygen_saturation_annual_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/oxygen_saturation_seasonal_5deg.nc">oxygen_saturation_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/oxygen_saturation_seasonal_5deg.nc">oxygen_saturation_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/oxygen_saturation_seasonal_5deg.nc.info">oxygen_saturation_seasonal_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/oxygen_saturation_monthly_5deg.nc">oxygen_saturation_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/oxygen_saturation_monthly_5deg.nc">oxygen_saturation_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/oxygen_saturation_monthly_5deg.nc.info">oxygen_saturation_monthly_5deg.nc.info</a></td></tr>
+
+<tr><td rowspan="3" align="center" class="bold">Apparent Oxygen <br />Utilization</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/apparent_oxygen_utilization_annual_5deg.nc">apparent_oxygen_utilization_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/apparent_oxygen_utilization_annual_5deg.nc">apparent_oxygen_utilization_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/apparent_oxygen_utilization_annual_5deg.nc.info">apparent_oxygen_utilization_annual_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/apparent_oxygen_utilization_seasonal_5deg.nc">apparent_oxygen_utilization_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/apparent_oxygen_utilization_seasonal_5deg.nc">apparent_oxygen_utilization_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/apparent_oxygen_utilization_seasonal_5deg.nc.info">apparent_oxygen_utilization_seasonal_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/apparent_oxygen_utilization_monthly_5deg.nc">apparent_oxygen_utilization_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/apparent_oxygen_utilization_monthly_5deg.nc">apparent_oxygen_utilization_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/apparent_oxygen_utilization_monthly_5deg.nc.info">apparent_oxygen_utilization_monthly_5deg.nc.info</a></td></tr>
+
+<tr><td rowspan="3" align="center" class="bold">Phosphate</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/phosphate_annual_5deg.nc">phosphate_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/phosphate_annual_5deg.nc">phosphate_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/phosphate_annual_5deg.nc.info">phosphate_annual_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/phosphate_seasonal_5deg.nc">phosphate_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/phosphate_seasonal_5deg.nc">phosphate_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/phosphate_seasonal_5deg.nc.info">phosphate_seasonal_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/phosphate_monthly_5deg.nc">phosphate_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/phosphate_monthly_5deg.nc">phosphate_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/phosphate_monthly_5deg.nc.info">phosphate_monthly_5deg.nc.info</a></td></tr>
+
+<tr><td rowspan="3" align="center" class="bold">Silicate</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/silicate_annual_5deg.nc">silicate_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/silicate_annual_5deg.nc">silicate_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/silicate_annual_5deg.nc.info">silicate_annual_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/silicate_seasonal_5deg.nc">silicate_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/silicate_seasonal_5deg.nc">silicate_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/silicate_seasonal_5deg.nc.info">silicate_seasonal_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/silicate_monthly_5deg.nc">silicate_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/silicate_monthly_5deg.nc">silicate_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/silicate_monthly_5deg.nc.info">silicate_monthly_5deg.nc.info</a></td></tr>
+
+<tr><td rowspan="3" align="center" class="bold">Nitrate</td>
+<td align="center" class="italic">Annual</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/nitrate_annual_5deg.nc">nitrate_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/nitrate_annual_5deg.nc">nitrate_annual_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/nitrate_annual_5deg.nc.info">nitrate_annual_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Seasonal</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/nitrate_seasonal_5deg.nc">nitrate_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/nitrate_seasonal_5deg.nc">nitrate_seasonal_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/nitrate_seasonal_5deg.nc.info">nitrate_seasonal_5deg.nc.info</a></td></tr>
+
+<tr><td align="center" class="italic">Monthly</td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/fileServer/woa/WOA09/NetCDFdata/nitrate_monthly_5deg.nc">nitrate_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/catalog/woa/WOA09/NetCDFdata/catalog.html?dataset=woa/WOA09/NetCDFdata/nitrate_monthly_5deg.nc">nitrate_monthly_5deg.nc</a></td>
+<td align="left"><a href="http://data.nodc.noaa.gov/thredds/dodsC/woa/WOA09/NetCDFdata/nitrate_monthly_5deg.nc.info">nitrate_monthly_5deg.nc.info</a></td></tr>
+</tbody>
+</table></div>
+
+<br />
+<!-- This creates the footer. -->
+<!-- NODC Standard Footer File, the HTML Version -->
+
+
+<table width="100%" border="0" align="center" class="footersmall" id="footer2" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td colspan="4" class="bluebar" id="footer"><div align="center">
+<a href="/access/">Access Data</a> - <a href="/submit/">Submit Data</a> - <a href="/General/datacom_form.html">Intended Use of the Data?</a> - <a href="http://ols.nndc.noaa.gov/plolstore/plsql/olstore.main?look=1">Online Store</a> - <a href="/about/contact.html">Customer Service</a></div>
+          </td>
+        </tr>
+        <tr>
+          <td align="left" valign="bottom" nowrap="nowrap">&nbsp;</td>
+          <td align="left" valign="bottom" nowrap="nowrap"> 
+            Last modified:&nbsp; &nbsp; Mon,  9-Jul-2012 14:08 UTC
+          </td>
+        <td align="left"><a href="mailto:NODC.Webmaster@noaa.gov" class="footersmall">NODC.Webmaster@noaa.gov</a></td>
+		</tr>
+        <tr>
+          <td width="19">&nbsp;</td>
+          <td width="735" valign="top"><div class="footer-icons"><a href="http://www.facebook.com/noaa.nodc"><img src="/media/images/common/facebook3.gif" alt="Like us on Facebook" width="20" height="20" /></a><a href="/rss/"><img src="/media/images/common/rssfeed-icon.jpg" alt="RSS feed" width="20" height="20" /></a></div> <div align="left"> <acronym title="Department of Commerce"><a href="http://www.doc.gov/">Dept. of Commerce</a></acronym> - <acronym title="National Oceanic and Atmospheric Administration"><a href="http://www.noaa.gov/">NOAA</a></acronym> - <acronym title="National Environmental, Satellite, Data and Information Service"><a href="http://www.nesdis.noaa.gov/">NESDIS</a></acronym> - <acronym title="National Oceanographic Data Center"><a href="/">NODC</a></acronym><br>
+              <div class="top"> <span class="nongov">*</span><span class="nongovfooter"> Offsite Link Notification</span></div></div>
+          </td>
+          <td width="403" valign="top" align="left">
+          <div class="top"><a href="http://www.facebook.com/noaa.nodc" class="footersmall">Like us on Facebook</a></div>
+          <div class="top"><a href="http://www.noaa.gov/privacy.html" target="NOAA_privacy" class="footersmall" >Privacy Policy</a> - <a href="/nodcdisclaimer.html" class="footersmall">Disclaimer</a> - <a href="http://www.cio.noaa.gov/Policy_Programs/info_quality.html"
+ target="Information Quality" class="footersmall" >Information Quality</a></div>
+              <div class="top"><a href="http://www.corporateservices.noaa.gov/%7Efoia/" target="FOIA" class="footersmall">
+			  Freedom of Information Act</a> (FOIA)</div>
+            <div class="top"><acronym title="U.S. Government's Official Web Portal"><a href="http://www.usa.gov/">USA.gov</a></acronym> - The U.S. Government's Web Portal</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+</body>
+</html>
+<!-- End of NODC Standard Footer -->
+
+<!-- #End Template -->
+

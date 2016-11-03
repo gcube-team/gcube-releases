@@ -1,0 +1,54 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-transfer.agent-service.2-1-1" date="2016-03-11">
+			<Change>bugfix: safe conversion from URL to URI</Change>	
+	</Changeset>
+	 <Changeset component="org.gcube.data-transfer.agent-service.2-1-0" date="2014-01-31">
+			<Change>updated datanucleus deps and enhancer plugin for java 7 compatibility</Change>	
+	</Changeset>
+    <Changeset component="org.gcube.data-transfer.agent-service.2-0-1" date="2013-09-13">
+			<Change>Adapted to new registry-publisher API</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-service.2-0-0" date="2013-07-09">
+			<Change>Added support for  Async Tree Transfers</Change>	
+			<Change>change DB schema ( local DB need to be cleaned)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-service.1-3-0" date="2013-04-17">
+			<Change>Moved to new StorageManager client version</Change>
+			<Change>Integrated VFS for smp protocol</Change>
+			<Change>Transfer to/from Storage manager</Change>
+			<Change>Support for list and transfer of remote files</Change>
+			<Change>Check the available free space in localFileTransfer handler</Change>
+			<Change>Monitor with progress operation</Change>
+			<Change>Integrated with messaging</Change>		
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-service.1-2-0" date="2013-01-11">
+			<Change>better handling async operation ( n of threads)</Change>
+			<Change>full gar generation option included</Change>
+			<Change>usage of maven bom</Change>
+			<Change>Implemented transfers to DataStorages trough common VFS</Change>
+			<Change>Added DONE_WITH_ERRORS transfer status and implemented logic</Change>
+			<Change>Included FileConversion options to GeoTiff after as PostProcess task</Change>
+			<Change>New op MonitorTransferWithProgress implemented, it returns a report about the ongoing transfers</Change>
+			<Change>Extended apache VFS HTTP configurator to handle connection timeouts</Change>
+			<Change>Added Transfer Timeout handling</Change>		
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-service.1-1-0" date="2012-09-05">
+			<Change>Integration with URLResolutionLibrary</Change>
+			<Change>Integration with Storage Manager Wrapper</Change>
+			<Change>Added DB for Async transfer handling</Change>
+			<Change>Added operations to transfer locally to the agent node</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-stubs.1-1-0" date="2012-09-05">
+			<Change>Extended stubs to implement async operations</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-service.1-0-0" date="2012-04-27">
+			<Change>First release of the component</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-stubs.1-0-0" date="2012-04-27">
+			<Change>First release of the component</Change>
+	</Changeset>
+
+	<Changeset component="org.gcube.data-transfer.agent-service.2-1-2" date="2016-10-28">
+		<Change>Utils.newFault() method moved here from data-transfer-common</Change>
+	</Changeset>
+</ReleaseNotes>

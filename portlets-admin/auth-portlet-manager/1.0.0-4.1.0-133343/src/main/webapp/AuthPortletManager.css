@@ -1,0 +1,348 @@
+@CHARSET "UTF-8";
+
+.gwt-DialogBox {
+	z-index: 3;
+	background-color: #ffffff;
+}
+/*
+.gwt-DialogBox .dialogTop {
+	background-color: #d9e2e8;
+	border-radius: 4px;
+	border: 2px solid #888;
+}
+*/
+.gwt-extras-dialog-controls {
+	height: 0px;
+}
+
+.gwt-DialogBox .dialogTopCenterInner {
+	border-left: 2px solid #888;
+	border-right: 2px solid #888;
+	border-top: 2px solid #888;
+	padding: 5px;
+	background-color: #f3f7fb;
+}
+
+.modal_delete .dialogTopCenterInner {
+	border-left: 2px solid #888;
+    border-right: 2px solid #888;
+    border-top: 2px solid #888;
+    padding: 5px;
+    background-color: #f3f7fb;
+    margin-bottom: -3px;
+}
+
+.modal_delete .dialogMiddleCenterInner {
+	margin-top: -5px;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupContent {
+	overflow-y: scroll;
+	height: 130px;
+}
+
+#mainPanelLayout_AuthPortlet  .row {
+	margin-left: -10px !important;
+}
+
+#mainPanelLayout_AuthPortlet  .tab-content {
+	/*
+	overflow: hidden !important;
+	*/
+	overflow: initial !important;
+	border: 1px solid #888;
+	border-radius: 0px 4px 4px 4px;
+	padding: 20px 5px 5px 5px;
+}
+
+#mainPanelLayout_AuthPortlet  .nav {
+	margin-bottom: 0px !important;
+	background: white;
+}
+
+#mainPanelLayout_AuthPortlet  .nav-tabs {
+	border-bottom: 0px !important;
+}
+
+#mainPanelLayout_AuthPortlet  .nav-tabs>li {
+	border: 0px solid #888;
+}
+
+#mainPanelLayout_AuthPortlet .nav-tabs>li>a {
+	padding-top: 6px !important;
+	padding-bottom: 6px !important;
+	border: 1px solid #ccc !important;
+}
+
+#mainPanelLayout_AuthPortlet  .nav-tabs>.active>a {
+	border: 1px solid #888 !important;
+	border-bottom-color: #D9E2E8 !important;
+	background-color: #D9E2E8 !important;
+}
+
+#mainPanelLayout_AuthPortlet  .well {
+	padding: 0px !important;
+	background-color: transparent !important;
+	border: 0px solid #e3e3e3 !important;
+}
+
+/***********************************************************************************************
+BUTTON FILTER
+***********************************************************************************************/
+#mainPanelLayout_AuthPortlet .btn_add:before {
+	color: #333333;
+	content: "\f067";
+	display: inline-block;
+	font-family: "fontawesome";
+}
+
+#mainPanelLayout_AuthPortlet .btn_delete:before {
+	color: #333333;
+	content: "\f00d";
+	display: inline-block;
+	font-family: "fontawesome";
+}
+
+#mainPanelLayout_AuthPortlet .btn_group_none:before {
+	color: #333333;
+	content: "\f03a";
+	display: inline-block;
+	font-family: "fontawesome";
+}
+
+#mainPanelLayout_AuthPortlet .btn_group_user:before {
+	color: #333333;
+	content: "\f007";
+	display: inline-block;
+	font-family: "fontawesome";
+}
+
+#mainPanelLayout_AuthPortlet .btn_group_role:before {
+	color: #333333;
+	content: "\f0c0";
+	display: inline-block;
+	font-family: "fontawesome";
+}
+
+#mainPanelLayout_AuthPortlet .btn_group_service:before {
+	color: #333333;
+	content: "\f0ae";
+	display: inline-block;
+	font-family: "fontawesome";
+}
+
+#mainPanelLayout_AuthPortlet .btn_refresh:before {
+	color: #333333;
+	content: "\f021";
+	display: inline-block;
+	font-family: "fontawesome";
+}
+
+#mainPanelLayout_AuthPortlet .breadcrumb {
+	padding: 2px 2px;
+}
+
+#mainPanelLayout_AuthPortlet .tooltip {
+	z-index: initial;
+}
+
+#mainPanelLayout_AuthPortlet .tooltip-inner {
+	z-index: 1090;
+}
+/***********************************************************************************************
+END BUTTON FILTER
+***********************************************************************************************/
+/***********************************************************************************************
+DATA GRID POLICY AND QUOTA
+***********************************************************************************************/
+#mainPanelLayout_AuthPortlet .table_policy, #mainPanelLayout_AuthPortlet .table_quote
+	{
+	font-size: 12px;
+}
+
+#mainPanelLayout_AuthPortlet .table_policy th:first-child,
+	#mainPanelLayout_AuthPortlet .table_quote th:first-child {
+	border-left: 1px solid #BFBFBF;
+}
+
+#mainPanelLayout_AuthPortlet .table_policy th,
+	#mainPanelLayout_AuthPortlet .table_quote th {
+	border-right: 1px solid #BFBFBF;
+	border-top: 2px solid D7DCE0;
+	border-bottom: 2px solid #BBB;
+	background-image: linear-gradient(bottom, #D9E2E8 0%, #F3F7FB 100%);
+	background-image: -o-linear-gradient(bottom, #D9E2E8 0%, #F3F7FB 100%);
+	background-image: -moz-linear-gradient(bottom, #D9E2E8 0%, #F3F7FB 100%);
+	background-image: -webkit-linear-gradient(bottom, #D9E2E8 0%, #F3F7FB 100%);
+	background-image: -ms-linear-gradient(bottom, #D9E2E8 0%, #F3F7FB 100%);
+	padding: 2px 4px;
+}
+
+/* Override css for selected Row*/
+#mainPanelLayout_AuthPortlet .table_policy .com-google-gwt-user-cellview-client-DataGrid-Style-dataGridSelectedRow,
+	#mainPanelLayout_AuthPortlet .table_quote .com-google-gwt-user-cellview-client-DataGrid-Style-dataGridSelectedRow
+	{
+	background: #B1B1B1 !important;
+}
+
+#mainPanelLayout_AuthPortlet .table_policy .com-google-gwt-user-cellview-client-DataGrid-Style-dataGridSelectedRowCell,
+	#mainPanelLayout_AuthPortlet .table_quote .com-google-gwt-user-cellview-client-DataGrid-Style-dataGridSelectedRowCell
+	{
+	border: 2px solid #D9E2E8;
+}
+
+/* Override css for keyboard selected Row*/
+#mainPanelLayout_AuthPortlet .table_policy .com-google-gwt-user-cellview-client-DataGrid-Style-dataGridKeyboardSelectedRow,
+	#mainPanelLayout_AuthPortlet .table_quote .com-google-gwt-user-cellview-client-DataGrid-Style-dataGridKeyboardSelectedRow
+	{
+	background: none;
+}
+
+#mainPanelLayout_AuthPortlet .table_policy .com-google-gwt-user-cellview-client-DataGrid-Style-dataGridKeyboardSelectedRowCell,
+	#mainPanelLayout_AuthPortlet .table_quote .com-google-gwt-user-cellview-client-DataGrid-Style-dataGridKeyboardSelectedRowCell
+	{
+	border: 2px solid #D9E2E8;
+}
+
+#mainPanelLayout_AuthPortlet .btn_edit:before {
+	color: #333333;
+	content: "\f044";
+	display: inline-block;
+	font-family: "fontawesome";
+}
+
+#mainPanelLayout_AuthPortlet .btn_edit {
+	margin-right: 10px;
+}
+
+/****BOX LOADING ***/
+.modal_loader {
+	background: #d9e2e8;
+	border-radius: 4px;
+	border: 2px solid #888;
+	z-index: 2000;
+}
+
+.modal_loader .label_loader {
+	text-align: center;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.modal_loader .progress_loader {
+	width: 80%
+}
+
+.modal_loader .dialogContent {
+	padding: 5px;
+	background: #F3F7FB;
+}
+
+/****BOX ERROR ***/
+.modal_error {
+	background: #d9e2e8;
+	border-radius: 4px;
+	border: 2px solid #D20000;
+	z-index: 2000;
+}
+
+.icon_error {
+	text-align: center;
+	display: block;
+	margin-bottom: 20px;
+	color: red;
+	width: 100% !important;
+	font-size: 35px;
+	display: inline-block !important;
+}
+
+.modal_error .label_text_error {
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+}
+
+.modal_error .modal_error .dialogContent {
+	padding: 5px;
+	background: #F3F7FB;
+}
+
+/** Add css suggest text. */
+.auto_suggest {
+	z-index: 20;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 10px;
+	width: 80%;
+	height: 65px;
+	overflow: auto;
+}
+
+ul.input-list-caller {
+	overflow: hidden;
+	height: auto !important;
+	height: 1%;
+	width: 100%;
+	/* border: 1px solid #8496ba;*/
+	cursor: text;
+	font-size: 12px;
+	font-family: Verdana;
+	min-height: 1px;
+	z-index: 999;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+}
+
+ul.input-list-caller {
+	list-style-type: none;
+}
+
+ul.input-list-caller  li input {
+	/*border: 0;*/
+	width: 100px;
+	/*padding: 3px 8px;*/
+	background-color: white;
+	margin: 2px 0;
+}
+
+li.token-input-token-facebook {
+	overflow: hidden;
+	height: auto !important;
+	height: 1%;
+	margin: 3px;
+	padding: 1px 3px;
+	background-color: #eff2f7;
+	color: #000;
+	cursor: default;
+	border: 1px solid #ccd5e4;
+	font-size: 11px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	float: left;
+}
+
+li.token-input-token-facebook p {
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+li.token-input-token-facebook span {
+	color: #a6b3cf;
+	margin-left: 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+li.token-input-selected-token-facebook {
+	background-color: #5670a6;
+	border: 1px solid #3b5998;
+	color: #fff;
+}
+
+li.token-input-input-token-facebook {
+	float: left;
+}

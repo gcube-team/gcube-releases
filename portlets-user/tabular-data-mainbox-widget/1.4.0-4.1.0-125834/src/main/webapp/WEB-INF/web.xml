@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
+	</servlet>
+
+	<!-- Base Service -->
+	<servlet>
+		<servlet-name>tdservlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.mainboxwidget.server.TabularDataServiceImpl</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+
+
+	<!-- TDWidget -->
+	<servlet>
+		<servlet-name>tdwxService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdwx.server.TabularDataXServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>tdwxServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdwx.server.TabularDataXServlet</servlet-class>
+	</servlet>
+	
+	<!-- TDGWTService -->
+	<servlet>
+		<servlet-name>TDGWTService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.TDGWTServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>CSVImportFileServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.CSVImportFileServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>LocalUploadServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.LocalUploadServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>CodelistMappingUploadServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.CodelistMappingUploadServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>RetrieveChartFileServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.RetrieveChartFileServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>TDLogsServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.TDLogsServlet</servlet-class>
+	</servlet>
+	
+
+	<!-- Servlets Mapping -->
+	<!-- JUnit -->
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/MainBox/junithost/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Base Service -->
+	<servlet-mapping>
+		<servlet-name>tdservlet</servlet-name>
+		<url-pattern>/MainBox/tds</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- TDWidget -->
+	<servlet-mapping>
+		<servlet-name>tdwxService</servlet-name>
+		<url-pattern>/MainBox/tdwx</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>tdwxServlet</servlet-name>
+		<url-pattern>/MainBox/tdwxdata</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- TDGWTService -->
+	<servlet-mapping>
+		<servlet-name>TDGWTService</servlet-name>
+		<url-pattern>/MainBox/TDGWTService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CSVImportFileServlet</servlet-name>
+		<url-pattern>/MainBox/CSVImportFileServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>LocalUploadServlet</servlet-name>
+		<url-pattern>/MainBox/LocalUploadServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>CodelistMappingUploadServlet</servlet-name>
+		<url-pattern>/MainBox/CodelistMappingUploadServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>RetrieveChartFileServlet</servlet-name>
+		<url-pattern>/MainBox/RetrieveChartFileServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>TDLogsServlet</servlet-name>
+		<url-pattern>/MainBox/TDLogsServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>MainBox.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

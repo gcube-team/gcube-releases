@@ -1,0 +1,33 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.join-vre.3.1.0"
+		date="2016-10-03">
+		<Change>Added support for invite-only closed groups</Change>
+		<Change>Fix for Bug #4877 Email Notification sent multiple times
+			sometimes</Change>
+			<Change>Logo VRE was not updated in the portlet due to liferay versioning of Document Library</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.3.0.0"
+		date="2016-03-28">
+		<Change>Ported to Liferay 6.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.2.0.0"
+		date="2015-10-22">
+		<Change>Refactored to support virtual groups and related descriptions
+			through LR Custom Field
+		</Change>
+		<Change>Refactored with GWT Bootstrap, new look and feel</Change>
+		<Change>Added support for showing external hosted VREso, see Feature
+			#755
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.1.1.0"
+		date="2015-04-28">
+		<Change>Redesigned and restyles the way vre description is shown to
+			end users
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.1.0.0"
+		date="2015-03-02">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

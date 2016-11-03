@@ -1,0 +1,406 @@
+html
+{
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+   height: 100%;
+}
+
+body 
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	
+	/* Mozilla Firefox */ 
+	background-image: -moz-radial-gradient(center top, ellipse farthest-corner, #FFFFFF 0%, #E1E1EF 100%);
+	
+		/* IE10 Consumer Preview */ 
+	background-image: -ms-radial-gradient(center top, ellipse farthest-corner, #FFFFFF 0%, #E1E1EF 100%);
+	
+	/* Opera */ 
+	background-image: -o-radial-gradient(center top, ellipse farthest-corner, #FFFFFF 0%, #E1E1EF 100%);
+	
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(radial, center top, 0, center top, 561, color-stop(0, #FFFFFF), color-stop(1, #E1E1EF));
+	
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-radial-gradient(center top, ellipse farthest-corner, #FFFFFF 0%, #E1E1EF 100%);
+	
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: radial-gradient(ellipse farthest-corner at center top, #FFFFFF 0%, #E1E1EF 100%);
+
+	background-attachment: fixed;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+body.data-import-attributes {
+	max-width: 1400px;
+}
+
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
+    margin-right: auto;
+}
+
+label 
+{
+	font-weight: normal;
+}
+
+th
+{
+	font-weight: bold;
+}
+
+#attrTbl th {
+	font-size:11px;
+}
+
+ul {
+	padding-left: 15px;
+}
+
+table tr td table {
+	width: 100%
+}
+
+.table-hover tbody tr:hover td  
+{
+  background-color: #92bcff;
+}
+
+.table-hover tbody tr:hover th
+{
+	background-color: transparent;
+}
+
+.table-hover tbody tr:hover td table td
+{
+	background-color: transparent;
+}
+
+.table-hover tbody tr:hover td.valueMappingContainer
+{
+	background-color: transparent;	
+}
+
+.table-striped tbody tr td.valueMappingContainer
+{
+	background-color: transparent;	
+}
+
+
+td.valueMappingContainer > .table-striped > thead > tr
+{
+	background-color: rgba(53, 126, 189, 0.8);	
+}
+
+td.valueMappingContainer > .table-striped > tbody > tr:nth-child(2n+1) > td
+{
+	background-color: #efefef;	
+}
+
+td.valueMappingContainer > .table-striped > tbody > tr:nth-child(2n) > td
+{
+	background-color: #f5f5f5;	
+}
+
+td.valueMappingContainer > .table-hover tbody tr:hover td.valueMappingContainer
+{
+	background-color: #666777;	
+}
+
+textarea, textarea.form-control 
+{
+	resize: vertical;
+}
+
+/* ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+} */
+
+/* #adminContainer
+{
+	position: relative;
+}
+ */
+
+.top-links
+{
+	position: absolute;
+	margin-top: 0px;
+	font-size: x-small;
+	right: 0;
+}
+
+.btn-default {
+    background-color: #F8F8FF;
+    border-color: #CCCCCC;
+    color: #333333;
+}
+
+.addTaxonomyButtonCon .btn-group-vertical > .btn, .addTaxonomyButtonCon .btn-group-vertical > .btn-group,
+.customerAddButtonCon.btn-group-vertical > .btn, .customerAddButtonCon.btn-group-vertical > .btn-group
+{
+	width: 200px;
+	max-width: 200px;	
+}
+
+.statsBtns {
+	width: 3em;
+}
+
+.mainScreen
+{
+	padding-top: 50px;
+	padding-left: 50px;
+}
+
+.systemStatus
+{
+	width: 100%;
+    margin-left: 0%;
+	margin-right: 20%;
+	margin-top: 2%;
+}
+
+.systemStats
+{
+    width: 80%;
+	margin-left: 0%;
+	margin-right: 20%;
+	margin-top: 2%;
+}
+
+.activity, .login, .alert
+{
+	width: 80%;
+    margin-left: 0%;
+	margin-right: 20%;
+	margin-top: 2%;
+}
+
+#searchTextBoxes input
+{
+	width: 130px;
+}
+
+.heading {
+	font-size: large;
+	font-weight: bold;
+	text-align: left;
+	display: inline-block;
+}
+
+/*  .searchCon, .importCon {
+	width: 40%;
+	height: 20%;
+	margin-top: 5%;
+	float: left;
+}  */
+
+.importFormInput {
+	font-size: 8pt;
+}
+/* .addButtonCon {
+	width:15%;
+	height:20%;
+	margin-right: 35%;
+	margin-top: 10%;
+	float: right;
+} */
+
+ .addUserButtonCon, .customerAddButtonCon, 
+.addTaxonomyButtonCon, .addDocumentButtonCon,
+.addAccountingButtonCon, .addStyleButtonCon,
+.addThemeButtonCon {
+	/* width:15%;
+	height:20%;
+	padding-right: 52%;
+	padding-top: 6%;
+	float: right; 
+	padding-top: 5px;*/
+	position: relative;
+	
+} 
+
+.visualization {
+	position: relative;
+	width: 512px;
+	height: 496px;
+	border: 1px solid black;
+}
+
+#toggleSelectButtonCon {
+	clear: both;
+	margin-top: 20px;
+}
+
+.visualization-large {
+	clear: both;
+	position: relative;
+	/* width: 768px;
+	height: 744px; */
+	width: 512px;
+	height: 496px;
+	float: left;
+	padding-top: 5%;
+	padding-left: 10%;
+}
+
+ .userTable, .customerTable, .activationTable,
+ .attributeTable, .taxonomyTable, 
+ .documentTable, .accountingTable,
+ .styleTable, .themeTable {
+	/* clear:none;
+	padding-top:25%;
+	width: 100%;
+	margin-left: 0%;
+	padding-right: 20%;
+ */
+ margin-top: 25px;
+}
+
+#logout > form > input{
+    background-color: #ea6300;
+    border-radius: 6px;
+    color: #8d3f0b;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    float: right;
+    font-size: 10px;
+}
+
+#logout > form > input:hover{
+    font-weight: bold;
+}
+
+.attributeTable td.attrMappings {
+	min-width: 160px;
+}
+
+.documentDescriptions {
+	white-space: normal; 
+	word-break: break-all;
+	min-width: 150px;
+}
+
+#taxonomyConfigFormFooter {
+	margin-top: 10px;
+}
+/* .editForm {
+	width: 80%;
+    margin-left: 2%;
+    margin-right: 10%;
+    margin-top: 3%;	
+} */
+        
+ .top {
+ 	margin-top: 20px;
+	width: 100% ;
+	height: 10% ;
+	position: relative;
+}
+
+.title {
+	text-align: center;
+    font-size: x-large;
+}
+
+.menu {
+	/*float: left;*/
+	/* position: absolute;
+	top: 0;
+	left: 0; */
+	width: 200px;
+}
+
+#menuTbl
+{
+	margin-top: 20px;
+}
+
+.menu button {
+	width: 200px;
+} 
+
+/*.mainScreen {
+
+    padding-left:20%;
+    position: absolute;
+    top: 0;
+    left: 200px;
+}*/
+
+#featureActions {
+	padding-left:5%;
+}
+
+.tooltip {
+	border: 1px solid #ccc;
+	background: white;
+	position: absolute;
+	z-index: 200;
+	padding: 5px;
+	left: 0px;
+	top: 0px;
+	display: none;
+}
+
+.hover {
+	margin-top: 20px;
+}
+
+#sys-status-dialog-confirm {
+	display: none;
+}
+
+/* label, input { 
+	display:block; 
+} */
+
+/* .editForm
+{
+	left: 0px;
+    top: 0px;
+    width: 70%;
+    text-align: right;
+} */
+
+#editTextBoxes label
+{
+	float: left;
+}
+
+#addStyleFormTextBoxstyle, #editStyleFormTextBoxstyle 
+{
+	font-size: 12px;
+}
+
+#addStyleModal .modal-dialog, #editStyleModal .modal-dialog {
+	width: 60%;
+}
+
+#addFormTextBoxRights, #textBoxrights, #addTaxonFormTextBoxextraData, #editTaxonFormTextBoxextraData,
+#addTermFormTextBoxconfig, #editTermFormTextBoxconfig, 
+#editFormTextBoxdata, 
+#addStyleFormTextBoxstyle, #editStyleFormTextBoxstyle {
+	font-family: "Monospace";
+}
+
+/* .editFormElement
+{
+	width: 40%;
+} */
+
+@media (min-width: 1200px) {
+	#editTaxonomyForm .form-horizontal .form-group,
+	#editTermForm .form-horizontal .form-group,
+	#editForm .form-horizontal .form-group {
+	    margin-left: -60px;
+	    margin-right: 40px;
+	}
+}

@@ -1,0 +1,26 @@
+#LoggedinDiv div.hero-unit {
+	padding: 0 10px;
+	background-color: #fff;
+	margin: 0;
+}
+
+div.gwt-HTML.vre-description {
+	font-size: 14px;
+	line-height: 22px;
+}
+
+
+.loading-text {
+	width: 100%;
+	text-align: center;
+}
+
+.cancel-leave-button {
+	font-weight: bold;
+}
+
+.cancel-leave-button:hover {
+	cursor: pointer;
+	cursor: hand;
+	text-decoration: underline;
+}

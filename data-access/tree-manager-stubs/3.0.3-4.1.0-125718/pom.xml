@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>org.gcube.data.access</groupId>
+	<artifactId>tree-manager</artifactId>
+	<version>3.0.3-4.1.0-125718</version>
+	<packaging>pom</packaging>
+
+	<name>Tree Manager Reactor</name>
+
+	<properties>
+
+		<stubsArtifactId>tree-manager-stubs</stubsArtifactId>
+		<serviceArtifactId>tree-manager-service</serviceArtifactId>
+
+		<namespace>http://gcube-system.org/namespaces/data/tm</namespace>
+
+		<wsdlDirectory>${project.basedir}/../wsdl</wsdlDirectory>
+		<wsdlOutputDirectory>${project.basedir}/../target/generated-sources/wsdl</wsdlOutputDirectory>
+		<configDirectory>${project.basedir}/../config</configDirectory>
+		<distroDirectory>${project.basedir}/../distro</distroDirectory>
+
+	</properties>
+
+	<modules>
+		<module>tree-manager-service</module>
+		<module>tree-manager-stubs</module>
+	</modules>
+
+	<dependencyManagement>
+
+		<dependencies>
+
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>gcf</artifactId>
+				<version>1.7.0-4.1.0-2877</version>
+				<scope>provided</scope>
+			</dependency>
+
+		</dependencies>
+
+	</dependencyManagement>
+
+	<build>
+
+		<!-- defines basic configuration for the service plugin -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.gcube.tools</groupId>
+					<artifactId>maven-service-plugin</artifactId>
+					<version>1.1.0</version>
+					<configuration>
+						<serviceId>tree-manager</serviceId>
+						<basePackage>org.gcube.data.tm</basePackage>
+						<wsdlDirectory>${wsdlDirectory}</wsdlDirectory>
+						<wsdlOutputDirectory>${wsdlOutputDirectory}</wsdlOutputDirectory>
+						<configurationDirectory>${configDirectory}</configurationDirectory>
+					</configuration>
+				</plugin>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.maven.plugins
+										</groupId>
+										<artifactId>
+											maven-dependency-plugin
+										</artifactId>
+										<versionRange>
+											[2.1,)
+										</versionRange>
+										<goals>
+											<goal>
+												unpack-dependencies
+											</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+
+				<!-- interpolates profiles and copies from distribution location to configuration 
+					location, where it is need for embedding into stub artifact, gar generation, 
+					and service archive. -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.6</version>
+					<executions>
+						<execution>
+							<id>copy-profile</id>
+							<goals>
+								<goal>copy-resources</goal>
+							</goals>
+							<phase>process-resources</phase>
+							<configuration>
+								<outputDirectory>${configDirectory}</outputDirectory>
+								<resources>
+									<resource>
+										<directory>${distroDirectory}</directory>
+										<includes>
+											<include>profile.xml</include>
+										</includes>
+										<filtering>true</filtering>
+									</resource>
+								</resources>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+
+			</plugins>
+	</build>
+</project>

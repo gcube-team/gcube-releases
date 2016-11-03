@@ -1,0 +1,40 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def specialColumnGradient value('theme.grid.specialColumnGradient');
+@def specialColumnGradientSelected value('theme.grid.specialColumnGradientSelected');
+
+@def textFamily value('theme.grid.rowNumberer.text.family');
+@def textWeight value('theme.grid.rowNumberer.text.weight');
+@def textSize value('theme.grid.rowNumberer.text.size');
+@def textColor value('theme.grid.rowNumberer.text.color');
+
+@def padding value('theme.grid.rowNumberer.padding.toString');
+
+.numberer {
+  padding: padding;
+  text-align: center;
+  font-family: textFamily;
+  font-size: textSize;
+  color: textColor;
+  font-weight: textWeight;
+}
+
+.grid-row .cell {
+  background: -webkit-linear-gradient(top, specialColumnGradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, specialColumnGradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, specialColumnGradient); /* IE10+ */
+  background: linear-gradient(to bottom, specialColumnGradient); /* W3C */
+
+}
+
+.grid-rowSelected .cell {
+  background: -webkit-linear-gradient(top, specialColumnGradientSelected); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, specialColumnGradientSelected); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, specialColumnGradientSelected); /* IE10+ */
+  background: linear-gradient(to bottom, specialColumnGradientSelected); /* W3C */
+}

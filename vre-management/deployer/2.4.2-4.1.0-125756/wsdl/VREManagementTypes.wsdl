@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="VREManagementTypes"
+    targetNamespace="http://gcube-system.org/common/vremanagement/types"
+    xmlns:tns="http://gcube-system.org/common/vremanagement/types"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+    
+<!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+<types>
+<xs:schema 
+   targetNamespace="http://gcube-system.org/common/vremanagement/types"
+   xmlns:tns="http://gcube-system.org/common/vremanagement/types">
+
+	<!-- <xs:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" schemaLocation="../../../../ws/addressing/WS-Addressing.xsd" /> -->
+	<xs:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+	<xs:include schemaLocation="VREManagementTypes.xsd" />
+
+</xs:schema>
+</types>
+
+</definitions>

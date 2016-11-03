@@ -1,0 +1,162 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>org.gcube.resources.federation</groupId>
+	<artifactId>fhn-manager-service</artifactId>
+	<version>1.2.0-4.1.0-133716</version>
+	<packaging>war</packaging>
+	<name>Federated Hosting Node (FHN) Manager Service</name>
+	<description>
+The FHNManger service allows to manage the lifecycle (create, destroy, 
+start, stop and monitor) of Virtual Machines that host gCube nodes 
+on external infrastructures
+	</description>
+
+	<scm>
+		<connection>scm:https://svn.d4science.research-infrastructures.eu/gcube/trunk/vo-management/${project.artifactId}</connection>
+		<developerConnection>scm:https://svn.d4science.research-infrastructures.eu/gcube/trunk/vo-management/${project.artifactId}</developerConnection>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/vo-management/${project.artifactId}</url>
+	</scm>
+
+
+	<properties>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+		<configDirectory>${project.basedir}/config</configDirectory>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-smartgears-bom</artifactId>
+				<version>2.0.0-4.1.0-132329</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-smartgears</artifactId>
+						<!--  <version>[1.0.0-SNAPSHOT,1.2.7)</version>-->
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-encryption</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-smartgears-app</artifactId>
+					<!--  	<version>[1.0.0-SNAPSHOT,1.2.7)</version>-->
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources</groupId>
+			<artifactId>common-gcore-resources</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>ic-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>authorization-client</artifactId>
+			<version>2.0.0-4.1.0-132581</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources.federation</groupId>
+			<artifactId>fhn-manager-api</artifactId>
+			<version>1.2.0-4.1.0-132922</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources.federation</groupId>
+			<artifactId>fhn-occi-connector</artifactId>
+			<version>1.1.0-4.1.0-133359</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+			<version>1.16</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.esotericsoftware.yamlbeans</groupId>
+			<artifactId>yamlbeans</artifactId>
+			<version>1.08</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet</artifactId>
+			<version>2.22.1</version>
+		</dependency>
+		<!-- <dependency> <groupId>org.codehaus.jackson</groupId> <artifactId>jackson-jaxrs</artifactId> 
+			<version>1.9.2</version> </dependency> -->
+			    <dependency>
+       <groupId>org.glassfish.jersey.media</groupId>
+       <artifactId>jersey-media-json-jackson</artifactId>
+       <version>2.23.1</version>
+    </dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>2.22.1</version>
+		</dependency>
+		<!--- <dependency> <groupId>org.gcube.resources.discovery</groupId> <artifactId>ic-client</artifactId> 
+			<version>1.0.1-SNAPSHOT</version> </dependency> -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.4</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,6 @@
+scope # /gcube/devsec
+jdl # test/jdlExamples/jdlExample4.jdl
+chokeProgressEvents # false
+chokePerformanceEvents # false
+storePlans # true
+Concat.sh # url # ftp://meteora.di.uoa.gr/d5s/Concat.sh

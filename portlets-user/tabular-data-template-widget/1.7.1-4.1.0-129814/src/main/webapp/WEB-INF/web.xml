@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>tdtemplate</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdtemplate.server.TdTemplateServiceImpl</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>templateColumnOperationService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdtemplateoperation.server.TemplateColumnOperationServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- GWT TABULAR DATA SERVICE -->
+	<servlet>
+		<servlet-name>TDGWTService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.TDGWTServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>tdTemplateServiceImpl</servlet-name>
+		<url-pattern>/TabularDataTemplate/tdtemplate</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>templateColumnOperationService</servlet-name>
+		<url-pattern>/TabularDataTemplate/templateColumnOperationService</url-pattern>
+	</servlet-mapping>
+	
+	<!-- MAPPING GWT TABULAR DATA SERVICE -->
+	<servlet-mapping>
+		<servlet-name>TDGWTService</servlet-name>
+		<url-pattern>/TabularDataTemplate/TDGWTService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/TabularDataTemplate/junithost/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/org.gcube.portlets.user.tdtemplate.TabularDataTemplateJUnit/junithost/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>tdtemplate</servlet-name>
+		<url-pattern>/org.gcube.portlets.user.tdtemplate.TabularDataTemplateJUnit/TabularDataTemplate/tdtemplate</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>TabularDataTemplate.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

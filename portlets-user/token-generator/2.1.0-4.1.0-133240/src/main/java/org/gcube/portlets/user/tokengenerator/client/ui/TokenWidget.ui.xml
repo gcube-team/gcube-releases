@@ -1,0 +1,112 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:m="urn:import:org.gcube.portlets.user.tokengenerator.client.ui">
+	<ui:style>
+	.buttons-commands {
+		margin-top: 5px;
+	}
+	
+	.hide-advanced-button {
+		margin-top: 5px;
+	}
+	</ui:style>
+	<g:HTMLPanel styleName="token-frame" ui:field="tokenPanel">
+		<g:SimplePanel width="100%">
+			<b:Popover ui:field="popover">
+				<b:Button ui:field="infoButton" type="LINK" icon="INFO_SIGN"
+					size="LARGE"></b:Button>
+			</b:Popover>
+		</g:SimplePanel>
+
+		<!-- Loading part -->
+		<m:LoadingText ui:field="loader" visible="false" />
+
+		<!-- Error panel part when auth is not reachable -->
+		<g:VerticalPanel ui:field="serviceUnavailablePanel"
+			width="100%" visible="false">
+			<b:AlertBlock type="ERROR"
+				text="Sorry, it is not possible to contact the service!" close="false"></b:AlertBlock>
+		</g:VerticalPanel>
+
+		<!-- Portlet information -->
+		<g:VerticalPanel width="100%" ui:field="placeHolder">
+			<b:Form type="VERTICAL" ui:field="formTokenUsername">
+
+				<!-- Username -->
+				<b:ControlGroup ui:field="currentUsernameInfo"
+					visible="false">
+					<b:ControlLabel for="username">
+						<b>Your Username</b>
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="XLARGE" b:id="username"
+							ui:field="currentUsername" readOnly="true" title="Your current username"></b:TextBox>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<!-- Token -->
+				<b:ControlGroup>
+					<b:ControlLabel for="token">
+						<b>Your Token</b>
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="XLARGE" b:id="token" ui:field="tokenClear"
+							readOnly="true" visible="false"></b:TextBox>
+						<b:PasswordTextBox alternateSize="XLARGE" b:id="token"
+							ui:field="tokenHide" readOnly="true"></b:PasswordTextBox>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<!-- Advanced panel -->
+				<g:VerticalPanel width="100%" ui:field="advancedPanel"
+					visible="false">
+
+					<!-- List of already created qualified tokens -->
+					<b:ControlGroup ui:field="qualifiedTokensGroupPanel">
+						<b:ControlLabel for="qualifiedtokens">
+							<b>Your qualified Tokens</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:ListBox width="97%" alternateSize="XLARGE" b:id="qualifiedtokens"
+								ui:field="createdQualifiedTokens">
+							</b:ListBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<!-- Create new qualified token -->
+					<b:ControlGroup ui:field="newQualifiedTokenGroup"
+						visible="false">
+						<b:ControlLabel for="qualifier">
+							<b>Qualifier</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox width="96%" b:id="qualifier" ui:field="tokenQualifier"
+								placeholder="Insert a qualifier to be associated to the Token"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<g:FlowPanel>
+						<b:Button ui:field="createNewQualifiedToken" icon="PLUS"
+							title="Create a new qualified Token" visible="false"></b:Button>
+						<b:Button ui:field="generateButton" visible="false" type="PRIMARY"
+							title="Generate a new qualified Token">Generate</b:Button>
+					</g:FlowPanel>
+				</g:VerticalPanel>
+
+				<b:AlertBlock ui:field="alertArea" visible="false"></b:AlertBlock>
+
+				<g:FlowPanel styleName="{style.buttons-commands}">
+					<b:Button text="Show" ui:field="showToken"></b:Button>
+					<b:Button ui:field="hideAdvancedTokenGeneration" type="LINK"
+						styleName="{style.hide-advanced-button}" title="Hide advanced token generation functionalities"
+						visible="false">Hide</b:Button>
+					<b:Button ui:field="advancedTokenGeneration" type="LINK"
+						styleName="{style.hide-advanced-button}" visible="true"
+						title="Show advanced token generation functionalities">Advanced</b:Button>
+				</g:FlowPanel>
+
+			</b:Form>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

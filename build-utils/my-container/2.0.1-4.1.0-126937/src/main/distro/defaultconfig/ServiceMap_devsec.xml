@@ -1,0 +1,6 @@
+<ServiceMap>	
+	<Service name ="ISICAllQueryPT" endpoint ="http://dlib01.isti.cnr.it:8080/wsrf/services/gcube/informationsystem/collector/XQueryAccess"/>
+	<Service name ="ISICAllRegistrationPT" endpoint ="http://dlib01.isti.cnr.it:8080/wsrf/services/gcube/informationsystem/collector/Sink"/>  
+	<Service name ="ISICAllCollectionPT" endpoint ="http://dlib01.isti.cnr.it:8080/wsrf/services/gcube/informationsystem/collector/wsdaix/XMLCollectionAccess"/>
+	<Service name ="ISICAllStoragePT" endpoint ="http://dlib01.isti.cnr.it:8080/wsrf/services/gcube/informationsystem/collector/XMLStorageAccess"/>
+</ServiceMap>

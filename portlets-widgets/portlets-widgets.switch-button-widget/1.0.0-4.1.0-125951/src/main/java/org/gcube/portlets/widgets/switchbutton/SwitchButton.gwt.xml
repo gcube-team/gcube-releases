@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='switchbutton'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Other module inherits -->
+	<!-- inherits gCube Widgets Library -->
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+	<inherits name='com.google.gwt.query.Query' />
+	<stylesheet src='switchbutton.css' />
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

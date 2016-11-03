@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+@import url('datamanagementfacility/old-dialog.css');
+
+.x-grid-panel .x-livegrid-scroller {
+  width: auto;
+  padding-left: 1px;
+}
+.x-grid3-row-expanded {
+ -webkit-user-select: text !important;
+ -o-user-select: text !important;
+ -khtml-user-select: all !important;
+ -ms-user-select: text !important;
+ user-select: text !important;
+ -moz-user-select: text !important;
+}
+

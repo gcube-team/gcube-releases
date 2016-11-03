@@ -1,0 +1,62 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.image-preview {
+		align: left;
+		margin: 5px;
+		display: inline;
+		height: 40px;
+		width: 40px;
+		overflow: hidden;
+		float: left;
+		border: 1px solid #DDD;
+		border-radius: 4px;
+	}
+	
+	.container-style {
+		padding: 5px;
+		font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+		background-clip: border-box;
+		background-color: #FBFBFB;
+		background-image: none;
+		border: 1px solid #DDD;
+		border-radius: 4px;
+		margin: 5px;
+		display: inline-block;
+		width: 95%;
+	}
+	
+	.label-filename-style {
+		overflow-x: hidden;
+		margin-left: 5px;
+	}
+	
+	.label-show {
+		font-weight: bold;
+		margin-left: 5px;
+	}
+	
+	.label-download {
+		font-weight: bold;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	
+	.display-inline-style {
+		display: inline-block;
+		margin-right: 5px;
+	}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.container-style}" ui:field="attachmentContainer">
+		<g:Image styleName="{style.image-preview}" ui:field="imagePreview"></g:Image>
+		<g:VerticalPanel styleName="{style.display-inline-style}">
+			<g:Label ui:field="fileNameLabel" styleName="{style.label-filename-style}"></g:Label>
+			<g:HorizontalPanel>
+				<g:Anchor ui:field="downloadLabel" styleName="{style.label-download}"></g:Anchor>
+				<g:Label ui:field="labelSeparator">-</g:Label>
+				<g:Anchor ui:field="showPreviewLabel" styleName="{style.label-show}"></g:Anchor>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,51 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def specialColumnGradient value('theme.grid.specialColumnGradient');
+@def specialColumnGradientSelected value('theme.grid.specialColumnGradientSelected');
+
+.cell {
+  padding: 2px 0px 0px 2px !important;
+}
+
+.cellInner {
+  padding: 4px 0px 0px 0px !important;
+}
+
+.grid-row .cell {
+  vertical-align: top;
+  background: -webkit-linear-gradient(top, specialColumnGradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, specialColumnGradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, specialColumnGradient); /* IE10+ */
+  background: linear-gradient(to bottom, specialColumnGradient); /* W3C */
+}
+
+.grid-rowSelected .cell {
+  background: -webkit-linear-gradient(top, specialColumnGradientSelected); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, specialColumnGradientSelected); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, specialColumnGradientSelected); /* IE10+ */
+  background: linear-gradient(to bottom, specialColumnGradientSelected); /* W3C */
+}
+
+@sprite .rowChecker, .hdChecker {
+  gwt-image: 'unchecked';
+  height: 18px;
+}
+
+@sprite .grid-rowSelected .rowChecker, .headerChecked .hdChecker {
+  gwt-image: 'checked';
+  height: 18px;
+}
+
+.rowChecker, .hdChecker {
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.hdChecker {
+  padding-bottom: 0px !important;
+}

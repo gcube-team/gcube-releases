@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="GCUBEProvider"
+    targetNamespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+    xmlns:tns="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" 
+    xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+    xmlns:wsrlw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl"
+    xmlns:wsrl="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.xsd"
+    xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+
+    <wsdl:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" location="../../../../wsrf/properties/WS-ResourceProperties.wsdl" />
+    <wsdl:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl" location="../../../../wsrf/lifetime/WS-ResourceLifetime.wsdl" />
+    <wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../faults/GCUBEFaults.wsdl"/>
+
+
+<!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+
+<types>
+
+	<xsd:schema targetNamespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:tns="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.xsd" schemaLocation="../../../../wsrf/lifetime/WS-ResourceLifetime.xsd" />
+	
+	<xsd:include  schemaLocation="./GCUBEProvider.xsd"/>
+
+
+
+	<xsd:element name="GCUBEProviderRPs">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="tns:GHN" minOccurs="1" maxOccurs="1"/>
+				<xsd:element ref="tns:RI" minOccurs="1" maxOccurs="1"/>
+				<xsd:element ref="tns:ServiceID" minOccurs="1" maxOccurs="1"/>
+				<xsd:element ref="tns:ServiceName" minOccurs="1" maxOccurs="1"/>
+				<xsd:element ref="tns:ServiceClass" minOccurs="1" maxOccurs="1"/>
+				<xsd:element ref="tns:VO" minOccurs="1" maxOccurs="1"/>
+				<xsd:element ref="tns:Scope" minOccurs="1" maxOccurs="unbounded"/>
+                <xsd:element maxOccurs="1" minOccurs="1" ref="wsrl:CurrentTime"/>
+                <xsd:element maxOccurs="1" minOccurs="1" ref="wsrl:TerminationTime"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+ 
+</xsd:schema>
+
+
+
+</types>
+
+
+<!--============================================================
+
+                       M E S S A G E S
+                      
+  ============================================================-->
+
+
+
+<!--============================================================
+
+                       P O R T T Y P E
+                      
+  ============================================================--> 
+<portType name="GCUBEProvider" wsrp:ResourceProperties="tns:GCUBEProviderRPs">   
+	
+  	<operation name="GetMultipleResourceProperties">
+      <input name="GetMultipleResourcePropertiesRequest" message="wsrpw:GetMultipleResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetMultipleResourceProperties"/>
+      <output name="GetMultipleResourcePropertiesResponse" message="wsrpw:GetMultipleResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetMultipleResourcePropertiesResponse"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+    </operation>
+    <operation name="GetResourceProperty">
+      <input name="GetResourcePropertyRequest" message="wsrpw:GetResourcePropertyRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourceProperty"/>
+      <output name="GetResourcePropertyResponse" message="wsrpw:GetResourcePropertyResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourcePropertyResponse"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+    </operation>
+    <operation name="Destroy">
+      <input message="wsrlw:DestroyRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/Destroy"/>
+      <output message="wsrlw:DestroyResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/DestroyResponse"/>
+      <fault name="ResourceNotDestroyedFault" message="wsrlw:ResourceNotDestroyedFault"/>
+      <fault name="ResourceUnknownFault" message="wsrlw:ResourceUnknownFault"/>
+    </operation>
+    <operation name="QueryResourceProperties">
+      <input name="QueryResourcePropertiesRequest" message="wsrpw:QueryResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/QueryResourceProperties"/>
+      <output name="QueryResourcePropertiesResponse" message="wsrpw:QueryResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/QueryResourcePropertiesResponse"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <fault name="InvalidQueryExpressionFault" message="wsrpw:InvalidQueryExpressionFault"/>
+      <fault name="QueryEvaluationErrorFault" message="wsrpw:QueryEvaluationErrorFault"/>
+      <fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+      <fault name="UnknownQueryExpressionDialectFault" message="wsrpw:UnknownQueryExpressionDialectFault"/>
+    </operation>
+    <operation name="SetResourceProperties">
+      <input name="SetResourcePropertiesRequest" message="wsrpw:SetResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/SetResourceProperties"/>
+      <output name="SetResourcePropertiesResponse" message="wsrpw:SetResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/SetResourcePropertiesResponse"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <fault name="UnableToModifyResourcePropertyFault" message="wsrpw:UnableToModifyResourcePropertyFault"/>
+      <fault name="SetResourcePropertyRequestFailedFault" message="wsrpw:SetResourcePropertyRequestFailedFault"/>
+      <fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+      <fault name="InvalidSetResourcePropertiesRequestContentFault" message="wsrpw:InvalidSetResourcePropertiesRequestContentFault"/>
+    </operation>
+    <operation name="SetTerminationTime">
+      <input message="wsrlw:SetTerminationTimeRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/SetTerminationTime"/>
+      <output message="wsrlw:SetTerminationTimeResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/SetTerminationTimeResponse"/>
+      <fault message="wsrlw:UnableToSetTerminationTimeFault" name="UnableToSetTerminationTimeFault"/>
+      <fault message="wsrlw:ResourceUnknownFault" name="ResourceUnknownFault"/>
+      <fault message="wsrlw:TerminationTimeChangeRejectedFault" name="TerminationTimeChangeRejectedFault"/>
+    </operation>
+    
+</portType>
+
+</definitions>

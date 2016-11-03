@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>AquaMapsSpeciesView</display-name>
+
+	<description>
+		Provides AquaMapsSpeciesView
+	</description>
+
+	<listener>
+		<listener-class>org.gcube.application.aquamaps.aquamapsspeciesview.servlet.Initializator</listener-class>
+	</listener>
+
+
+
+	<listener>
+		<listener-class>org.gcube.application.aquamaps.aquamapsspeciesview.servlet.SessionListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>AquaMapsSpeciesViewLocalImpl</servlet-name>
+		<servlet-class>org.gcube.application.aquamaps.aquamapsspeciesview.servlet.AquaMapsSpeciesViewLocalServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SpeciesServlet</servlet-name>
+		<servlet-class>org.gcube.application.aquamaps.aquamapsspeciesview.servlet.SpeciesServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>PhylogenyServlet</servlet-name>
+		<servlet-class>org.gcube.application.aquamaps.aquamapsspeciesview.servlet.PhylogenyServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ResourceServlet</servlet-name>
+		<servlet-class>org.gcube.application.aquamaps.aquamapsspeciesview.servlet.ResourceServlet</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>ImageServlet</servlet-name>
+		<servlet-class>org.gcube.application.aquamaps.aquamapsspeciesview.servlet.ImageServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>MapServlet</servlet-name>
+		<servlet-class>org.gcube.application.aquamaps.aquamapsspeciesview.servlet.MapServlet</servlet-class>
+	</servlet>
+
+
+
+	<!-- Session checker -->
+
+	<servlet>
+		<servlet-name>checkServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.sessionchecker.server.SessionCheckerServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- Workspace explorer -->
+	<servlet>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsexplorer.server.WorkspaceExplorerServiceImpl</servlet-class>
+	</servlet>
+
+
+
+	<servlet>
+		<servlet-name>MapGenerator</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gisviewer.server.MapGenerator</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MapGenerator</servlet-name>
+		<url-pattern>/aquamapsspeciesview/MapGenerator</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>AquaMapsSpeciesViewLocalImpl</servlet-name>
+		<url-pattern>/aquamapsspeciesview/AquaMapsSpeciesViewLocalImpl</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SpeciesServlet</servlet-name>
+		<url-pattern>/aquamapsspeciesview/SpeciesServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PhylogenyServlet</servlet-name>
+		<url-pattern>/aquamapsspeciesview/PhylogenyServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ResourceServlet</servlet-name>
+		<url-pattern>/aquamapsspeciesview/ResourceServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>ImageServlet</servlet-name>
+		<url-pattern>/aquamapsspeciesview/ImageServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MapServlet</servlet-name>
+		<url-pattern>/aquamapsspeciesview/MapServlet</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet-mapping>
+		<servlet-name>checkServlet</servlet-name>
+		<url-pattern>/aquamapsspeciesview/checksession</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<url-pattern>/aquamapsspeciesview/WorkspaceExplorerService</url-pattern>
+	</servlet-mapping>
+
+</web-app>

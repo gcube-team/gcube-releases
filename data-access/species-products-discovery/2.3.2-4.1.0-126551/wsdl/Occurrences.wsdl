@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="Occurrences"
+	targetNamespace="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+	xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:tns="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+	xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+	xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+	xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types">
+
+	<import
+		namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		location="../gcube/common/core/providers/GCUBEProvider.wsdl" />
+
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+		location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+
+	<wsdl:import namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" 
+		location="../wsrf/notification/WS-BaseN.wsdl"/>
+	
+
+	<wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+
+
+
+	<!--
+		============================================================ T Y P E S
+
+		============================================================
+	-->
+	<types>
+		<xsd:schema
+			targetNamespace="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+			xmlns:tns="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+			<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+				schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+
+			<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" />
+		
+		
+
+		<xsd:element name="getByIdsRequest" type="xsd:string"/>
+		<xsd:element name="getByIdsResponse" type="xsd:string"/>
+		
+		<xsd:element name="getByKeysRequest" type="xsd:string"/>
+		<xsd:element name="getByKeysResponse" type="xsd:string"/>
+		
+		<xsd:element name="createLayerRequest" type="xsd:string"/>
+		<xsd:element name="createLayerResponse" type="xsd:string"/>
+
+		</xsd:schema>
+	</types>
+
+	<message name="GetByIdsRequest">
+		<part name="request" element="tns:getByIdsRequest" />
+	</message>
+	<message name="GetByIdsResponse">
+		<part name="response" element="tns:getByIdsResponse" />
+	</message>
+	
+	<message name="GetByKeysRequest">
+		<part name="request" element="tns:getByKeysRequest" />
+	</message>
+	<message name="GetByKeysResponse">
+		<part name="response" element="tns:getByKeysResponse" />
+	</message>
+	
+	<message name="CreateLayerRequest">
+		<part name="request" element="tns:createLayerRequest" />
+	</message>
+	<message name="CreateLayerResponse">
+		<part name="response" element="tns:createLayerResponse" />
+	</message>
+
+
+	<portType name="OccurrencesPortType"> 
+		
+		<operation name="getByIds">
+			<input message="tns:GetByIdsRequest" />
+			<output message="tns:GetByIdsResponse" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+		<operation name="getByKeys">
+			<input message="tns:GetByKeysRequest" />
+			<output message="tns:GetByKeysResponse" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+		<operation name="createLayer">
+			<input message="tns:CreateLayerRequest" />
+			<output message="tns:CreateLayerResponse" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+	</portType>
+
+
+</definitions>

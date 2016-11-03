@@ -1,0 +1,319 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>org.gcube.portal</groupId>
+	<artifactId>social-networking-library-ws</artifactId>
+	<packaging>war</packaging>
+	<version>1.3.0-4.1.0-133605</version>
+	<name>social-networking-library-ws</name>
+	<description>Rest interface for the social networking library.</description>
+	<properties>
+		<java-version>1.7</java-version>
+		<liferay-version>6.2.5</liferay-version>
+		<version.jersey>2.22.1</version.jersey>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+		<distroDirectory>distro</distroDirectory>
+		<!-- <enunciate.version>2.6.0</enunciate.version> -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+	</properties>
+
+	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/trunk/portal/${project.artifactId}</connection>
+		<developerConnection>scm:https://svn.d4science.research-infrastructures.eu/gcube/trunk/portal/${project.artifactId}</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/trunk/portal/${project.artifactId}</url>
+	</scm>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-portal-bom</artifactId>
+				<version>3.1.0-4.1.0-132989</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<!-- Generate REST documentation -->
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-jersey2-jaxrs</artifactId>
+			<version>1.5.0</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.socialnetworking</groupId>
+			<artifactId>social-util-library</artifactId>
+			<version>1.0.1-4.1.0-132833</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common.portal</groupId>
+			<artifactId>portal-manager</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.portal</groupId>
+			<artifactId>custom-portal-handler</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>aslcore</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>aslsocial</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.portal</groupId>
+			<artifactId>social-networking-library</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.portal</groupId>
+			<artifactId>notifications-common-library</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.gcube.accounting</groupId> -->
+		<!-- <artifactId>accounting-lib</artifactId> -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>org.gcube.dvos</groupId>
+			<artifactId>usermanagement-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>ic-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-encryption</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>authorization-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>common-authorization</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>portal-service</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.socialnetworking</groupId>
+			<artifactId>social-data-search-client</artifactId>
+			<version>1.1.0-4.1.0-133003</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- Please note that the elasticsearch client needs a compress-lzf version 
+			>= 1.0.2 -->
+		<dependency>
+			<groupId>com.ning</groupId>
+			<artifactId>compress-lzf</artifactId>
+			<version>1.0.3</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<!-- if your container implements Servlet API older than 3.0, use "jersey-container-servlet-core" -->
+			<artifactId>jersey-container-servlet-core</artifactId>
+			<version>${version.jersey}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+			<version>${version.jersey}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-processing</artifactId>
+			<version>${version.jersey}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-multipart</artifactId>
+			<version>${version.jersey}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-sse</artifactId>
+			<version>${version.jersey}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.ext</groupId>
+			<artifactId>jersey-bean-validation</artifactId>
+			<version>${version.jersey}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>1.8</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.test-framework.providers</groupId>
+			<artifactId>jersey-test-framework-provider-jetty</artifactId>
+			<version>2.23.2</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.3</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${name}</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>exploded</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<webappDirectory>${webappDirectory}</webappDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<!-- SA Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>profile.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- Generate REST APIs doc -->
+			<!-- <plugin> -->
+			<!-- <groupId>com.webcohesion.enunciate</groupId> -->
+			<!-- <artifactId>enunciate-maven-plugin</artifactId> -->
+			<!-- <version>${enunciate.version}</version> -->
+			<!-- <executions> -->
+			<!-- <execution> -->
+			<!-- <goals> -->
+			<!-- <goal>docs</goal> -->
+			<!-- </goals> -->
+			<!-- <configuration> -->
+			<!-- <configFile>enunciate.xml</configFile> -->
+			<!-- <docsDir>${project.build.directory}/docs</docsDir> -->
+			<!-- </configuration> -->
+			<!-- </execution> -->
+			<!-- </executions> -->
+			<!-- </plugin> -->
+		</plugins>
+	</build>
+</project>

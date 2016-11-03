@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.rest.resource-manager.2-0-1" date="2014-09-10">
+		<Change>Added memoizer</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.rest.resource-manager.2-0-0" date="2014-06-04">
+		<Change>Changed discoverer API to get ResourceClass</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.rest.resource-manager.1-0-0" date="2014-03-13">
+		<Change>Initial release</Change>
+	</Changeset>
+</ReleaseNotes>

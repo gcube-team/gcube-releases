@@ -1,0 +1,30 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-access.species-products-discovery.1-0-0" date="2012-05-04"> 
+		<Change>species product discovery release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.species-products-discovery.1-1-0" date="2012-09-14"> 
+		<Change>added caching for slow external repository</Change>
+		<Change>added use of SPQL language</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.species-products-discovery.1-3-0" date="2012-11-30"> 
+		<Change>a new port type for jobs execution added</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.species-products-discovery.2-0-0" date="2013-05-02"> 
+		<Change>integration with the spql parser version 2.0.0</Change>
+	</Changeset> 
+	<Changeset component="org.gcube.data-access.species-products-discovery.2-1-0" date="2013-05-02"> 
+		<Change>integration with the spql parser version 2.1.0</Change>
+		<Change>added Worker for unfold</Change>
+		<Change>error file for jobs added</Change>
+		<Change>retry for every calls in case of external repository error</Change>
+	</Changeset> 
+	<Changeset component="org.gcube.data-access.species-products-discovery.2-2-0" date="2013-09-13"> 
+		<Change>support ticket #688 [http://support.d4science.research-infrastructures.eu/ticket/688]</Change>
+	</Changeset> 
+	<Changeset component="org.gcube.data-access.species-products-discovery.2-2-1" date="2013-10-24"> 
+		<Change>task #2299 [https://issue.imarine.research-infrastructures.eu/ticket/2299]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.species-products-discovery.2-3-2" date="2016-03-20"> 
+		<Change>bug fixing</Change>
+	</Changeset>
+</ReleaseNotes>

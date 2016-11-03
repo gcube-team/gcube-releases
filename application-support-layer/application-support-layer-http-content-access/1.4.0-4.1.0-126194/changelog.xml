@@ -1,0 +1,15 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.application-support-layer.asl-http-content-access.1-0-2" date="2013-04-19">
+		<Change>Changed to be compatible with the new Digital Object</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.asl-http-content-access.1-0-1" date="2013-01-29">
+		<Change>Bug Fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.asl-http-content-access.1-0-0" date="2012-07-27">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.asl-http-content-access.1-0-3" date="2013-07-25">
+		<Change>Removed unused dependencies</Change>
+		<Change>Removed MetadataViewer servlet, since metadata collections are not available</Change>
+	</Changeset>
+</ReleaseNotes>

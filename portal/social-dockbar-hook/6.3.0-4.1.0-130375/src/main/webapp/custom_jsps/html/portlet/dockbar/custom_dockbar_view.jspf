@@ -1,0 +1,242 @@
+<%@ page import="org.gcube.common.portal.GCubePortalConstants" %>
+<%@ page import="org.gcube.common.portal.PortalContext" %>
+
+<%
+	PortalContext context = PortalContext.getConfiguration();
+	String groupName = context.getGatewayName(request);
+	String mySiteURL = context.getSiteLandingPagePath(request);
+%>
+
+<script>
+	jQuery(document).ready(function() {
+		
+		//check for notifications on load after 3 seconds
+		var username = "<%=themeDisplay.getUser().getScreenName()%>";
+		
+		// current location to extract the vre and the user profiles within it
+		var location = window.location.href;
+	
+		$.get('/notificationchecker/notificationchecker', {
+			userid : username, location : location
+		}, function(responseText) {
+		});
+		
+		//then repeat every 1.5 minutes
+		setInterval(function() {
+			var username = "<%=themeDisplay.getUser().getScreenName()%>";
+			var location = window.location.href;
+			$.get('/notificationchecker/notificationchecker',{
+				userid : username, location : location
+			}, function(responseText) {
+			});
+		}, 90000); 
+		
+		//search box keyboard handlers
+		$('#searchbox').bind("enterKey",function(e){
+			if ($('#searchbox').val() != "") {
+				if ($('#searchbox').val().indexOf("#") == 0) {
+					if ($('#searchbox').val().indexOf(" ") >= 0) {
+						alert('Sorry, spaces not allowed when searching for topics!');
+						return;
+					}					
+					var base64hashtag = btoa($('#searchbox').val());
+					var base64attr = btoa("hashtagIdentificationParameter");
+					
+					if (window.location.href.indexOf("<%=mySiteURL%>") >= 0) {
+						window.location.href = "<%=mySiteURL%>?"+base64attr+"="+ base64hashtag;
+					} 
+					else {
+						//this is when you are in a VRE and you want to search in that VRE, count the slashes to get where to point
+						//you always want to point to /group/vrename
+						var newhref = window.location.href;
+						if (window.location.href.indexOf("?") >= 0) {
+							newhref = window.location.href.split("?")[0];
+						}
+						var count = newhref.split("/").length-1;
+						if (count > 4)
+							window.location.href = newhref + "/../?"+base64attr+"="+ base64hashtag;
+						else
+							window.location.href = newhref + "?"+base64attr+"="+ base64hashtag;
+					}
+					
+				}
+				else {
+					var base64hashtag = btoa($('#searchbox').val());
+					var base64attr = btoa("elasticSearchIdentificationParameter");
+					if (window.location.href.indexOf("<%=mySiteURL%>") >= 0) {
+						window.location.href = "<%=mySiteURL%>?"+base64attr+"="+ base64hashtag;
+					} 
+					else {
+						//this is when you are in a VRE and you want to search in that VRE, count the slashes to get where to point
+						//you always want to point to /group/vrename
+						var newhref = window.location.href;
+						if (window.location.href.indexOf("?") >= 0) {
+							newhref = window.location.href.split("?")[0];
+						}
+						var count = newhref.split("/").length-1;
+						if (count > 4)
+							window.location.href = newhref + "/../?"+base64attr+"="+ base64hashtag;
+						else
+							window.location.href = newhref + "?"+base64attr+"="+ base64hashtag;
+					}
+				}
+					
+			}
+		});
+		
+		$('#searchbox').keyup(function(e){
+			if(e.keyCode == 13)
+			{
+			  $(this).trigger("enterKey");
+			}
+		});
+		//remove placeholder text on click
+		$('#searchbox').click(function() {
+			$('#searchbox').attr("placeholder", "");
+		});
+		
+		$('#searchbox-phone').keyup(function(e){
+			if(e.keyCode == 13)
+			{
+			  $(this).trigger("enterKey");
+			}
+		});
+		//remove placeholder text on click
+		$('#searchbox-phone').click(function() {
+			$('#searchbox-phone').attr("placeholder", "");
+		});
+		
+		//search box keyboard handlers
+		$('#searchbox-phone').bind("enterKey",function(e){
+			if ($('#searchbox-phone').val() != "") {
+				if ($('#searchbox-phone').val().indexOf("#") == 0) {
+					if ($('#searchbox-phone').val().indexOf(" ") >= 0) {
+						alert('Sorry, spaces not allowed when searching for topics!');
+						return;
+					}					
+					var base64hashtag = btoa($('#searchbox-phone').val());
+					var base64attr = btoa("hashtagIdentificationParameter");
+					if (window.location.href.indexOf("<%=mySiteURL%>") >= 0) {
+						window.location.href = "<%=mySiteURL%>?"+base64attr+"="+ base64hashtag;
+					} 
+					else {
+						//this is when you are in a VRE and you want to search in that VRE, count the slashes to get where to point
+						//you always want to point to /group/vrename
+						var newhref = window.location.href;
+						if (window.location.href.indexOf("?") >= 0) {
+							newhref = window.location.href.split("?")[0];
+						}
+						var count = newhref.split("/").length-1;
+						if (count > 4)
+							window.location.href = newhref + "/../?"+base64attr+"="+ base64hashtag;
+						else
+							window.location.href = newhref + "?"+base64attr+"="+ base64hashtag;
+					}
+					
+				}
+				else {
+					var base64hashtag = btoa($('#searchbox-phone').val());
+					var base64attr = btoa("elasticSearchIdentificationParameter");
+					if (window.location.href.indexOf("<%=mySiteURL%>") >= 0) {
+						window.location.href = "<%=mySiteURL%>?"
+																+ base64attr
+																+ "="
+																+ base64hashtag;
+													} else {
+														//this is when you are in a VRE and you want to search in that VRE, count the slashes to get where to point
+														//you always want to point to /group/vrename
+														var newhref = window.location.href;
+														if (window.location.href
+																.indexOf("?") >= 0) {
+															newhref = window.location.href
+																	.split("?")[0];
+														}
+														var count = newhref
+																.split("/").length - 1;
+														if (count > 4)
+															window.location.href = newhref
+																	+ "/../?"
+																	+ base64attr
+																	+ "="
+																	+ base64hashtag;
+														else
+															window.location.href = newhref
+																	+ "?"
+																	+ base64attr
+																	+ "="
+																	+ base64hashtag;
+													}
+												}
+
+											}
+										});
+					});
+</script>
+<!-- When desktop -->
+<div class="collapse nav-collapse">
+	<ul class="nav nav-add-controls">
+		<li class="dockbar-item"><a class=""
+			href="<%=mySiteURL%>" id="homeIcon"
+			title="<%=groupName%> Home"> <i
+				class="icon-home" style="font-size: 24px;"></i>
+		</a></li>
+		<li class="dockbar-item"><a class=""
+			href="<%=mySiteURL+ GCubePortalConstants.USER_WORKSPACE_FRIENDLY_URL%>" id="wsIcon"
+			alt='Workspace' title='Virtual Workspace'> <i
+				class="icon-folder-open" style="font-size: 24px;"></i>
+		</a></li>
+		<li class="dockbar-item"><a class=""
+			href="<%=mySiteURL + GCubePortalConstants.CATALOGUE_FRIENDLY_URL%>" id="catalougueIcon"
+			alt='See Data Catalogue' title='Data Catalogue'> <i
+				class="icon-book" style="font-size: 24px;"></i>
+		</a></li>
+		<li class="dockbar-item"><a class=""
+			href="<%=mySiteURL + GCubePortalConstants.USER_MESSAGES_FRIENDLY_URL%>" id="messagesIcon"
+			alt='See Messages' title='Messages'> <i class="icon-envelope"
+				style="font-size: 24px;"></i>
+		</a></li>
+	</ul>
+</div>
+<div class="collapse nav-collapse">
+	<ul class="nav nav-add-controls">
+		<li class="dockbar-item"><input id="searchbox" type="text"
+			placeholder="Search News Feed"></li>
+	</ul>
+</div>
+<!-- When phone or tablet -->
+<span><a class="btn btn-navbar"
+	href="<%=mySiteURL%>" id="homeIcon"
+	title="<%=groupName%> Infrastructure Gateway Home"> <i
+		class="icon-home" style="font-size: 24px;"></i>
+	</a>
+</span>
+<span> <a class="btn btn-navbar"
+	href="<%=mySiteURL + GCubePortalConstants.USER_WORKSPACE_FRIENDLY_URL%>" id="wsIcon"
+	alt='Workspace' title='Virtual Workspace'> <i
+		class="icon-folder-open" style="font-size: 24px;"></i>
+</a>
+</span>
+<span> <a class="btn btn-navbar"
+	href="<%=mySiteURL + GCubePortalConstants.CATALOGUE_FRIENDLY_URL%>" id="catalougueIcon"
+	alt='See Data Catalogue' title='Data Catalogue'> <i class="icon-book"
+		style="font-size: 24px;"></i>
+</a>
+<span> <a class="btn btn-navbar"
+	href="<%=mySiteURL + GCubePortalConstants.USER_MESSAGES_FRIENDLY_URL%>" id="messagesIcon"
+	alt='See Messages' title='Messages'> <i class="icon-envelope"
+		style="font-size: 24px;"></i>
+</a>
+</span>
+<c:choose>
+	<c:when test="<%=themeDisplay.isShowControlPanelIcon()%>">
+		<span class="btn btn-navbar"> <input id="searchbox-phone"
+			type="text" style="width: 70px;" placeholder="Search ...">
+		</span>
+	</c:when>
+	<c:otherwise>
+		<span class="btn btn-navbar"> <input id="searchbox-phone"
+			type="text" placeholder="Search News Feed">
+		</span>
+	</c:otherwise>
+</c:choose>
+<!-- End When phone or tablet -->
