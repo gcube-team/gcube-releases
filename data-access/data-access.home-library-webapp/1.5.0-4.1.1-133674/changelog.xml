@@ -1,0 +1,34 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-access.home-library-webapp.1.0.0"
+		date="2015-07-01">
+		<Change>First commit</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.home-library-webapp.1.1.0"
+		date="2015-10-12">
+		<Change>Using jackrabbit locks</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.home-library-webapp.1.2.0"
+		date="2016-01-20">
+		<Change>Feature #1786: HomeLIbrary: Enhance Messages performance
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.home-library-webapp.1.3.0"
+		date="2016-04-20">
+		<Change>Enhance HL performance
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.home-library-webapp.1.4.0"
+		date="2016-06-23">
+		<Change>TTL cache for jackrabbit sessions
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.home-library-webapp.1.5.0"
+		date="2016-09-30">
+		<Change>Feature #3782: Added guest user;
+		</Change>
+		<Change>Feature #5093: Show public folders in a special folders;
+		</Change>
+		<Change>Feature #5092: Add public access to history;</Change>
+		<Change>Feature #4186: Added support to catalogue;</Change>
+	</Changeset>
+</ReleaseNotes>

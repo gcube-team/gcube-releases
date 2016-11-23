@@ -1,0 +1,159 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>org.gcube.execution</groupId>
+	<artifactId>rrgcubebridge</artifactId>
+	<version>1.9.0-4.1.1-126502</version>
+	<packaging>jar</packaging>
+
+	<name>RRGCubeBridge</name>
+	<description>Resource Registry GCube Bridge</description>
+
+	<scm>
+		<connection>scm:https://svn.d4science.research-infrastructures.eu/gcube/branches/resource-registry/RRGCubeBridge/1.9/RRGCubeBridge</connection>
+		<developerConnection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/branches/resource-registry/RRGCubeBridge/1.9/RRGCubeBridge</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/branches/resource-registry/RRGCubeBridge/1.9/RRGCubeBridge</url>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<distroDirectory>distro</distroDirectory>
+	</properties>
+
+	<dependencies>
+	
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.2</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.execution</groupId>
+			<artifactId>madgikcommonslibrary</artifactId>
+			<version>1.5.0-4.1.1-124895</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.execution</groupId>
+			<artifactId>rraggregator-no-deps</artifactId>
+			<version>1.5.0-4.1.1-124889</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.execution</groupId>
+			<artifactId>rrmodel</artifactId>
+			<version>1.9.0-4.1.1-126259</version>
+			<!-- <version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version> -->
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common.rest</groupId>
+			<artifactId>resource-manager</artifactId>
+			<version>2.0.1-4.1.1-125822</version>
+			
+			<exclusions>
+				<exclusion>
+					<groupId>org.jboss.resteasy</groupId>
+					<artifactId>resteasy-client</artifactId>
+		        </exclusion>
+		        <exclusion>
+				        <groupId>org.jboss.resteasy</groupId>
+						<artifactId>jaxrs-api</artifactId>
+		        </exclusion>
+			</exclusions>
+			
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>org.gcube.common.rest</groupId>
+			<artifactId>resource-manager-is</artifactId>
+			<version>2.0.2-4.1.1-126683</version>
+		</dependency> 
+		
+		
+		<dependency>
+			<groupId>org.gcube.common.rest</groupId>
+			<artifactId>resource-aware-commons</artifactId>
+			<version>2.0.0-4.1.1-126048</version>
+			<exclusions>
+		        <exclusion>
+				        <groupId>org.jboss.resteasy</groupId>
+						<artifactId>jaxrs-api</artifactId>
+		        </exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.3</version>
+		</dependency>
+
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>profile.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

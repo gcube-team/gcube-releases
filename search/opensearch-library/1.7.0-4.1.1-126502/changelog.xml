@@ -1,0 +1,51 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.search.opensearch-library.1-0-0" date="2010-09-03">
+		<Change>First release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearch-library.1-1-0" date="2010-10-22">
+		<Change>Added multiple encoding support</Change>
+		<Change>Improved pager in order to work both in the presence and in the absence of OpenSearch response elements</Change>
+		<Change>Improved element extensibility pattern. Factories are now constructed dynamically, based on a mapping residing in the configuration class</Change>
+		<Change>Fixed a bug which caused the operator to ignore response query elements</Change>
+		<Change>Fixed a bug that could result in the omission of certain records in providers for which the startIndex parameter is used for paging</Change>
+		<Change>Fixed a minor bug which could cause problems if an XSLT was attempted to be added in the XSLT cache of an ISOpenSearchResource when caching is disabled</Change>
+		<Change>Corrected result counting logic in the case of brokered providers with the result limit enabled</Change>
+		<Change>Improved namespace lookup in query elements and attributes</Change>
+		<Change>Whitespace is trimmed away from integral and other non-textual elements and attributes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearch-library.1-1-1" date="2010-11-08">
+		<Change>Corrected a constant typo that could prevent the startIndex attribute of query elements from being initialized.</Change>
+		<Change>Enabled fixed parameter processing for direct providers in addition to brokered ones</Change>
+		<Change>Fixed a bug in the query parser which prevented parameters containing space from being properly parsed</Change>
+	</Changeset>	
+	<Changeset component="org.gcube.search.opensearch-library.1-2-0" date="2010-11-18">
+		<Change>Made some corrections in extensibility mechanism</Change>
+		<Change>Added library extensions for Geo and Time OpenSearch extensions</Change>
+		<Change>Reserved characters are replaced in unique identifier elements</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearch-library.1-3-0" date="2011-02-07">
+		<Change>Ported to latest version of GRS2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearch-library.1-4-0" date="2011-07-01">
+		<Change>Added SRU OpenSearch extension</Change>
+		<Change>OpenSearch resources now handle presentation information</Change>
+		<Change>Updated result production to support presentable fields</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearch-library.1-4-1" date="2011-07-29">
+		<Change>Fixed bug which prevented result extraction from empty presentable fields</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearch-library.1-5-0" date="2011-09-02">
+		<Change>Fixed xml namespace handling in xpath evaluation</Change>
+		<Change>Added parameter information to OpenSearchResource construct in order to support automatic field update</Change>
+	</Changeset>
+		<Changeset component="org.gcube.search.opensearch-library.1-5-1" date="2012-05-04">
+		<Change>Aligned with latest version of gRS2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearch-library.1-6-0" date="2012-09-06">
+		<Change>Turned to Maven</Change>
+		<Change>Java logger replaced by slf4</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearch-library.1-6-1" date="2013-03-05">
+		<Change>Minor bug fixes.</Change>
+	</Changeset>
+</ReleaseNotes>

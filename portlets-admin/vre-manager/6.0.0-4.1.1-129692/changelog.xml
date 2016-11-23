@@ -1,0 +1,21 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.portlets-admin.vre-manager.5-3-0" date="2015-10-05">
+		<Change>added possibility to Undeploy a VRE, Feature #849</Change>
+		<Change>moved to GWT 2.7.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.vre-manager.5-2-0" date="2015-04-28">
+		<Change>added possibility to postpone VRE expiration time of six
+			months</Change>
+		<Change>moved to GWT 2.7.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.vre-manager.5-1-0"
+		date="2014-06-06">
+		<Change>Ported to Feather Weight Stack Portal</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.vre-manager.5-0-0"
+		date="2013-10-21">
+		<Change>Ported to Feather Weight Stack</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+</ReleaseNotes>

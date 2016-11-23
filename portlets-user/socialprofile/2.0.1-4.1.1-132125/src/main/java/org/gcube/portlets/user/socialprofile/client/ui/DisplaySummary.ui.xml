@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<g:HTMLPanel styleName="profile-section">
+		<div class="profile-section-title" width="100%;" align="left">
+			<span>Professional Background</span>
+		</div>
+		<div width="100%;" align="left">
+			<g:HTML ui:field="summary" styleName="summary"></g:HTML>
+			<g:TextArea visible="false" styleName="editingArea" ui:field="summaryEditingArea" visibleLines="10"></g:TextArea>
+		</div>
+		<b:AlertBlock ui:field="alertBlock" width="98%" visible="false" close="false"></b:AlertBlock>
+		<g:FlowPanel>
+		<g:Button ui:field="saveSummary" visible="false">Save</g:Button>
+		<g:Button ui:field="cancelEditSummary" visible="false">Cancel</g:Button>
+		</g:FlowPanel> 
+	</g:HTMLPanel>
+</ui:UiBinder> 

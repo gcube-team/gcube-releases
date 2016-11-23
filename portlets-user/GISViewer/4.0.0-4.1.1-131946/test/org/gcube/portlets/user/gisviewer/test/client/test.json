@@ -1,0 +1,73 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "id": "lamarsipuscarlsbergi20120619071303812.fid-2a43039e_1386c07be0c_-3894",
+        "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [
+                [
+                    [
+                        [-13, 125.5],
+                        [-13, 125.00000000000011],
+                        [-12.5, 125.00000000000011],
+                        [-12.5, 125.5],
+                        [-13, 125.5]
+                    ]
+                ]
+            ]
+        },
+        "geometry_name": "the_geom",
+        "properties": {
+            "gid": 44883,
+            "csquarecode": "3112:225:3",
+            "probability": 1
+        }
+    }, {
+        "type": "Feature",
+        "id": "lamarsipuscarlsbergi20120619071303812.fid-2a43039e_1386c07be0c_-3893",
+        "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [
+                [
+                    [
+                        [-10.499999999999943, 129.5000000000001],
+                        [-10.499999999999943, 129],
+                        [-9.999999999999943, 129],
+                        [-9.999999999999943, 129.5000000000001],
+                        [-10.499999999999943, 129.5000000000001]
+                    ]
+                ]
+            ]
+        },
+        "geometry_name": "the_geom",
+        "properties": {
+            "gid": 44857,
+            "csquarecode": "3112:209:1",
+            "probability": 1
+        }
+    }, {
+        "type": "Feature",
+        "id": "lamarsipuscarlsbergi20120619071303812.fid-2a43039e_1386c07be0c_-3892",
+        "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [
+                [
+                    [
+                        [-11, 127.00000000000011],
+                        [-11, 126.5],
+                        [-10.499999999999943, 126.5],
+                        [-10.499999999999943, 127.00000000000011],
+                        [-11, 127.00000000000011]
+                    ]
+                ]
+            ]
+        },
+        "geometry_name": "the_geom",
+        "properties": {
+            "gid": 44848,
+            "csquarecode": "3112:206:4",
+            "probability": 1
+        }
+    }]
+}

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="manager"
+	targetNamespace="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+	xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:tns="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+	xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+	xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+	xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+	xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl">
+
+	<import
+		namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		location="../gcube/common/core/providers/GCUBEProvider.wsdl" />
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+		location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+
+
+	<wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+		location="../wsrf/notification/WS-BaseN.wsdl" />
+
+
+	<!-- ============================================================ T Y P 
+		E S ============================================================ -->
+	<types>
+		<xsd:schema
+			targetNamespace="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+			xmlns:tns="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+			<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+				schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+			<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types"
+				schemaLocation="../gcube/common/core/types/GCUBETypes.xsd" />
+
+
+			<xsd:element name="searchRequest" type="xsd:string" />
+
+			<xsd:element name="searchResponse" type="xsd:string" />
+
+
+			<xsd:element name="getSupportedPluginsRequest" type="coretypes:VOID" />
+
+			<xsd:element name="getSupportedPluginsResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="pluginDescriptions" type="xsd:string"
+							minOccurs="0" maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:complexType name="PluginMap">
+				<xsd:sequence>
+					<xsd:element name="key" type="xsd:string" />
+					<xsd:element name="value" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:element name="UnsupportedPluginFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="QueryNotValidFault">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="error" type="xsd:string" minOccurs="1"
+							maxOccurs="1" />
+						<xsd:complexContent>
+							<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+						</xsd:complexContent>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="UnsupportedCapabilityFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="operation" type="xsd:string" nillable="false" />
+			<xsd:element name="description" type="xsd:string"
+				nillable="true" />
+			<xsd:element name="node" type="xsd:string" nillable="false" />
+			<xsd:element name="scope" type="xsd:string" nillable="false" />
+
+			<xsd:complexType name="UpdateNotificationType">
+				<xsd:sequence>
+					<xsd:element ref="tns:operation" />
+					<xsd:element ref="tns:node" />
+					<xsd:element ref="tns:description" />
+					<xsd:element ref="tns:scope" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:element name="UpdateNotificationMessage" type="tns:UpdateNotificationType" />
+
+			<xsd:complexType name="UpdateNotificationTypeWrapper">
+				<xsd:sequence>
+					<xsd:element ref="tns:UpdateNotificationMessage" />
+				</xsd:sequence>
+			</xsd:complexType>
+			-->
+
+		</xsd:schema>
+	</types>
+
+	<message name="SearchRequest">
+		<part name="request" element="tns:searchRequest" />
+	</message>
+	<message name="SearchResponse">
+		<part name="response" element="tns:searchResponse" />
+	</message>
+
+	<message name="GetSupportedPluginsRequest">
+		<part name="request" element="tns:getSupportedPluginsRequest" />
+	</message>
+	<message name="GetSupportedPluginsResponse">
+		<part name="response" element="tns:getSupportedPluginsResponse" />
+	</message>
+
+
+
+	<message name="UnsupportedPluginFaultMessage">
+		<part name="fault" element="tns:UnsupportedPluginFault" />
+	</message>
+
+	<message name="QueryNotValidFaultMessage">
+		<part name="fault" element="tns:QueryNotValidFault" />
+	</message>
+	
+	<message name="UnsupportedCapabilityFaultMessage">
+		<part name="fault" element="tns:UnsupportedCapabilityFault" />
+	</message>
+
+	<portType name="ManagerPortType"
+		wsdlpp:extends="wsntw:NotificationProducer provider:GCUBEProvider">
+
+		<operation name="search">
+			<input message="tns:SearchRequest" />
+			<output message="tns:SearchResponse" />
+			<fault name="querynotvalidfault" message="tns:QueryNotValidFaultMessage" />
+			<fault name="unsupportedpluginfault" message="tns:UnsupportedPluginFaultMessage" />
+			<fault name="unsupportedcapabilityfault" message="tns:UnsupportedCapabilityFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+
+		<operation name="getSupportedPlugins">
+			<input message="tns:GetSupportedPluginsRequest" />
+			<output message="tns:GetSupportedPluginsResponse" />
+		</operation>
+	</portType>
+
+
+</definitions>

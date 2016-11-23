@@ -1,0 +1,171 @@
+.techno-economic-analysis-portlet .tea_results_label_div{
+	display:inline-block;	
+	position: relative;
+	float:left;
+	font-weight: bold;
+	text-align:left;
+}
+
+.techno-economic-analysis-portlet .tea_results_value_div {
+	float:right;
+	display:inline-block;	
+	position: relative;
+	text-align:left;
+}
+.techno-economic-analysis-portlet .tea_results_label {
+	margin-top:10px;
+	float:left;
+	padding:5px;
+}
+
+.techno-economic-analysis-portlet .tea_results_value {
+	float:right;
+	background-color: #F2F2F2;
+	margin-left: auto;
+    margin-right: auto;
+    padding:5px;
+	margin-top:10px;
+	min-width:200px !important;
+}
+
+
+.techno-economic-analysis-portlet .tea_results_container{
+	display:inline-block;
+
+}
+.techno-economic-analysis-portlet table td,
+.techno-economic-analysis-portlet table th {
+	padding: 5px;
+	padding-left: 10px;
+	text-align: right;
+}
+
+.techno-economic-analysis-portlet .tea_head_cols {
+	padding: 5px;
+	text-align: left;
+	color:gray;
+}
+
+@media (max-width: 979px) {
+	.techno-economic-analysis-portlet .tea_loader {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.techno-economic-analysis-portlet .tea_help_container {
+	background-color: #F8F8F8;
+	margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.techno-economic-analysis-portlet .tea_help_text {
+	font-size: small;
+	font-weight: lighter;
+}
+
+.techno-economic-analysis-portlet .row {
+	margin-left: 0px;
+}
+
+.techno-economic-analysis-portlet .tea_perform_button {
+	margin: auto;
+	width: 50%;
+	text-align: center;
+}
+
+.techno-economic-analysis-portlet .nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.techno-economic-analysis-portlet .nav-tabs, .nav-pills {
+    text-align:center;
+}
+
+.techno-economic-analysis-portlet #indicators {
+    text-align:center;
+}
+
+.techno-economic-analysis-portlet #tea_dep_details_chart_area,
+.techno-economic-analysis-portlet #tea_dep_profit_loss_chart_area,
+.techno-economic-analysis-portlet #tea_dep_net_profit_chart_area,
+.techno-economic-analysis-portlet #tea_dep_details_chart_area {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+.techno-economic-analysis-portlet #tea_dep_table_view {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.techno-economic-analysis-portlet #tea_is_off_shore_aqua_farm {
+    display:none;
+}
+.techno-economic-analysis-portlet #tea_is_off_shore_aqua_farm + label:before {
+  border: 2px solid #ccc;
+  content: "\00a0";
+  display: inline-block;
+  font: 16px/1em sans-serif;
+  margin: 0 .25em 0 0;
+  padding:0;
+  vertical-align: top;
+  width: 25px;
+  height: 25px;
+  border-radius:5px;
+}
+.techno-economic-analysis-portlet #tea_is_off_shore_aqua_farm:checked + label:before {
+	background: #fff;
+	color: #666;
+	content: "";
+	background: url(../img/orange_tick.png) no-repeat 0 0;
+	background-size: 24px 24px;
+	text-align: center;	
+}
+
+.techno-economic-analysis-portlet #tea_is_off_shore_aqua_farm:checked + label:after {
+  font-weight: bold;
+}
+
+.techno-economic-analysis-portlet #tea_results_container ul > li > a{
+	background:gray;
+	color:white;
+	border-top-left-radius:9px;
+	border-top-right-radius:9px;
+}
+.techno-economic-analysis-portlet #tea_results_container ul > li.active.techno-economic-analysis-portlet-success > a{
+	background:rgb(2, 113, 190);
+	color:white;
+}
+
+.techno-economic-analysis-portlet #tea_results_container ul > li.active.techno-economic-analysis-portlet-success > a:focus{
+	background:rgb(2, 113, 190);
+	color:white;
+}
+
+.techno-economic-analysis-portlet #tea_results_container ul > li.techno-economic-analysis-portlet-success > a{
+	background:rgb(240,240,240);
+	color:rgb(2,156,181);
+}
+
+.techno-economic-analysis-portlet .tea_currency{
+	margin-bottom:7px !important; 
+}
+
+.techno-economic-analysis-portlet #tea_perform_button{
+    color: white;
+    text-shadow: none;
+    background: rgb(2, 113, 190);
+    width: 50%;
+	outline:0;
+}
+.techno-economic-analysis-portlet #tea_perform_button:disabled{
+	cursor:not-allowed;
+}

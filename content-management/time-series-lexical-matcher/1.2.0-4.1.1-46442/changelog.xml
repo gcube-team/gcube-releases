@@ -1,0 +1,15 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="org.gcube.content-management.time-series-lexical-matcher.1-0-0"
+		date="2011-02-16">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.content-management.time-series-lexical-matcher.1-1-0"
+		date="2011-05-09">
+		<Change>Solved connections errors</Change>
+	</Changeset>
+	<Changeset component="org.gcube.content-management.time-series-lexical-matcher.1-2-0"
+		date="2011-09-02">
+		<Change>TimeSeries codelists management</Change>
+	</Changeset>
+</ReleaseNotes>

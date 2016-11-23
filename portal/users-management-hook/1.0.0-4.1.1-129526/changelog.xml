@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.usersmanagementportlet.UsersManagementHook.1-0-0" date="2016-05-06">
+		<Change>First release of the hook</Change>
+	</Changeset>
+</ReleaseNotes>

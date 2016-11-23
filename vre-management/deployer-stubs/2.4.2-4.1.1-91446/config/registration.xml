@@ -1,0 +1,28 @@
+<ServiceGroupRegistrationParameters
+   xmlns:sgc="http://mds.globus.org/servicegroup/client"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+   xmlns:agg="http://mds.globus.org/aggregator/types"
+   xmlns="http://mds.globus.org/servicegroup/client">
+
+   <RefreshIntervalSecs>60</RefreshIntervalSecs>
+
+   <Content xsi:type="agg:AggregatorContent"
+      xmlns:agg="http://mds.globus.org/aggregator/types">
+
+      <agg:AggregatorConfig>
+            <agg:GetMultipleResourcePropertiesPollType 
+            xmlns:deployer="http://gcube-system.org/namespaces/vremanagement/deployer">																				
+  	   			<agg:PollIntervalMillis>120000</agg:PollIntervalMillis>
+  	   			<!-- resource property list from here-->  	   
+			   <agg:ResourcePropertyNames>deployer:NumberOfDeployedPackages</agg:ResourcePropertyNames>
+			   <agg:ResourcePropertyNames>deployer:DeployedPackages</agg:ResourcePropertyNames>			      	   	
+       		</agg:GetMultipleResourcePropertiesPollType>
+ 	 	</agg:AggregatorConfig>
+ 	 	
+		<agg:AggregatorData/>
+		      
+   </Content>
+
+</ServiceGroupRegistrationParameters>

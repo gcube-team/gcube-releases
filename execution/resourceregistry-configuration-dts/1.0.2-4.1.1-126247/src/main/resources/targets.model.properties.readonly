@@ -1,0 +1,21 @@
+repositoryProvider=org.gcube.execution.rr.bridge.GCubeRepositoryProvider
+repositoryProviderConfig=config.gcubebridge.properties
+
+editableTargetsCount = 0
+
+readonlyTargetsCount = 6
+readonlyTargets.0 = gr.uoa.di.madgik.rr.element.infra.HostingNodeDao
+readonlyTargets.1 = gr.uoa.di.madgik.rr.element.functionality.FunctionalityDao
+readonlyTargets.2 = gr.uoa.di.madgik.rr.element.execution.ExecutionServerDao
+readonlyTargets.3 = gr.uoa.di.madgik.rr.element.execution.ExecutionServiceDao
+readonlyTargets.4 = gr.uoa.di.madgik.rr.element.execution.WorkflowServiceDao
+readonlyTargets.5 = gr.uoa.di.madgik.rr.element.config.StaticConfigurationDao
+
+updateTargetsCount = 0
+
+inmemoryTargetsCount = 5
+inmemoryTargets.0 = gr.uoa.di.madgik.rr.element.infra.HostingNodeDao
+inmemoryTargets.1 = gr.uoa.di.madgik.rr.element.functionality.FunctionalityDao
+inmemoryTargets.2 = gr.uoa.di.madgik.rr.element.execution.ExecutionServerDao
+inmemoryTargets.3 = gr.uoa.di.madgik.rr.element.execution.ExecutionServiceDao
+inmemoryTargets.4 = gr.uoa.di.madgik.rr.element.execution.WorkflowServiceDao

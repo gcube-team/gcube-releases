@@ -1,0 +1,21 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.invite-friends.2-0-0"
+		date="2016-06-28">
+		<Change>Ported to Liferay 6.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.invite-friends.1-3-0"
+		date="2015-08-28">
+		<Change>Minor Restyle</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.invite-friends.1-2-0"
+		date="2015-07-03">
+		<Change>Integrated invites handling via common widget, see Feature
+			#330</Change>
+		<Change>Fix for bug #241, When an invite is performed more than once
+			the button invite disappears and only Close is available</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.invite-friends.1-0-0"
+		date="2015-04-30">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,2 @@
+export GLOBUS_LOCATION=./gCore
+export ANT_HOME=$GLOBUS_LOCATION

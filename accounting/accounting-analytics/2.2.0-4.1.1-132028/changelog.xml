@@ -1,0 +1,17 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.accounting.accounting-analytics.2-1-0" date="2016-11-22">
+		<Change>Added getUsageValue() API</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-analytics.2-0-0" date="2016-05-18">
+		<Change>Reorganized API and added new API to get top values #2253</Change>
+	</Changeset>
+   <Changeset component="org.gcube.accounting.accounting-analytics.1-2-0" date="2016-04-08">
+		<Change>Ready for ScopeProvider Removal #2194</Change>
+	</Changeset>
+   <Changeset component="org.gcube.accounting.accounting-analytics.1-1-0" date="2016-02-08">
+		<Change>Internal Changes due to Accounting Lib generalization #1746</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-analytics.1-0-0" date="2015-12-09">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

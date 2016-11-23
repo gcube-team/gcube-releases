@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>0b88edf0-b6a0-11df-acbd-d8ec5fec4b67</ID>
+  <Type>GenericResource</Type>
+  <Scopes>
+    <Scope>/gcube/devsec</Scope>
+  </Scopes>
+  <Profile>
+    <SecondaryType>OpenSearchResource</SecondaryType>
+    <Name>OpenSearchResource_GENESI-DR_Dataset_GSM_CHL1</Name>
+    <Description>Generic resource containing info for the GENESI-DR GSM_CHL1 external repository</Description>
+    <Body>
+      <OpenSearchResource>
+        <name>GENESI-DR Dataset: GSM_CHL1</name>
+        <descriptionDocumentURI>http://maps.terradue.com/drsite/globcolour/gsm-chl1/description/</descriptionDocumentURI>
+        <brokeredResults>false</brokeredResults>
+        <transformation>
+          <MIMEType>application/atom+xml</MIMEType>
+          <recordSplitXPath>*[local-name()='feed']/*[local-name()='entry']</recordSplitXPath>
+          <recordIdXPath>//*[local-name()='entry']/*[local-name()='id']</recordIdXPath>
+          <XSLTLink>OpenSearchXSLT_identity</XSLTLink>
+        </transformation>
+      </OpenSearchResource>
+    </Body>
+  </Profile>
+</Resource>

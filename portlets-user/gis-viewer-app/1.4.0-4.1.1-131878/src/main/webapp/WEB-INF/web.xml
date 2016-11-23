@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>gisViewerApp</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gisviewerapp.server.GisViewerAppServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
+	</servlet>
+
+	<!-- GISVIEWER -->
+	<!-- // for gcube mode -->
+	<!-- <servlet> -->
+	<!-- <servlet-name>GisViewerService</servlet-name> -->
+	<!-- <servlet-class>org.gcube.portlets.user.gcubegisviewer.server.GCubeGisViewerServletImpl</servlet-class> -->
+	<!-- </servlet> -->
+
+	<!-- GISVIEWER -->
+	<!-- // for normal mode -->
+	<servlet>
+		<servlet-name>GisViewerService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gisviewer.server.DefaultGisViewerServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- GISVIEWER MAP GENERATOR -->
+	<servlet>
+		<servlet-name>MapGenerator</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gisviewer.server.MapGenerator</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MapGenerator</servlet-name>
+		<url-pattern>/GisViewerApp/MapGenerator</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/GisViewerApp/junithost/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>gisViewerApp</servlet-name>
+		<url-pattern>/GisViewerApp/gisapp</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GisViewerService</servlet-name>
+		<url-pattern>/GisViewerApp/GisViewerService</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>GisViewerApp.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

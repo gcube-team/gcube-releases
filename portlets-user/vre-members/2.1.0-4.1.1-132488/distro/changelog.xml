@@ -1,0 +1,20 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlet.user.vre-members.2-1-0"
+		date="2016-10-03">
+		<Change>Added possibility to display VRE Groups and VRE Managers</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.vre-members.2-0-0"
+		date="2016-06-30">
+		<Change>Added Capability to display tagged VRE Groups</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.vre-members.1-0-1"
+		date="2014-12-13">
+		<Change>Added Client scope handler, to set the scope from the client
+			and help preventing the browser back button cache problem
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.vre-members.1-0-0"
+		date="2014-09-09">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

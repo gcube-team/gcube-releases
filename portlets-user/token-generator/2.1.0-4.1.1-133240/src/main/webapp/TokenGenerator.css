@@ -1,0 +1,30 @@
+.helpFontSize {
+	font-size: 14px;
+}
+
+.token-frame {
+	width: 98%;
+}
+
+.token-info-button {
+	text-align: right !important;
+	float: right !important;
+	padding-right: 0px !important;
+}
+
+.token-textbox-area {
+	margin: 0px !important;
+}
+
+.input-text {
+	width: 96% ! important;
+}
+
+.float-right-button {
+	float: right;
+}
+
+.alert-area-style {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}

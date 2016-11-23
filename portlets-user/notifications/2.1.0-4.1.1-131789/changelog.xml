@@ -1,0 +1,62 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.notifications.2-1-0" date="2016-09-23">
+		<Change>Responsive Design, removed support for notifications</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.notifications.2-0-0" date="2016-06-23">
+		<Change>Ported to Liferay 6.2</Change>
+		<Change>Responsive Design</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.notifications.1-4-0"
+		date="2015-07-03">
+		<Change>Ported to GWT 270</Change>
+		<Change>Refactored with GWT Bootstrap</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.notifications.1-3-0"
+		date="2014-4-03">
+		<Change>Adapted to the new gCore Free Portal</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.notifications.1-2-0"
+		date="2014-4-03">
+		<Change>Implemented automatic notifications scroll back in time
+		</Change>
+		<Change>Updated description for post alerts</Change>
+		<Change>Made Notification Settings more evident</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.notifications.1-1-0"
+		date="2014-3-03">
+		<Change>Notification Settings button more evident</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.notifications.1-0-0"
+		date="2013-10-21">
+		<Change>Ported to GWT 251</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.notifications.0-5-0"
+		date="2013-09-13">
+		<Change>Fix support #701 User link does not redirect to profile
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.notifications.0-4-0"
+		date="2013-07-08">
+		<Change>Added support for calendar notifications, add, edit and
+			deleted events
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.notifications.0-3-0"
+		date="2013-05-29">
+		<Change>Added support for fine grained notifications settings
+		</Change>
+		<Change>Added support for workspace notifications direct opening
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.notifications.0-2-0"
+		date="2013-04-19">
+		<Change>Added support for single post opening and people tagging
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.notifications.0-1-0"
+		date="2013-01-13">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

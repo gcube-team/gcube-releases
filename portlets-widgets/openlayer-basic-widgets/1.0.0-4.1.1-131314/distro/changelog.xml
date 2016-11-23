@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.widgets.openlayer-basic-widgets.1-0-0"
+		date="2016-10-01">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

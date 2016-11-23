@@ -1,0 +1,12 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.search.data-fusion.1-0-2" date="2014-03-28">
+		<Change>Removed GHN dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.data-fusion.1-0-1" date="2013-07-12">
+		<Change>Handled cases when a fieldName returns multiple IDs</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.data-fusion.1-0-0" date="2013-05-20">
+		<Change>Initial release</Change>
+	</Changeset>
+</ReleaseNotes>
+

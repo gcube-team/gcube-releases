@@ -1,0 +1,19 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="org.gcube.common.portal.invites-common-library.1-2-1"
+		date="2016-02-29">
+		<Change>Added support to discussion into email's body</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.portal.invites-common-library.1-2-0"
+		date="2015-12-21">
+		<Change>Added shared method for posting notifications</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.portal.invites-common-library.1-1-0"
+		date="2015-10-13">
+		<Change>Added shared method for messaging notifications</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.portal.invites-common-library.1-0-0"
+		date="2015-06-30">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

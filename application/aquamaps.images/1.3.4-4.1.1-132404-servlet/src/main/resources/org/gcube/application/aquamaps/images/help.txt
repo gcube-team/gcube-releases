@@ -1,0 +1,83 @@
+AquaMaps Images Web Application version 1.0.0
+
+Algorithm Citation
+------------------------------------------------------------
+Kaschner, K., J. S. Ready, E. Agbayani, J. Rius, K. Kesner-Reyes, P. D. Eastwood, A. B. South,
+S. O. Kullander, T. Rees, C. H. Close, R. Watson, D. Pauly, and R. Froese. 2008 AquaMaps:
+Predicted range maps for aquatic species. World wide web electronic publication, www.aquamaps.org, Version 10/2008.
+
+
+Usage
+------------------------------------------------------------
+
+
+<HOST>/images/report 		: shows current status report
+
+<HOST>/images/report/xml	: shows current status summary in xml 
+
+<HOST>/images/help			: shows this page
+		
+<HOST>/images/pics?species=<SCIENTIFIC_NAME>	: retrieves the picture of specified species
+
+<HOST>/images/maps/<ALGORITHM>?species=<SCIENTIFIC_NAME>&product=<PRODUCT_TYPE>	: retrieves the <PRODUCT_TYPE> map of the specified species distribution according to specified algorithm. 
+
+<HOST>/images/maps/<HSPEC_ID>?species=<SCIENTIFIC_NAME>&product=<PRODUCT_TYPE>	: retrieves the <PRODUCT_TYPE> map of the specified species distribution generated using the specified HSPEC table.
+
+
+Where:
+
+<HSPEC_ID> the id of a HSPEC table 
+
+<PRODUCT_TYPE> must be one of the following : 
+
+		IMAGE
+		GIS
+		
+if argument product is not specified, the default value IMAGE is used. 
+
+
+<ALGORITHM> must be one of the following :
+
+	native
+	native/2050
+	suitable
+	suitable/2050
+	
+	
+	
+<SCIENTIFIC_NAME> case insensitive species' scientific name without spaces eg:
+
+
+
+Sphyraenops Bairdianus -> SphyraenopsBairdianus (equivalent to sphyraenopsbairdianus)  
+ 
+ 
+
+Download information
+------------------------------------------------------------
+Source code is available from SVN:
+https://svn.d4science.research-infrastructures.eu/gcube/trunk/application/AquaMaps/Images
+
+Binaries can be downloaded from:
+http://software.d4science.research-infrastructures.eu/
+
+Documentation 
+------------------------------------------------------------
+Documentation is available on-line from the Projects Documentation Wiki:
+
+https://gcube.wiki.gcube-system.org/gcube/index.php/AquaMaps
+
+
+
+Maintainers
+------------------------------------------------------------
+* Sinibaldi Fabio (fabio.sinibaldi@isti.cnr.it),  CNR Pisa, 
+Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo". 
+
+
+gCube System - License
+------------------------------------------------------------
+
+The gCube/gCore software is licensed as Free Open Source software conveying to the EUPL (http://ec.europa.eu/idabc/eupl).
+The software and documentation is provided by its authors/distributors "as is" and no expressed or 
+implied warranty is given for its use, quality or fitness for a particular case.

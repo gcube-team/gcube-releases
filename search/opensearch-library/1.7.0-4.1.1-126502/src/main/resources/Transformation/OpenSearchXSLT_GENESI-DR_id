@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>0da93810-a0b6-11df-bd78-93d1def55e81</ID>
+  <Type>GenericResource</Type>
+  <Profile>
+    <SecondaryType>OpenSearchXSLT</SecondaryType>
+    <Name>OpenSearchXSLT_GENESI-DR_id</Name>
+    <Description>XSLT to transform OpenSearch responses retrieved from GENESI-DR external repositories</Description>
+    <Body>
+      <xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        <xsl:output method="xml" omit-xml-declaration="yes" version="1.0"/>
+        <xsl:template match="*[local-name()='entry']">
+          <record>
+            <xsl:value-of select="*[local-name()='id']"/>
+          </record>
+        </xsl:template>
+      </xsl:transform>
+    </Body>
+  </Profile>
+</Resource>

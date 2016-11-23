@@ -1,0 +1,353 @@
+div#DecisionSupportSystem *{
+	outline : none;
+}
+div#DecisionSupportSystem div.modal-header {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	border:none;
+}
+div#DecisionSupportSystem div#mapExportModal {
+	width: 35%;
+	left: 50%;
+	height: 500px;
+}
+div#DecisionSupportSystem div#mapExportModal div.modal-header button,
+div#errorModal > div.modal-header > button.close {
+	color: #fff !important;
+	opacity: 1;
+	font-size: 15px;
+}
+div#errorModal .modal-footer{
+	padding:0 0.2em 0.2em 0;
+}
+#DecisionSupportSystem  .modal-header {
+	background-color:#0271be;
+	background:#0271be;
+	color: #fff;
+	padding: 0.3em 1em;
+}
+#DecisionSupportSystem  .modal-header .close{
+	color: #fff;
+	opacity:1;
+}
+#DecisionSupportSystem #errorModal .modal-header h5{
+	margin:.2em;
+}
+#DecisionSupportSystem .modal-footer {
+	background:#fff;
+	background-color:#fff;
+	border : none;
+}
+#DecisionSupportSystem .modal-footer button{
+	color: #0271be;
+}
+#DecisionSupportSystem .modal-footer button:hover{
+	color: #2AAAE6;
+}
+div#DecisionSupportSystem div#mapExportModal div.modal-body {height: 419px;overflow-y: hidden;overflow: visible;}
+div#DecisionSupportSystem div#mapAreaContainer {
+	height: 400px;
+}
+div#DecisionSupportSystem div#modalInfo {
+	padding-bottom: 15px;
+	height: 100%;
+	position: relative;
+}
+div#DecisionSupportSystem div#modalAttributesContainer{
+	overflow-y: scroll;
+	/* overflow-x: scroll; */
+	height: 350px;
+	padding: 0px 0px 20px 0px;
+}
+div#DecisionSupportSystem div#divForCloseModalButton button {
+	margin-right: 5%;
+    margin-top: 3%;	
+}
+div#DecisionSupportSystem div#coordsOnModalContainer{
+}
+div#DecisionSupportSystem div#coordsOnModalTitle {
+	font-weight: bold;
+}
+div#DecisionSupportSystem div#functionRunAndExportButtons{
+	/* margin-top: 43px; */
+	/* position: absolute; */
+	/* bottom: 0; */
+	/* padding-top: 20px; */
+}
+div#DecisionSupportSystem div#functionRunAndExportButtons button,
+div#DecisionSupportSystem div#functionRunAndExportButtons div {
+	background-color: rgb(2,113,190);
+	background: rgb(2,113,190);
+	border-radius: 7px;
+	border: none;
+	color: rgb(255,255,255);
+	text-align: center;
+	font-size: 14px;
+	padding: 5px;
+}
+div#functionRunAndExportButtons a#dropMenu:link,
+div#functionRunAndExportButtons a#dropMenu:visited,
+div#functionRunAndExportButtons a#dropMenu:hover,
+div#functionRunAndExportButtons a#dropMenu:active {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+div#DecisionSupportSystem div#functionRunAndExportButtons button i,
+div#DecisionSupportSystem div#functionRunAndExportButtons div i {
+	color: rgb(255,255,255);
+	font-size: 18px;
+}
+/*********************************************** scrollbar ***********************************************************/
+div#DecisionSupportSystem div#modalAttributesContainer::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 7px;
+}
+div#DecisionSupportSystem div#modalAttributesContainer::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    /* background: #000; */
+}
+div#DecisionSupportSystem div#modalAttributesContainer::-webkit-scrollbar-corner {
+ 	width: 10px;
+ 	background-color: #F5F5F5;
+ 	border-radius: 7px;
+ 	background: #F5F5F5;
+}
+div#DecisionSupportSystem div#modalAttributesContainer::-webkit-scrollbar-thumb {
+ 	background-color: #0ae;
+ 	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+	                   color-stop(.5, rgba(255, 255, 255, .2)),
+					   color-stop(.5, transparent), to(transparent));
+ 	border-radius: 7px;
+}
+div#DecisionSupportSystem div#exportAsButtonModalBottom li a i {
+	color:black;
+}
+div#DecisionSupportSystem div#exportAsButtonModalBottom li a:hover i {
+	color:rgb(255,255,255);
+}
+#DecisionSupportSystem #settingModal button{
+	
+}
+#DecisionSupportSystem #settingModal .modal-body button{
+	margin-top:0.8em;
+	background:#0271be;
+	background-color:#0271be;
+	color:#fff;
+	padding:0.6em 0.9em;
+	border-radius: 0.8em;
+}
+div#DecisionSupportSystem *{
+	outline : none;
+}
+div#DecisionSupportSystem div.modal-header {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	border:none;
+}
+div#DecisionSupportSystem div#mapExportModal {
+	width: 35%;
+	left: 50%;
+	height: 500px;
+}
+div#DecisionSupportSystem div#mapExportModal div.modal-header button,
+div#errorModal > div.modal-header > button.close {
+	color: #fff !important;
+	opacity: 1;
+	font-size: 15px;
+}
+div#errorModal .modal-footer{
+	padding:0 0.2em 0.2em 0;
+}
+#DecisionSupportSystem  .modal-header {
+	background-color:#0271be;
+	background:#0271be;
+	color: #fff;
+	padding: 0.3em 1em;
+}
+#DecisionSupportSystem  .modal-header .close{
+	color: #fff;
+	opacity:1;
+}
+#DecisionSupportSystem #errorModal .modal-header h5{
+	margin:.2em;
+}
+#DecisionSupportSystem .modal-footer {
+	background:#fff;
+	background-color:#fff;
+	border : none;
+}
+#DecisionSupportSystem .modal-footer button{
+	color: #0271be;
+}
+#DecisionSupportSystem .modal-footer button:hover{
+	color: #2AAAE6;
+}
+div#DecisionSupportSystem div#mapExportModal div.modal-body {height: 419px;overflow-y: hidden;overflow: visible;}
+div#DecisionSupportSystem div#mapAreaContainer {
+	height: 400px;
+}
+div#DecisionSupportSystem div#modalInfo {
+	padding-bottom: 15px;
+	height: 100%;
+	position: relative;
+}
+div#DecisionSupportSystem div#modalAttributesContainer{
+	overflow-y: scroll;
+	/* overflow-x: scroll; */
+	height: 350px;
+	padding: 0px 0px 20px 0px;
+}
+div#DecisionSupportSystem div#divForCloseModalButton button {
+	margin-right: 5%;
+    margin-top: 3%;	
+}
+div#DecisionSupportSystem div#coordsOnModalContainer{
+}
+div#DecisionSupportSystem div#coordsOnModalTitle {
+	font-weight: bold;
+}
+div#DecisionSupportSystem div#functionRunAndExportButtons{
+	/* margin-top: 43px; */
+	/* position: absolute; */
+	/* bottom: 0; */
+	/* padding-top: 20px; */
+}
+div#DecisionSupportSystem div#functionRunAndExportButtons button,
+div#DecisionSupportSystem div#functionRunAndExportButtons div {
+	background-color: rgb(2,113,190);
+	background: rgb(2,113,190);
+	border-radius: 7px;
+	border: none;
+	color: rgb(255,255,255);
+	text-align: center;
+	font-size: 14px;
+	padding: 5px;
+}
+div#functionRunAndExportButtons a#dropMenu:link,
+div#functionRunAndExportButtons a#dropMenu:visited,
+div#functionRunAndExportButtons a#dropMenu:hover,
+div#functionRunAndExportButtons a#dropMenu:active {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+div#DecisionSupportSystem div#functionRunAndExportButtons button i,
+div#DecisionSupportSystem div#functionRunAndExportButtons div i {
+	color: rgb(255,255,255);
+	font-size: 18px;
+}
+/*********************************************** scrollbar ***********************************************************/
+div#DecisionSupportSystem div#modalAttributesContainer::-webkit-scrollbar-track,
+#BBOXModal .modal-body::-webkit-scrollbar-track,
+#ChooseLayersModal .modal-body::-webkit-scrollbar-track,
+.dataTables_scrollBody::-webkit-scrollbar-track,
+#pickProjectContainer .selectdUsersTagSection::-webkit-scrollbar-track,
+#RelateUsersToProjectModal .modal-body::-webkit-scrollbar-track,
+#pickProjectContainer #RelateUsersToProjectModal .modal-body::-webkit-scrollbar-track,
+#pickProjectContainer #usersListViewDetails::-webkit-scrollbar-track,
+#pickProjectContainer #layersListViewDetails::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important;
+	background-color: #F5F5F5 !important;
+	border-radius: 7px !important;
+}
+div#DecisionSupportSystem div#modalAttributesContainer::-webkit-scrollbar,
+#BBOXModal .modal-body::-webkit-scrollbar,
+#ChooseLayersModal .modal-body::-webkit-scrollbar,
+.dataTables_scrollBody::-webkit-scrollbar,
+#pickProjectContainer .selectdUsersTagSection::-webkit-scrollbar,
+#RelateUsersToProjectModal .modal-body::-webkit-scrollbar,
+#pickProjectContainer #RelateUsersToProjectModal .modal-body::-webkit-scrollbar-scrollbar,
+#pickProjectContainer #usersListViewDetails::-webkit-scrollbar-scrollbar,
+#pickProjectContainer #layersListViewDetails::-webkit-scrollbar-scrollbar {
+    height: 12px !important;
+    width: 12px !important;
+    /* background: #000; */
+}
+div#DecisionSupportSystem div#modalAttributesContainer::-webkit-scrollbar-corner,
+#BBOXModal .modal-body::-webkit-scrollbar-corner,
+#ChooseLayersModal .modal-body::-webkit-scrollbar-corner,
+.dataTables_scrollBody::-webkit-scrollbar-corner,
+#pickProjectContainer .selectdUsersTagSection::-webkit-scrollbar-corner,
+#RelateUsersToProjectModal .modal-body::-webkit-scrollbar-corner,
+#pickProjectContainer #RelateUsersToProjectModal .modal-body::-webkit-scrollbar-corner,
+#pickProjectContainer #usersListViewDetails::-webkit-scrollbar-corner,
+#pickProjectContainer #layersListViewDetails::-webkit-scrollbar-corner {
+ 	width: 10px !important;
+ 	background-color: #F5F5F5 !important;
+ 	border-radius: 7px !important;
+ 	background: #F5F5F5 !important;
+}
+div#DecisionSupportSystem div#modalAttributesContainer::-webkit-scrollbar-thumb,
+#BBOXModal .modal-body::-webkit-scrollbar-thumb,
+#ChooseLayersModal .modal-body::-webkit-scrollbar-thumb,
+.dataTables_scrollBody::-webkit-scrollbar-thumb,
+#pickProjectContainer .selectdUsersTagSection::-webkit-scrollbar-thumb,
+#RelateUsersToProjectModal .modal-body::-webkit-scrollbar-thumb,
+#pickProjectContainer #RelateUsersToProjectModal .modal-body::-webkit-scrollbar-thumb,
+#pickProjectContainer #usersListViewDetails::-webkit-scrollbar-thumb,
+#pickProjectContainer #layersListViewDetails::-webkit-scrollbar-thumb {
+ 	background-color: #0ae !important;
+ 	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+	                   color-stop(.5, rgba(255, 255, 255, .2)),
+					   color-stop(.5, transparent), to(transparent)) !important;
+ 	border-radius: 7px !important;
+}
+div#DecisionSupportSystem div#exportAsButtonModalBottom li a i {
+	color:black;
+}
+div#DecisionSupportSystem div#exportAsButtonModalBottom li a:hover i {
+	color:rgb(255,255,255);
+}
+#DecisionSupportSystem #settingModal button{
+	
+}
+#DecisionSupportSystem #settingModal .modal-body button{
+	margin-top:0.8em;
+	background:#0271be;
+	background-color:#0271be;
+	color:#fff;
+	padding:0.6em 0.9em;
+	border-radius: 0.8em;
+}
+input#TSVFileName {
+    display: inline-block;
+    margin: 0;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    padding: 0.5em;
+}
+div#importTSVButton {
+    display: inline-block;
+    height: 30px;
+    border: 1px solid #fff;
+    background: #0271be;
+    background-color: #0271be;
+    border-top-right-radius: 0.8em;
+    border-bottom-right-radius: 0.8em;
+    padding: 0.4em 0.7em 0em 0.7em;
+    position: absolute;
+    top: -1px;
+    margin-left:-1px;
+    color:#fff;
+}
+#DecisionSupportSystem .tsvDiv{
+	position:relative;
+}
+input#nameOfNewLayer {
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+label.nameOfNewLayerLabel {
+    color: #0271be;
+}
+label.pickLayerTemplateLabel {
+	color:#0271be;
+}
+#DecisionSupportSystem #layerSelector{
+	height: 2.5em;
+	border-radius: 0.5em
+}
+#DecisionSupportSystem input.importTsv {
+	display:none;
+}

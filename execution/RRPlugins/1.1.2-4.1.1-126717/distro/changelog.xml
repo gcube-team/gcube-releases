@@ -1,0 +1,24 @@
+<ReleaseNotes>
+	 <Changeset component="org.gcube.execution.RRPlugins.1-1-2" date="2014-06-30">
+   		<Change>Optimized loops on fields update</Change>
+   </Changeset>
+	 <Changeset component="org.gcube.execution.RRPlugins.1-1-1" date="2014-05-15">
+   		<Change>Changed logger to slf4j</Change>
+   </Changeset>
+   <Changeset component="org.gcube.execution.RRPlugins.1-1-0" date="2014-02-12">
+   		<Change>Added HostFinderPlugin that finds the hostname and the port of the ghn from "deploy.properties" file that comes with the (RESTful) service</Change>
+   </Changeset>
+   <Changeset component="org.gcube.execution.RRPlugins.1-0-2" date="2013-10-10">
+   		<Change>FieldUpdaterPlugin changed to not recreate deleted searchables and presentables in updatedField</Change>
+   </Changeset>
+   <Changeset component="org.gcube.execution.RRPlugins.1-0-1" date="2012-11-26">
+   		<Change>FieldUpdaterPlugin changed to add searchable and presentable also in updatedField</Change>
+   		<Change>FieldUpdaterPlugin no longer uses default store method. updated fields are stored correctly using the datastore selected by the plugin</Change>
+   </Changeset>
+  <Changeset component="org.gcube.execution.RRPlugins.1-0-0" date="2012-05-04">
+   		<Change>First release. Library containing model independent plugins used in the gCube environment.
+   		Field updater plugin is of type POST_RETRIEVE.
+   		DataSource manager plugin is of type PRE_UPDATE.
+   		</Change>
+   </Changeset>
+</ReleaseNotes>

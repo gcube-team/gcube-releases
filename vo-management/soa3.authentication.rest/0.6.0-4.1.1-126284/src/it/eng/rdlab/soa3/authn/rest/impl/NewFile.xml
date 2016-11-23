@@ -1,0 +1,38 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="contextSource"
+		class="org.springframework.security.ldap.DefaultSpringSecurityContextSource">
+		<constructor-arg value="ldap://localhost:1389/o=mojo" />
+		<property name="userDn" value="cn=Directory Manager" />
+		<property name="password" value="secret" />
+	</bean>
+	<bean id="userSearch"
+		class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
+		<constructor-arg value="ou=people" />
+		<constructor-arg value="(uid={0})" />
+		<constructor-arg ref="contextSource"/>
+		<property name="searchSubtree" value="true" />
+	</bean>
+
+	<!-- <bean id="ldapAuthProvider"
+		class="org.springframework.security.ldap.authentication.LdapAuthenticationProvider">
+		<constructor-arg>
+			<bean
+				class="org.springframework.security.ldap.authentication.BindAuthenticator">
+				<constructor-arg ref="contextSource" />
+				<property name="UserDnPatterns">
+					<list>
+						<value>cn={0}</value>
+					</list>
+				</property>
+				<property name="userSearch" ref="userSearch"></property>
+			</bean>
+		</constructor-arg>
+	</bean> -->
+
+
+
+
+</beans>

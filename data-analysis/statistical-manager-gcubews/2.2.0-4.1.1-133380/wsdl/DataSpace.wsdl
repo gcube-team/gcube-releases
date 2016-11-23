@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="DataSpace"
+	targetNamespace="http://gcube-system.org/namespaces/data/analysis/statisticalmanager"
+	xmlns:tns="http://gcube-system.org/namespaces/data/analysis/statisticalmanager"
+	xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+	xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+	xmlns:smtypes="http://gcube-system.org/namespaces/data/analysis/statisticalmanager/types">
+
+	<import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+
+	<types>
+		<xsd:schema
+			targetNamespace="http://gcube-system.org/namespaces/data/analysis/statisticalmanager">
+			<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types"
+				schemaLocation="../gcube/common/core/types/GCUBETypes.xsd" />
+			<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+				schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+
+			<xsd:import
+				namespace="http://gcube-system.org/namespaces/data/analysis/statisticalmanager/types"
+				schemaLocation="SMTypes.xsd" />
+
+
+
+
+
+
+
+
+
+
+
+			<xsd:complexType name="SMCreateTableRequest"
+				abstract="true">
+				<xsd:sequence>
+					<xsd:element name="user" type="xsd:string" />
+					<xsd:element name="fileName" type="xsd:string" />
+					<xsd:element name="tableName" type="xsd:string" />
+					<xsd:element name="tableType" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="rsLocator" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="SMCreateTableFromCSVRequest">
+				<xsd:complexContent>
+					<xsd:extension base="tns:SMCreateTableRequest">
+						<xsd:sequence>
+							<xsd:element name="hasHeader" type="xsd:boolean" />
+							<xsd:element name="delimiter" type="xsd:string" />
+							<xsd:element name="commentChar" type="xsd:string" />
+						</xsd:sequence>
+					</xsd:extension>
+				</xsd:complexContent>
+			</xsd:complexType>
+
+			<xsd:complexType name="SMCreateTableFromDataStreamRequest">
+				<xsd:complexContent>
+					<xsd:extension base="tns:SMCreateTableRequest">
+					</xsd:extension>
+				</xsd:complexContent>
+			</xsd:complexType>
+
+			<xsd:element name="createTableFromCSVInput" type="tns:SMCreateTableFromCSVRequest" />
+			<xsd:element name="createTableFromCSVOutput" type="xsd:long" />
+
+			<xsd:element name="createTableFromDataStreamInput"
+				type="tns:SMCreateTableFromDataStreamRequest" />
+			<xsd:element name="createTableFromDataStreamOutput" type="xsd:long" />
+
+
+
+
+
+
+
+
+
+			<xsd:complexType name="SMimportFileRequest" abstract="false">
+				<xsd:complexContent>
+					<xsd:extension base="tns:SMCreateTableRequest">
+						<xsd:sequence>
+						</xsd:sequence>
+					</xsd:extension>
+				</xsd:complexContent>
+			</xsd:complexType>
+
+
+			<xsd:complexType name="SMimportDwcaFileRequest"
+				abstract="false">
+				<xsd:complexContent>
+					<xsd:extension base="tns:SMimportFileRequest">
+						<xsd:sequence>
+							<xsd:element name="baseFileName" type="xsd:string" />
+							<xsd:element name="vernacularLocator" type="xsd:string" />
+							<xsd:element name="taxaLocator" type="xsd:string" />
+						</xsd:sequence>
+					</xsd:extension>
+				</xsd:complexContent>
+			</xsd:complexType>
+
+			<xsd:element name="importFromFileInput" type="tns:SMimportFileRequest" />
+			<xsd:element name="importFromFileOutput" type="xsd:long" />
+
+			<xsd:element name="importFromDwcaFileInput" type="tns:SMimportDwcaFileRequest" />
+			<xsd:element name="importFromDwcaFileOutput" type="xsd:long" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<xsd:complexType name="SMCreatedTablesRequest">
+				<xsd:complexContent>
+					<xsd:extension base="smtypes:SMPagedRequest">
+						<xsd:sequence>
+							<xsd:element name="template" type="xsd:string" />
+						</xsd:sequence>
+					</xsd:extension>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:element name="getTablesInput" type="tns:SMCreatedTablesRequest" />
+
+			<xsd:complexType name="SMTables">
+				<xsd:sequence>
+					<xsd:element name="list" type="smtypes:SMTable"
+						minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="getTablesOutput" type="tns:SMTables" />
+
+			<xsd:complexType name="SMGetFilesRequest">
+				<xsd:complexContent>
+					<xsd:extension base="smtypes:SMPagedRequest">
+					</xsd:extension>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:element name="getFilesInput" type="tns:SMGetFilesRequest" />
+
+			<xsd:complexType name="SMFiles">
+				<xsd:sequence>
+					<xsd:element name="list" type="smtypes:SMFile"
+						minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="getFilesOutput" type="tns:SMFiles" />
+
+			<xsd:element name="getResourcesInput" type="tns:SMCreatedTablesRequest" />
+
+			<xsd:complexType name="SMResources">
+				<xsd:sequence>
+					<xsd:element name="list" type="smtypes:SMResource"
+						minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="getResourcesOutput" type="tns:SMResources" />
+
+
+			<xsd:element name="getDBParametersInput" type="xsd:string" />
+			<xsd:element name="getDBParametersOutput" type="xsd:string" />
+
+			<xsd:complexType name="SMImportersRequest">
+				<xsd:complexContent>
+					<xsd:extension base="smtypes:SMPagedRequest">
+						<xsd:sequence>
+							<xsd:element name="user" type="xsd:string" />
+							<xsd:element name="objectType" type="xsd:string" />
+						</xsd:sequence>
+					</xsd:extension>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:element name="getImportersInput" type="tns:SMImportersRequest" />
+
+			<xsd:complexType name="SMImporters">
+				<xsd:sequence>
+					<xsd:element name="list" type="smtypes:SMImport"
+						minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="getImportersOutput" type="tns:SMImporters" />
+
+			<xsd:element name="getImporterInput" type="xsd:string" />
+			<xsd:element name="getImporterOutput" type="smtypes:SMImport" />
+
+			<xsd:element name="removeImporterInput" type="xsd:string" />
+			<xsd:element name="removeImporterOutput" type="coretypes:VOID" />
+
+			<xsd:element name="removeTableInput" type="xsd:string" />
+			<xsd:element name="removeTableOutput" type="coretypes:VOID" />
+
+			<xsd:element name="exportTableInput" type="xsd:string" />
+			<xsd:element name="exportTableOutput" type="xsd:string" />
+
+			<xsd:element name="SMResourceNotFoundFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+		</xsd:schema>
+	</types>
+
+
+
+
+
+
+
+	<message name="importFromFileInputMessage">
+		<part name="request" element="tns:importFromFileInput" />
+	</message>
+	<message name="importFromFileOutputMessage">
+		<part name="response" element="tns:importFromFileOutput" />
+	</message>
+
+	<message name="importFromDwcaFileIInputMessage">
+		<part name="request" element="tns:importFromDwcaFileInput" />
+	</message>
+	<message name="importFromDwcaFileIOutputMessage">
+		<part name="response" element="tns:importFromDwcaFileOutput" />
+	</message>
+
+
+
+
+
+
+
+
+
+
+	<message name="createTableFromCSVInputMessage">
+		<part name="request" element="tns:createTableFromCSVInput" />
+	</message>
+	<message name="createTableFromCSVOutputMessage">
+		<part name="response" element="tns:createTableFromCSVOutput" />
+	</message>
+
+	<message name="createTableFromDataStreamInputMessage">
+		<part name="request" element="tns:createTableFromDataStreamInput" />
+	</message>
+	<message name="createTableFromDataStreamOutputMessage">
+		<part name="response" element="tns:createTableFromDataStreamOutput" />
+	</message>
+
+	<message name="getTablesInputMessage">
+		<part name="request" element="tns:getTablesInput" />
+	</message>
+	<message name="getTablesOutputMessage">
+		<part name="response" element="tns:getTablesOutput" />
+	</message>
+
+	<message name="getFilesInputMessage">
+		<part name="request" element="tns:getFilesInput" />
+	</message>
+	<message name="getFilesOutputMessage">
+		<part name="response" element="tns:getFilesOutput" />
+	</message>
+
+	<message name="getResourcesInputMessage">
+		<part name="request" element="tns:getResourcesInput" />
+	</message>
+	<message name="getResourcesOutputMessage">
+		<part name="response" element="tns:getResourcesOutput" />
+	</message>
+
+	<message name="getDBParametersInputMessage">
+		<part name="request" element="tns:getDBParametersInput" />
+	</message>
+	<message name="getDBParametersOutputMessage">
+		<part name="response" element="tns:getDBParametersOutput" />
+	</message>
+
+	<message name="getImportersInputMessage">
+		<part name="request" element="tns:getImportersInput" />
+	</message>
+	<message name="getImportersOutputMessage">
+		<part name="response" element="tns:getImportersOutput" />
+	</message>
+
+	<message name="getImporterInputMessage">
+		<part name="request" element="tns:getImporterInput" />
+	</message>
+	<message name="getImporterOutputMessage">
+		<part name="response" element="tns:getImporterOutput" />
+	</message>
+
+	<message name="removeImporterInputMessage">
+		<part name="request" element="tns:removeImporterInput" />
+	</message>
+
+	<message name="removeImporterOutputMessage">
+		<part name="response" element="tns:removeImporterOutput" />
+	</message>
+
+	<message name="removeTableInputMessage">
+		<part name="request" element="tns:removeTableInput" />
+	</message>
+
+	<message name="removeTableOutputMessage">
+		<part name="response" element="tns:removeTableOutput" />
+	</message>
+
+	<message name="exportTableInputMessage">
+		<part name="request" element="tns:exportTableInput" />
+	</message>
+
+	<message name="exportTableOutputMessage">
+		<part name="response" element="tns:exportTableOutput" />
+	</message>
+
+	<message name="SMResourceNotFoundFaultMessage">
+		<part name="fault" element="tns:SMResourceNotFoundFault" />
+	</message>
+
+
+	<portType name="DataSpacePortType">
+
+		<operation name="createTableFromDataStream">
+			<input message="tns:createTableFromDataStreamInputMessage" />
+			<output message="tns:createTableFromDataStreamOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+
+
+
+
+
+
+
+
+
+		<operation name="importFromFile">
+			<input message="tns:importFromFileInputMessage" />
+			<output message="tns:importFromFileOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="importFromDwcaFile">
+			<input message="tns:importFromDwcaFileIInputMessage" />
+			<output message="tns:importFromDwcaFileIOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+
+
+
+
+
+
+		<operation name="createTableFromCSV">
+			<input message="tns:createTableFromCSVInputMessage" />
+			<output message="tns:createTableFromCSVOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="exportTable">
+			<input message="tns:exportTableInputMessage" />
+			<output message="tns:exportTableOutputMessage" />
+			<fault name="resourceNotFoundFault" message="tns:SMResourceNotFoundFaultMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="getTables">
+			<input message="tns:getTablesInputMessage" />
+			<output message="tns:getTablesOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="getFiles">
+			<input message="tns:getFilesInputMessage" />
+			<output message="tns:getFilesOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="getResources">
+			<input message="tns:getResourcesInputMessage" />
+			<output message="tns:getResourcesOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="getDBParameters">
+			<input message="tns:getDBParametersInputMessage" />
+			<output message="tns:getDBParametersOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="getImporters">
+			<input message="tns:getImportersInputMessage" />
+			<output message="tns:getImportersOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="getImporter">
+			<input message="tns:getImporterInputMessage" />
+			<output message="tns:getImporterOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="removeImporter">
+			<input message="tns:removeImporterInputMessage" />
+			<output message="tns:removeImporterOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="removeTable">
+			<input message="tns:removeTableInputMessage" />
+			<output message="tns:removeTableOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+	</portType>
+
+</definitions>
+	

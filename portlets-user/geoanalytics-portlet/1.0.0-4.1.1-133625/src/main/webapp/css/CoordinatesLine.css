@@ -1,0 +1,29 @@
+div#DecisionSupportSystem div#coord-info {
+	position : absolute;
+	bottom: 0px;
+}
+div#DecisionSupportSystem div#coord-info-con span {
+	position: absolute;
+	z-index: 33;
+	text-align: center;
+}
+div#DecisionSupportSystem div.ol-scale-line.ol-unselectable {
+	/* position : inherit !important; */
+	display : inline;
+	background: transparent;
+	background-color: transparent;
+	position: initial;
+}
+
+div#DecisionSupportSystem div.ol-scale-line.ol-unselectable div.ol-scale-line-inner{
+	display : inline;
+	border: none;
+	font-size: 14px;
+	color : #555;
+}
+#map #coord-info-con > div{
+	margin-left: 0;
+}
+#coord-info-con {
+	margin-left: 12%;
+}

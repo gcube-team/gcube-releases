@@ -1,0 +1,6 @@
+v. 1.0.0 (20-05-2010)
+    * First release
+    
+v. 1.1.0 (22-07-2010)
+	* Split the serialization part to build a stand-alone library for accessing the RB.
+	* This part will be integrated in the gCore branch 1.9.

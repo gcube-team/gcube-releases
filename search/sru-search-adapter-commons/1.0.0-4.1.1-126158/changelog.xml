@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.search.sru.sru-search-adapter-commons.1-0-0" date="2014-06-25">
+		<Change>Initial release</Change>
+	</Changeset>
+</ReleaseNotes>

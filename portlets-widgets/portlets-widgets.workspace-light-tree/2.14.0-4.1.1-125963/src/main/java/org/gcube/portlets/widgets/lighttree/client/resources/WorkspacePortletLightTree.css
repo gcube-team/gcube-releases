@@ -1,0 +1,7 @@
+/* @url <constant name> <DataResource method name> */
+@url invalidNameUrl invalidName;
+
+.nameError{
+	background:#fff invalidNameUrl repeat-x bottom;
+	border: 1px solid #dd7870;
+}

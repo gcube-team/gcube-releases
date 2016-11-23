@@ -1,0 +1,154 @@
+div#usersManagementPortletContainer div.dataTables_paginate.paging_full_numbers a.paginate_button#CurrentUsersTable_previous,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#CurrentUsersTable_previous,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTable_previous,
+  div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTable_previous,
+  div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTableUsers_previous,
+   div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTableUsers_previous {
+	background: #0271be;
+	background-color: #0271be;
+	color: white;
+	border:0px;
+	/* border-top-left-radius: 7px; */
+	/* border-bottom-left-radius: 7px; */
+}
+div#usersManagementPortletContainer div.dataTables_paginate.paging_full_numbers a.paginate_button#CurrentUsersTable_previous:after,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#CurrentUsersTable_previous:after,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTable_previous:after,
+  div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTable_previous:after,
+  div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTableUsers_previous:after,
+   div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTableUsers_previous:after {
+	content: "\f04a  ";
+}
+div.dataTables_paginate.paging_full_numbers{
+    font-family: FontAwesome;	
+}
+div#usersManagementPortletContainer div.dataTables_paginate.paging_full_numbers a.paginate_button#CurrentUsersTable_previous:not(.disabled):hover, 
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTable_previous:not(.disabled):hover,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTableUsers_previous:not(.disabled):hover {
+	color: white;
+	border:0px;
+}
+div#usersManagementPortletContainer div.dataTables_paginate.paging_full_numbers a.paginate_button#CurrentUsersTable_next,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#CurrentUsersTable_next,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTable_next,
+  div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTable_next,
+  div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTableUsers_next,
+   div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTableUsers_next {
+	background: #0271be;
+	background-color: #0271be;
+	color: white !important;
+	border:0px;
+	/* border-top-right-radius: 7px; */
+	/* border-bottom-right-radius: 7px; */
+}
+div#usersManagementPortletContainer div.dataTables_paginate.paging_full_numbers a.paginate_button#CurrentUsersTable_next:after,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#CurrentUsersTable_next:after,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTable_next:after,
+  div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTable_next:after,
+  div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTableUsers_next:after,
+   div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTableUsers_next:after {
+	content: "\f04e";
+}
+div#usersManagementPortletContainer div.dataTables_paginate.paging_full_numbers a.paginate_button#CurrentUsersTable_next:not(.disabled):hover,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTable_next:not(.disabled):hover,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button#GroupTeamsTableUsers_next:not(.disabled):hover {
+	background: rgb(42, 170, 210);
+	background-color: rgb(42, 170, 210);
+	color: white !important;
+	border:0px;
+}
+div#usersManagementPortletContainer div.dataTables_paginate.paging_full_numbers span a.paginate_button.current,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers span a.paginate_button.current {
+	background: rgb(41, 131, 173);
+	background-color: rgb(41, 131, 173);
+	color: white !important;
+	border:0px;
+	cursor : default;
+}
+div#usersManagementPortletContainer div.dataTables_paginate.paging_full_numbers a.paginate_button,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button {
+	color: white !important;
+	background: #0271be;
+	background-color: #0271be;
+	border:0px;
+	padding: 2px 15px;
+	margin-top: 6px;
+	font-size: 0.9em;
+}
+div.dataTables_paginate.paging_full_numbers a.first {
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+div.dataTables_paginate.paging_full_numbers a.first:after {
+	content: "\f049";
+}
+div.dataTables_paginate.paging_full_numbers a.previous {
+	/* border-top-left-radius: 7px; */
+	/* border-bottom-left-radius: 7px; */
+}
+div.dataTables_paginate.paging_full_numbers a.previous:after {
+	content: "\f04a";
+}
+div.dataTables_paginate.paging_full_numbers a.next {
+	/* border-top-right-radius: 7px; */
+	/* border-bottom-right-radius: 7px; */
+}
+.paging_full_numbers a.next:after {
+	content: "\f04e";
+}
+div.dataTables_paginate.paging_full_numbers a.last {
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+.paging_full_numbers a.last:after {
+	content: "\f050";
+}
+div.dataTables_paginate.paging_full_numbers a.paginate_button:not(.disabled):hover{
+	border:0px;
+	color: white;
+	background: #4CB5D2 !important;
+	background-color: #4CB5D2 !important;
+}
+div.dataTables_paginate.paging_full_numbers a.paginate_button:not(.disabled):not(.current):active{
+	border:0px;
+	color: white;
+	background: #019ad3 !important;
+	background-color: #019ad3 !important;
+}
+div.dataTables_paginate.paging_full_numbers a.paginate_button.current:hover {
+	border:0px !important;
+	color: white !important;
+	background: rgb(41, 131, 173);
+	background-color: rgb(41, 131, 173) ;
+}
+div#usersManagementPortletContainer .btn-default.moreInfo,
+ div#usersManagementPortletContainerSiteTeamsEditMode .btn-default.moreInfo {
+	border : none;
+	background: rgb(1, 95, 126);
+	background-color: rgb(1, 95, 126);
+	color : white;
+}
+div#usersManagementPortletContainer .btn-default.moreInfo:hover,
+ div#usersManagementPortletContainerSiteTeamsEditMode .btn-default.moreInfo:hover {
+	border : none;
+	background: #327A8A;
+	background-color: #327A8A;
+	color : white;
+}
+div.dataTables_paginate.paging_full_numbers a.paginate_button#usersRequestsTable_previous,
+ div.dataTables_paginate.paging_full_numbers a.paginate_button#usersRequestsTable_previous {
+	background: #0271be;
+	background-color: #0271be;
+	color: white !important;
+	border:0px;
+}
+div#usersManagementPortletContainer div.dataTables_paginate.paging_full_numbers a.paginate_button.disabled,
+div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button.disabled {
+	background:#e0e0e0 !important;
+	background-color:#e0e0e0 !important;
+}
+div#usersManagementPortletContainer div.dataTables_paginate.paging_full_numbers a.paginate_button.current,
+div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_paginate.paging_full_numbers a.paginate_button.current {
+	background: #019AD3;
+	background-color: #019AD3;
+}

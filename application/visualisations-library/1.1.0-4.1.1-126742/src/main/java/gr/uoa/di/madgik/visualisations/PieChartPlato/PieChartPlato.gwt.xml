@@ -1,0 +1,4 @@
+<module>
+	<inherits name="gr.uoa.di.madgik.visualisations.VisualisationsLibrary"/>
+ 	<entry-point class="gr.uoa.di.madgik.visualisations.PieChartPlato.client.PieChartPlato" />
+</module>

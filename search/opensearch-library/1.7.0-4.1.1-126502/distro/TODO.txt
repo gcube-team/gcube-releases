@@ -1,0 +1,2 @@
+Repeated parameters (only identified application so far are SRU facet parameters, requires minor remodeling of template and query builder classes so that parameters are also associated with their template variables)
+Multithreaded paging policy could lead to performance increase

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<portlet-app>
+	<portlet>
+		<description>SpeciesDiscovery</description>
+		<portlet-name>SpeciesDiscovery</portlet-name>
+		<display-name>SpeciesDiscovery</display-name>
+		<portlet-class>org.gcube.portlets.user.speciesdiscovery.portlet.SpeciesDiscoveryPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>SpeciesDiscovery</title>
+			<short-title>SpeciesDiscovery</short-title>
+		</portlet-info>
+	</portlet>
+</portlet-app>

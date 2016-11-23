@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='statistics'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Other module inherits -->
+	<!-- <inherits name='org.gcube.portlets.widgets.widgettour.WidgetTour' /> -->
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+	<inherits name='org.gcube.portal.databook.GCubeSocialNetworking' />
+
+	<!-- Bootstrap import -->
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+
+	<!-- Other module inherits -->
+	<inherits name="net.eliasbalasis.tibcopagebus4gwt.tibcopagebus4gwt" />
+	<inherits name="org.jsonmaker.gwt.Gwt_jsonmaker" />
+	<inherits
+		name="net.eliasbalasis.tibcopagebus4gwt.testsubscriber.TestSubscriber" />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlet.user.userstatisticsportlet.client.Statistics' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

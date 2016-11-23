@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='workspace'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+
+	<!-- To Comment out -->
+<!-- 	<set-property name="user.agent" value="safari" /> -->
+
+	<!-- <inherits name='org.gcube.portlets.widgets.guidedtour.GuidedTour' /> -->
+
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+	<inherits name='org.gcube.portlets.widgets.wsexplorer.WorkspaceExplorer' />
+	<!-- Moduel GXT -->
+	<inherits name='com.extjs.gxt.ui.GXT' />
+
+	<!-- Other module inherits -->
+	<inherits name='org.gcube.portlets.user.workspace.WorkspaceTree' />
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+
+	<inherits name='org.gcube.portlets.widgets.wsmail.WsMail_Widget' />
+	<inherits name='org.gcube.portlets.widgets.sessionchecker.SessionChecker' />
+	<inherits
+		name="org.gcube.portlets.widgets.workspaceuploader.WorkspaceUploader"></inherits>
+	<!-- Inherits widget -->
+	<inherits
+		name='org.gcube.portlets.widgets.ckandatapublisherwidget.CKanMetadataPublisher' />
+	<inherits name="org.realityforge.gwt.websockets.WebSockets" />
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.user.workspace.client.WorkspacePortlet' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+	<!--pay attention in this part -->
+	<!-- <source path='resources' /> -->
+	<!-- <replace-with -->
+	<!-- class="org.gcube.portlets.user.workspace.resources.BootstrapConfigurator"> -->
+	<!-- <when-type-is class="com.github.gwtbootstrap.client.ui.config.Configurator" 
+		/> -->
+	<!-- </replace-with> -->
+	<!-- <public path="resources"> -->
+	<!-- <exclude name="** /*.java" /> -->
+	<!-- <exclude name="** /*.class" /> -->
+	<!-- </public> -->
+
+	<inherits name="com.google.gwt.logging.Logging" />
+	<set-property name="gwt.logging.logLevel" value="INFO" />
+	<set-property name="gwt.logging.enabled" value="FALSE" />
+	<!-- <set-property name="gwt.logging.firebugHandler" value="ENABLED" /> -->
+	<!-- <set-property name="gwt.logging.popupHandler" value="DISABLED" /> -->
+
+</module>

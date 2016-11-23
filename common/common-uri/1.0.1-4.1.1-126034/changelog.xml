@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="common-uri-1.0.0" date="2012-10-18">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="common-uri-1.0.1-4.1.1-126034" date="2011-01-11">
+		<Change>Updated property file for authorities to bind the gCube infrastructure to gcube.data.d4science.org</Change>
+	</Changeset>
+</ReleaseNotes>

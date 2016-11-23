@@ -1,0 +1,153 @@
+/* Uncomment the following import on gcube-system.org and d4science.org websites*/
+/* @import url("gcube-system.css"); */
+
+/** Add css rules here for your application. */
+/** Example rules used by the template application (remove for your app) */
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	color: #777777;
+	margin: 40px 0px 70px;
+	text-align: center;
+}
+
+.sendButton {
+	display: block;
+	font-size: 16pt;
+}
+
+.dialogVPanel {
+	margin: 5px;
+}
+
+.serverResponseLabelError {
+	color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+	margin: 15px 6px 6px;
+}
+
+.margin-FlowPanel {
+	margin: 5px;
+}
+
+hr {
+	background-color: #AAAAAA;
+	border: 0 none;
+	color: #AAAAAA;
+	height: 1px;
+	margin-bottom: 10px !important;
+	margin-top: 10px !important;
+}
+
+.divider {
+	
+}
+
+.right-position {
+	/* 	top: 20px; */
+	position: absolute;
+	right: 0px;
+	margin-top: 10px;
+	/*     color: red; */
+}
+
+.left-position {
+	top: 5px;
+	position: absolute;
+	left: 0px;
+	/*     color: red; */
+}
+
+.hero-unit-personal {
+	background-color: #D9EDF7;
+	border-radius: 6px;
+	color: inherit;
+	font-size: 18px;
+	font-weight: 200;
+	line-height: 30px;
+	margin-bottom: 25px;
+	margin-top: 10px;
+	padding: 20px;
+}
+
+.hero-unit-personal h2 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.3;
+}
+
+.no_Margin {
+	margin-bottom: 0 !important;
+}
+
+div .controls {
+	text-align: right;
+}
+
+.form-action-personal {
+	background-color: white;
+	border-top: none !important;
+	padding-left: 45%;
+}
+
+.marginTop20 {
+	margin-top: 20px;
+}
+
+.label-gcube-secondary {
+	font-size: 13px !important;
+	margin-bottom: 2px;
+}
+
+.label-gcube-principal {
+	font-size: 16px !important;
+	/* 	margin-top: 5px; */
+	margin-bottom: 3px;
+}
+
+.img-centered-clickable {
+	text-align: center !important;
+}
+
+.img-centered-clickable img {
+	cursor: pointer;
+}
+
+.baloonGoTop {
+	padding: 5px;
+	/* 	border: solid; */ /* 	border-width: 1px; */
+	/* 	border-color: rgb(200, 210, 240); */ /* 	border-radius: 15px; */
+	-webkit-border-top-left-radius: 15px;
+	-webkit-border-top-right-radius: 15px;
+	-moz-border-radius-topleft: 15px;
+	-moz-border-radius-topright: 15px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	/* 	background-color: #0B3C9E; */
+	background-color: #072431;
+	color: #D2D2D2;
+	font-family: verdana, arial;
+	font-size: 11px;
+	margin-left: 50%;
+	opacity: 0.5;
+}
+
+.baloonGoTop :HOVER {
+	cursor: pointer;
+	color: #FFF;
+}
+
+.color-white {
+	color: #FFF !important;
+	text-decoration: none;
+}
+
+.table-overflow td, th {
+	overflow: hidden !important;
+}
+
+.table-overflow th{
+	text-align: center !important;
+}

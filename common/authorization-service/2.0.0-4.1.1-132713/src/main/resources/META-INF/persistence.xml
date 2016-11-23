@@ -1,0 +1,33 @@
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+
+	<!-- change here if you want name of unit different -->
+	<persistence-unit name="authorization" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		
+		<!-- Converters -->
+		<class>org.gcube.common.authorizationservice.persistence.entities.converters.StringListConverter</class>
+		
+		
+		<!-- Entities -->
+		<class>org.gcube.common.authorizationservice.persistence.entities.AuthorizationEntity</class>
+		<class>org.gcube.common.authorizationservice.persistence.entities.ServiceAuthorizationEntity</class>
+		<class>org.gcube.common.authorizationservice.persistence.entities.UserAuthorizationEntity</class>
+		<class>org.gcube.common.authorizationservice.persistence.entities.ExternalServiceAuthorizationEntity</class>
+		<class>org.gcube.common.authorizationservice.persistence.entities.NodeAuthorizationEntity</class>
+		<class>org.gcube.common.authorizationservice.persistence.entities.PolicyEntity</class>
+		<class>org.gcube.common.authorizationservice.persistence.entities.ServicePolicyEntity</class>
+		<class>org.gcube.common.authorizationservice.persistence.entities.UserPolicyEntity</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:postgresql://postgres1-d-d4s.d4science.org/authorization" />
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.user" value="authorization" />
+			<property name="javax.persistence.jdbc.password" value="auth_dem0l33t" />
+			<property name="eclipselink.ddl-generation" value="create-tables" />
+			<property name="eclipselink.ddl-generation.output-mode"
+				value="database" />
+		</properties>
+	</persistence-unit>
+</persistence>

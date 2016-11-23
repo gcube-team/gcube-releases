@@ -1,0 +1,1 @@
+java -cp .:./lib/org.gcube.common.vremanagement.deployer.testsuite.jar:$CLASSPATH org/gcube/common/vremanagement/deployer/testsuite/UpdateTest $1 $2 $3

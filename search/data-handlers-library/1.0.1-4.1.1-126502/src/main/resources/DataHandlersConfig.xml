@@ -1,0 +1,10 @@
+<DataHandlers>
+	<DataSource type="PATH"									class="gr.uoa.di.madgik.searchlibrary.operatorlibrary.datasource.predefined.PathDataSource" />
+	<DataSource type="FTP"									class="gr.uoa.di.madgik.searchlibrary.operatorlibrary.datasource.predefined.FTPDataSource" />
+	<DataSource type="TM"										class="gr.uoa.di.madgik.searchlibrary.operatorlibrary.datasource.predefined.TMDataSource" />
+	<DataSource type="JDBC"									class="gr.uoa.di.madgik.searchlibrary.operatorlibrary.datasource.predefined.JDBCDataSource" />
+
+	<DataSink type="PATH"										class="gr.uoa.di.madgik.searchlibrary.operatorlibrary.datasink.predefined.PathDataSink" />
+	<DataSink type="FTP"										class="gr.uoa.di.madgik.searchlibrary.operatorlibrary.datasink.predefined.FTPDataSink" />
+	<DataSink type="JDBC"										class="gr.uoa.di.madgik.searchlibrary.operatorlibrary.datasink.predefined.JDBCDataSink" />
+</DataHandlers>

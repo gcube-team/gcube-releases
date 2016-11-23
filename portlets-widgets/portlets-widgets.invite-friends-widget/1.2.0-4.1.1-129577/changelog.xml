@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-widgets.invite-friends-widget.1-1-0"	date="2015-09-01">
+		<Change>fix for Bug #518 Wrong port in redirect email links (9090)</Change>
+		<Change>Feature #520 Invite Friends widget to make user entered email address lowercase</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.invite-friends-widget.1-0-0"	date="2015-07-02">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

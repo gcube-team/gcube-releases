@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.messaging-endpoint.1-0-0" date="2013-04-19">
+			<Change>First release of the component</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.messaging-endpoint.1-1-0" date="2014-04-04">
+			<Change>Added Shutdown Hook in order to stop the harvesting correctly</Change>
+	</Changeset>
+		<Changeset component="org.gcube.common.messaging-endpoint.1-1-1" date="2014-05-28">
+			<Change>FIX: stop the scheduler in case the max waiting time is reached</Change>
+	</Changeset>
+</ReleaseNotes>

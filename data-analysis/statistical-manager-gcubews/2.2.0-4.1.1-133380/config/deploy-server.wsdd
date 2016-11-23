@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment name="defaultServerConfig" xmlns="http://xml.apache.org/axis/wsdd/"
+	xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<service name="gcube/data/analysis/statisticalmanager/statisticalmanagerfactory" provider="Handler" use="literal" style="document">
+        <parameter name="className" 
+        value="org.gcube.data.analysis.statisticalmanager.experimentspace.ComputationFactory"/>
+        <wsdlFile>share/schema/statistical-manager-gcubews/ComputationFactory_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+        <parameter name="loadOnStartup" value="true"/>
+    </service>
+    
+     <service name="gcube/data/analysis/statisticalmanager/statisticalmanagerservice" provider="Handler" use="literal" style="document">
+        <parameter name="className" 
+        value="org.gcube.data.analysis.statisticalmanager.experimentspace.computation.Computation"/>
+        <wsdlFile>share/schema/statistical-manager-gcubews/Computation_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+        <parameter name="loadOnStartup" value="true"/>
+        <parameter name="providers" value="GCUBEProvider"/>
+    </service>
+   
+
+	<service
+		name="gcube/data/analysis/statisticalmanager/statisticalmanagerdataspace"
+		provider="Handler" use="literal" style="document">
+		<parameter name="className"
+			value="org.gcube.data.analysis.statisticalmanager.dataspace.DataSpace" />
+		<wsdlFile>share/schema/statistical-manager-gcubews/DataSpace_service.wsdl
+		</wsdlFile>
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider" />
+		<parameter name="scope" value="Application" />
+		<parameter name="loadOnStartup" value="true" />
+	</service>
+
+	
+
+<!-- 	<typeMapping
+		xmlns:ns="http://gcube-system.org/namespaces/data/analysis/statisticalmanager/types"
+		qname="ns:SMComputation"
+		type="java:org.gcube_system.namespaces.data.analysis.statisticalmanager.types.SMComputation"
+		serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+		deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+		encodingStyle="" />
+
+	<typeMapping
+		xmlns:ns="http://gcube-system.org/namespaces/data/analysis/statisticalmanager/types"
+		qname="ns:SMImport"
+		type="java:org.gcube_system.namespaces.data.analysis.statisticalmanager.types.SMImport"
+		serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+		deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+		encodingStyle="" />
+ -->
+
+</deployment>

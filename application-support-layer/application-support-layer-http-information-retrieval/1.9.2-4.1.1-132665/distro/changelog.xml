@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="${build.finalName}" date="2013-01-29">
+		<Change>Bug fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.asl-http-information-retrieval.1-0-0" date="2012-07-27">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.asl-http-information-retrieval.1-1-0" date="2013-03-04">
+		<Change>A GenericSearch function is added to provide google like anonymous search</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.asl-http-information-retrieval.1-2-0" date="2013-04-19">
+		<Change>Added support for the new exceptions of the aslsearch</Change>
+	</Changeset>
+</ReleaseNotes>

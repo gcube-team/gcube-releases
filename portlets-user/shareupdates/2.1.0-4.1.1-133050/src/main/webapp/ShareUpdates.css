@@ -1,0 +1,360 @@
+@media screen and (max-width: 1050px) {
+	select.wizardListbox {
+		width: 100% !important;
+	}
+	.attachment-container-full-width {
+		padding: 5px;
+		font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+		background-clip: border-box;
+		background-color: #FBFBFB;
+		background-image: none;
+		border: 1px solid #DDD;
+		border-radius: 4px;
+		display: inline-block;
+		width: 95% !important;
+		border-color: red;
+		margin-left: 5px !important;
+	}
+	.attachment-container-half-width {
+		padding: 5px;
+		font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+		background-clip: border-box;
+		background-color: #FBFBFB;
+		background-image: none;
+		border: 1px solid #DDD;
+		border-radius: 4px;
+		display: inline-block;
+		width: 95% !important;
+		border-color: red;
+		margin-left: 5px !important;
+	}
+	.share-updates-photo-cell {
+		display: none;
+	}
+	.share-updates-table {
+		width: 100% !important;
+	}
+}
+
+.attachment-container-full-width {
+	padding: 5px;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	background-clip: border-box;
+	background-color: #FBFBFB;
+	background-image: none;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	display: inline-block;
+	width: 93%;
+}
+
+.attachment-container-half-width {
+	padding: 5px;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	background-clip: border-box;
+	background-color: #FBFBFB;
+	background-image: none;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	display: inline-block;
+	width: 46%;
+}
+
+td>form {
+	margin-top: 5px !important;
+	margin-bottom: 0px !important;
+}
+
+.share-updates-table {
+	border-collapse: collapse;
+	width: 95%;
+}
+
+.upload-btn-m {
+	width: 45px;
+	margin-right: 10px;
+	margin-bottom: 15px;
+}
+
+.share-updates-table .share-updates-cell {
+	padding-left: 3px;
+	width: 95%;
+}
+
+.share-updates-table .share-updates-photo-cell {
+	text-align: right;
+	vertical-align: top;
+	width: 5%;
+	min-width: 50px;
+}
+
+.share-updates-member-photo {
+	width: auto !important;
+	height: 40px !important;
+	border-radius: 4px;
+}
+
+/* Superpose TextArea and Highlight DIV trick starts here */
+#supercontainer {
+	position: relative;
+}
+
+#highlighterContainer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	cursor: text;
+	height: 32px;
+	width: 100%;
+}
+
+#inputContainer {
+	position: relative;
+}
+
+#highlighter {
+	padding: 4px 2px;
+	color: #ffffff;
+	background-color: transparent;
+	margin: 0px;
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+		sans-serif;
+	font-size: 13px;
+	letter-spacing: normal;
+	line-height: normal;
+	border: 1px solid transparent;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	width: 100%;
+	height: 32px;
+	word-wrap: break-word;
+	/* this is very important when usere paste long links*/
+}
+
+div#inputContainer textarea.postTextArea {
+	padding: 4px 2px;
+	color: #999;
+	background-color: transparent;
+	margin: 0px;
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+		sans-serif;
+	font-size: 13px;
+	letter-spacing: normal;
+	line-height: normal;
+	border: 1px solid #999;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	width: 100%;
+	height: 32px;
+}
+
+.highlightedUser {
+	background-color: #D8DFEA !important;
+}
+
+.highlightedHashtag {
+	background-color: #0084B5 !important;
+}
+
+/* DIV trick ends here */
+.gwt-Button {
+	text-shadow: none;
+	font-weight: normal;
+	padding: 5px 15px !important;
+}
+
+textarea#postTextArea.postTextArea.darker-color {
+	color: #333;
+	background-color: transparent;
+	transition: background .25s ease-in-out;
+	-moz-transition: background .25s ease-in-out;
+	-webkit-transition: background .25s ease-in-out;
+}
+
+.shareButton {
+	background-color: #0271BE;
+	background-image: linear-gradient(#6ab4eb, #0271BE);
+	border: 1px solid #01497C;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	color: #FFF;
+	font-weight: normal;
+	font-size: 12px;
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	padding: 5px 15px;
+}
+
+.shareButton:hover, .shareButton:focus {
+	background-color: #019AD3;
+	background-image: linear-gradient(#33BCEF, #019AD3);
+	border-color: #057ED0;
+}
+
+.shareButton:active {
+	background: #e3e8f3;
+}
+
+.buttonDiv {
+	text-align: right;
+	padding-top: 2px;
+}
+
+.link-previewer {
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	background-clip: border-box;
+	background-color: #FBFBFB;
+	background-image: none;
+	border-color: #D7D7D7;
+}
+
+.hide-description {
+	margin-top: 5px;
+}
+
+.hide-description span label {
+	padding-left: 5px;
+}
+
+.linkpreview-bgcolor {
+	background-color: #FBFBFB;
+}
+
+.link-title {
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 15px;
+	width: 465px;
+	word-break: break-all;
+}
+
+.link-url {
+	color: #666;
+	font-size: 10px;
+}
+
+.link-desc {
+	padding-top: 5px;
+	color: #333;
+	font-size: 10px;
+	width: 465px;
+}
+
+.image-loader {
+	background: #FFF url(images/avatarLoader.gif) no-repeat;
+}
+
+.su-closeImage {
+	background: url(images/close.png) 0px 0px no-repeat;
+	height: 15px;
+	width: 15px;
+}
+
+.su-closeImage:hover {
+	background: url(images/close.png) 0px -16px no-repeat;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.su-deleteAttachment {
+	background: url(images/close.png) 0px 0px no-repeat;
+	height: 15px;
+	width: 15px;
+	display: inline;
+	float: right;
+	vertical-align: top;
+}
+
+.su-deleteAttachment:hover {
+	background: url(images/close.png) 0px -16px no-repeat;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.su-closeImage:active {
+	background: url(images/close.png) 0px -32px no-repeat;
+}
+
+.small-text {
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	font-size: 9px;
+}
+
+.small-text-arrow {
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	font-size: 9px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.small-text-arrow:hover {
+	color: blue;
+	cursor: pointer;
+	cursor: hand;
+}
+
+a.link, a.link:active, a.link:visited {
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+		sans-serif;
+	font-size: 12px;
+	cursor: pointer;
+	cursor: hand;
+	text-decoration: none;
+	color: #3B5998;
+}
+
+a.link:hover {
+	opacity: 0.8;
+	text-decoration: underline;
+}
+
+.tab-main-container {
+	width: 600px;
+	background-clip: border-box;
+	background-image: none;
+	background-origin: padding-box;
+	padding-bottom: 3px;
+}
+
+.toolsContainer {
+	padding: 3px 0 0 2px;
+	width: 595px;
+	background-image: none;
+}
+
+select.wizardListbox {
+	width: 65%;
+	background: #F2F2F2 url(images/white-grad.png) repeat-x scroll left top;
+	border-color: #BBB;
+	color: #444;
+	font-size: 12px;
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+	cursor: hand;
+	margin-left: 0px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	margin-top: 2px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+}
+
+/* smart textarea */
+#mycontentEditableElement input[type="text"] {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	padding: 1px 3px;
+	color: #1C2A47;
+	border: 1px solid #9DACCC;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}

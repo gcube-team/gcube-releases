@@ -1,0 +1,11 @@
+scope : /gcube/devsec
+chokeProgressEvents : false
+chokePerformanceEvents : false
+storePlans : true
+timeout : -1
+pollPeriod : 60000
+jdl : test.jdl : Examples/grid/test.jdl
+userProxy : userProxy : Examples/UserProxy/userProxy
+inData : test.sh : Examples/grid/test.sh
+outData : std.err
+outData : std.out

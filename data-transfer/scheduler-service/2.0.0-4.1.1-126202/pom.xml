@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>org.gcube.data.transfer</groupId>
+	<artifactId>scheduler-parent</artifactId>
+	<version>2.0.0-4.1.1-126202</version>
+	<packaging>pom</packaging>
+	<name>The Data Transfer Scheduler Parent</name>
+	<modules>
+		<module>scheduler-service</module>
+		<module>scheduler-stubs</module>
+	</modules>
+	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/private/nikolaos.drakopoulos/data-transfer-scheduler</connection>
+		<developerConnection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/private/nikolaos.drakopoulos/data-transfer-scheduler</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/private/nikolaos.drakopoulos/data-transfer-scheduler</url>
+	</scm>
+	<properties>
+		<wsdlDirectory>${project.basedir}/../wsdl</wsdlDirectory>
+		<wsdlOutputDirectory>${project.basedir}/../target/generated-sources/wsdl</wsdlOutputDirectory>
+		<configDirectory>${project.basedir}/../config</configDirectory>
+		<distroDirectory>${project.basedir}/../distro</distroDirectory>
+		<namespace>http://gcube-system.org/namespaces/datatransfer/scheduler/datatransferscheduler</namespace>
+	</properties>
+
+
+
+	<dependencyManagement>
+
+		<dependencies>
+
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-bom</artifactId>
+				<version>2.2.0-4.1.1-132327</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>ghn-core-runtime</artifactId>
+				<version>1.0.0</version>
+				<scope>provided</scope>
+			</dependency>
+		</dependencies>
+
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+
+			<plugins>
+				<plugin>
+					<groupId>org.gcube.tools</groupId>
+					<artifactId>maven-service-plugin</artifactId>
+					<version>1.2.0</version>
+					<configuration>
+						<serviceId>data-transfer.scheduler-service</serviceId>
+						<configurationDirectory>../config</configurationDirectory>
+						<wsdlDirectory>../wsdl</wsdlDirectory>
+						<wsdlOutputDirectory>../target/wsdl</wsdlOutputDirectory>
+						<basePackage>org.gcube.datatransfer.scheduler</basePackage>
+					</configuration>
+				</plugin>
+
+				<!-- interpolates profiles and copies from distribution location to configuration 
+
+					location, where it is need for embedding into stub artifact, gar generation, 
+					and service archive. -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.6</version>
+					<executions>
+						<execution>
+							<id>copy-profile</id>
+							<goals>
+								<goal>copy-resources</goal>
+							</goals>
+							<phase>process-resources</phase>
+							<configuration>
+								<outputDirectory>../config</outputDirectory>
+								<resources>
+									<resource>
+										<directory>${distroDirectory}</directory>
+										<includes>
+											<include>profile.xml</include>
+										</includes>
+										<filtering>true</filtering>
+									</resource>
+								</resources>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>

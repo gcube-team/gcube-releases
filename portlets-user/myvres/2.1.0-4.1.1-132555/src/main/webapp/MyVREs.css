@@ -1,0 +1,163 @@
+div.vreButton {
+	float: left;
+}
+
+a.vrelink,a.vrelink:active,a.vrelink:visited {
+	cursor: pointer;
+	cursor: hand;
+	text-decoration: none;
+	color: #15C;
+}
+
+a.vrelink:hover {
+	opacity: 0.8;
+	text-decoration: underline;
+}
+
+.gwt-Button {
+	margin: 0px;
+	padding: 0px;
+}
+
+.mainPanel {
+	margin-bottom: 15px;
+}
+
+.flowPanel {
+	margin-left: 5px;
+}
+
+.important {
+	font-weight: bold;
+}
+
+.NoVresStyle {
+	line-height: 25px;
+	padding-left: 0px;
+}
+
+.listPanel {
+	margin-right: 10px;
+	margin-top: 5px;
+	padding: 5px;
+}
+
+.category-panel {
+	width: 95%;
+}
+
+.category-name {
+	margin-top: 8px;
+	color: #999;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	font-size: 12px;
+	font-variant:small-caps;
+	font-weight: bold;
+}
+
+.switcher:hover {
+	opacity: 0.8;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.listPanel-title {
+	color: #999;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	font-size: 12px;
+	font-variant:small-caps;
+	font-weight: bold;
+}
+
+.list {
+	list-style-type: none;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	margin-left: 0px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+
+.list-item {
+	color: #444;
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+		sans-serif;
+	font-size: 15px;
+	margin-top: 5px;
+	line-height: 14px;
+	padding-left: 20px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+
+.more-vre {
+	width: 100%; 
+	height: 100px; 
+	background: url(images/More.png) 50% 50% no-repeat;
+}
+
+.item-vre {
+	background-image: url("images/vres.png");
+}
+
+.item-vo {
+	background-image: url("images/vos.png");
+}
+
+.list-item:hover {
+	cursor: pointer;
+	cursor: hand;
+	color: #336699;
+	text-decoration: none;
+	transition: color .25s ease-in-out;
+	-moz-transition: color .25s ease-in-out;
+	-webkit-transition: color .25s ease-in-out;
+}
+
+
+.vreButton {
+	background: transparent;
+	margin-right: 10px;
+	margin-top: 5px;
+	padding: 5px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	background-color: #FFF;
+	border: 1px solid #DBDBDB;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.vreCaption {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #39C;
+	display: block;
+	font-size: 9px;
+	font-weight: bold;
+	margin-bottom: 3px;
+	text-align: left;
+	padding-left: 1px;
+	border-bottom: 4px solid #39C;
+}
+
+.vreButton[disabled]:hover,.vreButton[disabled]:active,.vreButton[disabled]
+	{
+	color: #CCC;
+	border-color: #BBB;
+	cursor: default;
+	opacity: 1.0;
+}
+
+.vreButton:hover {
+	border-color: #39C;
+	color: #222;
+	opacity: 0.8;
+}
+
+.vreButton:active {
+	background: #fff;
+	border: 1px solid #DBDBDB;
+}

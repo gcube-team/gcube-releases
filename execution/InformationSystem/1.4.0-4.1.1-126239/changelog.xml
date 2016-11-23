@@ -1,0 +1,20 @@
+<ReleaseNotes>
+	<Changeset component="informationsystemlibrary-1.4.0-4.1.1-126239.1-4-0" date="2012-09-07">
+		<Change>Added support for generic resource deletion, node retrieval by hostname and port and node unregistration</Change>
+		<Change>Mavenized</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.InformationSystem.1-3-0" date="2012-05-04">
+		<Change>Integration with latest node selection and collocation functionality</Change>
+		<Change>Added GetMatchingNodes method, which returns all candidates without performing selection. Motivation: PE2ng improvements in matchmaking #263</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.InformationSystem.1-2-0" date="2011-09-02">
+		<Change>Integration with node selection and collocation functionality</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.InformationSystem.1-1-1" date="2010-10-08">
+		<Change>Added support for open ended host information publishing and matching</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.InformationSystem.1-1-0" date="2010-09-03">
+		<Change>Added support in InformationSystem interface for OpenSearch queries</Change>
+		<Change>Added support in InformationSystem interface for Condor related queries</Change>
+	</Changeset>
+</ReleaseNotes>

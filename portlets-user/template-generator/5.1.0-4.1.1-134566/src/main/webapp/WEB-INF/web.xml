@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>TemplateGenServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.templates.server.TemplateServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TemplateGenServlet</servlet-name>
+		<url-pattern>/templates/TemplateGenServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsexplorer.server.WorkspaceExplorerServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<url-pattern>/templates/WorkspaceExplorerService</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet>
+		<servlet-name>quicktourServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.guidedtour.server.TourServiceImpl</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>quicktourServlet</servlet-name>
+		<url-pattern>/templates/quicktourServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>Templates.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

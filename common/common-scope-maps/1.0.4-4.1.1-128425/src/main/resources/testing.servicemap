@@ -1,0 +1,5 @@
+<service-map scope='/testing' version="${project.version}">
+	<services>
+		<service name='XQueryAccessService' endpoint='http://im-goldfish:8080/wsrf/services/gcube/informationsystem/collector/XQueryAccess' />
+	</services>
+</service-map>

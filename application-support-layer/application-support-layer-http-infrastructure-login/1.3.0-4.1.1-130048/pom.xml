@@ -1,0 +1,143 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>org.gcube.applicationsupportlayer</groupId>
+	<artifactId>aslhttpinfrastructurelogin</artifactId>
+	<version>1.3.0-4.1.1-130048</version>
+	<packaging>war</packaging>
+
+	<name>aslHttpInfrastructureLogin</name>
+	<description>set of servlets for loggin in the infrastructure</description>
+
+	<scm>
+		<connection>scm:svn:https://svn.d4science-ii.research-infrastructures.eu/gcube/trunk/application-support-layer/aslHttpInformationRetrieval/1.0.0/${project.artifactId}</connection>
+		<developerConnection>scm:svn:https://svn.d4science-ii.research-infrastructures.eu/gcube/trunk/application-support-layer/aslHttpInformationRetrieval/1.0.0/${project.artifactId}</developerConnection>
+		<url>https://svn.d4science-ii.research-infrastructures.eu/gcube/trunk/application-support-layer/aslHttpInformationRetrieval/1.0.0/${project.artifactId}</url>
+	</scm>
+
+	<properties>
+		<distroDirectory>distro</distroDirectory>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>aslcore</artifactId>
+			<version>5.1.0-4.1.1-132042</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>servlet-api</artifactId>
+		    <version>2.3</version>
+		    <scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk13</classifier>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>asl_http_access_management</artifactId>
+			<version>1.4.0-4.1.1-129842</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+	
+		<finalName>aslHttpInfrastructureLogin</finalName>
+		<plugins>
+		
+			<plugin>
+		        <groupId>org.apache.tomcat.maven</groupId>
+		        <artifactId>tomcat7-maven-plugin</artifactId>
+		        <version>2.0</version>
+		        <configuration>
+		          <path>/${project.build.finalName}</path>
+		        </configuration>
+		    </plugin>
+		
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<failOnMissingWebXml>true</failOnMissingWebXml>
+					<webXml>WebContent/WEB-INF/web.xml</webXml>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>profile.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+		</plugins>
+	</build>
+
+
+</project>

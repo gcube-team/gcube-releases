@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='workspacesharingwidget'>
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.resources.Resources' />
+
+	<!-- For development, a default of `DEBUG` is recommended <inherits name="com.allen_sauer.gwt.log.gwt-log-DEBUG" 
+		/> -->
+
+	<!-- Other module inherits -->
+	<!-- Moduel GXT 2 -->
+	<inherits name='com.extjs.gxt.ui.GXT' />
+
+	<!-- Inherit the default GWT style sheet. You can change -->
+	<!-- the theme of your GWT application by uncommenting -->
+	<!-- any one of the following lines. -->
+<!-- 	<inherits name='com.google.gwt.user.theme.standard.Standard' /> -->
+	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
+
+	<!-- Other module inherits -->
+	<!-- <servlet path="/WorkspaceService" class="org.gcube.portlets.user.workspace.server.GWTWorkspaceServiceImpl" 
+		/> -->
+
+
+ 	<!-- Specify the app entry point class. --> 
+<!-- 	<entry-point class='org.gcube.portlets.widgets.workspacesharingwidget.client.WorkspaceSharingWidgetEntryPoint' /> -->
+
+	<!-- Specify the application specific style sheet. -->
+	<stylesheet src='workspacesharingwidget.css' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

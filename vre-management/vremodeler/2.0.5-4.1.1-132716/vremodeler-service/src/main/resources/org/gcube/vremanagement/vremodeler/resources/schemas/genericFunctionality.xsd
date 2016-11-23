@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+			XML Schema for GCUBE Generic Resource Version 1.4 Last modified:
+			29/05/2008 Contact: http://www.gcube-system.org
+		</xs:documentation>
+	</xs:annotation>
+
+	<xs:redefine schemaLocation="CommonTypeDefinitions.xsd">
+		<xs:complexType name="ProfileType">
+			<xs:complexContent>
+				<xs:restriction base="ProfileType">
+					<xs:sequence>
+						<xs:element name="SecondaryType" type="xs:string" />
+						<xs:element name="Name" type="xs:string" />
+						<xs:element name="Description" type="xs:string" />
+						<xs:element name="Body">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="MainFunctionalities" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="MainFunctionality" maxOccurs="unbounded">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="Name" type="xs:string" />
+															<xs:element name="Description" type="xs:string" />
+															<xs:element name="Functionalities" minOccurs="0">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element ref="Functionality" maxOccurs="unbounded" />
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+														<xs:attribute name="mandatory" type="xs:boolean" use="optional"/>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:redefine>
+
+	<xs:element name="Functionality">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Name" type="xs:string" />
+				<xs:element name="Description" type="xs:string" />
+				<xs:element name="Services" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="Service" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MandatoryResources" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="RuntimeResource" minOccurs="0"	maxOccurs="unbounded" />
+							<xs:element ref="GenericResource" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+						
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SelectableResources" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="RuntimeResource" minOccurs="0"	maxOccurs="unbounded" />
+							<xs:element ref="GenericResource" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+						
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Portlets" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Portlet" type="xs:string" maxOccurs="unbounded" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="mandatory" type="xs:boolean" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="Service">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ServiceName" type="xs:string" />
+				<xs:element name="ServiceClass" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GenericResource">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Name" type="xs:string" minOccurs="0"
+					maxOccurs="1" />
+				<xs:element name="SecondaryType" type="xs:string" />
+				<xs:element name="XpathToVerify" type="xs:string"
+					minOccurs="0" maxOccurs="1" />
+			</xs:sequence>
+			<xs:attribute name="description" type="xs:string" use="required"/>
+			<xs:attribute name="minselectable" type="xs:nonNegativeInteger" use="optional"/>
+			<xs:attribute name="maxselectable" type="xs:positiveInteger" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="RuntimeResource">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Name" type="xs:string" minOccurs="0"
+					maxOccurs="1" />
+				<xs:element name="Category" type="xs:string" />
+			</xs:sequence>
+			<xs:attribute name="description" type="xs:string" use="required"/>
+			<xs:attribute name="minselectable" type="xs:int" use="optional" default="0"/>
+			<xs:attribute name="maxselectable" type="xs:int" use="optional" default="-1"/>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- <xs:element name="Portlet"> <xs:complexType> <xs:sequence> <xs:element 
+		name="PortletName" type="xs:string"/> </xs:sequence> </xs:complexType> </xs:element> -->
+</xs:schema>

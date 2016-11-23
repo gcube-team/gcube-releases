@@ -1,0 +1,104 @@
+<Resource>
+	<ID />
+	<Type />
+	<Profile>
+		<SecondaryType>DTSTransformationProgram</SecondaryType>
+		<Name>XSLT_Transformer</Name>
+		<Description>Program transforming metadata by using an xslt</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.metadata.xslttransformer.XSLT_Transformer</Class>
+					<GlobalProgramParameters />
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0" />
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter isOptional="false" name="schemaURI" value="-" />
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter isOptional="true" name="finalftsxslt" value="-" />
+							<Parameter isOptional="true" name="xslt:1" value="-" />
+							<Parameter isOptional="true" name="xslt:2" value="-" />
+							<Parameter isOptional="true" name="xslt:3" value="-" />
+							<Parameter isOptional="true" name="xslt:4" value="-" />
+							<Parameter isOptional="true" name="xslt:5" value="-" />
+							<Parameter isOptional="true" name="xslt:6" value="-" />
+							<Parameter isOptional="true" name="xslt:7" value="-" />
+							<Parameter isOptional="true" name="xslt:9" value="-" />
+							<Parameter isOptional="true" name="xslt" value="-" />
+							<Parameter isOptional="true" name="delimiter" value="&amp;" />
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput" />
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schemaURI" value="-" />
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="1" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0" />
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter isOptional="false" name="schemaURI" value="http://dublincore.org/documents/dces/" />
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter isOptional="false" name="xslt" value="$BrokerXSLT_dc_anylanguage_to_es_anylanguage" />
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput" />
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schemaURI" value="http://es.xsd" />
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="2" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0" />
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter isOptional="false" name="schemaURI" value="http://eiDB.xsd" />
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter isOptional="false" name="xslt" value="$BrokerXSLT_eiDB_anylanguage_to_es_anylanguage" />
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput" />
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schemaURI" value="http://es.xsd" />
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>

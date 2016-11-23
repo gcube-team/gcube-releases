@@ -1,0 +1,12 @@
+share/schema/inmemorysg/inmemory_service_group_entry_port_type.wsdl
+share/schema/inmemorysg/inmemory_service_group_port_type.wsdl
+share/schema/inmemorysg/InMemoryServiceGroup_service.wsdl
+share/schema/inmemorysg/InMemoryServiceGroup_bindings.wsdl
+share/schema/inmemorysg/InMemoryServiceGroupEntry_service.wsdl
+share/schema/inmemorysg/InMemoryServiceGroupEntry_bindings.wsdl
+share/schema/mds/servicegroup/factory_port_type.wsdl
+share/schema/mds/servicegroup/ServiceGroupFactory_service.wsdl
+share/schema/mds/servicegroup/ServiceGroupFactory_bindings.wsdl
+share/schema/mds/servicegroup/client/ServiceGroupRegistrationClient.wsdl
+etc/gpt/packages/globus_wsrf_servicegroup_schema/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_servicegroup_schema/pkg_data_noflavor_pgm.gpt

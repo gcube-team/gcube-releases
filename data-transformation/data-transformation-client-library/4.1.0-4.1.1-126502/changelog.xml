@@ -1,0 +1,22 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-transformation.data-transformation-client-library.4-1-0" date="2014-07-04">
+		<Change>throws exception in case of empty source or initialization fail</Change>
+		<Change>client returns results as list of maps</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation-client-library.4-0-1" date="2014-06-11">
+		<Change>compliance with resource aware library</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation-client-library.4-0-0" date="2014-04-04">
+		<Change>compliance with RESTful version of DTS</Change>
+		<Change>API changes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation-client-library.3-0-0" date="2013-10-25">
+		<Change>API simplified</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation-client-library.2-0-0" date="2013-03-05">
+		<Change>refactored with featherweght framework</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transformation.data-transformation-client-library.1-0-0" date="2013-01-17">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.users-management-portlet.3-0-0" date="2016-06-20">
+		<Change>First release of the redesigned portlet</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.users-management-portlet.3-1-0" date="2016-09-24">
+		<Change>UI usability improvements</Change>
+		<Change>Added more options in handling users and/or groups/roles</Change>
+		<Change>Fixed minor bugs concerning user deletion from VRE and scroll bars in modals</Change>
+	</Changeset>
+</ReleaseNotes>

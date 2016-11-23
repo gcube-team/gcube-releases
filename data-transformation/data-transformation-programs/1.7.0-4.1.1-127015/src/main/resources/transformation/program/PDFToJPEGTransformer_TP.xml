@@ -1,0 +1,38 @@
+<Resource>
+    <ID/>
+    <Type/>
+    <Profile>
+    	<SecondaryType>DTSTransformationProgram</SecondaryType>
+        <Name>PDFToJPEGTransformer</Name>
+        <Description>Program transforming pdf files to jpeg</Description>
+        <Body>
+            <gDTSTransformationProgram>
+                <Transformer>
+                    <Class>org.gcube.datatransformation.datatransformationlibrary.programs.applications.PDFToJPGTransformer</Class>
+                    <GlobalProgramParameters/>
+                </Transformer>
+                <TransformationUnits>
+                    <TransformationUnit id="0" isComposite="false">
+                        <Sources>
+                            <Source>
+                                <Input id="TRInput0"/>
+                                <ContentType>
+                                    <Mimetype>application/pdf</Mimetype>
+                                    <Parameters/>
+                                </ContentType>
+                            </Source>
+                        </Sources>
+                        <ProgramParameters/>
+                        <Target>
+                            <Output id="TROutput"/>
+                            <ContentType>
+                                <Mimetype>image/jpeg</Mimetype>
+                                <Parameters/>
+                            </ContentType>
+                        </Target>
+                    </TransformationUnit>
+                </TransformationUnits>
+            </gDTSTransformationProgram>
+        </Body>
+    </Profile>
+</Resource>

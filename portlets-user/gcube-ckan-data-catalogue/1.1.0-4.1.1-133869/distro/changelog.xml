@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.gcubeckan.gcube-ckan-datacatalog.1-1-0"
+		date="2016-10-10">
+		<Change>Version update due to changes at underneath libraries</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.gcubeckan.gcube-ckan-datacatalog.1-0-0"
+		date="2016-07-12">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,28 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.gcube-widgets.2-0-0"
+		date="2016-06-26">
+		<Change>ported to LR 6.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.gcube-widgets.1-9-1"
+		date="2016-01-13">
+		<Change>removed border for fieldset in forms</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.gcube-widgets.1-9-0"
+		date="2014-12-13">
+		<Change>Added Client scope handler, to set the scope from the client
+			and help preventing the browser back button cache problem</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.gcube-widgets.1-7-0"
+		date="2013-10-21">
+		<Change>Ported to GWT 2.5.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.gcube-widgets.1-6-0"
+		date="2013-05-29">
+		<Change>Added Span and Div GWT elements</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.gcube-widgets.1-4-0"
+		date="2013-01-13">
+		<Change>Mavenized</Change>
+		<Change>Added GXT Style for GCUBE Dialog</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,18 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="gr.uoa.di.madgik.visualisations.VisualisationsLibrary"/>
+	<stylesheet src="HorizontalBars.css"/>
+<!--
+	<script src="code/barchart/code.js"></script>
+	<stylesheet src='code/barchart/view.css' />
+	<script src="code/barchart/barchart.js"></script>
+	-->
+<!-- 
+	<entry-point class="gr.uoa.di.madgik.visualisations.HorizontalBars.client.HorizontalBars" />
+ -->
+	<source path="client" />
+  	<public path="public" />
+</module>
+
+
+	

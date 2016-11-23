@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Resource version="0.4.x">
+	<ID>321e10bb-a906-4d82-89ba-197ccdd75d3f</ID>
+	<Scopes>
+<!-- 		<Scope>/gcube</Scope> -->
+<!-- 		<Scope>/gcube/devNext</Scope> -->
+<!-- 		<Scope>/gcube/devsec/devVRE</Scope> -->
+	</Scopes>
+	<Type>GenericResource</Type>
+	<Profile>
+		<SecondaryType>PublisherBotoxTest</SecondaryType>
+		<Name>Test</Name>
+		<Description>Test </Description>
+		<Body>
+			<SourceProperties>
+				<creationTime>2014-09-05T14:33:33.116+02:00</creationTime>
+				<user>true</user>
+			</SourceProperties>
+			<other>test</other>
+		</Body>
+	</Profile>
+</Resource>

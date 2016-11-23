@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>d960f8e0-a0b5-11df-ac31-8135fac607c2</ID>
+  <Type>GenericResource</Type>
+  <Profile>
+    <SecondaryType>OpenSearchXSLT</SecondaryType>
+    <Name>OpenSearchXSLT_GENESI-DR_Central</Name>
+    <Description>XSLT to transform OpenSearch responses retrieved from GENESI-DR central external repository to a list of brokered providers.</Description>
+    <Body>
+      <xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        <xsl:output indent="yes" method="text"/>
+        <xsl:template match="*[local-name()='entry']">
+          <xsl:value-of select="*[local-name()='link'][@*[local-name()='rel']='search' and @*[local-name()='type']='application/opensearchdescription+xml']/@*[local-name()='href']"/>
+        </xsl:template>
+      </xsl:transform>
+    </Body>
+  </Profile>
+</Resource>

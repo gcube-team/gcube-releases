@@ -1,0 +1,51 @@
+<project default="deploy" name="org.gcube.common.eolusclient" basedir=".">
+<property environment="env" />
+<property name="package.root" value="src"/>
+<property name="globus.location" location="${env.GLOBUS_LOCATION}"/>
+
+
+<target name="clean">
+        <delete dir="./build" />
+</target>
+
+
+<target name="compile" depends="clean">
+	<mkdir dir="./build"/>
+        <javac srcdir="./src" destdir="./build">
+            <include name="org/**/*.java"/>
+            <classpath>
+				<fileset dir="${globus.location}/lib">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>	    
+        </javac>
+</target>
+<target name="makeJar" depends="compile">
+	<mkdir dir="./lib"/>
+         <jar jarfile="./lib/org.gcube.common.eolus-client.jar" basedir="./build">
+                <include name="**/*.class"/>
+         </jar>
+
+</target>
+
+
+<target name="deploy" depends="makeJar">
+                <copy todir="${env.GLOBUS_LOCATION}/lib">
+                        <fileset dir="./lib">
+                               <include name="*.jar"/>
+                        </fileset>
+                </copy>
+                <delete file="./lib/*.jar" />
+</target>
+
+<target name="javadoc">
+<mkdir dir="doc/api" />
+
+<javadoc access="public" author="true" classpath="" destdir="doc/api" doctitle="IS-Notification" nodeprecated="false" nodeprecatedlist="false" 
+noindex="false" 
+nonavbar="false" notree="false" 
+packagenames="${package.root}.*" 
+source="1.5" sourcepath="." splitindex="true" use="true" version="true"/>
+</target>
+
+</project>

@@ -1,0 +1,261 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.resourcemanagement</groupId>
+		<artifactId>resource-manager</artifactId>
+		<version>2.2.0-4.1.1-132314</version>
+		<relativePath>..</relativePath>
+	</parent>
+
+	<artifactId>resource-manager-service</artifactId>
+	<name>Resource Manager Service</name>
+	<description>A service for managing subsets of gCube resources in a given scope</description>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-bom</artifactId>
+				<version>2.2.0-4.1.1-132327</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/trunk/vre-management/ResourceManager</connection>
+		<developerConnection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/trunk/vre-management/ResourceManager</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/trunk/vre-management/ResourceManager</url>
+	</scm>
+
+	<dependencies>
+
+		<!-- reactor dependencies -->
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>gcf</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.resourcemanagement</groupId>
+			<artifactId>resource-manager-stubs</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.resourcemanagement</groupId>
+			<artifactId>softwaregateway-stubs</artifactId>
+			<scope>provided</scope>		
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.resourcemanagement</groupId>
+			<artifactId>ghnmanager-stubs</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.3.1</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			  <groupId>org.gcube.informationsystem</groupId>
+ 			 <artifactId>is-client</artifactId>
+  			<version>1.5.1-4.1.1-126943</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+ 	 		<groupId>org.gcube.informationsystem</groupId>
+  			<artifactId>is-collector-stubs</artifactId>
+  			<version>3.0.0-4.1.1-126401</version>
+  			<scope>test</scope>
+		</dependency>
+		<dependency>
+	 		 <groupId>org.gcube.resourcemanagement</groupId>
+	 		 <artifactId>resourcebroker-serialization</artifactId>
+	 		 <version>1.2.0-4.1.1-126929</version>		 
+		</dependency>
+		
+		<dependency>
+		  <groupId>org.gcube.resourcemanagement</groupId>
+		  <artifactId>rbstubs</artifactId>
+ 		 <version>1.2.0-4.1.1-126927</version>
+		</dependency>
+		
+		<dependency>
+  			<groupId>org.gcube.resourcemanagement</groupId>
+ 			<artifactId>deployer-stubs</artifactId>
+  			<version>2.4.2-4.1.1-125756</version>
+  			<scope>provided</scope>
+		</dependency>
+
+		<!-- test dependencies -->
+
+		<!--dependency>
+			<groupId>org.gcube.tools</groupId>
+			<artifactId>my-container</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency-->
+		<dependency>
+			<groupId>org.gcube.tools</groupId>
+			<artifactId>my-container</artifactId>
+			<version>2.0.1-4.1.1-126937</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- my-container distribution for integration testing -->
+		<dependency>
+			<groupId>org.gcube.tools</groupId>
+			<artifactId>my-container</artifactId>
+			<version>2.0.1-4.1.1-126937</version>
+			<type>tar.gz</type>
+			<classifier>distro</classifier>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+		  <groupId>org.gcube.resourcemanagement</groupId>
+		  <artifactId>whn-manager-client</artifactId>
+		  <version>2.0.0-4.1.1-132516</version>
+		</dependency>
+	</dependencies>
+	<profiles>
+		<profile>
+			<id>local-deploy</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.gcube.tools</groupId>
+						<artifactId>maven-service-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>local-deploy</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+	</profiles>
+
+	<build>
+
+		<plugins>
+
+			<!-- builds Gar at install time -->
+			<plugin>
+				<groupId>org.gcube.tools</groupId>
+				<artifactId>maven-service-plugin</artifactId>
+				<configuration>
+					<fullGar>true</fullGar>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-gar</id>
+						<goals>
+							<goal>gar-gen</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- downloads my-container when needed -->
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<!--execution>
+						<id>install-my-container</id>
+						<phase>generate-test-resources</phase>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.gcube.tools</groupId>
+									<artifactId>my-container</artifactId>
+									<version>1.0.0</version>
+									<type>tar.gz</type>
+									<classifier>distro</classifier>
+									<overWrite>false</overWrite>
+									<outputDirectory>${project.basedir}</outputDirectory>
+								</artifactItem>
+							</artifactItems>
+							<markersDirectory>${project.basedir}</markersDirectory>
+						</configuration>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+					</execution-->
+					<execution>
+						<id>install-my-container</id>
+						<phase>generate-test-resources</phase>
+						<configuration>
+							<includeArtifactIds>my-container</includeArtifactIds>
+							<includeTypes>tar.gz</includeTypes>
+							<overWriteIfNewer>false</overWriteIfNewer>
+							<outputDirectory>${project.basedir}</outputDirectory>
+							<markersDirectory>${project.basedir}</markersDirectory>
+						</configuration>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- generates service archive -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<!-- the following is to allow test-suite sources to access protected methods -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${basedir}/src/main/java</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+	</build>
+</project>

@@ -1,0 +1,17 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-transfer.scheduler-service.1.0.0" date="2012-09-05">
+			<Change>First release of the component</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.scheduler-service.1.1.0"  date="2013-01-11">>
+			<Change>Adapted to Agent library changes</Change>
+			<Change>Implemented transfer to Data Storages</Change>
+			<Change>Data Transfer statistics implemented</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.scheduler-service.1.2.0"  date="2013-04-17">>
+			<Change>Moved to new StorageManager client version</Change>
+			<Change>Integrated with messaging</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.scheduler-service.2.0.0"  date="2013-07-09">>
+			<Change>Implemented Tree transfers handling</Change>
+	</Changeset>
+</ReleaseNotes>

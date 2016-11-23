@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>Information Collector service: collect and made available information related to the actual state of a gCube infrastructure and/or of an assigned subset of it</Description>
+		<Class>InformationSystem</Class>
+		<Name>IS-Collector</Name>
+		<Version>1.0.0</Version>
+		<!-- <Dependencies>
+			<Dependency>
+				<Class>Search</Class>
+				<Name>ResultSetService</Name>
+				<Version>1.0.0</Version>
+			</Dependency>
+		</Dependencies>  -->
+		<Packages>
+			<Main>
+				<Description>Information Collector service: aggregate and make available information published by gCube services</Description>
+				<Name>IS-Collector-service</Name>
+				<Version>3.0.2</Version>
+				<Dependencies>
+					<Dependency>
+						<Service>
+							<Class>InformationSystem</Class>
+							<Name>IS-Collector</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>IS-Collector-stubs</Package>
+						<Version>[3.0.0]</Version>
+						<Scope level="GHN" />
+						<Optional>false</Optional>
+					</Dependency>					
+					<Dependency>
+						<Service>
+ 							<Class>ExternalSoftware</Class>
+   					        	<Name>exist</Name>
+		                		<Version>1.2.6</Version>
+						</Service>
+						<Package>exist</Package>
+						<Version>1.2.6</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>								
+				</Dependencies>
+				<GARArchive>org.gcube.informationsystem.collector.gar
+				</GARArchive>				
+				<PortType>
+					<Name>gcube/informationsystem/collector/Sink</Name>
+					<Security />
+					<WSDL />
+				</PortType>
+				<PortType>
+					<Name>gcube/informationsystem/collector/SinkEntry</Name>
+					<Security />
+					<WSDL />
+				</PortType>				
+				<PortType>
+					<Name>gcube/informationsystem/collector/XMLCollectionAccess</Name>
+					<Security />
+					<WSDL />
+				</PortType>
+				<PortType>
+					<Name>gcube/informationsystem/collector/wsdaix/XMLCollectionAccess</Name>
+					<Security />
+					<WSDL />
+				</PortType>
+				<PortType>
+					<Name>gcube/informationsystem/collector/XQueryAccess</Name>
+					<Security />
+					<WSDL />
+				</PortType>
+				<PortType>
+					<Name>gcube/informationsystem/collector/XMLStorageAccess</Name>
+					<Security />
+					<WSDL />
+				</PortType>								
+			</Main>
+			<Software deployable="true">
+				<Description>InformationCollector Stubs</Description>
+				<Name>IS-Collector-stubs</Name>
+				<Version>3.0.0</Version>
+				<MultiVersion value="true" />
+				<Mandatory level="VO" />
+				<Shareable level="VO" />
+				<Type>library</Type>
+				<Files>
+					<File>org.gcube.informationsystem.collector.stubs.jar</File>
+				</Files>
+			</Software>
+			<Software>
+				<Description>Test-suite for IS-Collector: provide sample usages of interaction with a IS-Collector instance</Description>
+				<Name>IS-Collector-test-suite</Name>
+				<Version>3.0.1</Version>
+				<MultiVersion value="true"/>				
+				<Shareable level="VO"/>				
+				<Type>application</Type>
+				<Files>
+					<File>lib/org.gcube.informationsystem.collector.testsuite.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

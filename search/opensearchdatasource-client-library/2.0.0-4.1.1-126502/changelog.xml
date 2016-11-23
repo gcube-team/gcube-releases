@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.search.opensearchdatasource-client-library.1-0-0" date="2013-09-02">
+		<Change>Initial release</Change>
+	</Changeset>
+</ReleaseNotes>

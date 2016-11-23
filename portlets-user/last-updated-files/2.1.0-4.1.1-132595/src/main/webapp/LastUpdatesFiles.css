@@ -1,0 +1,38 @@
+.photo-mini {
+	width: 20px;
+	text-align: center;
+}
+
+.file-item-details {
+	min-width: 200px;
+	padding: 5px;
+}
+
+.file-item {
+	height: 20px;
+	overflow: hidden; 
+}
+
+a.luflink,a.lufink:active,a.luflink:visited {
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial, sans-serif;
+	font-size: 12px;
+	cursor: pointer;
+	cursor: hand;
+	text-decoration: none;
+	color: #3B5998;
+}
+
+a.luflink:hover {
+	opacity: 0.8;
+	text-decoration: underline;
+}
+
+.luf-item-row {
+	height: 20px;
+	padding: 2px 5px 2px;
+}
+.showAll-row {
+	margin-top: 10px;
+	height: 20px;
+	padding: 2px;
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:p1="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID>24175c70-997f-11dd-b66d-82c61f8d0a26</ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>Perform local deployment/undeployment of GCUBE packages</Description>
+		<Class>VREManagement</Class>
+		<Name>ResourceManager</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Main deployable="false">
+				<Description>Allow deployment/undeployment operations of gCube packages in the local gHN</Description>
+				<Name>ResourceManager-service</Name>
+				<Version>2.2.0-4.1.1-132314</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.resourcemanagement</groupId>
+					<artifactId>resource-manager-service</artifactId>
+					<version>2.2.0-4.1.1-132314</version>
+				</MavenCoordinates>
+				<Mandatory level="GHN"/>
+				<Shareable level="VO"/>
+				<GHNRequirements>
+					<Requirement category="Site"  requirement="string" value="java1.6_*" operator="ge"/>
+				</GHNRequirements>
+				<GARArchive>resource-manager-service-2.2.0-4.1.1-132314.gar</GARArchive>
+				<PortType>
+						<Name>gcube/vremanagement/resourcemanager/binder</Name>
+						<Security/>			
+						<WSDL/>
+				</PortType>	
+				<PortType>
+						<Name>gcube/vremanagement/resourcemanager/scopecontroller</Name>
+						<Security/>			
+						<WSDL/>
+				</PortType>	
+				<PortType>
+						<Name>gcube/vremanagement/resourcemanager/reporting</Name>
+						<Security/>			
+						<WSDL/>
+				</PortType>		
+				<PortType>
+						<Name>gcube/vremanagement/resourcemanager/administration</Name>
+						<Security/>			
+						<WSDL/>
+				</PortType>					
+			</Main>
+			<Software>
+				<Description>Stubs for ResourceManager: provide facilities to interact with a ResourceManager instance</Description>
+				<Name>ResourceManager-stubs</Name>
+				<Version>2.2.0-4.1.1-132314</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.resourcemanagement</groupId>
+					<artifactId>resource-manager-stubs</artifactId>
+					<version>2.2.0-4.1.1-132314</version>
+				</MavenCoordinates>		
+				<MultiVersion value="true"/>				
+				<Shareable level="VO"/>
+				<GHNRequirements>
+					<Requirement category="Site" operator="ge" requirement="string" value="java1.5"/>
+				</GHNRequirements>
+				<Type>application</Type>
+				<Files>
+					<File>resource-manager-stubs-2.2.0-4.1.1-132314.jar</File>
+				</Files>
+			</Software>
+			<Software>
+				<Description>Test-suite for ResourceManager: provide test usages of interaction with a ResourceManager instance</Description>
+				<Name>ResourceManager-test-suite</Name>
+				<Version>2.2.0-4.1.1-132314</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.resourcemanagement</groupId>
+					<artifactId>resource-manager-test-suite</artifactId>
+					<version>2.2.0-4.1.1-132314</version>
+				</MavenCoordinates>
+				<MultiVersion value="true"/>				
+				<Shareable level="VO"/>		
+				<Type>application</Type>
+				<Files>
+					<File>resource-manager-test-suite-2.2.0-4.1.1-132314.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

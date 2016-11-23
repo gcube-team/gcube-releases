@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID/>
+	<Type>Library</Type>
+	<Profile>
+		<Description>ASLCore</Description>
+		<Class>ApplicationSupportLayer</Class>
+		<Name>ASLCore</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>ASLCore</Description>
+				<Name>ASLCore</Name>
+				<Version>3.1.2</Version>
+				<Dependencies>
+					<Dependency>
+						<Service>
+							<Class>ExternalSoftware</Class>
+							<Name>ehcache</Name>
+							<Version>1.05.00</Version>
+						</Service>
+						<Package>ehcache</Package>
+						<Version>1.05.00</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ApplicationSupportLayer</Class>
+							<Name>AccessLogger</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>AccessLogger</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>InformationSystem</Class>
+							<Name>ISCache</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ISCache</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>DVOS</Class>
+							<Name>voms-api</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>voms-api</Package>
+						<Version>[3.0.0,4.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>DVOS</Class>
+							<Name>voms-admin-stubs</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>voms-admin-stubs</Package>
+						<Version>[2.0.0,3.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>DVOS</Class>
+							<Name>UserManagement-ws</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>usermanagement-stub</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+				</Dependencies>
+				<Files>
+					<File>ApplicationSupportLibraryCore.jar</File>
+				</Files>
+			</Software>
+			<Software deployable="true">
+				<Description>ASL Core Test Suite</Description>
+				<Name>ASLCore-test-suite</Name>
+				<Version>1.0.0</Version>
+				<Files>
+					<File>readme.txt</File>
+					<File>authentication/UserAuthentication.java</File>
+				</Files>
+			</Software>
+			
+		</Packages>
+	</Profile>
+</Resource>

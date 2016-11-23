@@ -1,0 +1,11 @@
+<application mode="online">
+
+	<group>Search</group>
+	<name>SruConsumerDatasource</name>
+	<version>1.0.1</version>
+
+	<description>Restful Version of SRU consumer</description>
+
+	<exclude>/resources/</exclude>
+
+</application>

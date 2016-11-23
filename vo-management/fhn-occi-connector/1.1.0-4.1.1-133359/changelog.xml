@@ -1,0 +1,8 @@
+<ReleaseNotes>
+<Changeset component="fhn-occi-connector.1-0-0" date="2016-11-22">
+  <Change>First Release</Change>
+</Changeset>
+<Changeset component="fhn-occi-connector.1-1-0" date="2016-11-22">
+  <Change>Second release</Change>
+</Changeset>
+</ReleaseNotes>

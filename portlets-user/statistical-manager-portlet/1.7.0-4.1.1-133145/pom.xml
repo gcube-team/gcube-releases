@@ -1,0 +1,579 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>org.gcube.portlets.user</groupId>
+	<artifactId>statistical-manager-portlet</artifactId>
+	<version>1.7.0-4.1.1-133145</version>
+	<packaging>war</packaging>
+
+	<name>statistical-manager-portlet</name>
+	<description>statistical-manager-portlet offers a unique access to perform data mining and statistical operations on heterogeneous data</description>
+
+	<scm>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/portlets/user/statistical-manager-portlet</url>
+	</scm>
+
+
+	<developers>
+		<developer>
+			<name>Giancarlo Panichi</name>
+			<email>g.panichi@isti.cnr.it</email>
+			<organization>CNR Pisa, Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo"</organization>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<properties>
+		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+		<distroDirectory>distro</distroDirectory>
+		<configDirectory>config</configDirectory>
+
+
+		<!-- Java Version -->
+		<javaVersion>1.7</javaVersion>
+
+		<!-- GWT configuration -->
+		<gwtVersion>2.6.1</gwtVersion>
+		<gwtLogVersion>3.3.2</gwtLogVersion>
+		<gxtVersion>3.1.1</gxtVersion>
+		<gxt2Version>2.6.1</gxt2Version>
+
+		<KEYS>${env.KEYS}</KEYS>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>localRun</id>
+			<dependencies>
+				<!-- Authorization -->
+				<dependency>
+					<groupId>org.gcube.common</groupId>
+					<artifactId>common-authorization</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+
+				<dependency>
+					<groupId>org.gcube.common</groupId>
+					<artifactId>authorization-client</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+
+				<!-- Storage -->
+				<dependency>
+					<groupId>org.gcube.contentmanagement</groupId>
+					<artifactId>storage-manager-core</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+				<dependency>
+					<groupId>org.gcube.contentmanagement</groupId>
+					<artifactId>storage-manager-wrapper</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+
+				<!-- Home Library -->
+				<dependency>
+					<groupId>org.gcube.common</groupId>
+					<artifactId>home-library</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+				<dependency>
+					<groupId>org.gcube.common</groupId>
+					<artifactId>home-library-jcr</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+				<dependency>
+					<groupId>org.gcube.common</groupId>
+					<artifactId>home-library-model</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+
+
+				<!-- Logger -->
+				<dependency>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+					<scope>compile</scope>
+				</dependency>
+				<dependency>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+
+				<dependency>
+					<groupId>xerces</groupId>
+					<artifactId>xercesImpl</artifactId>
+					<version>2.7.1</version>
+				</dependency>
+
+
+			</dependencies>
+		</profile>
+	</profiles>
+
+	<dependencies>
+		<!-- GWT -->
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>${gwtVersion}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-servlet</artifactId>
+			<version>${gwtVersion}</version>
+		</dependency>
+
+		<!-- GXT 2 -->
+		<dependency>
+			<groupId>com.sencha.gxt</groupId>
+			<artifactId>gxt2.2.5-gwt2.X</artifactId>
+			<version>${gxt2Version}</version>
+		</dependency>
+
+
+		<!-- GXT 3 -->
+		<dependency>
+			<groupId>com.sencha.gxt</groupId>
+			<artifactId>gxt</artifactId>
+			<version>${gxtVersion}</version>
+		</dependency>
+
+
+		<!-- Portlet -->
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- PORTAL -->
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-scope</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-scope-maps</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.portal</groupId>
+			<artifactId>custom-portal-handler</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>aslcore</artifactId>
+			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>xalan</artifactId>
+					<groupId>xalan</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.dvos</groupId>
+			<artifactId>usermanagement-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- Authorization -->
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>common-authorization</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>authorization-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- Access Logger -->		
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>accesslogger</artifactId>
+		</dependency>
+		
+		<!-- GCube Widgets -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>gcube-widgets</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Session Checker -->
+		<dependency>
+			<groupId>org.gcube.portlets.widgets</groupId>
+			<artifactId>session-checker</artifactId>
+			<version>1.0.1-4.1.1-129562</version>
+		</dependency>
+		
+
+		<!-- Storage -->
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-wrapper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Home Library -->
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library-jcr</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library-model</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- icu -->
+		<dependency>
+			<groupId>com.ibm.icu</groupId>
+			<artifactId>icu4j</artifactId>
+			<version>51.2</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.7.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-generic-clients</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-fw-clients</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+
+		<!-- Statistical Client Library -->
+		<dependency>
+			<groupId>org.gcube.data.analysis</groupId>
+			<artifactId>statistical-manager-cl</artifactId>
+			<version>2.1.0-4.1.1-131535</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.gcube.dataanalysis</groupId>
+			<artifactId>ecological-engine</artifactId>
+			<version>1.10.0-4.1.1-132120</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>xalan</artifactId>
+					<groupId>xalan</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+
+
+
+		<!-- TabularData -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-widget</artifactId>
+			<version>2.3.0-4.1.1-125985</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-widget-jdbc-source</artifactId>
+			<version>1.0.0-4.1.1-125992</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>csv-import-wizard</artifactId>
+			<version>1.3.0-4.1.1-130417</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>csv-import-wizard-workspace</artifactId>
+			<version>1.2.2-4.1.1-125501</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.gwtopenmaps.openlayers</groupId>
+			<artifactId>gwt-openlayers-client</artifactId>
+			<version>0.6</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+
+
+		<!-- Postgresql -->
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>8.4-702.jdbc4</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- WSLT dependencies -->
+		<dependency>
+			<groupId>org.gcube.portlets.widgets</groupId>
+			<artifactId>workspace-explorer</artifactId>
+			<version>1.5.0-4.1.1-133096</version>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>xalan</groupId>
+			<artifactId>xalan</artifactId>
+			<version>2.6.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-clients</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-configuration-scanner</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-gcore-stubs</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>statistical-manager-stubs</artifactId>
+					<groupId>org.gcube.data.analysis</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.resources</groupId>
+			<artifactId>common-gcore-resources</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>common-uri</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>discovery-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>ic-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources</groupId>
+			<artifactId>registry-publisher</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>portal-service</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.portlets.widgets</groupId>
+			<artifactId>file-dw-import-wizard</artifactId>
+			<version>1.3.0-4.1.1-130421</version>
+		</dependency>
+
+
+		<!-- LOGGING -->
+		<dependency>
+			<groupId>com.allen-sauer.gwt.log</groupId>
+			<artifactId>gwt-log</artifactId>
+			<version>${gwtLogVersion}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+	</dependencies>
+
+	<repositories>
+
+		<repository>
+			<id>gCubeExternal</id>
+			<name>gcube-externals</name>
+			<url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-externals/</url>
+		</repository>
+		<!-- <repository> -->
+		<!-- <id>52north-releases</id> -->
+		<!-- <name>52north-releases</name> -->
+		<!-- <url>http://maven.research-infrastructures.eu/nexus/content/repositories/52north-releases/</url> -->
+		<!-- </repository> -->
+
+	</repositories>
+
+
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-portal-bom</artifactId>
+				<version>3.1.0-4.1.1-132989</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<!-- Generate compiled stuff in the folder used for developing mode -->
+		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
+
+			<!-- GWT Maven Plugin -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>${gwtVersion}</version>
+				<executions>
+					<execution>
+						<configuration>
+							<extraJvmArgs>-Xss512m -Xmx3072m -XX:MaxPermSize=2048m</extraJvmArgs>
+						</configuration>
+						<goals>
+							<goal>compile</goal>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<runTarget>StatisticalManager.html</runTarget>
+					<hostedWebapp>${webappDirectory}</hostedWebapp>
+					<module>org.gcube.portlets.user.statisticalmanager.statisticalmanager</module>
+
+				</configuration>
+			</plugin>
+
+
+			<!-- Copy static web files before executing gwt:run -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+					</execution>
+				</executions>
+				<configuration>
+					<webappDirectory>${webappDirectory}</webappDirectory>
+					<warName>${project.build.finalName}</warName>
+				</configuration>
+			</plugin>
+
+
+			<!-- Maven Compiler Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${javaVersion}</source>
+					<target>${javaVersion}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>

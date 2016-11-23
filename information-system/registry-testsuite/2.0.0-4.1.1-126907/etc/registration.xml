@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ServiceGroupRegistrationParameters
+  xmlns="http://mds.globus.org/servicegroup/client"
+   xmlns:agg="http://mds.globus.org/aggregator/types"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        
+    <!-- renewal registration time -->
+    <RefreshIntervalSecs>60</RefreshIntervalSecs>
+    <Content xsi:type="agg:AggregatorContent" 
+    xmlns:agg="http://mds.globus.org/aggregator/types">            
+        <agg:AggregatorConfig xsi:type="agg:AggregatorConfig">
+            <agg:GetMultipleResourcePropertiesPollType 
+            xmlns:registry="http://gcube-system.org/namespaces/informationsystem/registry">
+                <agg:PollIntervalMillis>60000</agg:PollIntervalMillis>            
+                <agg:ResourcePropertyNames>registry:Profile</agg:ResourcePropertyNames>                    
+            </agg:GetMultipleResourcePropertiesPollType>
+        </agg:AggregatorConfig>        
+        <agg:AggregatorData/>        
+    </Content>
+    
+</ServiceGroupRegistrationParameters>
+
+

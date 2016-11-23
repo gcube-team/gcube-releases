@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Class>Application</Class>
+		<Name>AquaMapsService</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Main>
+				<Name>${serviceArtifactId}</Name>
+				<Version>${project.version}</Version>
+				<MavenCoordinates>
+					<groupId>${project.groupId}</groupId>
+					<artifactId>${serviceArtifactId}</artifactId>
+					<version>${project.version}</version>
+				</MavenCoordinates>
+				<GARArchive>${serviceArtifactId}-${project.version}.gar</GARArchive>
+				<PortType>
+					<Name>gcube/application/aquamaps/aquamapsservice/AquaMapsService</Name>
+				</PortType>
+				<PortType>
+					<Name>gcube/application/aquamaps/aquamapsservice/DataManagement</Name>
+				</PortType>
+				<PortType>
+					<Name>gcube/application/aquamaps/aquamapsservice/PublisherService</Name>
+				</PortType>
+			</Main>
+			<Software>
+				<Name>${stubsArtifactId}</Name>
+				<Version>${project.version}</Version>
+				<MavenCoordinates>
+					<groupId>${project.groupId}</groupId>
+					<artifactId>${stubsArtifactId}</artifactId>
+					<version>${project.version}</version>
+				</MavenCoordinates>
+				<Type>library</Type>
+				<Files>
+					<File>${stubsArtifactId}-${project.version}.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

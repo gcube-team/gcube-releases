@@ -1,0 +1,27 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def textFamily value('theme.toolbar.labelItem.text.family');
+@def textSize value('theme.toolbar.labelItem.text.size');
+@def textWeight value('theme.toolbar.labelItem.text.weight');
+@def textColor value('theme.toolbar.labelItem.text.color');
+
+@def lineHeight value('theme.toolbar.labelItem.lineHeight');
+
+@def padding value('theme.toolbar.labelItem.padding');
+
+.item {
+  display: block;
+  line-height: lineHeight;
+  padding: padding;
+  white-space: nowrap;
+
+  font-family: textFamily;
+  font-size: textSize;
+  font-weight: textWeight;
+  color: textColor;
+}

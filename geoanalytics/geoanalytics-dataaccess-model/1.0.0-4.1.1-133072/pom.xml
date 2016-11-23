@@ -1,0 +1,140 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>gr.cite.geoanalytics</groupId>
+	<artifactId>dataaccess-model</artifactId>
+	<version>1.0.0-4.1.1-133072</version>
+	<packaging>jar</packaging>
+
+	<name>geoanalytics-dataaccess-model</name>
+
+	<scm>
+		<connection>scm:svn:http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/geoanalytics-dataaccess-model</connection>
+		<developerConnection>scm:http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/geoanalytics-dataaccess-model</developerConnection>
+		<url>http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/geoanalytics-dataaccess-model</url>
+	</scm>
+
+
+	<repositories>
+		<repository>
+			<id>OSGEO GeoTools repo</id>
+			<url>http://download.osgeo.org/webdav/geotools</url>
+		</repository>
+		<repository>
+			<id>Hibernate Spatial repo</id>
+			<url>http://www.hibernatespatial.org/repository</url>
+		</repository>
+	</repositories>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<org.hibernate.version>4.3.0.Final</org.hibernate.version>
+		<org.hibernate.hibernate-spatial.version>4.0-M1-patched</org.hibernate.hibernate-spatial.version>
+		<org.hibernate.hibernate-tools.version>3.2.4.GA</org.hibernate.hibernate-tools.version>
+		<org.geotools.version>9.3</org.geotools.version>
+		<org.postgis.postgis-jdbc.version>1.5.2</org.postgis.postgis-jdbc.version>
+		<javax.xml.jaxb.version>2.2.5</javax.xml.jaxb.version>
+		<javax.mail.version>1.4</javax.mail.version>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${org.hibernate.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-spatial</artifactId>
+			<version>${org.hibernate.hibernate-spatial.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>postgis-jdbc</artifactId>
+					<groupId>org.postgis</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.vividsolutions</groupId>
+			<artifactId>jts</artifactId>
+			<version>1.12</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-tools</artifactId>
+			<version>${org.hibernate.hibernate-tools.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.postgis</groupId>
+			<artifactId>postgis-jdbc</artifactId>
+			<version>${org.postgis.postgis-jdbc.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>${javax.xml.jaxb.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>${javax.xml.jaxb.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>${javax.mail.version}</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

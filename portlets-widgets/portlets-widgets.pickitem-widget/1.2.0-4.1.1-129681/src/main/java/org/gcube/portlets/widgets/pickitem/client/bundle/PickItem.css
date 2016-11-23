@@ -1,0 +1,113 @@
+@external pickitem-selected, pickitem, pick-item, pickDialog, pick-label, pickperson, pickperson-selected, pickperson-photo, user-table, user-table-row, user-table-col, user-table-col.content, .user-table-col.smallphoto, user-token, content, smallphoto;
+
+.pickDialog {
+	border: 1px solid #CCC;
+	background-color: #FFF;
+}
+
+.pick-label {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 15px;
+	line-height: 18px;
+	color: inherit;
+}
+
+.pick-item {
+	padding: 7px 10px 7px;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 15px;
+	line-height: 18px;
+	color: inherit;
+}
+
+.pickperson {
+	color: #0B61A4;
+	cursor: pointer;
+	cursor: hand;
+	background: #FFF;
+	-webkit-transition: background-color .25s ease-in-out;
+	-moz-transition: background-color .25s ease-in-out;
+	-o-transition: background-color .25s ease-in-out;
+	transition: background-color .25s ease-in-out;
+}
+
+.pickperson-selected {
+	background-color: #033E6B;
+	color: whitesmoke;
+}
+
+.pickitem-selected {
+	background-color: #0B61A4;
+	color: whitesmoke;
+}
+
+.pickitem {
+	color: #66757f;
+	cursor: pointer;
+	cursor: hand;
+	background: #FFF;
+	-webkit-transition: background-color .25s ease-in-out;
+	-moz-transition: background-color .25s ease-in-out;
+	-o-transition: background-color .25s ease-in-out;
+	transition: background-color .25s ease-in-out;
+}
+
+.pickitem:active,.pickitem:focus,.pickitem:hover {
+	background-color: #0B61A4;
+	color: whitesmoke;
+}
+
+.pickperson:active,.pickperson:focus,.pickperson:hover {
+	background-color: #033E6B;
+	color: whitesmoke;
+}
+
+.pickperson-photo {
+	display: block;
+	padding: 2px;
+	border: 1px solid #E6E6E6;
+	margin-left: 2px;
+}
+
+.user-table {
+	margin: 1px 0px;
+	display: table;
+	width: 100%;
+	background-clip: border-box;
+	background-image: none;
+	background-origin: padding-box;
+}
+
+.user-table-row {
+	display: table-row;
+	text-align: left;
+}
+
+.user-table-col {
+	display: table-cell;
+	text-align: left;
+}
+
+.user-table-col.content {
+	padding: 10px 0px 0px 10px;
+	vertical-align: top;
+}
+
+.user-table-col.smallphoto {
+	width: 40px;
+}
+
+.user-token {
+	margin: 3px;
+	height: auto !important;
+	padding: 1px 3px;
+	background-color: #E2E6F0 !important;
+	border: 1px solid #9DACCC;
+	color: #1C2A47;
+	cursor: default;
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}

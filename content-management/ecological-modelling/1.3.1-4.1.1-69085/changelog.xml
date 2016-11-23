@@ -1,0 +1,7 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="org.gcube.content-management.ecological-modelling.1-2-0"
+		date="2011-08-30">
+		<Change>Release with hspec and hspen validated</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,162 @@
+/* gCQLParser.jjt */
+
+/* @author Rena Tsantouli */
+/* This file parses the gCQL language and creates a query tree */
+
+options{
+  STATIC = false;
+}
+
+/* *** Specification of the parser class *** */
+PARSER_BEGIN(gCQLParser)
+
+package search.library.util.cql.parser;
+
+import java.util.*;
+
+public class gCQLParser{}
+
+PARSER_END(gCQLParser)
+
+
+/* *** Token Specification *** */
+
+/* Skip whitespace */
+SKIP :
+{  " "|"\t"|"\n"|"\r"|","}
+/* Reserved words - ignoring case */
+TOKEN[IGNORE_CASE]:
+{  < SORTBY:"sortby" >
+| < PROJECT:"project" >
+| < FUSE:"fuse" >
+| < AND:"and" >
+| < OR:"or" >
+| < NOT:"not" >
+| < PROX:"prox" >
+| < LPAREN:"(" >
+| < RPAREN:")" >
+| < EQUALS:"=" >
+| < GREATER:">" >
+| < LESS:"<" >
+| < GEQUAL:">=" >
+| < LEQUAL:"<=" >
+| < NOTEQUAL:"<>" >
+| < EXACT:"==" >
+| < SLASH:"/" >
+| < CHARSTRING1:(["A"-"Z","0"-"9","_",".","-",":","*","&",";","\u00bf"-"\u00ff", "\u0100"-"\uffff"])+ >
+| < CHARSTRING2:("\""(["A"-"Z","0"-"9","_",".","(",")","'"," ","<",">","/",":","-","*","&",";","+","=","%", "\u00bf"-"\u00ff", "\u0100"-"\uffff"])+)"\"" >
+| < STAR:"#" >
+/*| < ESCAPEDDQUOTES:"\\\"" >*/
+| < DOUBLEQUOTES:"\"" >}
+
+
+
+
+
+/* *** Context-free grammar (EBNF) *** */
+/* Note: In the start nonterminal, the action "return jjtThis" instructs
+JavaCC to return the resulting parse tree from the generated parsing
+method. Therefore, the start nonterminal has a result type (SimpleNode).
+All other nonterminals have no result type (void).
+*/
+
+/* Start the nonterminal and its productions. */
+SimpleNode Start() :{}    // Start - > gCQLQuery{  gCQLQuery()  {    return jjtThis;  }}
+
+	/* Other nonterminals and their productions */
+	/*void gCQLQuery():	{	}	{
+	  LOOKAHEAD(2)	  < STAR > (PrefixAssignment() gCQLQuery() |
+	  ScopedClause() [SortSpec()] [ProjectSpec()]) <STAR >
+	  |< STAR > <DOUBLEQUOTES > <DOUBLEQUOTES > <STAR >	}*/
+
+		/* Other nonterminals and their productions */
+	void gCQLQuery():
+	{
+	}
+	{
+	  LOOKAHEAD(2)
+	  < STAR > (PrefixAssignment() CQLQuery() |
+	  ScopedClause() [SortSpec()] [ProjectSpec()] [FuseSpec()]) <STAR >
+	  |< STAR > <DOUBLEQUOTES > <DOUBLEQUOTES > <STAR > 
+	}
+	void SortSpec():	{	}	{	  < SORTBY > SingleSpec() [(SingleSpec())+]	}
+
+	void ProjectSpec():	{	}	{	  < PROJECT > SingleSpec() [(SingleSpec())+]	}		void FuseSpec():
+	{
+	}
+	{
+	  < FUSE > SingleSpec() [(SingleSpec())]
+	}
+
+	void SingleSpec():	{	}	{	  Index() [ModifierList()]	}
+	void CQLQuery():	{	}	{	  PrefixAssignment() CQLQuery() | ScopedClause()	}
+/* TODO: case without prefix not defined here */
+void PrefixAssignment():{}{  < GREATER > Prefix() < EQUALS > URI()}
+void ScopedClause():{}{  SearchClause() [(BooleanGroup() SearchClause())+]  }
+void BooleanGroup():{}{  Boolean() [ModifierList()]}
+void Boolean():{
+  Token bool = null;}{
+  (    bool = < AND > | bool = < OR > | bool = < NOT > | bool = < PROX >)
+    {      jjtThis.setText(bool.image);    }    }
+
+/* Here if we have a relation and a second term, then the fist term is an index. In other case it's a searchTerm */
+/*void SearchClause():{}{  < LPAREN > CQLQuery() < RPAREN > | Term() [Relation() SearchTerm()]} */
+
+void SearchClause():{}{
+    < LPAREN > CQLQuery() < RPAREN > |
+  LOOKAHEAD(2)
+   Index() Relation() SearchTerm() | SearchTerm()}
+void Relation():{
+  String rel = null;}{ Comparitor() [ModifierList()]  }
+String Comparitor():{
+  String comp = null;}{
+  (  comp = ComparitorSymbol() | comp = NamedComparitor())  {
+    jjtThis.setText(comp);    return comp;  }  }
+
+String ComparitorSymbol():{
+  Token comp = null;
+  String compS = null;}{     (      comp = < EQUALS > | comp = < GREATER > | comp = < LESS > | comp = < GEQUAL > | comp = < LEQUAL > | comp = < NOTEQUAL > | comp = < EXACT >)  {    jjtThis.setText(comp.image);
+    compS = comp.image;
+    return compS;  }  }
+String NamedComparitor():{
+  String comp = null;}{  comp = Identifier()
+  {
+    jjtThis.setText(comp);    return comp;  }  }
+void ModifierList():{}{  Modifier() [(Modifier())+]}
+void Modifier():{}{  < SLASH > ModifierName() [ComparitorSymbol() ModifierValue()]}
+void Prefix():{
+  String term = null;}{  term = Term()  {    jjtThis.setText(term);  }  }
+void URI():{
+  String uri = null;}{  uri = Term()  {    jjtThis.setText(uri);  }  }
+void ModifierName():{
+  String mdName = null;}{  mdName = Term()  {    jjtThis.setText(mdName);  }  }
+void ModifierValue():{
+  String mdValue = null;}{  mdValue = Term()  {    jjtThis.setText(mdValue);  }  }
+void SearchTerm():{
+  String st = null;}{  st = Term()
+  {    jjtThis.setText(st);  }  }
+
+void Index():{
+  String ind = null;}{  ind = Term()  {    jjtThis.setText(ind);  }  }
+String Term():{
+  String id1 = null;
+  Token id2 = null;}{
+  (      id1 = Identifier() | id2 = < AND > | id2 = < OR > | id2 = < NOT > | id2 = < PROX > | id2 = < SORTBY >)
+
+  {    if (id1 == null)    {      id1 = id2.image;
+      return id1;    }    else    {      return id1;    }  }}
+/* TODO: plus charstring2!! */
+String Identifier():{
+  Token id = null;
+  String id2 = null;}{      /*( id = < CHARSTRING1 > | id2 = CharString2())*/
+    (      id = < CHARSTRING1 > | id = < CHARSTRING2 >)  {
+         jjtThis.setText(id.image);
+         	return id.image; 	  }}
+/* TODO: What about escaped double quotes? -- not used */
+ String CharString2():	{
+	  String str = null;
+	  Token charStr = null;	}	{
+	  	    	  < DOUBLEQUOTES > (charStr = <CHARSTRING2 >) <DOUBLEQUOTES >
+	  {	    str = "\"" + charStr.image + "\"";
+	    return str;	  }	  	}	
+

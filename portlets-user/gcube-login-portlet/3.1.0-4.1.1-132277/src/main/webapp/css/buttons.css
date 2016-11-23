@@ -1,0 +1,98 @@
+
+.gwt-ToggleButton-down,
+.gwt-ToggleButton-down-hovering,
+.gwt-ToggleButton-down-disabled {
+  border: 1px inset blue;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.gwt-ToggleButton {
+  cursor: pointer;
+  cursor: hand;
+  background: white;
+  padding-top: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+    
+}
+
+.gwt-ToggleButton-up,
+.gwt-ToggleButton-up-hovering,
+.gwt-ToggleButton-up-disabled {
+  
+  border: 1px outset #ccc;
+}
+
+.Panel-Button {
+  margin: 0;
+  padding: 3px 5px;
+  text-decoration: none;
+  font-family: Arial Unicode MS, Arial, sans-serif;
+  cursor: pointer;
+  cursor: hand;
+  background: white;
+ }
+.Panel-Button:active {
+  border: 1px inset #ccc;
+}
+.Panel-Button:hover {
+  border-color: #9cf #69e #69e #7af;
+}
+.Panel-Button[disabled] {
+  cursor: default;
+  color: #888;
+}
+.Panel-Button[disabled]:hover {
+  border: 1px outset #ccc;
+}
+
+.button_enter {
+	background-color: #88B977;
+	border: 1px solid #003300;
+	font-weight: bold;
+	font-size:9px;
+	cursor:pointer;
+	display:block;
+	overflow:visible;
+	padding-bottom: 2px;
+	color: #FFF;
+	margin-top:2px;
+}
+.button_enter:hover{
+   opacity:0.6;
+   filter:alpha(opacity=60);
+}
+
+.odlbutton_ask {
+	background-color: #3399CC;
+	border: 1px solid #003300;
+	font-weight: bold;
+	font-size:9px;
+	cursor:pointer;
+	display:block;
+	overflow:hidden;
+	padding-bottom: 2px;
+	color: #FFF;
+	margin-top:2px;
+}
+.odlbutton_ask:hover{
+   opacity:0.6;
+   filter:alpha(opacity=60);
+}
+.odlbutton_pending {
+	background-color: #FF6600;
+	border: 1px solid #6A0217;
+	font-weight: bold;
+	font-size:9px;
+	cursor:pointer;
+	display:block;
+	overflow:hidden;
+	padding-bottom: 2px;
+	color: #FFF;
+	margin-top:2px;
+}
+.odlbutton_pending:hover{
+   opacity:0.6;
+   filter:alpha(opacity=60);
+}

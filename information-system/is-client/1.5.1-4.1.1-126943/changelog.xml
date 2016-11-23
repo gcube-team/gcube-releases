@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.is-client.1-5-0" date="2011-12-13">
+		<Change>added execute method with default scope</Change>	
+		<Change>ticket #1971</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-client.1-4-0" date="2011-02-07">
+		<Change>Reorganizing the source/test structure</Change>		
+	</Changeset>
+</ReleaseNotes>

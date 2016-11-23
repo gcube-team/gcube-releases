@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="ResourceBinder"
+    targetNamespace="http://gcube-system.org/namespaces/vremanagement/resourcemanager/binder"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="http://gcube-system.org/namespaces/vremanagement/resourcemanager/binder"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+    xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:vretypes="http://gcube-system.org/common/vremanagement/types"
+    xmlns:wsrlw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"    
+    xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+    xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"  location="../gcube/common/core/providers/GCUBEProvider.wsdl"/>
+
+	<import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+	
+	<import namespace="http://gcube-system.org/common/vremanagement/types" location="VREManagementTypes.wsdl"/> 
+
+
+<!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+<types>
+<xsd:schema targetNamespace="http://gcube-system.org/namespaces/vremanagement/resourcemanager/binder"
+    xmlns:tns="http://gcube-system.org/namespaces/vremanagement/resourcemanager/binder"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   
+   <xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+   <xsd:import namespace="http://gcube-system.org/common/vremanagement/types" schemaLocation="VREManagementTypes.xsd"/>
+	
+	<xsd:simpleType name="resourceID">
+		<xsd:restriction base="xsd:string" />
+	</xsd:simpleType>    		
+    	
+	<xsd:complexType name="PackageItem">	
+			<xsd:sequence>
+				<xsd:element name="ServiceClass" type="xsd:string"/> 
+		  		<xsd:element name="ServiceName" type="xsd:string"/>
+		  		<xsd:element name="ServiceVersion" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+		  		<xsd:element name="PackageName" type="xsd:string"/>
+		  		<xsd:element name="PackageVersion" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+		  		<xsd:element name="TargetGHNName" type="xsd:string" minOccurs="0" maxOccurs="1"/>		  		
+		 	</xsd:sequence>
+  	</xsd:complexType>
+	
+	<xsd:complexType name="SoftwareList">	
+			<xsd:sequence>
+				<xsd:element name="software" type="tns:PackageItem" minOccurs="1" maxOccurs="unbounded"/> 
+		  		<xsd:element name="suggestedTargetGHNNames" type="tns:resourceID" minOccurs="0" maxOccurs="unbounded"/>		  		
+		 	</xsd:sequence>
+  	</xsd:complexType>	
+	
+	<xsd:complexType name="ResourceItem">	
+			<xsd:sequence>
+				<xsd:element name="ID" type="tns:resourceID"/>
+				<xsd:element name="Type" type="xsd:string"/>  		  				  	
+		 	</xsd:sequence>
+  	</xsd:complexType>
+  	
+	<xsd:complexType name="ResourceList">	
+			<xsd:sequence>
+				<xsd:element name="resource" type="tns:ResourceItem" minOccurs="1" maxOccurs="unbounded"/>		  		
+		 	</xsd:sequence>
+  	</xsd:complexType>	
+  	
+  	<xsd:element name="targetScope" type="coretypes:scope"/>		 
+  	
+	<xsd:element name="addResourcesParameters"> 
+    	<xsd:complexType>	
+			<xsd:sequence>
+				<xsd:element name="software" type="tns:SoftwareList" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="resources" type="tns:ResourceList" minOccurs="0" maxOccurs="1"/>				 		  		    
+                <xsd:element ref="tns:targetScope"/>
+		 	</xsd:sequence>
+  		</xsd:complexType>		
+	</xsd:element> 
+
+	<xsd:element name="updateResourcesParameters"> 
+    	<xsd:complexType>	
+			<xsd:sequence>
+				<xsd:element name="software" type="tns:SoftwareList" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="newSoftware" type="tns:SoftwareList" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="resources" type="tns:ResourceList" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="newResources" type="tns:ResourceList" minOccurs="0" maxOccurs="1"/>				 		  		    
+                <xsd:element ref="tns:targetScope"/>
+		 	</xsd:sequence>
+  		</xsd:complexType>		
+	</xsd:element> 
+	
+	
+	<xsd:element name="removeResourcesParameters"> 
+    	<xsd:complexType>	
+			<xsd:sequence>
+				<xsd:element name="software" type="tns:SoftwareList" minOccurs="0" maxOccurs="1"/>				
+				<xsd:element name="resources" type="tns:ResourceList" minOccurs="0" maxOccurs="1"/> 		  		
+                <xsd:element ref="tns:targetScope"/>
+		 	</xsd:sequence>
+  		</xsd:complexType>	
+	</xsd:element>	
+	
+	<xsd:element name="GHN" type="tns:resourceID"/>		
+	
+	<xsd:element name="reportID" type="xsd:string"/>
+
+	<xsd:element name="ResourcesCreationFaultType">
+		<xsd:complexType>
+              <xsd:complexContent>
+                    <xsd:extension base="corefaults:GCUBEUnrecoverableFault">
+                        <xsd:sequence/>                        
+                    </xsd:extension>
+                </xsd:complexContent>
+    	</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="ResourcesRemovalFaultType">
+		<xsd:complexType>
+              <xsd:complexContent>
+                    <xsd:extension base="corefaults:GCUBEUnrecoverableFault">
+                        <xsd:sequence/>                        
+                    </xsd:extension>
+                </xsd:complexContent>
+    	</xsd:complexType>
+	</xsd:element> 	
+</xsd:schema>
+</types>
+
+ <!--============================================================
+
+                       M E S S A G E S
+
+  ============================================================-->
+
+    <message name="AddResourcesInputMessage">
+        <part name="request" element="tns:addResourcesParameters"/>
+    </message>
+     <!--message name="UpdateResourcesInputMessage">
+        <part name="request" element="tns:addResourcesParameters"/>
+    </message-->
+    <message name="ReportID">
+        <part name="request" element="tns:reportID"/>
+    </message>   
+	<message name="RemoveResourcesInputMessage">
+         <part name="request" element="tns:removeResourcesParameters"/>
+    </message>             
+	<wsdl:message name="InvalidScopeFaultMessage">
+	   <part name="fault" element="vretypes:InvalidScopeFaultType"/>
+  	</wsdl:message>
+  	<wsdl:message name="ResourcesCreationFaultMessage">
+	   <part name="fault" element="tns:ResourcesCreationFaultType"/>
+  	</wsdl:message>
+  	<wsdl:message name="ResourcesRemovalFaultMessage">
+	   <part name="fault" element="tns:ResourcesRemovalFaultType"/>
+  	</wsdl:message>
+
+<!--============================================================
+
+                       P O R T T Y P E
+                      
+  ============================================================-->
+<portType name="ResourceBinderPortType" 
+    wsdlpp:extends="provider:GCUBEProvider">
+    
+    <operation name="AddResources">
+        <input message="tns:AddResourcesInputMessage"/>
+        <output message="tns:ReportID"/>
+        <fault name="fault" message="tns:ResourcesCreationFaultMessage"/>
+        <fault name="fault1" message="tns:InvalidScopeFaultMessage"/>
+    </operation>
+ 
+	<operation name="RemoveResources">
+        <input message="tns:RemoveResourcesInputMessage"/>
+        <output message="tns:ReportID"/>
+        <fault name="fault" message="tns:ResourcesRemovalFaultMessage"/>
+        <fault name="fault1" message="tns:InvalidScopeFaultMessage"/>
+    </operation>    
+ 
+    <!--operation name="UpdateResources">
+        <input message="tns:UpdateResourcesInputMessage"/>
+        <output message="tns:ReportID"/>
+        <fault name="fault" message="tns:ResourcesCreationFaultMessage"/>
+        <fault name="fault1" message="tns:InvalidScopeFaultMessage"/>
+    </operation-->
+ 
+    	
+</portType>
+
+</definitions>
+    

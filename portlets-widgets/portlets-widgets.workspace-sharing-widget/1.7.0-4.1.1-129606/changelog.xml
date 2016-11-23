@@ -1,0 +1,57 @@
+<ReleaseNotes>
+	<Changeset component="portlets-widgets.workspace-sharing-widget.1-7-0"
+		date="2016-05-31">
+		<Change>Feature #4128: Migration to Liferay 6.2
+		</Change>
+	</Changeset>
+	<Changeset component="portlets-widgets.workspace-sharing-widget.1-6-0"
+		date="2016-04-14">
+		<Change>Task #3277: enhancement in order to display short VREs name
+		</Change>
+	</Changeset>
+	<Changeset component="portlets-widgets.workspace-sharing-widget.1-5-1"
+		date="2016-01-04">
+		<Change>Removed portal-framework dependecy from Etics
+		</Change>
+	</Changeset>
+	<Changeset component="portlets-widgets.workspace-sharing-widget.1-5-0"
+		date="2015-09-28">
+		<Change>Incident #401: Added code to retrieve (only) the users
+			belonging to the organization read from (asl) session group
+		</Change>
+	</Changeset>
+	<Changeset component="portlets-widgets.workspace-sharing-widget.1-4-0"
+		date="2015-06-04">
+		<Change>Task #211: porting to HL 2.0</Change>
+	</Changeset>
+	<Changeset component="portlets-widgets.workspace-sharing-widget.1-3-0"
+		date="2015-04-15">
+		<Change>Added Edit Permission for Contacts</Change>
+	</Changeset>
+	<Changeset component="portlets-widgets.workspace-sharing-widget.1-2-0"
+		date="2014-24-01">
+		<Change>Added method get administrator by folder id</Change>
+		<Change>Added class SimpleMultiDragWorkspaceContact to realize "Edit
+			Administrators"
+		</Change>
+	</Changeset>
+	<Changeset component="portlets-widgets.workspace-sharing-widget.1-1-0"
+		date="2014-06-27">
+		<Change>#2897 Integrated sharing to groups</Change>
+		<Change>#2798 Sharing Panel usability improved</Change>
+	</Changeset>
+	<Changeset component="portlets-widgets.workspace-sharing-widget.1-0-2"
+		date="2014-06-04">
+		<Change>Updated pom to support new portal configuration (gcube release
+			3.2)
+		</Change>
+	</Changeset>
+	<Changeset component="portlets-widgets.workspace-sharing-widget.1-0-1"
+		date="2014-04-03">
+		<Change>Commented the methods of Notification Producer</Change>
+	</Changeset>
+	<Changeset component="portlets-widgets.workspace-sharing-widget.1-0-0"
+		date="2014-04-03">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

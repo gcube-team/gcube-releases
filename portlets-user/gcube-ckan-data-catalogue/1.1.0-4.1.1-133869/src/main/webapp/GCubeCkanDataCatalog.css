@@ -1,0 +1,113 @@
+/** Add css rules here for your application. */
+body {
+	padding-top: 0px !important;
+	/** OVERRIDE GWT BOOTSTRAP PADDING TOP TO 50px*/
+}
+
+/** Example rules used by the template application (remove for your app) */
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	color: #777777;
+	margin: 40px 0px 70px;
+	text-align: center;
+}
+
+.sendButton {
+	display: block;
+	font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+	width: 400px;
+}
+
+.dialogVPanel {
+	margin: 5px;
+}
+
+.serverResponseLabelError {
+	color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+	margin: 15px 6px 6px;
+}
+
+/** For the modal **/
+.insert-metadata-modal-style {
+	width: 1200px !important;
+	margin-left: -600px !important;
+}
+
+.modal-body {
+	height: 550px;
+	max-height: none !important;
+}
+
+.modal {
+	top: 2% !important;
+}
+
+/** My Organizations panel **/
+.my-organizations-container-style {
+	background-repeat: repeat !important;
+	background-attachment: scroll !important;
+	background-position: 0% 0% !important;
+	background-clip: border-box !important;
+	background-origin: padding-box !important;
+	background-size: auto auto !important;
+	width: 100% !important;
+	height: 100% !important;
+	background: #eeeeee url("images/bg.png") !important;
+}
+
+.horizontal-panel-organizations {
+	margin-right: auto !important;
+	margin-left: auto !important;
+	background-color: white !important;
+	width: 70% !important;
+	margin-top: 2% !important;
+	margin-bottom: 10% ! important;
+	zoom: 1 !important;
+	background-color: #FFF !important;
+	border: 1px solid #cccccc !important;
+	-webkit-border-radius: 4px !important;
+	-moz-border-radius: 4px !important;
+	border-radius: 4px !important;
+	-webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05) !important;
+	-moz-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05) !important;
+	box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05) !important;
+	position: relative !important;
+	background-color: #fff !important;
+	padding-left: 5% !important !important;
+}
+
+.list-panel-organizations-style {
+	padding: 30px !important;
+}
+
+.no-organizations-found-paragraph {
+	padding: 30px !important;
+	color: #aaaaaa !important;
+	font-style: italic !important;
+}
+
+.footer-organizations {
+	color: rgba(255, 255, 255, 0.6);
+	min-height: 10px;
+	padding: 2px 0 0 2px;
+	font-size: 12px;
+	background-color: #005d7a;
+}
+
+.footer-organizations>a {
+	color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.button-as-role-style {
+	padding-left: 0px !important;
+	color: black !important;
+}

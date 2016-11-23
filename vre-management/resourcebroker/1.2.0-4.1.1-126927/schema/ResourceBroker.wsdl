@@ -1,0 +1,127 @@
+<definitions name="ResourceBroker"
+    targetNamespace="http://gcube-system.org/namespaces/resourcebroker/broker"
+    xmlns:tns="http://gcube-system.org/namespaces/resourcebroker/broker"
+  	xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    >
+    
+     <!--
+    	REMOVED since the validation on the request has been delegated to
+    	the BrokerService that received the String containing an XML and
+    	uses the schema internally to validate the input.
+     	  
+		xmlns:broker="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployRequest"
+	-->
+
+    
+    <!--============================================================
+
+                      SCHEMA IMPORT
+                      
+  	============================================================-->
+    <import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+	<import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" location="../gcube/common/core/providers/GCUBEProvider.wsdl"/>
+	<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+   	<!-- REMOVED - Validation delegated to the BrokerService
+   		<xsd:import namespace="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployRequest" schemaLocation="deployRequest.xsd"/> 
+   	-->
+   	
+    <!--============================================================
+
+                     	T Y P E S
+                      
+  	============================================================-->
+   
+ 	<types>
+	<xsd:schema targetNamespace="http://gcube-system.org/namespaces/resourcebroker/broker">    	
+		<xsd:element name="Timestamp" type="xsd:long"/>
+
+	<!-- REMOVED FOR TEST PURPOSE ONLY
+		<xsd:complexType name="pingRequestType">
+			<xsd:all>
+			 	<xsd:element name="key" type="xsd:string"/>
+		      	<xsd:element name="value" type="xsd:string"/>
+	      	</xsd:all>
+		</xsd:complexType>
+	-->
+	<!-- REMOVED for internal purpose only.
+		<xsd:element name="addConstraintRequest" type="xsd:string"/>
+		<xsd:element name="addConstraintResponse" type="coretypes:VOID"/>
+	 -->
+	 
+		<xsd:element name="getPlanRequest" type="xsd:string"/>
+		<xsd:element name="getPlanResponse" type="xsd:string"/>
+		
+		<xsd:element name="handleFeedbackRequest" type="xsd:string"/>
+		<xsd:element name="handleFeedbackResponse" type="coretypes:VOID"/>
+	
+		            
+	</xsd:schema>
+	</types>
+	
+	
+	<!--============================================================
+
+                     	MESSAGES
+                      
+  	============================================================-->
+
+	<!-- Operation addConstraint REMOVED
+		<message name="addConstraintInputMessage">
+			<part name="request" element="tns:addConstraintRequest" />
+		</message>
+		<message name="addConstraintOutputMessage">
+			<part name="response" element="tns:addConstraintResponse" />
+		</message>
+	-->
+
+	<!-- Operation getPlan -->
+	<message name="getPlanRequestInputMessage">
+		<part name="request" element="tns:getPlanRequest" />
+	</message>
+	<message name="getPlanRequestOutputMessage">
+		<part name="response" element="tns:getPlanResponse" />
+	</message>
+	
+		<!-- Operation handleFeedback -->
+	<message name="handleFeedbackRequestInputMessage">
+		<part name="request" element="tns:handleFeedbackRequest" />
+	</message>
+	<message name="handleFeedbackRequestOutputMessage">
+		<part name="response" element="tns:handleFeedbackResponse" />
+	</message>
+	
+
+
+	<!--============================================================
+
+                     	PORTS
+                      
+  	============================================================-->
+	<portType name="ResourceBrokerPortType">
+
+		<!-- REMOVED FOR TEST PURPOSE ONLY
+			<operation name="addConstraint">
+				<input message="tns:addConstraintInputMessage"/>
+				<output message="tns:addConstraintOutputMessage"/>
+				<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+			</operation>	
+		-->
+
+		<operation name="getPlan">
+			<input message="tns:getPlanRequestInputMessage"/>
+			<output message="tns:getPlanRequestOutputMessage"/>
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>	
+		
+		<operation name="handleFeedback">
+			<input message="tns:handleFeedbackRequestInputMessage"/>
+			<output message="tns:handleFeedbackRequestOutputMessage"/>
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+	
+	</portType>
+
+</definitions>

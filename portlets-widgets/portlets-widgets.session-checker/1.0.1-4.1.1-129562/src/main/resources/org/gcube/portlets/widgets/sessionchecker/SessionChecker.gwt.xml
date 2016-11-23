@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='SessionChecker'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User' />
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+
+  <!-- Specify the app entry point class.                         -->
+<!--   <entry-point class='org.gcube.portlets.widgets.sessionchecker.client.SessionChecker' /> -->
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client' />
+  <source path='shared' />
+
+</module>
