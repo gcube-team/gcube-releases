@@ -1,0 +1,80 @@
+<dtsclientconf>
+<!--
+<object>
+	<id>1</id>
+	<contentformat>
+		<mimetype>image/jpg</mimetype>
+	</contentformat>
+	<file>/home/dimitris/CMSClients/MyCollection/pi.jpg</file>
+</object>
+
+<object>
+	<id>2</id>
+	<contentformat>
+		<mimetype>image/jpg</mimetype>
+	</contentformat>
+	<file>/home/dimitris/CMSClients/MyCollection/albinoalligator.jpg</file>
+</object>
+
+<object>
+	<id>3</id>
+	<contentformat>
+		<mimetype>image/gif</mimetype>
+	</contentformat>
+	<file>/home/dimitris/CMSClients/MyCollection/reservoirdogs.gif</file>
+</object>
+
+<object>
+	<id>4</id>
+	<contentformat>
+		<mimetype>image/gif</mimetype>
+	</contentformat>
+	<file>/home/dimitris/CMSClients/MyCollection/reservoirdogs2.gif</file>
+</object>
+
+
+
+<object>
+	<id>3</id>
+	<contentformat>
+		<mimetype>application/pdf</mimetype>
+	</contentformat>
+	<file>/home/dimitris/CMSClients/MyCollection/test1.pdf</file>
+</object>
+
+<object>
+	<id>4</id>
+	<contentformat>
+		<mimetype>application/pdf</mimetype>
+	</contentformat>
+	<file>/home/dimitris/CMSClients/MyCollection/test2.pdf</file>
+</object>
+
+-->
+
+<object>
+	<id>1</id>
+	<contentformat>
+		<mimetype>text/xml</mimetype>
+		<formatparameters>
+			<parameter name="schema" value="dc"/>
+			<parameter name="language" value="en"/>
+		</formatparameters>
+	</contentformat>
+	<file>/home/dimitris/CMSClients/MyCollection/meta1.xml</file>
+</object>
+
+<object>
+	<id>2</id>
+	<contentformat>
+		<mimetype>text/xml</mimetype>
+		<formatparameters>
+			<parameter name="schema" value="dc"/>
+			<parameter name="language" value="en"/>
+		</formatparameters>
+	</contentformat>
+	<file>/home/dimitris/CMSClients/MyCollection/meta2.xml</file>
+</object>
+
+
+</dtsclientconf>

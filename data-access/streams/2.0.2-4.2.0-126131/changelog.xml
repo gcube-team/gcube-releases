@@ -1,0 +1,48 @@
+<ReleaseNotes>
+	<Changeset component="streams-1.0.0" date="2012-04-26">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="streams-2.0.0" date="2012-09-01">
+		<Change>
+			Fault handling in stream publication and consumption aligns
+			with fault transport facilities of latest gRS2.
+		</Change>
+		<Change>Faults are published and abort publication unless they are
+			contingencies (cf. StreamContingency annotation).
+		</Change>
+		<Change>Streams can be conveniently consumed with callbacks (cf.
+			Callback interface and Streams#consume()) and callbacks can
+			explicitly skip
+			elements or stop
+			consumption (cf. Iteration class).
+		</Change>
+		<Change>
+			Like callbacks, fault handlers can control iteration directly
+			(cf. Iteration). FaultResponse is no longer needed.
+		</Change>
+		<Change>
+			StreamSkipException is replaced internally with
+			StreamSkipSignal, and StreamStopSignal is also added to model signals
+			from callbacks and fault handlers.
+		</Change>
+		<Change>
+			New stream implementations as well as code that consumes
+			streams can now be tested with dedicated facilities.
+		</Change>
+	</Changeset>
+	<Changeset component="streams-2.0.1" date="2013-01-11">
+		<Change>
+			Lookahead streams handle null values from underlying stream
+			without going in infinite loop (bug fix)
+		</Change>
+	</Changeset>
+	<Changeset component="streams-2.0.2-4.2.0-126131" date="2014-12-3">
+		<Change>
+			Bug fixing on RSStream
+		</Change>
+		<Change>
+			ResultSet client timeout increased to 5 minutes
+		</Change>
+	</Changeset>
+
+</ReleaseNotes>

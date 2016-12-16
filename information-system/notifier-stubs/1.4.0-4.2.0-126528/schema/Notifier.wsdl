@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="Notifier"
+    targetNamespace="http://gcube-system.org/namespaces/informationsystem/notifier"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="http://gcube-system.org/namespaces/informationsystem/notifier"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	
+   	xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+    xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+    xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<wsdl:import 
+    namespace=
+    "http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+    location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+   
+   <wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+
+
+<!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+<types>
+<xsd:schema targetNamespace="http://gcube-system.org/namespaces/informationsystem/notifier"
+    xmlns:tns="http://gcube-system.org/namespaces/informationsystem/notifier"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+     <xsd:import
+	    namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing"                
+	    schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+   
+    
+<!-- Type for EPR/Topic mapping-->
+        
+    <xsd:complexType name="EPR">
+		<xsd:sequence>
+			<xsd:element ref="wsa:EndpointReference"/>
+		</xsd:sequence>
+	</xsd:complexType>      
+	
+	<xsd:complexType name="EPRCouple">
+		<xsd:sequence>
+			<xsd:element type="tns:EPR" name="subsEPR"/>
+			<xsd:element type="tns:EPR" name="notifEPR"/>
+		</xsd:sequence>
+	</xsd:complexType>    
+	
+	<xsd:complexType name="EPRPair">
+		<xsd:sequence>
+			<xsd:element type="tns:EPR" name="clientEPR"/>
+			<xsd:element type="xsd:string" name="topic"/>
+		</xsd:sequence>
+	</xsd:complexType>    
+
+		
+	<xsd:complexType name="subscribeMessage">
+               <xsd:sequence>
+					<xsd:element ref="wsa:EndpointReference"/>
+					<xsd:element type="xsd:string" name ="topic"/>
+					<xsd:element type="xsd:string" name ="precondition" nillable="true"/>
+					<xsd:element type="xsd:string" name ="selection" nillable="true"/>
+	   		   </xsd:sequence>
+	</xsd:complexType>        
+
+
+	<!--types for registerTopic -->
+
+	<xsd:complexType name="registerTopicMessage">
+               <xsd:sequence>
+					<xsd:element ref="wsa:EndpointReference"/>
+					<xsd:element type="xsd:string" name ="vectorTopic" minOccurs="0" maxOccurs="unbounded" />
+	   		   </xsd:sequence>
+    </xsd:complexType>
+		
+	<xsd:element name="registerTopic" type="tns:registerTopicMessage"/>
+	
+	<xsd:element name="registerTopicResponse" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+				
+	<xsd:element name="unregisterTopic" type="tns:registerTopicMessage"/>	
+		
+  	<xsd:element name="unregisterTopicResponse">
+		<xsd:complexType/>
+	</xsd:element>
+	
+	<xsd:element name="subscribeToTopic" type="tns:subscribeMessage"/>
+
+	<xsd:element name="subscribeToTopicResponse">
+		<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="wsa:EndpointReference" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>	
+	   
+	   
+	<xsd:element name="isOngoingRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="itemList" type="tns:topicItem" minOccurs="1" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>  
+	
+	<xsd:complexType name="topicItem">
+			<xsd:sequence>
+				<xsd:element name="topic" type="xsd:string" minOccurs="1" maxOccurs="1" />
+				<xsd:element ref="wsa:EndpointReference" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+	</xsd:complexType>
+		
+	<xsd:element name="isOngoingResponse">   
+	    <xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="isOngoingMask" type="xsd:boolean" minOccurs="1" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	 </xsd:element>
+	  
+	<xsd:element name="removeSubscription" type="tns:subscribeMessage"/>
+	
+	<xsd:element name="removeSubscriptionResponse">
+		<xsd:complexType/>
+	</xsd:element>	
+	
+	
+	<xsd:element name="listTopics">
+		<xsd:complexType/>
+	</xsd:element>	
+	
+	<xsd:element name="listTopicsResponse">
+		<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element type="xsd:string" name="topicList" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>	
+	
+	<xsd:element name="listTopicsForNotifier">
+		<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="wsa:EndpointReference" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>	
+	
+	
+	<xsd:element name="getSubscribersForTopic" type="xsd:string"/>
+
+	<xsd:element name="getSubscribersForTopicResponse">
+		<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="wsa:EndpointReference" minOccurs="1" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>		
+
+	<xsd:element name="removeNotifier">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="wsa:EndpointReference" minOccurs="1" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+		
+	<xsd:element name="removeNotifierResponse">
+		<xsd:complexType/>
+	</xsd:element>	
+	
+	<xsd:element name="removeSubscriber">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="wsa:EndpointReference" minOccurs="1" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="removeSubscriberResponse">
+		<xsd:complexType/>
+	</xsd:element>	
+	
+</xsd:schema>
+</types>
+	
+<message name="RegisterTopicRequest">
+	<part name="request" element="tns:registerTopic"/>
+</message>
+<message name="RegisterTopicResponse">
+	<part name="response" element="tns:registerTopicResponse"/>
+</message>
+<message name="UnregisterTopicRequest">
+	<part name="request" element="tns:unregisterTopic"/>
+</message>
+<message name="UnregisterTopicResponse">
+	<part name="response" element="tns:unregisterTopicResponse"/>
+</message>
+
+<message name="SubscribeToTopicRequest">
+	<part name="request" element="tns:subscribeToTopic"/>
+</message>
+<message name="SubscribeToTopicResponse">
+	<part name="response" element="tns:subscribeToTopicResponse"/>
+</message>
+
+<message name="RemoveSubscriptionRequest">
+	<part name="request" element="tns:removeSubscription"/>
+</message>
+<message name="RemoveSubscriptionResponse">
+	<part name="response" element="tns:removeSubscriptionResponse"/>
+</message>
+
+<message name="ListTopicsRequest">
+	<part name="request" element="tns:listTopics"/>
+</message>
+<message name="ListTopicsResponse">
+	<part name="response" element="tns:listTopicsResponse"/>
+</message>
+
+<message name="ListTopicForNotifierRequest">
+	<part name="request" element="tns:listTopicsForNotifier"/>
+</message>
+<message name="ListTopicForNotifierResponse">
+	<part name="response" element="tns:listTopicsResponse"/>
+</message>
+<message name="GetSubscribersForTopicRequest">
+	<part name="request" element="tns:getSubscribersForTopic"/>
+</message>
+<message name="GetSubscribersForTopicResponse">
+	<part name="response" element="tns:getSubscribersForTopicResponse"/>
+</message>
+<message name="RemoveNotifierRequest">
+	<part name="request" element="tns:removeNotifier"/>
+</message>
+<message name="RemoveNotifierResponse">
+	<part name="response" element="tns:removeNotifierResponse"/>
+</message>
+<message name="RemoveSubscriberRequest">
+		<part name="request" element="tns:removeSubscriber"/>
+</message>
+<message name="RemoveSubscriberResponse">
+	<part name="response" element="tns:removeSubscriberResponse"/>
+</message>
+<message name="IsOngoingRequest">
+	<part name="request" element="tns:isOngoingRequest"/>
+</message>	
+<message name="IsOngoingResponse">
+	<part name="response" element="tns:isOngoingResponse"/>
+</message>	
+
+<!--============================================================
+
+                       P O R T T Y P E
+                      
+  ============================================================-->
+<portType name="NotifierPortType" >
+  
+	<operation name="registerTopic">
+		<input message="tns:RegisterTopicRequest"/>
+		<output message="tns:RegisterTopicResponse"/>
+		<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+	</operation>
+	<operation name="unregisterTopic">
+		<input message="tns:UnregisterTopicRequest"/>
+		<output message="tns:UnregisterTopicResponse"/>
+		<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+	</operation>
+
+	<operation name="getSubscribersForTopic">
+		<input message="tns:GetSubscribersForTopicRequest"/>
+		<output message="tns:GetSubscribersForTopicResponse"/>
+		<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+	</operation>
+	
+	<operation name="listTopics">
+		<input message="tns:ListTopicsRequest"/>
+		<output message="tns:ListTopicsResponse"/>
+		<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+	</operation>
+	
+	<operation name="listTopicForNotifier">
+		<input message="tns:ListTopicForNotifierRequest"/>
+		<output message="tns:ListTopicForNotifierResponse"/>
+		<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+	</operation>
+
+	<operation name="subscribeToTopic">
+		<input message="tns:SubscribeToTopicRequest"/>
+		<output message="tns:SubscribeToTopicResponse"/>
+		<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+	</operation>
+	
+	<operation name="removeSubscription">
+		<input message="tns:RemoveSubscriptionRequest"/>
+		<output message="tns:RemoveSubscriptionResponse"/>
+		<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+	</operation>
+	<operation name="removeNotifier">
+		<input message="tns:RemoveNotifierRequest"/>
+		<output message="tns:RemoveNotifierResponse"/>
+		<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+	</operation>
+	<operation name="removeSubscriber">
+		<input message="tns:RemoveSubscriberRequest"/>
+		<output message="tns:RemoveSubscriberResponse"/>
+		<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+	</operation>
+	
+	<operation name="isOngoing">
+		<input message="tns:IsOngoingRequest"/>
+		<output message="tns:IsOngoingResponse"/>
+	</operation>
+	
+</portType>
+
+</definitions>

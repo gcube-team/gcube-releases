@@ -1,0 +1,17 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.data-miner-manager.1-2-0"
+		date="2016-12-01">
+		<Change>Updated Output support</Change>
+		<Change>Added PortalContext</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.data-miner-manager.1-1-0"
+		date="2016-10-01">
+		<Change>Updated to Auth 2.0</Change>
+		<Change>Added Spatial data support [Ticket #4172]</Change>
+		<Change>Added Temporal data support [Ticket #4172]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.data-miner-manager.1-0-0"
+		date="2016-07-01">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

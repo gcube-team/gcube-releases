@@ -1,0 +1,12 @@
+scope # /gcube/devNext
+chokeProgressEvents # false
+chokePerformanceEvents # false
+storePlans # true
+timeout # -1
+pollPeriod # 60000
+jdl # test.jdl # test/gridExamples/test.jdl
+userProxy # userProxy # test/gridExamples/userProxy
+outputStoreMode # url # ftp://meteora.di.uoa.gr/d5s # user # pass
+inData # test.sh # ftp://meteora.di.uoa.gr/d5s/test.sh # url
+outData # std.err
+outData # std.out

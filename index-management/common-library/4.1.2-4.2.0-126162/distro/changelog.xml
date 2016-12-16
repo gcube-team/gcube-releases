@@ -1,0 +1,71 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.index-management.common-library.2-4-0" date="2010-10-08">
+		<Change>Support for Complete Indexes. Changes in general types, and Lucene processing, when handling the full payload for an entry.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index-management.common-library.2-4-1" date="2010-11-26">
+		<Change>Refactored for the new notifications library.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index-management.common-library.2-4-2" date="2011-01-24">
+		<Change>Changes in the lucene wrapper, for the update case, for closing deleted files that were remaining open.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index-management.common-library.3-1-0" date="2011-07-01">
+		<Change>Changes for supporting the CQL interface in all the types of Indices.</Change>
+		<Change>"Multiple collections per resource"-design adopted.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index-management.common-library.3-2-0" date="2011-09-02">
+		<Change>Added functionality for PROJECT DISTINCT in FWD Index.</Change>
+		<Change>Added functionality for projection with wildcard (PROJECT *)</Change>
+		<Change>Fixed a synchronization issue when a mergeAddition was invoked before a lookup resource was initialized.</Change>
+		<Change>Relations are now compatible with CQL Context 1.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index-management.common-library.3-3-0" date="2012-02-17">
+		<Change>Added functionality for snippet support in fulltext indexing.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index-management.common-library.3-3-1" date="2012-04-18">
+		<Change>Bug fixing for the case a snippet projection was explicitly declared in a query.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index-management.common-library.3-3-2" date="2012-06-07">
+		<Change>The values used for the inclusionType modifier of geosearch relation where changed from "1","2","3" to "intersects", "contains", "inside".</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index-management.common-library.3-3-3" date="2012-09-07">
+		<Change>Turned to Maven</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index-management.common-library.3-3-4" date="2012-11-26">
+		<Change>Fixed a bug that caused maximumSnippetSize not to be configured from deploy-jndi-config.xml in SearchSystemService</Change>
+		<Change>Added logs in LuceneGcqlProcessor and HighlighterWrapper</Change>
+		<Change>Added ranges for Resource Registry components in pom.xml</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index-management.common-library.3-3-5" date="2013-02-01">
+		<Change>Changed resultsetlibrary and resultsetclientlibrary to provided in pom.xml</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index-management.common-library.3-3-6" date="2013-03-05">
+		<Change>Changed visibility of QuerySnippetTermsPair so it can be used by other components</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index-management.common-library.3-3-7" date="2013-04-19">
+		<Change>Made BDBGcqlQueryContainer.SingleTerm class public so it can be used from couchbase-gcube</Change>
+	</Changeset>
+		<Changeset component="org.gcube.index-management.common-library.3-4-0" date="2013-08-29">
+		<Change>Lucene gCQL processor in now extented to work without RR and not translating IDs to fields</Change>
+		<Change>Lucene gCQL processor has changed to translate allIndexes to a single term query instead of ORs of all the searchables </Change>
+	</Changeset>
+	<Changeset component="org.gcube.index-management.common-library.3-5-0" date="2014-02-07">
+		<Change>Changed FullTextIndexType and ForwardIndexType to accept String instead of GCUBEScope</Change>
+		<Change>Changed IndexException to extend Throwable instead of GCUBEFault</Change>
+		<Change>Changed RRAdaptor to accept no arguments in the constructor</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.index-management.common-library.4-0-0" date="2014-02-07">
+		<Change>Removed FW related classes/packages</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.index-management.common-library.4-1-0" date="2014-02-07">
+		<Change>Generic Resources are retrieved by resource-manager</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.index-management.common-library.4-1-1" date="2014-06-30">
+		<Change>Removed xerces dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index-management.common-library.4-1-2" date="2014-12-05">
+		<Change>index type bug fix</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,38 @@
+<Resource>
+	<ID/>
+	<Type/>
+	<Profile>
+		<SecondaryType>DTSTransformationProgram</SecondaryType>
+		<Name>ExcelToTextTransformer</Name>
+		<Description>Program transforming MSExcel Documents to plain text</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.applications.ExcelToTextTransformer</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>application/vnd.ms-excel</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/plain</Mimetype>
+								<Parameters/>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>

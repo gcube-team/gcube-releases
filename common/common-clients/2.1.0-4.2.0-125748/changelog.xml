@@ -1,0 +1,17 @@
+<ReleaseNotes>
+	<Changeset component="common-clients-1.0.0" date="2012-04-27">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="common-clients-2.0.0" date="2012-09-01">
+		<Change>Rewritten as a framework for the implementation of client libraries that comply with the CL Design Model</Change>
+	</Changeset>
+	<Changeset component="common-clients-2.0.1" date="2013-01-11">
+		<Change>Improved error handling in Plugin#convert()</Change>
+	</Changeset>
+	<Changeset component="common-clients-2.0.2" date="2013-15-04">
+		<Change>AddressUtils preserve protocol from URIs/URLs</Change>
+	</Changeset>
+		<Changeset component="common-clients-2.1.0-4.2.0-125748" date="2013-10-10">
+		<Change>internal refactoring</Change>
+	</Changeset>
+</ReleaseNotes>

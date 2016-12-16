@@ -1,0 +1,78 @@
+[
+	Type = "DAG";
+	ParsingMode="Bag";
+	ConnectionMode="KeepAlive";
+	NodesCollocation = false;
+	Nodes = 
+	[
+		nodeA = 
+		[
+			Description = 
+			[
+				JobType = "Normal";
+				Executable = "/bin/ls";
+				Arguments = "-al";
+				StdOutput = "lsA.out";
+				StdError = "lsA.err";
+				OutputSandbox = {
+					"lsA.err",
+					"lsA.out"
+				};
+			];
+		];
+		nodeB = 
+		[
+			Description = 
+			[
+				JobType = "Normal";
+				Executable = "/bin/ls";
+				Arguments = "-al";
+				StdOutput = "lsB.out";
+				StdError = "lsB.err";
+				OutputSandbox = {
+					"lsB.err",
+					"lsB.out"
+				};
+			];
+		];
+		nodeC = 
+		[
+			Description = 
+			[
+				JobType = "Normal";
+				Executable = "/bin/ls";
+				Arguments = "-al";
+				StdOutput = "lsC.out";
+				StdError = "lsC.err";
+				OutputSandbox = {
+					"lsC.err",
+					"lsC.out"
+				};
+			];
+		];
+		nodeD = 
+		[
+			Description = 
+			[
+				JobType = "Normal";
+				Executable = "Concat.sh";
+				Arguments = "lsA.out lsB.out lsC.out";
+				StdOutput = "concatD.out";
+				StdError = "concatD.err";
+				InputSandbox = {
+					"Concat.sh",
+					root.nodes.nodeA.description.OutputSandbox[1],
+					root.nodes.nodeB.description.OutputSandbox[1],
+					root.nodes.nodeC.description.OutputSandbox[1]
+				};
+				OutputSandbox = {
+					"concatD.out",
+					"concatD.err",
+					"concat.out"
+				};
+			];
+		];
+	];
+	
+	Dependencies = {{nodeA,nodeD},{nodeB,nodeD},{nodeC,nodeD}};
+]

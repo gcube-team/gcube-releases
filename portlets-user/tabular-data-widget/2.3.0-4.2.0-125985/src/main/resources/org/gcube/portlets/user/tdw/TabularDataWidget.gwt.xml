@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='tabulardatawidget'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Other module inherits -->
+	<inherits name='com.sencha.gxt.ui.GXT' />
+
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-TRACE" />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+
+	<!--Loggers Enabled by default -->
+	<set-property name="log_ConsoleLogger" value="DISABLED" />
+	<set-property name="log_SystemLogger" value="DISABLED" />
+
+	<set-property name="log_GWTLogger" value="DISABLED" />
+	<set-property name="log_DivLogger" value="DISABLED" />
+	<set-property name="log_WindowLogger" value="DISABLED" />
+
+</module>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:tns="http://gcube.org/execution/workflowengine" 
+			name="WorkflowEngineService"
+			targetNamespace="http://gcube.org/execution/workflowengine"
+			xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<types>
+		<xsd:schema targetNamespace="http://gcube.org/execution/workflowengine">
+			<xsd:element name="about" type="xsd:string"/>
+			<xsd:element name="aboutResponse" type="xsd:string"/>
+			<xsd:element name="adaptJDL" type="tns:JDLParams"/>
+			<xsd:element name="adaptJDLResponse" type="xsd:string"/>
+			<xsd:element name="adaptGRID" type="tns:GRIDParams"/>
+			<xsd:element name="adaptGRIDResponse" type="xsd:string"/>
+			<xsd:element name="adaptCONDOR" type="tns:CONDORParams"/>
+			<xsd:element name="adaptCONDORResponse" type="xsd:string"/>
+			<xsd:element name="adaptHADOOP" type="tns:HADOOPParams"/>
+			<xsd:element name="adaptHADOOPResponse" type="xsd:string"/>
+			<xsd:element name="executionStatus" type="tns:StatusRequest"/>
+			<xsd:element name="executionStatusResponse" type="tns:StatusReport"/>
+			
+			
+			<xsd:complexType name="AccessInfo">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="port" type="xsd:string" />
+					<xsd:element maxOccurs="1" minOccurs="1" name="userId" type="xsd:string" />
+					<xsd:element maxOccurs="1" minOccurs="1" name="password" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="JDLParams">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="executionLease" type="xsd:long"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="jdlDescription" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="jdlResources" type="tns:JDLResource"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="config" type="tns:JDLConfig"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="JDLResource">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceKey" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceType" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceAccess" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="resourceAccessInfo" type="tns:AccessInfo"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceReference" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="inMessageBytePayload" type="xsd:base64Binary"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="inMessageStringPayload" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="JDLConfig">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="chokeProgressEvents" type="xsd:boolean"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="chokePerformanceEvents" type="xsd:boolean"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="queueSupport" type="xsd:boolean"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="utilization" type="xsd:float"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="passedBy" type="xsd:int"/>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="GRIDParams">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="executionLease" type="xsd:long"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="gridResources" type="tns:GRIDResource"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="config" type="tns:GRIDConfig"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="GRIDResource">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceType" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceKey" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceAccess" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="resourceAccessInfo" type="tns:AccessInfo"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceReference" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="inMessageBytePayload" type="xsd:base64Binary"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="inMessageStringPayload" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="GRIDConfig">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="chokeProgressEvents" type="xsd:boolean"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="chokePerformanceEvents" type="xsd:boolean"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="timeout" type="xsd:long"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="waitPeriod" type="xsd:long"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="retryOnErrorPeriod" type="xsd:long"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="retryOnErrorTimes" type="xsd:int"/>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="CONDORParams">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="executionLease" type="xsd:long"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="condorResources" type="tns:CONDORResource"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="config" type="tns:CONDORConfig"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="CONDORResource">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceType" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceKey" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceAccess" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceReference" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="inMessageBytePayload" type="xsd:base64Binary"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="inMessageStringPayload" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="CONDORConfig">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="chokeProgressEvents" type="xsd:boolean"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="chokePerformanceEvents" type="xsd:boolean"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="retrieveJobClassAd" type="xsd:boolean"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="waitPeriod" type="xsd:long"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="timeout" type="xsd:long"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="isDag" type="xsd:boolean"/>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="HADOOPParams">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="executionLease" type="xsd:long"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="hadoopResources" type="tns:HADOOPResource"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="config" type="tns:HADOOPConfig"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="HADOOPResource">
+				<xsd:sequence>
+					<xsd:element maxOccurs="unbounded" minOccurs="1" name="archives" type="tns:HADOOPArchiveResource"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="jar" type="tns:HADOOPJarResource"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="configuration" type="tns:HADOOPConfigurationResource"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="1" name="libs" type="tns:HADOOPLibResource"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="1" name="files" type="tns:HADOOPFileResource"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="1" name="arguments" type="tns:HADOOPArgumentResource"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="1" name="properties" type="tns:HADOOPPropertyResource"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="main" type="tns:HADOOPMainResource"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="1" name="inputs" type="tns:HADOOPInputResource"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="1" name="outputs" type="tns:HADOOPOutputResource"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="HADOOPArchiveResource">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceKey" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceAccess" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceReference" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="inMessageBytePayload" type="xsd:base64Binary"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="inMessageStringPayload" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="hdfsPresent" type="xsd:boolean"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="HADOOPJarResource">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceKey" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceAccess" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceReference" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="inMessageBytePayload" type="xsd:base64Binary"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="inMessageStringPayload" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="hdfsPresent" type="xsd:boolean"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="HADOOPConfigurationResource">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceKey" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceAccess" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceReference" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="inMessageBytePayload" type="xsd:base64Binary"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="inMessageStringPayload" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="hdfsPresent" type="xsd:boolean"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="HADOOPLibResource">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceKey" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceAccess" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceReference" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="inMessageBytePayload" type="xsd:base64Binary"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="inMessageStringPayload" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="hdfsPresent" type="xsd:boolean"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="HADOOPFileResource">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceKey" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceAccess" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceReference" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="inMessageBytePayload" type="xsd:base64Binary"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="inMessageStringPayload" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="hdfsPresent" type="xsd:boolean"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="HADOOPArgumentResource">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceValue" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="order" type="xsd:int"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="HADOOPPropertyResource">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceValue" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="HADOOPMainResource">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceValue" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="HADOOPInputResource">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceKey" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceAccess" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceReference" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="inMessageBytePayload" type="xsd:base64Binary"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="inMessageStringPayload" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="cleanup" type="xsd:boolean"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="HADOOPOutputResource">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceKey" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceAccess" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="resourceAccessInfo" type="tns:AccessInfo"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="resourceReference" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="cleanup" type="xsd:boolean"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="HADOOPConfig">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="chokeProgressEvents" type="xsd:boolean"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="chokePerformanceEvents" type="xsd:boolean"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:complexType name="StatusRequest">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="executionID" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="0" name="includePlan" type="xsd:boolean"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="StatusReport">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="isCompleted" type="xsd:boolean"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="plan" type="xsd:string"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="events" type="tns:ExecutionEvent"/>
+					<xsd:element maxOccurs="unbounded" minOccurs="0" name="output" type="tns:JobOutput"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="error" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="errorDetails" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="JobOutput">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="key" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="subKey" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="storageSystemID" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ExecutionEvent">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="eventType" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="eventTimestamp" type="xsd:long"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="progressEventInfo" type="tns:ExecutionProgressEvent"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="progressExternalEventInfo" type="tns:ExecutionExternalProgressEvent"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="performanceEventInfo" type="tns:ExecutionPerformanceEvent"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ExecutionProgressEvent">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="reportProgress" type="xsd:boolean"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="reportNodeProgress" type="xsd:boolean"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="reportNodeStatus" type="xsd:boolean"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="currentStep" type="xsd:int"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="totalStep" type="xsd:int"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="nodeName" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="nodeHostName" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="nodePort" type="xsd:int"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="message" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="emiterID" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ExecutionExternalProgressEvent">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="reportProgress" type="xsd:boolean"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="currentStep" type="xsd:int"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="totalStep" type="xsd:int"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="message" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="emiterID" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="externalEmiterName" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:complexType name="ExecutionPerformanceEvent">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="emiterID" type="xsd:string"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="totalTime" type="xsd:long"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="initializationTime" type="xsd:long"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="finalizationTime" type="xsd:long"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="childrenTotalTime" type="xsd:long"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="numberOfSubcalls" type="xsd:int"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="subcallsTotalTime" type="xsd:long"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			
+		</xsd:schema>
+	</types>
+
+	<message name="aboutInputMessage">
+		<part name="request" element="tns:about"/>
+	</message>
+	<message name="aboutOutputMessage">
+		<part name="response" element="tns:aboutResponse"/>
+	</message>
+
+	<message name="adaptJDLInputMessage">
+		<part name="request" element="tns:adaptJDL"/>
+	</message>
+	<message name="adaptJDLOutputMessage">
+		<part name="response" element="tns:adaptJDLResponse"/>
+	</message>
+
+	<message name="adaptGRIDInputMessage">
+		<part name="request" element="tns:adaptGRID"/>
+	</message>
+	<message name="adaptGRIDOutputMessage">
+		<part name="response" element="tns:adaptGRIDResponse"/>
+	</message>
+
+	<message name="adaptHADOOPInputMessage">
+		<part name="request" element="tns:adaptHADOOP"/>
+	</message>
+	<message name="adaptHADOOPOutputMessage">
+		<part name="response" element="tns:adaptHADOOPResponse"/>
+	</message>
+
+	<message name="adaptCONDORInputMessage">
+		<part name="request" element="tns:adaptCONDOR"/>
+	</message>
+	<message name="adaptCONDOROutputMessage">
+		<part name="response" element="tns:adaptCONDORResponse"/>
+	</message>
+
+	<message name="executionStatusInputMessage">
+		<part name="request" element="tns:executionStatus"/>
+	</message>
+	<message name="executionStatusOutputMessage">
+		<part name="response" element="tns:executionStatusResponse"/>
+	</message>
+
+	<portType name="WorkflowEngineServicePortType">
+		<operation name="about">
+			<input message="tns:aboutInputMessage"/>
+			<output message="tns:aboutOutputMessage"/>
+		</operation>
+		<operation name="adaptJDL">
+			<input message="tns:adaptJDLInputMessage"/>
+			<output message="tns:adaptJDLOutputMessage"/>
+		</operation>
+		<operation name="adaptGRID">
+			<input message="tns:adaptGRIDInputMessage"/>
+			<output message="tns:adaptGRIDOutputMessage"/>
+		</operation>
+		<operation name="adaptHADOOP">
+			<input message="tns:adaptHADOOPInputMessage"/>
+			<output message="tns:adaptHADOOPOutputMessage"/>
+		</operation>
+		<operation name="adaptCONDOR">
+			<input message="tns:adaptCONDORInputMessage"/>
+			<output message="tns:adaptCONDOROutputMessage"/>
+		</operation>
+		<operation name="executionStatus">
+			<input message="tns:executionStatusInputMessage"/>
+			<output message="tns:executionStatusOutputMessage"/>
+		</operation>
+	</portType>
+</definitions>

@@ -1,0 +1,22 @@
+<project default="undeploy" basedir=".">
+
+
+<property environment="env"/>
+<property file="build.properties"/>
+<property file="${user.home}/build.properties"/>
+<property name="env.GLOBUS_LOCATION" value="../../.."/>
+<property name="deploy.dir" value="${env.GLOBUS_LOCATION}"/>
+
+
+<target name="undeploy">
+  <delete verbose="true" dir="${deploy.dir}/etc/globus_wsrf_mds_index"/>
+  <delete verbose="true" file="${deploy.dir}/lib/wsrf_mds_index.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/wsrf_mds_index_stubs.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/mds/index/index_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/mds/index/index_entry_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/mds/index/index_entry_port_type.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/mds/index/index_entry_service.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/mds/index/index_port_type.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/mds/index/index_service.wsdl"/>
+</target>
+</project>

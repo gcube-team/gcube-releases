@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment name="defaultServerConfig" 
+    xmlns="http://xml.apache.org/axis/wsdd/" 
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<service name="gcube/data/speciesproductsdiscovery/manager" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.data.spd.manager.ManagerPT"/>
+	    <wsdlFile>share/schema/species-products-discovery/Manager_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+  		<parameter name="providers" value="GCUBEProvider SubscribeProvider GetCurrentMessageProvider"/>
+   		<parameter name="loadOnStartup" value="true"/> 
+    </service>
+
+	<service name="gcube/data/speciesproductsdiscovery/occurrences" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.data.spd.occurrences.OccurrencesPT"/>
+	    <wsdlFile>share/schema/species-products-discovery/Occurrences_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+  		<parameter name="providers" value="GCUBEProvider"/>
+   		<parameter name="loadOnStartup" value="true"/> 
+    </service>
+    
+    <service name="gcube/data/speciesproductsdiscovery/classification" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.data.spd.classification.ClassificationPT"/>
+	    <wsdlFile>share/schema/species-products-discovery/Classification_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+  		<parameter name="providers" value="GCUBEProvider"/>
+   		<parameter name="loadOnStartup" value="true"/> 
+    </service>
+    
+    <service name="gcube/data/speciesproductsdiscovery/executor" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.data.spd.executor.ExecutorPT"/>
+	    <wsdlFile>share/schema/species-products-discovery/Executor_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+  		<parameter name="providers" value="GCUBEProvider"/>
+   		<parameter name="loadOnStartup" value="true"/> 
+    </service>
+    
+     <service name="gcube/data/speciesproductsdiscovery/remotedispatcher" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.data.spd.remotedispatcher.RemoteDispatcherPT"/>
+	    <wsdlFile>share/schema/species-products-discovery/RemoteDispatcher_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+  		<parameter name="providers" value="GCUBEProvider"/>
+   		<parameter name="loadOnStartup" value="true"/> 
+    </service>
+</deployment>

@@ -1,0 +1,29 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-widgets.wsmail-widget.2-1-0"
+		date="2016-11-28">
+		<Change>Removed ASL Session dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.wsmail-widget.1-9-0"
+		date="2015-10-06">
+		<Change>Updated to include text of email in the notification</Change>
+		<Change>Updated to use Workspace Explorer instead of light tree
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.wsmail-widget.1-8-0"
+		date="2015-04-27">
+		<Change>Updated style sheet because of conglicting class name with
+			Bootstap
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.wsmail-widget.1-5-0"
+		date="2014-05-09">
+		<Change>Added session expiration check</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.wsmail-widget.1-4-0"
+		date="2013-10-21">
+		<Change>Refactored from portletsUser</Change>
+		<Change>Ported to Feather Weight Stack</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+</ReleaseNotes>

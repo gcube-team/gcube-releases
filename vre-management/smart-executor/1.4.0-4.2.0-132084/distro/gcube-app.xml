@@ -1,0 +1,8 @@
+<application mode='online'>
+		<group>${serviceClass}</group>
+		<name>${name}</name>
+		<version>${version}</version>
+		<description>${description}</description>
+		<local-persistence location='target' />
+</application>
+

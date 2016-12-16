@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>Resource Registry Configuration Provider Portal</Description>
+		<Class>Execution</Class>
+		<Name>rrconfprovider-portal</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Name>rrconfprovider-portal</Name>
+				<Version>1.0.0</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.execution</groupId>
+					<artifactId>rrconfprovider-portal</artifactId>
+					<version>1.0.0</version>
+				</MavenCoordinates>
+				<Files>
+					<File>rrconfprovider-portal-1.0.0.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

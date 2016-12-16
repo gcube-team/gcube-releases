@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+   <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{0}: %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  
+  <logger name="org.gcube" level="INFO" />
+  <logger name="org.gcube.informationsystem" level="DEBUG" />
+  <logger name="org.gcube.informationsystem.resourceregistry.context" level="INFO" />
+  <logger name="org.gcube.informationsystem.resourceregistry.resources.utils" level="INFO" />
+  <logger name="org.gcube.informationsystem.resourceregistry.resources.impl" level="TRACE" />
+  <logger name="org.gcube.informationsystem.impl.utils.discovery" level="ERROR" />
+
+  <root level="WARN">
+    <appender-ref ref="STDOUT" />
+  </root>
+  
+</configuration>

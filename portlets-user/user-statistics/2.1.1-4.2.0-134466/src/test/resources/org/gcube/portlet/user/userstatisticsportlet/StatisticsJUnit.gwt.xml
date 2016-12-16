@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="Statistics">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlet.user.userstatisticsportlet.Statistics' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/Statistics/greet" class="org.gcube.portlet.user.userstatisticsportlet.server.GreetingServiceImpl" />
+
+</module>

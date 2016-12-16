@@ -1,0 +1,196 @@
+attributetype ( 1.1.55.1 
+	NAME 'gcube-GUID' 
+	EQUALITY caseExactMatch 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+	SINGLE-VALUE 
+ )
+
+attributetype ( 1.1.55.2 
+	NAME 'gcube-Name' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.3 
+	NAME 'gcube-Description' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.4 
+	NAME 'gcube-Scope' 
+	EQUALITY caseExactMatch 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.5 
+	NAME 'gcube-Collection' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.6 
+	NAME 'gcube-Locator' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.7 
+	NAME 'gcube-Capability' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.8 
+	NAME 'gcube-Order' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 
+ )
+
+attributetype ( 1.1.55.9 
+	NAME 'gcube-Field-ref' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.10 
+	NAME 'gcube-Searchable-ref' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.11 
+	NAME 'gcube-Presentable-ref' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.12 
+	NAME 'gcube-QueryExpression' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.13 
+	NAME 'gcube-PresentationInfo' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.14 
+	NAME 'gcube-DateTime' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+	SINGLE-VALUE 
+ )
+
+attributetype ( 1.1.55.15 
+	NAME 'gcube-PairKey' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.16 
+	NAME 'gcube-PairValue' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.17 
+	NAME 'gcube-Endpoint-Port' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.18 
+	NAME 'gcube-Functionality-Ref' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.19 
+	NAME 'gcube-HostingNode-Ref' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.20 
+	NAME 'gcube-Endpoint' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.21 
+	NAME 'gcube-Language' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+attributetype ( 1.1.55.22 
+	NAME 'gcube-Field-type' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+objectclass ( 1.1.56.1 
+	NAME 'gcube-Field-Searchable' 
+	STRUCTURAL 
+	MUST ( gcube-Collection $ gcube-GUID $ gcube-Locator $ gcube-Order $ gcube-Field-ref ) 
+	MAY ( gcube-QueryExpression $ gcube-Capability ) 
+ )
+
+objectclass ( 1.1.56.2 
+	NAME 'gcube-Field' 
+	SUP TOP 
+	STRUCTURAL 
+	MUST ( gcube-GUID $ gcube-Name ) 
+	MAY ( gcube-Description $ gcube-Searchable-ref $ gcube-Presentable-ref ) 
+ )
+
+objectclass ( 1.1.56.3 
+	NAME 'gcube-Field-Presentable' 
+	STRUCTURAL 
+	MUST ( gcube-Collection $ gcube-GUID $ gcube-Locator $ gcube-Order $ gcube-Field-ref ) 
+	MAY ( gcube-QueryExpression $ gcube-PresentationInfo ) 
+ )
+
+objectclass ( 1.1.56.4 
+	NAME 'gcube-DataCollection' 
+	SUP TOP 
+	STRUCTURAL 
+	MUST ( gcube-GUID $ gcube-Name ) 
+	MAY ( gcube-Description $ gcube-CollectionType $ gcube-DateTime $ gcube-Scope ) 
+ )
+
+objectclass ( 1.1.56.5 
+	NAME 'gcube-HostingNode' 
+	SUP TOP 
+	STRUCTURAL 
+	MUST gcube-GUID 
+	MAY ( gcube-PairKey $ gcube-PairValue $ gcube-Scope ) 
+ )
+
+objectclass ( 1.1.56.6 
+	NAME 'gcube-Functionality' 
+	SUP TOP 
+	STRUCTURAL 
+	MUST gcube-GUID 
+ )
+
+objectclass ( 1.1.56.7 
+	NAME 'gcube-ExecutionServer' 
+	SUP TOP 
+	STRUCTURAL 
+	MUST ( gcube-GUID $ gcube-Endpoint-Port $ gcube-Functionality-Ref $ gcube-HostingNode-Ref ) 
+	MAY gcube-Scope 
+ )
+
+objectclass ( 1.1.56.8 
+	NAME 'gcube-ExecutionService' 
+	SUP TOP 
+	STRUCTURAL 
+	MUST ( gcube-GUID $ gcube-Endpoint $ gcube-Functionality-Ref $ gcube-HostingNode-Ref ) 
+	MAY gcube-Scope 
+ )
+
+objectclass ( 1.1.56.9 
+	NAME 'gcube-WorkflowService' 
+	SUP TOP 
+	STRUCTURAL 
+	MUST ( gcube-GUID $ gcube-Endpoint $ gcube-Functionality-Ref $ gcube-HostingNode-Ref ) 
+	MAY gcube-Scope 
+ )
+
+objectclass ( 1.1.56.10 
+	NAME 'gcube-FieldIndexInfo' 
+	STRUCTURAL 
+	MUST ( gcube-Collection $ gcube-GUID $ gcube-Language $ gcube-Field-ref $ gcube-Field-type ) 
+ )
+
+objectclass ( 1.1.56.11 
+	NAME 'gcube-FTIndexService' 
+	STRUCTURAL 
+	MUST ( gcube-GUID $ gcube-Functionality-Ref $ gcube-Endpoint $ gcube-HostingNode-Ref ) 
+	MAY ( gcube-Scope $ gcube-Field-Ref $ gcube-Capability ) 
+ )
+

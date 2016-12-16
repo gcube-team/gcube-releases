@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<PlanRequest
+	xmlns="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployRequest"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployRequest ../../../schema/deployRequest.xsd">
+	<Scope>/gcube/devsec</Scope>
+
+	<PackageGroup service="service1">
+		<Package reuse="true">
+			<ServiceClass>PkgServiceClass</ServiceClass>
+			<ServiceName>PkgServiceName</ServiceName>
+			<ServiceVersion>PkgServiceVersion</ServiceVersion>
+			<PackageName>PkgPackageName</PackageName>
+			<PackageVersion>PkgPackageVersion</PackageVersion>
+		</Package>
+		<Package reuse="true">
+			<ServiceClass>PkgServiceClass2</ServiceClass>
+			<ServiceName>PkgServiceName2</ServiceName>
+			<ServiceVersion>PkgServiceVersion2</ServiceVersion>
+			<PackageName>PkgPackageName2</PackageName>
+			<PackageVersion>PkgPackageVersion2</PackageVersion>
+		</Package>
+	</PackageGroup>
+	<PackageGroup service="service1">
+		<Package reuse="true">
+			<ServiceClass>PkgServiceClass3</ServiceClass>
+			<ServiceName>PkgServiceName3</ServiceName>
+			<ServiceVersion>PkgServiceVersion3</ServiceVersion>
+			<PackageName>PkgPackageName3</PackageName>
+			<PackageVersion>PkgPackageVersion3</PackageVersion>
+		</Package>
+	</PackageGroup>
+	<PackageGroup service="service2">
+		<Package reuse="true">
+			<ServiceClass>PkgServiceClass3</ServiceClass>
+			<ServiceName>PkgServiceName3</ServiceName>
+			<ServiceVersion>PkgServiceVersion3</ServiceVersion>
+			<PackageName>PkgPackageName3</PackageName>
+			<PackageVersion>PkgPackageVersion3</PackageVersion>
+		</Package>
+	</PackageGroup>
+	<PackageGroup service="service2">
+		<Package reuse="true">
+			<ServiceClass>PkgServiceClass3</ServiceClass>
+			<ServiceName>PkgServiceName3</ServiceName>
+			<ServiceVersion>PkgServiceVersion3</ServiceVersion>
+			<PackageName>PkgPackageName3</PackageName>
+			<PackageVersion>PkgPackageVersion3</PackageVersion>
+		</Package>
+	</PackageGroup>
+	<PackageGroup service="service1">
+		<Package reuse="true">
+			<ServiceClass>PkgServiceClass3</ServiceClass>
+			<ServiceName>PkgServiceName3</ServiceName>
+			<ServiceVersion>PkgServiceVersion3</ServiceVersion>
+			<PackageName>PkgPackageName3</PackageName>
+			<PackageVersion>PkgPackageVersion3</PackageVersion>
+		</Package>
+	</PackageGroup>
+</PlanRequest>

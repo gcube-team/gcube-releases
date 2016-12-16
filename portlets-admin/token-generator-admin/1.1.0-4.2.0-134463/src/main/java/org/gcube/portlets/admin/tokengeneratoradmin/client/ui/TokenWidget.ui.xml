@@ -1,0 +1,77 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:m="urn:import:org.gcube.portlets.admin.tokengeneratoradmin.client.ui">
+
+	<g:HTMLPanel styleName="token-frame" ui:field="tokenPanel">
+		<g:SimplePanel width="100%">
+			<b:Popover ui:field="popover">
+				<b:Button ui:field="infoButton" type="LINK" icon="INFO_SIGN"
+					size="LARGE"></b:Button>
+			</b:Popover>
+		</g:SimplePanel>
+
+		<!-- Loading part -->
+		<m:LoadingText ui:field="loader" visible="false" />
+
+		<!-- Error panel part -->
+		<g:VerticalPanel ui:field="serviceUnavailablePanel"
+			width="100%" visible="false">
+			<b:AlertBlock type="ERROR"
+				text="Sorry, it is not possible to contact the service!" close="false"></b:AlertBlock>
+		</g:VerticalPanel>
+
+		<!-- Portlet information -->
+		<g:VerticalPanel width="100%" ui:field="placeHolder">
+			<b:Form type="VERTICAL" ui:field="formTokenUsername">
+
+				<b:ControlGroup>
+					<b:ControlLabel for="contexts">
+						<b>Select a context</b>
+					</b:ControlLabel>
+					<b:Controls>
+						<b:ListBox width="98%" b:id="contexts" ui:field="contexts"
+							title="Choose a context"></b:ListBox>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup>
+					<b:ControlLabel for="node">
+						<b>Insert an IP address</b>
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox width="98%" b:id="node" ui:field="nodeAddress"
+							title="Insert an IP address or a fully qualified hostname of a node in the Infrastructure"
+							placeholder="Insert an IP address or a fully qualified hostname of a node in the Infrastructure"></b:TextBox>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup>
+					<b:ControlLabel for="port">
+						<b>Insert a port</b>
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox width="98%" b:id="port" ui:field="port"
+							title="Choose a port number"></b:TextBox>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup visible="false" ui:field="generatedTokenGroup">
+					<b:ControlLabel for="token">
+						<b>Generated Token</b>
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox width="98%" b:id="token" ui:field="token"
+							readOnly="true" title="Generated Token"></b:TextBox>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:AlertBlock ui:field="alertArea" visible="false"
+					close="false"></b:AlertBlock>
+
+				<b:Button ui:field="generateButton" visible="true" type="PRIMARY"
+					title="Generate a new Node Token">Generate</b:Button>
+			</b:Form>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

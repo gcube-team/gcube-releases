@@ -1,0 +1,11 @@
+<application mode="online">
+
+	<group>Search</group>
+	<name>OpenSearchDataSource</name>
+	<version>2.0.0</version>
+
+	<description>Restful Version of OpenSearchDataSource</description>
+
+	<exclude>/resources/</exclude>
+
+</application>

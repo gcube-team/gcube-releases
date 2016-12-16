@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="RemoteDispatcher"
+	targetNamespace="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+	xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:tns="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+	xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+	xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+	xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types">
+
+	<import
+		namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		location="../gcube/common/core/providers/GCUBEProvider.wsdl" />
+
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+		location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+
+	<wsdl:import namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" 
+		location="../wsrf/notification/WS-BaseN.wsdl"/>
+	
+
+	<wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+
+
+
+	<!--
+		============================================================ T Y P E S
+
+		============================================================
+	-->
+	<types>
+		<xsd:schema
+			targetNamespace="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+			xmlns:tns="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+			<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+				schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+
+			<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" />
+		
+			<xsd:element name="retrieveTaxaByIdsRequest">
+			<xsd:complexType>
+				<xsd:sequence>
+					<xsd:element name="idsLocator" type="xsd:string"/>
+					<xsd:element name="pluginName" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="retrieveTaxaByIdsResponse" type="xsd:string" />
+			
+						
+			<xsd:element name="getTaxonByIdRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="id" type="xsd:string" />
+						<xsd:element name="pluginName" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="getTaxonByIdResponse" type="xsd:string" />
+			
+			
+						
+			<xsd:element name="retrieveTaxonChildrenByTaxonIdRequest" >
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="id" type="xsd:string" />
+						<xsd:element name="pluginName" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+						
+			<xsd:element name="retrieveTaxonChildrenByTaxonIdResponse" type="xsd:string" />
+						
+			<xsd:element name="getSynonymsByIdRequest" >
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="id" type="xsd:string" />
+						<xsd:element name="pluginName" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getSynonymsByIdResponse" type="xsd:string" />	
+			
+			<xsd:element name="namesMappingRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="commonName" type="xsd:string" />
+						<xsd:element name="pluginName" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="namesMappingResponse" type="xsd:string" />
+			
+						
+			<xsd:element name="getOccurrencesByProductKeysRequest" >
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="productKeysLocator" type="xsd:string" />
+						<xsd:element name="pluginName" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getOccurrencesByProductKeysResponse" type="xsd:string" />
+						
+			<xsd:element name="getOccurrencesByIdsRequest" >
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="idsLocator" type="xsd:string" />
+						<xsd:element name="pluginName" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getOccurrencesByIdsResponse" type="xsd:string" />
+			
+			<xsd:element name="expandWithSynonymsRequest" >
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="scientificName" type="xsd:string" />
+						<xsd:element name="pluginName" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="expandWithSynonymsResponse" type="xsd:string" />	
+			
+			<xsd:element name="unfoldRequest" >
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="scientificName" type="xsd:string" />
+						<xsd:element name="pluginName" type="xsd:string" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="unfoldResponse" type="xsd:string" />	
+						
+			<xsd:element name="searchRequest" >
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="resultType" type="xsd:string" />
+						<xsd:element name="pluginName" type="xsd:string" />
+						<xsd:element name="word" type="xsd:string" />
+						<xsd:element name="properties" type="tns:searchCondition" minOccurs="0" maxOccurs="unbounded"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="searchResponse" type="xsd:string" />
+						
+			<xsd:complexType name="searchCondition">
+					<xsd:sequence>
+						<xsd:element name="type" type="xsd:string" />
+						<xsd:element name="op" type="xsd:string" />
+						<xsd:element name="value" type="xsd:string" />
+					</xsd:sequence>
+			</xsd:complexType>			
+						
+			<xsd:element name="IdNotValidFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+	
+		</xsd:schema>
+	</types>
+	
+	<message name="SearchRequest">
+		<part name="request" element="tns:searchRequest" />
+	</message>
+	<message name="SearchResponse">
+		<part name="response" element="tns:searchResponse" />
+	</message>
+	
+	<message name="RetrieveTaxaByIdsRequest">
+		<part name="request" element="tns:retrieveTaxaByIdsRequest" />
+	</message>
+	<message name="RetrieveTaxaByIdsResponse">
+		<part name="response" element="tns:retrieveTaxaByIdsResponse" />
+	</message>
+	
+	<message name="GetTaxonByIdRequest">
+		<part name="request" element="tns:getTaxonByIdRequest" />
+	</message>
+	<message name="GetTaxonByIdResponse">
+		<part name="response" element="tns:getTaxonByIdResponse" />
+	</message>
+	
+	<message name="RetrieveTaxonChildrenByTaxonIdRequest">
+		<part name="request" element="tns:retrieveTaxonChildrenByTaxonIdRequest" />
+	</message>
+	<message name="RetrieveTaxonChildrenByTaxonIdResponse">
+		<part name="response" element="tns:retrieveTaxonChildrenByTaxonIdResponse" />
+	</message>
+	
+	<message name="GetSynonymsByIdRequest">
+		<part name="request" element="tns:getSynonymsByIdRequest" />
+	</message>
+	<message name="GetSynonymsByIdResponse">
+		<part name="response" element="tns:getSynonymsByIdResponse" />
+	</message>
+	
+	<message name="ExpandWithSynonymsRequest">
+		<part name="request" element="tns:expandWithSynonymsRequest" />
+	</message>
+	<message name="ExpandWithSynonymsResponse">
+		<part name="response" element="tns:expandWithSynonymsResponse" />
+	</message>
+	
+	<message name="UnfoldRequest">
+		<part name="request" element="tns:unfoldRequest" />
+	</message>
+	<message name="UnfoldResponse">
+		<part name="response" element="tns:unfoldResponse" />
+	</message>
+	
+	<message name="NamesMappingRequest">
+		<part name="request" element="tns:namesMappingRequest" />
+	</message>
+	<message name="NamesMappingResponse">
+		<part name="response" element="tns:namesMappingResponse" />
+	</message>
+		
+	<message name="GetOccurrencesByProductKeysRequest">
+		<part name="request" element="tns:getOccurrencesByProductKeysRequest" />
+	</message>
+	<message name="GetOccurrencesByProductKeysResponse">
+		<part name="response" element="tns:getOccurrencesByProductKeysResponse" />
+	</message>
+	
+	<message name="GetOccurrencesByIdsRequest">
+		<part name="request" element="tns:getOccurrencesByIdsRequest" />
+	</message>
+	<message name="GetOccurrencesByIdsResponse">
+		<part name="response" element="tns:getOccurrencesByIdsResponse" />
+	</message>
+	
+	
+	
+	
+   
+	<message name="IdNotValidFaultMessage">
+		<part name="fault" element="tns:IdNotValidFault" />
+	</message>
+
+
+	<portType name="RemoteDispatcherPortType"> 
+		
+		<operation name="search">
+			<input message="tns:SearchRequest" />
+			<output message="tns:SearchResponse" />
+		</operation>
+		
+		<operation name="getSynonymsById">
+			<input message="tns:GetSynonymsByIdRequest" />
+			<output message="tns:GetSynonymsByIdResponse" />
+			<fault name="idnotvalidfault" message="tns:IdNotValidFaultMessage" />
+		</operation>
+		
+		<operation name="retrieveTaxonChildrenByTaxonId">
+			<input message="tns:RetrieveTaxonChildrenByTaxonIdRequest" />
+			<output message="tns:RetrieveTaxonChildrenByTaxonIdResponse" />
+			<fault name="idnotvalidfault" message="tns:IdNotValidFaultMessage" />
+		</operation>
+
+	
+		<operation name="retrieveTaxaByIds">
+			<input message="tns:RetrieveTaxaByIdsRequest" />
+			<output message="tns:RetrieveTaxaByIdsResponse" />
+		</operation>
+			
+		
+		<operation name="getTaxonById">
+			<input message="tns:GetTaxonByIdRequest" />
+			<output message="tns:GetTaxonByIdResponse" />
+			<fault name="idnotvalidfault" message="tns:IdNotValidFaultMessage" />
+		</operation>
+		
+		<operation name="namesMapping">
+			<input message="tns:NamesMappingRequest" />
+			<output message="tns:NamesMappingResponse" />
+		</operation>
+		
+		<operation name="expandWithSynonyms">
+			<input message="tns:ExpandWithSynonymsRequest" />
+			<output message="tns:ExpandWithSynonymsResponse" />
+		</operation>
+		
+		<operation name="unfold">
+			<input message="tns:UnfoldRequest" />
+			<output message="tns:UnfoldResponse" />
+		</operation>
+		
+		<operation name="getOccurrencesByProductKeys">
+			<input message="tns:GetOccurrencesByProductKeysRequest" />
+			<output message="tns:GetOccurrencesByProductKeysResponse" />
+		</operation>
+	
+		<operation name="getOccurrencesByIds">
+			<input message="tns:GetOccurrencesByIdsRequest" />
+			<output message="tns:GetOccurrencesByIdsResponse" />
+		</operation>	
+		
+	</portType>
+
+
+</definitions>

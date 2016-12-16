@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>${description}</Description>
+		<Class>Search</Class>
+		<Name>data-fusion</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Name>data-fusion</Name>
+				<Version>1.0.2</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.search</groupId>
+					<artifactId>data-fusion</artifactId>
+					<version>1.0.2</version>
+				</MavenCoordinates>
+				<Files>
+					<File>data-fusion-1.0.2.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

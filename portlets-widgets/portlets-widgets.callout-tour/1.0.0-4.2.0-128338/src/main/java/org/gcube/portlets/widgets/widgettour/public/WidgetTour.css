@@ -1,0 +1,170 @@
+.gcube_DialogBox_tour {
+	z-index: 10001;
+	background: #fff !important;
+	border: 5px solid rgba(0, 0, 0, .5) !important;
+	padding: 15px;
+	border-radius: 4px;
+	font-size: 13px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.80);
+	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.80);
+	-webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.80);
+}
+
+.gcube_DialogBox_tour .Caption {
+	color: #000 !important;
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif !important;
+	font-size: 16px !important;
+	font-weight: 700 !important;
+	line-height: 19px !important;
+	margin: -1px 15px 0 0 !important;
+	padding: 0px !important;
+}
+
+.gcube_DialogBox_tour .dialogContent div {
+	font-family: Helvetica, Arial;
+	font-weight: 400;
+	line-height: 17px;
+	margin: -5px 0 11px;
+	padding-top: 8px;
+	font-size: 13px;
+	color: #555;
+}
+
+.gcube_DialogBox_tour .dialogTop {
+	background: #fff !important;
+	font-size: 16px !important;
+	border: none !important;
+	margin: 0px;
+	padding-left: 5px;
+	height: 20px;
+}
+
+.gcube_DialogBox_tour .dialogMiddleCenter {
+	padding: 0px !important;
+}
+
+.gcube_DialogBox_tour .dialogMiddleLeft {
+	background: #FFF;
+	padding-left: 0px !important;
+}
+
+.gcube_DialogBox_tour .dialogMiddleRight {
+	background: #FFF;
+	padding-left: 0px !important;
+}
+
+.gcube_DialogBox_tour .dialogBottom {
+	background: #FFF;
+	margin: 0px;
+	padding-left: 0px !important;
+	height: 0px !important;
+}
+
+/* The below comes from the hopscotch.css*/
+.gcube_DialogBox_tour .button {
+	/* borrowed from katy styles */
+	font-weight: bold;
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+	margin: 0;
+	overflow: visible;
+	text-decoration: none !important;
+	width: auto;
+	padding: 0 10px;
+	height: 26px;
+	line-height: 24px;
+	font-size: 12px; *
+	zoom: 1;
+	white-space: nowrap;
+	display: -moz-inline-stack;
+	display: inline-block; *
+	vertical-align: auto;
+	zoom: 1; *
+	display: inline;
+	vertical-align: middle;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.gcube_DialogBox_tour .button:hover { *
+	zoom: 1;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.gcube_DialogBox_tour .button:active {
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) inset;
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) inset;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) inset;
+}
+
+.gcube_DialogBox_tour .button.next {
+	border-color: #1b5480;
+	color: #fff;
+	margin: 0 0 0 10px;
+	/* HS specific*/
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+	background-color: #287bbc;
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0,
+		startColorstr='#287bbc', endColorstr='#23639a');
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #287bbc),
+		color-stop(100%, #23639a));
+	background-image: -webkit-linear-gradient(top, #287bbc 0%, #23639a 100%);
+	background-image: -moz-linear-gradient(top, #287bbc 0%, #23639a 100%);
+	background-image: -o-linear-gradient(top, #287bbc 0%, #23639a 100%);
+	background-image: linear-gradient(top, #287bbc 0%, #23639a 100%);
+}
+
+.gcube_DialogBox_tour .button.next:hover {
+	background-color: #2672ae;
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0,
+		startColorstr='#2672ae', endColorstr='#1e4f7e');
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2672ae),
+		color-stop(100%, #1e4f7e));
+	background-image: -webkit-linear-gradient(top, #2672ae 0%, #1e4f7e 100%);
+	background-image: -moz-linear-gradient(top, #2672ae 0%, #1e4f7e 100%);
+	background-image: -o-linear-gradient(top, #2672ae 0%, #1e4f7e 100%);
+	background-image: linear-gradient(top, #2672ae 0%, #1e4f7e 100%);
+}
+
+.gcube_DialogBox_tour .button.prev {
+	border-color: #a7a7a7;
+	color: #444;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	background-color: #f2f2f2;
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0,
+		startColorstr='#f2f2f2', endColorstr='#e9e9e9');
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f2f2f2),
+		color-stop(100%, #e9e9e9));
+	background-image: -webkit-linear-gradient(top, #f2f2f2 0%, #e9e9e9 100%);
+	background-image: -moz-linear-gradient(top, #f2f2f2 0%, #e9e9e9 100%);
+	background-image: -o-linear-gradient(top, #f2f2f2 0%, #e9e9e9 100%);
+	background-image: linear-gradient(top, #f2f2f2 0%, #e9e9e9 100%);
+}
+
+.gcube_DialogBox_tour .button.prev:hover {
+	background-color: #e8e8e8;
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0,
+		startColorstr='#FFE8E8E8', endColorstr='#FFA9A9A9');
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e8e8e8),
+		color-stop(13%, #e3e3e3), color-stop(32%, #d7d7d7),
+		color-stop(71%, #b9b9b9), color-stop(100%, #a9a9a9));
+	background-image: -webkit-linear-gradient(top, #e8e8e8 0%, #e3e3e3 13%, #d7d7d7 32%,
+		#b9b9b9 71%, #a9a9a9 100%);
+	background-image: -moz-linear-gradient(top, #e8e8e8 0%, #e3e3e3 13%, #d7d7d7 32%, #b9b9b9
+		71%, #a9a9a9 100%);
+	background-image: -o-linear-gradient(top, #e8e8e8 0%, #e3e3e3 13%, #d7d7d7 32%, #b9b9b9
+		71%, #a9a9a9 100%);
+	background-image: linear-gradient(top, #e8e8e8 0%, #e3e3e3 13%, #d7d7d7 32%, #b9b9b9 71%,
+		#a9a9a9 100%);
+}

@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.rest.resource-aware-commons.1-0-0" date="2014-03-13">
+		<Change>Initial release</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.common.rest.resource-aware-commons.2-0-0" date="2014-06-04">
+		<Change>Added generic resource wrapper models</Change>
+		<Change>Added XPathEvaluator, ResponseUtils</Change>
+		<Change>Extended XMLConverter</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,650 @@
+
+.gwt-button {
+	height: 25px !important;
+}
+
+.grouping-inner {
+	background: url('images/grouping-border.png') repeat-x;
+	display: block;
+	height: 4px;
+	width: 600px;
+}
+
+.grouping-border {
+	background: url('images/grouping-border.png') repeat-x;
+	display: block;
+	height: 8px;
+	width: 600px;
+}
+
+.dropHere {
+	background: #FFF url(images/dropHere.png) repeat-y;
+}
+
+.btn_in_detail .x-btn-tl,.btn_in_detail .x-btn-tr,.btn_in_detail .x-btn-tc,.btn_in_detail .x-btn-ml,.btn_in_detail .x-btn-mr,.btn_in_detail .x-btn-mc,.btn_in_detail .x-btn-bl,.btn_in_detail .x-btn-br,.btn_in_detail .x-btn-bc
+	{
+	background-color: #FFF !important;
+	background-image: none !important;
+	border: 1px dashed #CCC;
+	background-color: white;
+	background-repeat: no-repeat;
+}
+
+.tableBorder {
+	border: 1px solid #CCC;
+	height: 30px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+
+.selectedCell {
+	background-color: #e3e8f3 !important;
+}
+
+.dialogText {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+tableBorder td {
+	border: 2px solid #BBBBBB;
+	padding: 3px;
+}
+
+.wpFlow {
+	border: 0px solid gray;
+	margin-left: 20px;
+}
+
+.highlight_background {
+	background-color: #FFFE00;
+	/*    filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    -khtml-opacity: 0.8;
+     opacity: 0.8;*/
+}
+
+.imagePreviewBox {
+	border: 1px dashed gray;
+	border-collapse: collapse;
+}
+
+.noBorder {
+	margin-left: 0px;
+	border: 0px solid gray;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000;
+}
+
+.selectable {
+	cursor: hand;
+	cursor: pointer;
+}
+
+.menubar {
+	background: #e3e8f3 url(images/hborder.png) repeat-x 0px -2003px;
+	border: 1px solid #BBBBBB;
+	text-align: left;
+	vertical-align: top;
+	padding-top: 2px;
+}
+
+.menubar-font {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/** Example rules used by the template application (remove for your app) */
+.pc-template-btn {
+	display: block;
+	font-size: 16pt
+}
+
+#pc-template-img {
+	margin-top: 20px;
+}
+
+.d4sFrame {
+	border: 1px dashed #CCC;
+	background-color: #FFF;
+	margin-left: 0px;
+}
+
+.droppingArea-Image {
+	border: 1px dashed #CCC;
+	background-image: url(images/droppingImage_bg.gif);
+	background-repeat: repeat;
+	margin-left: 0px;
+}
+
+.docEditedBy {
+	color: #666666;
+	font-family: Arial, sans-serif;
+	font-size: 11px !important;
+}
+
+.d4sRichTextArea {
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	font-family: Times;
+	font-size: 20px;
+	border: none;
+}
+
+.simpleText {
+	background-image: url(images/simple_text.png);
+	background-repeat: no-repeat;
+	padding-top: 5px;
+	padding-left: 20px;
+	margin-left: 0px;
+	border: none;
+	font-family: Times;
+	font-size: 12px;
+	font-family: Verdana;
+	color: black;
+}
+
+.titleArea {
+	background-image: url(images/title.png);
+	background-repeat: no-repeat;
+	padding-top: 5px;
+	padding-left: 20px;
+	margin-left: 0px;
+	border: none;
+	font-family: Times;
+	font-size: 16pt;
+	font-family: Verdana;
+	color: maroon;
+}
+
+.heading1Area {
+	background-image: url(images/heading_1.png);
+	background-repeat: no-repeat;
+	padding-top: 5px;
+	padding-left: 20px;
+	margin-left: 0px;
+	border: none;
+	font-family: Times;
+	font-size: 12pt;
+	font-family: Verdana;
+	color: maroon;
+}
+
+.heading2Area {
+	background-image: url(images/heading_2.png);
+	background-repeat: no-repeat;
+	padding-top: 5px;
+	padding-left: 20px;
+	margin-left: 0px;
+	border: none;
+	font-family: Times;
+	font-size: 11pt;
+	font-family: Verdana;
+	color: maroon;
+}
+
+.heading3Area {
+	background-image: url(images/heading_3.png);
+	background-repeat: no-repeat;
+	padding-top: 5px;
+	padding-left: 20px;
+	margin-left: 0px;
+	border: none;
+	font-family: Times;
+	font-size: 10pt;
+	font-family: Verdana;
+	color: maroon;
+}
+
+.heading4Area {
+	background-image: url(images/heading_4.png);
+	background-repeat: no-repeat;
+	padding-top: 5px;
+	padding-left: 20px;
+	margin-left: 0px;
+	border: none;
+	font-family: Times;
+	font-size: 10pt;
+	font-family: Verdana;
+	color: maroon;
+}
+
+.heading5Area {
+	background-image: url(images/heading_5.png);
+	background-repeat: no-repeat;
+	padding-top: 5px;
+	padding-left: 20px;
+	margin-left: 0px;
+	border: none;
+	font-family: Times;
+	font-size: 10pt;
+	font-family: Verdana;
+	color: maroon;
+}
+
+.commentArea {
+	background-image: url(images/comment_area.gif);
+	background-repeat: no-repeat;
+	padding-top: 5px;
+	padding-left: 15px;
+	margin-left: 0px;
+	border: 0px solid gray;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	color: #AAA;
+}
+
+.attribute {
+	background-repeat: no-repeat;
+	padding: 2px 20px 0px;
+	margin-left: 0px;
+	border: 0px solid gray;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #336699;
+}
+
+.attribute_multi {
+	background-image: url(images/attr_multi.png);
+}
+
+.attribute_unique {
+	background-image: url(images/attr_unique.png);
+}
+
+.attribute_editing {
+	background-color: #FFFFDD;
+}
+
+.instructionArea {
+	background-image: url(images/instruction_area.png);
+	background-repeat: no-repeat;
+	padding: 5px 18px 0px;
+	margin-left: 0px;
+	border: 0px solid gray;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 11px;
+	color: #666;
+}
+
+.gridAttribute {
+	background-color: #FFF;
+	padding: 3px;
+}
+
+.checkAttribute label {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.pagebreak {
+	background-image: url(images/pagebreak.gif);
+	border: 1px dashed #CCC;
+	background-repeat: repeat-x;
+}
+
+.headerArea {
+	background-image: url(images/header.jpg);
+}
+
+.footerArea {
+	background-image: url(images/footer.jpg);
+}
+
+.tableArea {
+	background-image: url(images/table.jpg);
+}
+
+.timeseriesArea {
+	background-image: url(images/TimeSeries_bg.gif);
+}
+
+.text-table-image {
+	background-image: url(images/text-table-image_placeholder.png);
+}
+
+.tocArea {
+	background-image: url(images/toc.jpg);
+	border: 1px dashed #CCC;
+	background-repeat: repeat-x;
+}
+
+.biblioArea {
+	background-image: url(images/biblio.jpg);
+	border: 1px dashed #CCC;
+	background-repeat: repeat-x;
+}
+
+.d4sFrame-highlight {
+	background-color: #e4f2f6;
+	filter: alpha(opacity =     50);
+	-moz-opacity: .50;
+	opacity: .50;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.droppingArea-Text {
+	border: 1px dashed #CCC;
+	background-image: url(images/droppingText_bg.gif);
+	background-repeat: repeat;
+}
+
+.textArea-inserted {
+	border: 1px dashed #CCC;
+}
+
+.border {
+	border: 1px solid blue;
+}
+
+.blackfont {
+	color: black;
+}
+
+.reportHeader {
+	background-color: #CADEF4;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding: 1px 4px 1px 4px;
+	border-top: 1px solid #3366CC;
+}
+
+.setVisibilityOff {
+	visibility: hidden;
+}
+
+.setVisibilityOn {
+	margin-top: 1px;
+	visibility: visible;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.closeImage {
+	background: url(images/close.png) 0px 0px no-repeat;
+	height: 15px;
+	width: 15px;
+}
+
+.closeImage:hover {
+	background: url(images/close.png) 0px -16px no-repeat;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.closeImage:active {
+	background: url(images/close.png) 0px -32px no-repeat;
+}
+
+.editImage {
+	background: url(images/edita.png) 0px 0px no-repeat;
+	height: 15px;
+	width: 15px;
+}
+
+.editImage:hover {
+	background: url(images/edita.png) 0px -16px no-repeat;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.editImage:active {
+	background: url(images/edita.png) 0px -32px no-repeat;
+}
+
+.d4sInnerDragTextbox {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: black;
+	border: 1px inset black;
+	padding: 0px;
+	margin: 0px;
+}
+
+.whiteBackground {
+	text-align: center;
+	background-color: White;
+	border: 1px solid gray
+}
+
+.toolBoxFrame {
+	background-color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	/*padding: 1px 4px 1px 4px;*/
+	border: 1px solid #3366CC;
+}
+
+.toolBoxLabel {
+	background-color: #E5ECF9;
+	color: gray;
+	font-weight: bold;
+	border-bottom: 1px solid #3366CC;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding: 1px 4px 1px 4px;
+}
+
+.toolFrame {
+	padding: 4px;
+	cursor: pointer;
+	cursor: hand;
+	border: 1px outset #3366CC;
+}
+
+gwt-MenuBar {
+	cursor: default;
+	border: none;
+}
+
+.gwt-MenuBar .gwt-MenuItem {
+	cursor: pointer;
+	cursor: hand;
+	border: 0px;
+	padding: 2px 8px;
+}
+
+.gwt-MenuBar .gwt-MenuItem-selected {
+	background: #E0EDFE;
+}
+
+.gwt-MenuBar-horizontal {
+	border: none;
+}
+
+.gwt-MenuBar-horizontal .gwt-MenuItem {
+	vertical-align: bottom;
+	color: #3366CC;
+	font-weight: bold;
+}
+
+.gwt-MenuBar-horizontal .gwt-MenuItemSeparator {
+	width: 1px;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	border-left: 1px solid #888888;
+	background: white;
+}
+
+.gwt-MenuBar-horizontal .gwt-MenuItemSeparator .menuSeparatorInner {
+	width: 1px;
+	height: 1px;
+	background: white;
+}
+
+.gwt-MenuBar-vertical .gwt-MenuItemSeparator .menuSeparatorInner {
+	margin-top: 0px;
+	margin-left: 0px;
+	border-top: 1px solid #888888;
+	background: white;
+}
+
+.gwt-TextArea {
+	border: 1px inset #3366CC;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.gwt-TextBox {
+	padding: 2px;
+	border: 1px inset #3366CC;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.textArea-inserted-highlight {
+	background-color: #e4f2f6;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.crossCursor {
+	cursor: crosshair;
+}
+
+.widthResizeCursor {
+	cursor: e-resize;
+}
+
+.heightResizeCursor {
+	cursor: s-resize;
+}
+
+.seResizeCursor {
+	cursor: se-resize;
+}
+
+.cursor-move {
+	cursor: move;
+}
+
+.position-relative {
+	position: relative;
+}
+
+.gwt-ToggleButton {
+	cursor: pointer;
+	cursor: hand;
+	color: #3366CC;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	/*border: 1px outset navy;*/
+}
+
+.gwt-ToggleButton-down,.gwt-ToggleButton-down-hovering,.gwt-ToggleButton-down-disabled
+	{
+	padding: 4px 4px 2px 6px;
+	/*	background: none;
+	color:White;
+	background-color:#3366CC;*/
+}
+
+.hasRichTextToolbar {
+	background-color: #FFFFFF;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border: 1px inset #3366CC;
+}
+
+.gwt-RichTextToolbar {
+	background: #e3e8f3 url(images/hborder.png) repeat-x 0px -2003px;
+	border-bottom: 1px solid #BBBBBB;
+	padding: 3px;
+	margin: 0px;
+}
+
+.gwt-RichTextToolbar .gwt-PushButton-up {
+	padding: 0px 1px 0px 0px;
+	margin-right: 4px;
+	margin-bottom: 4px;
+	border-width: 1px;
+}
+
+.gwt-RichTextToolbar .gwt-PushButton-up-hovering {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 0px 1px 0px 0px;
+	border-width: 1px;
+}
+
+.gwt-RichTextToolbar .gwt-PushButton-down {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 0px 0px 0px 1px;
+	border-width: 1px;
+}
+
+.gwt-RichTextToolbar .gwt-PushButton-down-hovering {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 0px 0px 0px 1px;
+	border-width: 1px;
+}
+
+.gwt-RichTextToolbar .gwt-ToggleButton-up {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 0px 1px 0px 0px;
+	border-width: 1px;
+}
+
+.gwt-RichTextToolbar .gwt-ToggleButton-up-hovering {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 0px 1px 0px 0px;
+	border-width: 1px;
+}
+
+.gwt-RichTextToolbar .gwt-ToggleButton-down {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 0px 0px 0px 1px;
+	border-width: 1px;
+}
+
+.gwt-RichTextToolbar .gwt-ToggleButton-down-hovering {
+	margin-right: 4px;
+	margin-bottom: 4px;
+	padding: 0px 0px 0px 1px;
+	border-width: 1px;
+}
+
+.cw-RichText {
+	border: 1px solid #BBBBBB;
+	border-spacing: 0px;
+}
+
+/* *********** FANCY FILE UPLOAD **************/
+.fancyfileupload-pending {
+	font-family: arial;
+	font-size: 10px;
+	background: orange;
+	width: 200px;
+}
+
+.fancyfileupload-loading {
+	font-family: arial;
+	font-size: 10px;
+	background: orange;
+	width: 200px;
+}
+
+.fancyfileupload-loaded {
+	font-family: arial;
+	font-size: 10px;
+	background: lightgreen;
+	width: 200px;
+}
+
+.fancyfileupload-failed {
+	font-family: arial;
+	font-size: 10px;
+	background: blue;
+	width: 200px;
+}
+/* *********** END FANCY FILE UPLOAD **************/

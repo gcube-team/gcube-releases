@@ -1,0 +1,151 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+  	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent> 
+   
+   	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/trunk/vo-management/SOA3/Authorization/${project.artifactId}</connection>
+		<developerConnection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/trunk/vo-management/SOA3/Authorization/${project.artifactId}</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/trunk/vo-management/SOA3/Authorization/${project.artifactId}</url>
+	</scm>
+   
+   	<properties>
+		<distroDirectory>distro</distroDirectory>
+		<description>Interface for managing policies on a XACML policy server</description>
+	</properties>
+   
+    <groupId>org.gcube.dvos.soa3</groupId>
+    <artifactId>policy-management-api-impl</artifactId>
+    <version>0.1.1-4.2.0-125547</version>
+    
+    
+	<build>  
+	  <sourceDirectory>src</sourceDirectory>
+	  	  	<resources>
+  				<resource>
+				<directory>src/it/eng/rdlab/soa3/pm/connector/service/resources</directory>
+				<excludes>
+					<exclude>*.java</exclude>
+				</excludes>
+				<targetPath>it/eng/rdlab/soa3/pm/connector/service/resources</targetPath>
+			</resource>
+		</resources>
+	  <plugins>
+	  
+	  	<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>profile.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+	
+	<!--   
+	  		<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+	   -->
+	  </plugins>
+	  
+	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+	
+ 
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>1.0.10</version>
+			</dependency>
+		<dependency>
+		    <groupId>org.gcube.dvos.soa3</groupId>
+		    <artifactId>policy-management-api-interfaces</artifactId>
+		    <version>0.1.0-4.2.0-125546</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.gcube.dvos.soa3</groupId>
+		    <artifactId>policy-manager</artifactId>
+		    <version>0.5.0-4.2.0-125545</version>
+    </dependency>
+
+ 		<dependency>
+			<groupId>org.opensaml</groupId>
+			<artifactId>opensaml</artifactId>
+			<version>2.5.1-1</version>
+		</dependency>
+		
+	<dependency>
+		    <groupId>org.gcube.dvos.soa3</groupId>
+  			<artifactId>gcube-security-utils</artifactId>
+   			 <version>0.5.0-4.2.0-125564</version>
+    </dependency>
+    	<dependency>
+    		<groupId>com.sun.jersey</groupId>
+    		<artifactId>jersey-client</artifactId>
+    		<version>1.14</version>
+		</dependency>
+		
+		  <dependency>
+            <groupId>org.glite.authz</groupId>
+            <artifactId>pep-client</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.glite.authz</groupId>
+            <artifactId>pep-common</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        
+           <dependency>
+            <groupId>org.glite.voms</groupId>
+            <artifactId>voms-api</artifactId>
+            <version>2.0.6</version>
+        </dependency>
+
+	</dependencies>
+</project>

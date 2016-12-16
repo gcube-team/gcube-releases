@@ -1,0 +1,5 @@
+<service-map scope='/gcube/devNext' version="${project.version}">
+	<services>
+		<service name='XQueryAccessService' endpoint='http://node22.d.d4science.research-infrastructures.eu:8080/wsrf/services/gcube/informationsystem/collector/XQueryAccess' />
+	</services>
+</service-map>

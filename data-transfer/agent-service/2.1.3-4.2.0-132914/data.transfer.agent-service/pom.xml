@@ -1,0 +1,435 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.data.transfer</groupId>
+		<artifactId>agent-parent</artifactId>
+		<version>2.1.3-4.2.0-132914</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<artifactId>agent-service</artifactId>
+	<name>The Data Transfer Agent Service</name>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>tree-manager-library</artifactId>
+			<version>3.0.1-4.2.0-125728</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>tree-manager-framework</artifactId>
+			<version>3.0.1-4.2.0-125723</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>tree-manager-service</artifactId>
+			<version>3.0.3-4.2.0-125718</version>
+			<type>gar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>tree-repository</artifactId>
+			<version>3.0.1-4.2.0-126575</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.transfer</groupId>
+			<artifactId>agent-stubs</artifactId>
+			<version>2.1.3-4.2.0-132914</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-wrapper</artifactId>
+			<version>2.4.0-4.2.0-132749</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-core</artifactId>
+			<version>2.6.0-4.2.0-134576</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-nop</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>2.2.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.informationsystem</groupId>
+			<artifactId>is-client</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.1</version>
+			<classifier>ftp</classifier>
+		</dependency>
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.1</version>
+		</dependency>
+		<!--jdo related dependencies -->
+		<dependency>
+			<groupId>javax.jdo</groupId>
+			<artifactId>jdo-api</artifactId>
+			<version>3.0</version>
+			<exclusions>
+				<!-- exclude the legacy javax.transaction:transaction-api and replace 
+					it with javax.transaction:jta (it appears to be the same thing) -->
+				<exclusion>
+					<groupId>javax.transaction</groupId>
+					<artifactId>transaction-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+		<!-- <dependency> <groupId>com.intridea.io</groupId> <artifactId>vfs-s3</artifactId> 
+			<version>2.0.0</version> </dependency> -->
+		<!-- <dependency>
+			<groupId>common-vfs-grid</groupId>
+			<artifactId>common-vfs-grid</artifactId>
+			<version>2.0.0-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>/Users/andrea/Documents/workspace_MVN/maven.1354447965739/commons-vfs-grid/branches/srb-provider-rework/target/commons-vfs-grid-2.0.0-SNAPSHOT.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.distribution</groupId>
+			<artifactId>puretls</artifactId>
+			<version>0.9b4</version>
+			
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.distribution</groupId>
+			<artifactId>cryptix</artifactId>
+				<version>1.0.0</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.distribution</groupId>
+			<artifactId>cryptix-asn</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>cryptix</groupId>
+			<artifactId>cryptix</artifactId>
+			<version>3.2.0</version>
+		</dependency>-->
+		<!--datanucleus related dependencies -->
+		<dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-api-jdo</artifactId>
+		 	<version>[3.2.0, 3.2.99)</version>
+		</dependency>
+		<dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-core</artifactId>
+			 <version>[3.0.0, 3.9.9)</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.transaction</groupId>
+					<artifactId>transaction-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-rdbms</artifactId>
+			 <version>[3.2.0, 3.2.99)</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-vfs2</artifactId>
+			<version>2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.transfer</groupId>
+			<artifactId>common</artifactId>
+			<version>2.0.1-4.2.0-129279</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.jackrabbit</groupId>
+			<artifactId>jackrabbit-webdav</artifactId>
+			<version>2.3.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<!-- <version>1.6.4</version> -->
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.1.3</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- runtime -->
+		<dependency>
+			<groupId>org.gcube.tools</groupId>
+			<artifactId>my-container</artifactId>
+			<version>2.0.1-4.2.0-126937</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- distro -->
+		<dependency>
+			<groupId>org.gcube.tools</groupId>
+			<artifactId>my-container</artifactId>
+			<version>2.0.1-4.2.0-126937</version>
+			<type>tar.gz</type>
+			<classifier>distro</classifier>
+			<scope>test</scope>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.gcube.informationsystem</groupId> -->
+<!-- 			<artifactId>is-collector-stubs</artifactId> -->
+<!-- 			<scope>test</scope> -->
+<!-- 		</dependency> -->
+		<dependency>
+			<groupId>org.gcube.datatransfer</groupId>
+			<artifactId>vfs-provider-smp</artifactId>
+			<version>1.1.1-4.2.0-126204</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.transfer</groupId>
+			<artifactId>common-messaging</artifactId>
+			<version>1.1.0-4.2.0-126136</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>tree-repository-requests</artifactId>
+			<version>1.0.0-4.2.0-125750</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources</groupId>
+			<artifactId>registry-publisher</artifactId>
+			<version>1.2.6-4.2.0-126697</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+
+		<plugins>
+			<plugin>
+				<groupId>org.datanucleus</groupId>
+				<artifactId>datanucleus-maven-plugin</artifactId>
+				<version>3.2.0-release</version>
+				<configuration>
+					<mappingIncludes>${basedir}</mappingIncludes>
+					<verbose>true</verbose>
+					<enhancerName>ASM</enhancerName>
+					<api>JDO</api>
+				</configuration>
+				<executions>
+                    <execution>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>enhance</goal>
+                        </goals>
+                    </execution>
+                </executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.gcube.tools</groupId>
+				<artifactId>maven-service-plugin</artifactId>
+				<configuration>
+					<fullGar>true</fullGar>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-gar</id>
+						<goals>
+							<goal>gar-gen</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>install-plugin</id>
+						<phase>generate-test-resources</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<includeArtifactIds>tree-manager-service</includeArtifactIds>
+							<overWriteSnapshots>true</overWriteSnapshots>
+							<includeTypes>gar</includeTypes>
+							<excludeTransitive>false</excludeTransitive>
+							<outputDirectory>src/test/resources</outputDirectory>
+							<stripVersion>true</stripVersion>
+						</configuration>
+					</execution>
+					<execution>
+						<id>install-service</id>
+						<phase>generate-test-resources</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+
+							<includeArtifactIds>tree-repository</includeArtifactIds>
+							<overWriteSnapshots>true</overWriteSnapshots>
+							<includeTypes>jar</includeTypes>
+							<excludeTransitive>false</excludeTransitive>
+							<outputDirectory>src/test/resources</outputDirectory>
+							<stripVersion>true</stripVersion>
+
+						</configuration>
+					</execution>
+					<execution>
+						<id>install-my-container</id>
+						<phase>generate-test-resources</phase><!-- runs before tests -->
+						<configuration>
+							<includeArtifactIds>my-container</includeArtifactIds>
+							<includeTypes>tar.gz</includeTypes>
+							<overWriteIfNewer>false</overWriteIfNewer>
+							<outputDirectory>${project.basedir}</outputDirectory>
+							<markersDirectory>${project.basedir}</markersDirectory>
+						</configuration>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>../distro/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>bundle</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.maven.plugins
+										</groupId>
+										<artifactId>
+											maven-dependency-plugin
+										</artifactId>
+										<versionRange>
+											[2.3,)
+										</versionRange>
+										<goals>
+											<goal>copy</goal>
+											<goal>
+												unpack-dependencies
+											</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.datanucleus
+										</groupId>
+										<artifactId>
+											datanucleus-maven-plugin
+										</artifactId>
+										<versionRange>
+											[3.3.0-release,3.9.9-SNAPSHOT)
+										</versionRange>
+										<goals>
+											<goal>enhance</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<pluginExecutionFilter>
+										<groupId>
+											org.datanucleus
+										</groupId>
+										<artifactId>
+											datanucleus-core
+										</artifactId>
+										<versionRange>
+											[3.0.0,3.9.9-SNAPSHOT)
+										</versionRange>
+										<goals>
+											<goal>enhance</goal>
+										</goals>
+									</pluginExecutionFilter>
+									
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>local-deploy</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.gcube.tools</groupId>
+						<artifactId>maven-service-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>local-deploy</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>

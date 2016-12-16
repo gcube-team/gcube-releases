@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-service.1-0-0" date="2016-10-01">
+		<Change>First release of the techno economic analysis service</Change>
+	</Changeset>
+	
+		<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-service.2-0-0" date="2016-11-24">	
+		<Change>Improved error messages.</Change>	
+		<Change>Added extra parameters in analysis and request.</Change>	
+	</Changeset>
+</ReleaseNotes>

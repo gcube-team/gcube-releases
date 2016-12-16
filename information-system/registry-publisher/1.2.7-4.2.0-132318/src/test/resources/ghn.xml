@@ -1,0 +1,981 @@
+<Resource version="1.3.0">
+   <ID>bb6e2d69-cccc-42ef-9985-fae2cba85753</ID>
+   <Type>GHN</Type>
+   <Scopes>
+<!--       <Scope>/gcube</Scope> -->
+      <Scope>/gcube/devsec/devVRE</Scope>
+   </Scopes>
+   <Profile>
+      <Infrastructure>gcube</Infrastructure>
+      <GHNDescription>
+         <Name>rcirillo-test.ghn.it:8080</Name>
+         <ActivationTime>2013-12-03T11:08:16+01:00</ActivationTime>
+         <Status>certified</Status>
+         <Type>Dynamic</Type>
+         <SecurityEnabled value="false" />
+         <Architecture PlatformType="i386" SMPSize="0" SMTSize="0" />
+         <OperatingSystem Name="Linux" Release="" Version="3.2.0-53-generic" />
+            
+         <Processor Bogomips="6184.64" CacheL1="6144" CacheL1D="0" CacheL1I="0" CacheL2="0" ClockSpeedMhz="3101.0" Family="6" Model="42" ModelName="Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz" Vendor="GenuineIntel" />
+            
+         <Processor Bogomips="6184.16" CacheL1="6144" CacheL1D="0" CacheL1I="0" CacheL2="0" ClockSpeedMhz="1600.0" Family="6" Model="42" ModelName="Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz" Vendor="GenuineIntel" />
+            
+         <Processor Bogomips="6184.17" CacheL1="6144" CacheL1D="0" CacheL1I="0" CacheL2="0" ClockSpeedMhz="3101.0" Family="6" Model="42" ModelName="Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz" Vendor="GenuineIntel" />
+            
+         <Processor Bogomips="6184.17" CacheL1="6144" CacheL1D="0" CacheL1I="0" CacheL2="0" ClockSpeedMhz="1600.0" Family="6" Model="42" ModelName="Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz" Vendor="GenuineIntel" />
+            
+         <NetworkAdapter IPAddress="146.48.85.73" InboundIP="" MTU="0" Name="local-adapter" OutboundIP="" />
+            
+         <RunTimeEnv>
+                
+            <Variable>
+                    
+               <Key>TERM</Key>
+                    
+               <Value>xterm</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>M3_HOME</Key>
+                    
+               <Value>/usr/local/apache-maven/apache-maven-3.0.4</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XDG_SESSION_PATH</Key>
+                    
+               <Value>/org/freedesktop/DisplayManager/Session0</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GNOME_KEYRING_CONTROL</Key>
+                    
+               <Value>/tmp/keyring-UxzBZa</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>JAVA_HOME</Key>
+                    
+               <Value>/usr/local/java/sun-jdk-6-linux-x86-1.6.0.16</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>SHLVL</Key>
+                    
+               <Value>1</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>LESSCLOSE</Key>
+                    
+               <Value>/usr/bin/lesspipe %s %s</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XFILESEARCHPATH</Key>
+                    
+               <Value>/usr/dt/app-defaults/%L/Dt</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>SESSION_MANAGER</Key>
+                    
+               <Value>local/rcirillo-cnr.isti.cnr.it:@/tmp/.ICE-unix/1769,unix/rcirillo-cnr.isti.cnr.it:/tmp/.ICE-unix/1769</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>COLORTERM</Key>
+                    
+               <Value>gnome-terminal</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GNOME_DESKTOP_SESSION_ID</Key>
+                    
+               <Value>this-is-deprecated</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>M3</Key>
+                    
+               <Value>/usr/local/apache-maven/apache-maven-3.0.4/bin</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GDMSESSION</Key>
+                    
+               <Value>ubuntu</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XDG_SESSION_COOKIE</Key>
+                    
+               <Value>d42b5ce427dfcf7226bbc48200000009-1381330528.868244-973891316</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>COMPIZ_CONFIG_PROFILE</Key>
+                    
+               <Value>ubuntu</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XDG_DATA_DIRS</Key>
+                    
+               <Value>/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>MANDATORY_PATH</Key>
+                    
+               <Value>/usr/share/gconf/ubuntu.mandatory.path</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>PWD</Key>
+                    
+               <Value>/home/rcirillo/tomcat7/apache-tomcat-7.0.42</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>WINDOWID</Key>
+                    
+               <Value>62914566</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>LOGNAME</Key>
+                    
+               <Value>rcirillo</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GPG_AGENT_INFO</Key>
+                    
+               <Value>/tmp/keyring-UxzBZa/gpg:0:1</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>_</Key>
+                    
+               <Value>/bin/sh</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>NLSPATH</Key>
+                    
+               <Value>/usr/dt/lib/nls/msg/%L/%N.cat</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>LD_LIBRARY_PATH</Key>
+                    
+               <Value>/usr/local/java/jdk1.6.0.16/jre/lib/i386/server:/usr/local/java/jdk1.6.0.16/jre/lib/i386:/usr/local/java/jdk1.6.0.16/jre/../lib/i386</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>OLDPWD</Key>
+                    
+               <Value>/home/rcirillo</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>SHELL</Key>
+                    
+               <Value>/bin/bash</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>DBUS_SESSION_BUS_ADDRESS</Key>
+                    
+               <Value>unix:abstract=/tmp/dbus-Cn8BAkdY1z,guid=38ad666c775b2a4d58adfa8700000061</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GNOME_KEYRING_PID</Key>
+                    
+               <Value>1758</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XDG_CONFIG_DIRS</Key>
+                    
+               <Value>/etc/xdg/xdg-ubuntu:/etc/xdg</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XDG_CURRENT_DESKTOP</Key>
+                    
+               <Value>Unity</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>DESKTOP_SESSION</Key>
+                    
+               <Value>ubuntu</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>JRE_HOME</Key>
+                    
+               <Value>/usr/local/java/jdk1.6.0.16/jre</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>DISPLAY</Key>
+                    
+               <Value>:0</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>UBUNTU_MENUPROXY</Key>
+                    
+               <Value>libappmenu.so</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>USER</Key>
+                    
+               <Value>rcirillo</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>HOME</Key>
+                    
+               <Value>/home/rcirillo</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GHN_HOME</Key>
+                    
+               <Value>/home/rcirillo/ghn</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GLOBUS_LOCATION</Key>
+                    
+               <Value>/home/rcirillo/gCore</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XAUTHORITY</Key>
+                    
+               <Value>/home/rcirillo/.Xauthority</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>LESSOPEN</Key>
+                    
+               <Value>| /usr/bin/lesspipe %s</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>DEFAULTS_PATH</Key>
+                    
+               <Value>/usr/share/gconf/ubuntu.default.path</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XDG_SEAT_PATH</Key>
+                    
+               <Value>/org/freedesktop/DisplayManager/Seat0</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>LANG</Key>
+                    
+               <Value>en_US.UTF-8</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>Java</Key>
+                    
+               <Value>1.6.0_16</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>SmartGears</Key>
+                    
+               <Value>1.0.0-SNAPSHOT</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>ghn-update-interval-in-secs</Key>
+                    
+               <Value>60</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>CATALINA_HOME</Key>
+                    
+               <Value>/home/rcirillo/tomcat7/apache-tomcat-7.0.42/</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>WINDOWID</Key>
+                    
+               <Value>63229945</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>OLDPWD</Key>
+                    
+               <Value>/home/rcirillo/tomcat7/apache-tomcat-7.0.39</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>PWD</Key>
+                    
+               <Value>/home/rcirillo/tomcat7/apache-tomcat-7.0.39</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>OLDPWD</Key>
+                    
+               <Value>/home/rcirillo/tomcat7/apache-tomcat-7.0.42</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>OLDPWD</Key>
+                    
+               <Value>/home/rcirillo/tomcat7/apache-tomcat-7.0.39/webapps</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>SmartGears</Key>
+                    
+               <Value>1.0.1-SNAPSHOT</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>SESSION_MANAGER</Key>
+                    
+               <Value>local/rcirillo-cnr.isti.cnr.it:@/tmp/.ICE-unix/1689,unix/rcirillo-cnr.isti.cnr.it:/tmp/.ICE-unix/1689</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XDG_SESSION_COOKIE</Key>
+                    
+               <Value>d42b5ce427dfcf7226bbc48200000009-1384861380.927751-1601996142</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GDM_LANG</Key>
+                    
+               <Value>en_US</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XAUTHORITY</Key>
+                    
+               <Value>/var/run/gdm/auth-for-rcirillo-OhHcgc/database</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>WINDOWPATH</Key>
+                    
+               <Value>7</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>USERNAME</Key>
+                    
+               <Value>rcirillo</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GNOME_KEYRING_CONTROL</Key>
+                    
+               <Value>/tmp/keyring-qdWlJd</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>WINDOWID</Key>
+                    
+               <Value>52544429</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GPG_AGENT_INFO</Key>
+                    
+               <Value>/tmp/keyring-qdWlJd/gpg:0:1</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>DBUS_SESSION_BUS_ADDRESS</Key>
+                    
+               <Value>unix:abstract=/tmp/dbus-vEOiFR7tGG,guid=5e7a147626aec6489b9f3d3e00000021</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GNOME_KEYRING_PID</Key>
+                    
+               <Value>1672</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>LANGUAGE</Key>
+                    
+               <Value>en_US:en</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>WINDOWID</Key>
+                    
+               <Value>52428806</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>OLDPWD</Key>
+                    
+               <Value>/home/rcirillo/tomcat7</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>TERM</Key>
+                    
+               <Value>xterm</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>M3_HOME</Key>
+                    
+               <Value>/usr/local/apache-maven/apache-maven-3.0.4</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>JAVA_HOME</Key>
+                    
+               <Value>/usr/local/java/sun-jdk-6-linux-x86-1.6.0.16</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>LESSCLOSE</Key>
+                    
+               <Value>/usr/bin/lesspipe %s %s</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>SESSION_MANAGER</Key>
+                    
+               <Value>local/rcirillo-cnr.isti.cnr.it:@/tmp/.ICE-unix/1689,unix/rcirillo-cnr.isti.cnr.it:/tmp/.ICE-unix/1689</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GNOME_DESKTOP_SESSION_ID</Key>
+                    
+               <Value>this-is-deprecated</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>M3</Key>
+                    
+               <Value>/usr/local/apache-maven/apache-maven-3.0.4/bin</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>COMPIZ_CONFIG_PROFILE</Key>
+                    
+               <Value>ubuntu</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XDG_SESSION_COOKIE</Key>
+                    
+               <Value>d42b5ce427dfcf7226bbc48200000009-1384861380.927751-1601996142</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GDMSESSION</Key>
+                    
+               <Value>ubuntu</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>MANDATORY_PATH</Key>
+                    
+               <Value>/usr/share/gconf/ubuntu.mandatory.path</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>PWD</Key>
+                    
+               <Value>/home/rcirillo/tomcat7/apache-tomcat-7.0.39</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>NLSPATH</Key>
+                    
+               <Value>/usr/dt/lib/nls/msg/%L/%N.cat</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XDG_CURRENT_DESKTOP</Key>
+                    
+               <Value>Unity</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XDG_CONFIG_DIRS</Key>
+                    
+               <Value>/etc/xdg/xdg-ubuntu:/etc/xdg</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GLOBUS_LOCATION</Key>
+                    
+               <Value>/home/rcirillo/gCore</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GHN_HOME</Key>
+                    
+               <Value>/home/rcirillo/ghn</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GDM_LANG</Key>
+                    
+               <Value>en_US</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XAUTHORITY</Key>
+                    
+               <Value>/var/run/gdm/auth-for-rcirillo-OhHcgc/database</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>WINDOWPATH</Key>
+                    
+               <Value>7</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>USERNAME</Key>
+                    
+               <Value>rcirillo</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GNOME_KEYRING_CONTROL</Key>
+                    
+               <Value>/tmp/keyring-qdWlJd</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>SHLVL</Key>
+                    
+               <Value>1</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XFILESEARCHPATH</Key>
+                    
+               <Value>/usr/dt/app-defaults/%L/Dt</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>COLORTERM</Key>
+                    
+               <Value>gnome-terminal</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>XDG_DATA_DIRS</Key>
+                    
+               <Value>/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>LOGNAME</Key>
+                    
+               <Value>rcirillo</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>WINDOWID</Key>
+                    
+               <Value>52428806</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GPG_AGENT_INFO</Key>
+                    
+               <Value>/tmp/keyring-qdWlJd/gpg:0:1</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>_</Key>
+                    
+               <Value>/bin/sh</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>LD_LIBRARY_PATH</Key>
+                    
+               <Value>/usr/local/java/jdk1.6.0.16/jre/lib/i386/server:/usr/local/java/jdk1.6.0.16/jre/lib/i386:/usr/local/java/jdk1.6.0.16/jre/../lib/i386</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>OLDPWD</Key>
+                    
+               <Value>/home/rcirillo/tomcat7/apache-tomcat-7.0.39/webapps</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>DBUS_SESSION_BUS_ADDRESS</Key>
+                    
+               <Value>unix:abstract=/tmp/dbus-vEOiFR7tGG,guid=5e7a147626aec6489b9f3d3e00000021</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>SHELL</Key>
+                    
+               <Value>/bin/bash</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>GNOME_KEYRING_PID</Key>
+                    
+               <Value>1672</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>LANGUAGE</Key>
+                    
+               <Value>en_US:en</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>JRE_HOME</Key>
+                    
+               <Value>/usr/local/java/jdk1.6.0.16/jre</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>DESKTOP_SESSION</Key>
+                    
+               <Value>ubuntu</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>DISPLAY</Key>
+                    
+               <Value>:0</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>USER</Key>
+                    
+               <Value>rcirillo</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>UBUNTU_MENUPROXY</Key>
+                    
+               <Value>libappmenu.so</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>HOME</Key>
+                    
+               <Value>/home/rcirillo</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>LESSOPEN</Key>
+                    
+               <Value>| /usr/bin/lesspipe %s</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>DEFAULTS_PATH</Key>
+                    
+               <Value>/usr/share/gconf/ubuntu.default.path</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>LANG</Key>
+                    
+               <Value>en_US.UTF-8</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>Java</Key>
+                    
+               <Value>1.6.0_16</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>SmartGears</Key>
+                    
+               <Value>1.0.1-SNAPSHOT</Value>
+                
+            </Variable>
+                
+            <Variable>
+                    
+               <Key>ghn-update-interval-in-secs</Key>
+                    
+               <Value>60</Value>
+                
+            </Variable>
+            
+         </RunTimeEnv>
+            
+         <LocalFileSystem Name="" ReadOnly="false" Root="/home/rcirillo/ghn/state" Size="0" Type="" />
+            
+         <Uptime>13 days</Uptime>
+            
+         <Load Last15Min="0.12" Last1Min="0.07" Last5Min="0.15" />
+            
+         <MainMemory RAMAvailable="921" RAMSize="7969" VirtualAvailable="145" VirtualSize="158" />
+            
+         <LastUpdate>2013-12-03T10:06:19+01:00</LastUpdate>
+        
+      </GHNDescription>
+        
+      <Site>
+            
+         <Location>rome</Location>
+            
+         <Country>it</Country>
+            
+         <Latitude>41.9000</Latitude>
+            
+         <Longitude>12.5000</Longitude>
+            
+         <Domain>rcirillo-test.ghn.cnr.it</Domain>
+        
+      </Site>
+    
+   </Profile>
+
+</Resource>

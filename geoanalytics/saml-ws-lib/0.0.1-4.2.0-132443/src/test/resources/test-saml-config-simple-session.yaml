@@ -1,0 +1,33 @@
+server:
+#  softNofileLimit: 1000
+#  hardNofileLimit: 1000
+  applicationConnectors:
+    - type: http
+      port: 9180
+  adminConnectors:
+    - type: http
+      port: 9181
+
+
+# Logging settings.
+logging:
+    level: INFO
+
+    appenders:
+        - type: console
+    
+#Security Specific 
+security:
+    unauthorizedLocation: http://localhost:9180/saml/sendLoginRequest
+    includeTarget: true
+    spHost: http://localhost:9180
+    idpMetadataLocation: http://192.168.11.97:8080
+    privateKeyFilename: src/test/resources/cert_and_keys/rsa_private_key.pk8
+    certificateFilename: src/test/resources/cert_and_keys/cert.pem
+    invalidateLocalSessionOnSamlError: true
+    tryRenewSessionOnLogout: true
+    bulkLogout: false
+    protectedUrls: [/protected/*]
+sessionManager:
+    simpleSessionManager: true
+    

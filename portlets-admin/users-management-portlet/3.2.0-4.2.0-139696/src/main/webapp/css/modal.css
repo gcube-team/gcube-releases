@@ -1,0 +1,470 @@
+div#usersManagementPortletContainer button.close {
+	color: #d1d1d1 !important;
+	opacity : 1 !important;
+}
+div#usersManagementPortletContainer button.close:hover {
+	color: #0271be !important;
+}
+div#usersManagementPortletContainer span#theHeader {
+	color: #0271be;
+}
+div#usersManagementPortletContainer button#saveUsersRolesModal,
+div#usersManagementPortletContainer #saveUsersRolesModalInAssignRolesModal,
+div#usersManagementPortletContainer #closeUsersRolesModalInAssignRolesModal,
+div#usersManagementPortletContainer #saveUsersTeamsInAssignUsersToGroupsModal,
+div#usersManagementPortletContainer #closeUsersTeamsInAssignUsersToGroupsModal {
+	color : #4cb5d2;
+}
+div#usersManagementPortletContainer button#closeUsersRolesModal,
+div#usersManagementPortletContainer  button#acceptUsersRequestsOk,
+div#usersManagementPortletContainer  span#acceptRequestHeader,
+div#usersManagementPortletContainer  button#acceptDeleteUsersFromCurrentSiteModal,
+div#usersManagementPortletContainer  button#closeDeleteUsersFromCurrentSiteModal {
+	color : #4cb5d2;
+}
+div#usersManagementPortletContainer  span#deleteCurrentSiteUsersHeader {
+	color : #0271be;
+}
+div#usersManagementPortletContainer div#blueLineBottom,
+ div#usersManagementPortletContainerSiteTeamsEditMode div#blueLineBottom {
+    border-bottom: 2px solid #0271be;
+    padding-bottom: 0.2em;
+}
+div#usersManagementPortletContainer div#changeUsersRolesModal div.modal-footer,
+div#usersManagementPortletContainer  div#usersRequestsModal div.modal-footer {
+	background-color: white;
+	background: white;
+}
+div#usersManagementPortletContainer span#textAboveTagsInput ,
+div#usersManagementPortletContainer span#textAboveTagsInputInAssignRolesModal,
+div#usersManagementPortletContainer span#textAboveTagsInputInAssignUsersToGroupsModal {
+	/* opacity: 0.8; */
+	display : block;
+}
+div#usersManagementPortletContainer div#changeUsersRolesModal div.modal-body div.bootstrap-tagsinput {
+	diplay : inline-block;
+}
+div#usersManagementPortletContainer div#changeUsersRolesModal div.modal-body div.bootstrap-tagsinput input{
+	display : none;
+}
+div#usersManagementPortletContainer div#changeUsersRolesModal div.modal-body label:not(#deleteTheRolesLabel),
+	div#usersManagementPortletContainer div#assignUsersRolesModal div.modal-body label:not(#deleteTheRolesLabelInAssignRolesModal),
+	div#usersManagementPortletContainer div#assignUsersToGroupsModal div.modal-body label:not(#deleteTheRolesLabelInAssignUsersToGroupsModal),
+	#addGroupTeamAttributes label,
+	#groupTeamAttributes label {
+	color: #0271be;
+	display : inline-block;
+	text-transform: capitalize;
+}
+div#usersManagementPortletContainer div#changeUsersTeamsModal div.modal-body label:not(#deleteTheRolesLabel) {
+	color : #4cb5d2;
+	display : inline-block;
+}
+div#usersManagementPortletContainer label#deleteTheRolesLabel {
+	display : inline-block;
+}
+div#usersManagementPortletContainer label#deleteTheRolesLabelInAssignRolesModal,
+div#usersManagementPortletContainer label#deleteTheRolesLabelInAssignUsersToGroupsModal {
+	display : inline-block;
+}
+div#usersManagementPortletContainer div#changeUsersRolesModal div.modal-body div.bootstrap-tagsinput {
+	display : inline-block;
+	margin-left : 10px;
+}
+div#usersManagementPortletContainer span#textAboveTagsInput div.row,
+div#assignUsersRolesModal span#textAboveTagsInputInAssignRolesModal div.row,
+div#assignUsersToGroupsModal span#textAboveTagsInputInAssignUsersToGroupsModal div.row {
+	margin-left : 0px;
+}
+div#usersManagementPortletContainer span#textAboveTagsInput div.row.usersEmailsTagsInModals div.text-core.span9,
+	div#usersManagementPortletContainer span#textAboveTagsInputInAssignRolesModal div.row.usersEmailsTagsInModals div.text-core.span9,
+		div#usersManagementPortletContainer span#textAboveTagsInputInAssignUsersToGroupsModal div.row.usersEmailsTagsInModals div.text-core.span9 {
+	max-height: 10em !important;
+	overflow-y: scroll !important;
+	margin-top: -0.7em;
+	padding-top: 0.7em;
+}
+div#usersManagementPortletContainer div#changeUsersRolesModal div.modal-body span#textAboveTagsInput div.row:last-of-type div.bootstrap-tagsinput {
+	border: 1px solid #4cb5d2;
+	border-radius: 8px;
+	margin-top:-7px
+}
+div#usersManagementPortletContainer div#changeUsersRolesModal div.modal-body span#textAboveTagsInput div.row:nth-last-child(-n+2) div.text-core.span9,
+	div#usersManagementPortletContainer div#assignUsersRolesModal div.modal-body span#textAboveTagsInputInAssignRolesModal div.row:last-of-type div.text-core.span9,
+	div#usersManagementPortletContainer div#assignUsersToGroupsModal div.modal-body span#textAboveTagsInputInAssignUsersToGroupsModal div.row:last-of-type div.text-core.span9 {
+	border-radius: 0.2em;
+	border: 1px solid #d1d1d1;
+	padding: 5px !important;
+}
+div#usersManagementPortletContainer div#changeUsersRolesModal div.modal-body span#textAboveTagsInput div.row:nth-last-child(-n+2),
+div#usersManagementPortletContainer div#assignUsersRolesModal div.modal-body span#textAboveTagsInputInAssignRolesModal div.row:last-of-type,
+div#usersManagementPortletContainer div#assignUsersToGroupsModal div.modal-body span#textAboveTagsInputInAssignUsersToGroupsModal div.row:last-of-type {
+	margin-top: 1.2em;
+}
+div#usersManagementPortletContainer div#changeUsersRolesModal div.modal-body span#textAboveTagsInput i {
+	color : #4cb5d2;
+	padding : 12px;
+}
+i.fa.fa-times {
+	padding: 6px !important;
+	color: #d1d1d1 !important;
+}
+i.fa.fa-times:hover {
+	color: #0271be !important;
+}
+div#usersManagementPortletContainer div#dropdownList {
+	max-height:200px;
+    overflow: scroll;
+    margin-left : 10px;
+    border : 1px solid #4cb5d2;
+}
+div#usersManagementPortletContainer div.listElement:not(:last-of-type) {
+	border-bottom: 1px solid #4cb5d2;
+}
+div#usersManagementPortletContainer textarea#roleList {
+	/* margin-left : 10px; */
+	width : 100% !important;
+	border-radius : 7px;
+	padding-top : 8px !important;
+	padding-bottom : 8px !important;
+	display : none !important;
+}
+
+div#usersManagementPortletContainer textarea#roleListInAssignRolesModal {
+	/* margin-left : 10px; */
+	width : 100% !important;
+	border-radius : 7px;
+	padding-top : 8px !important;
+	padding-bottom : 8px !important;
+	display : none !important;
+}
+div#usersManagementPortletContainer span#textAboveTagsInput div.row:last-of-type div.text-core.offset3 {
+	width: 70%;
+}
+div#usersManagementPortletContainer span#textAboveTagsInput div.row:nth-last-child(-n+2) div.text-core.span9 div.text-wrap div.text-arrow,
+	div#usersManagementPortletContainer span#textAboveTagsInputInAssignRolesModal div.row:last-of-type div.text-core.span9 div.text-wrap div.text-arrow,
+	div#usersManagementPortletContainer span#textAboveTagsInputInAssignUsersToGroupsModal div.row:last-of-type div.text-core.span9 div.text-wrap div.text-arrow {
+    -ms-transform: scale(1.6,1.6); /* IE 9 */
+    -webkit-transform: scale(1.6,1.6); /* Safari */
+    transform: scale(1.6,1.6);
+    height: 35px;
+    margin-right : 10px;
+} 
+div#usersManagementPortletContainer span#textAboveTagsInput div.row:last-of-type div.text-core.offset3 div.text-wrap {
+	width: 100% !important;
+}
+
+div#usersManagementPortletContainer div.text-dropdown.text-position-below {
+	margin-left: 10px;
+}
+div#usersManagementPortletContainer div.text-tags.text-tags-on-top {
+	margin-left:14px;
+	margin-top:6px;
+}
+div#usersManagementPortletContainer div.text-core.offset3 div.text-wrap div.text-arrow {
+	margin-top: 3%;
+}
+div#usersManagementPortletContainer div#usersRequestsModal {
+	width : 60%;
+	/* top : 33%; */
+	color: #0271be !important;
+}
+@media (min-width: 1700px){
+	div#usersManagementPortletContainer div#usersRequestsModal {
+		left : 35%;
+	}
+}
+@media (min-width: 1550px) and (max-width: 1699px){
+	div#usersManagementPortletContainer div#usersRequestsModal {
+		left: 37%;
+	}
+}
+@media (min-width: 1350px) and (max-width: 1549px){
+	div#usersManagementPortletContainer div#usersRequestsModal {
+		left: 40%;
+	}
+}
+@media (min-width: 1300px) and (max-width: 1350px){
+	div#usersManagementPortletContainer div#usersRequestsModal {
+		left: 41%;
+	}
+}
+@media (min-width: 1250px) and (max-width: 1299px){
+	div#usersManagementPortletContainer div#usersRequestsModal {
+		left: 42%;
+	}
+}
+@media (min-width: 1100px) and (max-width: 1249px){
+	div#usersManagementPortletContainer div#usersRequestsModal {
+		left: 44%;
+	}
+}
+@media (min-width: 1050px) and (max-width: 1099px){
+	div#usersManagementPortletContainer div#usersRequestsModal {
+		left: 46%;
+	}
+}
+@media (min-width: 1000px) and (max-width: 1049px){
+	div#usersManagementPortletContainer div#usersRequestsModal {
+		left: 47%;
+	}
+}
+@media (min-width: 980px) and (max-width: 999px){
+	div#usersManagementPortletContainer div#usersRequestsModal {
+		left: 49%;
+	}
+}
+@media (min-width: 900px) and (max-width: 979px){
+	div#usersManagementPortletContainer div#usersRequestsModal {
+		left: 51%;
+		width: 62%;
+	}
+}
+@media (min-width: 850px) and (max-width: 900px){
+	div#usersManagementPortletContainer div#usersRequestsModal {
+		left: 52%;
+	}
+}
+@media (min-width: 801px) and (max-width: 849px){
+	div#usersManagementPortletContainer div#usersRequestsModal {
+		left: 55%;
+	}
+}
+@media (min-width: 768px) and (max-width: 800px){
+	div#usersManagementPortletContainer div#usersRequestsModal {
+		left: 57%;
+	}
+}
+div#usersManagementPortletContainer div#usersRequestsModal .modalSubHeader {
+	margin-top: 1em;
+}
+div#usersManagementPortletContainer button#acceptAll,
+div#usersManagementPortletContainer  button#rejectAll,
+div#usersManagementPortletContainer  button#sendAcceptance,
+div#usersManagementPortletContainer  button#sendRejection {
+	/* color : #4cb5d2 !important */
+}
+div#usersManagementPortletContainer a#reloadUsersRequestsTable {
+	font-size: 14px;
+	background-color: #7EAB10;
+	background: #7EAB10;
+	color: white;
+	display: inline;
+	border-radius: 50% !important;
+	padding: 6px 9px;
+	margin-left: 8px;
+	cursor: pointer;
+}
+div#usersManagementPortletContainer div#usersRequestsTableContainer {
+	position : relative;
+}
+div#usersManagementPortletContainer div#requestsAcceptanceContainer {
+	position : relative;
+}
+div#usersManagementPortletContainer div#requestsAcceptanceContainer.hideSection,
+div#usersManagementPortletContainer  div#requestsAcceptanceBody div.row.hideSection {
+	display : none;
+}
+div#usersManagementPortletContainer div#usersRequestsTableContainer.hideSection {
+	display : none;
+}
+div#usersManagementPortletContainer div#clickToGoBack {
+	cursor: pointer;
+	display : inline-block;
+}
+div#usersManagementPortletContainer button.hideButton {
+	display : none !important;
+}
+div#usersManagementPortletContainer div#requestsAcceptanceBody > div.row > div.text-core {
+	position : static;
+	height: 100% !important;
+}
+div#requestsAcceptanceBody .row:first-of-type label + .text-core {
+	min-height: 40px;
+	max-height: 70px;
+	overflow-y: scroll;
+}
+div#usersManagementPortletContainer div#requestsAcceptanceBody > div.row:not(last-of-type) {
+	margin-bottom: 10px;
+}
+div#usersManagementPortletContainer textarea#tagsForEmails {
+	display : none;
+}
+div#usersManagementPortletContainer div#requestsAcceptanceBody label {
+	display : inline-block;
+}
+div#usersManagementPortletContainer div#requestsAcceptanceBody div.row {
+	margin-left : 0px;
+}
+div#usersManagementPortletContainer div#requestsAcceptanceToolbar {
+	display:block;
+	padding: 10px;
+}
+div#usersManagementPortletContainer div#emailForAcceptance,
+ div#usersManagementPortletContainer div#emailForRejection {
+	background-color : rgb(234, 234, 234);
+	background : rgb(234, 234, 234);
+	padding : 10px;
+	border-radius : 7px;
+	color : black;
+}
+div#usersManagementPortletContainer a#reloadUsersRequestsTable.btn.hide{
+	display:none;
+}
+div#usersManagementPortletContainer div.modal-backdrop.fade.in.hideFirstModal {
+	z-index: 1051;
+}
+div#usersManagementPortletContainer div#acceptUsersRequestsModal {
+	z-index: 1052;
+}
+div#usersManagementPortletContainer #editEmailTemplate {
+	float:right;
+	color: #0271be;
+	border-radius: 25%;
+	background-color: #fff;
+	background: #fff;
+	border: none;
+	width: 40px;
+	height: 30px;
+}
+div#usersManagementPortletContainer label#labelRejectionEmail {
+	display:inline-block;
+}
+div#usersManagementPortletContainer input#sendAutomaticRejectionEmail {
+	margin:0px !important;
+}
+div#usersManagementPortletContainer span#theMiniHeader {
+	left: 15px;
+    top: 1.9em;
+    display: inline-block;
+    position: absolute;
+    color : #555;
+}
+div#usersManagementPortletContainer p#deleteTheRoles {
+	margin : 0 0 5px;
+}
+div#usersManagementPortletContainer button#closeUSerDetailsModal,
+div#usersManagementPortletContainer #openEditModal,
+div#usersManagementPortletContainer  span#userName,
+div#usersManagementPortletContainer  span#detailsFor,
+div#usersManagementPortletContainer  span#username, div#userDetailsModal > div.modal-body > div.row-fluid > label {
+	color: #0271be;
+}
+div#usersManagementPortletContainer span#userName {
+	color : #4cb5d2;
+}
+div#usersManagementPortletContainer span#detailsFor{
+	font-size : 17.5px;
+	color : #0271be;
+}
+div#usersManagementPortletContainer  span#userName {
+	display:none;
+}
+div#usersManagementPortletContainer div#usersRequestsModal .modal-body {
+	/* overflow-y : visible; */
+	overflow-x : visible;
+}
+div#usersManagementPortletContainer div.modal.fade.in .close:hover,
+ div#usersManagementPortletContainer div.modal.fade.in .btn-link:hover,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.modal.fade.in .btn-link:hover {/* color: #0271be !important; */}
+div#usersManagementPortletContainer span#detailsFor,
+ div#usersManagementPortletContainerSiteTeamsEditMode span#teamPrefixHeader {
+	/* margin-bottom : 8px; */
+}
+div#usersManagementPortletContainer div#deleteUsersFromCurrentSiteModal span#deleteCurrentSiteUsersHeader,
+div#usersManagementPortletContainer div#changeUsersRolesModalHeaderDiv span#theHeader,
+div#usersManagementPortletContainer div#InternalServerErrorModal div#blueLineBottom {
+	font-size : 18px;
+}
+div#usersManagementPortletContainer div#changeUsersRolesModalHeaderDiv {
+	border-bottom: 2px solid #0271be;
+	padding-bottom: 0.2em;
+}
+div#usersManagementPortletContainer div#InternalServerErrorModal div#blueLineBottom {
+	font-size : 18px;
+	padding-bottom : 7px;
+	color: #0271be;
+}
+div#usersManagementPortletContainer div#InternalServerErrorModal #closeInternalServerModal {
+	color : #4cb5d2;
+}
+#usersManagementPortletContainerSiteTeamsEditMode div#editGroupTeamModal div#groupTeamAttributes div.row-fluid {
+    margin-bottom: 10px;
+}
+div#usersManagementPortletContainer textarea#teamsList,
+div#usersManagementPortletContainer textarea#teamsListInAssignUsersToGroupsModal {
+	display : none;
+}
+#usersManagementPortletContainerSiteTeamsEditMode span#teamPrefixHeader,
+ #usersManagementPortletContainerSiteTeamsEditMode span#teamNameHeader,
+ #usersManagementPortletContainerSiteTeamsEditMode span#acceptRequestHeader,
+ #usersManagementPortletContainerSiteTeamsEditMode span#acceptRequestHeader {
+	color: #0271be;
+	font-size : 18px;
+}
+#usersManagementPortletContainerSiteTeamsEditMode .modal-footer,
+ #usersManagementPortletContainerSiteTeamsEditMode .modal-header {
+	border-top : none;
+	border-bottom : none;
+}
+#usersManagementPortletContainerSiteTeamsEditMode .modal.fade button {
+	color: #d1d1d1;
+}
+#usersManagementPortletContainerSiteTeamsEditMode .modal.fade button:hover {
+	color: #0271be;
+}
+#usersManagementPortletContainerSiteTeamsEditMode .modal.fade button.close {
+	opacity : 1;
+}
+#usersManagementPortletContainer #acceptRequestHeader {
+	font-size: 18px;
+}
+div#displayGroupTeamUsersModal {
+	width: 700px;
+	left: 45%;
+}
+div#displayGroupTeamUsersModal .modal-body{
+	padding-top: 0px;
+}
+div.modalHeaderContainer {
+	display: inline-block;
+}
+div.modalSubHeader {
+	/* display: inline-block; */
+	color: #777;
+	font-size: 0.9em;
+}
+#usersRequestsModal .modal-header {
+    padding-bottom: 0px;
+}
+#clickToGoBack {
+	color: #0271be;
+}
+#addGroupTeamAttributes input,
+#addGroupTeamAttributes textarea,
+#groupTeamAttributes input,
+#groupTeamAttributes textarea {
+	border-radius: 0.2em;
+	border: 1px solid #d1d1d1;
+}
+.modal-footer {
+	background: #fff !important;
+	background-color: #fff !important;;
+}
+.modal-footer button {
+	color: #0271be !important;
+	border-radius: 5px !important;
+}
+.modal-footer button:hover {
+	background: #eeeeee !important;
+	background-color:#eeeeee !important;
+}
+.text-arrow .caretContainer {
+	position: absolute;
+	top: 47%;
+	left: 32%;
+}
+span.caretContainer > i.caret {
+	padding: 0 !important;
+	border-top-color: #0271be;
+}

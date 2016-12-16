@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" 
+    xmlns:md="eml://ecoinformatics.org/methods-2.1.1" 
+    xmlns:proj="eml://ecoinformatics.org/project-2.1.1" 
+    xmlns:d="eml://ecoinformatics.org/dataset-2.1.1" 
+    xmlns:res="eml://ecoinformatics.org/resource-2.1.1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dc="http://purl.org/dc/terms/" 
+    packageId="e71fda1c-dcb9-4eae-81a9-183114978e44/eml-1.xml" system="GBIF-IPT" scope="system">
+    <dataset>
+        <title>The gCube System - Species Products Discovery Service</title>
+        <creator>
+            <individualName>
+                <givenName>Valentina</givenName>
+                <surName>Marioli</surName>
+            </individualName>
+            <organizationName>CNR Pisa, Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo"</organizationName>
+            <positionName></positionName>
+            <address>
+                <city>Pisa</city>
+                <administrativeArea></administrativeArea>
+                <postalCode></postalCode>
+                <country>Italy</country>
+            </address>
+            <phone></phone>
+            <electronicMailAddress>valentina.marioli@isti.cnr.it</electronicMailAddress>
+            <onlineUrl>https://gcube.wiki.gcube-system.org/gcube/index.php/Biodiversity_Access</onlineUrl>
+        </creator>
+        <pubDate></pubDate>
+        <language>en</language>
+        <abstract>
+            <para>This work has been partially supported by the following European projects: DILIGENT (FP6-2003-IST-2), 
+		D4Science (FP7-INFRA-2007-1.2.2), D4Science-II (FP7-INFRA-2008-1.2.2), 
+		iMarine (FP7-INFRASTRUCTURES-2011-2), and EUBrazilOpenBio (FP7-ICT-2011-EU-Brazil).</para>
+        </abstract>
+        <keywordSet>
+        	<keyword>gCube</keyword>
+        	<keyword>Species Discovery</keyword>
+        </keywordSet>
+        <intellectualRights>
+            <para>The gCube/gCore software is licensed as Free Open Source software conveying to the EUPL (http://ec.europa.eu/idabc/eupl).
+		The software and documentation is provided by its authors/distributors "as is" and no expressed or 
+		implied warranty is given for its use, quality or fitness for a particular case.</para>
+        </intellectualRights>
+        <contact>
+            <individualName>
+                <givenName>Valentina</givenName>
+                <surName>Marioli</surName>
+            </individualName>
+            <electronicMailAddress>valentina.marioli@isti.cnr.it</electronicMailAddress>
+        </contact>
+        <methods>
+        </methods>
+        <project>
+            <title>Species Products Discovery Service</title>
+        </project>
+    </dataset>
+    <additionalMetadata>
+    </additionalMetadata>
+</eml:eml>

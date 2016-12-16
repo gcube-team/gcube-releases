@@ -1,0 +1,19 @@
+<configuration>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d %-5p [%t] %c{1}:%L- %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="org.gcube.execution" level="TRACE" />
+	<logger name="org.gcube.datatransformation" level="TRACE" />
+	<logger name="gr.uoa.di.madgik.environment" level="INFO" />
+	<logger name="gr.uoa.di.madgik" level="TRACE" />
+	<logger name="gr.uoa.di.madgik.rr" level="WARN" />
+	<logger name="org.gcube.execution.rr" level="WARN" />
+	<logger name="org.gcube.rest.resourcemanager.memoization" level="TRACE" />
+
+	<root level="WARN">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>

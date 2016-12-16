@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+
+	<service name="gcube/common/vremanagement/ghnmanager">
+		<environment 
+			name="configDir" 
+		 	value="@config.dir@" 
+		 	type="java.lang.String"
+		 	override="false" />
+		 		 			
+	 </service>
+	
+</jndiConfig>

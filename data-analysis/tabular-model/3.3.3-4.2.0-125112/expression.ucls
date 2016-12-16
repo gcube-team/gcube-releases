@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.4" icons="true" always-add-relationships="false" generalizations="true" realizations="false" 
+  associations="false" dependencies="false" nesting-relationships="false">  
+  <class id="1" language="java" 
+    name="org.gcube.data.analysis.tabulardata.expression.composite.MultipleArgumentsExpression" project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/MultipleArgumentsExpression.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1113" y="381"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.BinaryExpression" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/BinaryExpression.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="719" y="514"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.UnaryExpression" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/UnaryExpression.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1406" y="381"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.CompositeExpression" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/CompositeExpression.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1112" y="181"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.arithmetic.Subtraction" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/arithmetic/Subtraction.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1050" y="746"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" 
+    name="org.gcube.data.analysis.tabulardata.expression.composite.arithmetic.Multiplication" project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/arithmetic/Multiplication.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="728" y="746"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.arithmetic.Division" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/arithmetic/Division.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1386" y="746"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.arithmetic.Modulus" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/arithmetic/Modulus.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1722" y="746"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.arithmetic.Addition" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/arithmetic/Addition.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2058" y="746"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" 
+    name="org.gcube.data.analysis.tabulardata.expression.composite.comparable.GreaterOrEquals" project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/comparable/GreaterOrEquals.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="115" width="303" x="523" y="931"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.comparable.Equals" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/comparable/Equals.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="115" width="303" x="866" y="931"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.comparable.LessOrEquals" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/comparable/LessOrEquals.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="115" width="303" x="1209" y="931"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.comparable.NotLess" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/comparable/NotLess.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="115" width="303" x="1552" y="931"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.comparable.NotGreater" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/comparable/NotGreater.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="115" width="303" x="1895" y="931"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.comparable.GreaterThan" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/comparable/GreaterThan.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="115" width="303" x="2238" y="931"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.comparable.NotEquals" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/comparable/NotEquals.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="115" width="303" x="2581" y="931"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.comparable.LessThan" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/comparable/LessThan.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="115" width="303" x="2924" y="931"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.text.TextEndsWith" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/text/TextEndsWith.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="133" width="271" x="957" y="1116"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.text.TextMatchSQLRegexp" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/text/TextMatchSQLRegexp.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="205" width="271" x="1268" y="1116"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.text.TextContains" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/text/TextContains.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="205" width="271" x="1579" y="1116"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="org.gcube.data.analysis.tabulardata.expression.composite.text.TextBeginsWith" 
+    project="tabular-model" 
+    file="/tabular-model/src/main/java/org/gcube/data/analysis/tabulardata/expression/composite/text/TextBeginsWith.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="133" width="271" x="1890" y="1116"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="22">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="23">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="24">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="25">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="26">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="27">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="28">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="29">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="30">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="31">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="32">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="33">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="34">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="35">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="36">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="37">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="38">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="39">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="40">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="41">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="false"/>
+</class-diagram>

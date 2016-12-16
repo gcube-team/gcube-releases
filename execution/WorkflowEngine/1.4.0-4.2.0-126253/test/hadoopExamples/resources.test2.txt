@@ -1,0 +1,11 @@
+Scope : /gcube/devsec
+chokeProgressEvents : false
+chokePerformanceEvents : false
+storePlans : true
+Jar : MapReduceCallablesTesting.jar : local : Examples/hadoop/MapReduceCallablesTesting.jar
+MainClass : gr.uoa.di.madgik.callables.mapreduce.test.WordCount
+Argument : 0 : testInput2
+Argument : 1 : testOutput2
+Input : testInput2/All_About_Coffee_by_William_H._Ukers.txt : tmp : Examples/hadoop/All_About_Coffee_by_William_H._Ukers.txt
+Input : testInput2/ExampleText.txt : tmp : Examples/hadoop/ExampleText.txt
+Output : testOutput2 : tmp

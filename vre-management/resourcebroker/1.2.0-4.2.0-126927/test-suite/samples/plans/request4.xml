@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlanRequest
+	xmlns="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployRequest"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployRequest ../../../schema/deployRequest.xsd">
+	<Scope>/gcube/devsec/CNR-VRE</Scope>
+	<PackageGroup ID="1" service="service1">
+		<Package reuse="true">
+			<ServiceClass>PkgServiceClass</ServiceClass>
+			<ServiceName>PkgServiceName</ServiceName>
+			<ServiceVersion>PkgServiceVersion</ServiceVersion>
+			<PackageName>PkgPackageName</PackageName>
+			<PackageVersion>PkgPackageVersion</PackageVersion>
+		</Package>
+		<Package reuse="true">
+			<ServiceClass>PkgServiceClass</ServiceClass>
+			<ServiceName>PkgServiceName</ServiceName>
+			<ServiceVersion>PkgServiceVersion</ServiceVersion>
+			<PackageName>PkgPackageName</PackageName>
+			<PackageVersion>PkgPackageVersion</PackageVersion>
+		</Package>
+		<GHN>09ee4a70-1723-11df-adce-80cd45adc17d</GHN>
+	</PackageGroup>
+	<PackageGroup ID="2" service="service2">
+		<Package reuse="true">
+			<ServiceClass>PkgServiceClass2</ServiceClass>
+			<ServiceName>PkgServiceName2</ServiceName>
+			<ServiceVersion>PkgServiceVersion2</ServiceVersion>
+			<PackageName>PkgPackageName2</PackageName>
+			<PackageVersion>PkgPackageVersion2</PackageVersion>
+		</Package>
+	</PackageGroup>
+	<PackageGroup ID="3" service="service1">
+		<Package reuse="true">
+			<ServiceClass>PkgServiceClass2</ServiceClass>
+			<ServiceName>PkgServiceName2</ServiceName>
+			<ServiceVersion>PkgServiceVersion2</ServiceVersion>
+			<PackageName>PkgPackageName2</PackageName>
+			<PackageVersion>PkgPackageVersion2</PackageVersion>
+		</Package>
+		<Package reuse="true">
+			<ServiceClass>PkgServiceClass2</ServiceClass>
+			<ServiceName>PkgServiceName2</ServiceName>
+			<ServiceVersion>PkgServiceVersion2</ServiceVersion>
+			<PackageName>PkgPackageName2</PackageName>
+			<PackageVersion>PkgPackageVersion2</PackageVersion>
+		</Package>
+		<Package reuse="true">
+			<ServiceClass>PkgServiceClass2</ServiceClass>
+			<ServiceName>PkgServiceName2</ServiceName>
+			<ServiceVersion>PkgServiceVersion2</ServiceVersion>
+			<PackageName>PkgPackageName2</PackageName>
+			<PackageVersion>PkgPackageVersion2</PackageVersion>
+		</Package>
+		<Package reuse="true">
+			<ServiceClass>PkgServiceClass2</ServiceClass>
+			<ServiceName>PkgServiceName2</ServiceName>
+			<ServiceVersion>PkgServiceVersion2</ServiceVersion>
+			<PackageName>PkgPackageName2</PackageName>
+			<PackageVersion>PkgPackageVersion2</PackageVersion>
+		</Package>
+		<Requirements>
+			<Requirement>
+				<node>OS</node>
+				<relType>EQUAL</relType>
+				<value>Linux</value>
+			</Requirement>
+			<Requirement>
+				<node>PLATFORM</node>
+				<relType>EQUAL</relType>
+				<value>i386</value>
+			</Requirement>
+			<Requirement>
+				<node>PROCESSOR_BOGOMIPS</node>
+				<relType>GREATER_OR_EQUAL</relType>
+				<value>3000</value>
+			</Requirement>
+			<Requirement>
+				<node>SITE_LOCATION</node>
+				<relType>CONTAINS</relType>
+				<value>Pisa</value>
+			</Requirement>
+			<Requirement>
+				<node>SITE_COUNTRY</node>
+				<relType>CONTAINS</relType>
+				<value>it</value>
+			</Requirement>
+			<Requirement>
+				<node>SITE_DOMAIN</node>
+				<relType>CONTAINS</relType>
+				<value>research-infrastructures.eu</value>
+			</Requirement>
+			<Requirement>
+				<node>RUNTIME_ENV_STRING</node>
+				<key>ANT_HOME</key>
+				<relType>CONTAINS</relType>
+				<value>/ant</value>
+			</Requirement>
+			<Requirement>
+				<node>RUNTIME_ENV_STRING</node>
+				<key>ANT_HOME</key>
+				<relType>EQUAL</relType>
+				<value>/usr/share/ant</value>
+			</Requirement>
+			<Requirement>
+				<node>RUNTIME_ENV_STRING</node>
+				<key>GLOBUS_OPTIONS</key>
+				<relType>EQUAL</relType>
+			</Requirement>
+		</Requirements>
+	</PackageGroup>
+</PlanRequest>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchResource>
+  <name>INSPIRE</name>
+  <descriptionDocumentURI>http://dl19.di.uoa.gr/opensearchdescription</descriptionDocumentURI>
+  <brokeredResults>false</brokeredResults>
+  <transformation>
+    <MIMEType>application/rss+xml</MIMEType>
+    <recordSplitXPath>*[local-name()='rss']/*[local-name()='channel']/*[local-name()='item']</recordSplitXPath>
+    <recordIdXPath>//*[local-name()='item']/*[local-name()='guid']</recordIdXPath>
+	 	<presentationInfo>  
+          <presentable>
+          	<fieldName>title</fieldName>
+          	<expression>//*[local-name()='item']/*[local-name()='title']</expression>
+          </presentable>
+          <presentable>
+	          	<fieldName>creator</fieldName>
+	          	<expression>//*[local-name()='item']/*[namespace-uri()='http://purl.org/dc/elements/1.1/' and local-name()='creator']</expression>
+	      </presentable>
+        </presentationInfo>
+  </transformation>
+</OpenSearchResource>
+

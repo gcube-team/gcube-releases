@@ -1,0 +1,7 @@
+scope # /gcube/devsec
+jdl # test/jdlExamples/jdlExample3.jdl
+chokeProgressEvents # false
+chokePerformanceEvents # false
+storePlans # true
+job.sh # url # ftp://meteora.di.uoa.gr/d5s/job.sh
+sig.txt # url # ftp://meteora.di.uoa.gr/d5s/sig.txt

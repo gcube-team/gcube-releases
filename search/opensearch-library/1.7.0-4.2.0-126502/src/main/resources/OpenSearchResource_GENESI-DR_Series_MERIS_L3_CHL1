@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>6b66c770-d886-11e0-bf4f-af172b5c4dba</ID>
+  <Type>GenericResource</Type>
+  <Scopes>
+    <Scope>/gcube/devNext</Scope>
+  </Scopes>
+  <Profile>
+    <SecondaryType>OpenSearchResource</SecondaryType>
+    <Name>OpenSearchResource_GENESI-DR_Series_MERIS_L3_CHL1</Name>
+    <Description>Generic resource containing info for the GENESI-DR MERIS_L3_CHL1 external repository</Description>
+    <Body>
+      <OpenSearchResource>
+        <name>GENESI-DR Series: MERIS_L3_CHL1</name>
+        <descriptionDocumentURI>http://dr-site.genesi-dr.eu/catalogue/genesi/MERIS_L3_CHL1/description</descriptionDocumentURI>
+        <brokeredResults>false</brokeredResults>
+         <parameters>
+        	<parameter>
+        		<fieldName>allIndexes</fieldName>
+        		<qName>http%3A%2F%2Fa9.com%2F-%2Fspec%2Fopensearch%2F1.1%2F:searchTerms</qName>
+        	</parameter>	
+        </parameters>
+        <transformation>
+          <MIMEType>application/rdf+xml</MIMEType>
+          <recordSplitXPath>*[local-name()='RDF' and namespace-uri()='http://www.w3.org/1999/02/22-rdf-syntax-ns#']/*[local-name()='DataSet' and namespace-uri()='http://xmlns.com/2008/dclite4g#']</recordSplitXPath>
+          <recordIdXPath>//*[local-name()='DataSet'and namespace-uri()='http://xmlns.com/2008/dclite4g#']/@*[local-name()='about' and namespace-uri()='http://www.w3.org/1999/02/22-rdf-syntax-ns#']</recordIdXPath>
+          <presentationInfo>
+            <presentable>
+              <fieldName>title</fieldName>
+              <expression>//*[local-name()='DataSet'and namespace-uri()='http://xmlns.com/2008/dclite4g#']/*[local-name()='title' and namespace-uri()='http://purl.org/dc/elements/1.1/']</expression>
+            </presentable>
+            <presentable>
+              <fieldName>guid</fieldName>
+              <expression>//*[local-name()='DataSet'and namespace-uri()='http://xmlns.com/2008/dclite4g#']/*[local-name()='identifier' and namespace-uri()='http://purl.org/dc/elements/1.1/']</expression>
+            </presentable>
+            <presentable>
+              <fieldName>size</fieldName>
+              <expression>//*[local-name()='DataSet'and namespace-uri()='http://xmlns.com/2008/dclite4g#']/*[local-name()='size' and namespace-uri()='http://www.genesi-dr.eu/spec/opensearch/extensions/eop/1.0/']</expression>
+            </presentable>
+            <presentable>
+              <fieldName>startDate</fieldName>
+              <expression>//*[local-name()='DataSet'and namespace-uri()='http://xmlns.com/2008/dclite4g#']/*[local-name()='dtstart' and namespace-uri()='http://www.w3.org/2002/12/cal/ical#']</expression>
+            </presentable>
+            <presentable>
+              <fieldName>endDate</fieldName>
+              <expression>//*[local-name()='DataSet'and namespace-uri()='http://xmlns.com/2008/dclite4g#']/*[local-name()='dtend' and namespace-uri()='http://www.w3.org/2002/12/cal/ical#']</expression>
+            </presentable>
+            <presentable>
+              <fieldName>spatial</fieldName>
+              <expression>//*[local-name()='DataSet'and namespace-uri()='http://xmlns.com/2008/dclite4g#']/*[local-name()='spatial' and namespace-uri()='http://purl.org/dc/terms/']</expression>
+            </presentable>
+            <presentable>
+              <fieldName>creationDate</fieldName>
+              <expression>//*[local-name()='DataSet'and namespace-uri()='http://xmlns.com/2008/dclite4g#']/*[local-name()='created' and namespace-uri()='http://purl.org/dc/terms/']</expression>
+            </presentable>
+            <presentable>
+              <fieldName>modificationDate</fieldName>
+              <expression>//*[local-name()='DataSet'and namespace-uri()='http://xmlns.com/2008/dclite4g#']/*[local-name()='modified' and namespace-uri()='http://purl.org/dc/terms/']</expression>
+            </presentable>
+            <presentable>
+              <fieldName>quickLook</fieldName>
+              <expression>//*[local-name()='DataSet'and namespace-uri()='http://xmlns.com/2008/dclite4g#']/*[local-name()='quicklook' and namespace-uri()='http://xmlns.com/2008/dclite4g#']/@*[local-name()='resource' and namespace-uri()='http://www.w3.org/1999/02/22-rdf-syntax-ns#']</expression>
+            </presentable>
+          </presentationInfo>
+        </transformation>
+      </OpenSearchResource>
+    </Body>
+  </Profile>
+</Resource>

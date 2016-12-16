@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ID></ID>
+    <Type>Service</Type>
+    <Profile>
+    	<Description>Species products discovery Service</Description>
+        <Class>DataAccess</Class>
+        <Name>SpeciesProductsDiscovery</Name>
+        <Version>1.0.0</Version>
+        <Packages>
+            <Main>
+            	<Description>-</Description>
+                <Name>SpeciesProductsDiscovery-service</Name>
+                <Version>2.3.2-4.2.0-130321</Version>
+                <MavenCoordinates>
+					<groupId>org.gcube.data.spd</groupId>
+					<artifactId>species-products-discovery-service</artifactId>
+					<version>2.3.2-4.2.0-130321</version>
+				</MavenCoordinates>
+                <Mandatory level="VO"/>
+				<Shareable level="VO"/>
+                <GARArchive>species-products-discovery-service-2.3.2-4.2.0-130321.gar</GARArchive>
+            	<PortType>
+                	<Name>gcube/data/speciesproductsdiscovery/manager</Name>
+            	</PortType>
+            	<PortType>
+                	<Name>gcube/data/speciesproductsdiscovery/occurrences</Name>
+	           	</PortType>
+	           	<PortType>
+                	<Name>gcube/data/speciesproductsdiscovery/classification</Name>
+	           	</PortType>
+	           	<PortType>
+                	<Name>gcube/data/speciesproductsdiscovery/executor</Name>
+	           	</PortType>
+	           	<PortType>
+                	<Name>gcube/data/speciesproductsdiscovery/remotedispatcher</Name>
+            	</PortType>
+            </Main>
+            <Software>
+                <Description>species products discovery stubs</Description>
+            	<Name>SpeciesProductsDiscovery-stubs</Name>
+				<Version>2.3.2-4.2.0-130321</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.data.spd</groupId>
+					<artifactId>species-products-discovery-stubs</artifactId>
+					<version>2.3.2-4.2.0-130321</version>
+				</MavenCoordinates>
+				<SpecificData>text</SpecificData>
+				<Type>library</Type>
+				<Files>
+					<File>species-products-discovery-stubs-2.3.2-4.2.0-130321.jar</File>
+				</Files>
+			</Software>           
+        </Packages>
+    </Profile>
+</Resource>
+
+

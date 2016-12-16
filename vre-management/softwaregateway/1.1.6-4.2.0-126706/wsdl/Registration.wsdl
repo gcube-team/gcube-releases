@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Registration"
+    targetNamespace="http://gcube-system.org/namespaces/vremanagement/softwaregateway"
+    xmlns:tns="http://gcube-system.org/namespaces/vremanagement/softwaregateway"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+    xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <!-- xmlns:profiles="http://gcube-system.org/namespaces/common/core/profiles" -->
+    
+    
+    <import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" location="../gcube/common/core/providers/GCUBEProvider.wsdl"/>
+    <import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+    
+    <!--============================================================
+        
+        T Y P E S
+        
+        ============================================================-->
+	
+	   
+	<types>
+		<xsd:schema targetNamespace="http://gcube-system.org/namespaces/vremanagement/softwaregateway"
+	           xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types">
+	            
+	            
+            <xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+            <!-- <xsd:import namespace="http://gcube-system.org/namespaces/common/core/profiles" schemaLocation="../gcube/common/core/profiles/service.xsd"/>
+            <xsd:import namespace="http://gcube-system.org/namespaces/common/core/profiles" schemaLocation="../gcube/common/core/profiles/CommonTypeDefinitions.xsd"/> -->
+            
+            <!-- REQUESTS AND RESPONSE ELEMENTS -->
+		
+			<xsd:element name="LocationCoordinates">
+			  <xsd:complexType>
+				<xsd:sequence>
+				    <xsd:element name="serviceClass" type="xsd:string"  />
+					<xsd:element name="serviceName" type="xsd:string"  />
+					<xsd:element name="serviceVersion" type="xsd:string"/>
+					<xsd:element name="packageName" type="xsd:string" />
+					<xsd:element name="packageVersion" type="xsd:string" />
+				</xsd:sequence>
+			   </xsd:complexType>
+			</xsd:element>
+		
+			
+			<xsd:element name="registerRequest" type="xsd:string"/>	
+	   			
+		 	<xsd:element name="registerResponse" type="xsd:string"/>
+	    
+	  		<xsd:element name="unregisterResponse" type="coretypes:VOID"/>
+		
+		</xsd:schema>
+	</types>
+    
+   
+    
+    <!--============================================================
+        
+        M E S S A G E S
+        
+        ============================================================-->
+	
+	<message name="registerInputMessage">
+		<part name="request" element="tns:registerRequest"/>
+	</message>
+		
+	<message name="registerOutputMessage">
+		<part name="response" element="tns:registerResponse"/>
+	</message>
+    
+ 	<message name="unregisterInputMessage">
+		<part name="request" element="tns:LocationCoordinates"/>
+	</message>
+		
+	<message name="unregisterOutputMessage">
+		<part name="response" element="tns:unregisterResponse"/>
+	</message>
+    
+	
+    <!--============================================================
+        
+        P O R T T Y P E
+        
+        ============================================================-->
+
+    <portType name="RegistrationPortType" wsdlpp:extends="provider:GCUBEProvider">
+		
+		<operation name="register">
+			<input message="tns:registerInputMessage"/>
+			<output message="tns:registerOutputMessage"/>
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+		
+		<operation name="unregister">
+			<input message="tns:unregisterInputMessage"/>
+			<output message="tns:unregisterOutputMessage"/>
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+			
+    </portType>
+
+</definitions>

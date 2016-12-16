@@ -1,0 +1,22 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlet.user.contactinformation.2-1-0"
+		date="2016-12-01">
+		<Change>Moved to Liferay logging system</Change>
+		<Change>Removed asl session</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.contactinformation.2-0-0"
+		date="2016-05-01">
+		<Change> Updated for Liferay 6.2.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.contactinformation.1-1-0"
+		date="2015-10-20">
+		<Change>Fix for Bug #924 Contact Information portlet does not show
+			google hangout contact
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.contactinformation.1-0-0"
+		date="2014-09-09">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

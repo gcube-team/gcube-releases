@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Configuration>
+	<Rule path="/token/user" requiresToken="false">
+		<Entity type="IP" value="146.48.80.0" />
+		<Entity type="IP" value="146.48.81.0" />
+		<Entity type="IP" value="146.48.82.0" />
+		<Entity type="IP" value="146.48.83.0" />
+		<Entity type="IP" value="146.48.84.0" />
+		<Entity type="IP" value="146.48.85.0" />
+		<Entity type="IP" value="146.48.122.0" />
+		<Entity type="IP" value="146.48.123.0" />
+
+	</Rule>
+	<Rule path="/apikey" requiresToken="true" />
+	<Rule path="/policyManager" requiresToken="true" />
+	<Rule path="/token/external" requiresToken="true" />
+	<Rule path="/token/node" requiresToken="false" />
+	<Rule path="/token/service" requiresToken="true" />
+</Configuration>
+

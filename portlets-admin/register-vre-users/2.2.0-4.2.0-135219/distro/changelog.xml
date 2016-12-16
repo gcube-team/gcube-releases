@@ -1,0 +1,46 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.register-vre-users.2-2-0"
+		date="2016-12-02">
+		<Change>Removed ASL Session</Change>
+		<Change>Bug fix for Bug #6115 Register Users to VRE user cache problem</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.register-vre-users.2-1-0"
+		date="2016-09-08">
+		<Change>Changed visbility of users depending on the gateway</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.register-vre-users.2-0-0"
+		date="2016-06-08">
+		<Change>Ported to Liferay 6.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.register-vre-users.1-4-2"
+		date="2015-02-08">
+		<Change>Anonymization of usernames removed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.register-vre-users.1-4-1"
+		date="2015-12-21">
+		<Change>Fix for Bug #1857 typo when displaying loading popup</Change>
+		<Change>Anonymized usernames</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.register-vre-users.1-4-0"
+		date="2015-10-13">
+		<Change>Updated to use shared common library for notification messages
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.register-vre-users.1-3-0"
+		date="2015-07-24">
+		<Change>Minor Restyle</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.register-vre-users.1-2-0"
+		date="2015-07-01">
+		<Change>Added invite user functionality</Change>
+		<Change>Ported to GWT 2.7.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.register-vre-users.1-1-0"
+		date="2014-06-03">
+		<Change>Adapted to the new maven portal bom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.register-vre-users.1-0-0"
+		date="2014-04-02">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

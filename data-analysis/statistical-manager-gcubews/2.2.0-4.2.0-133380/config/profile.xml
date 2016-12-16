@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Class>DataAnalysis</Class>
+		<Name>statistical-manager-gcubews</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Main>
+				<Name>statistical-manager-service</Name>
+				<Version>2.2.0-4.2.0-133380</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.data.analysis</groupId>	
+					<artifactId>statistical-manager-service</artifactId>
+    				<version>2.2.0-4.2.0-133380</version>
+				</MavenCoordinates>
+				<GARArchive>statistical-manager-service-2.2.0-4.2.0-133380.gar</GARArchive>
+				
+				<PortType>
+					<Name>gcube/data/analysis/statisticalmanager/statisticalmanagerfactory</Name>
+				</PortType>
+				
+				<PortType>
+					<Name>gcube/data/analysis/statisticalmanager/statisticalmanagerservice</Name>
+				</PortType>
+				
+				<PortType>
+					<Name>gcube/data/analysis/statisticalmanager/statisticalmanagerdataspace</Name>
+				</PortType>
+				
+				
+			</Main>
+			<Software>
+				<Name>statistical-manager-stubs</Name>
+				<Version>2.2.0-4.2.0-133380</Version>
+				<MavenCoordinates>	
+				 	<groupId>org.gcube.data.analysis</groupId>
+				 	<artifactId>statistical-manager-stubs</artifactId>
+    				<version>2.2.0-4.2.0-133380</version>
+				</MavenCoordinates>
+				<Type>library</Type>
+				<Files>
+					<File>statistical-manager-stubs-2.2.0-4.2.0-133380.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

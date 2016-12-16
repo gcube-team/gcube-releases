@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="InviteFriends">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.user.invitefriends.InviteFriends' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/InviteFriends/greet" class="org.gcube.portlets.user.invitefriends.server.InviteServiceImpl" />
+
+</module>

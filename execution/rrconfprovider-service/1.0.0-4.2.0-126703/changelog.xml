@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.execution.rrconfprovider-service.1-0-0" date="2013-10-10">
+   		<Change>Initial Release</Change>
+	</Changeset>
+</ReleaseNotes>
+

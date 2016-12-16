@@ -1,0 +1,89 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portal.social-networking-library.1-14-0"
+		date="2016-09-29">
+		<Change>upgrade astyanax dependency to 2.0.2</Change>
+		<Change>removed support for Document Workflow notification</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-13-0"
+		date="2016-09-05">
+		<Change>Method to close connections pool to Cassandra added</Change>
+		<Change>Added methods to retrieve recent user's commented and liked
+			feeds
+		</Change>
+		<Change>Added enum class ShowUserStatisticAction</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-10-2"
+		date="2016-02-29">
+		<Change>Enhanced feed class added</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-10-0"
+		date="2016-01-22">
+		<Change>Add support for multi attachments to post, Feature #1982
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-9-0"
+		date="2016-01-15">
+		<Change>Add support for user statistics fast retrieval, Feature #1663
+		</Change>
+		<Change>Updated the way we instanciate keyspace, now it is more
+			efficient, Feature #1493
+		</Change>
+		<Change>Updated methods for editing comments, Bug #246</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-8-1"
+		date="2015-09-30">
+		<Change>If an index report an NotificationID which does not exist the
+			other User Notifications are returned #840
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-8-0"
+		date="2015-07-03">
+		<Change>Added support for invites</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-7-0"
+		date="2014-10-24">
+		<Change>Added support for hashtags</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-6-1"
+		date="2014-05-05">
+		<Change>Fixed bug returning sendNotification false when a Notification
+			Preference was null for a given Notification Type
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-6-0"
+		date="2014-04-08">
+		<Change>Added support for feed retrieval by range</Change>
+		<Change>Added support for notifications retrieval by range</Change>
+		<Change>Added support for unlike feature</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-5-0"
+		date="2014-03-05">
+		<Change>Added support for post alert notifications</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-4-0"
+		date="2013-10-21">
+		<Change>Ported to Feather Weight Stack</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-3-0"
+		date="2013-07-08">
+		<Change>Added support for calendar notifications</Change>
+		<Change>Added support for URL encoding decoding js base 64</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-2-0"
+		date="2013-05-29">
+		<Change>Added support for fine grained notifications</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-1-0"
+		date="2013-04-19">
+		<Change>Added support for people taggings (mentions)</Change>
+		<Change>Added fix for method getAllPortalPrivacyLevelFeeds() not
+			recongnizing application feeds
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library.1-0-0"
+		date="2013-01-11">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

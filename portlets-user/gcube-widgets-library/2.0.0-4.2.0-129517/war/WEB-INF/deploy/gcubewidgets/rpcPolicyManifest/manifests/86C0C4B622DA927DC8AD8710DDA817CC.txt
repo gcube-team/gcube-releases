@@ -1,0 +1,2 @@
+serviceClass: org.gcube.portlets.user.gcubewidgets.client.rpc.ScopeService
+path: 3FEEA6DE1884937257328F4A621F9992.gwt.rpc

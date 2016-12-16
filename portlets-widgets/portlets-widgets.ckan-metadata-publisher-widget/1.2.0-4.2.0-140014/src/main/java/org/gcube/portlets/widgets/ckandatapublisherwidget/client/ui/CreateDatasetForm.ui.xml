@@ -1,0 +1,396 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:m="urn:import:org.gcube.portlets.widgets.ckandatapublisherwidget.client.ui.dataset.resources">
+	<ui:style>
+	.form-main-style {
+		margin-left: 10px;
+	}
+	
+	.fieldset-border-style {
+		border: 1px groove #444;
+		-webkit-box-shadow: 0px 0px 0px 0px #000;
+		box-shadow: 0px 0px 0px 0px #000;
+		padding: 10px;
+	}
+	
+	.legend-style {
+		width: auto;
+		padding: 10px;
+		margin-bottom: 0px;
+	}
+	
+	@external .form-horizontal .input-large;
+	.form-horizontal .input-large {
+		width: 95%;
+	}
+	
+	.block-alert-style {
+		margin-top: 10px;
+		padding: 10px;
+		margin-bottom: 10px;
+	}
+	
+	.tagsPanelStyle {
+		display: inline-block;
+	}
+	
+	.selected-profile {
+		font-weight: bold;
+	}
+	
+	.label-go-to-product {
+		display: inline-block;
+		vertical-align: middle;
+		font-weight: bold;
+	}
+	</ui:style>
+	<g:HTMLPanel ui:field="createDatasetMainPanel">
+		<b:Form type="HORIZONTAL" styleName="{style.form-main-style}"
+			ui:field="formFirstStep" visible="true">
+			<b:Fieldset styleName="{style.fieldset-border-style}">
+
+				<b:Legend styleName="{style.legend-style}">
+					Insert Product Information
+					<small>
+						<span style="color:red;">*</span>
+						is required
+					</small>
+				</b:Legend>
+
+				<!-- Alert blocks for info/errors -->
+				<b:AlertBlock type="INFO" close="false" animation="true"
+					visible="false" ui:field="infoBlock" styleName="{style.block-alert-style}"></b:AlertBlock>
+
+				<b:ControlGroup ui:field="productTitleGroup">
+					<b:ControlLabel for="title" title="Product title">
+						<font color="red">*</font>
+						Title :
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" placeholder="Product title"
+							width="90%" b:id="title" title="Product title" ui:field="titleTextBox" />
+						<span style="float:right; width:5%; color: #aaaaaa;">
+							<b:Popover ui:field="popoverTitle" html="true"
+								animation="true" placement="LEFT">
+								<g:FocusPanel ui:field="focusPanelTitle">
+									<b:Icon type="INFO_SIGN" size="TWO_TIMES" ui:field="infoIconTitle" />
+								</g:FocusPanel>
+							</b:Popover>
+						</span>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup>
+					<b:ControlLabel for="description" title="Product description">
+						Description:
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextArea placeholder="eg. Some useful notes about the product"
+							width="90%" alternateSize="LARGE" b:id="description" title="Product description"
+							ui:field="descriptionTextarea"></b:TextArea>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<!-- TAGS Panel -->
+				<m:TagsPanel ui:field="tagsPanel"></m:TagsPanel>
+
+				<b:ControlGroup>
+					<b:ControlLabel for="licenses" title="License">License:</b:ControlLabel>
+					<b:Controls>
+						<b:ListBox b:id="licenses" title="Product license"
+							width="91%" ui:field="licenseListbox">
+						</b:ListBox>
+						<span style="float:right; width:5%; color: #aaaaaa;">
+							<b:Popover ui:field="popoverLicenses" html="true"
+								animation="true" placement="LEFT">
+								<g:FocusPanel ui:field="focusPanelLicenses">
+									<b:Icon type="INFO_SIGN" size="TWO_TIMES" ui:field="infoIconLicenses" />
+								</g:FocusPanel>
+							</b:Popover>
+						</span>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup>
+					<b:ControlLabel for="licenseUrl" title="Selected License'url">Selected
+						License Url:</b:ControlLabel>
+					<b:Controls>
+						<b:Paragraph ui:field="unavailableUrl" visible="true">
+							<b>Unavailable</b>
+						</b:Paragraph>
+						<g:Anchor ui:field="licenseUrlAnchor" target="_blank"
+							visible="false"></g:Anchor>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup>
+					<b:ControlLabel for="visibility" title="Visibility of the product">Visibility:</b:ControlLabel>
+					<b:Controls>
+						<b:ListBox b:id="visibility" title="Product visibility"
+							width="91%" ui:field="visibilityListbox">
+							<g:item title="restricted">Restricted</g:item>
+							<g:item enabled="true" title="public">Public</g:item>
+						</b:ListBox>
+						<span style="float:right; width:5%; color: #aaaaaa;">
+							<b:Popover ui:field="popoverVisibility" html="true"
+								animation="true" placement="LEFT">
+								<g:FocusPanel ui:field="focusPanelVisibility">
+									<b:Icon type="INFO_SIGN" size="TWO_TIMES" ui:field="infoIconVisibility" />
+								</g:FocusPanel>
+							</b:Popover>
+						</span>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup ui:field="organizationsGroup">
+					<b:ControlLabel for="organization"
+						title="Select the organizations in which you want
+					to publish the product">Publish in:</b:ControlLabel>
+					<b:Controls>
+						<b:ListBox b:id="organization" alternateSize="LARGE"
+							width="91%" title="Publish in this organization" ui:field="organizationsListbox">
+						</b:ListBox>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup ui:field="versionControlGroup">
+					<b:ControlLabel for="version"
+						title="Product version expressed as positive integer number">
+						Version:
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" placeholder="1.0" b:id="version"
+							width="90%" title="Product version" ui:field="versionTextbox" />
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup>
+					<b:ControlLabel for="author" title="Product author">
+						<font color="red">*</font>
+						Author:
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" width="90%"
+							placeholder="Joe Bloggs" enabled="false" b:id="author" title="Product author"
+							ui:field="authorTextbox" />
+						<span style="float:right; width:5%; color: #aaaaaa;">
+							<b:Popover ui:field="popoverAuthor" html="true"
+								animation="true" placement="LEFT">
+								<g:FocusPanel ui:field="focusPanelAuthor">
+									<b:Icon type="INFO_SIGN" size="TWO_TIMES" ui:field="infoIconAuthor" />
+								</g:FocusPanel>
+							</b:Popover>
+						</span>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup ui:field="authorEmailControlGroup">
+					<b:ControlLabel for="email" title="Product author's email">
+						<font color="red">*</font>
+						Author Email:
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" width="90%"
+							placeholder="joe.bloggs@example.com" enabled="false" b:id="email"
+							title="Product author" ui:field="authorEmailTextbox" />
+						<span style="float:right; width:5%; color: #aaaaaa;">
+							<b:Popover ui:field="popoverAuthorEmail" html="true"
+								animation="true" placement="LEFT">
+								<g:FocusPanel ui:field="focusPanelAuthorEmail">
+									<b:Icon type="INFO_SIGN" size="TWO_TIMES" ui:field="infoIconAuthorEmail" />
+								</g:FocusPanel>
+							</b:Popover>
+						</span>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup>
+					<b:ControlLabel for="maintainer" title="Product maintainer">
+						Maintainer:
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" placeholder="Joe Bloggs"
+							width="90%" b:id="maintainer" title="Product maintainer"
+							ui:field="maintainerTextbox" />
+						<span style="float:right; width:5%; color: #aaaaaa;">
+							<b:Popover ui:field="popoverMaintainer" html="true"
+								animation="true" placement="LEFT">
+								<g:FocusPanel ui:field="focusPanelMaintainer">
+									<b:Icon type="INFO_SIGN" size="TWO_TIMES" ui:field="infoIconMaintainer" />
+								</g:FocusPanel>
+							</b:Popover>
+						</span>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup ui:field="maintainerControlGroup">
+					<b:ControlLabel for="emailMaintaner" title="Product author's email">
+						Maintainer Email:
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox alternateSize="LARGE" placeholder="maintainer@example.com"
+							width="90%" b:id="emailMaintaner" title="Product author"
+							ui:field="maintainerEmailTextbox" />
+						<span style="float:right; width:5%; color: #aaaaaa;">
+							<b:Popover ui:field="popoverMaintainerEmail" html="true"
+								animation="true" placement="LEFT">
+								<g:FocusPanel ui:field="focusPanelMaintainerEmail">
+									<b:Icon type="INFO_SIGN" size="TWO_TIMES" ui:field="infoIconMaintainerEmail" />
+								</g:FocusPanel>
+							</b:Popover>
+						</span>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup ui:field="metadataProfilesControlGroup">
+					<b:ControlLabel for="metadataProfilesFormat" title="Product profile formats">Product
+						Profile:</b:ControlLabel>
+					<b:Controls>
+						<b:ListBox b:id="metadataProfilesFormat" alternateSize="LARGE"
+							width="91%" title="The product profile format to be used"
+							ui:field="metadataProfilesFormatListbox">
+							<g:item enabled="true" title="None">none</g:item>
+						</b:ListBox>
+						<span style="float:right; width:5%; color: #aaaaaa;">
+							<b:Popover ui:field="popoverProfiles" html="true"
+								animation="true" placement="LEFT">
+								<g:FocusPanel ui:field="focusPanelProfiles">
+									<b:Icon type="INFO_SIGN" size="TWO_TIMES" ui:field="infoIconProfiles" />
+								</g:FocusPanel>
+							</b:Popover>
+						</span>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup ui:field="groupsControlGroup" visible="false">
+					<b:ControlLabel for="groups" title="The groups for this product">Product Groups:</b:ControlLabel>
+					<b:Controls>
+						<b:ListBox b:id="groups" alternateSize="LARGE" width="91%" multipleSelect="true"
+							title="The groups for this product (Hold CTRL or Command button for multiple selection)" ui:field="groupsListbox">
+						</b:ListBox>
+						<span style="float:right; width:5%; color: #aaaaaa;">
+							<b:Popover ui:field="popoverGroups" html="true"
+								animation="true" placement="LEFT">
+								<g:FocusPanel ui:field="focusPanelGroups">
+									<b:Icon type="INFO_SIGN" size="TWO_TIMES" ui:field="infoIconGroups" />
+								</g:FocusPanel>
+							</b:Popover>
+						</span>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<!-- Alert block on continue -->
+				<b:AlertBlock animation="true" visible="false"
+					ui:field="alertNoResources"
+					text="Please note that the product you are going to publish will not have resources.">
+				</b:AlertBlock>
+
+				<!-- Alert block on continue -->
+				<b:AlertBlock type="INFO" close="false" animation="true"
+					visible="false" ui:field="onContinueAlertBlock">
+				</b:AlertBlock>
+
+				<b:Button title="Continue" ui:field="continueButton" type="PRIMARY"
+					block="true">Continue</b:Button>
+				<b:Button title="Reset" ui:field="resetButton" block="true">Reset</b:Button>
+
+			</b:Fieldset>
+		</b:Form>
+
+
+		<b:Form type="HORIZONTAL" styleName="{style.form-main-style}"
+			ui:field="formSecondStep" visible="false">
+			<b:Fieldset styleName="{style.fieldset-border-style}">
+				<b:Legend styleName="{style.legend-style}">
+					Manage Resources
+				</b:Legend>
+				<b:ControlGroup>
+					<b:Controls>
+						<span style="float:right; width:5%; color: #aaaaaa;">
+							<b:Popover ui:field="popoverResources" html="true"
+								animation="true" placement="LEFT">
+								<g:FocusPanel ui:field="focusPanelResources">
+									<b:Icon type="INFO_SIGN" size="TWO_TIMES" ui:field="infoIconResources" />
+								</g:FocusPanel>
+							</b:Popover>
+						</span>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<g:SimplePanel ui:field="workspaceResourcesContainer"
+					width="100%" visible="true">
+				</g:SimplePanel>
+
+				<b:Button title="Continue" ui:field="continueThirdStep"
+					type="PRIMARY" block="true">Continue</b:Button>
+
+				<b:Button title="Go Back" ui:field="goBackButtonFirstStep"
+					block="true">Go
+					Back</b:Button>
+			</b:Fieldset>
+		</b:Form>
+
+
+		<b:Form type="HORIZONTAL" styleName="{style.form-main-style}"
+			ui:field="formThirdStep" visible="false">
+			<b:Fieldset styleName="{style.fieldset-border-style}">
+				<b:Legend styleName="{style.legend-style}">
+					Insert Product Profile Information
+					<small>
+						<span style="color:red;">*</span>
+						is required
+					</small>
+				</b:Legend>
+
+				<b:Paragraph ui:field="selectedProfile" styleName="{style.selected-profile}"></b:Paragraph>
+
+				<!-- Here will be placed the metadata fields formats -->
+				<g:VerticalPanel ui:field="metadataFieldsPanel"
+					visible="false" width="100%"></g:VerticalPanel>
+
+				<!-- Custom fields can be dinamically added -->
+				<b:ControlGroup ui:field="customFields">
+					<b:ControlLabel>Custom Field(s):</b:ControlLabel>
+				</b:ControlGroup>
+
+				<b:ControlGroup>
+					<b:Controls>
+						<span style="float:right; width:5%; color: #aaaaaa;">
+							<b:Popover ui:field="popoverCustomFields" html="true"
+								animation="true" placement="LEFT">
+								<g:FocusPanel ui:field="focusPanelCustomFields">
+									<b:Icon type="INFO_SIGN" size="TWO_TIMES" ui:field="infoIconCustomFields" />
+								</g:FocusPanel>
+							</b:Popover>
+						</span>
+						<b:Button icon="PLUS_SIGN" title="Add Custom Field"
+							ui:field="addCustomFieldButton"></b:Button>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<!-- Alert block on create -->
+				<b:AlertBlock type="INFO" close="false" animation="true"
+					visible="false" ui:field="onCreateAlertBlock" styleName="{style.block-alert-style}">
+				</b:AlertBlock>
+
+				<g:FlowPanel ui:field="goToDatasetButtonPanel" visible="false">
+					<g:Label styleName="{style.label-go-to-product}">Go to product</g:Label>
+					<b:Button title="Go to product" ui:field="goToDatasetButton"
+						type="LINK" block="false" visible="false"></b:Button>
+				</g:FlowPanel>
+
+				<b:Button title="Add resources to the just created product"
+					block="true" type="PRIMARY" visible="false" ui:field="addResourcesButton">Add Resources</b:Button>
+
+				<b:Button title="Create product" ui:field="createButton"
+					type="PRIMARY" block="true">Create</b:Button>
+
+				<b:Button title="Go Back" ui:field="goBackButtonSecondStep"
+					block="true">Go
+					Back</b:Button>
+
+			</b:Fieldset>
+		</b:Form>
+	</g:HTMLPanel>
+</ui:UiBinder> 

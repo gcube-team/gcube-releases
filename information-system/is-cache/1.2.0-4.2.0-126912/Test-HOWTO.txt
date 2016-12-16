@@ -1,0 +1,12 @@
+ISCache is a small utility mainly for getting endpoint references of gCube services/resources.
+
+File ISCache.doc describes very thoroughly the usage, architecture and internals of ISCache.
+
+In order to test ISCache capabilities, please run the script file runTest.sh
+
+This file starts an ISCache deamon and JConsole. ISCache is fully JMX-enabled and thus it can be extensively tested using JConsole as its client.
+
+Once JConsole starts, go to org.gcube subtree at the left side of the MBeans tab. There you can find all the available operations. 
+
+In order to validate their output, compare it with ISMonitoring results.
+ 

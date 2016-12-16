@@ -1,0 +1,515 @@
+div#usersManagementPortletContainer, div#usersManagementPortletContainerSiteTeamsEditMode {
+ 	background-color : #fff;
+ 	background : #fff;
+ 	/* padding: 2px; */
+}
+div#usersManagementPortletContainer i.icon-search,
+ div#usersManagementPortletContainerSiteTeamsEditMode i.icon-search {
+	-ms-transform: scale(1.2,1.4) !important; /* IE 9 */
+    -webkit-transform: scale(1.2,1.4) !important; /* Safari */
+    transform: sscale(1.2,1.4) !important;
+    display :inline-block !important;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable tbody,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tbody {
+	background-color : rgba(234, 236, 240, 1);
+	background: rgba(234, 236, 240, 1);
+}
+div#usersManagementPortletContainer table#CurrentUsersTable thead > tr,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable thead > tr {
+	border-bottom-color : white;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable thead > tr,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable thead > tr {
+	border: none;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable thead > tr th,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable thead > tr th,
+  div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTableUsers thead > tr th{
+	border: none;
+	font-weight: bold;
+	padding-bottom: 0px;
+	padding-left: 4px;
+	text-transform: capitalize;
+}
+div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTableUsers thead > tr th:after{
+	font-weight: normal;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable thead > tr th:first-of-type,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable thead > tr th:first-of-type {
+	width: 14px !important;
+}
+@-moz-document url-prefix() {
+    div#usersManagementPortletContainer table#CurrentUsersTable thead > tr th:first-of-type,
+		 div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable thead > tr th:first-of-type {
+			width:15px !important;
+		}
+}
+@-moz-document url-prefix() {
+	div#usersManagementPortletContainer table#usersRequestsTable thead > tr th:first-of-type div {
+	  left: 7px !important;;
+	}
+}
+/* @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	div#usersManagementPortletContainer table#CurrentUsersTable thead > tr th:first-of-type,
+	 div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable thead > tr th:first-of-type {
+		width:17px !important;
+	}
+	div#usersManagementPortletContainer table#usersRequestsTable thead > tr th:first-of-type div {
+  		left: 7px !important;;
+	}
+} */
+div#usersManagementPortletContainer table#CurrentUsersTable tbody  tr:last-of-type,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tbody  tr:last-of-type {
+	border: none;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable tbody,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tbody {
+	border: none;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable {
+	border: none;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable tr td:first-of-type,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tr td:first-of-type {
+	:white;
+}
+.dataTable:not(#GroupTeamsTableUsers) tr td {
+	cursor: pointer;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable tr.selected td div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tr.selected td div {
+	background-color : rgb(42, 170, 230);
+	background : rgb(42, 170, 230);
+	color : #fff;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable tr:not(.selected):hover td div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tr:not(.selected):hover td div,
+  div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTableUsers tr:not(.selected):hover td div {
+	background: #4cb5d2;
+	background-color: #4cb5d2;
+	color: white;
+}
+div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTableUsers tr:not(.selected):hover td div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTableUsers tr td div {
+	/* padding-left : 15px !important; */
+}
+div#usersManagementPortletContainer table#CurrentUsersTable tr td:first-of-type,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tr td:first-of-type {
+	padding-top: 1px;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable tr:hover td div i.icon-ok,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tr:hover td div i.icon-ok {
+	color: #4cb5d2;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable tr td div i.icon-ok.whiteFont,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tr td div i.icon-ok.whiteFont {
+	color: white;
+	font-size: 1em;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable tbody tr,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tbody tr {
+	background:#fff;
+	padding: 0px;
+	background-color:#fff;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable tbody tr td div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tbody tr td div {
+	background: #eeeeee;
+	background-color: #eeeeee;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable tbody tr td div i,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tbody tr td div i {
+	color: #eeeeee;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable tbody tr td,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tbody tr td {
+	padding: 0px 2px 0px 2px;
+	text-align: center;
+	line-height: 1em;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable thead th,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable thead th,
+  div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTableUsers thead th {
+	text-align: left;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable tbody tr div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tbody tr div,
+  div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTableUsers tbody tr div,
+  div#usersManagementPortletContainer table#usersRequestsTable tbody tr div {
+	background: #eeeeee;
+	background-color: #eeeeee;
+	padding: 2px 0px 0px 10px;
+	text-align: left;
+	height: 1.5em;
+	line-height : 1.5em;
+	overflow : hidden;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width:inherit;
+	height: 23px;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tbody tr div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tbody tr div {
+	background:white;
+	background-color:white;
+	padding:2px;
+	text-align: left;
+	height: 1.5em;
+	line-height : 1.5em;
+	overflow : hidden;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width:inherit;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable tbody tr td:first-of-type div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable tbody tr td:first-of-type div {
+	display:inline-block;
+	width: 1.5em;
+	text-align: center;
+	padding: 2px 3px 2px 3px;
+}
+div#usersManagementPortletContainer div.dataTables_info, div.dataTables_length label, table#CurrentUsersTable > thead > tr > th,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_info, div.dataTables_length label, table#GroupTeamsTable > thead > tr > th,
+  div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_info, table#GroupTeamsTableUsers > thead > tr > th {
+	color : #0271be; !important
+	font-weight: normal !important;
+	padding-left: 3px;
+	margin-bottom: 0px;
+}
+div.dataTables_length label {
+	font-size: 0.9em;
+
+
+}
+#GroupTeamsTableUsers_length label {
+	padding-top: 6px;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable > tbody > tr > td.dataTables_empty,
+div#usersManagementPortletContainer  table#usersRequestsTable  > tbody > tr > td.dataTables_empty, 
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable > tbody > tr > td.dataTables_empty,
+div#usersManagementPortletContainerSiteTeamsEditMode  table#usersRequestsTable  > tbody > tr > td.dataTables_empty,
+table#GroupTeamsTableUsers td.dataTables_empty {
+	background: #d1d1d1;
+	background-color: #d1d1d1;
+	color: #f2f2f2;
+}
+td.dataTables_empty:hover {
+	cursor: default !important;
+}
+/* div#usersManagementPortletContainer div.dataTables_info, div.dataTables_filter,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_info, div.dataTables_filter {
+	margin-bottom: 10px;
+} */
+div#usersManagementPortletContainer div.dataTables_filter,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_filter {
+	margin-top: 1.1em;
+	margin-bottom: 1em;
+	width: 250px;
+	height: 30px;
+	position: relative;
+}
+div#usersManagementPortletContainer div.dataTables_info,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_info {
+	padding-left: 10px;
+	font-size: 0.9em;
+	padding-top: 7px;
+	color: #0271be;
+}
+div#displayGroupTeamUsersModal div.dataTables_info {
+	padding-left : 0px;
+}
+div#usersManagementPortletContainer div.dataTables_length,
+div#usersManagementPortletContainer  div.dataTables_paginate.paging_simple_numbers,
+ div#usersManagementPortletContainerSiteTeamsEditMode #GroupTeamsTable_wrapper div.dataTables_length,
+
+div#usersManagementPortletContainerSiteTeamsEditMode #GroupTeamsTable_wrapper  div.dataTables_paginate.paging_simple_numbers {
+	margin-top: 6px;
+}
+.dataTables_length label:hover {
+	cursor: default;
+}
+div#usersManagementPortletContainer div.dataTables_length label > select,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_length label > select {
+	width : 65px !important;
+	margin-bottom: 0px;
+	height: 25px;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+	div#usersManagementPortletContainer div.dataTables_length label > select,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_length label > select {
+ 	font-size: 1.1em;
+ }
+}
+
+div#usersManagementPortletContainer div.dataTables_length label > select:focus,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_length label > select:focus {
+	
+	outline: none;
+}
+div#usersManagementPortletContainer table#usersRequestsTable thead > tr th,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable thead > tr th {
+	border: none;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tbody,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tbody {
+	border: none;
+}
+div#usersManagementPortletContainer table#usersRequestsTable,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable {
+	border: none;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tbody  tr:last-of-type,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tbody  tr:last-of-type {
+	border: none;
+}
+div#usersManagementPortletContainer table#usersRequestsTable thead > tr,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable thead > tr {
+	border-bottom-color : white;
+}
+div#usersManagementPortletContainer table#usersRequestsTable thead > tr,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable thead > tr {
+	border: none;
+}
+div#usersManagementPortletContainer table#usersRequestsTable,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable {
+	text-align: center;
+}
+div#usersManagementPortletContainer table#usersRequestsTable i.icon-ok,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable i.icon-ok {
+	/* color : rgb(234, 234, 234); */
+	color : #eeeeee;
+	font-size: 1em;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tr:hover td div i.icon-ok.whiteFont,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tr:hover td div i.icon-ok.whiteFont {
+	color: white;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tr td div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tr td div {
+	/* background-color : #e7e7e7;
+	background : #e7e7e7; */
+	background-color : #eeeeee;
+	background : #eeeeee;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tbody tr td,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tbody tr td {
+	padding: 0px 2px 0px 2px;
+	line-height: 1.09em;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tbody tr td div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tbody tr td div {
+	padding: 2px 0px 0px 10px;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tr td:first-of-type,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tr td:first-of-type {
+	cursor:pointer;
+	color:white !important;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tr.selected,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tr.selected {
+	background-color : white;
+	background : white;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tr.selected td div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tr.selected td div {
+	background-color : rgb(42, 170, 230);
+	background : rgb(42, 170, 230);
+	/* padding: 2px; */
+	color : #fff;
+}
+div#usersManagementPortletContainer table#usersRequestsTable th,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable th {
+	text-align : left;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tr.selected td:first-of-type div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tr.selected td:first-of-type div {
+	text-align: center;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tr:not(.selected):hover td div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tr:not(.selected):hover td div {
+	background: rgb(42, 170, 210);
+	background-color: rgb(42, 170, 210);
+	color: white;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tr td:first-of-type div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tr td:first-of-type div {
+	width: 1.5em;
+	display : inline-block;
+	padding: 2px;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tr td:first-of-type,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tr td:first-of-type {
+	text-align: center;
+	/* padding-top : 4px; */
+}
+div#usersManagementPortletContainer table#usersRequestsTable thead th:first-of-type,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable thead th:first-of-type {
+	width : 15px !important;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tr:hover td div i.icon-ok,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tr:hover td div i.icon-ok {
+	color: rgb(42, 170, 210);
+}
+div#usersManagementPortletContainer table#usersRequestsTable tr:hover,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tr:hover {
+	background-color : white;
+	background : white;
+}
+div#usersManagementPortletContainer table#usersRequestsTable tr td:not(:first-of-type),
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable tr td:not(:first-of-type) {
+	color : black;
+}
+div#usersManagementPortletContainer table#usersRequestsTable > thead > tr > th,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#usersRequestsTable > thead > tr > th {
+	font-weight: bold;
+	color: #0271be;
+	padding-bottom: 0px;
+	padding-left: 4px;
+	text-transform: capitalize;
+}
+div#usersManagementPortletContainer table#usersRequestsTable > thead > tr > th:after {
+	font-weight: normal !important;
+}
+div#usersManagementPortletContainer table#usersRequestsTable > thead > tr > th:hover:after,
+	table#GroupTeamsTableUsers > thead > tr > th:hover:after {
+	color: #009AE5;
+}
+div#usersManagementPortletContainer table#usersRequestsTable > thead > tr > th:active:after,
+	table#GroupTeamsTableUsers > thead > tr > th:active:after,
+		table#GroupTeamsTable > thead > tr > th:active:after {
+	color: #019ad3;
+}
+div#usersManagementPortletContainer div.dataTables_filter label,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_filter label {
+	color : #0271be !important
+}
+div#usersManagementPortletContainer a#currentUsersTableRefresh,
+ div#usersManagementPortletContainerSiteTeamsEditMode a#currentUsersTableRefresh {
+	font-size: 14px;
+    background-color: #7EAB10;
+    background: #7EAB10;
+    color: white;
+    display: inline;
+    border-radius: 50%;
+    padding: 6px 9px;
+    margin-left: 8px;
+    cursor: pointer;
+
+}
+div#usersManagementPortletContainer div#auxilliaryDiv,
+ div#usersManagementPortletContainerSiteTeamsEditMode div#auxilliaryDiv {
+	padding: 0px 15px;
+}
+div#usersManagementPortletContainer div#changeUsersRolesModal div.modal-body,
+ div#usersManagementPortletContainerSiteTeamsEditMode div#changeUsersRolesModal div.modal-body,
+ 	div#assignUsersRolesModal div#changeUsersRolesModal div.modal-body,
+ 	div#usersManagementPortletContainer div#assignUsersToGroupsModal div.modal-body {
+	display:inline;
+}
+div#usersManagementPortletContainer div#assignUsersRolesModal div.modal-body,
+div#usersManagementPortletContainer div#assignUsersToGroupsModal div.modal-body {
+	overflow-y: visible;
+}
+div#usersManagementPortletContainer div#assignUsersRolesModal div.modal-body{
+	padding-top: 0px;
+}
+div#usersManagementPortletContainer div#assignUsersToGroupsModal div.modal-body,
+div#usersManagementPortletContainer div#changeUsersRolesModal div.modal-body {
+	padding: 0px;
+}
+div#usersManagementPortletContainer div.text-dropdown.text-position-below,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.text-dropdown.text-position-below {
+	top:initial !important;
+}
+div#usersManagementPortletContainer span#rolesArrow,
+ div#usersManagementPortletContainerSiteTeamsEditMode span#rolesArrow {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	/* background: red; */
+	border-style: solid;
+	border-width: 15px 10px 10px 0px;
+	border-color: transparent #fff transparent transparent;
+	position: absolute;
+	bottom : 50%;
+	right: 100%;
+}
+div#usersManagementPortletContainer span#roles,
+ div#usersManagementPortletContainerSiteTeamsEditMode span#roles {
+	display : inline-block;
+    position: relative;
+    text-align: left;
+}
+div#usersManagementPortletContainer span#onHoverUser,
+ div#usersManagementPortletContainerSiteTeamsEditMode span#onHoverUser {
+    color : rgb(42, 170, 210);
+    padding-left : 35px;
+    padding-top : 10px;
+}
+div#usersManagementPortletContainer span#rolesContainer,
+ div#usersManagementPortletContainerSiteTeamsEditMode span#rolesContainer {
+	display : inline-block;
+	background-color : #fff;
+	background : #fff;
+	z-index : 3;
+	position : absolute;
+	bottom: 0%;
+	left: 100%;
+	border-radius : 8px;
+	box-shadow: 0px 9px 20px grey;
+	transform: translateY(50%);
+}
+div#usersManagementPortletContainer table#CurrentUsersTable,
+div#usersManagementPortletContainer  table#usersRequestsTable,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable,
+div#usersManagementPortletContainerSiteTeamsEditMode  table#usersRequestsTable {
+	table-layout: fixed;
+}
+div#usersManagementPortletContainer ul#rolesList,
+ div#usersManagementPortletContainerSiteTeamsEditMode ul#rolesList {
+	list-style-type: none;
+	margin : 0px;
+	padding : 5px 20px 20px 20px;
+}
+div#usersManagementPortletContainer ul#rolesList li,
+ div#usersManagementPortletContainerSiteTeamsEditMode ul#rolesList li {
+	margin : 0px;
+	padding : 0px 15px;
+	white-space: nowrap;
+}
+div#usersManagementPortletContainer ul#rolesList li:hover,
+ div#usersManagementPortletContainerSiteTeamsEditMode ul#rolesList li:hover {
+	background: #eeeeee;
+	background-color: #eeeeee;
+}
+div#usersManagementPortletContainer td.relative,
+ div#usersManagementPortletContainerSiteTeamsEditMode td.relative {
+	position : relative;
+}
+div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTableUsers {
+	border-bottom : none;
+}
+div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTableUsers tbody td {
+	padding: 3px;
+}
+div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTableUsers tbody td.dataTables_empty {
+	padding: 0px;
+}
+.dataTable td:focus {
+	outline:none !important;
+}
+table:not(#GroupTeamsTableUsers) thead th:first-of-type:hover {
+	cursor: pointer;
+}
+table.dataTable {
+	margin-bottom: 2em;
+}
+div#blanket *{
+	outline: none;
+}

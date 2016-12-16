@@ -1,0 +1,23 @@
+<ServiceGroupRegistrationParameters
+   xmlns:sgc="http://mds.globus.org/servicegroup/client"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+   xmlns:agg="http://mds.globus.org/aggregator/types"
+   xmlns="http://mds.globus.org/servicegroup/client">
+
+   <RefreshIntervalSecs>20</RefreshIntervalSecs>
+
+<Content xsi:type="agg:AggregatorContent" xmlns:agg="http://mds.globus.org/aggregator/types">
+      <agg:AggregatorConfig xsi:type="agg:AggregatorConfig">
+	 <agg:AggregatorSubscriptionType>
+	   <agg:TopicExpression wsnt:Dialect="http://docs.oasis-open.org/wsn/2004/06/TopicExpression/Simple"
+		xmlns:wsnt="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.xsd"
+		xmlns:wssgtopic="http://diligentproject.org/namespaces/informationservice/disregistry/DISRegistryService">
+		wssgtopic:Profile
+	  </agg:TopicExpression>
+	 </agg:AggregatorSubscriptionType>
+      </agg:AggregatorConfig>
+      <agg:AggregatorData/>
+   </Content>
+</ServiceGroupRegistrationParameters>

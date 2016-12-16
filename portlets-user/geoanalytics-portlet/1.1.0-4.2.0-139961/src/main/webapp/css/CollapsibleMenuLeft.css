@@ -1,0 +1,278 @@
+div#DecisionSupportSystem div#collapsibleMenuLeft {
+    /* position: absolute; */
+    /* max-height: 90%; */
+    /* z-index: 33; */
+    /* top: 2%; */
+    /* margin-left: 1%; */
+    height: 100%;
+    width: 15%;
+    float: left;
+}
+div#DecisionSupportSystem div#availableLayersTitle{
+	font-weight: bold;
+}
+div#DecisionSupportSystem div#treeviewTaxonomiesLayers > ul {
+	margin: 0px;
+}
+div#DecisionSupportSystem div#treeviewTaxonomiesLayers > ul a{
+	margin-left: -10px;
+}
+div#DecisionSupportSystem div#treeviewTaxonomiesLayers > ul ul {
+	margin: 0px;
+}
+div#DecisionSupportSystem div#treeviewTaxonomiesLayers > ul ul li {
+	margin-left: 20px
+}
+div#DecisionSupportSystem  div#titleAndIcon{
+	padding: 10px;
+}
+div#DecisionSupportSystem div#availableLayersIcon{
+	background-image: url("../img/layers.png");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+}
+div#DecisionSupportSystem div#sideButtons {
+	position: absolute;
+	/* z-index: 33; */
+	top: 2%;
+	/* width: 22px; */
+	/* height: 55px; */
+}
+div#DecisionSupportSystem  div#collapsibleMenuLeftContainer {
+	height: 100%;
+	background: #fff;
+	background-color: #fff;
+}
+div.layerContainer > input {
+	z-index : 33;
+}
+div#DecisionSupportSystem div.divThatLooksLikeCheckbox {
+	border : 2px solid #e5e5e5;
+	width: 27px;
+	height: 25px;
+	text-align: center;
+	color: #fff;
+	border-radius: 5px;
+}
+div#DecisionSupportSystem div.divThatLooksLikeCheckbox.clicked {
+	color: rgb(243, 146, 33);
+	font-size: 20px;
+	background-image: url("../img/tick-orange.png");
+	background-size: 22px 25px;
+	background-repeat: no-repeat;
+}
+div#DecisionSupportSystem div.coloredCheckbox {
+	padding-top: 3px;
+}
+div#DecisionSupportSystem div#layersPanel {
+	background: #fff;
+	background-color: #fff;
+	/* padding: 0px 4px 4px 4px; */
+	/* position: absolute; */
+	/* overflow-y: scroll; */
+	/* overflow-x: hidden; */
+	/* height: 100%; */
+	display: block;
+}
+div#DecisionSupportSystem div#collapsibleMenuLeft {
+}
+div#DecisionSupportSystem div#collapsibleMenuLeft.shown div#layersPanel,
+	div#DecisionSupportSystem div#collapsibleMenuLeft.shown div#collapsibleMenuLeftButton {
+	/* display: initial; */
+	/* z-index: 33; */
+	/* position: absolute; */
+	width: 100%;
+	margin: 0px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	/* overflow: scroll; */
+	/* height: 100%; */
+}
+div#DecisionSupportSystem  div#layersPanel.hidden {
+	display:none;
+}
+ div#DecisionSupportSystem div#collapsibleMenuLeftButton {
+ 	background: #fff;
+ 	background-color: #fff;
+ 	right: 25px;
+ 	height: 55px;
+ 	width: 22px;
+ 	border: 2px solid #e5e5e5;
+ 	display: none;
+ }
+ div#DecisionSupportSystem div#collapsibleMenuLeftButtonClosed {
+ 	background: #fff;
+ 	background-color: #fff;
+ 	z-index: 33;
+ 	position: absolute;
+ 	/* margin-left: 0px; */
+ 	height: 50px;
+ 	width: 18px;
+ 	border: 2px solid #e5e5e5;
+ 	display: inline-block;
+ 	margin-left: 1%;
+}
+div#DecisionSupportSystem div#collapsibleMenuLeftButtonClosed.hidden {
+	z-index:0;
+}
+div#DecisionSupportSystem div.layerContainer {
+	/* padding: 0px 0px 0px 20px; */
+	/* background: rgb(251,251,251); */
+	/* background-color: rgb(251,251,251); */
+}
+div#DecisionSupportSystem div#availableLayersContainer {
+	background-color: rgb(2,113,190);
+	background: rgb(2,113,190);
+	color: #fff;
+	padding: 14px 0px 20px 0px;
+	position: relative;
+	margin-bottom: 35px;
+	/* width: 100% !important; */
+}
+div#DecisionSupportSystem div#availableLayersContainer:before,
+	div#DecisionSupportSystem div#availableLayersContainer:after {
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid rgb(2,113,190);
+	bottom: -15px;
+	content: '';
+	left: 50%;
+	margin-left: -20px;
+	position: absolute;
+	color: #fff;
+	pointer-events: none;
+}
+div#DecisionSupportSystem div.layerText {
+	padding: 5px 0px 0px 0px;
+	font-size: 17px;
+	color: rgb(0,0,0);
+}
+div#DecisionSupportSystem div.layerSubtext {
+	padding: 0px 0px 0px 0px;
+	margin-left: 0px;
+	color: rgb(166,166,166);
+}
+div#DecisionSupportSystem div.layerTextContainer {
+	
+	/* padding: 0px 12px; */
+}
+/*********************************************** scrollbar ***********************************************************/
+div#DecisionSupportSystem div#layersPanel::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 7px;
+}
+div#DecisionSupportSystem div#layersPanel::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    /* background: #000; */
+}
+div#DecisionSupportSystem div#layersPanel::-webkit-scrollbar-corner {
+ 	width: 10px;
+ 	background-color: #F5F5F5;
+ 	border-radius: 7px;
+ 	background: #F5F5F5;
+}
+div#DecisionSupportSystem div#layersPanel::-webkit-scrollbar-thumb {
+ 	background-color: #0ae;
+ 	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+	                   color-stop(.5, rgba(255, 255, 255, .2)),
+					   color-stop(.5, transparent), to(transparent));
+ 	border-radius: 7px;
+}
+/******************************************* Side menus arrows *******************************************************/
+div#DecisionSupportSystem div.triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 7px solid transparent;
+	border-left: 5px solid #fff;
+	border-bottom: 7px solid transparent;
+	display:inline-block;
+	left:2px;
+	position:absolute;
+	z-index:33;
+	top:6px;
+}
+div#DecisionSupportSystem div#collapsibleMenuLeftButton div.triangle-right {
+	position: initial;
+}
+div#DecisionSupportSystem div.triangle-right-border {
+	width: 0;
+	height: 0;
+	border-top: 13px solid transparent;
+	border-left: 10px solid #e5e5e5;
+	border-bottom: 13px solid transparent;
+	display:inline-block;
+	left:0px;
+	position:absolute;
+}
+div#DecisionSupportSystem div.triangle-left {
+	width: 0;
+	height: 0;
+	border-top: 7px solid transparent;
+	border-right: 5px solid #fff;
+	border-bottom: 7px solid transparent;
+	display:inline-block;
+	left:3px;
+	position:absolute;
+	z-index:33;
+	top:6px;
+}
+div#DecisionSupportSystem div.triangle-left-border {
+	width: 0;
+	height: 0;
+	border-top: 13px solid transparent;
+	border-right: 10px solid #e5e5e5;
+	border-bottom: 13px solid transparent;
+	display:inline-block;
+	left:0px;
+	position:absolute;
+}
+div#DecisionSupportSystem div.triangle-right,
+	div#DecisionSupportSystem div.triangle-right-border {
+	/* display : none; */
+}
+div#DecisionSupportSystem div#collapsibleMenuLeftButton div.triangle-left,
+	div#DecisionSupportSystem div#collapsibleMenuLeftButton div.triangle-left-border {
+	display : none;
+}
+div#DecisionSupportSystem div#collapsibleMenuLeftButton.clicked div.triangle-left,
+	div#DecisionSupportSystem div#collapsibleMenuLeftButton.clicked div.triangle-left-border {
+	display: initial;
+}
+div#DecisionSupportSystem div#collapsibleMenuLeftButton.clicked div.triangle-right,
+	div#DecisionSupportSystem div#collapsibleMenuLeftButton.clicked div.triangle-right-border {
+	display: none;
+}
+div#DecisionSupportSystem div.triangle-container {
+	position:relative;
+	top: 25%;
+	left: 25%;
+}
+/******************************************* Admin settings button ***************************************************/
+div#DecisionSupportSystem div#adminSettingsButtonContainer{
+	position: absolute;
+	bottom: 2%;
+	/* z-index: 1; */
+}
+div#DecisionSupportSystem button#adminSettingsButton {
+	background-color: #fff;
+	background: #fff;
+	border-radius: 30px;
+	border: 2px solid #e5e5e5;
+	font-size: 17px;
+	position: absolute;
+	z-index: 33;
+}
+div#DecisionSupportSystem button#adminSettingsButton i{
+	margin-right: 15px
+}
+/******************************************* Layers accordion ***************************************************/
+div#DecisionSupportSystem #layersAccordion div.accordion-heading{
+	text-align: center;
+}
+div#DecisionSupportSystem #layersAccordion a.accordion-toggle{
+	font-size: 1.2em;
+	color: #fff;
+	padding: 8px 15px;
+}

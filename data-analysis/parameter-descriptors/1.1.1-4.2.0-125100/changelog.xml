@@ -1,0 +1,9 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-analysis.operation-csv.1-1-1" date="2015-5-20"> 
+		<Change>new parameters added</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-csv.1-0-0" date="2013-10-24"> 
+		<Change>first release</Change>
+	</Changeset>
+	
+</ReleaseNotes>

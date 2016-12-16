@@ -1,0 +1,7 @@
+#DocVisualisation { position: relative;}
+#sunburst, #wordcloud { position: absolute;}
+
+/*
+#sunburst { z-index: 1; }
+#wordcloud { z-index: 2; } 
+*/

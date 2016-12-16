@@ -1,0 +1,378 @@
+#pickProjectContainer * {
+	outline: none !important;
+}
+#blanket .tab-content {
+	overflow: hidden;
+}
+.dataTable tbody tr{
+	background: #fff !important;
+	background-color: #fff !important;
+}
+.dataTable tbody td{
+	background: #fff !important;
+	background-color: #fff !important;
+}
+/*********************** table ***********************/
+#pickProjectContainer #ProjectSelectionTable tbody tr:hover td{
+	background:inherit;
+	background-color:inherit;
+}
+#pickProjectContainer #ProjectSelectionTable tbody td {
+	width: 25%;
+	border: none;
+}
+#pickProjectContainer #ProjectSelectionTable thead {
+	display: none;
+}
+#pickProjectContainer #ProjectSelectionTable {
+	border: none;
+}
+/*********************** table toolbar ***********************/
+#pickProjectContainer .toolbarContainer{
+	/* display: inline-block; */
+	/* position: relative; */
+	margin-top: 4em;
+}
+#pickProjectContainer #relateUsersToProjectsTable_filter,
+#pickProjectContainer #groupsTable_filter,
+#pickProjectContainer #relateUsersGroupsToProjectsTable_filter,
+#pickProjectContainer #assignUsersToProjectGroupssTable_filter {
+	float: right;
+	margin-top: -0.4em;
+	margin-right: -0.6em;
+}
+#pickProjectContainer #relateUsersToProjectsTable_filter label {
+	margin-bottom : 0px;
+}
+#pickProjectContainer #relateUsersToProjectsTable_filter input,
+#pickProjectContainer #groupsTable_filter input,
+#pickProjectContainer #relateUsersGroupsToProjectsTable_filter input,
+#pickProjectContainer #assignUsersToProjectGroupssTable_filter input {
+	margin-bottom: 0px;
+}
+#pickProjectContainer #createNewProject i{
+	margin-top: 4px;
+	transform: scale(1.5,1);
+	-webkit-transform: scale(1.5,1);
+	margin-right: 10px;
+}
+#pickProjectContainer #createNewProject {
+	background: #0271be;
+	background-color: #0271be;
+	color: #fff;
+	position: absolute;
+	top: -2.7em;
+	right: 0%;
+}
+#pickProjectContainer #manipulateProjectGroups {
+	background: #0271be;
+	background-color: #0271be;
+	color: #fff;
+	position: absolute;
+	top: -2.7em;
+	right: 180px;
+}
+#pickProjectContainer #manipulateProjectGroups i {
+	margin-top: 2.8px;
+	margin-right: 10px;
+}
+#pickProjectContainer #createNewProject:not(.clicked):hover,
+#pickProjectContainer #manipulateProjectGroups:not(.clicked):hover {
+	background: #4CB5D2;
+	background-color: #4CB5D2;
+}
+#pickProjectContainer #createNewProject.clicked,
+#pickProjectContainer #manipulateProjectGroups.clicked {
+	background: #E7E6E6;
+	background-color: #E7E6E6;
+	color: #0271be;
+}
+/*********************** container ***********************/
+#pickProjectContainer .projectTileContainer {
+	height: 20em;
+	/* cursor: pointer; */
+	z-index : 1;
+	padding: 10px 15px 5px 15px;
+	position: relative;
+	border: 1px solid #dddddd;
+	border-radius: 1em;
+}
+#pickProjectContainer .projectTileContainer:hover {
+	background: #4CB5D2;
+	background-color: #4CB5D2;
+}
+#pickProjectContainer .projectTileContainer:hover .projectTitle,
+#pickProjectContainer .projectTileContainer:hover .projectTileDate,
+#pickProjectContainer .projectTileContainer:hover .projectDescription,
+#pickProjectContainer .projectTileContainer:hover .projectCreatorName,
+#pickProjectContainer .projectTileContainer:hover .projectTileIcons {
+	color: #fff;
+}
+#pickProjectContainer .projectTileContainer:hover .projectTileIcons i{
+	color: #CDCDCD;
+}
+/* #pickProjectContainer .projectTileContainer:before {
+	content : "";
+	position: absolute;
+	left    : 0;
+	bottom  : 5%;
+	width   : 100%;  *//* or 100px */
+	/* border-left:1px solid rgba(0, 0, 0, .1);
+	border-right:1px solid rgba(0, 0, 0, .1);
+	height: 90%;
+}
+#pickProjectContainer .projectTileContainer:after {
+	content : "";
+	position: absolute;
+	left    : 5%;
+	bottom  : 0%;
+	width   : 90%;*/  /* or 100px */
+/*	border-top:1px solid rgba(0, 0, 0, .1);
+	border-bottom:1px solid rgba(0, 0, 0, .1);
+	height: 100%;
+} */
+/*********************** title ***********************/
+#pickProjectContainer .projectTitle{
+	color: #0271be;
+	width: 85%;
+	cursor: pointer;
+}
+#pickProjectContainer .projectTitle:hover {
+	text-decoration: underline;
+}
+#pickProjectContainer .projectTileTitleContainer {
+	position: relative;
+}
+#pickProjectContainer .projectToolbar{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#pickProjectContainer .projectToolbar i {
+	color: #0271be;
+}
+#pickProjectContainer .editProject{
+	margin-right: 5px;
+	cursor: pointer;
+}
+#pickProjectContainer .viewDetailsOfProject:hover i{
+	color:#fff !important;
+}
+#pickProjectContainer .viewDetailsOfProject{
+	margin-right: 5px;
+	cursor: pointer;
+}
+#pickProjectContainer .deleteProject{
+	cursor: pointer;
+}
+#pickProjectContainer .editProject:hover i{
+	color: #fff;
+}
+#pickProjectContainer .deleteProject:hover i {
+	color: #fff;
+}
+/*********************** date ***********************/
+#pickProjectContainer .projectTileDate{
+	color: #D2D2D2;
+}
+/*********************** description ***********************/
+#pickProjectContainer .projectDescriptionContainer{
+	margin-top: 5px;
+	height: 60%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+#pickProjectContainer .projectDescription,
+#pickProjectContainer .projectTitle {
+	white-space:initial;
+}
+/*********************** creatorName ***********************/
+#pickProjectContainer .projectCreatorName{
+	color: #D2D2D2;
+}
+/*********************** icons ***********************/
+#pickProjectContainer .projectTileIcons {
+	position: absolute;
+	bottom: 5px;
+	width: 92.5%;
+}
+#pickProjectContainer .projectDetailsIcons {
+	/* color: #C15913; */
+	/* background-image: url("../../img/ProjectSelectionIcons/members-orange.png"); */
+	display: inline-block;
+	background-size: 14px 14px;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 12px;
+}
+#pickProjectContainer .iconContainer:last-of-type{
+	/* margin-right: 20px; */
+}
+#pickProjectContainer #moreRecords {
+	display:none;
+}
+#pickProjectContainer .customTableToolbarButtons {
+	display: inline-block;
+	padding: 0.1em 1em;
+	border-radius: 8px;
+	margin-right: 10px;
+	cursor: pointer;
+	color: #0271be;
+}
+#pickProjectContainer .customTableToolbarButtons:hover {
+	background: #4CB5D2;
+	background-color: #4CB5D2;
+	color: #fff;
+}
+#pickProjectContainer .customTableToolbarButtons:not(#createNewProject):not(#manipulateProjectGroups):after {
+	content: "\f0dc";
+	color: #0271be;
+	font-family: Fontawesome;
+	margin-left: 10px;
+} 
+#pickProjectContainer .customTableToolbarButtons:not(#createNewProject):hover:after {
+	color: #fff;
+}
+#pickProjectContainer .customTableToolbarButtons.clicked {
+	background-color: #E7E6E6;
+	background: #E7E6E6;
+	color: #0271be;
+}
+#pickProjectContainer .customTableToolbarButtons.sortAsc:not(#createNewProject):not(#manipulateProjectGroups):after {
+	content: "\f0de";
+	color: rgb(2,113,190);
+}
+#pickProjectContainer .customTableToolbarButtons.sortDesc:not(#createNewProject):not(#manipulateProjectGroups):after {
+	content: "\f0dd";
+	color: rgb(2,113,190);
+}
+div#pickProjectContainer div.searchDiv {
+	background: #0271be;
+	background-color: #0271be;
+	cursor:pointer;
+	padding: 5px 10px 3px 10px;
+	border-radius:50%;
+	color: white;
+	display:inline-block;
+	float:right;
+	height: 25px;
+	position: absolute;
+	right: 0;
+}
+div#pickProjectContainer #ProjectSelectionTable_filter label input {
+	margin-right: 12px;
+	border-radius: 10em;
+}
+div#pickProjectContainer #ProjectSelectionTable_filter {
+	/* height: 31px; */
+	position: absolute;
+	right: 0.15em;
+	top: 0.5em;
+}
+/*********************** pagination ***********************/
+div.dataTables_paginate.paging_full_numbers {
+	font-family: Fontawesome;
+}
+div.dataTables_paginate.paging_full_numbers a.paginate_button:not(.current){
+    background: #0271be;
+    background-color: #0271be;
+}
+div.dataTables_paginate.paging_full_numbers a.paginate_button,
+	div.dataTables_paginate.paging_full_numbers a.paginate_button.disabled {
+    border: none !important;
+    color: #fff !important;
+    padding: 2px 7px;
+}
+div.dataTables_paginate.paging_full_numbers a.paginate_button:not(.disabled):not(.current):hover{
+	background: rgb(42, 170, 210) !important;
+	background-color: rgb(42, 170, 210) !important;
+}
+div.dataTables_paginate.paging_full_numbers a.paginate_button.disabled:hover{
+	background: #0271be;
+    background-color: #0271be;
+    color: #fff !important;
+}
+div.dataTables_paginate.paging_full_numbers a.paginate_button.current,
+	div.dataTables_paginate.paging_full_numbers a.paginate_button.current:hover {
+	background: rgb(41, 131, 173);
+	background-color: rgb(41, 131, 173);
+	color: #fff !important;
+}
+div.dataTables_paginate.paging_full_numbers a.paginate_button.first{
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+div.dataTables_paginate.paging_full_numbers a.paginate_button.last {
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+div.dataTables_paginate.paging_full_numbers a.first:after {
+	content: "\f049";
+}
+div.dataTables_paginate.paging_full_numbers a.paginate_button.previous:after {
+    content: "\f04a ";
+}
+div.dataTables_paginate.paging_full_numbers a.paginate_button.next:after {
+    content: "\f04e";
+}
+div.dataTables_paginate.paging_full_numbers a.paginate_button.last:after {
+    content: "\f050";
+}
+/*********************** portlet-topper ***********************/
+h1.portlet-title{
+
+/* 	display:none; */
+}
+.portlet-content{
+	border-radius:8px !important;
+/* 	border: none !important; */
+}
+#pickProjectContainer div#toolbar,
+#pickProjectContainer .usersToProjectToolbarContainer {
+    border: 1px solid #DDDDDD;
+    border-radius: 10em;
+    margin: 0.5em;
+    padding: 0.7em 1em;
+}
+#pickProjectContainer .usersToProjectToolbarContainer {
+	color: #0271be;
+	font-weight: bold;
+}
+/*********************** Project Tile icons ***********************/
+#pickProjectContainer .iconUser {
+    background-image: url("../../img/ProjectSelectionIcons/members-orange.png");
+}
+#pickProjectContainer .iconFunction {
+    background-image: url("../../img/ProjectSelectionIcons/functions_orange.png");
+}
+#pickProjectContainer .iconLayers {
+	background-image: url("../../img/ProjectSelectionIcons/layers_orange.png");
+}
+/* On hover */
+#pickProjectContainer .projectTileContainer:hover .iconUser {
+    background-image: url("../../img/ProjectSelectionIcons/members-white.png");
+}
+#pickProjectContainer .projectTileContainer:hover .iconFunction {
+    background-image: url("../../img/ProjectSelectionIcons/functions_white.png");
+}
+#pickProjectContainer .projectTileContainer:hover .iconLayers {
+	background-image: url("../../img/ProjectSelectionIcons/layers_white.png");
+}
+/*********************** dataTables length ***********************/
+#relateUsersToProjectsTable_length {
+	margin-left:1em;
+}
+#pickProjectContainer #ProjectSelectionTable_length select,
+#pickProjectContainer #relateUsersToProjectsTable_length select,
+#pickProjectContainer #groupsTable_length select,
+#pickProjectContainer #relateUsersGroupsToProjectsTable_length select {
+	width: 60px;
+}
+#pickProjectContainer #ProjectSelectionTable_length {
+	margin-left : 1em;
+}
+/*********************** dataTables pagination ***********************/
+#pickProjectContainer #ProjectSelectionTable_paginate,
+#pickProjectContainer #relateUsersToProjectsTable_paginate {
+    margin-right: 1em;
+}

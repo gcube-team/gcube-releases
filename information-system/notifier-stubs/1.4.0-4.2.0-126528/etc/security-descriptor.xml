@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<securityConfig xmlns="http://www.globus.org" >
+
+<authz value="none"/>
+
+
+<method name="subscribeToTopic">
+	<auth-method>
+		<GSISecureConversation>
+		</GSISecureConversation>
+	</auth-method>
+	<run-as>
+		<service-identity/>
+	</run-as>
+</method>
+
+<method name="removeSubscription">
+	<auth-method>
+		<GSISecureConversation>
+		</GSISecureConversation>
+	</auth-method>
+
+	<run-as>
+		<service-identity/>
+	</run-as>
+</method>
+
+<method name="registerTopic">
+	<auth-method>
+		<GSISecureConversation>
+		</GSISecureConversation>
+	</auth-method>
+
+	<run-as>
+		<service-identity/>
+	</run-as>
+</method>
+
+
+
+<method name="unregisterTopic">
+	<auth-method>
+		<GSISecureConversation>
+		</GSISecureConversation>
+	</auth-method>
+
+	<run-as>
+		<service-identity/>
+	</run-as>
+</method>
+
+
+
+</securityConfig>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:tns="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	
+	<xs:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../types/GCUBETypes.xsd"/>
+		
+     <!-- Resource properties -->
+	<xs:element name="GHN" type="xs:string"/>
+	<xs:element name="RI" type="xs:string"/>
+	<xs:element name="ServiceID" type="xs:string"/>
+	<xs:element name="ServiceName" type="xs:string"/>
+	<xs:element name="ServiceClass" type="xs:string"/>
+	<xs:element name="VO" type="xs:string"/>
+	<xs:element name="Scope" type="xs:string"/>
+	
+</xs:schema>

@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="reportingframeworklibrary-1.0.1-4.2.0-126606.1-0-1" date="2012-09-07">
+		<Change>Mavenized</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.ReportingFramework.1-0-0" date="2011-02-07">
+		<Change>Component added to enable support for execution status reporting</Change>
+	</Changeset>
+</ReleaseNotes>

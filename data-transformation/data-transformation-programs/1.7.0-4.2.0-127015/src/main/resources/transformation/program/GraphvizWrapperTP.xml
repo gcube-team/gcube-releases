@@ -1,0 +1,103 @@
+<Resource>
+	<ID />
+	<Type />
+	<Profile>
+		<SecondaryType>DTSTransformationProgram</SecondaryType>
+		<Name>GraphvizWrapperTP</Name>
+		<Description>Wrapper Program for Graphviz</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.graphs.GraphvizWrapper</Class>
+					<GlobalProgramParameters />
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0" />
+								<ContentType>
+									<Mimetype>plain/text</Mimetype>
+									<Parameters />
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="method" value="dot" isOptional="false" />
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput" />
+							<ContentType>
+								<Mimetype>image/svg+xml</Mimetype>
+								<Parameters />
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="1" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0" />
+								<ContentType>
+									<Mimetype>plain/text</Mimetype>
+									<Parameters />
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="method" value="dot" isOptional="false" />
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput" />
+							<ContentType>
+								<Mimetype>image/png</Mimetype>
+								<Parameters />
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="2" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0" />
+								<ContentType>
+									<Mimetype>plain/text</Mimetype>
+									<Parameters />
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="method" value="dot" isOptional="false" />
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput" />
+							<ContentType>
+								<Mimetype>image/gif</Mimetype>
+								<Parameters />
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="3" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0" />
+								<ContentType>
+									<Mimetype>plain/text</Mimetype>
+									<Parameters />
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="method" value="dot" isOptional="false" />
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput" />
+							<ContentType>
+								<Mimetype>application/postscript</Mimetype>
+								<Parameters />
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>

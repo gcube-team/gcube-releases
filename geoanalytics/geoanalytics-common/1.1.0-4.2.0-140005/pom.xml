@@ -1,0 +1,247 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+	
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>gr.cite.geoanalytics</groupId>
+	<artifactId>common</artifactId>
+	<version>1.1.0-4.2.0-140005</version>
+	<packaging>jar</packaging>
+	<name>geoanalytics-common</name>
+	
+	<scm>
+		<connection>scm:svn:http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/geoanalytics-common</connection>
+		<developerConnection>scm:http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/geoanalytics-common</developerConnection>
+		<url>http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/geoanalytics-common</url>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<org.springframework.version>4.2.4.RELEASE</org.springframework.version>
+		<gr.cite.geoanalytics.dataaccess-model.version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-model.version>
+		<gr.cite.geoanalytics.dataaccess-model-dao.version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-model-dao.version>
+		<gr.cite.geoanalytics.dataaccess-geoserverbridge.version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-geoserverbridge.version>
+		<javax.inject.version>1</javax.inject.version>
+		<com.google.guava.version>19.0</com.google.guava.version>
+		<org.gcube.spatial.data.version>[3.0.0-SNAPSHOT, 4.0.0-SNAPSHOT)</org.gcube.spatial.data.version>
+<!-- 		<org.gcube.spatial.data.version>[3.0.0-SNAPSHOT, 3.1.0-SNAPSHOT)</org.gcube.spatial.data.version> -->
+		<org.slf4j-api.version>1.7.7</org.slf4j-api.version>
+		<org.slf4j-log4j12.version>1.7.7</org.slf4j-log4j12.version>
+		<org.slf4j.version>1.7.7</org.slf4j.version>
+		<org.junit.version>4.11</org.junit.version>
+		<org.mockito.version>1.9.5</org.mockito.version>
+		<org.geotools.version>15.1</org.geotools.version>
+		<it.geosolutions.version>1.7.0</it.geosolutions.version>
+		<org.jvnet.jaxb2_commons.version>0.6.0</org.jvnet.jaxb2_commons.version>
+		<com.sun.xml.bind.version>2.1.13</com.sun.xml.bind.version>
+		<org.jvnet.ogc.version>1.1.0</org.jvnet.ogc.version>
+		
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>springsource-repo</id>
+			<name>SpringSource Repository</name>
+			<url>http://repo.springsource.org/release</url>
+		</repository>
+		
+		<repository>
+			<id>OSGEO GeoTools repo</id>
+			<url>http://download.osgeo.org/webdav/geotools</url>
+		</repository>
+	</repositories>
+	
+	<dependencies>
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>dataaccess-model</artifactId>
+			<version>${gr.cite.geoanalytics.dataaccess-model.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>${javax.inject.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${com.google.guava.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>${org.slf4j.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.jvnet.jaxb2_commons</groupId>
+			<artifactId>jaxb2-basics-runtime</artifactId>
+			<version>${org.jvnet.jaxb2_commons.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>${com.sun.xml.bind.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jvnet.ogc</groupId>
+			<artifactId>gml-v_3_2_1-schema</artifactId>
+			<version>${org.jvnet.ogc.version}</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>org.gcube.spatial.data</groupId>
+		  <artifactId>geonetwork</artifactId>
+		  <version>${org.gcube.spatial.data.version}</version>
+			<exclusions>
+			  	<exclusion>
+			  		<artifactId>geoapi-pending</artifactId>
+			  		<groupId>org.opengis</groupId>
+			  	</exclusion>
+			  	<exclusion>
+			  		<artifactId>geotk-metadata</artifactId>
+			  		<groupId>org.geotoolkit</groupId>
+			  	</exclusion>
+			  	<exclusion>
+			  		<artifactId>geotk-referencing</artifactId>
+			  		<groupId>org.geotoolkit</groupId>
+			  	</exclusion>
+		 	</exclusions>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>${org.slf4j-api.version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-log4j12</artifactId>
+		    <version>${org.slf4j-log4j12.version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.opengis/geoapi -->
+<!-- 		<dependency> -->
+<!-- 		    <groupId>org.opengis</groupId> -->
+<!-- 		    <artifactId>geoapi</artifactId> -->
+<!-- 		    <version>3.0.0</version> -->
+<!-- 		</dependency> -->
+		
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-epsg-hsql</artifactId>
+			<version>15.1</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-shapefile</artifactId>
+			<version>15.1</version>
+		</dependency>
+		
+ 		<!-- Provides GUI components --> 
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-swing</artifactId>
+			<version>15.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-main</artifactId>
+			<version>15.1</version>
+		</dependency>	
+		
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+<!-- 			<plugin> -->
+<!-- 				<artifactId>maven-source-plugin</artifactId> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<id>attach-sources</id> -->
+<!-- 						<phase>deploy</phase> -->
+<!-- 						<goals> -->
+<!-- 							<goal>jar-no-fork</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 			</plugin> -->
+			<plugin>
+				<!-- explicitly define maven-deploy-plugin after other to force exec order -->
+				<artifactId>maven-deploy-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

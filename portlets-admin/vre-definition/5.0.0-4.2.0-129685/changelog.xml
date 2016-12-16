@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.vre-definition.5-0-0"
+		date="2016-05-21">
+		<Change>Completely redesigned and reimplemented from scratch, modern look and feel</Change>
+	</Changeset>
+</ReleaseNotes>

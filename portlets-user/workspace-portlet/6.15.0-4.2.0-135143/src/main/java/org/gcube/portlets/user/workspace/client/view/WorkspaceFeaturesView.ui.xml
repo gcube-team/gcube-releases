@@ -1,0 +1,46 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+
+	<ui:style>
+	.label-check {
+		display: inline !important;
+		vertical-align: middle !important;
+	}
+	
+	.label-check input {
+		margin-right: 2px !important;
+		margin-top: 0px !important;
+		vertical-align: middle !important;
+	}
+	
+	</ui:style>
+
+	<g:FlowPanel>
+		<b:Alert close="false" animation="false" ui:field="alert_ws_features">
+			<g:HorizontalPanel ui:field="hp_feautures" width="100%">
+				<g:FlowPanel ui:field="fp1">
+					<g:HorizontalPanel ui:field="info_features">
+						<g:Label ui:field="how_to">How-to</g:Label>
+					</g:HorizontalPanel>
+				</g:FlowPanel>
+				<g:FlowPanel ui:field="fp2">
+					<g:HorizontalPanel ui:field="ws_features"
+						verticalAlignment="middle">
+
+						<b:Label ui:field="shf" text="Share"></b:Label>
+						<b:Label ui:field="flk" text="Folder Link"></b:Label>
+						<b:Label ui:field="plk" text="Public Link"></b:Label>
+						<b:Label ui:field="upl" text="Upload"></b:Label>
+						<!-- <b:Label ui:field="upa" text="Upload Archive"></b:Label> -->
+					</g:HorizontalPanel>
+				</g:FlowPanel>
+				<g:FlowPanel ui:field="fp3">
+					<b:CheckBox checked="false" text="Don't show this again"
+						ui:field="ck_features_show_again" styleName="{style.label-check}"></b:CheckBox>
+					<b:Button ui:field="btn_hide_ws_feautures_panel" text="Hide"></b:Button>
+				</g:FlowPanel>
+			</g:HorizontalPanel>
+		</b:Alert>
+	</g:FlowPanel>
+</ui:UiBinder> 

@@ -1,0 +1,45 @@
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+	<id>servicearchive</id>
+	<formats>
+		<format>tar.gz</format>
+	</formats>
+	<baseDirectory>/</baseDirectory>
+	<fileSets>
+		<fileSet>
+			<directory>${distroDirectory}</directory>
+			<outputDirectory>/</outputDirectory>
+			<useDefaultExcludes>true</useDefaultExcludes>
+			<includes>
+				<include>README</include>
+				<include>LICENSE</include>
+				<include>changelog.xml</include>
+			</includes>
+			<fileMode>755</fileMode>
+			<filtered>true</filtered>
+		</fileSet>
+	</fileSets>
+	<dependencySets>
+		<dependencySet>
+			<includes>
+				<include>*:workfloworchestrationlayerservice-stubs</include>
+			</includes>
+			<useProjectArtifact>false</useProjectArtifact>
+			<useTransitiveDependencies>false</useTransitiveDependencies>
+			<outputDirectory>WorkflowOrchestrationLayerServiceStubs</outputDirectory>
+		</dependencySet>
+	</dependencySets>
+	<files>
+		<file>
+			<source>${distroDirectory}/profile.xml</source>
+			<outputDirectory></outputDirectory>
+			<filtered>true</filtered>
+		</file>
+		<file>
+			<source>target/${build.finalName}.gar</source>
+			<outputDirectory>WorkflowOrchestrationLayerService</outputDirectory>
+		</file>
+	</files>
+</assembly>

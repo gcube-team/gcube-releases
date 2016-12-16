@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.statistic-value {
+		color: #0084B4 !important;
+		font-size: 14px;
+		display: inline-block;
+		vertical-align: bottom;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HorizontalPanel>
+			<b:Button ui:field="postsButton" icon="SHARE_ALT" type="LINK"
+				visible="false"></b:Button>
+			<b:Button ui:field="likesButton" icon="THUMBS_UP_ALT" type="LINK"
+				visible="false"></b:Button>
+			<b:Button ui:field="commentsButton" icon="COMMENTS" type="LINK"
+				visible="false"></b:Button>
+		</g:HorizontalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 
