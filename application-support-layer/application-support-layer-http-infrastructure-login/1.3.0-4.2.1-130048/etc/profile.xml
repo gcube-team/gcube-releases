@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID/>
+	<Type>Service</Type>
+	<Profile>
+		<Description>ASLHttpInfrastructureLogin</Description>
+		<Class>ApplicationSupportLayer</Class>
+		<Name>ASLHttpInfrastructureLogin</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>ASLHttpInfrastructureLogin</Description>
+				<Name>ASLHttpInfrastructureLogin</Name>
+				<Version>1.0.0</Version>
+				<Dependencies>
+					<Dependency>
+						<Service>
+							<Class>ApplicationSupportLayer</Class>
+							<Name>ASLCore</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ASLCore</Package>
+						<Version>[3.0.0,4.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ApplicationSupportLayer</Class>
+							<Name>ASLSearch</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ASLSearch</Package>
+						<Version>[3.0.0,4.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ApplicationSupportLayer</Class>
+							<Name>ASLContent</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ASLContent</Package>
+						<Version>[4.0.0,5.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+       						<Class>DVOS</Class>
+       						<Name>usermanagement-core</Name>
+      						 <Version>1.0.0</Version>
+      					</Service>
+						<Package>usermanagement-core</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ApplicationSupportLayer</Class>
+							<Name>ASLUP</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ASLUP</Package>
+						<Version>[3.0.0,4.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ApplicationSupportLayer</Class>
+							<Name>ASL_OAI_PMH</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ASL_OAI_PMH</Package>
+						<Version>[1.0.0,2.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+				</Dependencies>
+				<Files>
+					<File>lib/aslHttpInfrastructureLogin.war</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

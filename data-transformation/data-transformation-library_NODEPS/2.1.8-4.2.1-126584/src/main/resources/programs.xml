@@ -1,0 +1,619 @@
+<programs>
+
+<Resource>
+	<ID>111111</ID>
+	<Type>gDTSTP_GenericResource</Type>
+	<Profile>
+		<Name>GenericXSLTMetadataTransformer</Name>
+		<Description>Program transforming metadata by using an xslt</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Software>
+						<Package>
+							<PKGID>dts_programs_bundle</PKGID>
+							<Location>http://dimitris.org</Location>
+						</Package>
+					</Software>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.metadata.MetadataTransformer</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter isOptional="false" name="schema" value="-"/>
+										<Parameter isOptional="false" name="language" value="-"/>
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="xsltid" value="-" isOptional="false"/>
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schema" value="-"/>
+									<Parameter isOptional="false" name="language" value="-"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>
+
+<Resource>
+	<ID>2222222</ID>
+	<Type>GenericResource</Type>
+	<Profile>
+		<Name>gDTSTP_ImageConverter</Name>
+		<Description>Program transforming images</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.images.ImageTransformer</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>image/jpg</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>image/png</Mimetype>
+								<Parameters>
+									<Parameter name="width" value="*" isOptional="true"/>
+									<Parameter name="height" value="*" isOptional="true"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="1" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>image/jpg</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>image/gif</Mimetype>
+								<Parameters>
+									<Parameter name="width" value="*" isOptional="true"/>
+									<Parameter name="height" value="*" isOptional="true"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="2" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>image/png</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>image/jpg</Mimetype>
+								<Parameters>
+									<Parameter name="width" value="*" isOptional="true"/>
+									<Parameter name="height" value="*" isOptional="true"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="3" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>image/png</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>image/gif</Mimetype>
+								<Parameters>
+									<Parameter name="width" value="*" isOptional="true"/>
+									<Parameter name="height" value="*" isOptional="true"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="4" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>image/gif</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>image/jpg</Mimetype>
+								<Parameters>
+									<Parameter name="width" value="*" isOptional="true"/>
+									<Parameter name="height" value="*" isOptional="true"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="5" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>image/gif</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>image/png</Mimetype>
+								<Parameters>
+									<Parameter name="width" value="*" isOptional="true"/>
+									<Parameter name="height" value="*" isOptional="true"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>
+
+<Resource>
+	<ID>999999999999</ID>
+	<Type>GenericResource</Type>
+	<Profile>
+		<Name>gDTSTP_PDFToHTMLXMLConverter</Name>
+		<Description>Program transforming pdf files to html or xml</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.applications.PdfToHTMLXMLTransformer</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>application/pdf</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/html</Mimetype>
+								<Parameters/>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="1" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>application/pdf</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters/>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>
+
+<Resource>
+	<ID>333333</ID>
+	<Type>GenericResource</Type>
+	<Profile>
+		<Name>gDTSTP_DCtoTEIMetadataTransformer</Name>
+		<Description>Composite program transforming metadata DC to TEI by using two existing TPs</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class/>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="true">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter isOptional="false" name="schema" value="dc"/>
+										<Parameter isOptional="false" name="language" value="*"/>
+									</Parameters>
+								</ContentType>
+							</Source>
+							<Source>
+								<Input id="TRInput1"/>
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter isOptional="false" name="schema" value="lala"/>
+										<Parameter isOptional="false" name="language" value="*"/>
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schema" value="tei"/>
+									<Parameter isOptional="false" name="language" value="*"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+						<Composition>
+							<ExtTransformationUnit tpid="genresource_1" tuid="0">
+								<TargetInput targetID="TRInput0" thisID="TRInput0"/>
+								<TargetOutput targetID="TROutput0" thisID="TRBridge1"/>
+								<UnboundParameters/>
+							</ExtTransformationUnit>
+							<ExtTransformationUnit tpid="genresource_2" tuid="0">
+								<TargetInput targetID="TRInput0" thisID="TRInput1"/>
+								<TargetInput targetID="TRInput1" thisID="TRBridge1"/>
+								<TargetOutput targetID="TROutput0" thisID="TROutput0"/>
+								<UnboundParameters/>
+							</ExtTransformationUnit>
+						</Composition>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>
+
+<Resource>
+	<ID>444444</ID>
+	<Type>GenericResource</Type>
+	<Profile>
+		<Name>gDTSTP_DCtoFTMetadataTransformer</Name>
+		<Description>Program transforming metadata DC to FT by using an xslt</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.metadata.MetadataTransformer</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter name="schema" value="dc" isOptional="false"/>
+										<Parameter name="language" value="*" isOptional="false"/>
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="xsltid" value="xslt_dctoft" isOptional="false"/>
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter name="schema" value="ft" isOptional="false"/>
+									<Parameter name="language" value="*" isOptional="false"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>
+
+<Resource>
+	<ID>55555</ID>
+	<Type>GenericResource</Type>
+	<Profile>
+		<Name>gDTSTP_FTtoTEIMetadataTransformer</Name>
+		<Description>Program transforming metadata FT to TEI by using an xslt</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.metadata.MetadataTransformer</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter name="schema" value="ft" isOptional="false"/>
+										<Parameter name="language" value="*" isOptional="false"/>
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="xsltid" value="xslt_fttotei" isOptional="false"/>
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter name="schema" value="tei" isOptional="false"/>
+									<Parameter name="language" value="*" isOptional="false"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>
+
+<Resource>
+	<ID>66666</ID>
+	<Type>GenericResource</Type>
+	<Profile>
+		<Name>gDTSTP_TEItoEIDBMetadataTransformer</Name>
+		<Description>Program transforming metadata TEI to eiDB by using an xslt</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.metadata.MetadataTransformer</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+										<Parameter name="schema" value="tei" isOptional="false"/>
+										<Parameter name="language" value="en" isOptional="false"/>
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="xsltid" value="xslt_teitoeidb" isOptional="false"/>
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter name="schema" value="eidb" isOptional="false"/>
+									<Parameter name="language" value="en" isOptional="false"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>
+
+<Resource>
+	<ID>777777777</ID>
+	<Type>GenericResource</Type>
+	<Profile>
+		<Name>gDTSTP_ThumbnailCreator</Name>
+		<Description>Program creating thumbnails</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.images.ImageTransformer</Class>
+					<GlobalProgramParameters/>
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>image/bmp</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>image/png</Mimetype>
+								<Parameters>
+									<Parameter name="width" value="300" isOptional="true"/>
+									<Parameter name="height" value="300" isOptional="true"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="1" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>image/gif</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>image/png</Mimetype>
+								<Parameters>
+									<Parameter name="width" value="300" isOptional="true"/>
+									<Parameter name="height" value="300" isOptional="true"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="2" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>image/jpeg</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>image/png</Mimetype>
+								<Parameters>
+									<Parameter name="width" value="300" isOptional="true"/>
+									<Parameter name="height" value="300" isOptional="true"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="3" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>image/x-portable-graymap</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>image/png</Mimetype>
+								<Parameters>
+									<Parameter name="width" value="300" isOptional="true"/>
+									<Parameter name="height" value="300" isOptional="true"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="4" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>image/png</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>image/png</Mimetype>
+								<Parameters>
+									<Parameter name="width" value="300" isOptional="true"/>
+									<Parameter name="height" value="300" isOptional="true"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="5" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0"/>
+								<ContentType>
+									<Mimetype>image/tiff</Mimetype>
+									<Parameters/>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters/>
+						<Target>
+							<Output id="TROutput"/>
+							<ContentType>
+								<Mimetype>image/png</Mimetype>
+								<Parameters>
+									<Parameter name="width" value="300" isOptional="true"/>
+									<Parameter name="height" value="300" isOptional="true"/>
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>
+
+</programs>

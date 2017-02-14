@@ -1,0 +1,110 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>org.gcube.dataanalysis</groupId>
+	<artifactId>statistical-manager-ewe-integrator</artifactId>
+	<version>1.1.0-4.2.1-132201</version>
+	<packaging>jar</packaging>
+
+	<name>statistical-manager-ewe-integrator</name>
+	<description>
+	    This library integrates Ecopath with Ecosim (EwE) in the statistical manager.
+EwE is a free ecological/ecosystem modeling software suite.
+	</description>
+
+	<properties>
+		<distroDirectory>distro</distroDirectory>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.gcube.dataanalysis</groupId>
+			<artifactId>ecological-engine</artifactId>
+			<version>1.10.0-4.2.1-132120</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.dataanalysis</groupId>
+			<artifactId>ecological-engine-smart-executor</artifactId>
+			<version>1.4.0-4.2.1-133573</version>
+		</dependency>
+
+		<dependency>
+			<groupId>rapidminer-custom</groupId>
+			<artifactId>marytts-d4science</artifactId>
+			<version>[5.0.0,6.0.0)</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>xml-apis</groupId>
+			<artifactId>xml-apis</artifactId>
+			<version>1.0.b2</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>1.19.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>1.19.2</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>

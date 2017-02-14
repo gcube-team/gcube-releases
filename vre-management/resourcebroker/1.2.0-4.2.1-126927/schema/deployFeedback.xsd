@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployFeedback" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Q1="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployFeedback">
+
+
+    <element name="Feedback" type="Q1:FeedbackType"></element>
+    
+    <complexType name="FeedbackType">
+    	<sequence>
+            <element name="Scope" type="string" minOccurs="1" maxOccurs="1"></element>
+    		<element name="DeployNode" type="Q1:DeployNodeType"
+    			minOccurs="0" maxOccurs="unbounded">
+    		</element>
+    	</sequence>
+    	<attribute name="planID" type="string" use="required"></attribute>
+    </complexType>
+
+    <complexType name="DeployNodeType">
+    	<sequence>
+    		<element name="PackageGroup" type="Q1:PackageGroupType" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="PackageGroupType">
+    	<sequence>
+    		<element name="Package" type="Q1:PackageType" minOccurs="1" maxOccurs="unbounded"></element>
+    		<element name="GHN" type="string" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    	<attribute name="ID" type="string" use="required"></attribute>
+    	<attribute name="service" type="string" use="required"></attribute>
+    </complexType>
+
+    <complexType name="PackageType">
+    	<sequence>
+    		<element name="ServiceClass" type="string" minOccurs="1" maxOccurs="1"></element>
+    		<element name="ServiceName" type="string" minOccurs="1" maxOccurs="1"></element>
+    		<element name="ServiceVersion" type="string" minOccurs="1" maxOccurs="1"></element>
+    		<element name="PackageName" type="string" minOccurs="1" maxOccurs="1"></element>
+    		<element name="PackageVersion" type="string" minOccurs="1" maxOccurs="1"></element>
+    	</sequence>
+    	<attribute name="reuse" type="boolean" use="required"></attribute>
+    	<attribute name="status" use="required">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="SUCCESS"></enumeration>
+    				<enumeration value="FAILED"></enumeration>
+    				<enumeration value="PARTIAL"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+</schema>

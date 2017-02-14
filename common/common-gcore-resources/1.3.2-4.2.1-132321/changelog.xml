@@ -1,0 +1,25 @@
+<ReleaseNotes>
+	<Changeset component="common-gcore-resources-1.0.0" date="2013-11-01">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="common-gcore-resources-1.1.0" date="2013-13-09">
+		<Change>readonly groups are iterables and can be converted in collections</Change>
+		<Change>hosting node's load work with doubles instead of integers</Change>
+		<Change>resources with no scopes (e.g. just created) now pass validation</Change>
+		<Change>hosting node's load work with doubles instead of integers</Change>
+		<Change>more robust serialisation to contain a JAXB bug</Change>
+		<Change>date serialisation now retro-compatible with legacy processor</Change>
+		<Change>GenericResource now takes mixed content in its body. #newBody(String) and #bodyAsString() as helpers to work with plain string bodies</Change>
+		<Change>Software now takes mixed content in its body. #newSpecificData(String) and #specificDataAsString() as helpers to work with plain string data</Change>
+	</Changeset>
+	<Changeset component="common-gcore-resources-1.2.0" date="2013-02-10">
+		<Change>better string vs. DOM handling of Any content</Change>
+		<Change>Fixed visibility of Software inner class LevelWrapper to be public</Change>
+	</Changeset>
+	<Changeset component="common-gcore-resources-1.3.0" date="2015-04-27">
+		<Change>Deprecated localAvailableStorage() methods and added replacements localAvailableSpace()</Change>
+	</Changeset>
+	<Changeset component="common-gcore-resources-1.3.1" date="2015-06-30">
+		<Change>Added lock on resource unmashalling</Change>
+	</Changeset>
+</ReleaseNotes>

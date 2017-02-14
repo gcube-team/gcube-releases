@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>client for SoftwareGateway service</Description>
+		<Class>VREManagement</Class>
+		<Name>softwaregateway_client</Name>
+		<Version>1.0.1</Version>
+		<Packages>
+			<Software>
+				<Name>softwaregateway_client</Name>
+				<Version>1.0.1-SNAPSHOT</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.vremanagement</groupId>
+  					<artifactId>softwaregateway_client</artifactId>
+  					<version>1.0.1-SNAPSHOT</version>
+				</MavenCoordinates>
+				<Files>
+					<File>${build.finalName}.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

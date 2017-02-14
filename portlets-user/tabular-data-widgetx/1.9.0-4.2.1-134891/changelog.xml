@@ -1,0 +1,46 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.tabular-data-widgetx.1-9-0" date="2016-12-01">
+		<Change>Added fix for support new portal theme</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-widgetx.1-8-0" date="2015-07-03">
+		<Change>Added different colors for columns of different type [issue #251]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-widgetx.1-7-0" date="2015-04-30">
+		<Change>Updated Inline Filter to support soundex, text begin and text
+			end</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-widgetx.1-6-0" date="2015-02-16">
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+		<Change>Strengthened tabular-data-widgetx now support more rows [issue
+			#3238]</Change>
+		<Change>Fixed SelectionModel to select rows on different pages
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-widgetx.1-5-0" date="2014-10-31">
+		<Change>Updated for multi tab support</Change>
+		<Change>Updated Geometry type support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-widgetx.1-4-0" date="2014-09-12">
+		<Change>Updated grid behavior</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-widgetx.1-3-0" date="2014-07-04">
+		<Change>Added error colored lines</Change>
+		<Change>Updated grid, now shows single view column</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-widgetx.1-2-0" date="2014-06-05">
+		<Change>Added Inline Filter</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-widgetx.1-1-0" date="2014-04-04">
+		<Change>Added GridAndCellSelectionModel</Change>
+		<Change>Added getCellValue, checkOnlyColumn and getSelectedRowsId
+			functions on GridSelectionPanel
+		</Change>
+		<Change>Updated ColumnDefinition</Change>
+		<Change>Updated ColumnConfigGenerator</Change>
+		<Change>Updated key of rows on GridSelectionPanel</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-widgetx.1-0-0" date="2014-02-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

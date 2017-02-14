@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.additionalemailaddresses.1-0-0" date="2016-07-29">
+		<Change>First release of the Additional Email Addresses Portlet</Change>
+	</Changeset>
+	<Changeset component="gr.cite.additionalemailaddresses.1-1-0" date="2016-11-23">
+		<Change>Replaced radio button with icon</Change>
+		<Change>Added an information pop up to help users</Change>
+	</Changeset>
+</ReleaseNotes>

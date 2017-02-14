@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+package org.gcube.portlets.widgets.lighttree.client;
+
+/**
+ * @author Federico De Faveri defaveri@isti.cnr.it
+ *
+ */
+public enum ItemType {
+	
+	ROOT,
+	FOLDER,
+	EXTERNAL_IMAGE,
+	EXTERNAL_FILE,
+	EXTERNAL_PDF_FILE,
+	EXTERNAL_URL,
+	QUERY,
+	REPORT_TEMPLATE,
+	REPORT,
+	DOCUMENT,
+	METADATA,
+	PDF_DOCUMENT,
+	IMAGE_DOCUMENT,
+	URL_DOCUMENT,
+	TIME_SERIES,
+	AQUAMAPS_ITEM,
+	WORKFLOW_REPORT,
+	WORKFLOW_TEMPLATE,
+	EXTERNAL_RESOURCE_LINK,
+	GCUBE_ITEM,
+	UNKNOWN_TYPE;
+}

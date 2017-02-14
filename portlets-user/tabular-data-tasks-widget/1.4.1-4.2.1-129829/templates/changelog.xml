@@ -1,0 +1,36 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.tabular-data-tasks-widget.1-4-1"
+		date="2016-07-04">
+		<Change>Integrated with new usermanagement-core
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-tasks-widget.1-4-0"
+		date="2015-04-29">
+		<Change>Updated imports according to server refactor on exceptions
+			(NoSuch..)
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-tasks-widget.1-3-1"
+		date="2015-02-11">
+		<Change>Fixed Collateral table</Change>
+		<Change>Updated GWT Version</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-tasks-widget.1-2-0"
+		date="2014-09-01">
+		<Change>Updated GUI: added validations info</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-tasks-widget.1-1-1"
+		date="2014-06-27">
+		<Change>Added scope to AuthorizationToken</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-tasks-widget.1-1-0"
+		date="2014-06-04">
+		<Change>Updated to support new portal bom configuration (gcube release
+			3.2)
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-tasks-widget.1-0-0"
+		date="2014-02-07">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

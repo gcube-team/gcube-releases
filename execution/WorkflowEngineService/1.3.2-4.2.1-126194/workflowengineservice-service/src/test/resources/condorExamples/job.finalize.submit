@@ -1,0 +1,7 @@
+Universe   = vanilla
+Executable = simple
+Arguments  = 59 10
+Log        = simple.log
+Output     = results.finalize.output
+Error      = results.finalize.error
+Queue

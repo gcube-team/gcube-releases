@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="common-jaxws-calls-1.0.1-4.2.1-126442" date="2013-10-24">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="common-jaxws-calls-1.0.1-4.2.1-126442" date="2015-7-8">
+		<Change>added Method interceptor</Change>
+	</Changeset>
+</ReleaseNotes>

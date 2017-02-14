@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+<!-- Ant buildfile for GCUBE Services
+
+Version 0.5
+
+REQUIRED INPUT PROPERTIES
+
+This buildfile assumes that the following properties have or may have been defined in a "build.properties" file  
+in the configuration directory of the service (or else using the -D flag on the command line). 
+
+package:       			(mandatory) Root package of the service implementation: it should be the first package in the 
+						implementation hierarchy which uniquely identifies the implementation. 
+lib.dir:	   			(mandatory) Root directory where auxiliary jar files are located. Ideally outside ${base.dir} as not needed for remote build and dynamic deployment.
+wsdl.<n>:	 			(mandatory) Name of the <n>-th port-type of the service, as defined in the "name" attributed of the 
+			   			"definitions" root element of the corresponding WSDL file.
+			   			The order imposed over port-type serves only to distinguish build properties and
+			   			and has no particular semantics otherwise.
+			   			This script supports by default up to 6 wsdls (wsdl.1, wsdl.2, wsdl.3,...).
+			   			Further wsdls require a simple script extension (see guidelines at end of script).
+namespace.<n>:			(mandatory) The <n>-th target namespace of a port-type WSSDL or of auxiliary XSD definition. Again, the over imposed over namespaces
+						serves only to distinguish build properties and has no particular semantics otherwise.
+package.<n>:			(optional) The package name of the stubs generated from WSDL and/or XSD elements in the <n>-th target namespace. If it is specified, it is 
+						considered to be relative to ${package}.stubs. If it is omitted, WSLD and XSD elements are placed in $package}.stubs.
+etics.build:   			(optional) Set to 'true', it indicates that build structures and procedures 
+						should be optimised for remote builds in ETICS. If it is omitted, this buildfile will optimise build structures and procedures 
+						for local builds.
+              
+-->
+
+<project default="deployService" name="GCUBE Service Buildfile">
+	
+	<!-- environment -->
+	<property environment="env" />
+
+	<!-- external environment -->
+	<echo message="container.dir ->${env.GLOBUS_LOCATION}" level="info"/>
+	<property name="container.dir" value="${env.GLOBUS_LOCATION}" />
+	<property name="container.schema.dir" location="${container.dir}/share/schema" />
+	<property name="build.packages" location="${container.dir}/share/gcore_tools/build-packages.xml" />
+	<property name="build.stubs" location="${container.dir}/share/gcore_tools/build-stubs.xml" />
+
+	<!-- load non-standard tasks -->
+	<taskdef resource="ise/antelope/tasks/antlib.xml">
+	  <classpath>
+	    <pathelement location="${container.dir}/lib/AntelopeTasks_3.4.2.jar"/>
+	  </classpath>
+	</taskdef>
+	
+	<!-- discriminate between local and remote build -->
+	<property name="etics.build" value="false" />
+		
+	<!-- service-specific locations -->	
+	<property name="service.dir" location="." />
+	<property name="schema.dir.name" value="schema" />
+	<property name="schema.dir" location="${service.dir}/${schema.dir.name}"/>
+	<property name="etc.dir.name" value="etc" />
+	<property name="etc.dir" value="${service.dir}/${etc.dir.name}" />
+	<property name="source.dir" value="${service.dir}/src" />
+	
+	
+	<!-- load input properties  -->
+	<property file="${etc.dir}/build.properties" />
+	
+	<stringutil property="package.dir" string="${package}"><!-- derive package.dir from ${package} -->
+		<replace regex="\." replacement="/"/>
+	</stringutil>
+
+	<!-- file defaults -->
+	<property name="garname" value="${package}"/>
+	<property name="garfile" value="${garname}.gar"/>
+	<property name="jarfile" value="${package}.jar" />
+	<property name="jarfile.stubs" value="${package}.stubs.jar" />
+
+	<if name="etics.build" value="true">	
+		<property name="build.location" location="${service.dir}" />
+		<property name="lib.location" value="${build.location}/lib" />
+		<property name="gar.location" value="${lib.location}"/>
+		<else>
+			<property name="build.location" location="${env.BUILD_LOCATION}" />
+			<property name="lib.location" value="${build.location}/${lib.dir}" />
+			<property name="gar.location" value="${build.location}"/>					
+		</else>
+	</if>
+	
+
+	<property name="stubs.package" value="${package}.${stubs.dir.name}"/>
+	<property name="stubs.dir.name" value="stubs" /> <!-- auxiliary stub classes -->
+	<property name="stubs.dir" value="${source.dir}/${package.dir}${stubs.dir.name}" />
+	<available file="${stubs.dir}" property="stubs.dir.present"/>
+		
+	<!-- temporary build locations -->
+	<property name="build.dir" location="${build.location}/build" />
+	<property name="build.class.dir" location="${build.dir}/classes" />
+	<property name="build.lib.dir" location="${build.dir}/lib" />
+	<property name="build.schema.dir" location="${build.dir}/schema" />
+	<property name="build.schema.service.dir" location="${build.schema.dir}/${package}" />		
+	<property name="build.stubs.dir" location="${build.dir}/stubs-${package}" />
+	<property name="build.stubs.src.dir" location="${build.stubs.dir}/src" />
+	<property name="build.stubs.class.dir" location="${build.stubs.dir}/classes" />
+
+	<!-- misc defaults -->
+	<property name="java.debug" value="on" />
+	<property name="java.deprecation" value="off" />
+		
+	<!-- common filesets -->
+	<fileset dir="${build.lib.dir}" id="garjars" />
+	<property name="garjars.id" value="garjars" />
+	<fileset dir="${build.schema.dir}" id="garschema">
+		<include name="${package}/**" />
+	</fileset>
+	<property name="garschema.id" value="garschema" />
+	<fileset dir="${etc.dir}" id="garetc" />
+	<property name="garetc.id" value="garetc" />
+	
+		
+	<!-- initialisation tasks -->
+	<target name="init" depends="clean" description="creates build structures"> 
+	
+		<!-- input summary -->
+		<echo message="Root Package -> ${package}" level="info"/>
+		<echo message="Interfaces -> ${schema.dir}" level="info"/>
+		<echo message="Auxiliary Stubs  -> ${stubs.dir}" level="info"/>
+		<echo message="Configuration -> ${etc.dir}" level="info"/>
+		<echo message="External dependencies -> ${lib.location}" level="info"/>
+
+		<!-- output summary -->
+		<echo message="Service Gar -> ${garfile}" level="info"/>
+		<echo message="Service Jar -> ${jarfile}" level="info"/>
+		<echo message="Stubs Jar -> ${jarfile.stubs}" level="info"/>
+
+		<!-- create dependency location, if it does not exist already -->
+		<mkdir dir="${lib.location}" />
+		
+		<!-- create temporary build folders -->
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${build.class.dir}" />
+		<delete dir="${build.lib.dir}" />
+		<mkdir dir="${build.lib.dir}" />
+		<mkdir dir="${build.schema.service.dir}" />
+		<mkdir dir="${build.stubs.dir}" />
+		<mkdir dir="${build.stubs.src.dir}" />
+		<mkdir dir="${build.stubs.class.dir}"/>
+
+		<!-- Populates schema folder -->
+		<copy toDir="${build.schema.dir}">
+			<fileset dir="${container.schema.dir}" casesensitive="yes">
+				<include name="wsrf/**/*" />
+				<include name="ws/**/*" />
+				<include name="gcube/**/**/**/*" />
+			</fileset>
+		</copy>
+		<copy toDir="${build.schema.service.dir}">
+			<fileset dir="${schema.dir}"/>
+		</copy>
+		
+		<!-- Populates library folder -->
+		<copy toDir="${build.lib.dir}">
+			<fileset dir="${lib.location}">
+				<exclude name="${jarfile.stubs}" />
+			</fileset>
+		</copy>
+		
+	</target>	
+		
+	<!-- wsdl specific tasks. Clone for each additional wsdl, if required -->
+	<target name="processWSDL.1" depends="init" if="wsdl.1" description="Flattens wsdl and generate bindings">
+		<echo message="PROCESSING ${wsdl.1}'s WSDL:" level="debug"/>
+		<ant antfile="${build.stubs}" target="flatten">
+				<property name="source.flatten.dir" location="${build.schema.service.dir}" />
+				<property name="target.flatten.dir" location="${build.schema.service.dir}" />
+				<property name="wsdl.source" value="${wsdl.1}.wsdl" />
+				<property name="wsdl.target" value="${wsdl.1}_flattened.wsdl" />
+				<property name="wsdl.porttype" value="${wsdl.1}PortType" />
+		</ant>
+		<ant antfile="${build.stubs}" target="generateBinding">
+			<property name="source.binding.dir" value="${build.schema.service.dir}" />
+			<property name="target.binding.dir" value="${build.schema.service.dir}" />
+			<property name="porttype.wsdl" value="${wsdl.1}_flattened.wsdl" />
+			<property name="binding.root" value="${wsdl.1}" />
+		</ant>
+	</target>		
+
+	<target name="processWSDL.2" depends="init" if="wsdl.2" description="Flattens wsdl and generate bindings">
+		<echo message="PROCESSING ${wsdl.2}'s WSDL:" level="debug"/>
+		<ant antfile="${build.stubs}" target="flatten">
+				<property name="source.flatten.dir" location="${build.schema.service.dir}" />
+				<property name="target.flatten.dir" location="${build.schema.service.dir}" />
+				<property name="wsdl.source" value="${wsdl.2}.wsdl" />
+				<property name="wsdl.target" value="${wsdl.2}_flattened.wsdl" />
+				<property name="wsdl.porttype" value="${wsdl.2}PortType" />
+		</ant>
+		<ant antfile="${build.stubs}" target="generateBinding">
+			<property name="source.binding.dir" value="${build.schema.service.dir}" />
+			<property name="target.binding.dir" value="${build.schema.service.dir}" />
+			<property name="porttype.wsdl" value="${wsdl.2}_flattened.wsdl" />
+			<property name="binding.root" value="${wsdl.2}" />
+		</ant>
+	</target>
+		
+	<target name="processWSDL.3" depends="init" if="wsdl.3" description="Flattens wsdl and generate bindings">
+		<echo message="PROCESSING ${wsdl.3}'s WSDL:" level="debug"/>
+		<ant antfile="${build.stubs}" target="flatten">
+				<property name="source.flatten.dir" location="${build.schema.service.dir}" />
+				<property name="target.flatten.dir" location="${build.schema.service.dir}" />
+				<property name="wsdl.source" value="${wsdl.3}.wsdl" />
+				<property name="wsdl.target" value="${wsdl.3}_flattened.wsdl" />
+				<property name="wsdl.porttype" value="${wsdl.3}PortType" />
+		</ant>
+		<ant antfile="${build.stubs}" target="generateBinding">
+			<property name="source.binding.dir" value="${build.schema.service.dir}" />
+			<property name="target.binding.dir" value="${build.schema.service.dir}" />
+			<property name="porttype.wsdl" value="${wsdl.3}_flattened.wsdl" />
+			<property name="binding.root" value="${wsdl.3}" />
+		</ant>
+	</target>
+	
+	<target name="processWSDL.4" depends="init" if="wsdl.4" description="Flattens wsdl and generate bindings">
+			<echo message="PROCESSING ${wsdl.4.name}'s WSDL:" level="debug"/>
+			<ant antfile="${build.stubs}" target="flatten">
+					<property name="source.flatten.dir" location="${build.schema.service.dir}" />
+					<property name="target.flatten.dir" location="${build.schema.service.dir}" />
+					<property name="wsdl.source" value="${wsdl.4}.wsdl" />
+					<property name="wsdl.target" value="${wsdl.4}_flattened.wsdl" />
+					<property name="wsdl.porttype" value="${wsdl.4}PortType" />
+			</ant>
+			<ant antfile="${build.stubs}" target="generateBinding">
+				<property name="source.binding.dir" value="${build.schema.service.dir}" />
+				<property name="target.binding.dir" value="${build.schema.service.dir}" />
+				<property name="porttype.wsdl" value="${wsdl.4}_flattened.wsdl" />
+				<property name="binding.root" value="${wsdl.4}" />
+			</ant>
+		</target>
+	
+	<target name="processWSDL.5" depends="init" if="wsdl.5" description="Flattens wsdl and generate bindings">
+				<echo message="PROCESSING ${wsdl.5}'s WSDL:" level="debug"/>
+				<ant antfile="${build.stubs}" target="flatten">
+						<property name="source.flatten.dir" location="${build.schema.service.dir}" />
+						<property name="target.flatten.dir" location="${build.schema.service.dir}" />
+						<property name="wsdl.source" value="${wsdl.5}.wsdl" />
+						<property name="wsdl.target" value="${wsdl.5}_flattened.wsdl" />
+						<property name="wsdl.porttype" value="${wsdl.5}PortType" />
+				</ant>
+				<ant antfile="${build.stubs}" target="generateBinding">
+					<property name="source.binding.dir" value="${build.schema.service.dir}" />
+					<property name="target.binding.dir" value="${build.schema.service.dir}" />
+					<property name="porttype.wsdl" value="${wsdl.5}_flattened.wsdl" />
+					<property name="binding.root" value="${wsdl.5}" />
+				</ant>
+	</target>
+		
+	<target name="processWSDL.6" depends="init" if="wsdl.6" description="Flattens wsdl and generate bindings">
+				<echo message="PROCESSING ${wsdl.6}'s WSDL:" level="debug"/>
+				<ant antfile="${build.stubs}" target="flatten">
+						<property name="source.flatten.dir" location="${build.schema.service.dir}" />
+						<property name="target.flatten.dir" location="${build.schema.service.dir}" />
+						<property name="wsdl.source" value="${wsdl.6}.wsdl" />
+						<property name="wsdl.target" value="${wsdl.6}_flattened.wsdl" />
+						<property name="wsdl.porttype" value="${wsdl.6}PortType" />
+				</ant>
+				<ant antfile="${build.stubs}" target="generateBinding">
+					<property name="source.binding.dir" value="${build.schema.service.dir}" />
+					<property name="target.binding.dir" value="${build.schema.service.dir}" />
+					<property name="porttype.wsdl" value="${wsdl.6}_flattened.wsdl" />
+					<property name="binding.root" value="${wsdl.6}" />
+				</ant>
+	</target>
+	
+	<target name="generateStubs.1"  if="wsdl.1" description="Generate wsdl stub classes">
+		<echo message="GENERATING ${wsdl.1}'s STUBS:" level="debug"/>
+		<ant antfile="${build.stubs}" target="generateStubs">
+			<property name="mappings" value="${mappings}"/>
+			<property name="source.stubs.dir" location="${build.schema.service.dir}" />
+			<property name="target.stubs.dir" location="${build.stubs.src.dir}" />
+			<property name="wsdl.file" value="${wsdl.1}_service.wsdl" />
+		</ant>
+	</target>
+					
+	<target name="generateStubs.2"  if="wsdl.2" description="Generate wsdl stub classes">
+		<echo message="GENERATING ${wsdl.2}'s STUBS:" level="debug"/>
+		<ant antfile="${build.stubs}" target="generateStubs">
+			<property name="mappings" value="${mappings}"/>
+			<property name="source.stubs.dir" location="${build.schema.service.dir}" />
+			<property name="target.stubs.dir" location="${build.stubs.src.dir}" />
+			<property name="wsdl.file" value="${wsdl.2}_service.wsdl" />
+		</ant>
+	</target>
+
+	<target name="generateStubs.3"  if="wsdl.3" description="Generate wsdl stub classes">
+		<echo message="GENERATING ${wsdl.3}'s STUBS:" level="debug"/>
+		<ant antfile="${build.stubs}" target="generateStubs">
+			<property name="mappings" value="${mappings}"/>
+			<property name="source.stubs.dir" location="${build.schema.service.dir}" />
+			<property name="target.stubs.dir" location="${build.stubs.src.dir}" />
+			<property name="wsdl.file" value="${wsdl.3}_service.wsdl" />
+		</ant>
+	</target>
+				
+	<target name="generateStubs.4"  if="wsdl.4" description="Generate wsdl stub classes">
+		<echo message="GENERATING ${wsdl.4}'s STUBS:" level="debug"/>
+		<ant antfile="${build.stubs}" target="generateStubs">
+			<property name="mappings" value="${mappings}"/>
+			<property name="source.stubs.dir" location="${build.schema.service.dir}" />
+			<property name="target.stubs.dir" location="${build.stubs.src.dir}" />
+			<property name="wsdl.file" value="${wsdl.4}_service.wsdl" />
+		</ant>
+	</target>
+	
+	<target name="generateStubs.5" if="wsdl.5" description="Generate wsdl stub classes">
+		<echo message="GENERATING ${wsdl.5}'s STUBS:" level="debug"/>
+		<ant antfile="${build.stubs}" target="generateStubs">
+			<property name="mappings" value="${mappings}"/>
+			<property name="source.stubs.dir" location="${build.schema.service.dir}" />
+			<property name="target.stubs.dir" location="${build.stubs.src.dir}" />
+			<property name="wsdl.file" value="${wsdl.5}_service.wsdl" />
+		</ant>
+	</target>
+	
+	<target name="generateStubs.6" if="wsdl.6" description="Generate wsdl stub classes">
+		<echo message="GENERATING ${wsdl.6}'s STUBS:" level="debug"/>
+		<ant antfile="${build.stubs}" target="generateStubs">
+			<property name="mappings" value="${mappings}"/>
+			<property name="source.stubs.dir" location="${build.schema.service.dir}" />
+			<property name="target.stubs.dir" location="${build.stubs.src.dir}" />
+			<property name="wsdl.file" value="${wsdl.6}_service.wsdl" />
+		</ant>
+	</target>
+	
+	<!-- Cross-wsdl tasks. Adds dependencies for each additional wsdl, if required -->
+	<target name="processWSDLs" depends="processWSDL.1,processWSDL.2,processWSDL.3,processWSDL.4,processWSDL.5,processWSDL.6" description="generate bindings for all porttypes" />
+	<target name="generateStubs" depends="generateMappings,generateStubs.1,generateStubs.2,generateStubs.3,generateStubs.4,generateStubs.5,generateStubs.6" description="generate stub classes for all porttypes" />
+	
+	<target name="generateMappings"> 
+		<var name="mappings" value=""/>
+	    <if name="namespace.1">
+	    	<if name="package.1">
+	    		<var name="package.1" value="${stubs.package}.${package.1}"/>
+	    	<else>
+	    		<var name="package.1" value="${stubs.package}"/></else>
+	    	</if>
+	        <var name="mappings" value="${mappings} -N${namespace.1}=${package.1} -N${namespace.1}/service=${package.1}.service -N${namespace.1}/bindings=${package.1}.bindings"/>
+	    </if>
+	    <if name="namespace.2">
+	    	<if name="package.2">
+	    		<var name="package.2" value="${stubs.package}.${package.2}"/>
+	    	<else>
+	    		<var name="package.2" value="${stubs.package}"/></else>
+	    	</if>
+	        <var name="mappings" value="${mappings} -N${namespace.2}=${package.2} -N${namespace.2}/service=${package.2}.service -N${namespace.2}/bindings=${package.2}.bindings"/>
+	    </if>
+	    <if name="namespace.3">
+	    	<if name="package.3">
+	    		<var name="package.3" value="${stubs.package}.${package.3}"/>
+	    	<else>
+	    		<var name="package.3" value="${stubs.package}"/></else>
+	    	</if>
+	        <var name="mappings" value="${mappings} -N${namespace.3}=${package.3} -N${namespace.3}/service=${package.3}.service -N${namespace.3}/bindings=${package.3}.bindings"/>
+	    </if>
+	    <if name="namespace.4">
+	    	<if name="package.4">
+	    		<var name="package.4" value="${stubs.package}.${package.4}"/>
+	    	<else>
+	    		<var name="package.4" value="${stubs.package}"/></else>
+	    	</if>
+	        <var name="mappings" value="${mappings} -N${namespace.4}=${package.4} -N${namespace.4}/service=${package.4}.service -N${namespace.4}/bindings=${package.4}.bindings"/>
+	    </if>		
+	    <if name="namespace.5">
+	    	<if name="package.5">
+	    		<var name="package.5" value="${stubs.package}.${package.5}"/>
+	    	<else>
+	    		<var name="package.5" value="${stubs.package}"/></else>
+	    	</if>
+	        <var name="mappings" value="${mappings} -N${namespace.5}=${package.5} -N${namespace.5}/service=${package.5}.service -N${namespace.5}/bindings=${package.5}.bindings"/>
+	    </if>		
+		<if name="namespace.6">
+	    	<if name="package.6">
+	    		<var name="package.6" value="${stubs.package}.${package.6}"/>
+	    	<else>
+	    		<var name="package.6" value="${stubs.package}"/></else>
+	    	</if>
+	        <var name="mappings" value="${mappings} -N${namespace.6}=${package.6} -N${namespace.6}/service=${package.6}.service -N${namespace.6}/bindings=${package.6}.bindings"/>
+	    </if>
+	</target>
+		    
+	
+	<!-- Service tasks -->
+	
+	<target name="deployService" depends="garService" description="deploy service gar">
+			<exec executable="${container.dir}/bin/gcore-deploy-service">
+				<arg value="${gar.location}/${package}.gar"/>
+			</exec> 	
+	</target>
+	
+	<target name="buildService" depends="processWSDLs" description="compiles service implementation">
+		<javac srcdir="${source.dir}" destdir="${build.class.dir}" debug="${java.debug}" deprecation="${java.deprecation}">
+			<classpath>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+				</fileset>
+				<fileset dir="${container.dir}/lib"> 
+					<include name="*.jar" />
+					<exclude name="${jarfile}" />
+				</fileset>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="jarService" depends="buildService" description="jars service implementation">
+		<jar jarfile="${build.lib.dir}/${jarfile}" basedir="${build.class.dir}">
+			<include name="${package.dir}/**" />
+		</jar>
+	</target>
+		
+	<target name="garService" depends="jarService" description="creates service gar">
+		<ant antfile="${build.packages}" target="makeGar">
+			<property name="garserverdeployment.file" value="${etc.dir}/deploy-server.wsdd" />
+			<property name="garserverdeployment_NOSEC.file" value="${etc.dir}/deploy-server.wsdd_NOSEC" />
+			<property name="garclientdeployment.file" value="${etc.dir}/deploy-client.wsdd" />
+			<property name="garclientserverdeployment.file" value="${etc.dir}/deploy-client-server.wsdd" />
+			<property name="garjndiconfigdeployment.file" value="${etc.dir}/deploy-jndi-config.xml" />
+			<property name="gar.id" value="${package}" />
+			<reference refid="${garjars.id}" />
+			<reference refid="${garschema.id}" />
+			<reference refid="${garetc.id}" />
+		</ant>
+		<delete dir="tmp" />
+		<move file="${garfile}" toDir="${gar.location}"/>		
+	</target>
+
+	<!-- Stub Build tasks -->
+				
+	<target name="buildStubs" depends="processWSDLs,generateStubs" description="build service stubs">
+		<if name="stubs.dir.present">
+			<copy toDir="${build.stubs.src.dir}/${package.dir}/${stubs.dir.name}" overwrite="true">
+				<fileset dir="${stubs.dir}" casesensitive="yes">
+					<exclude name="**/*.class" />
+				</fileset>
+			</copy>
+		</if>
+		<javac srcdir="${build.stubs.src.dir}" destdir="${build.stubs.class.dir}" debug="${java.debug}" deprecation="${java.deprecation}" description="compile stub classes">
+			<include name="**/*.java" />
+			<classpath>
+				<fileset dir="${container.dir}/lib">
+					<include name="*.jar" />
+					<exclude name="${jarfile.stubs}" />
+					<exclude name="${jarfile}" />
+				</fileset>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+					<exclude name="**/${jarfile.stubs}" />
+					<exclude name="**/${jarfile}" />
+				</fileset>
+			</classpath>
+		</javac>
+		<copy toDir="${build.stubs.class.dir}/META-INF" overwrite="false"><!-- copy configuration info as well -->
+			<fileset dir="${etc.dir}" casesensitive="yes" />
+		</copy>
+	</target>
+	
+	<target name="jarStubs" depends="buildStubs" description="jar stub classes">
+		<jar destfile="${build.lib.dir}/${jarfile.stubs}" basedir="${build.stubs.class.dir}" />
+	</target>
+	
+	<target name="deployStubs" depends="jarStubs" description="deploy stub jar">
+		<copy file="${build.lib.dir}/${jarfile.stubs}" toDir="${lib.location}"/>
+		<if name="etics.build" value="false">	
+			<copy file="${build.lib.dir}/${jarfile.stubs}" toDir="${container.dir}/lib"/>
+		</if>					
+	</target>
+	
+	<target name="stubs" depends="deployStubs" description="generates, builds, jars and deploy stubs"/>
+	
+	<!-- undeployement tasks -->
+	<target name="undeployStubs" description="deploy stub jar">
+		<delete file="${container.dir}/lib/${jarfile.stubs}"/>			
+	</target>
+	
+	<target name="undeployService" description="undeploy service jar">
+		<exec executable="${container.dir}/bin/gcore-undeploy-service">
+			<arg value="${package}"/>
+		</exec> 	
+	</target>	
+	
+	<!-- javadoc tasks -->
+	<target name="doc">
+		<javadoc access="public" author="true" sourcepath="${source.dir}" packagenames="${package}.*"
+			destdir="doc/api" nodeprecated="false" nodeprecatedlist="false" 
+			noindex="false" nonavbar="false" notree="false" 
+			source="1.5" 
+			splitindex="true" 
+			use="true" version="true" failonerror="false">
+			<classpath>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+					<exclude name="**/${jarfile}" />
+				</fileset>
+				<fileset dir="${container.dir}/lib">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</javadoc>
+	</target>
+		
+	<target name="docstubs">
+		<javadoc access="public" author="true" destdir="doc/api" nodeprecated="false" 
+			packagenames="${package}.${stubs.dir.name}.*" 
+			nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" 	
+			source="1.5" sourcepath="${build.stubs.src.dir}" 
+			splitindex="true" use="true" version="true" 
+			failonerror="false">
+			<classpath>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+					<exclude name="**/${jarfile.stubs}" />
+				</fileset>
+				<fileset dir="${container.dir}/lib">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</javadoc>
+	</target>
+	
+		
+	<target name="clean">
+		<delete dir="${build.dir}" quiet="true"/>
+		<delete dir="${service.dir}/tmp" quiet="true"/>
+		<delete file="${gar.location}/${garfile}" quiet="true"/>
+	</target>
+		
+			
+</project>

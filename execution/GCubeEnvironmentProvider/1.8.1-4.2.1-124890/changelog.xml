@@ -1,0 +1,59 @@
+<ReleaseNotes>
+    <Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-8-1" date="2015-10-19">
+		<Change>Reformed to comply with version 2.0+ of accounting-lib dependency </Change>
+	</Changeset>
+    <Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-8-0" date="2015-10-19">
+		<Change>Removed dependency to org.gcube.messaging.accounting-system </Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-7-0" date="2014-06-11">
+		<Change>introduce JMS provider</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-6-0" date="2014-02-07">
+		<Change>Added accounting</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-5-1" date="2013-04-19">
+		<Change>Compliance with new storage manager API</Change>
+		<Change>Removed cm dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-5-0" date="2013-01-17">
+		<Change>Volatile storage support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-4-0" date="2012-09-07">
+		<Change>Local node resolution added</Change>
+		<Change>Unregister node throws exception + tidying up</Change>
+		<Change>Mavenized</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-3-0" date="2012-05-04">
+		<Change>Integration with new Storage Manager</Change>
+		<Change>Added GetMatchingNodes implementation to IS Provider</Change>
+		<Change>Added CM provider implementation</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-2-0" date="2012-09-02">
+		<Change>Node selection support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-1-5" date="2011-07-29">
+		<Change>Infrastructure scopes are ignored upon GCubeStorageSystem initialization</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-1-4" date="2011-06-09">
+		<Change>Fixed sms uri handling (#259)</Change>
+		<Change>A more descriptive error message is thrown when an operation can not find an collection for the given scope</Change>
+		<Change>Initialization of the Storage System fails if all collection lookup/creation steps performed during initalization for each scope fail</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-1-3" date="2011-05-06">
+		<Change>Support for new CM (GDL 2.0)</Change>
+		<Change>Reporting method now uses static service context to solve memory consumption issue</Change>
+		<Change>Scopes on which cm is not deployed or collection lookup or creation fails for any reason are now ignored during the initialization of Storage System
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-1-2" date="2011-02-07">
+		<Change>Added support for execution status reporting via gCube System Accounting</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-1-1" date="2010-10-08">
+		<Change>Added support for open ended host information publishing and matching</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.GCubeEnvironmentProvider.1-1-0" date="2010-09-03">
+		<Change>Added support in InformationSystem interface for OpenSearch queries</Change>
+		<Change>Added support in InformationSystem interface for Condor related queries</Change>
+	</Changeset>
+</ReleaseNotes>
+

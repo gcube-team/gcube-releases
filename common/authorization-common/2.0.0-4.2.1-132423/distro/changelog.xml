@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="authorization-library-1.0.0" date="2015-05-18">
+		<Change>First Release</Change>
+	</Changeset>
+		<Changeset component="authorization-library-2.0.0" date="2016-09-30">
+		<Change>new model for auth2</Change>
+	</Changeset>
+	
+</ReleaseNotes>

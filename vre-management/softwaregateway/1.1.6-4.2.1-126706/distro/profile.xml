@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>Software Gateway</Description>
+		<Class>VREManagement</Class>
+		<Name>SoftwareGateway</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Main>
+				<Description>SoftwareGateway: Gateway to Maven Repositories. Registration and validation profile, Resolution of: dependencies, plugins and packages </Description>
+				<Name>SoftwareGateway-service</Name>
+				<Version>${project.version}</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.resourcemanagement</groupId>
+					<artifactId>softwaregateway-service</artifactId>
+					<version>${project.version}</version>
+				</MavenCoordinates>
+				<Mandatory level="VO"/>
+				<Shareable level="VO"/>
+				<GHNRequirements>
+					<Requirement category="Site" requirement="string" value="java1.5" operator="ge"/>
+				</GHNRequirements>
+				<GARArchive>softwaregateway-service-${project.version}.gar</GARArchive>
+				<PortType>
+					<Name>gcube/vremanagement/softwaregateway/Access</Name>
+					<!--  WSDL/-->	
+			    </PortType>
+			    <PortType>
+					<Name>gcube/vremanagement/softwaregateway/Registration</Name>
+					<!--WSDL/-->
+			    </PortType>
+	        </Main>
+			<Software>
+            	<Description>Stub classes for interfacing the Software Gateway</Description>
+            	<Name>SoftwareGateway-stubs</Name>
+				<Version>${project.version}</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.resourcemanagement</groupId>
+					<artifactId>softwaregateway-stubs</artifactId>
+					<version>${project.version}</version>
+				</MavenCoordinates>
+				<MultiVersion value="true"/>
+				<Mandatory level="GHN"/>
+				<Shareable level="VO"/>
+				<GHNRequirements>
+					<Requirement category="Site" operator="ge" requirement="string" value="java1.5"/>
+				</GHNRequirements>
+				<SpecificData>text</SpecificData>
+				<Type>library</Type>
+				<Files>
+					<File>softwaregateway-stubs-${project.version}.jar</File>
+				</Files>
+			</Software> 
+			<!--Software>
+				<Description>Test-suite for Software Gateway: provide sample interaction usages with an Storage Gateway instance</Description>
+				<Name>SoftwareGateway-test-suite</Name>
+				<Version>${project.version}</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.resourcemanagement</groupId>
+					<artifactId>softwaregateway-test-suite</artifactId>
+					<version>${project.version}</version>
+				</MavenCoordinates>
+				<MultiVersion value="true"/>				
+				<Shareable level="VO"/>				
+				<Type>application</Type>
+				<Files>
+					<File>lib/softwaregateway.testsuite-${project.version}.jar</File>
+				</Files>
+			</Software-->  
+		</Packages>
+	</Profile>
+</Resource>

@@ -1,0 +1,9 @@
+.generate-button-style {
+	float: right;
+}
+
+.token-info-button {
+	text-align: right !important;
+	float: right !important;
+	padding-right: 0px !important;
+}

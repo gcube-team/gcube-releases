@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchResource>
+  <name>GENESI-DR Dataset: MER_RR__1P</name>
+  <descriptionDocumentURI>http://maps.terradue.com/drsite/envisat_meris/mer_rr__1p/description/</descriptionDocumentURI>
+  <brokeredResults>false</brokeredResults>
+  <transformation>
+    <MIMEType>application/atom+xml</MIMEType>
+    <recordSplitXPath>*[local-name()='feed']/*[local-name()='entry']</recordSplitXPath>
+    <XSLTLink>file:///home/gerasimos/workspace/OpenSearch_Library/Transformation/GENESI-DR_id.xsl</XSLTLink>
+  </transformation>
+</OpenSearchResource>

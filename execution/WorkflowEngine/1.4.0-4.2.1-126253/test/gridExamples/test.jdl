@@ -1,0 +1,10 @@
+# test.jdl
+
+Executable    = "test.sh";
+Arguments     = "Hello world of D4Science!";
+StdOutput     = "std.out";
+StdError      = "std.err";
+InputSandbox  = {"test.sh"};
+OutputSandbox = {"std.out", "std.err"};
+VirtualOrganisation = "d4science.research-infrastructures.eu";
+Requirements =  other.GlueCEUniqueID == "dl01.di.uoa.gr:2119/jobmanager-lcgpbs-d4science";

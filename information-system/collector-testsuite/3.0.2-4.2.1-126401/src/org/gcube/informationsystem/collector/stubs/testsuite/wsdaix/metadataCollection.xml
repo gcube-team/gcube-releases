@@ -1,0 +1,31 @@
+<Resource version="0.4.x">
+	<ID>3bb6e850-94d2-11df-8d06-8e825c7c7b8d</ID>
+	<Type>MetadataCollection</Type>
+	<Scopes>
+		<Scope>/d4science.research-infrastructures.eu/FARM/FCPPS</Scope>
+	</Scopes>
+	<Profile>
+		<Description />
+		<Name>Annotations_Collection</Name>
+		<IsUserCollection value="true" />
+		<IsIndexable value="true" />
+		<IsEditable value="true" />
+		<CreationTime>2010-07-21T15:14:13+01:00</CreationTime>
+		<Creator>unknown</Creator>
+		<NumberOfMembers>0</NumberOfMembers>
+		<LastUpdateTime>2010-07-21T15:14:29+01:00</LastUpdateTime>
+		<PreviousUpdateTime>2010-07-21T15:14:29+01:00</PreviousUpdateTime>
+		<LastModifier>unknown</LastModifier>
+		<OID>5ec18cb0-94d2-11df-b077-8e28f9a7444e</OID>
+		<RelatedCollection>
+			<CollectionID>d14baeb0-f162-11dd-96f7-b87cc0f0b075</CollectionID>
+			<SecondaryRole>is-annotated-by</SecondaryRole>
+		</RelatedCollection>
+		<MetadataFormat>
+			<SchemaURI>http://gcube.org/AnnotationFrontEnd/AFEAnnotationV2
+			</SchemaURI>
+			<Language>en</Language>
+			<Name>Annotations</Name>
+		</MetadataFormat>
+	</Profile>
+</Resource>

@@ -1,0 +1,140 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.txt_search {
+		border-radius: 0px !important;
+		margin-bottom: 0px !important;
+	}
+	
+	.btn_search {
+		border-radius: 0px 8px 8px 0 !important;
+		-webkit-border-radius: 0px 8px 8px 0 !important;
+		-moz-border-radius: 0px 8px 8px 0 !important;
+		margin-right: 30px !important;
+	}
+	
+	.btn_search_start {
+		-webkit-border-radius: 0px;
+		border-radius: 0px !important;
+	}
+	
+	.btn_search_start:before {
+		color: #333333;
+		content: "\f036";
+		display: inline-block;
+		font-family: "fontawesome";
+	}
+	
+	.btn_search_contains {
+		-webkit-border-radius: 0px;
+		border-radius: 0px !important;
+	}
+	
+	.btn_search_contains:before {
+		color: #333333;
+		content: "\f039";
+		display: inline-block;
+		font-family: "fontawesome";
+	}
+	
+	.filter_bar {
+		height: 30px;
+		padding: 2px;
+		background-color: #fff;
+		border-radius: 4px;
+	}
+	
+	.context_bar {
+		height: 30px;
+		padding: 2px;
+	}
+	
+	.context_bar_select {
+		display: block !important;
+		margin: auto !important;
+	}
+	
+	.label_wizard_policy {
+		margin-left: 10 px;
+		font-size: 15 px;
+		font-weight: 600;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<b:WellForm type="SEARCH" ui:field="form_search">
+			<g:FlowPanel addStyleNames="{style.context_bar}"
+				ui:field="string_context">
+				<b:ListBox ui:field="l_context" addStyleNames="{style.context_bar_select}">
+				</b:ListBox>
+
+			</g:FlowPanel>
+			<b:ControlGroup>
+				<b:Controls>
+					<b:Tooltip text='Delete Policy'>
+						<b:Button type="DANGER" addStyleNames="btn btn_delete"
+							ui:field="b_delete_policy" />
+					</b:Tooltip>
+					<b:Tooltip text='' b:id="idAddPolicy">
+						<b:Button type="SUCCESS" addStyleNames="btn btn_add"
+							ui:field="b_add_policy" />
+					</b:Tooltip>
+					<b:InputAddOn prependIcon="SEARCH" ui:field="i_search"
+						b:id="idSearchPolicy">
+
+						<b:Popover trigger="FOCUS" placement="TOP"
+							text="use @ for search caller,
+							or $ for service, or * for access"
+							heading="Tag for search">
+
+							<b:TextBox addStyleNames="{style.txt_search}"
+								placeholder="click for search" b:id="t_search" ui:field="t_search" />
+						</b:Popover>
+						<b:ButtonGroup toggle="radio" ui:field="b_search_type">
+							<b:Tooltip text='starts With'>
+								<b:Button addStyleNames="btn {style.btn_search_start}"
+									ui:field="b_search_start" active="true" />
+							</b:Tooltip>
+							<b:Tooltip text='contains'>
+								<b:Button addStyleNames="btn {style.btn_search_contains}"
+									ui:field="b_search_contains" />
+							</b:Tooltip>
+
+						</b:ButtonGroup>
+
+
+						<b:Button addStyleNames='{style.btn_search}' ui:field="b_search">Search</b:Button>
+					</b:InputAddOn>
+
+
+					<b:ButtonGroup toggle="radio" b:id="idGroupPolicy">
+						<b:Tooltip text='All'>
+							<b:Button addStyleNames="btn btn_group_none" ui:field="b_group_none"
+								active="true" />
+						</b:Tooltip>
+						<b:Tooltip text='Only Users'>
+							<b:Button addStyleNames="btn btn_group_user" ui:field="b_group_user" />
+						</b:Tooltip>
+						<b:Tooltip text='Only Roles'>
+							<b:Button addStyleNames="btn btn_group_role" ui:field="b_group_role" />
+						</b:Tooltip>
+						<b:Tooltip text='Only Services'>
+							<b:Button addStyleNames="btn btn_group_service"
+								ui:field="b_group_service" />
+						</b:Tooltip>
+					</b:ButtonGroup>
+					<b:Tooltip text='Refresh List'>
+						<b:Button addStyleNames="btn btn_refresh" ui:field="b_refresh" />
+					</b:Tooltip>
+					<span styleName="{style.label_wizard_policy}">
+						Create policy to deny access to Services
+						in the
+						current context
+					</span>
+				</b:Controls>
+			</b:ControlGroup>
+			<g:FlowPanel addStyleNames="{style.filter_bar}" ui:field="string_search">
+			</g:FlowPanel>
+		</b:WellForm>
+	</g:HTMLPanel>
+</ui:UiBinder> 

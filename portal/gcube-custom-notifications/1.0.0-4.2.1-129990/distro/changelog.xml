@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.gcube-custom-notifications.1-0-0"
+		date="2016-07-01">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

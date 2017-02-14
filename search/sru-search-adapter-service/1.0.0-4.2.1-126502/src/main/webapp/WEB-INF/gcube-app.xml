@@ -1,0 +1,11 @@
+<application mode="online">
+
+	<group>Search</group>
+	<name>SruSearchAdapter</name>
+	<version>1.0.0</version>
+
+	<description>Restful Version of SRU</description>
+
+	<exclude>/resources/</exclude>
+
+</application>

@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.geoserverbridge.geoservermanager.1-0-0" date="2016-07-29">
+		<Change>First release</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.geoserverbridge.geoservermanager.1-1-0" date="2016-11-22">
+		<Change>Publish to geonetwrok. Class 'GSManagerGeoNetworkBridge' is changed, in order to use the custom code with 'geotools' library</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,243 @@
+
+@media (max-width: 479px) {
+	.custom-col-3{
+		display: table-row;
+	}
+	
+	.techno-economic-analysis-portlet #tea_fish_feed_price,
+	.techno-economic-analysis-portlet #tea_fish_fry_price,
+	.techno-economic-analysis-portlet #tea_fish_selling_price{
+		width: 130px;
+		margin:0;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_production_model{
+		width: 196px;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_tax_rate{
+		width: 180px ;
+	}	
+	.techno-economic-analysis-portlet .tea_currency{
+		width: 50px;
+	}	
+}
+
+@media (min-width: 480px) and (max-width: 839px) {
+	.custom-col-3{
+		display: table-row;
+	}
+	
+	.techno-economic-analysis-portlet #tea_fish_feed_price,
+	.techno-economic-analysis-portlet #tea_fish_fry_price,
+	.techno-economic-analysis-portlet #tea_fish_selling_price{
+		width: calc(10px + 30vw);
+		margin:0;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_production_model{
+		width: calc(76px + 30vw);
+	} 
+	
+	.techno-economic-analysis-portlet #tea_tax_rate{
+		width: calc(60px + 30vw);
+	}	
+	.techno-economic-analysis-portlet .tea_currency{
+		width: 50px;
+	}	
+}
+
+
+@media (min-width: 840px) and (max-width: 889px) {
+	.custom-container{  
+		display: table-row;
+		width:100%;
+	}	
+	.custom-col-3{  
+		display: table-row;
+		width:100%;
+	}
+	.custom-row{  
+		display: table-cell;
+		width:53%;
+	}
+	.techno-economic-analysis-portlet #tea_fish_feed_price,
+	.techno-economic-analysis-portlet #tea_fish_fry_price,
+	.techno-economic-analysis-portlet #tea_fish_selling_price{
+		width: calc(10px + 10vw);
+		margin:0;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_production_model{
+		width: calc(76px + 10vw);
+	} 
+	
+	.techno-economic-analysis-portlet #tea_tax_rate{
+		width: calc(60px + 10vw);
+	}	
+	.techno-economic-analysis-portlet .tea_currency{
+		width: 50px;
+	}	
+}
+
+
+@media (min-width: 890px) and (max-width: 1049px) {
+	.custom-container{  
+		display: table-row;
+		width:100%;
+	}	
+	.custom-col-3{  
+		display: table-row;
+		width:100%;
+	}
+	.custom-row{  
+		display: table-cell;
+		width:56%;
+	}
+	
+	.techno-economic-analysis-portlet #tea_fish_feed_price,
+	.techno-economic-analysis-portlet #tea_fish_fry_price,
+	.techno-economic-analysis-portlet #tea_fish_selling_price{
+		width: 10vw;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_production_model{
+		width: 16vw;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_tax_rate{
+		width: 14vw;
+	}
+}
+
+@media (min-width: 1050px) and (max-width: 1199px) {
+	.custom-container{  
+		display: table-row;
+		width:100%;
+	}	
+	.custom-col-3{  
+		display: table-row;
+		width:100%;
+	}
+	.custom-row{  
+		display: table-cell;
+		width:58%;
+	}
+	.techno-economic-analysis-portlet #tea_fish_feed_price,
+	.techno-economic-analysis-portlet #tea_fish_fry_price,
+	.techno-economic-analysis-portlet #tea_fish_selling_price{
+		width: calc(10px + 10vw);
+		margin:0;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_production_model{
+		width: calc(76px + 10vw);
+	} 
+	
+	.techno-economic-analysis-portlet #tea_tax_rate{
+		width: calc(60px + 10vw);
+	}	
+	.techno-economic-analysis-portlet .tea_currency{
+		width: 50px;
+	}		
+/* 	.techno-economic-analysis-portlet #tea_fish_feed_price,
+	.techno-economic-analysis-portlet #tea_fish_fry_price,
+	.techno-economic-analysis-portlet #tea_fish_selling_price{
+		width: 8vw;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_production_model{
+		width: 16vw;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_tax_rate{
+		width: 14vw;
+	} */
+}
+
+@media (min-width: 1200px) {
+	.custom-container{  
+		display: table;
+		width:100%;
+	}	
+	
+	.custom-row{
+		display: table;
+		width:100%;
+	}
+		
+	.custom-col-3{
+		display: table-cell;
+		width:33%;
+	}
+	.techno-economic-analysis-portlet #tea_fish_feed_price,
+	.techno-economic-analysis-portlet #tea_fish_fry_price,
+	.techno-economic-analysis-portlet #tea_fish_selling_price{
+		width: 7vw;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_production_model{
+		width: 12.25vw;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_tax_rate{
+		width: 11vw;
+	}
+	.techno-economic-analysis-portlet .tea_currency{
+		width:3.75vw;
+	}
+}
+
+@media (min-width: 1280px){
+	.techno-economic-analysis-portlet #tea_production_model{
+		width: 12vw;
+	} 
+}
+
+@media (min-width: 800px) and (max-width: 979px){
+	.aui input[type="color"], 
+	.aui input[type="date"], 
+	.aui input[type="datetime"], 
+	.aui input[type="datetime-local"], 
+	.aui input[type="email"], 
+	.aui input[type="month"], 
+	.aui input[type="number"], 
+	.aui input[type="password"], 
+	.aui input[type="search"], 
+	.aui input[type="tel"], 
+	.aui input[type="text"], 
+	.aui input[type="time"], 
+	.aui input[type="url"], 
+	.aui input[type="week"], 
+	.aui select, 
+	.aui textarea, 
+	.aui .input-prepend .add-on, 
+	.aui .navbar-search .search-query, 
+	.aui .uneditable-input {
+	    font-size: 14px;
+	}
+}
+
+@media (min-width: 200px) and (max-width: 799px){
+	.aui input[type="color"], 
+	.aui input[type="date"], 
+	.aui input[type="datetime"], 
+	.aui input[type="datetime-local"], 
+	.aui input[type="email"], 
+	.aui input[type="month"], 
+	.aui input[type="number"], 
+	.aui input[type="password"], 
+	.aui input[type="search"], 
+	.aui input[type="tel"], 
+	.aui input[type="text"], 
+	.aui input[type="time"], 
+	.aui input[type="url"], 
+	.aui input[type="week"], 
+	.aui select, 
+	.aui textarea, 
+	.aui .input-prepend .add-on, 
+	.aui .navbar-search .search-query, 
+	.aui .uneditable-input {
+	    font-size: 16px;
+	}
+}

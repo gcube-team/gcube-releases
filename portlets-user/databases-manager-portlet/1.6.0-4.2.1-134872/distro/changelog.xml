@@ -1,0 +1,163 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.databases-manager-portlet.1-6-0"
+		date="2016-12-01">
+		<Change>Porting to DataMiner service</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.databases-manager-portlet.1-5-0"
+		date="2016-10-01">
+		<Change>Updated dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.databases-manager-portlet.1-4-0"
+		date="2016-07-15">
+		<Change>Updated to Liferay 6.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.databases-manager-portlet.1-3-0"
+		date="2014-12-05">
+		<Change>ufor the submitQuery the file result management has been
+			modified. The file is retrieved from the statistical.
+			GWTdbManagerServiceImpl, GxtBorderLayoutPanel, ComputationOutput,
+			SubmitQueryResultWithFileFromServlet modified.
+			UriResolver used to generate an http link from smp url. Dependency added in the
+			pom file.
+		</Change>
+		<Change>bug fixed for ehcache. The operation of the cache-diskstore
+			pair seems not operate in a correct way when retrieving a big object
+			composed of many data. When a big object is retrieved, some data,
+			previously stored, have been corrupted.
+			In order to solve the problem, a safe procedure has been implemented
+			that, once recovered the data from cache, checks if the data are
+			corrupt. If yes, they need to be recovered again.GWTdbManagerServiceImpl class modified.
+		</Change>
+		<Change>GWTdbManagerServiceImpl class modified:
+			1)parameter eternal changed from false to true value in such a way data never
+			expire.Data will be always in cache.
+			2) method insertDataIntoCache changed in order to add a check on key.
+			If cache contains it then the related element is added in cache.
+		</Change>
+		<Change>samplings and submitQuery changed in order to return as a
+			result a map with column values truncated to 255 characters and a
+			file with the whole columns values in order to manage so to manage
+			big data properly and the conversion of a geometry data type in a
+			multipolygon representation applying the function st_astext().Classes
+			GWTdbManagerServiceImpl, GxtBorderLayoutPanel and
+			SamplingResultWithFileFromServlet changed in order to manage the
+			truncated map and the file recovered from the statistical through a
+			smt url and converted in a http url.
+		</Change>
+		<Change>dependencies modified in pom file:
+			- dependency xalan modified in provided in order to use the lib
+			available in the portal.
+			- dependency jakarta-regexp added in order to not use the package
+			regexp in xalan
+			- removed an aslcore dependency because duplicated.
+		</Change>
+		<Change>
+			- total number rows added in the header of the result related to the
+			submit Query operation: classes ComputationOutput,SubmitQueryResultWithFileFromServlet,GxtBorderLayoutPanel,
+			GWTdbManagerServiceImpl modified.
+			- class Result modified in order to implemet IsSerializable and not
+			Serializable 
+			- pom file modified in order to use gwt 2.6.1 with scope compile and
+			not use gwt from the portal bom file.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.databases-manager-portlet.1-2-0"
+		date="2014-10-27">
+		<Change>user timeout session management generating a
+			SessionExpiredException in order to show the session checker dialog
+			and redirect to login.
+		</Change>
+		<Change>
+			Class StatisticalManagerException created in order to manage
+			exceptions generated from the statistical
+		</Change>
+		<Change>
+			caching on sampling, smartSampling and submitQuery requests
+			added.
+		</Change>
+		<Change>
+			bug fixed in servlet in sbmitQuery method generated when a map
+			is
+			retrieved from a statisticalmanager and a user clicks cancel
+			button.
+		</Change>
+		<Change>
+			data refresh added for sampling, smartSampling and submitQuery
+			operations.
+		</Change>
+		<Change>
+			cache name changed in DBCache.
+		</Change>
+		<Change>
+			batch processing (thread) added to recover all data in the
+			tree and the
+			tables list.
+		</Change>
+		<Change>
+			data cached adding in a key the scope within a user uses the
+			portlet.
+		</Change>
+		<Change>
+			data refresh improved in the tree panel in order to
+			implement
+			the cascade refresh using a thread.Queue mechanism added to make
+			asynchronous the communication with the ThreadDataLoader.
+		</Change>
+		<Change>
+			For the functionality of TablesList the "canc" button of the
+			window that displays the tables list has been removed and has been
+			added icon at the top of the window (as well as in submitQuery and
+			Samplings dialogs). In addition, on top of the window has been also
+			removed icon that minimizes window and has been added icon that
+			maximizes the window.
+		</Change>
+		<Change>
+			bug fixed in class GxtBorderLayout in order to manage the copy
+			of grid
+			elements correctly. An element copy has been managed setting a
+			grid
+			property named disbleTextSelection and not through the double
+			click
+			and the edit event.
+		</Change>
+		<Change>
+			counter added in order to count the cache hit number and the
+			satistical manager computation number, the cache query sampling hit
+			number and the satistical manager query sampling computation number
+			to perform statistics about the effectiveness of the cache.
+		</Change>
+		<Change>
+			for submitQuery operation attributes names added in the csv
+			file.
+		</Change>
+		<Change>
+			bug fixed for the submit query operation if at the same time a
+			refresh query operation is performed. GWTdbManagerServiceImpl and
+			GxtBorderLayput classes modified.
+		</Change>
+		<Change>
+			top header in the portlet made invisible. GxtBorderLayout
+			class modified.
+		</Change>
+		<Change>
+			bug fixed in DatabasesResourcesManager component and related
+			to samplings operations and the related column values truncation.If
+			quote is truncated the parsecvsString in servlet does not work fine.
+			Row, GxtBorderLayoutPanel, GWTdbManagerServiceImpl,
+			GxtBorderLayoutPanel classes modified to manage in a correct way the
+			exception generated in class Row while parsing a csv row in a values
+			list for samplings operations.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.databases-manager-portlet.1-1-0"
+		date="2014-09-10">
+		<Change>samplings operations, show create table and table details made
+			available. Interface enhancement
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.databases-manager-portlet.1-0-0"
+		date="2014-06-30">
+		<Change>first release</Change>
+	</Changeset>
+
+</ReleaseNotes>

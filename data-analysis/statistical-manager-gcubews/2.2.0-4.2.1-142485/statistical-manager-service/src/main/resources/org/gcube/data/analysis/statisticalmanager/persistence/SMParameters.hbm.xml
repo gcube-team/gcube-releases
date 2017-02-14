@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping
+	package="org.gcube_system.namespaces.data.analysis.statisticalmanager.types">
+
+	<class name="SMEntry" abstract="true">
+
+		<id name="entryId">
+			<generator class="native" />
+		</id>
+
+		<property name="computationId"/> 
+		<property name="key" />
+		<property name="value" />
+
+	</class>
+
+</hibernate-mapping>

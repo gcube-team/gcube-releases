@@ -1,0 +1,9 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.vremanagement.whnmanager-api.1-0-0" date="2013-12-12"> 
+		<Change>first release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vremanagement.whnmanager-api.2-0-0" date="2016-10-3"> 
+		<Change>moved to Smartgears 2.0</Change>
+	</Changeset>
+	
+</ReleaseNotes>

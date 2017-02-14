@@ -1,0 +1,25 @@
+<!-- Base module. Load here ONLY the base GWT libraries, plus the required javascript libs (e.g. d3js, jQuery, etc) 
+	 and NOT custom javascript code  -->
+
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+<!-- 
+	<inherits name="com.google.gwt.user.theme.standard.Standard"/>
+
+	<inherits name="com.google.gwt.resources.Resources"/>
+
+	<script src="gr.uoa.di.madgik.visualisations/public/libs/d3/d3.min.js"></script>
+	<script src="gr.uoa.di.madgik.visualisations/public/libs/nvd3/nv.d3.min.js"></script>
+	<script src="gr.uoa.di.madgik.visualisations/public/libs/jquery/jquery-1.11.0.min.js"></script>
+	<script src="gr.uoa.di.madgik.visualisations/public/libs/jquery/jquery.json-2.4.min.js"></script>
+	
+	<stylesheet src='gr.uoa.di.madgik.visualisations/public/libs/nvd3/nv.d3.min.css'/>	
+ -->
+ 	
+	<entry-point class="gr.uoa.di.madgik.visualisations.client.Visualizer"/>
+
+	<source path="client" />
+	<source path="shared" />
+  	<public path="public" />
+
+</module>

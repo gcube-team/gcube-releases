@@ -1,0 +1,22 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.accounting.accounting-lib.2-2-0" date="2017-02-14">
+		<Change>Removed dependency over reflection library (refs #2358)</Change>
+	</Changeset>
+    <Changeset component="org.gcube.accounting.accounting-lib.2-1-0" date="2016-04-08">
+		<Change>Ready for ScopeProvider Removal #2194</Change>
+		<Change>Fixed Bug on StorageUsageRecord aggregation #2316</Change>
+		<Change>Fixed Bug on Recovery of UsageRecords accounted on Fallback</Change>
+	</Changeset>
+    <Changeset component="org.gcube.accounting.accounting-lib.2-0-0" date="2016-02-08">
+		<Change>Separated Accounting Model and generalize solution. the library now depends from document-store-lib #1746</Change>
+		<Change>Managed UsageRecords discovered dinamically on classpath #1295</Change>
+		<Change>Persistence is re-checked every 10 min when Fallback is used #1349</Change>
+		<Change>Repetitive thread retry to persist UsageRecords accounted on Fallback #1352</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-lib.1-1-0" date="2015-12-09">
+		<Change>Changed Single and Aggregated classes names to avoid mistakes for the developers.</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-lib.1-0-0" date="2015-05-27">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

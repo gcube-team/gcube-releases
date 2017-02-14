@@ -1,0 +1,78 @@
+<Resource>
+	<ID />
+	<Type />
+	<Profile>
+		<SecondaryType>DTSTransformationProgram</SecondaryType>
+		<Name>FwRowset_Transformer</Name>
+		<Description>Program creating fwRowsets</Description>
+		<Body>
+			<gDTSTransformationProgram>
+				<Transformer>
+					<Class>org.gcube.datatransformation.datatransformationlibrary.programs.metadata.indexfeed.FwRowset_Transformer</Class>
+					<GlobalProgramParameters />
+				</Transformer>
+				<TransformationUnits>
+					<TransformationUnit id="0" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0" />
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters />
+									<!-- <Parameters> <Parameter isOptional="false" name="schemaURI" value="-"/> </Parameters> -->
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="xslt" value="-" isOptional="false" />
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput" />
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schemaURI" value="http://fwrowset.xsd" />
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+					<TransformationUnit id="1" isComposite="false">
+						<Sources>
+							<Source>
+								<Input id="TRInput0" />
+								<ContentType>
+									<Mimetype>text/xml</Mimetype>
+									<Parameters>
+<!-- 										<Parameter isOptional="false" name="schemaURI" value="-" /> -->
+									</Parameters>
+								</ContentType>
+							</Source>
+						</Sources>
+						<ProgramParameters>
+							<Parameter name="finalftsxslt" value="-" isOptional="false" />
+							<Parameter name="xslt" value="-" isOptional="true" />
+							<Parameter name="xslt:1" value="-" isOptional="true" />
+							<Parameter name="xslt:2" value="-" isOptional="true" />
+							<Parameter name="xslt:3" value="-" isOptional="true" />
+							<Parameter name="xslt:4" value="-" isOptional="true" />
+							<Parameter name="xslt:5" value="-" isOptional="true" />
+							<Parameter name="xslt:6" value="-" isOptional="true" />
+							<Parameter name="xslt:7" value="-" isOptional="true" />
+							<Parameter name="xslt:8" value="-" isOptional="true" />
+							<Parameter name="xslt:9" value="-" isOptional="true" />
+						</ProgramParameters>
+						<Target>
+							<Output id="TROutput" />
+							<ContentType>
+								<Mimetype>text/xml</Mimetype>
+								<Parameters>
+									<Parameter isOptional="false" name="schemaURI" value="http://fwrowset.xsd" />
+								</Parameters>
+							</ContentType>
+						</Target>
+					</TransformationUnit>
+				</TransformationUnits>
+			</gDTSTransformationProgram>
+		</Body>
+	</Profile>
+</Resource>

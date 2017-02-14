@@ -1,0 +1,98 @@
+/** Add css rules here for your application. */
+
+.goog-toolbar {
+	background:#FAFAFA url(toolbar-bg.png) repeat-x scroll left bottom;
+    border-bottom:1px solid #d5d5d5;
+    cursor:default;
+    margin:0;
+    outline:none;
+    padding:2px;
+    position:relative;
+}
+
+    /* gwt-ToggleButton-up,gwt-ToggleButton-up-hovering,gwt-ToggleButton-up-disabled,
+     gwt-ToggleButton-down,.gwt-ToggleButton-down-hovering,.gwt-ToggleButton-down-disabled */
+
+
+.listbox  {
+	border: 1px solid #BFCBDF ;
+	font:normal 10px Arial,sans-serif;
+}
+
+
+.myButton-up,
+.myButton-up-hovering,
+.myButton-up-disabled,
+.myButton-down,
+.myButton-down-hovering,
+.myButton-down-disabled {
+  text-decoration: none;
+  padding: 3px;
+}
+
+.myButton-up,
+.myButton-up-hovering,
+.myButton-up-disabled {
+  padding: 3px;
+}
+
+.myButton-up {
+  padding: 3px;
+  cursor: pointer;
+  cursor: hand;
+  border: 1px solid transparent;  
+}
+
+.myButton-up-hovering {
+  border: 1px solid #729BD1;  
+  cursor: pointer;
+  cursor: hand;
+  padding: 3px;
+}
+
+.myButton-up-disabled {
+  border: 1px outset #ccc;
+  cursor: default;
+  opacity: .5;
+  zoom: 1;
+  filter: alpha(opacity=40);
+}
+
+.myButton-down,
+.myButton-down-hovering,
+.myButton-down-disabled {
+  padding: 4px 4px 2px 6px;
+}
+
+.myButton-down {
+
+  background-color: #729BD1;
+  border: 1px inset #ccc;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.myButton-down-hovering {
+  background-color: #729BD1;
+  border: 1px inset;
+  border-color: #9cf #69e #69e #7af;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.myButton-down-disabled {
+  border: 1px inset #ccc;
+  cursor: default;
+  opacity: .5;
+  zoom: 1;
+  filter: alpha(opacity=40);
+}
+
+.myButton-inline-block {
+	display:inline-block;
+}
+
+.myButton-outer-box, .myButton-inner-box {
+	border:medium none;
+	vertical-align:top;
+}

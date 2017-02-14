@@ -1,0 +1,12 @@
+Support root input output sandbox in JDL adaptor
+	Andrea - http://bit.ly/D4science says:
+	 as you said, also glite if you specify to retrive the output of the whole dag , it retrieves everything
+	 also the outputsandbox of the subjobs
+	Giorgos says:
+	 I must decouple this from the default behaviour of the adaptor... I will add another option that will save the output files in some file and a new script that will downolad some subset of them....
+	Andrea - http://bit.ly/D4science says:
+	 yes but this is something that you can do when you finihs the integration with gCube, this is only a minor request, better to do first the important thing
+	 be back in 5
+	Giorgos says:
+	 if I only did one thing at a time I would be VERY bored   
+	 

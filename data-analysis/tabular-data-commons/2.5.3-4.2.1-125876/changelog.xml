@@ -1,0 +1,11 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-analysis.tabular-data-commons.1-0-0" date="2013-10-25"> 
+		<Change>first release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.tabular-data-commons.2-4-2" date="2014-12-01"> 
+		<Change>added method executeSynchOperation in the operation interface</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.tabular-data-commons.2-5-3" date="2015-6-30"> 
+		<Change>added interface methods on service for rules managing</Change>
+	</Changeset>
+</ReleaseNotes>

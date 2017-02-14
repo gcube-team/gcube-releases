@@ -1,0 +1,69 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.execution.RRModel.1-9-0" date="2014-07-02">
+		<Change>Added SRU consumer model</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRModel.1-8-0" date="2014-06-03">
+		<Change>Changed logger to slf4j</Change>
+		<Change>Fixed null timestamp bug</Change>
+		<Change>Added method in QueryHelper to get collections, fields etc</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRModel.1-7-0" date="2014-03-28">
+		<Change>Upgraded datanuclues version</Change>
+		<Change>Removed geoindex and fwindex classes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRModel.1-6-0" date="2014-02-07">
+		<Change>Added collection type property in DataCollection entity</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRModel.1-5-1" date="2013-12-12">
+		<Change>Fixed a bug that caused presentables not to be published</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRModel.1-5-0" date="2013-10-10">
+		<Change>Changed Searchable and Presentable fields delete to support delete</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRModel.1-4-1" date="2013-07-09">
+		<Change>Changed schema datatypes to support huge number of fields on datasources</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRModel.1-4-0" date="2012-11-26">
+		<Change>Changed the orm files so the created database is created correctly with the given parameters</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRModel.1-3-1" date="2012-10-26">
+		<Change>Fixed error exception throw at Field delete</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRModel.1-3-0" date="2012-5-4">
+		<Change>Added implementation for read/write policies and refactored all classes to extend base class implementing default behavior.</Change>
+		<Change>Revised datasource model for greater flexibility. The model no longer makes any assumption as to the binding of services to specific endpoints. 
+		The model can now represent all kinds of data sources: Purely stateless, replicated cluster-bound stateful and purely stateful. Old DataSources are now separated 
+		into the DataSource and DataSourceService notions. Each DataSource now optionally points to a set of bound service endpoints.</Change>
+		<Change>Added RR elements for Execution Servers and Execution Services.</Change>
+		<Change>Added hosting node adapter for node selection lib.</Change>
+		<Change>Aligned to latest data store labels.</Change>
+		<Change>Fixed store behavior of object graphs of prefetched items</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRModel.1-2-1" date="2012-1-27">
+		<Change>Corrected Field equals method. Previous version caused field updates to be ignored under some circumstances.</Change>
+		<Change>Implemented Field update and deletion marking, to support field handling by auto-update functionality</Change>
+		<Change>Added search service element.</Change>
+		<Change>Fixed property pair representation for hosting nodes. The previous strategy of simply appending keys and pair led to problems matching properties whose key
+		began with a common prefix.</Change>
+		<Change>Fixed typo in JDO persistency descriptor for OpenSearch data sources. 
+		The typo was a potential source of instability as it resulted in warnings upon querying the latter data sources.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRModel.1-2-0" date="2011-11-04">
+		<Change>Support for in memory prefetching of element subset for increased query and loading time performance.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRModel.1-1-0" date="2011-09-02">
+		<Change>Added Element Metadata type. Metadata contain either extra information on existing items or information on items not present in the infrastructure anymore, 
+		such as inactive DataSources. Metadata contain implementation agnostic properties, which can be read by whichever repository provider is operating at the given moment. 
+		Currently the only element metadata used concerns inactive DataSources.</Change>
+		<Change>The scoped delete method in Field deletes a searchable referencing an inactive DataSource only if the metadata of the latter contains scoped information and the
+		 caller's scope is contained in this scope information</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRModel.1-0-1" date="2011-07-29">
+		<Change>DataSource.getById() now returns null upon failure.</Change>
+		<Change>Changed return type of DataSource related methods in QueryHelper to DataSource.</Change>
+		<Change>QueryHelper.getSourceIdsForFieldRelationCollectionLanguage now takes into account inactive data souces.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.RRModel.1-0-0" date="2011-07-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

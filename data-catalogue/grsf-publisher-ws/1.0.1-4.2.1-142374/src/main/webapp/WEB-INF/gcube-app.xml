@@ -1,0 +1,10 @@
+<application mode='online'>
+	<name>GRSFPublisher</name>
+	<group>Data-Catalogue</group>
+	<version>1.0.0-SNAPSHOT</version>
+	<description>Data Catalogue Service</description>
+	<local-persistence location='target' />
+	<exclude>/rest/</exclude>
+	<exclude>/rest/stock/hello</exclude>
+	<exclude>/rest/fishery/hello</exclude>
+</application>

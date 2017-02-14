@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.resource-registry.1-0-0" date="${buildDate}">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

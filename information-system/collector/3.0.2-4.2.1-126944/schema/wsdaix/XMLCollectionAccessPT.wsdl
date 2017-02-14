@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="wsdaix"
+                  targetNamespace="http://www.ggf.org/namespaces/2005/12/WS-DAIX"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:wsdai="http://www.ggf.org/namespaces/2005/12/WS-DAI"
+                  xmlns:wsdaix="http://www.ggf.org/namespaces/2005/12/WS-DAIX">
+
+<!-- WSDL IMPORTS ################################################## -->
+    <wsdl:import location="./wsdai_core_porttypes.wsdl"
+                 namespace="http://www.ggf.org/namespaces/2005/12/WS-DAI"/>
+                    
+<!-- WSDL TYPES #################################################### -->
+    <wsdl:types>        
+      <xsd:schema targetNamespace="http://www.ggf.org/namespaces/2005/12/WS-DAIX" 
+                  elementFormDefault="qualified">
+      <xsd:import namespace="http://www.ggf.org/namespaces/2005/12/WS-DAI" 
+                   schemaLocation="../wsdaix/types/wsdai_core_types.xsd" />  
+      <xsd:include schemaLocation="../wsdaix/types/wsdaix_xmlcollection_types.xsd" /> 
+       
+    
+    <!-- ############################ -->   
+    <!-- ### Common Message Types ### -->
+    <!-- ############################ --> 
+    
+      <xsd:complexType name="InvalidCollectionNameFaultType"/>
+      <xsd:element name="InvalidCollectionNameFault" type="wsdaix:InvalidCollectionNameFaultType"/>
+      
+      <xsd:complexType name="SchemaDoesNotExistFaultType"/>
+      <xsd:element name="SchemaDoesNotExistFault" type="wsdaix:SchemaDoesNotExistFaultType"/>
+
+    <!-- ################################## --> 
+    <!-- ### GetDocuments Message Types ### -->
+    <!-- ################################## --> 
+        <xsd:element name="GetDocumentRequestWrapper">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="DocumentName" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+
+        <xsd:element name="GetDocumentResponseWrapper">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="DocumentName" type="xsd:string"/>
+              <xsd:element name="Response">
+                  <xsd:simpleType>
+                     <xsd:restriction base="xsd:token">
+                       <xsd:enumeration value="Success"/> 
+                       <xsd:enumeration value="DocumentNotRetrieved-DocumentDoesNotExist"/> 
+                       <xsd:enumeration value="DocumentNotRetrieved-NotAuthorized"/> 
+                     </xsd:restriction>
+                  </xsd:simpleType>
+               </xsd:element>
+               <xsd:element name="Data" type="wsdaix:XMLWrapperType" minOccurs="0"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+
+        <xsd:element name="GetDocumentsRequest">
+          <xsd:complexType>
+            <xsd:complexContent> 
+              <xsd:extension base="wsdai:BaseRequestType">
+                <xsd:sequence>
+                  <xsd:element name="CollectionName" type="xsd:anyURI" minOccurs="0" maxOccurs="1"/>
+                  <xsd:element ref="wsdaix:GetDocumentRequestWrapper"  minOccurs="1" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:extension>
+            </xsd:complexContent>
+          </xsd:complexType>
+        </xsd:element>  
+
+        <xsd:element name="GetDocumentsResponse">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element ref="wsdaix:GetDocumentResponseWrapper"  minOccurs="1" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>  
+        </xsd:element>
+
+
+    <!-- ################################## --> 
+    <!-- ### AddDocuments Message Types ### -->
+    <!-- ################################## --> 
+         <xsd:element name="AddDocumentRequestWrapper">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="DocumentName" type="xsd:string"/>
+              <xsd:element name="Data" type="wsdaix:XMLWrapperType" minOccurs="0"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+
+        <xsd:element name="AddDocumentResponseWrapper">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="DocumentName" type="xsd:string"/>
+              <xsd:element name="Response">
+                  <xsd:simpleType>
+                     <xsd:restriction base="xsd:token">
+                       <xsd:enumeration value="Success"/> 
+                       <xsd:enumeration value="DocumentNotAdded-DocumentDoesNotValidate"/> 
+                       <xsd:enumeration value="DocumentNotAdded-SchemaDoesNotExist"/> 
+                       <xsd:enumeration value="DocumentNotAdded-NotAuthorized"/>      
+                       <xsd:enumeration value="DocumentOfSameNameOverwritten"/>
+                     </xsd:restriction>
+                  </xsd:simpleType>
+               </xsd:element>
+               <xsd:element name="Detail" type="wsdaix:XMLWrapperType" minOccurs="0"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+
+        <xsd:element name="AddDocumentsRequest">
+          <xsd:complexType>
+            <xsd:complexContent> 
+              <xsd:extension base="wsdai:BaseRequestType">
+                <xsd:sequence>
+                  <xsd:element name="CollectionName" type="xsd:anyURI" minOccurs="0" maxOccurs="1"/>
+                  <xsd:element ref="wsdaix:AddDocumentRequestWrapper"  minOccurs="1" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:extension>
+            </xsd:complexContent>
+          </xsd:complexType>
+        </xsd:element>          
+        
+        <xsd:element name="AddDocumentsResponse">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element ref="wsdaix:AddDocumentResponseWrapper"  minOccurs="1" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>  
+        </xsd:element>  
+
+    <!-- ##################################### -->  
+    <!-- ### RemoveDocuments Message Types ### -->
+    <!-- ##################################### --> 
+
+         <xsd:element name="RemoveDocumentRequestWrapper">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="DocumentName" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        
+        <xsd:element name="RemoveDocumentResponseWrapper">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="DocumentName" type="xsd:string"/>
+              <xsd:element name="Response">
+                  <xsd:simpleType>
+                     <xsd:restriction base="xsd:token">
+                       <xsd:enumeration value="Success"/> 
+                       <xsd:enumeration value="DocumentNotRemoved-NotAuthorized"/>      
+                       <xsd:enumeration value="DocumentNotRemoved-DocumentDoesNotExist"/>      
+                     </xsd:restriction>
+                  </xsd:simpleType>
+               </xsd:element>
+               <xsd:element name="Detail" type="wsdaix:XMLWrapperType" minOccurs="0"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+  
+        <xsd:element name="RemoveDocumentsRequest">
+          <xsd:complexType>
+            <xsd:complexContent> 
+              <xsd:extension base="wsdai:BaseRequestType">
+                <xsd:sequence>
+                  <xsd:element name="CollectionName" type="xsd:anyURI" minOccurs="0" maxOccurs="1"/>
+                  <xsd:element ref="wsdaix:RemoveDocumentRequestWrapper"  minOccurs="1" maxOccurs="unbounded"/>
+                </xsd:sequence>
+              </xsd:extension>
+            </xsd:complexContent>
+          </xsd:complexType>
+        </xsd:element>          
+        
+        <xsd:element name="RemoveDocumentsResponse">
+            <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element ref="wsdaix:RemoveDocumentResponseWrapper"  minOccurs="1" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>  
+        </xsd:element>  
+
+    <!-- ######################################### -->  
+    <!-- ### CreateSubCollection Message Types ### -->
+    <!-- ######################################### --> 
+  
+        <xsd:element name="CreateSubcollectionRequest">
+          <xsd:complexType>
+            <xsd:complexContent> 
+              <xsd:extension base="wsdai:BaseRequestType">
+                <xsd:sequence>
+                  <xsd:element name="CollectionName" type="xsd:anyURI" minOccurs="0" maxOccurs="1"/>
+                  <xsd:element name="SubcollectionName" type="xsd:anyURI"/>
+                </xsd:sequence>
+              </xsd:extension>
+            </xsd:complexContent>
+          </xsd:complexType>
+        </xsd:element>          
+        
+        <xsd:element name="CreateSubcollectionResponse">
+          <xsd:complexType/>
+        </xsd:element>  
+        
+        <xsd:complexType name="CollectionAlreadyExistsFaultType"/>
+        <xsd:element name="CollectionAlreadyExistsFault" type="wsdaix:CollectionAlreadyExistsFaultType"/>
+
+    <!-- ######################################### -->  
+    <!-- ### RemoveSubCollection Message Types ### -->
+    <!-- ######################################### --> 
+  
+        <xsd:element name="RemoveSubcollectionRequest">
+          <xsd:complexType>
+            <xsd:complexContent> 
+              <xsd:extension base="wsdai:BaseRequestType">
+                <xsd:sequence>
+                  <xsd:element name="CollectionName" type="xsd:anyURI" minOccurs="0" maxOccurs="1"/>                
+                  <xsd:element name="SubcollectionName" type="xsd:anyURI"/>
+                </xsd:sequence>
+              </xsd:extension>
+            </xsd:complexContent>
+          </xsd:complexType>
+        </xsd:element>          
+        
+        <xsd:element name="RemoveSubcollectionResponse">
+            <xsd:complexType/>  
+        </xsd:element>  
+
+        <xsd:complexType name="CollectionDoesNotExistFaultType"/>
+        <xsd:element name="CollectionDoesNotExistFault" type="wsdaix:CollectionDoesNotExistFaultType"/>
+
+    <!-- ############################### -->    
+    <!-- ### GetSchema Message Types ### -->
+    <!-- ############################### --> 
+        <xsd:element name="GetSchemaRequest">
+          <xsd:complexType>
+            <xsd:complexContent> 
+              <xsd:extension base="wsdai:BaseRequestType">
+                <xsd:sequence>
+                  <xsd:element name="CollectionName" type="xsd:anyURI" minOccurs="0" maxOccurs="1"/> 
+                </xsd:sequence>
+              </xsd:extension>
+            </xsd:complexContent>
+          </xsd:complexType>
+        </xsd:element>          
+        
+        <xsd:element name="GetSchemaResponse">
+          <xsd:complexType> 
+            <xsd:sequence>
+              <xsd:any namespace="http://www.w3.org/2001/XMLSchema"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+
+    <!-- ############################### -->    
+    <!-- ### AddSchema Message Types ### -->
+    <!-- ############################### --> 
+        <xsd:element name="AddSchemaRequest">
+          <xsd:complexType>
+            <xsd:complexContent> 
+              <xsd:extension base="wsdai:BaseRequestType">
+                <xsd:sequence>
+                  <xsd:element name="CollectionName" type="xsd:anyURI" minOccurs="0" maxOccurs="1"/> 
+                  <xsd:any namespace="http://www.w3.org/2001/XMLSchema"/>
+                </xsd:sequence>
+              </xsd:extension>
+            </xsd:complexContent>
+          </xsd:complexType>
+        </xsd:element>          
+        
+        <xsd:element name="AddSchemaResponse">
+            <xsd:complexType/>  
+        </xsd:element>
+
+        <xsd:complexType name="SchemaInvalidFaultType"/>
+        <xsd:element name="SchemaInvalidFault" type="wsdaix:SchemaInvalidFaultType"/>
+        
+        <xsd:complexType name="SchemaAlreadyExistsFaultType"/>
+        <xsd:element name="SchemaAlreadyExistsFault" type="wsdaix:SchemaAlreadyExistsFaultType"/>
+        
+        <xsd:complexType name="SchemaAdditionMakesDocumentsInvalidFaultType"/>
+        <xsd:element name="SchemaAdditionMakesDocumentsInvalidFault" type="wsdaix:SchemaAdditionMakesDocumentsInvalidFaultType"/>
+    
+    <!-- ################################## --> 
+    <!-- ### RemoveSchema Message Types ### -->
+    <!-- ################################## --> 
+        <xsd:element name="RemoveSchemaRequest">
+          <xsd:complexType>
+            <xsd:complexContent> 
+              <xsd:extension base="wsdai:BaseRequestType">
+                <xsd:sequence>
+                  <xsd:element name="CollectionName" type="xsd:anyURI" minOccurs="0" maxOccurs="1"/>                
+                  <xsd:element name="SchemaNamespace" type="xsd:anyURI"/>
+                </xsd:sequence>
+              </xsd:extension>
+            </xsd:complexContent>
+          </xsd:complexType>
+        </xsd:element>          
+        
+        <xsd:element name="RemoveSchemaResponse">
+            <xsd:complexType/>  
+        </xsd:element>
+        
+        <xsd:complexType name="SchemaRemovalMakesDocumentsInvalidFaultType">
+          <xsd:sequence>
+            <xsd:element name="DocumentName" type="xsd:string"/>
+          </xsd:sequence>   
+        </xsd:complexType>
+        <xsd:element name="SchemaRemovalMakesDocumentsInvalidFault" type="wsdaix:SchemaRemovalMakesDocumentsInvalidFaultType"/>
+        
+        <xsd:complexType name="SchemaRemovalMakesSchemaInvalidFaultType">
+          <xsd:sequence>
+            <xsd:element name="SchemaNamespace" type="xsd:anyURI"/>
+          </xsd:sequence>   
+        </xsd:complexType>
+        <xsd:element name="SchemaRemovalMakesSchemaInvalidFault" type="wsdaix:SchemaRemovalMakesSchemaInvalidFaultType"/>
+
+    <!-- ######################################### -->  
+    <!-- ###  CollectionSelectionFactory Types ### -->
+    <!-- ######################################### --> 
+        <xsd:element name="CollectionSelectionFactoryRequest">  
+           <xsd:complexType>
+            <xsd:complexContent> 
+              <xsd:extension base="wsdai:FactoryRequestType">
+                <xsd:sequence>
+                  <xsd:element name="CollectionName" type="xsd:anyURI" minOccurs="0" maxOccurs="1"/>                
+                </xsd:sequence>
+              </xsd:extension>
+            </xsd:complexContent>
+          </xsd:complexType>
+        </xsd:element>
+        
+        <xsd:element name="CollectionSelectionFactoryResponse" type="wsdai:DataResourceAddressType" />
+        
+    <!-- ####################################### -->    
+    <!-- ###  DocumentSelectionFactory Types ### -->
+    <!-- ####################################### --> 
+        <xsd:element name="DocumentSelectionFactoryRequest">
+          <xsd:complexType>
+            <xsd:complexContent> 
+              <xsd:extension base="wsdai:FactoryRequestType">
+                <xsd:sequence>
+                  <xsd:element name="CollectionName" type="xsd:anyURI" minOccurs="0" maxOccurs="1"/>                   
+                  <xsd:element name="DocumentName" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:extension>
+            </xsd:complexContent>
+          </xsd:complexType>
+        </xsd:element>          
+        
+        <xsd:element name="DocumentSelectionFactoryResponse" type="wsdai:DataResourceAddressType" />
+
+        <xsd:complexType name="DocumentDoesNotExistFaultType"/>
+        <xsd:element name="DocumentDoesNotExistFault" type="wsdaix:DocumentDoesNotExistFaultType"/>
+
+      </xsd:schema>
+  </wsdl:types>
+    
+<!-- WSDL MESSAGES ################################################# -->
+
+    <wsdl:message name="InvalidCollectionNameFault">
+      <wsdl:part name="InvalidCollectionNameFault"
+                 element="wsdaix:InvalidCollectionNameFault"/>
+    </wsdl:message>
+    
+    <wsdl:message name="SchemaDoesNotExistFault">
+      <wsdl:part name="SchemaDoesNotExistFault"
+                 element="wsdaix:SchemaDoesNotExistFault"/>
+    </wsdl:message>
+    
+    <!-- ############################################## --> 
+    <!-- ### GetCollectionPropertyDocument Messages ### -->
+    <!-- ############################################## -->     
+    <wsdl:message name="GetCollectionPropertyDocumentRequest">
+      <wsdl:part name="GetCollectionPropertyDocumentRequest" 
+                 element="wsdai:GetDataResourcePropertyDocumentRequest" />
+    </wsdl:message>
+  
+    <wsdl:message name="GetCollectionPropertyDocumentResponse">
+      <wsdl:part name="GetCollectionPropertyDocumentResponse" 
+                 element="wsdaix:XMLCollectionPropertyDocument" />
+    </wsdl:message>
+
+    <!-- ############################# -->  
+    <!-- ### GetDocuments Messages ### -->
+    <!-- ############################# -->  
+    <wsdl:message name="GetDocumentsRequest">
+      <wsdl:part name="GetDocumentsRequest" element="wsdaix:GetDocumentsRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetDocumentsResponse">
+      <wsdl:part name="GetDocumentsResponse" element="wsdaix:GetDocumentsResponse"/>
+    </wsdl:message>
+
+    <!-- ############################# -->  
+    <!-- ### AddDocuments Messages ### -->
+    <!-- ############################# -->  
+    <wsdl:message name="AddDocumentsRequest">
+      <wsdl:part name="AddDocumentsRequest" element="wsdaix:AddDocumentsRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddDocumentsResponse">
+      <wsdl:part name="AddDocumentsResponse" element="wsdaix:AddDocumentsResponse"/>
+    </wsdl:message>
+
+    <!-- ################################ -->   
+    <!-- ### RemoveDocuments Messages ### -->
+    <!-- ################################ -->   
+    <wsdl:message name="RemoveDocumentsRequest">
+      <wsdl:part name="RemoveDocumentsRequest" element="wsdaix:RemoveDocumentsRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="RemoveDocumentsResponse">
+      <wsdl:part name="RemoveDocumentsResponse" element="wsdaix:RemoveDocumentsResponse"/>
+    </wsdl:message>
+
+    <!-- #################################### -->   
+    <!-- ### CreateSubcollection Messages ### -->
+    <!-- #################################### -->   
+    <wsdl:message name="CreateSubcollectionRequest">
+      <wsdl:part name="CreateSubcollectionRequest" element="wsdaix:CreateSubcollectionRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="CreateSubcollectionResponse">
+      <wsdl:part name="CreateSubcollectionResponse" element="wsdaix:CreateSubcollectionResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="CollectionAlreadyExistsFault">
+      <wsdl:part name="CollectionAlreadyExistsFault"
+                 element="wsdaix:CollectionAlreadyExistsFault"/>
+    </wsdl:message>
+
+    <!-- #################################### -->   
+    <!-- ### RemoveSubcollection Messages ### -->
+    <!-- #################################### -->   
+    <wsdl:message name="RemoveSubcollectionRequest">
+      <wsdl:part name="RemoveSubcollectionRequest" element="wsdaix:RemoveSubcollectionRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="RemoveSubcollectionResponse">
+      <wsdl:part name="RemoveSubcollectionResponse" element="wsdaix:RemoveSubcollectionResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="CollectionDoesNotExistFault">
+      <wsdl:part name="CollectionDoesNotExistFault"
+                 element="wsdaix:CollectionDoesNotExistFault"/>
+    </wsdl:message>
+
+    <!-- ########################## --> 
+    <!-- ### AddSchema Messages ### -->
+    <!-- ########################## --> 
+    <wsdl:message name="AddSchemaRequest">
+      <wsdl:part name="AddSchemaRequest" element="wsdaix:AddSchemaRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddSchemaResponse">
+      <wsdl:part name="AddSchemaResponse" element="wsdaix:AddSchemaResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="SchemaAlreadyExistsFault">
+      <wsdl:part name="SchemaAlreadyExistsFault"
+                 element="wsdaix:SchemaAlreadyExistsFault"/>
+    </wsdl:message>
+
+    <wsdl:message name="SchemaInvalidFault">
+      <wsdl:part name="SchemaInvalidFault"
+                 element="wsdaix:SchemaInvalidFault"/>
+    </wsdl:message>
+    
+    <wsdl:message name="SchemaAdditionMakesDocumentsInvalidFault">
+      <wsdl:part name="SchemaAdditionMakesDocumentsInvalidFault"
+                 element="wsdaix:SchemaAdditionMakesDocumentsInvalidFault"/>
+    </wsdl:message>
+
+    <!-- ############################# -->  
+    <!-- ### RemoveSchema Messages ### -->
+    <!-- ############################# -->  
+    <wsdl:message name="RemoveSchemaRequest">
+      <wsdl:part name="RemoveSchemaRequest" element="wsdaix:RemoveSchemaRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="RemoveSchemaResponse">
+      <wsdl:part name="RemoveSchemaResponse" element="wsdaix:RemoveSchemaResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="SchemaRemovalMakesDocumentsInvalidFault">
+      <wsdl:part name="SchemaRemovalMakesDocumentsInvalidFault"
+                 element="wsdaix:SchemaRemovalMakesDocumentsInvalidFault"/>
+    </wsdl:message>
+    
+    <wsdl:message name="SchemaRemovalMakesSchemaInvalidFault">
+      <wsdl:part name="SchemaRemovalMakesSchemaInvalidFault"
+                 element="wsdaix:SchemaRemovalMakesSchemaInvalidFault"/>
+    </wsdl:message>
+    
+    <!-- ############################# -->  
+    <!-- ### GetSchema Messages ### -->
+    <!-- ############################# -->  
+    <wsdl:message name="GetSchemaRequest">
+      <wsdl:part name="GetSchemaRequest" element="wsdaix:GetSchemaRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetSchemaResponse">
+      <wsdl:part name="GetSchemaResponse" element="wsdaix:GetSchemaResponse"/>
+    </wsdl:message>
+
+    <!-- ########################################### -->    
+    <!-- ### CollectionSelectionFactory Messages ### -->
+    <!-- ########################################### -->    
+    <wsdl:message name="CollectionSelectionFactoryRequest">
+      <wsdl:part name="CollectionSelectionFactoryRequest" element="wsdaix:CollectionSelectionFactoryRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="CollectionSelectionFactoryResponse">
+      <wsdl:part name="CollectionSelectionFactoryResponse" element="wsdaix:CollectionSelectionFactoryResponse"/>
+    </wsdl:message>
+
+    <!-- ######################################### -->  
+    <!-- ### DocumentSelectionFactory Messages ### -->
+    <!-- ######################################### -->  
+    <wsdl:message name="DocumentSelectionFactoryRequest">
+      <wsdl:part name="DocumentSelectionFactoryRequest" element="wsdaix:DocumentSelectionFactoryRequest"/>
+    </wsdl:message>
+
+    <wsdl:message name="DocumentSelectionFactoryResponse">
+      <wsdl:part name="DocumentSelectionFactoryResponse" element="wsdaix:DocumentSelectionFactoryResponse"/>
+    </wsdl:message>
+
+    <wsdl:message name="DocumentDoesNotExistFault">
+      <wsdl:part name="DocumentDoesNotExistFault"
+                 element="wsdaix:DocumentDoesNotExistFault"/>
+    </wsdl:message>
+
+<!-- WSDL PORT TYPES ############################################### -->
+    <wsdl:portType name="XMLCollectionAccessPT">
+
+        <wsdl:operation name="GetCollectionPropertyDocument">
+          <wsdl:input  name="GetCollectionPropertyDocumentRequest" 
+                       message="wsdaix:GetCollectionPropertyDocumentRequest" />
+          <wsdl:output name="GetCollectionPropertyDocumentResponse" 
+                       message="wsdaix:GetCollectionPropertyDocumentResponse" />
+          <wsdl:fault  name="InvalidResourceNameFault" 
+                       message="wsdai:InvalidResourceNameFault" />                           
+          <wsdl:fault name="DataResourceUnavailableFault"
+                       message="wsdai:DataResourceUnavailableFault" />
+          <wsdl:fault message="wsdai:NotAuthorizedFault" 
+                       name="NotAuthorizedFault"/>   
+          <wsdl:fault message="wsdai:ServiceBusyFault" 
+                       name="ServiceBusyFault" /> 
+        </wsdl:operation>
+                        
+        <wsdl:operation name="AddDocuments">
+          <wsdl:input message="wsdaix:AddDocumentsRequest"/>
+          <wsdl:output message="wsdaix:AddDocumentsResponse"/>
+          <wsdl:fault  name="InvalidResourceNameFault" 
+                       message="wsdai:InvalidResourceNameFault" />
+          <wsdl:fault name="DataResourceUnavailableFault"
+                       message="wsdai:DataResourceUnavailableFault" />
+          <wsdl:fault  name="InvalidCollectionNameFault" 
+                       message="wsdaix:InvalidCollectionNameFault" /> 
+          <wsdl:fault message="wsdai:ServiceBusyFault" 
+                       name="ServiceBusyFault" />                       
+        </wsdl:operation>
+        
+        <wsdl:operation name="GetDocuments">
+          <wsdl:input message="wsdaix:GetDocumentsRequest"/>
+          <wsdl:output message="wsdaix:GetDocumentsResponse"/>
+          <wsdl:fault  name="InvalidResourceNameFault" 
+                       message="wsdai:InvalidResourceNameFault" /> 
+          <wsdl:fault name="DataResourceUnavailableFault"
+                       message="wsdai:DataResourceUnavailableFault" />
+          <wsdl:fault  name="InvalidCollectionNameFault" 
+                       message="wsdaix:InvalidCollectionNameFault" /> 
+          <wsdl:fault message="wsdai:ServiceBusyFault" 
+                       name="ServiceBusyFault" />                       
+        </wsdl:operation>
+
+        <wsdl:operation name="RemoveDocuments">
+          <wsdl:input message="wsdaix:RemoveDocumentsRequest"/>
+          <wsdl:output message="wsdaix:RemoveDocumentsResponse"/>
+          <wsdl:fault  name="InvalidResourceNameFault" 
+                       message="wsdai:InvalidResourceNameFault" />
+          <wsdl:fault name="DataResourceUnavailableFault"
+                       message="wsdai:DataResourceUnavailableFault" />
+          <wsdl:fault  name="InvalidCollectionNameFault" 
+                       message="wsdaix:InvalidCollectionNameFault" /> 
+          <wsdl:fault message="wsdai:ServiceBusyFault" 
+                       name="ServiceBusyFault" /> 
+        </wsdl:operation>
+
+        <wsdl:operation name="CreateSubcollection">
+          <wsdl:input message="wsdaix:CreateSubcollectionRequest"/>
+          <wsdl:output message="wsdaix:CreateSubcollectionResponse"/>
+          <wsdl:fault  name="InvalidResourceNameFault" 
+                       message="wsdai:InvalidResourceNameFault" /> 
+          <wsdl:fault name="DataResourceUnavailableFault"
+                       message="wsdai:DataResourceUnavailableFault" />
+          <wsdl:fault  name="InvalidCollectionNameFault"                        
+                       message="wsdaix:InvalidCollectionNameFault" /> 
+          <wsdl:fault message="wsdai:NotAuthorizedFault" 
+                       name="NotAuthorizedFault"/>   
+          <wsdl:fault message="wsdai:ServiceBusyFault" 
+                       name="ServiceBusyFault" /> 
+          <wsdl:fault  name="CollectionAlreadyExistsFault" 
+                       message="wsdaix:CollectionAlreadyExistsFault" /> 
+        </wsdl:operation>
+
+        <wsdl:operation name="RemoveSubcollection">
+          <wsdl:input message="wsdaix:RemoveSubcollectionRequest"/>
+          <wsdl:output message="wsdaix:RemoveSubcollectionResponse"/>
+          <wsdl:fault  name="InvalidResourceNameFault" 
+                       message="wsdai:InvalidResourceNameFault" />
+          <wsdl:fault name="DataResourceUnavailableFault"
+                       message="wsdai:DataResourceUnavailableFault" />
+          <wsdl:fault  name="InvalidCollectionNameFault"                        
+                       message="wsdaix:InvalidCollectionNameFault" /> 
+          <wsdl:fault message="wsdai:NotAuthorizedFault" 
+                       name="NotAuthorizedFault"/>   
+          <wsdl:fault message="wsdai:ServiceBusyFault" 
+                       name="ServiceBusyFault" />
+        </wsdl:operation>
+
+        <wsdl:operation name="AddSchema">
+          <wsdl:input message="wsdaix:AddSchemaRequest"/>
+          <wsdl:output message="wsdaix:AddSchemaResponse"/>
+          <wsdl:fault  name="InvalidResourceNameFault" 
+                       message="wsdai:InvalidResourceNameFault" />
+          <wsdl:fault name="DataResourceUnavailableFault"
+                       message="wsdai:DataResourceUnavailableFault" />
+          <wsdl:fault  name="InvalidCollectionNameFault"                        
+                       message="wsdaix:InvalidCollectionNameFault" /> 
+          <wsdl:fault message="wsdai:NotAuthorizedFault" 
+                       name="NotAuthorizedFault"/>   
+          <wsdl:fault message="wsdai:ServiceBusyFault" 
+                       name="ServiceBusyFault" />                       
+          <wsdl:fault  name="SchemaAlreadyExistsFault" 
+                       message="wsdaix:SchemaAlreadyExistsFault" /> 
+          <wsdl:fault  name="SchemaInvalidFault" 
+                       message="wsdaix:SchemaInvalidFault" />
+          <wsdl:fault  name="SchemaAdditionMakesDocumentsInvalidFault" 
+                       message="wsdaix:SchemaAdditionMakesDocumentsInvalidFault" />
+        </wsdl:operation>
+        
+        <wsdl:operation name="GetSchema">
+          <wsdl:input message="wsdaix:GetSchemaRequest"/>
+          <wsdl:output message="wsdaix:GetSchemaResponse"/>
+          <wsdl:fault  name="InvalidResourceNameFault" 
+                       message="wsdai:InvalidResourceNameFault" />
+          <wsdl:fault name="DataResourceUnavailableFault"
+                       message="wsdai:DataResourceUnavailableFault" />
+          <wsdl:fault  name="InvalidCollectionNameFault"                        
+                       message="wsdaix:InvalidCollectionNameFault" /> 
+          <wsdl:fault message="wsdai:NotAuthorizedFault" 
+                       name="NotAuthorizedFault"/>   
+          <wsdl:fault message="wsdai:ServiceBusyFault" 
+                       name="ServiceBusyFault" />                       
+          <wsdl:fault  name="SchemaDoesNotExistFault" 
+                       message="wsdaix:SchemaDoesNotExistFault" /> 
+        </wsdl:operation>
+
+        <wsdl:operation name="RemoveSchema">
+          <wsdl:input message="wsdaix:RemoveSchemaRequest"/>
+          <wsdl:output message="wsdaix:RemoveSchemaResponse"/>
+          <wsdl:fault  name="InvalidResourceNameFault" 
+                       message="wsdai:InvalidResourceNameFault" />
+          <wsdl:fault name="DataResourceUnavailableFault"
+                       message="wsdai:DataResourceUnavailableFault" />
+          <wsdl:fault  name="InvalidCollectionNameFault"                        
+                       message="wsdaix:InvalidCollectionNameFault" /> 
+          <wsdl:fault message="wsdai:NotAuthorizedFault" 
+                       name="NotAuthorizedFault"/>   
+          <wsdl:fault message="wsdai:ServiceBusyFault" 
+                       name="ServiceBusyFault" />  
+          <wsdl:fault  name="SchemaRemovalMakesDocumentsInvalidFault" 
+                       message="wsdaix:SchemaRemovalMakesDocumentsInvalidFault" />                                             
+          <wsdl:fault  name="SchemaRemovalMakesSchemaInvalidFault" 
+                       message="wsdaix:SchemaRemovalMakesSchemaInvalidFault" />                                             
+          <wsdl:fault  name="SchemaDoesNotExistFault" 
+                       message="wsdaix:SchemaDoesNotExistFault" /> 
+        </wsdl:operation>
+
+    </wsdl:portType>
+<!-- 
+    <wsdl:portType name="XMLCollectionFactoryPT">
+        <wsdl:operation name="CollectionSelectionFactory">
+          <wsdl:input message="wsdaix:CollectionSelectionFactoryRequest"/>
+          <wsdl:output message="wsdaix:CollectionSelectionFactoryResponse"/>
+          <wsdl:fault  name="InvalidResourceNameFault" 
+                       message="wsdai:InvalidResourceNameFault" />
+          <wsdl:fault name="DataResourceUnavailableFault"
+                       message="wsdai:DataResourceUnavailableFault" />
+          <wsdl:fault  name="InvalidCollectionNameFault"                        
+                       message="wsdaix:InvalidCollectionNameFault" /> 
+          <wsdl:fault message="wsdai:NotAuthorizedFault" 
+                       name="NotAuthorizedFault"/>   
+          <wsdl:fault message="wsdai:ServiceBusyFault" 
+                       name="ServiceBusyFault" /> 
+          <wsdl:fault message="wsdai:InvalidConfigurationDocumentFault" 
+                       name="InvalidConfigurationDocumentFault" /> 
+          <wsdl:fault message="wsdai:InvalidPortTypeQNameFault" 
+                       name="InvalidPortTypeQNameFault" /> 
+        </wsdl:operation>
+
+        <wsdl:operation name="DocumentSelectionFactory">
+          <wsdl:input message="wsdaix:DocumentSelectionFactoryRequest"/>
+          <wsdl:output message="wsdaix:DocumentSelectionFactoryResponse"/>
+          <wsdl:fault  name="InvalidResourceNameFault" 
+                       message="wsdai:InvalidResourceNameFault" />
+          <wsdl:fault name="DataResourceUnavailableFault"
+                       message="wsdai:DataResourceUnavailableFault" />
+          <wsdl:fault  name="InvalidCollectionNameFault"                        
+                       message="wsdaix:InvalidCollectionNameFault" /> 
+          <wsdl:fault message="wsdai:NotAuthorizedFault" 
+                       name="NotAuthorizedFault"/>   
+          <wsdl:fault message="wsdai:ServiceBusyFault" 
+                       name="ServiceBusyFault" /> 
+          <wsdl:fault  name="DocumentDoesNotExistFault" 
+                       message="wsdaix:DocumentDoesNotExistFault" />  
+          <wsdl:fault message="wsdai:InvalidConfigurationDocumentFault" 
+                       name="InvalidConfigurationDocumentFault" /> 
+          <wsdl:fault message="wsdai:InvalidPortTypeQNameFault" 
+                       name="InvalidPortTypeQNameFault" /> 
+        </wsdl:operation>
+
+    </wsdl:portType> 
+     -->        
+</wsdl:definitions>

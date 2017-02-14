@@ -1,0 +1,416 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: 0 none;
+    border: 0 none;
+    height: 100%;
+    width: 100%;
+}
+
+a, a:visited {
+    color: #00f;
+}
+
+.browsers {
+    position: fixed;
+    font-size: 10px;
+    color:gray;
+    padding-left:4px;
+    font: normal 12px Verdana, Arial;
+    z-index: 999;
+}
+
+.headerContainer {
+    position:relative;
+    border-bottom: 1px solid #D0D8DE;
+    z-index:999;
+    vertical-align: baseline;
+    height: auto;
+    width: 100%;
+    clear: both;
+    float:left;
+}
+
+.header {
+    width: 850px;
+    height: auto;
+    clear: both;
+    margin: 10px auto;
+    position:relative;
+}
+
+.contentContainer {
+    position:relative;
+    vertical-align: baseline;
+    height: auto;
+    width: 100%;
+    clear: both;
+    float:left;
+    padding-bottom: 100px;
+    border-bottom: 1px solid #D0D8DE;
+}
+
+
+.content {
+    width: 850px;
+    padding-top: 20px;
+    clear: both;
+    margin: 0 auto;
+    position:relative;
+}
+
+
+.logo {
+    position: relative;
+    float: left;
+    height: auto;
+}
+
+.menu {
+    position: relative;
+    float:right;
+}
+
+.nav {
+    margin-top: 75px;
+    margin-right: 50px;
+}
+
+.menuitems {
+    list-style: none outside none;
+}
+
+.menuitem {
+    float:left; 
+    width: auto;
+    margin-left:25px;
+    margin-right:20px;
+    font: normal 15px Verdana, Arial;
+}
+
+.menuitem a {
+    color: #333333;
+}
+
+
+.menuitem a:hover {
+    color: red;
+}
+
+.footer {
+    height:500px;
+    clear: both;
+    float:left;
+}
+
+.infocontent {
+    text-align: justify;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.gotop {
+    float:right;
+    margin-top: -10px;
+}
+
+.gotoptext {
+    font: normal 12px Verdana, Arial;
+    color: red;
+}
+
+.info_title {
+    color: black;
+    font-size: 22px;
+    font-family: Calibri;
+}
+
+.info_text {
+    color: black;
+    font-size: 15px;
+    font-family: Calibri;
+    text-align: justify;
+}
+
+
+.systems {
+    padding-top: 5px;
+    padding-left: 0px;
+    font-size: 13px;
+    font-family: Calibri;
+    color: darkslategrey;
+}
+
+.systems_title {
+    font-size: 15px;
+    font-family: Calibri;
+    color: black;
+}
+
+
+.info {
+    clear:both;
+    width: 720px;
+    padding-top:40px;
+    text-align: justify;
+}
+
+.contact {
+    margin-left: 20px;
+    padding-left: 5px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #ccc;
+    width: auto;
+}
+.contact:hover {
+    background-color:#f3f3f3;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.inputtext {
+    font: normal 16px Verdana, Arial;
+}
+
+.adminTitle {
+    font: normal 25px Verdana, Arial;
+}
+
+.wrongmessage {
+    font: normal 14px Verdana, Arial;
+    color: red;
+}
+
+.logouttext {
+    font: normal 14px Verdana, Arial;
+    padding-left: 20px;
+}
+
+.logouttext a {
+    color: red;
+}
+
+.logouttext a:hover {
+    text-decoration: underline;
+}
+
+.propertyName {
+    font: normal 14px Verdana, Arial;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.propertyValue {
+    width: 300px;
+    color: black;
+}
+
+.propertyValueSmall {
+    width: 100px;
+    color: black;
+}
+
+.editinput {
+    font: normal 10px Verdana, Arial;
+}
+
+.editinput a {
+    color: red;
+}
+
+.changeinput {
+    font: normal 10px Verdana, Arial;
+    padding-left: 5px;
+}
+
+.changeinput a {
+    color: red;
+}
+
+
+.editinput a:hover {
+    text-decoration: underline;
+}
+
+.property {
+    clear: both;
+    padding: 10px;
+}
+
+.categoryName {
+    font: normal 12px Verdana, Arial;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+.categorylist {
+    font: normal 12px Verdana, Arial;
+    padding-bottom: 3px;
+}
+
+.categorylistMorePadding {
+    font: normal 12px Verdana, Arial;
+    padding-bottom: 10px;
+}
+
+.errormessage {
+    clear: both;
+    padding-left:20px;
+    margin-top: -10px;
+    font: normal 12px Verdana, Arial;
+    font-style: italic;
+    color: red;
+    display: none;
+}
+
+.succeedMess {
+    clear: both;
+    padding-left:20px;
+    margin-top: -10px;
+    font: normal 12px Verdana, Arial;
+    font-style: italic;
+    color: green;
+    display: none;
+}
+
+.lineerrormessage {
+    padding-left:10px;
+    padding-bottom: 11px;
+    padding-top: 10px;
+    font: normal 12px Verdana, Arial;
+    font-style: italic;
+    color: red;
+    display: none;
+}
+
+.storingSpanText {
+    padding-left:10px;
+    padding-bottom: 11px;
+    font: normal 12px Verdana, Arial;
+    color: green;
+    display: none;
+}
+
+.successfullStoring {
+    font: normal 12px Verdana, Arial;
+    color: green;
+}
+
+.errorLoadingMyConf {
+     font: normal 12px Verdana, Arial;
+     color: red;
+     font-style: italic;
+}
+
+
+
+.bottomMenu {
+
+    position:fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    
+    padding-bottom: 2px;
+
+    font-size: 16px;
+    font-family: Calibri;
+
+    padding-top:2px;
+
+    border-top-width: 1px;
+    border-top-style: outset;
+    border-top-color: gray;
+
+    background-color: white;
+    z-index: 99;
+}
+
+.textarea {
+    height: 150px;
+    width: 100%;
+    color: black;
+    margin-top: 6px;
+}
+
+.textarealist {
+    height: 200px;
+    width: 30%;
+    color: black;
+    margin-top: 6px;
+}
+
+.runaqueryinputs {
+    border-left: 1px solid #ccc;
+    margin-top: 15px;
+    margin-left: 40px;
+    padding-left: 10px;
+    display: none;
+}
+
+.categentenr {
+    position:relative;
+    clear: both;
+    float: none;
+    padding-bottom: 10px;
+}
+
+.categtitle {
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.sparqlendpoint {
+    position:relative;
+    clear: both;
+    float: none;
+    padding-bottom: 5px;
+}
+
+.sparqltemplatequery {
+    position:relative;
+    clear: both;
+    float: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.sparqlqueryaddcategory {
+    position:relative;
+    clear: both;
+    float: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: none;
+}
+
+.addNewCategory {
+    padding-left: 30px;
+    font: 12px Verdana,Arial;
+    
+}
+.addEE {
+    position:relative;
+    clear: both;
+    float: none;
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 15px;
+    font-family: Calibri;
+}
+
+.addCategoryButton {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 100px;
+}

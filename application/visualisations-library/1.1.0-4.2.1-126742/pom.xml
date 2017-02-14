@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+  
+	<groupId>org.gcube.application</groupId>
+	<artifactId>visualisations-library</artifactId>
+	<version>1.1.0-4.2.1-126742</version>
+	<packaging>jar</packaging>
+	<name>visualisations-library</name>
+	<description>Library for GWT projects to create visualisations</description>
+  
+ <!--  	
+ 	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/trunk/application/${project.artifactId}</connection>
+		<developerConnection>scm:https://svn.d4science.research-infrastructures.eu/gcube/trunk/application/${project.artifactId}</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/trunk/application/${project.artifactId}</url>
+	</scm>
+   -->
+  
+  	<properties>
+		<!-- Convenience property to set the GWT version -->
+		<gwtVersion>2.5.1</gwtVersion>
+		<distroDirectory>distro</distroDirectory>
+		<!-- GWT needs at least java 1.6 -->
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+  
+ 
+  
+	<dependencies>
+		<!-- Google Web Toolkit (GWT) -->
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-servlet</artifactId>
+			<version>${gwtVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>${gwtVersion}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+
+		<!-- tell Maven to package your JS files as resources -->
+ 		<resources>
+			<resource>
+				<directory>src/main/java/gr/uoa/di/madgik/visualisations/public</directory>
+				<filtering>false</filtering>
+			</resource>
+		</resources>  
+ 	
+		<plugins>
+
+			<!-- GWT Maven Plugin -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>${gwtVersion}</version>
+
+				<dependencies>
+					<dependency>
+						<groupId>com.google.gwt</groupId>
+						<artifactId>gwt-user</artifactId>
+						<version>${gwtVersion}</version>
+					</dependency>
+					<dependency>
+						<groupId>com.google.gwt</groupId>
+						<artifactId>gwt-dev</artifactId>
+						<version>${gwtVersion}</version>
+					</dependency>
+				</dependencies>
+				<!-- JS is only needed in the package phase, this speeds up testing -->
+				<executions>
+					<execution>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>resources</goal>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
+				<!-- Plugin configuration. There are many available options, see gwt-maven-plugin 
+					documentation at codehaus.org -->
+				<configuration>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+
+
+

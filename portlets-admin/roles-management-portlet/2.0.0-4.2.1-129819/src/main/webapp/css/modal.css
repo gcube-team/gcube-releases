@@ -1,0 +1,210 @@
+#RolesManagementContainer button.close {
+	color : #4cb5d2 !important;
+	opacity : 1 !important;
+}
+#RolesManagementContainer span#theHeader{
+	color : #4cb5d2;
+}
+#RolesManagementContainer button#saveUsersRolesModal {
+	color : #4cb5d2;
+}
+#RolesManagementContainer button#closeUsersRolesModal, button#acceptUsersRequestsOk, span#acceptRequestHeader, button#acceptDeleteUsersFromCurrentSiteModal, span#deleteCurrentSiteUsersHeader, button#closeDeleteUsersFromCurrentSiteModal {
+	color : #4cb5d2;
+}
+#RolesManagementContainer #addNewRoleHeader, #RolesManagementContainer #acceptRequestHeader, #RolesManagementContainer #deleteRoleHeader {
+	color : #4cb5d2;
+	font-size: 18px;
+	margin-bottom: 7px;
+}
+#RolesManagementContainer div.modal.fade.in label{
+	color : #4cb5d2;
+}
+#RolesManagementContainer div#blueLineBottom{
+    border-bottom: 1px solid #4cb5d2;
+}
+#RolesManagementContainer div#changeUsersRolesModal div.modal-footer, div#usersRequestsModal div.modal-footer {
+	background-color: white;
+	background: white;
+}
+#RolesManagementContainer span#textAboveTagsInput {
+	opacity: 0.8;
+	display : block;
+}
+#RolesManagementContainer div#changeUsersRolesModal div.modal-body div.bootstrap-tagsinput {
+	diplay : inline-block;
+}
+#RolesManagementContainer div#changeUsersRolesModal div.modal-body div.bootstrap-tagsinput input{
+	display : none;
+}
+#RolesManagementContainer div#changeUsersRolesModal div.modal-body label:not(#deleteTheRolesLabel) {
+	color : #4cb5d2;
+	display : inline-block;
+}
+#RolesManagementContainer label#deleteTheRolesLabel {
+	display : inline-block;
+}
+#RolesManagementContainer div#changeUsersRolesModal div.modal-body div.bootstrap-tagsinput {
+	display : inline-block;
+	margin-left : 10px;
+}
+#RolesManagementContainer span#textAboveTagsInput div.row {
+	margin-left : 0px;
+}
+#RolesManagementContainer div#changeUsersRolesModal div.modal-body span#textAboveTagsInput div.row:last-of-type div.bootstrap-tagsinput {
+	border: 1px solid #4cb5d2;
+	border-radius: 8px;
+	margin-top:-7px
+}
+#RolesManagementContainer div#changeUsersRolesModal div.modal-body span#textAboveTagsInput div.row:last-of-type div.text-core.span9 {
+	border-radius: 5px;
+    border: 1px solid #4cb5d2;
+    padding: 5px !important;
+}
+#RolesManagementContainer div#changeUsersRolesModal div.modal-body span#textAboveTagsInput div.row:last-of-type{
+	margin-top:20px;
+}
+#RolesManagementContainer div#changeUsersRolesModal div.modal-body span#textAboveTagsInput i {
+	color : #4cb5d2;
+	padding : 12px
+}
+#RolesManagementContainer div#dropdownList {
+	max-height:200px;
+    overflow: scroll;
+    margin-left : 10px;
+    border : 1px solid #4cb5d2;
+}
+#RolesManagementContainer div.listElement:not(:last-of-type) {
+	border-bottom: 1px solid #4cb5d2;
+}
+#RolesManagementContainer textarea#roleList {
+	/* margin-left : 10px; */
+	width : 100% !important;
+	border-radius : 7px;
+	padding-top : 8px !important;
+	padding-bottom : 8px !important;
+	display : none !important;
+}
+#RolesManagementContainer span#textAboveTagsInput div.row:last-of-type div.text-core.offset3 {
+	width: 70%;
+}
+#RolesManagementContainer span#textAboveTagsInput div.row:last-of-type div.text-core.span9 div.text-wrap div.text-arrow {
+    -ms-transform: scale(1.6,1.6); /* IE 9 */
+    -webkit-transform: scale(1.6,1.6); /* Safari */
+    transform: scale(1.6,1.6);
+    height: 35px;
+    margin-right : 10px;
+} 
+#RolesManagementContainer span#textAboveTagsInput div.row:last-of-type div.text-core.offset3 div.text-wrap {
+	width: 100% !important;
+}
+
+#RolesManagementContainer div.text-dropdown.text-position-below {
+	margin-left: 10px;
+}
+#RolesManagementContainer div.text-tags.text-tags-on-top {
+	margin-left:14px;
+	margin-top:6px;
+}
+#RolesManagementContainer div.text-core.offset3 div.text-wrap div.text-arrow {
+	margin-top: 3%;
+}
+#RolesManagementContainer div#usersRequestsModal {
+	/* width : 80%;
+	left : 25%;
+	top : 33%; */
+	color : #4cb5d2 !important;
+}
+#RolesManagementContainer div#usersRequestsModal {
+	
+}
+#RolesManagementContainer button#acceptAll, button#rejectAll, button#sendAcceptance, button#sendRejection {
+	color : #4cb5d2 !important
+}
+
+#RolesManagementContainer a#reloadUsersRequestsTable {
+	font-size: 14px;
+    background-color: #7EAB10;
+    background: #7EAB10;
+    color: white;
+    display: inline;
+    border-radius: 50%;
+    padding: 6px 9px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+#RolesManagementContainer div#usersRequestsTableContainer {
+	position : relative;
+}
+#RolesManagementContainer div#requestsAcceptanceContainer {
+	position : relative;
+}
+#RolesManagementContainer div#requestsAcceptanceContainer.hideSection, div#requestsAcceptanceBody div.row.hideSection {
+	display : none;
+}
+#RolesManagementContainer div#usersRequestsTableContainer.hideSection {
+	display : none;
+}
+#RolesManagementContainer div#clickToGoBack {
+	cursor: pointer;
+	display : inline-block;
+}
+#RolesManagementContainer button.hideButton {
+	display : none !important;
+}
+#RolesManagementContainer div#requestsAcceptanceBody > div.row > div.text-core {
+	position : static;
+	height: 100% !important;
+}
+#RolesManagementContainer div#requestsAcceptanceBody > div.row:not(last-of-type) {
+	margin-bottom: 10px;
+}
+#RolesManagementContainer div#requestsAcceptanceBody label {
+	display : inline-block;
+}
+#RolesManagementContainer div.modal-backdrop.fade.in.hideFirstModal {
+	z-index: 1051;
+}
+#RolesManagementContainer #editEmailTemplate {
+	float:right;
+	color : #4cb5d2;
+	border-radius: 25%;
+	background-color: #fff;
+	background: #fff;
+	border: none;
+	width: 40px;
+	height: 30px;
+}
+#RolesManagementContainer span#theMiniHeader {
+	left: 15px;
+    top: 1.9em;
+    display: inline-block;
+    position: absolute;
+    color : #555;
+}
+#RolesManagementContainer p#deleteTheRoles {
+	margin : 0 0 5px;
+}
+#RolesManagementContainer button#closeUSerDetailsModal, span#userName, span#detailsFor, span#username, div#userDetailsModal > div.modal-body > div.row-fluid > label {
+	color : #4cb5d2;
+}
+#RolesManagementContainer span#userName {
+	padding-left : 5px;
+}
+#RolesManagementContainer span#detailsFor, #RolesManagementContainer span#userName {
+	font-size : 17.5px
+}
+#RolesManagementContainer div#usersRequestsModal .modal-body {
+	/* overflow-y : visible; */
+	overflow-x : visible;
+}
+#RolesManagementContainer div.modal.fade.in .close:hover, div.modal.fade.in .btn-link:hover {
+	background : #eeeeee !important;
+	background-color : #eeeeee !important;
+	border-radius : 7px !important;
+}
+#RolesManagementContainer div#EditRolesModal div#rolesAttributes div.row-fluid {
+	margin-bottom : 10px;
+}
+#RolesManagementContainer .modal-footer button {
+	color: #4cb5d2;
+}

@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.google.1-0-0" date="2016-03-15">
+		<Change>First release of the google authentication hook</Change>
+	</Changeset>
+	<Changeset component="gr.cite.google.1-1-0" date="2016-09-25">
+		<Change>Updated to work with the multiple email addresses authentication mechanism</Change>
+	</Changeset>
+	<Changeset component="gr.cite.google.1-1-1" date="2016-12-13">
+		<Change>Fixed a bug concerning users with no google+ available where the authenticated response did not include given and family names</Change>
+	</Changeset>
+</ReleaseNotes>

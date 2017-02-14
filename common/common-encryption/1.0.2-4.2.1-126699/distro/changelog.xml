@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="common-encryption.1-0-1" date="04-05-2012">
+		<Change>Compliancy with the new Maven-based release procedure</Change>
+	</Changeset>
+	<Changeset component="common-encryption.1-0-0" date="14-02-2012">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+	<portlet>
+		<portlet-name>ServiceEndpointEditor</portlet-name>
+		<display-name>Service Endpoint Editor</display-name>
+	        <portlet-class>org.gcube.portlets.admin.sepeditor.server.portlet.RuntimeResourcePortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/WEB-INF/jsp/RuntimePortlet_view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Service Endpoint Editor</title>
+			<short-title>Service Endpoint Editor</short-title>
+			<keywords>Service Endpoint Editor</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>		
+	</portlet>
+</portlet-app>

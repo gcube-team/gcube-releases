@@ -1,0 +1,133 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.gcube.common</groupId>
+	<artifactId>database-resource</artifactId>
+	<version>1.1.1-4.2.1-126041</version>
+	<name>Database resource client libraries</name>
+	<description>Client library for the retrieval of database properties from the IS.</description>
+
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<scm>
+		<connection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/trunk/Common/database-resource/</connection>
+		<developerConnection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/trunk/Common/database-resource/</developerConnection>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/Common/database-resource/</url>
+	</scm>
+
+	<properties>
+		<lastReleaseDate>2013-10-11</lastReleaseDate>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+		<configDirectory>${project.basedir}/config</configDirectory>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>database-resource-api</artifactId>
+			<version>1.0.0-4.2.1-126037</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>ic-client</artifactId>
+			<version>1.0.1-4.2.1-126578</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-encryption</artifactId>
+			<version>1.0.2-4.2.1-126699</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
+		</dependency>
+
+		<!-- Test deps -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.13</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<version>1.0-SP4</version>
+		</dependency>
+
+		<!-- Test dependencies -->
+		<dependency>
+			<groupId>org.jboss.weld.se</groupId>
+			<artifactId>weld-se</artifactId>
+			<version>1.1.7.Final</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.jeeunit</groupId>
+			<artifactId>jeeunit-weld-se</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.jeeunit</groupId>
+			<artifactId>jeeunit-cdi</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12.4</version>
+				<configuration>
+					<skipTests>true</skipTests>
+					<additionalClasspathElements>
+						<additionalClasspathElement>${env.GLOBUS_LOCATION}</additionalClasspathElement>
+					</additionalClasspathElements>
+				</configuration>
+			</plugin>
+			<!-- Release deliverable management -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,93 @@
+#bottombar {
+	width: 100% !important;
+}
+
+.x-menubar {
+	background-image: none;
+	background-color: #FFF;
+}
+
+.x-panel-body-noheader {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.x-border-layout-ct {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.x-toolbar {
+	border-color: transparent;
+	background-image: none;
+	background-color: #FFF;
+}
+
+.x-panel-header {
+	background-image: none;
+	background-color: #FFF;
+}
+
+.x-toolbar .xtb-sep {
+	background-image: none !important;
+	background-color: transparent;
+}
+
+.x-accordion-hd {
+	background-position: 0 0px;
+}
+
+.x-status-text,.x-tree3-node-text,.x-status .x-status-text,.x-toolbar label,.x-component,.x-btn button
+	{
+	color: #4c68a6;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: 12px !important;
+}
+
+.x-grid-group-hd .x-grid-group-div {
+	color: #4c68a6;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: normal;
+	font-size: 12px !important;
+}
+
+.x-status-text-panel {
+	border-color: transparent;
+}
+
+.x-panel-mc {
+	padding-top: 5px;
+	background: #FFF url(images/bg-pattern.png) repeat;
+	border-color: #226599;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.ext-el-mask-msg {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-width: 2px;
+	background-color: #FFF;
+	background-image: none;
+}
+
+.ext-el-mask-msg div {
+	color: #4c68a6;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: 12px !important;
+	border-color: transparent;
+	background-color: transparent;
+}
+
+.loading-indicator {
+	background-position: 5px 50%;
+	background-image: url("images/loader.gif");
+}

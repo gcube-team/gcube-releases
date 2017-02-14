@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<users>
+	<user>
+		<host>localhost</host>
+		<port>5432</port>
+		<dbusername>postgres</dbusername>
+		<dbpassword>di_database</dbpassword>
+		<dbtype>postgresql</dbtype>
+		<db>World</db>
+		<name>nikolas.laskaris</name>
+		<table>
+			<name>country</name>
+			<sql>select * from country</sql>
+			<!-- <sql>select * from country where code='GRC' or code='CIV' or code='USA' or code='GBR'</sql> -->
+		</table>
+		<table>
+			<name>city</name>
+			<sql>select * from city</sql>
+		</table>
+		<table>
+			<name>countrylanguage</name>
+			<sql>select * from countrylanguage</sql>
+		</table>
+		<table>
+			<name>zipcodes</name>
+			<sql>select * from zipcodes</sql>
+		</table>
+		<edge>
+			<parent>country</parent>
+			<pkeys>code</pkeys> <!-- if more than one, seperate them with comma -->
+			<child>city</child>
+			<ckeys>countrycode</ckeys> <!-- if more than one, seperate them with comma -->
+		</edge>
+		<edge>
+			<parent>country</parent>
+			<pkeys>code</pkeys> <!-- if more than one, seperate them with comma -->
+			<child>countrylanguage</child>
+			<ckeys>countrycode</ckeys> <!-- if more than one, seperate them with comma -->
+		</edge>
+		<edge>
+			<parent>city</parent>
+			<pkeys>id</pkeys> <!-- if more than one, seperate them with comma -->
+			<child>zipcodes</child>
+			<ckeys>cityid</ckeys> <!-- if more than one, seperate them with comma -->
+		</edge>
+		
+	</user>
+
+	<user>
+		<host>localhost</host>
+		<port>5432</port>
+		<dbusername>postgres</dbusername>
+		<dbpassword>di_database</dbpassword>
+		<dbtype>postgresql</dbtype>
+		<db>FrenchTowns</db>
+		<name>alex.antoniadis</name>
+		<table>
+			<name>regions</name>
+			<sql>select * from regions</sql>
+		</table>
+		<table>
+			<name>departments</name>
+			<sql>select * from departments</sql>
+		</table>
+		<table>
+			<name>towns</name>
+			<sql>select * from towns</sql>
+		</table>
+		<edge>
+			<parent>regions</parent>
+			<pkeys>code</pkeys> <!-- if more than one, seperate them with comma -->
+			<child>departments</child>
+			<ckeys>region</ckeys> <!-- if more than one, seperate them with comma -->
+		</edge>
+
+	</user>
+
+	<user>
+		<host>localhost</host>
+		<port>5432</port>
+		<dbusername>postgres</dbusername>
+		<dbpassword>di_database</dbpassword>
+		<dbtype>postgresql</dbtype>
+		<db>sakila</db>
+		<name>john.gerbesiotis</name>
+		<table>
+			<name>customer</name>
+			<sql>select * from customer</sql>
+		</table>
+		<table>
+			<name>store</name>
+			<sql>select * from store</sql>
+		</table>
+		<table>
+			<name>address</name>
+			<sql>select * from address</sql>
+		</table>
+		<table>
+			<name>rental</name>
+			<sql>select * from rental</sql>
+		</table>
+		<table>
+			<name>city</name>
+			<sql>select * from city</sql>
+		</table>
+		<table>
+			<name>country</name>
+			<sql>select * from country</sql>
+		</table>
+		<table>
+			<name>payment</name>
+			<sql>select * from payment</sql>
+		</table>
+
+		<edge>
+			<parent>customer</parent>
+			<pkeys>store_id</pkeys> <!-- if more than one, seperate them with comma -->
+			<child>store</child>
+			<ckeys>store_id</ckeys> <!-- if more than one, seperate them with comma -->
+		</edge>
+
+		<edge>
+			<parent>customer</parent>
+			<pkeys>address_id</pkeys> <!-- if more than one, seperate them with comma -->
+			<child>address</child>
+			<ckeys>address_id</ckeys> <!-- if more than one, seperate them with comma -->
+		</edge>
+		<edge>
+			<parent>customer</parent>
+			<pkeys>customer_id</pkeys> <!-- if more than one, seperate them with comma -->
+			<child>rental</child>
+			<ckeys>customer_id</ckeys> <!-- if more than one, seperate them with comma -->
+		</edge>
+		<edge>
+			<parent>address</parent>
+			<pkeys>city_id</pkeys> <!-- if more than one, seperate them with comma -->
+			<child>city</child>
+			<ckeys>city_id</ckeys> <!-- if more than one, seperate them with comma -->
+		</edge>
+
+		<edge>
+			<parent>city</parent>
+			<pkeys>country_id</pkeys> <!-- if more than one, seperate them with comma -->
+			<child>country</child>
+			<ckeys>country_id</ckeys> <!-- if more than one, seperate them with comma -->
+		</edge>
+		<edge>
+			<parent>rental</parent>
+			<pkeys>rental_id</pkeys> <!-- if more than one, seperate them with comma -->
+			<child>payment</child>
+			<ckeys>rental_id</ckeys> <!-- if more than one, seperate them with comma -->
+		</edge>
+
+
+	</user>
+
+
+	<!-- 
+	<user>
+	</user>
+	<user>
+	</user>
+	<user>
+	</user>
+	 -->
+</users>

@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.gcube.informationsystem</groupId>
+	<artifactId>is-publisher</artifactId>
+	<version>2.2.0-4.2.1-126946</version>
+	<packaging>jar</packaging>
+
+	<name>publisher</name>
+	<url>https://gcube.wiki.gcube-system.org/gcube/index.php/IS-Publisher</url>
+	<developers>
+		<developer>
+			<name>Manuele Simi (CNR-ISTI)</name>
+		</developer>
+	</developers>
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>gcf</artifactId>
+			<version>1.7.0-4.2.1-2877</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.informationsystem</groupId>
+			<artifactId>is-collector-stubs</artifactId>
+			<version>3.0.0-4.2.1-126401</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.informationsystem</groupId>
+			<artifactId>is-registry-stubs</artifactId>
+			<version>2.1.4-4.2.1-126422</version>
+		</dependency>
+				<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>

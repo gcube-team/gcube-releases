@@ -1,0 +1,60 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.index.elasticsearch-gcube.2-3-0" date="2015-04-30">
+		<Change>updated es to 1.5.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.elasticsearch-gcube.2-2-1" date="2014-12-05">
+		<Change>index type file bug fix</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.elasticsearch-gcube.2-2-0" date="2014-08-28">
+		<Change>Changed deleteDocuments return value to boolean</Change>
+		<Change>Bulk request timeout 5mins</Change>
+		<Change>Applied missing field sid filter to overcome schema differences issues</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.elasticsearch-gcube.2-1-1" date="2014-7-01">
+		<Change>Moved to elasticsearch 1.2.1</Change>
+		<Change>Changed timeout in delete operations from 30 seconds to 2 minutes</Change>
+		<Change>Fixed a bug that returned the wrong port for the transport address</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.elasticsearch-gcube.2-1-0" date="2014-06-05">
+		<Change>Moved to elasticsearch 1.1.2</Change>
+		<Change>Index creates the meta-index after init-load</Change>
+		<Change>Added frequent terms support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.elasticsearch-gcube.2-0-0" date="2013-12-17">
+		<Change>Added FW index support</Change>
+		<Change>Enhanced the parser capabilities to create better elasticsearch queries</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.elasticsearch-gcube.1-3-0" date="2013-12-17">
+		<Change>Moved to elasticsearch 0.90.7</Change>
+		<Change>Added query and feeding with security identifiers</Change>
+		<Change>Added index name aliases to support index reconstruction (indexName in feedLocator, activateIndex, deleteIndex etc)</Change>
+		<Change>Added collection count, indices of collection, collection of indices etc</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.elasticsearch-gcube.1-2-1" date="2013-12-17">
+		<Change>Fixed ObjectID case in fields mapping</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.elasticsearch-gcube.1-2-0" date="2013-08-22">
+		<Change>Optimization with elasticsearch API</Change>
+		<Change>Removed prints-exceptions to stdout</Change>
+		<Change>Can be used without RR adaptor</Change>
+		<Change>Moved to elasticsearch 0.90.3</Change>
+		<Change>Added query offset at query operation</Change>
+		<Change>Added support for highlighted fields to be defined by user</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.elasticsearch-gcube.1-1-0" date="2013-07-09">
+		<Change>Added delete by collection ID</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.elasticsearch-gcube.1-0-3" date="2013-07-08">
+		<Change>Changed package name</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.elasticsearch-gcube.1-0-2" date="2013-05-24">
+		<Change>Code optimizations</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.elasticsearch-gcube.1-0-1" date="2013-04-20">
+		<Change>Code optimizations</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.elasticsearch-gcube.1-0-0" date="2013-02-20">
+		<Change>Initial Release</Change>
+	</Changeset>
+</ReleaseNotes>
+

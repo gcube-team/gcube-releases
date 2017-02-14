@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.geoanalytics.datatransfer-objects.0-0-1" date="2016-09-30">
+		<Change>Initial release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.geoanalytics.datatransfer-objects.0-0-2" date="2016-11-24">
+		<Change>Removed the spatial repository</Change>
+		<Change>Support groups and groups' rights to projects</Change>
+	</Changeset>
+</ReleaseNotes>
+

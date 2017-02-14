@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.distribution.gcube-bom.1-0-1" date="${buildDate}">
+		<Change>Removed worng scope on dependency declaration</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.gcube-bom.1-0-0" date="2016-10-28">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

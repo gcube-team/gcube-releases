@@ -1,0 +1,26 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portal.social-networking-library-ws.1-4-0"
+		date="2016-12-01">
+		<Change>Custom jackson object mapper is used to have snake case fields'names</Change>
+		<Change>Improved users version 2 resource with more methods</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library-ws.1-3-0"
+		date="2016-10-10">
+		<Change>Moved to new Authorization Framework</Change>
+		<Change>Added method to send Messages</Change>
+		<Change>Added new version for the APIs that accept/return JSON</Change>
+		<Change>Token is discovered before every call is executed by a filter</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library-ws.1-2-0"
+		date="2016-06-10">
+		<Change>Support for new portal (gCube 4.0.0)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library-ws.1-1-0"
+		date="2016-04-10">
+		<Change>Minor bug fixes (look at support ticket #2971)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.social-networking-library-ws.1-0-0"
+		date="2015-12-21">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

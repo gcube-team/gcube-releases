@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.GeoanalyticsAdministrationHome.1-0-0" date="2016-09-29">
+		<Change>First release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.GeoanalyticsAdministrationHome.1-1-0" date="2016-11-25">
+		<Change>Fixed bugs preventing the portlet to load</Change>
+		<Change>Improved the importers' UI</Change>
+		<Change>Dynamic discovery of the backend service</Change>
+	</Changeset>
+</ReleaseNotes>

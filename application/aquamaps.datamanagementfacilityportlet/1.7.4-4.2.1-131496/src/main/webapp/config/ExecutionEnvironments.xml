@@ -1,0 +1,35 @@
+<object-stream>
+  <ExecutionEnvironment>
+    <environment>D4Science infrastructure</environment>
+    <resourceNumber>1</resourceNumber>
+    <maxResource>2</maxResource>
+    <endpointName>AquaMaps (via D4Science)</endpointName>
+    <endpointUrl></endpointUrl>
+    <logo>D4Science.png</logo>
+    <description>D4Science-II provides mechanism for facilitating interoperation of several diverse data e-Infrastructures that are running autonomously thus creating the core of an e-Infrastructure Ecosystem. It offers solutions to abstract over differences in location, protocols, and models by scaling no less than the interfaced resources, by keeping failures partial and temporary, and by being autonomic reacting and recovering from a large number of potential issues. This e-Infrastructure Ecosystem serves a significantly expanded set of communities dealing with multidisciplinary, scientific and societal challenges in areas such as biodiversity, fishery resources management and high energy physics.</description>
+    <disclaimer>D4Science provides the computational, storage, and applications resources and its contents on an &quot;as is&quot; basis and makes no representations or warranties of any kind, express, implied, or statutory, including, but not limited to, the implied warranties of fitness for a particular purpose and non-infringement of third party rights, with respect to the resources, its contents or the services featured.</disclaimer>
+    <cloud>false</cloud>
+  </ExecutionEnvironment>
+  <ExecutionEnvironment>
+    <environment>Venus Cloud Infrastructure</environment>
+    <resourceNumber>1</resourceNumber>
+    <maxResource>20</maxResource>
+    <endpointName>Windows Azure (via Venus-C Cloud)</endpointName>
+    <endpointUrl>http://node1.d.venusc.research-infrastructures.eu:5941/api/</endpointUrl>
+    <logo>Venus.png</logo>
+    <description>VENUS-C provides an industry-quality, highly-scalable and flexible Cloud infrastructure to empower end-user services with computational and storage resources offered by the Royal Institute of Technology (KTH, Sweden), the Barcelona Supercomputing Center (BSC, Spain), Microsoft European data centres, and the data centre of the Engineering Group. Venus-C exploits Windows Azure, EMOTIVE and OpenNebula.</description>
+    <disclaimer>Venus-C makes no warranties, express, implied, or statutory, by offering this service</disclaimer>
+    <cloud>true</cloud>
+  </ExecutionEnvironment>
+  <ExecutionEnvironment>
+    <environment>Venus Cloud Infrastructure</environment>
+    <resourceNumber>1</resourceNumber>
+    <maxResource>20</maxResource>
+    <endpointName>Private Cloud</endpointName>
+    <endpointUrl></endpointUrl>
+    <logo>Venus.png</logo>
+    <description>The Private Cloud is a virtualized infrastructure maintained by CNR and it is accessible through the RainyCloud framework. RainyCloud framework exploits the VENUS-C industry-quality, highly-scalable and flexible Cloud infrastructure facilities to empower end-user services with computational and storage resources.</description>
+    <disclaimer>CNR makes no warranties, express, implied, or statutory, by offering these storage and computational resources. All virtualized servers are deployed at CNR located in Pisa (Italy).</disclaimer>
+    <cloud>true</cloud>
+  </ExecutionEnvironment>
+</object-stream>

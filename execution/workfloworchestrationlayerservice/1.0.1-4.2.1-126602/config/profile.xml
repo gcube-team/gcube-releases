@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>Workflow Orchestration Layer Service</Description>
+		<Class>Execution</Class>
+		<Name>WorkflowOrchestrationLayerService</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Main>
+				<Name>WorkflowOrchestrationLayerService</Name>
+				<Version>1.0.1-4.2.1-126602</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.execution</groupId>
+					<artifactId>workfloworchestrationlayerservice-service</artifactId>
+					<version>1.0.1-4.2.1-126602</version>
+				</MavenCoordinates>
+				<GARArchive>workfloworchestrationlayerservice-service-1.0.1-4.2.1-126602.gar</GARArchive>
+				<PortType>
+					<Name>gcube/execution/WorkflowOrchestrationLayerService</Name>
+				</PortType>
+			</Main>
+			<Software>
+				<Name>WorkflowOrchestrationLayerServiceStubs</Name>
+				<Version>1.0.1-4.2.1-126602</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.execution</groupId>
+					<artifactId>workfloworchestrationlayerservice-stubs</artifactId>
+					<version>1.0.1-4.2.1-126602</version>
+				</MavenCoordinates>
+				<Type>library</Type>
+				<Files>
+					<File>workfloworchestrationlayerservice-stubs-1.0.1-4.2.1-126602.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>
+

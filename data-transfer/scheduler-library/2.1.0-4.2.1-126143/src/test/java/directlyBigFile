@@ -1,0 +1,18 @@
+<org.gcube.datatransfer.scheduler.library.obj.SchedulerObj>
+  <typeOfSchedule>
+    <directedScheduled>true</directedScheduled>
+  </typeOfSchedule>
+  <typeOfTransfer>FileBasedTransfer</typeOfTransfer>
+  <scope>/gcube/devsec/</scope>
+  <unzipFile>false</unzipFile>
+  <overwrite>true</overwrite>
+  <syncOp>false</syncOp>
+  <agentHostname>pcitgt1012.cern.ch</agentHostname>
+  <inputUrls>
+    <string>http://ftp.lip6.fr/pub/linux/distributions/scientific/6.0/x86_64/iso/SL-60-x86_64-2011-03-03-Everything-DVD2.iso</string>
+  </inputUrls>
+  <destinationFolder>/home/nick/Downloads/test</destinationFolder>
+  <storageType>
+    <__value__>LocalGHN</__value__>
+  </storageType>
+</org.gcube.datatransfer.scheduler.library.obj.SchedulerObj>

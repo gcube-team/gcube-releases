@@ -1,0 +1,54 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.tabular-data-column-widget.1-9-0"
+		date="2015-10-15">
+		<Change>Fixed apply button on ChangeColumnTypePanel</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-column-widget.1-8-0"
+		date="2015-07-03">
+		<Change>Allow the creation and use of expressions on multi column in TDM portlet[issue #81]</Change>
+		<Change>Fixed dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-column-widget.1-7-0"
+		date="2015-04-30">
+		<Change>Update Operation for open from Ribbon [issue #3154]</Change>
+		<Change>Updated Add Column now support expression</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-column-widget.1-6-0"
+		date="2015-02-16">
+		<Change>Support Formats on Change Column Type [issue #3233]</Change>
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-column-widget.1-5-0"
+		date="2014-10-31">
+		<Change>Fixed Exaped String on panels</Change>
+		<Change>Fixed Final and Lock Error</Change>
+		<Change>Updated Geometry Type support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-column-widget.1-4-0"
+		date="2014-09-12">
+		<Change>Fixed Replace Panel</Change>
+		<Change>Fixed Batch Replace Panel</Change>
+		<Change>Fixed Edit Row</Change>
+		<Change>Fixed Add Row</Change>
+		<Change>Updated monitor</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-column-widget.1-3-0"
+		date="2014-07-04">
+		<Change>Added Column Mapping</Change>
+		<Change>Fixed Replace</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-column-widget.1-2-0"
+		date="2014-06-05">
+		<Change>Added Replace Batch</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-column-widget.1-1-0"
+		date="2014-04-04">
+		<Change>Added Replace Value</Change>
+		<Change>Added Delete Column</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-column-widget.1-0-0"
+		date="2014-02-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

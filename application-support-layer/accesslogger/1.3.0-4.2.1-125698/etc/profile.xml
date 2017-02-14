@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Library</Type>
+	<Profile>
+		<Description>Access Logger Library</Description>
+		<Class>ApplicationSupportLayer</Class>
+		<Name>AccessLogger</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>Access Logger Library</Description>
+				<Name>AccessLogger</Name>
+				<Version>1.2.0</Version>
+				<Files>
+					<File>AccessLogger.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

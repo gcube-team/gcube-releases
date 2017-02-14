@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.model.dao.1-0-0" date="2016-07-29">
+		<Change>First release</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.model.dao.1-1-0" date="2016-11-24">
+		<Change>Added new functions</Change>
+	</Changeset>
+</ReleaseNotes>

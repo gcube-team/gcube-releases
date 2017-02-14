@@ -1,0 +1,20 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="geonetwork.1-0-0" date="2013-03-01">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset  component="geonetwork.2-1-1" date="2015-05-25">
+		<Change>Integration fixes</Change>
+	</Changeset>
+	<Changeset  component="geonetwork.3-0-0" date="2016-06-25">
+		<Change>Added interface GeoNetworkAdministration</Change>
+		<Change>User and group management facilities</Change>
+		<Change>Gcube 4 SDI automatic configuration</Change>
+		<Change>Improved check on configuration constraints</Change>
+	</Changeset>
+	<Changeset  component="geonetwork.3-1-0" date="2016-09-09">
+		<Change>Added Security token management</Change>
+		<Change>Multiple GN version handling by integrating geonetwork-manager 1.4-SNAPSHOT</Change>
+		<Change>Introduced 'Publish and promote' API</Change>	
+	</Changeset>
+</ReleaseNotes>

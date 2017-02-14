@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Factory"
+    targetNamespace="http://acme.org/sample"
+    xmlns:tns="http://acme.org/sample"
+  	xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" >
+     
+    <import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+   
+ 	<types>
+	<xsd:schema targetNamespace="http://acme.org/sample">
+		
+		 <xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+	
+  		<xsd:element name="create" type="xsd:string" />		
+		<xsd:element name="createResponse" type="wsa:EndpointReferenceType"/>
+	</xsd:schema>
+	</types>
+
+	<message name="createInputMessage">
+		<part name="request" element="tns:create"/>
+	</message>
+	<message name="createOutputMessage">
+		<part name="response" element="tns:createResponse"/>
+	</message>
+
+	<portType name="FactoryPortType">
+	
+		<operation name="create">
+			<input message="tns:createInputMessage"/>
+			<output message="tns:createOutputMessage"/>
+		<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		
+	</operation>
+	
+	</portType>
+
+</definitions>

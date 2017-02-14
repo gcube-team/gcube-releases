@@ -1,0 +1,9 @@
+share/schema/mds/aggregator/AggregatorServiceGroupEntry_bindings.wsdl
+share/schema/mds/aggregator/AggregatorServiceGroupEntry_service.wsdl
+share/schema/mds/aggregator/AggregatorServiceGroup_bindings.wsdl
+share/schema/mds/aggregator/AggregatorServiceGroup_service.wsdl
+share/schema/mds/aggregator/aggregator-types.xsd
+share/schema/mds/aggregator/aggregator_service_group_entry_port_type.wsdl
+share/schema/mds/aggregator/aggregator_service_group_port_type.wsdl
+etc/gpt/packages/globus_wsrf_mds_aggregator_schema/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_mds_aggregator_schema/pkg_data_noflavor_pgm.gpt

@@ -1,0 +1,4 @@
+HWOTO test
+
+In the clients folder you will find the source of two clients.
+Compile them and run them with the "--help" option to see all available test parameters.

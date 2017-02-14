@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>Workflow Engine gCube Web Service Interface</Description>
+		<Class>Execution</Class>
+		<Name>WorkflowEngineService</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Main>
+				<Description>Workflow Engine gCube Web Service Interface Service package</Description>
+				<Name>WorkflowEngineService-service</Name>
+					<Version>1.3.2-4.2.1-126194</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.execution</groupId>
+					<artifactId>workflowengineservice-service</artifactId>
+					<version>1.3.2-4.2.1-126194</version>
+				</MavenCoordinates>
+				<GARArchive>workflowengineservice-service-1.3.2-4.2.1-126194.gar</GARArchive>
+				<PortType>
+					<Name>gcube/execution/workflowengine</Name>
+					<WSDL />
+				</PortType>
+			</Main>
+			<Software>
+				<Description>Workflow Engine gCube Web Service Interface stubs</Description>
+				<Name>WorkflowEngineService-stubs</Name>
+				<Version>1.3.2-4.2.1-126194</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.execution</groupId>
+					<artifactId>workflowengineservice-stubs</artifactId>
+					<version>1.3.2-4.2.1-126194</version>
+				</MavenCoordinates>
+				<Files>
+					<File>workflowengineservice-stubs-1.3.2-4.2.1-126194.jar</File>
+				</Files>
+			</Software>
+<!-- 			<Software> -->
+<!-- 				<Description>Workflow Engine gCube Web Service Interface test suite</Description> -->
+<!-- 				<Name>WorkflowEngineService-test-suite</Name> -->
+<!-- 				<Version>1.3.0</Version> -->
+<!-- 				<MavenCoordinates> -->
+<!-- 					<groupId>org.gcube.execution</groupId> -->
+<!-- 					<artifactId>workflowengineservice-client</artifactId> -->
+<!-- 					<version>1.3.0</version> -->
+<!-- 				</MavenCoordinates> -->
+<!-- 				<Files> -->
+<!-- 					<File>WorkflowEngineServiceClient.jar</File> -->
+<!-- 					<File>Readme.txt</File> -->
+<!-- 					<File>RetrieveFile.sh</File> -->
+<!-- 					<File>StartGridAdaptorTest.sh</File> -->
+<!-- 					<File>StartCondorAdaptorTest.sh</File> -->
+<!-- 					<File>StartHadoopAdaptorTest.sh</File> -->
+<!-- 					<File>StartJDLAdaptorTest.sh</File> -->
+<!-- 					<File>StartJobMonitor.sh</File> -->
+<!-- 					<File>resources.test.txt</File> -->
+<!-- 					<File>test.jdl</File> -->
+<!-- 					<File>test.sh</File> -->
+<!-- 					<File>userProxy</File> -->
+<!-- 					<File>ExampleText.txt </File> -->
+<!-- 					<File>resources.test2.txt</File> -->
+<!-- 					<File>Concat.sh</File> -->
+<!-- 					<File>jdlExample2.jdl </File> -->
+<!-- 					<File>jdlExample3.jdl</File> -->
+<!-- 					<File>jdlExample4.jdl</File> -->
+<!-- 					<File>job.sh</File> -->
+<!-- 					<File>resources.example2.txt </File> -->
+<!-- 					<File>resources.example3.txt</File> -->
+<!-- 					<File>resources.example4.txt </File> -->
+<!-- 					<File>sig.txt</File> -->
+<!-- 					<File>job.finalize.submit</File> -->
+<!-- 					<File>job.setup.submit</File> -->
+<!-- 					<File>job.work1.submit</File> -->
+<!-- 					<File>job.work2.submit</File> -->
+<!-- 					<File>resources1.test.txt</File> -->
+<!-- 					<File>resources.dag.test.txt</File> -->
+<!-- 					<File>resources.test.txt</File> -->
+<!-- 					<File>simple.c</File> -->
+<!-- 					<File>submit1.condor</File> -->
+<!-- 					<File>submit.condor</File> -->
+<!-- 					<File>submit.dag.condor</File> -->
+<!-- 				</Files> -->
+<!-- 			</Software> -->
+		</Packages>
+	</Profile>
+</Resource>

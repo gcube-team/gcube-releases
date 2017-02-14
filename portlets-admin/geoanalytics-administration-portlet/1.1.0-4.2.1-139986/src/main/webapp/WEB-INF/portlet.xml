@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	
+	<portlet>
+		<portlet-name>geoanalytics-administration-portlet</portlet-name>
+		<display-name>Geoanalytics Administration</display-name>
+		<portlet-class>gr.cite.geoanalytics.administration.portlet.GeoanalyticsAdministrationHome</portlet-class>
+		<init-param>
+			<name>back-end-url</name>
+			<value>http://localhost:8081/geoanalytics/</value>
+		</init-param>
+		<init-param>
+			<name>user-name</name>
+			<value>EdElric</value>
+		</init-param>
+		<init-param>
+			<name>views</name>
+			<value>/html/</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Geoanalytics Administration Portlet</title>
+			<short-title>Geoanalytics Administration Portlet</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+</portlet-app>

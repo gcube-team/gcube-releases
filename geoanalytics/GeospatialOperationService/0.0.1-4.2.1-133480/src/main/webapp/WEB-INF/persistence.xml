@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/persistence/persistence_2_1.xsd">
+   <persistence-unit name="gr.cite.geoanalytics">
+      <description> Persistence unit for Geoanalytics </description>
+      <provider>org.hibernate.ejb.HibernatePersistence</provider>
+      <class>gr.cite.geoanalytics.dataaccess.entities.accounting.Accounting</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.auditing.Auditing</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.annotation.Annotation</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.customer.Customer</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.customer.CustomerActivation</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.document.Document</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.mimetype.MimeType</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.project.Project</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.project.ProjectDocument</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.project.ProjectTerm</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.project.PrincipalProject</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.principal.PrincipalProject</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.shape.Shape</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.shape.ShapeImport</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.shape.ShapeTerm</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.shape.ShapeDocument</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.sysconfig.SysConfig</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.taxonomy.Taxonomy</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.taxonomy.TaxonomyTerm</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.taxonomy.TaxonomyTermLink</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.taxonomy.TaxonomyTermShape</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.user.User</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.workflow.Workflow</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.workflow.WorkflowTask</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.workflow.WorkflowTaskDocument</class>
+   </persistence-unit>
+</persistence>

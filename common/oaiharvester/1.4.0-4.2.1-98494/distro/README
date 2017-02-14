@@ -1,0 +1,38 @@
+The gCube System - ${name} 
+----------------------
+
+This work has been partially supported by the following European projects: DILIGENT (FP6-2003-IST-2), D4Science (FP7-INFRA-2007-1.2.2), 
+D4Science-II (FP7-INFRA-2008-1.2.2), iMarine (FP7-INFRASTRUCTURES-2011-2), and EUBrazilOpenBio (FP7-ICT-2011-EU-Brazil).
+
+Authors
+-------
+
+* Valentina Marioli (valentina.marioli@isti.cnr.it), CNR Pisa, Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo".
+
+Version and Release Date
+------------------------
+${version}
+
+Description
+-----------
+${description}
+
+Download information
+--------------------
+
+Source code is available from SVN:
+${scm.url}
+
+Binaries can be downloaded from:
+
+
+Documentation 
+-------------
+Documentation is available on-line from the Projects Documentation Wiki:
+https://gcube.wiki.gcube-system.org/gcube/index.php/OAITMPlugin
+
+
+Licensing
+---------
+
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.

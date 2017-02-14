@@ -1,0 +1,12 @@
+<application mode="online">
+ 
+	<name>sru-geonetwork</name>
+	<group>Search</group>
+	<version>1.0</version>
+ 
+        <description>Service to export geonetwork metadata in DC through SRU protocol</description>
+ 
+        <!--<persistence location="/some/custom/location</persistence" />-->
+ 
+        <!--<exclude>/some/app/url</exclude>-->
+</application>

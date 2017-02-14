@@ -1,0 +1,102 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://gcube-system.org/namespaces/application/aquamaps/gistypes"
+	xmlns:tns="http://gcube-system.org/namespaces/application/aquamaps/gistypes"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" 
+	xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xsd:complexType name="boundsInfoType">
+				<xsd:sequence>
+					<xsd:element name="minx" type="xsd:double" />
+					<xsd:element name="maxx" type="xsd:double" />
+					<xsd:element name="miny" type="xsd:double" />
+					<xsd:element name="maxy" type="xsd:double" />
+					<xsd:element name="crs" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:complexType>
+	
+			<xsd:complexType name="transectInfoType">
+				<xsd:sequence>
+					<xsd:element name="enabled" type="xsd:boolean" />
+					<xsd:element name="table" type="xsd:string"/>
+					<xsd:element name="maxelements" type="xsd:int" />
+					<xsd:element name="minimumgap" type="xsd:int" />
+					<xsd:element name="fields" type="coretypes:stringArray" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+  			<xsd:complexType name="layerInfoType">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="title" type="xsd:string" />
+					<xsd:element name="abstract" type="xsd:string" />
+					<xsd:element name="url" type="xsd:string" />
+					<xsd:element name="serverProtocol" type="xsd:string" />
+					<xsd:element name="serverPassword" type="xsd:string" />
+					<xsd:element name="serverLogin" type="xsd:string" />
+					<xsd:element name="serverType" type="xsd:string" />
+					<xsd:element name="srs" type="xsd:string" />
+					<xsd:element name="type" type="tns:layerType" />
+					<xsd:element name="trasparent" type="xsd:boolean" />
+					<xsd:element name="baseLayer" type="xsd:boolean" />
+					<xsd:element name="buffer" type="xsd:int" />
+					<xsd:element name="hasLegend" type="xsd:boolean" />
+					<xsd:element name="visible" type="xsd:boolean" />
+					<xsd:element name="selected" type="xsd:boolean" />
+					<xsd:element name="queryable" type="xsd:boolean" />
+					<xsd:element name="maxExtent" type="tns:boundsInfoType" />
+					<xsd:element name="minExtent" type="tns:boundsInfoType" />
+					<xsd:element name="defaultStyle" type="xsd:string" />
+					<xsd:element name="opacity" type="xsd:double" />
+					<xsd:element name="styles" type="coretypes:stringArray" />
+					<xsd:element name="transect" type="tns:transectInfoType" />
+				</xsd:sequence>
+			</xsd:complexType>
+  
+  			<xsd:simpleType name="layerType">
+				<xsd:restriction base="xsd:string">
+		   	 		<xsd:enumeration  value="Environment"/>
+		   	 		<xsd:enumeration  value="PointMap"/>
+		   	 		<xsd:enumeration  value="Prediction"/>
+		   	 		<xsd:enumeration  value="Biodiversity"/>		   	 		
+		     	</xsd:restriction>
+			</xsd:simpleType>
+			
+			<xsd:complexType name="WMSContextInfoType">
+				<xsd:sequence>
+					<xsd:element name="width" type="xsd:int" />
+					<xsd:element name="height" type="xsd:int" />
+					<xsd:element name="displayProjection" type="xsd:string" />
+					<xsd:element name="maxExtent" type="tns:boundsInfoType" />
+					<xsd:element name="minExtent" type="tns:boundsInfoType" />
+					<xsd:element name="numZoomLevels" type="xsd:int" />
+					<xsd:element name="zoomTo" type="xsd:int" />
+					<xsd:element name="lon_center" type="xsd:double" />
+					<xsd:element name="lat_center" type="xsd:double" />
+					<xsd:element name="units" type="xsd:string" />
+					<xsd:element name="title" type="xsd:string" />
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="maxResolution" type="xsd:double" />
+					<xsd:element name="layers" type="coretypes:stringArray" />
+					<xsd:element name="keywords" type="coretypes:stringArray" />
+					<xsd:element name="abstract" type="xsd:string" />
+					<xsd:element name="logoFormat" type="xsd:string" />
+					<xsd:element name="logoWidth" type="xsd:int" />
+					<xsd:element name="logoHeight" type="xsd:int" />
+					<xsd:element name="logoUrl" type="xsd:string" />
+					<xsd:element name="contactInformation" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			
+  
+  		<!-- Arrays -->
+
+			<xsd:complexType name="layerArray">
+				<xsd:sequence>
+					<xsd:element name="name" type="tns:layerInfoType" 
+							minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:complexType>
+  
+ </xsd:schema>

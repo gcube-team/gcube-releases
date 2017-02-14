@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="ScopeController"
+    targetNamespace="http://gcube-system.org/namespaces/vremanagement/resourcemanager/controller"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="http://gcube-system.org/namespaces/vremanagement/resourcemanager/controller"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+    xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:vretypes="http://gcube-system.org/common/vremanagement/types"
+    xmlns:wsrlw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"    
+    xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+    xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"  location="../gcube/common/core/providers/GCUBEProvider.wsdl"/>
+
+	<import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+	
+	<import namespace="http://gcube-system.org/common/vremanagement/types" location="VREManagementTypes.wsdl"/> 
+
+
+<!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+<types>
+<xsd:schema targetNamespace="http://gcube-system.org/namespaces/vremanagement/resourcemanager/controller"
+    xmlns:tns="http://gcube-system.org/namespaces/vremanagement/resourcemanager/controller"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   
+   <xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+   <xsd:import namespace="http://gcube-system.org/common/vremanagement/types" schemaLocation="VREManagementTypes.xsd"/>
+	
+	<xsd:element name="reportID" type="xsd:string"/>   		  	   		
+    
+    <xsd:element name="VOID">
+   		<xsd:complexType/>
+    </xsd:element>		
+    	
+	
+	<xsd:complexType name="ScopeOption">	
+			<xsd:sequence>
+				<xsd:element name="name" type="xsd:string"/>
+				<xsd:element name="value" type="xsd:string"/>  		  				  	
+		 	</xsd:sequence>
+  	</xsd:complexType>
+	
+	<xsd:element name="targetScope" type="coretypes:scope"/>		 
+	
+	<xsd:element name="optionsParameters"> 
+    	<xsd:complexType>	
+			<xsd:sequence>
+    			<xsd:element ref="tns:targetScope"/>		
+				<xsd:element name="scopeOptionList" type="tns:ScopeOption" minOccurs="1" maxOccurs="unbounded"/>                        
+		 	</xsd:sequence>
+  		</xsd:complexType>	
+	</xsd:element>
+		
+	<xsd:element name="createScopeParameters"> 
+    	<xsd:complexType>
+    		<xsd:sequence>
+    			<xsd:element ref="tns:targetScope"/>		
+    			<xsd:element name="serviceMap" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+				<xsd:element ref="tns:optionsParameters"/>
+		 	</xsd:sequence>  		
+    	</xsd:complexType>				
+	</xsd:element>
+	
+
+	<xsd:element name="InvalidOptionsFaultType">
+		<xsd:complexType>
+              <xsd:complexContent>
+                    <xsd:extension base="corefaults:GCUBEUnrecoverableFault">
+                        <xsd:sequence/>                        
+                    </xsd:extension>
+                </xsd:complexContent>
+    	</xsd:complexType>
+	</xsd:element>
+	
+</xsd:schema>
+</types>
+
+ <!--============================================================
+
+                       M E S S A G E S
+
+  ============================================================-->
+
+           	
+    <message name="ChangeScopeOptionsInputMessage">
+        <part name="request" element="tns:optionsParameters"/>
+    </message>    
+    <message name="DisposeScopeInputMessage">
+        <part name="request" element="tns:targetScope"/>
+    </message>   
+    <message name="CreateScopeInputMessage">
+        <part name="request" element="tns:createScopeParameters"/>
+    </message>    
+     <message name="ReportID">
+        <part name="request" element="tns:reportID"/>
+    </message>   
+	<message name="VoidMessage">
+		<part name="response" element="tns:VOID"/>
+	</message>	
+	<wsdl:message name="InvalidScopeFaultMessage">
+	   <part name="fault" element="vretypes:InvalidScopeFaultType"/>
+  	</wsdl:message>
+  	<wsdl:message name="InvalidOptionsFaultMessage">
+	   <part name="fault" element="tns:InvalidOptionsFaultType"/>
+  	</wsdl:message>
+
+<!--============================================================
+
+                       P O R T T Y P E
+                      
+  ============================================================-->
+<portType name="ScopeControllerPortType" 
+    wsdlpp:extends="provider:GCUBEProvider">
+    
+     	
+	<operation name="ChangeScopeOptions">
+        <input message="tns:ChangeScopeOptionsInputMessage"/>
+        <output message="tns:VoidMessage"/>
+        <fault name="fault" message="tns:InvalidOptionsFaultMessage"/>
+        <fault name="fault1" message="tns:InvalidScopeFaultMessage"/>
+    </operation>
+    
+    <operation name="DisposeScope">
+        <input message="tns:DisposeScopeInputMessage"/>
+        <output message="tns:ReportID"/>
+        <fault name="fault" message="tns:InvalidScopeFaultMessage"/>
+    </operation>
+    
+    <operation name="CreateScope">
+        <input message="tns:CreateScopeInputMessage"/>
+        <output message="tns:VoidMessage"/>
+        <fault name="fault1" message="tns:InvalidScopeFaultMessage"/>
+        <fault name="fault2" message="tns:InvalidOptionsFaultMessage"/>
+    </operation>
+
+</portType>
+
+</definitions>
+    

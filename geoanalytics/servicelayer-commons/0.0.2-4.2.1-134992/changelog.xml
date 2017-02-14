@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.geoanalytics.service-layer-commons.0-0-1" date="2016-09-30">
+		<Change>Initial release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.geoanalytics.service-layer-commons.0-0-2" date="2016-11-24">
+		<Change>added functionality for the retrieval of a project's bounding box</Change>
+	</Changeset>
+</ReleaseNotes>
+

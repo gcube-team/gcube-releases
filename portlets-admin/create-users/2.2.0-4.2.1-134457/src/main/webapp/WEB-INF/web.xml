@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>servlet</servlet-name>
+		<servlet-class>org.gcube.portlets.admin.createusers.server.CreateUsersImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>scopeService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gcubewidgets.server.ScopeServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>servlet</servlet-name>
+		<url-pattern>/createusers/usersservice</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>scopeService</servlet-name>
+		<url-pattern>/createusers/scopeService</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>CreateUsers.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

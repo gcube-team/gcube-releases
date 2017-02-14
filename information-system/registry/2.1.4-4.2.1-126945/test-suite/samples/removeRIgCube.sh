@@ -1,0 +1,1 @@
+java -cp ./org.gcube.informationsystem.registry.jar:$CLASSPATH org/gcube/informationsystem/registry/test/RegistryRemoveTest http://pc-simi.isti.cnr.it:8080/wsrf/services/gcube/informationsystem/registry/RegistryFactory $1 /gcube RunningInstance

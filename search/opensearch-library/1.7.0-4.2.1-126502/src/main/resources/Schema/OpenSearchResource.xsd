@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ <xs:element name="OpenSearchResource">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="name" type="xs:string"/>
+    <xs:element name="descriptionDocumentURI" type="xs:string"/>
+    <xs:element name="brokeredResults" type="xs:boolean"/>
+    <xs:element name="transformation" maxOccurs="unbounded">
+     <xs:complexType>
+      <xs:sequence>
+       <xs:element name="MIMEType" type="xs:string"/>
+       <xs:element name="recordSplitXPath" type="xs:string"/>
+       <xs:element name="recordIdXPath" type="xs:string" minOccurs="0" maxOccurs="1"/>
+       <xs:element name="XSLTLink" type="xs:string"/>						
+      </xs:sequence>
+     </xs:complexType>
+    </xs:element>
+    <xs:element name="security" minOccurs="0">
+     <xs:complexType>
+      <xs:sequence>
+      </xs:sequence>
+     </xs:complexType>
+    </xs:element>		
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+</xs:schema>

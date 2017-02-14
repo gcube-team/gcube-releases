@@ -1,0 +1,35 @@
+repositoryProvider=org.gcube.execution.rr.bridge.GCubeRepositoryProvider
+repositoryProviderConfig=config.gcubebridge.properties
+
+editableTargetsCount = 0
+
+readonlyTargetsCount = 15
+readonlyTargets.0 = gr.uoa.di.madgik.rr.element.data.DataCollectionDao
+readonlyTargets.1 = gr.uoa.di.madgik.rr.element.infra.HostingNodeDao
+readonlyTargets.2 = gr.uoa.di.madgik.rr.element.functionality.FunctionalityDao
+readonlyTargets.3 = gr.uoa.di.madgik.rr.element.execution.ExecutionServerDao
+readonlyTargets.4 = gr.uoa.di.madgik.rr.element.execution.ExecutionServiceDao
+readonlyTargets.5 = gr.uoa.di.madgik.rr.element.execution.WorkflowServiceDao
+readonlyTargets.6 = gr.uoa.di.madgik.rr.element.search.index.FieldIndexContainerDao
+readonlyTargets.7 = gr.uoa.di.madgik.rr.element.search.index.FTIndexDao
+readonlyTargets.8 = gr.uoa.di.madgik.rr.element.search.index.OpenSearchDataSourceDao
+readonlyTargets.9 = gr.uoa.di.madgik.rr.element.search.index.FTIndexServiceDao
+readonlyTargets.10 = gr.uoa.di.madgik.rr.element.search.index.OpenSearchDataSourceServiceDao
+readonlyTargets.11 = gr.uoa.di.madgik.rr.element.search.FieldDao
+readonlyTargets.12 = gr.uoa.di.madgik.rr.element.search.SearchableDao
+readonlyTargets.13 = gr.uoa.di.madgik.rr.element.search.PresentableDao
+readonlyTargets.14 = gr.uoa.di.madgik.rr.element.config.StaticConfigurationDao
+
+updateTargetsCount = 3
+updateTargets.0 = gr.uoa.di.madgik.rr.element.search.index.FieldIndexContainerDao
+updateTargets.1 = gr.uoa.di.madgik.rr.element.search.index.FTIndexServiceDao
+updateTargets.2 = gr.uoa.di.madgik.rr.element.search.index.OpenSearchDataSourceDao
+
+inmemoryTargetsCount = 7
+inmemoryTargets.0 = gr.uoa.di.madgik.rr.element.search.Field
+inmemoryTargets.1 = gr.uoa.di.madgik.rr.element.search.Searchable
+inmemoryTargets.2 = gr.uoa.di.madgik.rr.element.search.Presentable
+inmemoryTargets.3 = gr.uoa.di.madgik.rr.element.search.index.DataSource
+inmemoryTargets.4 = gr.uoa.di.madgik.rr.element.search.index.DataSourceService
+inmemoryTargets.5 = gr.uoa.di.madgik.rr.element.search.index.FieldIndexContainer
+inmemoryTargets.6 = gr.uoa.di.madgik.rr.element.data.DataCollection

@@ -1,0 +1,198 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.gcube.data.analysis.tabulardata</groupId>
+	<artifactId>operation-prime</artifactId>
+	<version>2.3.5-4.2.1-133030</version>
+
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>LATEST</version>
+	</parent>
+	
+	
+	<properties>
+		<distroDirectory>distro</distroDirectory>
+	</properties>
+
+	<dependencies>
+
+
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>operation-api</artifactId>
+			<version>3.5.3-4.2.1-125890</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>parameters-descriptors</artifactId>
+			<version>1.1.1-4.2.1-125100</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>evaluator-sql</artifactId>
+			<version>3.3.2-4.2.1-130341</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20090211</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.dataanalysis</groupId>
+			<artifactId>lexical-guesser</artifactId>
+			<version>1.0.0-4.2.1-126629</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>postgresql</artifactId>
+					<groupId>postgresql</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>evaluator-description</artifactId>
+			<version>1.2.1-4.2.1-125045</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.reflections</groupId>
+			<artifactId>reflections</artifactId>
+			<version>0.9.9-RC1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-dbutils</groupId>
+			<artifactId>commons-dbutils</artifactId>
+			<version>1.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>tabular-model-util</artifactId>
+			<version>2.1.1-4.2.1-130678</version>
+		</dependency>
+
+		<!-- Test deps -->
+
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>cube-manager</artifactId>
+			<version>3.5.3-4.2.1-130370</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>operation-tester</artifactId>
+			<version>2.0.4-4.2.1-130681</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.13</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.weld.se</groupId>
+			<artifactId>weld-se</artifactId>
+			<version>1.1.7.Final</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.jeeunit</groupId>
+			<artifactId>jeeunit-weld-se</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.jeeunit</groupId>
+			<artifactId>jeeunit-cdi</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+
+
+	</dependencies>
+
+		<build>
+
+		<plugins>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>profile.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.16</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+		<name>Operation Prime</name>
+		<description>TDM Module with base set of operations.</description>
+		<scm>
+			<url>http://svn.research-infrastructures.eu/d4science/gcube/trunk/data-analysis/tabulardata/operation-prime</url>
+		</scm>
+</project>

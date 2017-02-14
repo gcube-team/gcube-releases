@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-0-1"
+		date="2017-02-10">
+		<Change>Minor fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-0-0"
+		date="2016-12-10">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

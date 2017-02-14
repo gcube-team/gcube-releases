@@ -1,0 +1,49 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.tabular-data-expression-widget.1-8-0"
+		date="2016-07-15">
+		<Change>Updated to Liferay 6.2</Change>
+	</Changeset>	
+	<Changeset component="org.gcube.portlets-user.tabular-data-expression-widget.1-7-0"
+		date="2015-07-03">
+		<Change>Fixel Layout</Change>
+		<Change>Added support to expressions on multi column[issue #81]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-expression-widget.1-6-0"
+		date="2015-04-30">
+		<Change>Updated panel for open from Ribbon</Change>
+		<Change>Updated Expression to support Soundex, Levenshtein and Similarity</Change>
+		<Change>Updated Expression to support MD5, Upper and Lower</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-expression-widget.1-5-0"
+		date="2015-02-16">
+		<Change>Strengthen on Replace By Expression [issue #3239]</Change>
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-expression-widget.1-4-0"
+		date="2014-10-31">
+		<Change>Added check type on  Replace by Expression</Change>
+		<Change>Added multi column replace on Replace by Expression</Change>
+		<Change>Fixed Final and Lock error</Change>
+		<Change>Updated geometry type support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-expression-widget.1-3-0"
+		date="2014-07-04">
+		<Change>Added replace by expression</Change>
+		<Change>Updated monitor</Change>
+		<Change>Fixed the generation of expressions</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-expression-widget.1-2-0"
+		date="2014-07-04">
+		<Change>Fixed ColumnReference creation on ExpressionServiceImpl</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-expression-widget.1-1-0"
+		date="2014-06-05">
+		<Change>Updated session management</Change>
+		<Change>Updated Pom</Change>		
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-expression-widget.1-0-0"
+		date="2014-04-04">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

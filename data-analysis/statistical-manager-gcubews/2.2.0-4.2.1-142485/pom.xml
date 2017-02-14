@@ -1,0 +1,114 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>org.gcube.data.analysis</groupId>
+	<artifactId>statistical-manager-gcubews</artifactId>
+    <version>2.2.0-4.2.1-142485</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>statistical-manager-service</module>
+		<module>statistical-manager-stubs</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-bom</artifactId>
+				<version>2.2.0-4.2.1-132327</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>gcf</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<properties>
+
+		<stubsArtifactId>statistical-manager-stubs</stubsArtifactId>
+		<serviceArtifactId>statistical-manager-service</serviceArtifactId>
+
+		<wsdlDirectory>${project.basedir}/../wsdl</wsdlDirectory>
+		<wsdlOutputDirectory>${project.basedir}/../target/generated-sources/wsdl</wsdlOutputDirectory>
+		<configDirectory>${project.basedir}/../config</configDirectory>
+		<distroDirectory>${project.basedir}/../distro</distroDirectory>
+		<namespace>http://gcube-system.org/namespaces/data/analysis/statisticalmanager</namespace>
+	</properties>
+
+	<build>
+
+		<!-- defines basic configuration for the service plugin -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.gcube.tools</groupId>
+					<artifactId>maven-service-plugin</artifactId>
+					<version>1.2.0</version>
+					<configuration>
+						<serviceId>${project.parent.artifactId}</serviceId>
+						<configurationDirectory>../config</configurationDirectory>
+						<wsdlDirectory>../wsdl</wsdlDirectory>
+						<wsdlOutputDirectory>../target/wsdl</wsdlOutputDirectory>
+						<basePackage>org.gcube.data.analysis.statisticalmanager</basePackage>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+
+			<!-- interpolates profiles and copies from distribution location to configuration 
+				location, where it is need for embedding into stub artifact, gar generation, 
+				and service archive. -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<phase>process-resources</phase>
+						<configuration>
+							<outputDirectory>${configDirectory}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<includes>
+										<include>profile.xml</include>
+									</includes>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+
+	</build>
+
+	<name>Statistical Manager</name>
+	<description>Statistical Manager Service implementation and stubs</description>
+	<scm>
+		<url>http://svn.research-infrastructures.eu/d4science/gcube/trunk/data-analysis/statistical-manager-gcubews</url>
+	</scm>
+</project>

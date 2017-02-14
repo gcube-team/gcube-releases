@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>org.gcube.execution</groupId>
+	<artifactId>rraggregator-pom</artifactId>
+	<version>1.5.0-4.2.1-124889</version>
+	<packaging>pom</packaging>
+
+	<name>RRAggregator POM</name>
+	<description>RRAggregator POM</description>
+
+	<modules>
+		<module>rraggregator</module>
+		<module>rraggregator-no-deps</module>
+	</modules>
+
+	<properties>
+		<distroDirectory>distro</distroDirectory>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-api-jdo</artifactId>
+			<version>[3.2.0, 3.2.99)</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.jdo</groupId>
+			<artifactId>jdo-api</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+
+		<!-- <dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-core</artifactId>
+			<version>[3.2.0, 3.2.99)</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.datanucleus</groupId>
+			<artifactId>datanucleus-rdbms</artifactId>
+			<version>[3.2.0, 3.2.99)</version>
+		</dependency> -->
+
+
+	</dependencies>
+
+</project>

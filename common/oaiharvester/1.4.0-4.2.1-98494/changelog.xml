@@ -1,0 +1,26 @@
+<ReleaseNotes>
+	<Changeset component="oai-harvester-1.4.0-4.2.1-98494" date="2014-06-30">
+		<Change>Fixed bugs in resumptionToken</Change>
+	</Changeset>
+	<Changeset component="oai-harvester-1.4.0-4.2.1-98494" date="2014-02-14">
+		<Change>Fixing bugs</Change>
+	</Changeset>
+	<Changeset component="oai-harvester-1.4.0-4.2.1-98494" date="2013-12-13">
+		<Change>Bug fixing</Change>
+	</Changeset>
+	<Changeset component="oai-harvester-1.4.0-4.2.1-98494" date="2013-01-17">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="oai-harvester-1.4.0-4.2.1-98494" date="2013-01-17">
+		<Change>No details</Change>
+	</Changeset>
+	<Changeset component="oai-harvester-1.4.0-4.2.1-98494" date="2013-04-19">
+		<Change>Fixed bug getting sets list</Change>
+	</Changeset>
+	<Changeset component="oai-harvester-1.4.0-4.2.1-98494" date="2013-07-19">
+		<Change>Less connections</Change>
+	</Changeset>
+	<Changeset component="oai-harvester-1.4.0-4.2.1-98494" date="2013-10-18">
+		<Change>new harvester</Change>
+	</Changeset>
+</ReleaseNotes>

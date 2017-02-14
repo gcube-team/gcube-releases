@@ -1,0 +1,19 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.vre-management.smart-executor-api.1.4.0" date="2017-02-14">
+	    <Change></Change>
+	</Changeset>
+    <Changeset component="org.gcube.vre-management.smart-executor-api.1.3.0" date="2016-02-08"> 
+		<Change>Using Persistence (CouchDB) to save Scheduled Task configuration (refs #579)</Change>
+		<Change>Added Unscheduling feature for repetitive task (refs #521)</Change>
+	</Changeset>
+    <Changeset component="org.gcube.vre-management.smart-executor-api.1.2.0" date="2015-12-09"> 
+		<Change>Added Recurrent and Scheduled Task support (refs #111)</Change>
+		<Change>Saving Task Evolution on Persistence (CouchDB) (refs #89)</Change>
+	</Changeset>
+    <Changeset component="org.gcube.vre-management.smart-executor-api.1.1.0" date="2015-08-31"> 
+		<Change>Added init() function on plugins</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.smart-executor-api.1.0.0" date="2015-02-05"> 
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

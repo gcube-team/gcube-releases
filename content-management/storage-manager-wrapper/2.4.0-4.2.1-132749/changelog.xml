@@ -1,0 +1,41 @@
+<ReleaseNotes>
+		<Changeset component="org.gcube.content-management.storage-manager-wrapper.2-3-1" date="2016-01-14">
+			<Change>dinamically load "write concern"" and ""read preference" options</Change>
+			<Change>add method for decrypt an id</Change>	
+		</Changeset>
+		<Changeset component="org.gcube.content-management.storage-manager-wrapper.2-3-0" date="2016-01-14">
+			<Change>dinamically load smpConnection handler</Change>
+			<Change>add method for decrypt an id</Change>	
+		</Changeset>
+		<Changeset component="org.gcube.content-management.storage-manager-wrapper.2-2-1" date="2015-07-01">
+			<Change>update JUnit test for smp uri without payload</Change>
+		</Changeset>
+		<Changeset component="org.gcube.content-management.storage-manager-wrapper.2-2-0" date="2015-04-21">
+			<Change>change smp protocol</Change>
+		</Changeset>
+		<Changeset component="org.gcube.content-management.storage-manager-wrapper.2-1-0" date="2014-04-01">
+			<Change>support MongoDB backend with authentication</Change>
+		</Changeset>
+		<Changeset component="org.gcube.content-management.storage-manager-wrapper.2-0-3" date="2014-02-12">
+			<Change>Integration with new gCube release 3.0.0 version system</Change>
+			<Change>Java7 refactoring</Change>
+		</Changeset>
+		<Changeset component="storage-manager-wrapper-2.4.0-4.2.1-132749" date="2013-05-29">
+			<Change>Integration with new gCube release 2.15.0 version system</Change>
+			<Change>bugfix on pending connections</Change>
+		</Changeset>
+		<Changeset component="storage-manager-wrapper-2.4.0-4.2.1-132749" date="2013-04-29">
+			<Change>Integration with new gCube release 2.14.0 version system</Change>
+			<Change>FWS integration</Change>
+			<Change>added move, copy and link operations</Change>
+		</Changeset>
+		<Changeset component="storage-manager-wrapper-2.4.0-4.2.1-132749" date="2013-01-15">
+			<Change>Integration with new gCube release 2.12.0 version system</Change>
+		</Changeset>
+		<Changeset component="org.gcube.content-management.storage-manager-wrapper.1-0-1" date="2012-10-11">
+			<Change>Added VOLATILE area</Change>
+		</Changeset>
+		<Changeset component="storage-manager-wrapper-2.4.0-4.2.1-132749" date="2012-05-04">
+			<Change>First Release</Change>
+		</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+	    XML Schema for GCUBE Metadata Collection Version 1.4 Last modified: 13/02/2008 	Contact: http://www.gcube-system.org
+		</xs:documentation>
+	</xs:annotation>
+	
+	<xs:redefine schemaLocation="CommonTypeDefinitions.xsd">
+		<xs:complexType name="ProfileType">
+			<xs:complexContent>
+				<xs:restriction base="ProfileType">
+				<xs:sequence>
+				<xs:element name="Description" type="xs:string" minOccurs="0"/>
+				<xs:element name="Name" type="xs:string"/>
+				<xs:element name="IsUserCollection" type="BooleanValueType"/>
+				<xs:element name="IsIndexable" type="BooleanValueType"/>
+				<xs:element name="IsEditable" type="BooleanValueType" minOccurs="0"/>
+				<xs:element name="CreationTime" type="xs:dateTime"/>
+				<xs:element name="Creator" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">
+							Distinguished Name of the creator, if the Collection has been created in a secure context (otherwise, it is, of course, impossible to detect)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="NumberOfMembers" type="xs:nonNegativeInteger"/>
+				<xs:element name="LastUpdateTime" type="xs:dateTime">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">
+							At creation time, it's the same as for the CreationTime
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PreviousUpdateTime" type="xs:dateTime" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">
+							Each time the Metadata Collection is updated, the LastUpdateTime is shifted here
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="LastModifier" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">
+							Distinguished Name of the last identity that have modified the Metadata Collection, if it has been created in a secure context (otherwise, it is, of course, impossible to detect)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="OID" type="xs:string"/>				
+				<xs:element ref="RelatedCollection"/>
+				<xs:element ref="MetadataFormat"/>
+				<xs:element ref="GeneratedBy" minOccurs="0"/>
+			</xs:sequence>
+			</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:redefine>
+
+	<xs:element name="SecondaryRole">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="is-\w+-by"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	<xs:element name="RelatedCollection">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CollectionID" type="xs:string"/>
+				<xs:element ref="SecondaryRole"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	
+	<xs:element name="MetadataFormat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SchemaURI" type="xs:anyURI"/>
+				<xs:element name="Language" type="xs:string"/>
+				<xs:element name="Name" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="GeneratedBy">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CollectionID" type="xs:string"/>
+				<xs:element name="SourceSchemaURI" type="xs:anyURI"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+		
+</xs:schema>

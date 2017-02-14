@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xmlns="http://java.sun.com/xml/ns/javaee">
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsexplorer.server.WorkspaceExplorerServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<url-pattern>/WorkspaceExplorer/WorkspaceExplorerService</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>WorkspaceExplorer.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

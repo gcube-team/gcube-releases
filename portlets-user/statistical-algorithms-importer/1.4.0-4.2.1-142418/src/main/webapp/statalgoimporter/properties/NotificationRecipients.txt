@@ -1,0 +1,5 @@
+{ "recipients": [ { "user":"giancarlo.panichi", "surname":"Panichi", "name":"Giancarlo"},
+{ "user":"gianpaolo.coro", "surname":"Coro", "name":"Gianpaolo"},
+{ "user":"scarponi", "surname":"Scarponi", "name":"Paolo"},
+{ "user":"statistical.manager", "surname":"Manager", "name":"Statistical"},
+{ "user":"roberto.cirillo", "surname":"Cirillo", "name":"Roberto"} ] }

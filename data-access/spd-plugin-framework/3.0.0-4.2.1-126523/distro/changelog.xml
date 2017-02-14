@@ -1,0 +1,19 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-access.spd-client-library.1-0-0" date="2012-09-14"> 
+		<Change>species products discovery client library release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.spd-client-library.1-1-0" date="2012-10-18"> 
+		<Change>new calls added</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.spd-plugin-framework.1-2-0" date="2012-11-30"> 
+		<Change>a bug on the Writer has been fixed</Change>
+	</Changeset><Changeset component="org.gcube.data-access.spd-plugin-framework.2-0-0" date="2013-01-17"> 
+		<Change>model part splitted in a different library</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.spd-plugin-framework.2-2-0" date="2013-01-17"> 
+		<Change>bug fixing</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.spd-plugin-framework.2-3-0" date="2013-07-18"> 
+		<Change>Unfold Capability for plugin added</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,45 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.portlet.user.my-vres.2-2-0" date="2016-11-17">
+		<Change>Removed ASL Session</Change>
+		<Change>Implemented Feature #4877 remove VRE association to single Category constraint</Change>
+	</Changeset>
+<Changeset component="org.gcube.portlet.user.my-vres.2-1-0" date="2016-09-12">
+		<Change>Shows only the virtual groups available in the Site it is deployed on</Change>
+		<Change>VRE was not updated in the portlet due to liferay versioning of Document Library</Change>
+	</Changeset>
+<Changeset component="org.gcube.portlet.user.my-vres.2-0-1" date="2016-04-02">
+		<Change>Ported to Liferay 6.2</Change>
+	</Changeset>
+<Changeset component="org.gcube.portlet.user.my-vres.1-6-0"
+		date="2015-11-22">
+		<Change>Bug #1855, does not show join welcome message to new users anymore</Change>
+		<Change>Feature #861, categorized VREs by virtualGroups</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.my-vres.1-5-0"
+		date="2015-10-22">
+		
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.my-vres.1-4-0"
+		date="2014-10-27">
+		<Change>Made tiles smaller of one third</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.my-vres.1-3-0"
+		date="2014-06-08">
+		<Change>Adapted to gCore Free Portal</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.my-vres.1-2-0"
+		date="2014-04-08">
+		<Change>Added Guided Quick Tour for general Social Features</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.my-vres.1-1-0"
+		date="2014-02-13">
+		<Change>Moved to Java7</Change>
+		<Change>Updated VRE Labels</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.my-vres.1-0-0"
+		date="2013-10-21">
+		<Change>Ported to Feather Weight Stack</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+</ReleaseNotes>

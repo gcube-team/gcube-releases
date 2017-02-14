@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+	     	XML Schema for GCUBE External Running Instances Version 1.2 	Last modified: 13/02/2008 	Contact: http://www.gcube-system.org
+		</xs:documentation>
+	</xs:annotation>
+	
+	
+	<xs:redefine schemaLocation="CommonTypeDefinitions.xsd">
+		<xs:complexType name="ProfileType">
+			<xs:complexContent>
+				<xs:restriction base="ProfileType">
+					<xs:sequence>
+						<xs:element name="Description" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation xml:lang="en">
+								insert here a human readable description about the functionalities provided by the RI
+							</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element ref="AccessPoint"/>
+						<xs:element ref="SpecificData" minOccurs="0"/>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:redefine>
+	
+    <xs:complexType name="DateType">
+		<xs:attribute name="value" type="xs:dateTime" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="SerializedType"/>
+	
+	<!-- to be defined -->
+	<xs:element name="AccessPoint">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="RunningInstanceInterfaces" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	
+	<xs:element name="RunningInstanceInterfaces">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Endpoint" type="xs:anyURI"/>
+				<xs:element name="WSDL" type="FreeTextType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="SpecificData" type="FreeTextType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+			insert here any other property you think is useful to describe a RI-specific feature
+			</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+</xs:schema>

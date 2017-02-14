@@ -1,0 +1,354 @@
+#tsvimporter-container{
+	display: inline-block;	
+	padding-left:0px;
+	left:0px;
+	right:0px;
+	margin:auto;
+
+}
+
+.tsvimporter-container-div{
+	min-width: calc(100% - 2px) ;
+}
+
+.tsvimporter-container-button{
+	min-width: 700px ;
+	border-top-left-radius:11px;	
+	border-top-right-radius:11px;	
+	border: 1px solid black;
+	-webkit-box-shadow: 3px 4px 15px -2px rgba(0,0,0,0.74);
+	-moz-box-shadow: 3px 4px 15px -2px rgba(0,0,0,0.74);
+	box-shadow: 3px 4px 15px -2px rgba(0,0,0,0.74);	
+}
+
+#tsvimporter-container #tsvimporter-modal-body{
+	padding:0px;
+ 	display:table;
+ 	width:100% ;
+}
+
+#tsvimporter-container #tsvimporter-modal-body .tsvimporter-row{
+	padding:0px;
+ 	display:table-row;
+}
+
+#tsvimporter-container #tsvimporter-modal-body .tsvimporter-row.scrollable{
+ 	display:inline-block;
+}
+
+#tsvimporter-container #tsvimporter-modal-body.scrollable{
+	padding:0px;
+    overflow-y:scroll;
+    display:inline-block;
+	//max-height: calc(100vh - 350px);
+}
+
+
+
+#tsvimporter-container #tsvimporter-modal-header{
+	border-radius: 9px 9px 0px 0px;
+	border-color:black;
+	margin-bottom:10px;
+}
+
+#tsvimporter-container #tsvimporter-modal-header >  h5{
+	font-size:16px;
+	margin-bottom:15px;
+	margin-top:15px;
+}
+
+#tsvimporter-container .control-label{
+	cursor:default;
+	font-weight:bold;
+	font-size:13px;
+}
+
+#tsvimporter-container h5{
+	margin-bottom:30px;
+	text-align:center;
+}
+
+#tsvimporter-container hr {
+    border: none;
+    height: 1px;
+    color: #333; 
+    background-color: #333; 
+	margin-top:0px;
+	min-width:100%;
+}
+#tsvimporter-container textarea{
+	resize:none;
+}
+
+#tsvimporter-container select{
+	min-height:20px;
+	max-height:20px;
+	outline:0;	
+}
+
+#tsvimporter-container .tsvimporter-container-input{			
+	width:100%;											// resizes select box like an input
+	-ms-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    box-sizing:content-box;
+    -webkit-box-sizing:content-box;
+}	
+
+#tsvimporter #tsvimporter-show-button{
+	background: rgb(2, 113, 190);
+	color:white;
+	margin-left: 0px;
+	margin-top: 10px;
+	display:inline-block;
+	padding: 20px 20px;
+	font-size: 15px;
+	cursor: pointer;	
+}
+
+#tsvimporter #tsvimporter-show-button:hover{
+	background: rgb(4, 133, 220);
+	color:white;
+}
+
+#tsvimporter #tsvimporter-show-button:focus{
+	background: rgb(2,93, 170);
+	color:white;
+	outline:0;
+}
+
+#tsvimporter-container #tsvimporter-modal-header{
+	background: rgb(2, 113, 190);
+	color:white;
+}
+
+#tsvimporter-container #tsvimporter-close-button{
+    float:right; 
+    cursor:pointer;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    background: none;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;      
+	outline:0;
+	margin-top:15px;
+}
+
+#tsvimporter-container #tsvimporter-close-button:before {
+    content: "×";
+}
+
+#tsvimporter-container #tsvimporter-div-purpose{
+	margin-top:25px;
+}
+
+
+
+
+ #tsvimporter-container #tsvimporter-browsefiles-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
+
+#tsvimporter-container #tsvimporter-import-button{
+	font-weight:bold;
+	text-shadow: 0px 0px 2px rgba(151, 151, 151, 1);
+	color:white;
+	margin:0 20px 0 20px;
+	outline:0;
+}
+#tsvimporter-container #tsvimporter-import-button:hover{
+	background: rgb(250, 187, 70);
+}
+
+
+#tsvimporter-container #tsvimporter-div-submit{
+	display:inline-block;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+
+#tsvimporter-container .numberCircle {
+  display:inline-block;
+  line-height:0px;
+  
+  border-radius:50%;
+  border:2px solid rgb(2, 113, 190);
+  
+  font-size:14px;
+}
+
+#tsvimporter-container .numberCircle span {
+  display:inline-block;
+
+  padding-top:50%;
+  padding-bottom:50%;
+
+  margin-left:8px;
+  margin-right:8px;
+}
+
+#tsvimporter-container .border-between > [class*='col-']:before {
+	 background: #e3e3e3;
+	 bottom: 0;
+	 content: " ";
+	 left: 0;
+	 position: absolute;
+	 width: 1px;
+	 top: 0;
+}
+
+#tsvimporter-container .border-between > [class*='col-']:first-child:before {
+	display: none;
+}
+
+
+#tsvimporter-container .help-inline label, #tsvimporter-container .help-inline{
+	font-size:12px;
+}
+
+
+/* Select Box Responsive CSS */
+
+
+/************************************************* jQuery Tags Input *************************************************/
+
+#tsvimporter-container div.tagsinput {
+	border:2px solid #CCC;
+	background:white;
+	overflow-y:auto;
+	padding:5px;
+	border-radius:9px;
+	width:auto !important;
+	min-height:55px !important;
+	max-height:55px !important;	
+}
+
+#tsvimporter-container div#tsvimporter-tagsinput_addTag.error {
+	border:0;
+}
+
+#tsvimporter-container div.tagsinput span.tag {
+	border-radius: 7px 7px 7px 7px;
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border: 2px solid white;
+	display:block;
+	float:left;
+	background:black;
+	color:white;
+	font-size:13px;
+	font-weight:bold;
+	padding:2px 5px 2px 5px;
+	margin-right:5px;
+	margin-bottom:5px;
+}
+
+#tsvimporter-container div.tagsinput span.tag a {
+	font-weight:100;
+	color:white;
+	font-size:13px;
+}
+
+#tsvimporter-container div.tagsinput input {
+	width:80px;
+	font-family:helvetica;
+	font-size:13px;
+	border:1px solid transparent;
+	background:transparent;
+	color:#000;
+	outline:0;
+	margin:0 5px 5px 0;
+	padding:5px;
+}
+
+#tsvimporter-container div.tagsinput div {
+	display:block;
+	float:left;
+}
+
+#tsvimporter-container .tags_clear {
+	clear:both;
+	width:100%;
+	height:0;
+}
+
+#tsvimporter-container .not_valid {
+	background:#FBD8DB	!important;
+	color:#90111A	!important;
+}
+
+#tsvimporter #tsvimporter-container .tsvimporter-color-red{
+	color:#b94a48;
+}
+#tsvimporter #tsvimporter-container .tsvimporter-color-red > label{
+	color:#b94a48;
+}
+
+@media (min-width: 200px){
+	.aui #tsvimporter #tsvimporter-container input[type="color"], 
+	.aui #tsvimporter #tsvimporter-container input[type="date"], 
+	.aui #tsvimporter #tsvimporter-container input[type="datetime"], 
+	.aui #tsvimporter #tsvimporter-container input[type="datetime-local"], 
+	.aui #tsvimporter #tsvimporter-container input[type="email"], 
+	.aui #tsvimporter #tsvimporter-container input[type="month"], 
+	.aui #tsvimporter #tsvimporter-container input[type="number"], 
+	.aui #tsvimporter #tsvimporter-container input[type="password"], 
+	.aui #tsvimporter #tsvimporter-container input[type="search"], 
+	.aui #tsvimporter #tsvimporter-container input[type="tel"], 
+	.aui #tsvimporter #tsvimporter-container input[type="text"], 
+	.aui #tsvimporter #tsvimporter-container input[type="time"], 
+	.aui #tsvimporter #tsvimporter-container input[type="url"], 
+	.aui #tsvimporter #tsvimporter-container input[type="week"], 
+	.aui #tsvimporter #tsvimporter-container select, 
+	.aui #tsvimporter #tsvimporter-container .input-prepend .add-on, 
+	.aui #tsvimporter #tsvimporter-container .navbar-search .search-query, 
+	.aui #tsvimporter #tsvimporter-container .uneditable-input{
+	    padding: 6px 12px;
+		font-size:14px;
+		border-radius:9px;
+		border-width: 2px;
+		margin-bottom:0px;
+		height:20px;
+		width:97.5%;
+	}
+}
+.aui #tsvimporter #tsvimporter-container #tsvimporter-patch-browsefiles {  
+    position: relative;
+    overflow: hidden;
+	font-weight:bold;
+	border-radius:0px 10px 10px 0px;
+	padding: 6px 12px;
+	font-size:14px;
+	border-width: 2px;
+	margin-bottom:0px;
+	height:20px;	
+}
+
+.aui #tsvimporter #tsvimporter-container #tsvimporter-selected-file{
+	cursor: text;
+	background:white;
+	border-top-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+
+.aui #tsvimporter #tsvimporter-container textarea {  
+    padding: 6px 12px;
+	font-size:14px;
+	border-radius:9px;
+	border-width: 2px;
+	margin-bottom:0px;
+}

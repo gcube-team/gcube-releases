@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="Executor"
+	targetNamespace="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+	xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:tns="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+	xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+	xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+	xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types">
+
+	<import
+		namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		location="../gcube/common/core/providers/GCUBEProvider.wsdl" />
+
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+		location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+
+	<wsdl:import namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" 
+		location="../wsrf/notification/WS-BaseN.wsdl"/>
+	
+
+	<wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+
+
+
+	<!--
+		============================================================ T Y P E S
+
+		============================================================
+	-->
+	<types>
+		<xsd:schema
+			targetNamespace="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+			xmlns:tns="http://gcube-system.org/namespaces/data/speciesproductsdiscovery"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+			<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+				schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+
+			<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" />
+
+			<xsd:simpleType name="jobType">
+				<xsd:restriction base="xsd:string">		
+					<xsd:enumeration  value="DWCAByChildren"/>
+	   	 			<xsd:enumeration  value="DWCAById"/>
+	   	 			<xsd:enumeration  value="CSV"/>
+	   	 			<xsd:enumeration  value="CSVForOM"/>
+	   	 			<xsd:enumeration  value="DarwinCore"/>
+			 	</xsd:restriction>
+			</xsd:simpleType>
+			
+			<xsd:element name="submitJobRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="input" type="xsd:string"/>
+						<xsd:element name="job" type="tns:jobType"/>						
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="submitJobResponse" type="xsd:string" />
+						
+			<xsd:element name="getStatusRequest" type="xsd:string"/>
+			
+			<xsd:complexType name="nodeStatus">
+				<xsd:sequence>
+					<xsd:element name="scientificName" type="xsd:string"/>				
+					<xsd:element name="status" type="xsd:string"/>	
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:element name="removeJobRequest" type="xsd:string"/>
+			<xsd:element name="removeJobResponse" type="coretypes:VOID" />
+			
+			<xsd:element name="StatusResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="completedEntries" type="xsd:int"/>
+						<xsd:element name="subNodesStatus" type="tns:nodeStatus" minOccurs="1" maxOccurs="unbounded" nillable="true"/>				
+						<xsd:element name="status" type="xsd:string"/>
+						<xsd:element name="startDate" type="xsd:dateTime"/>
+						<xsd:element name="endDate" type="xsd:dateTime"/>	
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="getResultLinkRequest" type="xsd:string"/>
+			<xsd:element name="getResultLinkResponse" type="xsd:string" />
+			
+			<xsd:element name="getErrorLinkRequest" type="xsd:string"/>
+			<xsd:element name="getErrorLinkResponse" type="xsd:string" />
+			
+			<xsd:element name="IdNotValidFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="JobNotValidFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="InputNotValidFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+	
+		</xsd:schema>
+	</types>
+	
+	<message name="SubmitJobRequest">
+		<part name="request" element="tns:submitJobRequest" />
+	</message>
+	<message name="SubmitJobResponse">
+		<part name="response" element="tns:submitJobResponse" />
+	</message>
+	
+	<message name="GetStatusRequest">
+		<part name="request" element="tns:getStatusRequest" />
+	</message>
+	<message name="GetStatusResponse">
+		<part name="response" element="tns:StatusResponse" />
+	</message>
+   
+   	<message name="GetResultLinkRequest">
+		<part name="request" element="tns:getResultLinkRequest" />
+	</message>
+	<message name="GetResultLinkResponse">
+		<part name="response" element="tns:getResultLinkResponse" />
+	</message>
+	
+	<message name="GetErrorLinkRequest">
+		<part name="request" element="tns:getErrorLinkRequest" />
+	</message>
+	<message name="GetErrorLinkResponse">
+		<part name="response" element="tns:getErrorLinkResponse" />
+	</message>
+	
+	<message name="RemoveJobRequest">
+		<part name="request" element="tns:removeJobRequest" />
+	</message>
+	<message name="RemoveJobResponse">
+		<part name="response" element="tns:removeJobResponse" />
+	</message>
+	
+   
+	<message name="IdNotValidFaultMessage">
+		<part name="fault" element="tns:IdNotValidFault" />
+	</message>
+	
+	<message name="JobNotValidFaultMessage">
+		<part name="fault" element="tns:JobNotValidFault" />
+	</message>
+	
+	<message name="InputNotValidFaultMessage">
+		<part name="fault" element="tns:InputNotValidFault" />
+	</message>
+
+	<portType name="ExecutorPortType"> 
+		
+		<operation name="submitJob">
+			<input message="tns:SubmitJobRequest" />
+			<output message="tns:SubmitJobResponse" />
+			<fault name="jobnotvalidfault" message="tns:JobNotValidFaultMessage"/>
+			<fault name="inputnotvalidfault" message="tns:InputNotValidFaultMessage"/>
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"/>
+		</operation>
+		
+		<operation name="getResultLink">
+			<input message="tns:GetResultLinkRequest" />
+			<output message="tns:GetResultLinkResponse" />
+			<fault name="idnotvalidfault" message="tns:IdNotValidFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+		<operation name="getErrorLink">
+			<input message="tns:GetErrorLinkRequest" />
+			<output message="tns:GetErrorLinkResponse" />
+			<fault name="idnotvalidfault" message="tns:IdNotValidFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+		<operation name="getStatus">
+			<input message="tns:GetStatusRequest" />
+			<output message="tns:GetStatusResponse" />
+			<fault name="idnotvalidfault" message="tns:IdNotValidFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+		<operation name="removeJob">
+			<input message="tns:RemoveJobRequest" />
+			<output message="tns:RemoveJobResponse" />
+			<fault name="idnotvalidfault" message="tns:IdNotValidFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+	</portType>
+
+
+</definitions>

@@ -1,0 +1,165 @@
+<class-diagram version="1.0.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <interface id="1" corner="BOTTOM_RIGHT" language="java" 
+    name="eu.vision.ips.userManagement.IUserManagementService.TenantManager" project="userService" 
+    file="/userService/src/eu/vision/ips/userManagement/IUserManagementService.java" binary="false">    
+    <position x="13" y="-105" width="262" height="145"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <interface id="2" corner="BOTTOM_RIGHT" language="java" name="eu.vision.ips.userManagement.IUserManagementService" 
+    project="userService" file="/userService/src/eu/vision/ips/userManagement/IUserManagementService.java" 
+    binary="false">    
+    <position x="315" y="-194" width="172" height="49"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <interface id="3" corner="BOTTOM_RIGHT" language="java" 
+    name="eu.vision.ips.userManagement.IUserManagementService.UserManager" project="userService" 
+    file="/userService/src/eu/vision/ips/userManagement/IUserManagementService.java" binary="false">    
+    <position x="315" y="-105" width="413" height="337"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <interface id="4" corner="BOTTOM_RIGHT" language="java" 
+    name="eu.vision.ips.userManagement.IUserManagementService.RoleManager" project="userService" 
+    file="/userService/src/eu/vision/ips/userManagement/IUserManagementService.java" binary="false">    
+    <position x="768" y="-105" width="287" height="193"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="eu.vision.ips.userManagement.bean.RoleModel" 
+    project="userService" file="/userService/src/eu/vision/ips/userManagement/bean/RoleModel.java" binary="false">    
+    <position x="596" y="1275" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="6" corner="BOTTOM_RIGHT" language="java" name="eu.vision.ips.userManagement.bean.TenantModel" 
+    project="userService" file="/userService/src/eu/vision/ips/userManagement/bean/TenantModel.java" binary="false">    
+    <position x="350" y="1270" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="7" corner="BOTTOM_RIGHT" language="java" name="eu.vision.ips.userManagement.impl.RoleManagerImpl" 
+    project="userService" file="/userService/src/eu/vision/ips/userManagement/impl/RoleManagerImpl.java" binary="false">    
+    <position x="1092" y="773" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="8" corner="BOTTOM_RIGHT" language="java" name="eu.vision.ips.userManagement.impl.TenantManagerImpl" 
+    project="userService" file="/userService/src/eu/vision/ips/userManagement/impl/TenantManagerImpl.java" 
+    binary="false">    
+    <position x="137" y="430" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="9" corner="BOTTOM_RIGHT" language="java" name="eu.vision.ips.userManagement.jaxrs.RoleManager" 
+    project="userService" file="/userService/src/eu/vision/ips/userManagement/jaxrs/RoleManager.java" binary="false">    
+    <position x="194" y="889" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="10" corner="BOTTOM_RIGHT" language="java" name="eu.vision.ips.userManagement.jaxrs.UserManager" 
+    project="userService" file="/userService/src/eu/vision/ips/userManagement/jaxrs/UserManager.java" binary="false">    
+    <position x="798" y="400" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="11" corner="BOTTOM_RIGHT" language="java" name="eu.vision.ips.userManagement.impl.UserManagerImpl" 
+    project="userService" file="/userService/src/eu/vision/ips/userManagement/impl/UserManagerImpl.java" binary="false">    
+    <position x="621" y="846" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="12" corner="BOTTOM_RIGHT" language="java" name="eu.vision.ips.userManagement.bean.UserModel" 
+    project="userService" file="/userService/src/eu/vision/ips/userManagement/bean/UserModel.java" binary="false">    
+    <position x="126" y="1254" width="-1" height="-1"/>    
+    <display autosize="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <realization>    
+    <end type="SOURCE" nodeId="11"/>    
+    <end type="TARGET" nodeId="3"/>  
+  </realization>  
+  <nesting>    
+    <end type="SOURCE" nodeId="2"/>    
+    <end type="TARGET" nodeId="1"/>  
+  </nesting>  
+  <association>    
+    <end type="SOURCE" nodeId="10" navigable="false">      
+      <attribute name="roleManager"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" nodeId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting>    
+    <end type="SOURCE" nodeId="2"/>    
+    <end type="TARGET" nodeId="3"/>  
+  </nesting>  
+  <realization>    
+    <end type="SOURCE" nodeId="7"/>    
+    <end type="TARGET" nodeId="4"/>  
+  </realization>  
+  <nesting>    
+    <end type="SOURCE" nodeId="2"/>    
+    <end type="TARGET" nodeId="4"/>  
+  </nesting>  
+  <realization>    
+    <end type="SOURCE" nodeId="8"/>    
+    <end type="TARGET" nodeId="1"/>  
+  </realization>  
+  <association>    
+    <end type="SOURCE" nodeId="10" navigable="false">      
+      <attribute name="userManager"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" nodeId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association>    
+    <end type="SOURCE" nodeId="9" navigable="false">      
+      <attribute name="userManager"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" nodeId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association>    
+    <end type="SOURCE" nodeId="11" navigable="false">      
+      <attribute name="tenantManager"/>      
+      <multiplicity minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" nodeId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" package="true" initial-value="false" signature="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

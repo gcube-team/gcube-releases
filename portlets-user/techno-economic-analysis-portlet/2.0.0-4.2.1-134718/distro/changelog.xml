@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-portlet.1-0-0" date="2016-10-01">
+		<Change>First release of the techno economic analysis portlet</Change>	
+	</Changeset>
+	
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-portlet.2-0-0" date="2016-11-24">
+		<Change>Added notification and improved error messages.</Change>	
+		<Change>Added extra parameters in UI.</Change>	
+		<Change>Improved validation of input fields.</Change>			
+	</Changeset>
+</ReleaseNotes>

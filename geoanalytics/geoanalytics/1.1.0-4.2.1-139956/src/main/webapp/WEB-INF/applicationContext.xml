@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+					http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+					http://www.springframework.org/schema/context
+					http://www.springframework.org/schema/context/spring-context-4.1.xsd
+					http://www.springframework.org/schema/util 
+					http://www.springframework.org/schema/util/spring-util.xsd
+					http://www.springframework.org/schema/tx
+					http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+
+	<!-- <bean id="geoanalyticsDb" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="org.postgresql.Driver" /> <property 
+		name="url" value="jdbc:postgresql://localhost:5432/geoanalytics5" /> <property 
+		name="username" value="geo" /> <property name="password" value="g3op@$$wd" 
+		/> </bean> -->
+
+	<context:property-placeholder
+		location="classpath:../geoanalytics.properties"
+		ignore-unresolvable="true" />
+		
+	<bean id="expressionHandler" class="org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler">
+	    <property name="permissionEvaluator">
+	        <bean id="permissionEvaluator" class="gr.cite.geoanalytics.security.permissionevaluator.GeoanalyticsPermissionEvaluator"/>
+	    </property>
+	</bean>
+
+	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+
+	<bean id="jpaDialect" class="org.springframework.orm.jpa.vendor.HibernateJpaDialect" />
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="emf" />
+		<property name="jpaDialect" ref="jpaDialect" />
+	</bean>
+
+	<bean id="springApplicationContext" class="gr.cite.geoanalytics.dataaccess.dao.SpringJpaDaoFactory.SpringApplicationContext" />
+
+	<bean id="fileRepositoryConfig" class="java.util.HashMap">
+		<constructor-arg index="0" type="java.util.Map">
+			<map key-type="java.lang.String" value-type="java.lang.String">
+				<entry key="fileRepositoryPath"
+					value="${gr.cite.geoanalytics.data-reposittory.fileRepositoryPath}" />
+				<entry key="sizeThreshold" value="1000000000" />
+				<entry key="shortSweepPeriod" value="1" />
+				<entry key="shortSweepPeriodUnit" value="HOURS" />
+				<entry key="longSweepPeriod" value="5" />
+				<entry key="longSweepPeriodUnit" value="HOURS" />
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean id="fileSystemRepository" class="${gr.cite.geoanalytics.data-repository.className}" />
+
+	<bean id="remoteFileRepositoryHostname" class="java.lang.String">
+		<constructor-arg type="java.lang.String"
+			value="${gr.cite.geoanalytics.data-repository.remoteHostname}" />
+	</bean>
+
+	<bean id="builder" class="gr.cite.gaap.viewbuilders.PostGISMaterializedViewBuilder" />
+
+	<bean id="securityContextAccessor" class="gr.cite.geoanalytics.security.GeoanalyticsSecurityContextAccessor" />
+
+<!-- 	<bean id="dataMonitor" class="gr.cite.clustermanager.DataMonitor" factory-method="getInstance"> -->
+<!-- 		<constructor-arg value="${gr.cite.clustermanager.host}" /> -->
+<!-- 		<constructor-arg value="${gr.cite.clustermanager.path}" /> -->
+<!-- 	</bean> -->
+	
+	<bean id="databaseColumnType" class="gr.cite.geoanalytics.dataaccess.typedefinition.PostgreSQLDatabaseColumnType" />
+	
+	<!-- MONOLITHIC -->	
+	
+	<bean id="geospatialBackend" class="gr.cite.gaap.servicelayer.ShapeManager" />	
+	<bean id="geoserverPicker" class="gr.cite.geoanalytics.web.MonolithicGeoserverPicker" />
+	
+	<!-- CLUSTER -->
+	
+	<!-- <bean id="geospatialBackend" class="gr.cite.geoanalytics.geospatialbackend.ClusteredGeospatialBackend" />
+	<bean id="geoserverPicker" class="gr.cite.geoanalytics.web.ClusterGeoserverPicker" >
+		<property name="nodePicker" ref="randomNodePicker" />
+	</bean>  -->
+	
+	<bean id="emf"
+		class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="gr.cite.geoanalytics" />
+		<property name="jpaProperties">
+			<props>
+				<prop key="javax.persistence.jdbc.driver">${gr.cite.geoanalytics.persistence.jdbc.driver}
+				</prop>
+				<prop key="javax.persistence.jdbc.url">${gr.cite.geoanalytics.persistence.jdbc.url}</prop>
+				<prop key="hibernate.connection.username">${gr.cite.geoanalytics.persistence.dbusername}</prop>
+				<prop key="hibernate.connection.password">${gr.cite.geoanalytics.persistence.dbpassword}</prop>
+				<prop key="hibernate.show_sql">${gr.cite.geoanalytics.persistence.hibernate.show_sql}
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">${gr.cite.geoanalytics.persistence.hibernate.hbm2dll}
+				</prop>
+				<prop key="hibernate.dialect">${gr.cite.geoanalytics.persistence.hibernate.dialect}
+				</prop>
+
+				<prop key="hibernate.jdbc.batch_size">${gr.cite.geoanalytics.persistence.hibernate.jdbc.batch_size}
+				</prop>
+				<prop key="hibernate.order_inserts">${gr.cite.geoanalytics.persistence.hibernate.order_inserts}
+				</prop>
+				<prop key="hibernate.order_updates">${gr.cite.geoanalytics.persistence.hibernate.order_updates}
+				</prop>
+				<prop key="hibernate.jdbc.batch_versioned_data">${gr.cite.geoanalytics.persistence.hibernate.batch_versioned_data}
+				</prop>
+
+				<prop key="hibernate.connection.provider_class">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.provider_class}
+				</prop>
+				<prop key="hibernate.c3p0.min_size">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.min_size}
+				</prop>
+				<prop key="hibernate.c3p0.max_size">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.max_size}
+				</prop>
+				<prop key="hibernate.c3p0.timeout">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.timeout}
+				</prop>
+				<prop key="hibernate.c3p0.max_statements">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.max_statements}
+				</prop>
+				<prop key="hibernate.c3p0.acquire_retry_attempts">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.acquire_retry_attempts}
+				</prop>
+				<prop key="hibernate.c3p0.acquire_retry_delay">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.acquire_retry_delay}
+				</prop>
+				<prop key="hibernate.c3p0.idle_test_period">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.idle_test_period}
+				</prop>
+				<prop key="hibernate.c3p0.break_after_acquire_failure">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.break_after_acquire_failure}
+				</prop>
+				<prop key="hibernate.c3p0.idle_connection_test_period">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.idle_connection_test_period}
+				</prop>
+				<prop key="hibernate.c3p0.test_connection_on_checkin">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.test_connection_on_checkin}
+				</prop>
+				<prop key="hibernate.c3p0.test_connection_on_checkout">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.test_connection_on_checkout}
+				</prop>
+				<prop key="hibernate.c3p0.preferred_test_query">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.preferred_test_query}
+				</prop>
+
+				<!-- <prop key="hibernate.cache.use_second_level_cache">true</prop> <prop 
+					key="hibernate.cache.use_query_cache">true</prop> <prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop> -->
+			</props>
+		</property>
+	</bean>
+
+	<!-- <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"> 
+		<property name="basenames"> <list> <value>geoanalytics-security-messages</value> 
+		</list> </property> </bean> -->
+
+	<!-- <bean id="dataLayerConfig" class="gr.cite.geoanalytics.context.DataLayerConfig"> -->
+	<!-- <property name="dbUrl" value="${gr.cite.geoanalytics.dataaccess.dbUrl}" 
+		/> -->
+	<!-- <property name="dbUser" value="${gr.cite.geoanalytics.dataaccess.dbUser}" 
+		/> -->
+	<!-- <property name="dbPass" value="${gr.cite.geoanalytics.dataaccess.dbpass}" 
+		/> -->
+	<!-- <property name="daoFactory" value="${gr.cite.geoanalytics.geoanalytics.dataaccesser.daoFactory}" 
+		/> -->
+	<!-- </bean> -->
+
+	<!-- <bean id="geoServerBridgeConfig" class="gr.cite.geoanalytics.context.GeoServerBridgeConfig"> -->
+	<!-- <property name="geoServerBridgeProvider" value="${gr.cite.geoanalytics.geoServerBridge.geoServerBridge.provider}" 
+		/> -->
+	<!-- <property name="geoServerBridgeUrl" value="${gr.cite.geoanalytics.geoServerBridge.url}" 
+		/> -->
+	<!-- <property name="geoServerBridgeUser" value="${gr.cite.geoanalytics.geoServerBridge.user}" 
+		/> -->
+	<!-- <property name="geoServerBridgePass" value="${gr.cite.geoanalytics.geoServerBridge.pass}" 
+		/> -->
+	<!-- <property name="geoServerBridgeWorkspace" value="${gr.cite.geoanalytics.geoServerBridge.workspace}" 
+		/> -->
+	<!-- <property name="geoServerBridgeDataStore" value="${gr.cite.geoanalytics.geoServerBridge.datastore}" 
+		/> -->
+	<!-- </bean> -->
+
+	<!-- <bean id="datalayer_shapeDataColumnName" class="java.lang.String"> -->
+	<!-- <constructor-arg value="${gr.cite.geoanalytics.dataaccess.shapeDataColumnName}" 
+		/> -->
+	<!-- </bean> -->
+	<!-- <bean id="datalayer_shapeGeographyColumnName" class="java.lang.String"> -->
+	<!-- <constructor-arg value="${gr.cite.geoanalytics.dataaccess.shapeGeographyColumnName}" 
+		/> -->
+	<!-- </bean> -->
+	<!-- <bean id="datalayer_shapeIdColumnName" class="java.lang.String"> -->
+	<!-- <constructor-arg value="${gr.cite.geoanalytics.dataaccess.shapeIdColumnName}" 
+		/> -->
+	<!-- </bean> -->
+	<!-- <bean id="datalayer_shapeNameColumnName" class="java.lang.String"> -->
+	<!-- <constructor-arg value="${gr.cite.geoanalytics.dataaccess.shapeNameColumnName}" 
+		/> -->
+	<!-- </bean> -->
+	<!-- <bean id="datalayer_shapeCodeColumnName" class="java.lang.String"> -->
+	<!-- <constructor-arg value="${gr.cite.geoanalytics.dataaccess.shapeCodeColumnName}" 
+		/> -->
+	<!-- </bean> -->
+	<!-- <bean id="datalayer_shapeImportColumnName" class="java.lang.String"> -->
+	<!-- <constructor-arg value="${gr.cite.geoanalytics.dataaccess.shapeImportColumnName}" 
+		/> -->
+	<!-- </bean> -->
+
+<!-- 	<bean id="randomNodePicker" class="gr.cite.geoanalytics.logicallayer.RandomNodePicker" /> -->
+
+<!-- 	<bean id="zookeeperLogicalLayer" class="gr.cite.geoanalytics.logicallayer.ZookeeperLogicalLayerBroker"> -->
+<!-- 		<property name="nodePicker" ref="randomNodePicker" /> -->
+<!-- 		<property name="remoteNodeClient" ref="nodeAwareLayerOperations" /> -->
+<!-- 	</bean> -->
+
+ 	<bean id="httpLayerOperations" class="gr.cite.geoanalytics.logicallayer.HttpLayerOperations" /> 
+
+<!-- 	<bean id="nodeAwareLayerOperations" class="gr.cite.geoanalytics.logicallayer.RetryingLayerOperations"> -->
+<!-- 		<property name="nodePicker" ref="randomNodePicker" /> -->
+<!-- 		<constructor-arg name="nodeAwareLayerOperationsDecorated" ref="httpLayerOperations" /> -->
+<!-- 	</bean> -->
+	
+	<bean id="accessRightDefinitionsResource" class="org.springframework.core.io.ClassPathResource">
+    	<constructor-arg value="../accessRightDefinitions.xml" />
+	</bean>
+
+	<util:property-path id="accessRightDefinitionsFile" path="accessRightDefinitionsResource.file" />
+
+	<bean id="geoServerBridgeEnvInitializer" class="gr.cite.gaap.servicelayer.EnvironmentInitializer"
+		init-method="asyncInitializeEnvironment" />
+
+	<bean id="jerseyClient" class="com.sun.jersey.api.client.Client" init-method="create" />
+	<bean id="geotools.geometryfactory.precisionmodel" class="com.vividsolutions.jts.geom.PrecisionModel" />
+
+	<bean id="geotools.geometryfactory" class="com.vividsolutions.jts.geom.GeometryFactory">
+		<constructor-arg name="precisionModel"
+			ref="geotools.geometryfactory.precisionmodel" />
+		<constructor-arg name="SRID" type="int" value="4326" />
+	</bean>
+	<bean id="wktReader" class="com.vividsolutions.jts.io.WKTReader">
+		<constructor-arg name="geometryFactory" ref="geotools.geometryfactory" />
+	</bean>
+
+<!-- 	<bean id="expressionHandler" class="org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler"> -->
+<!--      <property name="permissionEvaluator"> -->
+<!--          <bean id="permissionEvaluator" class="gr.cite.geoanalytics.security.permissionevaluator.GeoanalyticsPermissionEvaluator"/> -->
+<!--      </property> -->
+<!--  	</bean> -->
+	
+	
+	<!-- spring will scan all these packages, will find out anotated classes and will register these, in Spring container -->
+	<context:annotation-config />
+<!-- 	<context:component-scan base-package="gr.cite.test.cluster" /> -->
+	<context:component-scan base-package="gr.cite.gaap" />
+	<context:component-scan base-package="gr.cite.geoanalytics.common" />
+	<context:component-scan base-package="gr.cite.geoanalytics.context" />
+<!-- 	<context:component-scan base-package="gr.cite.geoanalytics.geospatialbackend" /> -->
+	<context:component-scan base-package="gr.cite.geoanalytics.web" />
+	<context:component-scan base-package="gr.cite.geoanalytics.manager" />
+	<context:component-scan base-package="gr.cite.geoanalytics.dataaccess" />
+	<context:component-scan base-package="gr.cite.geoanalytics.notifications" />
+	<context:component-scan base-package="gr.cite.commons.util.datarepository" />
+	<context:component-scan base-package="gr.cite.geoanalytics.util.mail" />
+	<context:component-scan base-package="gr.cite.geoanalytics.security" />
+	<context:component-scan base-package="gr.cite.geoanalytics.geoserverbridge" />
+	<context:component-scan base-package="gr.cite.geoanalytics.logicallayer" />
+	<tx:annotation-driven transaction-manager="transactionManager"
+		proxy-target-class="true" />
+</beans>
