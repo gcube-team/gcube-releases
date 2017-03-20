@@ -1,0 +1,261 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>org.gcube.data.analysis</groupId>
+	<artifactId>statistical-manager-cl</artifactId>
+	<version>2.1.0-4.3.0-131535</version>
+	
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>gcube-bom</artifactId>
+				<version>1.0.1-4.3.0-134548</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	
+	<dependencies>
+
+
+
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-core</artifactId>
+			<version>2.6.1-4.3.0-142241</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-wrapper</artifactId>
+			<version>2.4.1-4.3.0-142243</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-fw-clients</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>[3.0.0-SNAPSHOT,5.0.0-SNAPSHOT)</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.gcube.dataanalysis</groupId>
+			<artifactId>ecological-engine</artifactId>
+			<version>1.10.0-4.3.0-132120</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.ibm.icu</groupId>
+					<artifactId>icu4j</artifactId>
+				</exclusion>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>commons-httpclient</artifactId>
+					<groupId>commons-httpclient</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jama</artifactId>
+					<groupId>jama</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>xpp3_min</artifactId>
+					<groupId>xpp3</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>slf4j-log4j12</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>hibernate-patched</artifactId>
+					<groupId>org.gcube.common</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jgrapht</artifactId>
+					<groupId>org.jgrapht</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jaxen</artifactId>
+					<groupId>jaxen</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>postgis</artifactId>
+					<groupId>org.postgis</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>postgresql</artifactId>
+					<groupId>postgresql</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>commons-collections</artifactId>
+					<groupId>commons-collections</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>java-cup</artifactId>
+					<groupId>
+						net.sf.squirrel-sql.thirdparty-non-maven
+					</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jcommon</artifactId>
+					<groupId>jfree</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>weka-dev</artifactId>
+					<groupId>nz.ac.waikato.cms.weka</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>gson</artifactId>
+					<groupId>com.google.code.gson</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>graphlayout</artifactId>
+					<groupId>graphlayout</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>c3p0</artifactId>
+					<groupId>c3p0</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jts</artifactId>
+					<groupId>com.vividsolutions</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>hibernate-spatial-postgis</artifactId>
+					<groupId>org.hibernatespatial</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>log4j</artifactId>
+					<groupId>log4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>xstream</artifactId>
+					<groupId>com.thoughtworks.xstream</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>pentaho-package-manager</artifactId>
+					<groupId>org.pentaho.pentaho-commons</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jgrapht-jdk1.6</artifactId>
+					<groupId>org.jgrapht</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jfreechart</artifactId>
+					<groupId>jfree</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>dom4j</artifactId>
+					<groupId>dom4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jta</artifactId>
+					<groupId>javax.transaction</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>postgis-driver</artifactId>
+					<groupId>org.postgis</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>rapidminer-custom</artifactId>
+					<groupId>org.gcube.common</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>hibernate-spatial</artifactId>
+					<groupId>org.hibernatespatial</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>XMeans</artifactId>
+					<groupId>nz.ac.waikato.cms.weka</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>streams</artifactId>
+			<version>2.0.2-4.3.0-126131</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>spd-model</artifactId>
+			<version>3.2.0-4.3.0-144270</version>
+		</dependency>
+
+		<!-- TEST -->
+		<!-- HL -->
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library</artifactId>
+			<version>2.7.0-4.3.0-144852</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library-model</artifactId>
+			<version>1.6.0-4.3.0-144852</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library-jcr</artifactId>
+			<version>2.7.0-4.3.0-144982</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+
+	<profiles>
+		<profile>
+			<id>local-deploy</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.gcube.tools</groupId>
+						<artifactId>maven-service-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>local-deploy</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	<name>statsitical manager cl</name>
+	<description>Statistical Manager Client library.</description>
+	<scm>
+		<url>http://svn.research-infrastructures.eu/d4science/gcube/trunk/data-analysis/statistical-manager-cl</url>
+	</scm>
+</project>

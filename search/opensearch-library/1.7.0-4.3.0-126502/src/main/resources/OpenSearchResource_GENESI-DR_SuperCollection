@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>f86deb20-b6a0-11df-a5f4-f9b091c84ec6</ID>
+  <Type>GenericResource</Type>
+  <Scopes>
+    <Scope>/gcube/devsec</Scope>
+  </Scopes>
+  <Profile>
+    <SecondaryType>OpenSearchResource</SecondaryType>
+    <Name>OpenSearchResource_GENESI-DR_SuperCollection</Name>
+    <Description>Generic resource containing info for the Terradue testbed central site external repository</Description>
+    <Body>
+      <OpenSearchResource>
+        <name>GENESI-DR_Central</name>
+        <descriptionDocumentURI>http://maps.terradue.com/drsite/description</descriptionDocumentURI>
+        <brokeredResults>true</brokeredResults>
+        <transformation>
+          <MIMEType>application/rdf+xml</MIMEType>
+          <recordSplitXPath>*[local-name()='RDF' and namespace-uri()='http://www.w3.org/1999/02/22-rdf-syntax-ns#']/*[local-name()='Series' and namespace-uri()='http://xmlns.com/2008/dclite4g#']</recordSplitXPath>
+          <XSLTLink>OpenSearchXSLT_GENESI-DR_Broker</XSLTLink>
+        </transformation>
+      </OpenSearchResource>
+    </Body>
+  </Profile>
+</Resource>

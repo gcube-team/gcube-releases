@@ -1,0 +1,84 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.execution.WorkflowSearchAdaptor.1-9-0" date="2014-09-03">
+		<Change>Changed query request to FulltextIndex from GET to POST</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowSearchAdaptor.1-8-0" date="2014-06-30">
+		<Change>Extended to support REST calls to SRU Datasources</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowSearchAdaptor.1-7-0" date="2014-06-03">
+		<Change>Extended to support REST calls to OpenSearchDatasource</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowSearchAdaptor.1-6-0" date="2014-01-27">
+		<Change>Extended to support REST calls to FullTextIndex</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowSearchAdaptor.1-5-0" date="2014-01-27">
+		<Change>Extended to search with security identifiers at FullTextIndex datasources</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowSearchAdaptor.1-4-0" date="2013-10-25">
+		<Change>Speed Optimizations</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowSearchAdaptor.1-3-0" date="2013-05-20">
+		<Change>Include data fusion</Change>
+		<Change>Fixed to include ForwardIndexNode</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowSearchAdaptor.1-2-1" date="2013-03-28">
+		<Change>Refactoring for FullTextIndexNode wrapper</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowSearchAdaptor.1-2-0" date="2013-03-05">
+		<Change>Fixed to include FullTextIndexNode</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowSearchAdaptor.1-1-0"
+		date="2012-09-07">
+		<Change>Turned to maven</Change>
+		<Change>
+			Modularized Data Source Wrappers. GCube wrappers included in workflow Search
+			Adaptor for now.
+			Data Source Wrappers are instantiated via configurable factory. GCube
+			Wrappers are selected by default.
+			Scope is included in environmental hints.
+			Renamed OpenSearchServiceWrapper to OpenSearchDataSourceWrapper.
+			Removed old node selection and collocation policy classes.
+		</Change>
+		<Change>
+			Wrappers and element constructors support buffer capacity limiting
+		</Change>
+		<Change>
+			Implemented search plan analyzer, rewriter, started optimizer
+		</Change>
+		<Change>
+			Fully distributed execution using node selection and assignment policies.
+			Local or single remote execution of simple plans.
+			Max collocation preferred for more complex plans.
+			Highly configurable through parameters:
+			OperatorNodeSelectorThreshold
+			MaxCollocationCost
+			DatasourceNodeSelector
+			DatasourceNodeSelectorTieBreaker
+			OperatorNodeSelector
+			OperatorNodeSelectorTieBreaker
+			NodeAssignmentPolicy
+			ExcludeLocal
+		</Change>
+		<Change>
+			More logging for execution mode
+		</Change>
+		<Change>
+			Fixed merge operator wrapper input array handling so that it works
+			correctly for remote execution using the new
+			ParameterArrayEvaluationFilter.
+			Fixed bug in OpenSearch DataSource service wrapper.
+		</Change>
+
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowSearchAdaptor.1-0-1"
+		date="2011-07-29">
+		<Change>A more descriptive exception is thrown upon attempting to
+			contact a missing data source</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.WorkflowSearchAdaptor.1-0-0"
+		date="2011-07-01">
+		<Change>First Release. Converts abstract search plans to execution
+			plans</Change>
+
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="ISCache">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+	<property name="build.dir" value="build"/>
+	<property name="doc.dir" value="doc"/>
+	<property name="jar.name" value="ISCache.jar"/>
+    <path id="gCoreLib.userclasspath">
+    	<fileset dir="${globus.location}/lib">
+        	<include name="*.jar"/>
+    	</fileset>
+    </path>
+    <path id="ISCache.classpath">
+        <pathelement location="."/>
+        <path refid="gCoreLib.userclasspath"/>
+    </path>
+    <target name="init">
+    	<mkdir dir="${build.dir}"/>
+        <copy includeemptydirs="false" todir=".">
+            <fileset dir="." excludes="**/*.launch, **/*.java"/>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    	<delete file="${jar.name}" />
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-project" name="build"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="${build.dir}">
+            <src path="."/>
+            <classpath refid="ISCache.classpath"/>
+        </javac>
+    </target>
+    <target name="jar" depends="build" description="create jar file">
+	    <jar destfile="${jar.name}" basedir="${build.dir}" includes="**/*.class"/>
+    </target>
+    <target name="javadoc" depends="build" description="create javadoc">
+	    <javadoc destdir="${doc.dir}" access="package" sourcepath=".">
+			<classpath refid="ISCache.classpath"/>
+		</javadoc>
+    </target>
+    <target name="ISCacheManager">
+        <java classname="org.gcube.commons.is.cache.ISCacheManager" failonerror="true" fork="yes">
+            <classpath refid="ISCache.classpath"/>
+        </java>
+    </target>
+</project>

@@ -1,0 +1,33 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.vre-management.deployer.2-4-2" date="2013-xx-xx">
+		<Change>fix for https://issue.imarine.research-infrastructures.eu/ticket/1666</Change>
+		<Change>Integration with maven bom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.deployer.2-4-1" date="2013-01-15">
+		<Change>Integration with new gCube release 2.12.0 version system</Change>
+		<Change>All the state moved under persistence root's folder</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.deployer.2-4-0" date="2012-08-30">
+		<Change>Integration with Resource Manager 2.0</Change>
+		<Change>All the state moved under persistence root's folder</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.deployer.2-3-0" date="2012-05-27">
+		<Change>Interface with Software Gateway</Change>
+		<Change>Management of packages not wrapped in a Software Archive</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.deployer.2-2-2" date="2012-04-05">
+		<Change>Named EPR for VP instances</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.deployer.2-2-1" date="2011-09-27">
+		<Change>Fix for managing multiple versions on a package in the same profile</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.deployer.2-2-0" date="2011-07-07">
+		<Change>Support for Virtual Platform deployment/undeployment</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.deployer.2-1-3" date="2011-04-27">
+		<Change>A more robust and fault tolerance plugin deployment</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.deployer.2-1-2" date="2011-02-07">
+		<Change>Fixing an issue in the undeployment of gCore files: the list was wrongly read at startup time</Change>
+	</Changeset>
+</ReleaseNotes>

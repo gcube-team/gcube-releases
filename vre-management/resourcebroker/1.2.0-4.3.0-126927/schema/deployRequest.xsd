@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployRequest"
+	xmlns:tns="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployRequest"
+	elementFormDefault="qualified" xmlns:pref="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployRequirement">
+
+	<element name="PlanRequest" type="tns:PlanRequestType"></element>
+
+	<complexType name="PlanRequestType">
+		<sequence>
+			<element name="Scope" type="string" minOccurs="1"
+				maxOccurs="1">
+			</element>
+			<element name="PackageGroup" type="tns:PackageGroupType"
+				minOccurs="1" maxOccurs="unbounded">
+			</element>
+			<element name="GHNList" type="tns:GHNListType" minOccurs="0"
+				maxOccurs="1">
+			</element>
+		</sequence>
+	</complexType>
+
+
+
+	<complexType name="GHNListType">
+		<sequence>
+			<element name="GHN" type="string" maxOccurs="unbounded"
+				minOccurs="0">
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="PackageGroupType">
+		<sequence>
+			<element name="Package" type="tns:PackageType" minOccurs="1"
+				maxOccurs="unbounded">
+			</element>
+			<element name="Requirements" type="tns:RequirementsType"
+				minOccurs="0" maxOccurs="1">
+			</element>
+			<element name="GHN" type="string" minOccurs="0"
+				maxOccurs="1">
+			</element>
+		</sequence>
+		<attribute name="ID" type="string"></attribute>
+		<attribute name="service" type="string"></attribute>
+	</complexType>
+
+	<complexType name="PackageType">
+		<sequence>
+			<element name="ServiceClass" type="string" minOccurs="1"
+				maxOccurs="1">
+			</element>
+			<element name="ServiceName" type="string" minOccurs="1"
+				maxOccurs="1">
+			</element>
+			<element name="ServiceVersion" type="string" minOccurs="1"
+				maxOccurs="1">
+			</element>
+			<element name="PackageName" type="string" minOccurs="1"
+				maxOccurs="1">
+			</element>
+			<element name="PackageVersion" type="string" minOccurs="1"
+				maxOccurs="1">
+			</element>
+		</sequence>
+		<attribute name="reuse" type="boolean"></attribute>
+	</complexType>
+
+
+	<!-- 
+		Enumaration on possible scopes.
+	-->
+	<simpleType name="Scopes">
+		<restriction base="string">
+			<enumeration value="NONE" />
+			<enumeration value="GHN" />
+			<enumeration value="VRE" />
+			<enumeration value="VO" />
+		</restriction>
+	</simpleType>
+
+
+    <complexType name="RequirementType">
+		<sequence>
+			<element name="node" minOccurs="1" maxOccurs="1">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="MEM_RAM_AVAILABLE"></enumeration>
+						<enumeration value="MEM_RAM_SIZE"></enumeration>
+						<enumeration value="MEM_VIRTUAL_AVAILABLE"></enumeration>
+						<enumeration value="MEM_VIRTUAL_SIZE"></enumeration>
+						<enumeration value="HOST"></enumeration>
+						<enumeration value="OS"></enumeration>
+						<enumeration value="DISK_SPACE"></enumeration>
+						<enumeration value="LOAD1MIN"></enumeration>
+						<enumeration value="LOAD5MIN"></enumeration>
+						<enumeration value="LOAD15MIN"></enumeration>
+						<enumeration value="PLATFORM"></enumeration>
+						<enumeration value="PROCESSOR_NUM"></enumeration>
+						<enumeration value="PROCESSOR_BOGOMIPS"></enumeration>
+						<enumeration value="SITE_LOCATION"></enumeration>
+						<enumeration value="SITE_COUNTRY"></enumeration>
+						<enumeration value="SITE_DOMAIN"></enumeration>
+						<enumeration value="RUNTIME_ENV_STRING"></enumeration>
+						<enumeration value="RUNTIME_ENV_NUMBER"></enumeration>
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="key" type="string" minOccurs="0" maxOccurs="1"></element>
+			<element name="relType" minOccurs="1" maxOccurs="1">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="EQUAL"></enumeration>
+						<enumeration value="LESS_OR_EQUAL"></enumeration>
+						<enumeration value="GREATER_OR_EQUAL"></enumeration>
+						<enumeration value="GREATER"></enumeration>
+						<enumeration value="LESS"></enumeration>
+						<enumeration value="CONTAINS"></enumeration>
+						<enumeration value="NOT_EQUAL"></enumeration>
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="value" type="string" minOccurs="0" maxOccurs="1"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="RequirementsType">
+		<sequence>
+			<element name="Requirement" type="tns:RequirementType"
+				minOccurs="1" maxOccurs="unbounded">
+			</element>
+		</sequence>
+	</complexType>
+</schema>

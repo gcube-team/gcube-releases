@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="data-transfer-library-1.0.0" date="2016-02-22">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="data-transfer-library-1.1.0" date="2016-10-24">
+		<Change>Adapted to plugin framework</Change>
+	</Changeset>
+</ReleaseNotes>

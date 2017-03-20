@@ -1,0 +1,6 @@
+scope : /gcube/devsec
+jdl : Examples/jdl/jdlExample4.jdl
+chokeProgressEvents : false
+chokePerformanceEvents : false
+storePlans : true
+Concat.sh : Examples/jdl/Concat.sh

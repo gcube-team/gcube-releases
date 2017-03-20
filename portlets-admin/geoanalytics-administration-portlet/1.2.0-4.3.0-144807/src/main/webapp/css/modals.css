@@ -1,0 +1,50 @@
+#InternalServerErrorModal {
+	border-radius: 1.1em;
+	padding-bottom: 1em;
+}
+#InternalServerErrorModal .modal-header {
+	border-bottom: 0px;
+	background: #0271BE;
+	background-color: #0271BE;
+	color: #fff;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+}
+#InternalServerErrorModal .close {
+    color: #fff;
+    opacity: 1;
+    font-size: 1.2em;
+}
+#InternalServerErrorModal .close:hover {
+    color: #aaeeff !important;
+}
+#InternalServerErrorModal  .modal-body {
+	background: #fff;
+	background-color: #fff;
+}
+#InternalServerErrorModal .modal-footer {
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+	border-top: none;	
+	display: block;
+	width: 100%;
+	padding: 0.5em 0em 1em 0em;
+	background: #fff;
+	background-color: #fff;
+}
+#InternalServerErrorModal .modal-footer button {
+	color : #fff;
+	background: #0271BE;
+	background-color: #0271BE;
+	border-radius: 0.4em;
+	padding: 0.4em;
+	margin-right: 1em;
+	font-weight: normal;
+	font-size: 17px;
+	border:none;
+}
+#InternalServerErrorModal .modal-footer button:hover {
+	color : #0271BE;
+	background: #eeeeee;
+	background-color: #eeeeee;
+}

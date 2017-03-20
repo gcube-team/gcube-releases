@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.resource-registry-publisher.1-2-0" date="2017-03-20">
+		<Change>Added API Remove From Context</Change>
+		<Change>Added ResourceRegistryException json deserialization</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-publisher.1-1-0" date="2016-12-16">
+		<Change>Added API AddToContext</Change>	
+		<Change>Added API to support update Resource (with all facets)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-publisher.1-0-0" date="2016-11-03">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,279 @@
+.layers table#layersTable th.tickMe {
+    padding-right: 5px;
+}
+
+.layers table#layersTable th.tickMe button.tickMeBlue {
+    width: 26px;
+    height: 26px;
+}
+
+td.tickMe {
+	background-color: aqua;
+}
+
+.layers table#layersTable tbody tr {
+	background-color: #ffffff;
+}
+
+.layers table#layersTable tbody td.name, 
+.layers table#layersTable tbody td.title, 
+.layers table#layersTable tbody td.abstract, 
+.layers table#layersTable tbody td.keywords, 
+.layers table#layersTable tbody td.area, 
+.layers table#layersTable tbody td.tickMeTd,
+.layers table#layersTable tbody td.srs,
+.layers table#layersTable tbody td.taxonomyTerm {
+	border-right: 7px solid white;
+	border-bottom: 7px solid white;
+}
+
+
+.layers table#layersTable td {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #eeeeee;
+}
+
+.layers table#layersTable td.taxonomyTerm {
+	background-color: white;
+}
+
+.layers table#layersTable tbody th, 
+.layers table#layersTable tbody td {
+    padding: 0px 4px;
+}
+
+
+.layers table#layersTable.hover tbody tr:hover, 
+.layers table#layersTable.display tbody tr:hover {
+	background-color: white;
+}
+
+
+.layers table#layersTable tbody tr:hover td.name, 
+.layers table#layersTable tbody tr:hover td.title, 
+.layers table#layersTable tbody tr:hover td.abstract, 
+.layers table#layersTable tbody tr:hover td.keywords, 
+.layers table#layersTable tbody tr:hover td.area, 
+.layers table#layersTable tbody tr:hover td.tickMeTd, 
+.layers table#layersTable tbody tr:hover td.srs {
+	background-color: #4cb5d2;
+	color: white;
+	cursor: pointer;
+}
+
+.layers table#layersTable tbody tr:hover td.taxonomyTerm {
+	background-color: white;
+}
+
+.layers table#layersTable thead .tickMeHead {
+    width: 20px !important;
+    height: 25px;
+}
+
+.layers table#layersTable th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    padding: 6px 0px;
+	position: relative;
+	border-bottom: 0px;
+	color: #0271be;
+    font-size: small;
+    font-weight: 500;
+    text-align: left;
+}
+
+
+/* #layersTable_wrapper .row-fluid { */
+/* 	display: none; */
+/* } */
+
+/* tick *************************/
+.tickMe {
+    font-size: 18px;
+    padding: 0px;
+    position: relative;
+    height: inherit;
+    width: inherit;
+}
+
+thead .tickMe:before {
+    content: " ";
+    display: block;
+    border: solid 0.8em #019ad3;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: absolute;
+    top: 46%;
+    margin-top: -0.5em;
+}
+
+thead .tickMe:after {
+	content: " ";
+    display: block;
+    width: 4px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 0.2em 0.2em 0;
+    position: absolute;
+    left: 10px;
+    top: 27%;
+    margin-top: -0.2em;
+    transform: rotate(45deg);
+}
+
+
+
+
+td .tickMe:before {
+	content: " ";
+    border: solid 1.9em #019ad3;
+    height: inherit;
+    position: absolute;
+    top: 40%;
+    margin-top: -15px;
+    margin-left: -7px;
+}
+
+td .tickMe:after {
+    content: " ";
+    display: block;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 0.2em 0.2em 0;
+    position: absolute;
+    left: 4px;
+    top: 48%;
+    margin-top: -7px;
+    transform: rotate(45deg);
+}
+/*******************************/
+
+.layers table#layersTable thead th span.tickMe {
+	padding-right: 35px;
+}
+
+th,
+button {
+	outline: none;
+}
+
+.layers table#layersTable thead .sorting_desc {
+	background-image: url(../images/descending.png);
+}
+
+.layers table#layersTable thead .sorting_asc {
+	background-image: url(../images/ascending.png);
+}
+
+.layers table.dataTable.no-footer {
+	border-bottom: none;
+}
+
+.layers table#layersTable .taxonomyTermButtons button {
+    width: inherit;
+    height: 28px;
+    background-color: #019ad3;
+    border-radius: 5px;
+    border: #019ad3;
+    color: white;
+    min-width: 126px;
+}
+
+.layers table#layersTable .taxonomyTermButtons button.opac {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+
+
+
+.actionButtons button {
+	float: right;
+    bottom: 0;
+    margin-top: 80px !important;
+    margin-right: 40px;
+    background-color: #019ad3;
+    border: none;
+    color: white;
+    min-width: 121px;
+    border-radius: 4px;
+    height: 32px;
+}
+
+#boxContainer {
+	padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-height: 800px;
+}
+
+#taxTermBox {
+    border: 2px solid blue;
+    padding: 13px;
+    max-height: 760px;
+    overflow: auto;
+}
+
+#ttmodalLabel {
+	padding-left: 15px;
+	margin-top: 12px;
+}
+
+#boxContainer .accordion-heading {
+	background-color: #019ad3;
+    border-radius: 7px;
+}
+
+#boxContainer .accordion-heading.opac {
+	opacity: 0.5;
+}
+
+#boxContainer .accordion-heading a {
+	color: white;
+}
+
+#boxContainer .accordion-group .accordion-heading.toggled {
+	background-color: #4cb5d2;
+}
+
+#boxContainer .accordion input[type="text"] {
+	width: 100%;
+    border-radius: 4px;
+    height: 21px;
+    border: 1px solid #DDD;
+    color: #8D8D8D;
+    font-weight: 200;
+    margin-bottom: 7px;
+}
+
+#boxContainer #taxTermBox #dropTerms ul {
+	position: relative;
+    display: block;
+    border-right: none;
+    box-shadow: none;
+    border-bottom: none;
+    border-top: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+	width: 100%;
+}
+
+#dropTerms .dropdown-menu li {
+	background-color: #4cb5d2;
+    width: 100%;
+    border-radius: 4px;
+    margin-left: 4px;
+	margin-bottom: 4px;
+}
+
+#dropTerms .dropdown-menu li a:hover,
+#dropTerms .dropdown-menu li:hover {
+	background-color: #4cb5d2;
+}
+

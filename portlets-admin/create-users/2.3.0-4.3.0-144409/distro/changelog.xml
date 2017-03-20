@@ -1,0 +1,19 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.admin.create-users.2-2-0"
+		date="2016-12-02">
+		<Change>Removed ASLSession</Change>
+		<Change>Minor pom.xml changes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.create-users.2-1-0"
+		date="2016-10-31">
+		<Change>Fixed unknown question in case of password recovery</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.create-users.2-0-0"
+		date="2016-05-31">
+		<Change>Moved to Liferay 6.2.5</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.create-users.1-0-0"
+		date="2016-03-28">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

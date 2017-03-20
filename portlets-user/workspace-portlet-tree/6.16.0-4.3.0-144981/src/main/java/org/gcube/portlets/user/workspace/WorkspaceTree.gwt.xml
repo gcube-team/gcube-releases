@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='workspacetree'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.resources.Resources' />
+
+	<!-- For development, a default of `DEBUG` is recommended <inherits name="com.allen_sauer.gwt.log.gwt-log-DEBUG" 
+		/> -->
+
+	<!-- Other module inherits -->
+	<!-- Moduel GXT -->
+	<inherits name='com.extjs.gxt.ui.GXT' />
+	<inherits name='org.gcube.portal.clientcontext.GCubeClientContext' />
+	
+	<inherits name="org.gcube.portlets.widgets.workspacesharingwidget.WorkspaceSharingWidget" />
+
+	<servlet path="/WorkspaceService" class="org.gcube.portlets.user.workspace.server.GWTWorkspaceServiceImpl" />
+	<inherits name="org.gcube.portlets.widgets.workspaceuploader.WorkspaceUploader"></inherits>
+	<inherits name='org.gcube.portlets.widgets.ckandatapublisherwidget.CKanMetadataPublisher' />
+		
+	<servlet path="/DownloadService"
+		class="org.gcube.portlets.user.workspace.server.DownloadServlet" />
+	<servlet path="/ImageService"
+		class="org.gcube.portlets.user.workspace.server.ImageServlet" />
+
+	<!-- Specify the application specific style sheet. -->
+	<stylesheet src='workspacetree.css' />
+
+	<source path='client' />
+	<source path='shared' />
+
+</module>

@@ -1,0 +1,13 @@
+Scope # /gcube/devNext
+chokeProgressEvents # false
+chokePerformanceEvents # false
+storePlans # true
+Jar # MapReduceCallablesTesting.jar # url # ftp://meteora.di.uoa.gr/d5s/MapReduceCallablesTesting.jar
+MainClass # gr.uoa.di.madgik.callables.mapreduce.test.WordCount
+Argument # 0 # testInput2
+Argument # 1 # testOutput2
+outputStoreMode # url # ftp://meteora.di.uoa.gr/d5s # user # pass
+Input # testInput2/All_About_Coffee_by_William_H._Ukers.txt # tmp # url # ftp://meteora.di.uoa.gr/d5s/All_About_Coffee_by_William_H._Ukers.txt
+Input # testInput2/ExampleText.txt # tmp # url # ftp://meteora.di.uoa.gr/d5s/ExampleText.txt
+Output # testOutput2 # tmp
+Output # StdOut # tmp # url # ftp://meteora.di.uoa.gr/d5s/ExampleText.txt

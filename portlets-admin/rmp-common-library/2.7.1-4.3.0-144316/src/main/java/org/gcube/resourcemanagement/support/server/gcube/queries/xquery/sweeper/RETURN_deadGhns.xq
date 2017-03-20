@@ -1,0 +1,14 @@
+<Resource>
+   {$GHNs/ID}
+   {$GHNs/Profile/GHNDescription/Name}
+   {$GHNs/Profile/GHNDescription/Status}
+   {$GHNs/Profile/GHNDescription/Type}
+   {$GHNs/Profile/Site/Location}
+   {$GHNs/Profile/Site/Domain}
+   <IPAddress>{$GHNs/Profile/GHNDescription/NetworkAdapter/@IPAddress/string()}</IPAddress>
+   <Scopes>{$scopes}</Scopes>
+   <AllocatedRI>{count($RIinstalled)}</AllocatedRI>
+   {$GHNs/Profile/GHNDescription/LastUpdate}
+   <UpdateMinutesElapsed>{$totalminutes}</UpdateMinutesElapsed>
+   <Actions>APPLY_GHN_DELETE</Actions>
+</Resource>

@@ -1,0 +1,13 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.geoserverbridge.geoservermanager.1-0-0" date="2016-07-29">
+		<Change>First release</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.geoserverbridge.geoservermanager.1-1-0" date="2016-11-22">
+		<Change>Publish to geonetwrok. Class 'GSManagerGeoNetworkBridge' is changed, in order to use the custom code with 'geotools' library</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.geoserverbridge.geoservermanager.1-2-0" date="2017-03-03">
+		<Change>Add loggers for errors, warnings, debug and trace</Change>
+		<Change>Updated TSV importer to support Geocode and GeocodeSystem</Change>
+		<Change>Fixed rollback for tsv imports</Change>	
+	</Changeset>
+</ReleaseNotes>

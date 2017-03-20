@@ -1,0 +1,32 @@
+<ReleaseNotes>
+<Changeset component="	org.gcube.information-system.collector.3-0-2" date="2014-01-31">
+		<Change>Removed not UTF chars from comments</Change>
+	</Changeset>
+<Changeset component="	org.gcube.information-system.collector.3-0-1" date="2011-03-25">
+		<Change>XMLDocuments passed as any objects and cleaned up</Change>
+	</Changeset>
+	<Changeset component="	org.gcube.information-system.collector.3-0-0" date="2011-02-07">
+		<Change>WSDAIX::XMLCollectionAccess interface</Change>
+		<Change>internal refactoring of resources</Change>
+		<Change>introducing metadata record for GCUBE Resources</Change>
+		<Change>enhanced and simplified XMLStorage</Change>
+	</Changeset>
+	<Changeset component="	org.gcube.information-system.collector.2-2-0" date="2009-10-30">
+		<Change>GetProfileLastModificationTimeMs and GetResourceLastModificationTimeMs operations</Change>
+	</Changeset>
+	<Changeset component="	org.gcube.information-system.collector.2-1-0" date="2009-10-15">
+		<Change>GetProfile and GetResource operations</Change>
+	</Changeset>
+	<Changeset component="	org.gcube.information-system.collector.2-0-0" date="2009-08-30">
+		<Change>test-suite</Change>
+		<Change>Data e Query specialized managers</Change>
+		<Change>scheduled backups</Change>
+		<Change>remote connect/shutdown</Change>
+		<Change>remote backup/restore</Change>
+		<Change>portTypes reorganization</Change>
+		<Change>internal refactoring</Change>		
+	</Changeset>
+	<Changeset component="	org.gcube.information-system.collector.1-0-0" date="2009-01-10">
+		<Change>gCore refactoring</Change>
+	</Changeset>
+</ReleaseNotes>

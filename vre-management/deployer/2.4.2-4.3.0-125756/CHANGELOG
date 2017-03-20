@@ -1,0 +1,20 @@
+
+v. 2.1.1 (14-05-2010)
+		* Resource Manager integration
+
+v. 2.1.0 (20-11-2009)
+		* Porting on gCore 0.6.0 (scheduledHandler)
+		* Plugin deployment/undeployment
+		
+v. 2.0.0 (15-07-2009)
+        * Undeployment
+
+v. 1.1.0 (25-05-2009)
+        * Porting on gCore 0.5.0
+        * Removed RPs publication
+
+v. 1.0.2 (26-09-2008)
+        * State Management, Patch and Update operations
+
+v. 1.0.0 (28-07-2008)
+        * First release

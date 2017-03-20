@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ws.usermanagement.vomanagement.gcube.org/" xmlns:tns="http://ws.usermanagement.vomanagement.gcube.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="GroupRetrievalFault" type="tns:GroupRetrievalFault"/>
+
+  <xs:element name="UserManagementPortalException" type="tns:UserManagementPortalException"/>
+
+  <xs:element name="UserManagementSystemException" type="tns:UserManagementSystemException"/>
+
+  <xs:element name="UserRetrievalFault" type="tns:UserRetrievalFault"/>
+
+  <xs:element name="getGroup" type="tns:getGroup"/>
+
+  <xs:element name="getGroupId" type="tns:getGroupId"/>
+
+  <xs:element name="getGroupIdResponse" type="tns:getGroupIdResponse"/>
+
+  <xs:element name="getGroupParentId" type="tns:getGroupParentId"/>
+
+  <xs:element name="getGroupParentIdResponse" type="tns:getGroupParentIdResponse"/>
+
+  <xs:element name="getGroupResponse" type="tns:getGroupResponse"/>
+
+  <xs:element name="getRootVO" type="tns:getRootVO"/>
+
+  <xs:element name="getRootVOName" type="tns:getRootVOName"/>
+
+  <xs:element name="getRootVONameResponse" type="tns:getRootVONameResponse"/>
+
+  <xs:element name="getRootVOResponse" type="tns:getRootVOResponse"/>
+
+  <xs:element name="getScope" type="tns:getScope"/>
+
+  <xs:element name="getScopeResponse" type="tns:getScopeResponse"/>
+
+  <xs:element name="isRootVO" type="tns:isRootVO"/>
+
+  <xs:element name="isRootVOResponse" type="tns:isRootVOResponse"/>
+
+  <xs:element name="isVO" type="tns:isVO"/>
+
+  <xs:element name="isVOResponse" type="tns:isVOResponse"/>
+
+  <xs:element name="isVRE" type="tns:isVRE"/>
+
+  <xs:element name="isVREResponse" type="tns:isVREResponse"/>
+
+  <xs:element name="listGroups" type="tns:listGroups"/>
+
+  <xs:element name="listGroupsAndRolesByUser" type="tns:listGroupsAndRolesByUser"/>
+
+  <xs:element name="listGroupsAndRolesByUserResponse" type="tns:listGroupsAndRolesByUserResponse"/>
+
+  <xs:element name="listGroupsByUser" type="tns:listGroupsByUser"/>
+
+  <xs:element name="listGroupsByUserResponse" type="tns:listGroupsByUserResponse"/>
+
+  <xs:element name="listGroupsResponse" type="tns:listGroupsResponse"/>
+
+  <xs:element name="listPendingGroupsByUser" type="tns:listPendingGroupsByUser"/>
+
+  <xs:element name="listPendingGroupsByUserResponse" type="tns:listPendingGroupsByUserResponse"/>
+
+  <xs:element name="listSubGroupsByGroup" type="tns:listSubGroupsByGroup"/>
+
+  <xs:element name="listSubGroupsByGroupResponse" type="tns:listSubGroupsByGroupResponse"/>
+
+  <xs:complexType name="isVRE">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="isVREResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UserManagementSystemException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GroupRetrievalFault">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listSubGroupsByGroup">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listSubGroupsByGroupResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:groupModel" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="groupModel">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="groupId" type="xs:string" minOccurs="0"/>
+      <xs:element name="groupName" type="xs:string" minOccurs="0"/>
+      <xs:element name="logoId" type="xs:long"/>
+      <xs:element name="parentGroupId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listGroupsAndRolesByUser">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listGroupsAndRolesByUserResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:stringRoleListCoupleWrapper" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="stringRoleListCoupleWrapper">
+    <xs:sequence>
+      <xs:element name="roleModels" type="tns:roleModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="string" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="roleModel">
+    <xs:sequence>
+      <xs:element name="completeName" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="roleId" type="xs:string" minOccurs="0"/>
+      <xs:element name="roleName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UserManagementPortalException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UserRetrievalFault">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listPendingGroupsByUser">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listPendingGroupsByUserResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:groupModel" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getGroupId">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getGroupIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="isRootVO">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="isRootVOResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listGroupsByUser">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listGroupsByUserResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:groupModel" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getRootVO">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getRootVOResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:groupModel" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getGroup">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getGroupResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:groupModel" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getGroupParentId">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getGroupParentIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getRootVOName">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getRootVONameResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="isVO">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="isVOResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getScope">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getScopeResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listGroups">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="listGroupsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:groupModel" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

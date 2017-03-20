@@ -1,0 +1,25 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.distribution.ghn-distribution-bundle.3-8-0" date="2013-07-09">
+		<Change>removed SMS URI resolver conf from gcore-start-container</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.ghn-distribution-bundle.3-7-1" date="2013-05-29">
+		<Change>fixed bug on gcore-start-container</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.ghn-distribution-bundle.3-7-0" date="2013-04-19">
+		<Change>Added Jul logging conf</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.ghn-distribution-bundle.4-0-0" date="2014-01-31">
+		<Change>JAVA 7 version of the bundle</Change>
+		<Change>Fixed an issue on the gcore-clean-accesslogs script</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.ghn-distribution-bundle.5-0-0" date="2014-09-09">
+		<Change>added maps for social ISTI</Change>
+		<Change>added support for secure containers</Change>
+		<Change>modified server-config.wsdd to include the global security descriptor with the certificates in etc/globus_wsrf_core</Change>
+		<Change>added security configuration properties for Message Level Security (currently disabled) in etc/globus_wsrf_core</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.ghn-distribution-bundle.6-0-0" date="2015-10-28">
+		<Change>added support for authorization</Change>
+		<Change>added support for accounting</Change>
+	</Changeset>
+</ReleaseNotes>

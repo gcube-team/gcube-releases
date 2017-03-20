@@ -1,0 +1,78 @@
+The gCube System - Resource Registry OrientDB Hooks
+--------------------------------------------------
+ 
+Resource Registry OrientDB Hooks
+ 
+ 
+This software is part of the gCube Framework (https://www.gcube-system.org/): an
+open-source software toolkit used for building and operating Hybrid Data
+Infrastructures enabling the dynamic deployment of Virtual Research Environments
+by favouring the realisation of reuse oriented policies.
+ 
+The projects leading to this software have received funding from a series of    
+European Union programmes including:                                            
+* the Sixth Framework Programme for Research and Technological Development -    
+DILIGENT (grant no. 004260);                                                    
+* the Seventh Framework Programme for research, technological development and   
+demonstration - D4Science (grant no. 212488), D4Science-II (grant no.           
+239019),ENVRI (grant no. 283465), EUBrazilOpenBio (grant no. 288754), iMarine   
+(grant no. 283644);                                                             
+* the H2020 research and innovation programme - BlueBRIDGE (grant no. 675680),  
+EGIEngage (grant no. 654142), ENVRIplus (grant no. 654182), Parthenos (grant 
+no. 654119), SoBigData (grant no. 654024);
+ 
+ 
+Version
+--------------------------------------------------
+ 
+1.2.0-4.3.0-144330 (2017-03-20)
+ 
+Please see the file named "changelog.xml" in this directory for the release notes.
+ 
+ 
+Authors
+--------------------------------------------------
+ 
+* Luca Frosini (luca.frosini-AT-isti.cnr.it), Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo" - CNR, Pisa (Italy).
+
+Maintainers
+-----------
+ 
+* Luca Frosini (luca.frosini-AT-isti.cnr.it), Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo" - CNR, Pisa (Italy).
+ 
+ 
+Download information
+--------------------------------------------------
+ 
+Source code is available from SVN: 
+    https://svn.d4science.research-infrastructures.eu/gcube/trunk/information-system/resource-registry-orientdb-hooks
+ 
+Binaries can be downloaded from the gCube website: 
+   https://www.gcube-system.org/
+ 
+ 
+Installation
+--------------------------------------------------
+ 
+Installation documentation is available on-line in the gCube Wiki:
+    https://wiki.gcube-system.org/gcube/index.php/InformationSystem
+ 
+ 
+Documentation 
+--------------------------------------------------
+ 
+Documentation is available on-line in the gCube Wiki:
+    https://wiki.gcube-system.org/gcube/index.php/InformationSystem
+ 
+ 
+Support 
+--------------------------------------------------
+ 
+Bugs and support requests can be reported in the gCube issue tracking tool:
+    https://support.d4science.org/projects/gcube/
+ 
+ 
+Licensing
+--------------------------------------------------
+ 
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.

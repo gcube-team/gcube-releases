@@ -1,0 +1,8 @@
+/d4science.research-infrastructures.eu/gCubeApps/FAO_TunaAtlas
+/d4science.research-infrastructures.eu/gCubeApps/TabularDataLab 
+/d4science.research-infrastructures.eu/gCubeApps/BOBLME_HilsaAWG
+/d4science.research-infrastructures.eu/gCubeApps/PGFA-UFMT
+/d4science.research-infrastructures.eu/gCubeApps/IGDI
+/d4science.research-infrastructures.eu/gCubeApps/ICES_TCRE
+/d4science.research-infrastructures.eu/gCubeApps/StockAssessment
+/d4science.research-infrastructures.eu

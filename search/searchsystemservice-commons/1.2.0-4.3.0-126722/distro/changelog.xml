@@ -1,0 +1,12 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.search.searchsystemservice-commons.1-0-0" date="2014-04-02">
+		<Change>Initial release</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.search.searchsystemservice-commons.1-1-0" date="2014-06-03">
+		<Change>Added get collections, get fields etc</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.searchsystemservice-commons.1-2-0" date="2014-07-02">
+		<Change>Added getSearchableFields and getPresentable fields to support SRU-search-adaptor</Change>
+	</Changeset>
+</ReleaseNotes>

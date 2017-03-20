@@ -1,0 +1,37 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.search.opensearchdatasource.2-0-0" date="2014-05-12">
+		<Change>Turned to Restful</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearchdatasource.1-6-5" date="2014-02-07">
+		<Change>Removed searchsystem-stubs dependency</Change>
+		<Change>Added BOM</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearchdatasource.1-6-4" date="2013-09-06">
+		<Change>Fixed multiple terms handling</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearchdatasource.1-6-3" date="2013-05-30">
+		<Change>Fixed the problem with the presentable fields when loading a resource. Related ticket #1720.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearchdatasource.1-6-2" date="2013-03-05">
+		<Change>Minor bug fixes.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearchdatasource.1-6-1" date="2013-01-08">
+		<Change>Changes for profile.xml interpolation</Change>
+		<Change>Dependency range changes in pom file</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearchdatasource.1-6-0" date="2012-09-07">
+		<Change>Turned to Maven</Change>
+		<Change>Java logger replaced by slf4</Change>
+	</Changeset>
+   <Changeset component="org.gcube.search.opensearchdatasource.1-5-0" date="2011-09-02">
+		<Change>Added project * functionality</Change>
+		<Change>Removed contains relation, which is covered by the = relation</Change>
+		<Change>Robustness related fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearchdatasource.1-1-0" date="2011-07-29">
+		<Change>Added support for gradual provider addition through createResource factory operation</Change>
+	</Changeset>
+	<Changeset component="org.gcube.search.opensearchdatasource.1-0-0" date="2011-07-01">
+		<Change>First release. Replaces OpenSearchService. Able to handle gCQL queries on multiple OpenSearch providers</Change>
+	</Changeset>
+</ReleaseNotes>

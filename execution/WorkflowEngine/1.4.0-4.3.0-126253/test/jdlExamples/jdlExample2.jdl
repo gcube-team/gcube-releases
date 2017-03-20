@@ -1,0 +1,26 @@
+[
+	Type = "Job";
+	JobType = "Normal";
+	Executable = "job.sh";
+	Arguments = "Hello_World_Of_Diligent...";
+	StdOutput = "job.out";
+	StdError = "job.err";
+	OutputSandbox = {
+		"job.err",
+		"job.out",
+		"job.output"
+	};
+	InputSandbox = {
+		"job.sh",
+		"sig.txt"
+	};
+	Environment = {
+		"TEST_ENV_VAR1=Environment Value1",
+		"TEST_ENV_VAR2=Environment Value2"
+	};
+	RetryCount=5;
+	RetryInterval =5000;
+
+	Rank = (other.GlueCEPolicyMaxRunningJobs-other.GlueCEStateRunningJobs);
+	Requirements = other.GlueCEStateStatus == "Production" ;
+]

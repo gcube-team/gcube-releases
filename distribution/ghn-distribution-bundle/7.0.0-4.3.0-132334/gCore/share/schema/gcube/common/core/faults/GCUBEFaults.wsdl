@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="GCUBEFaults"
+    targetNamespace="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:tns="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+<!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+<types>
+<xsd:schema 
+   targetNamespace="http://gcube-system.org/namespaces/common/core/faults"
+   xmlns:tns="http://gcube-system.org/namespaces/common/core/faults"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:wsbf="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.xsd">
+
+	<xsd:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.xsd" schemaLocation="../../../../wsrf/faults/WS-BaseFaults.xsd"/>
+
+	<xsd:element name="GCUBEFault" type="tns:GCUBEFault"/>
+	<xsd:element name="GCUBEUnrecoverableFault" type="tns:GCUBEUnrecoverableFault"/>
+	<xsd:element name="GCUBERetrySameFault" type="tns:GCUBERetrySameFault"/>
+	<xsd:element name="GCUBERetryEquivalentFault" type="tns:GCUBERetryEquivalentFault"/>	
+
+	<xsd:complexType name="GCUBEFault">
+		<xsd:complexContent>
+			<xsd:extension base="wsbf:BaseFaultType">
+				<xsd:sequence>
+					<xsd:element name="FaultMessage" type="xsd:string"/>
+					<xsd:element name="FaultType" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="GCUBEUnrecoverableFault">
+		<xsd:complexContent>
+			<xsd:extension base="tns:GCUBEFault"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="GCUBERetrySameFault">
+		<xsd:complexContent>
+			<xsd:extension base="tns:GCUBEFault"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="GCUBERetryEquivalentFault">
+		<xsd:complexContent>
+			<xsd:extension base="tns:GCUBEFault"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+
+</xsd:schema>
+</types>
+
+<message name="GCUBEFaultMessage">
+	   <part name="fault" element="tns:GCUBEFault"/>
+</message>
+<message name="GCUBEUnrecoverableFaultMessage">
+	   <part name="fault" element="tns:GCUBEUnrecoverableFault"/>
+</message>
+<message name="GCUBERetrySameFaultMessage">
+	   <part name="fault" element="tns:GCUBERetrySameFault"/>
+</message>
+<message name="GCUBERetryEquivalentFaultMessage">
+	   <part name="fault" element="tns:GCUBERetryEquivalentFault"/>
+</message>
+
+
+</definitions>

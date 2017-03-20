@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.data-catalogue.gcubedatacatalogue-metadata-discovery.2-0-0"
+		date="2016-10-03">
+		<Change>Updated Metadata Profile model to version 2.0
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.data-catalogue.gcubedatacatalogue-metadata-discovery.1-0-0"
+		date="2016-07-04">
+		<Change>First version
+		</Change>
+	</Changeset>
+</ReleaseNotes>

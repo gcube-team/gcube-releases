@@ -1,0 +1,10 @@
+./addAlgorithm.sh LISTDBINFO DATABASES org.gcube.dataaccess.algorithms.drmalgorithms.ListDBInfo /gcube/devNext/NextNext transducerers N k "legacy algorithm"	
+./addAlgorithm.sh LISTDBNAMES DATABASES org.gcube.dataaccess.algorithms.drmalgorithms.ListNames /gcube/devNext/NextNext transducerers N k "legacy algorithm"
+./addAlgorithm.sh LISTDBSCHEMA DATABASES org.gcube.dataaccess.algorithms.drmalgorithms.ListSchemas /gcube/devNext/NextNext transducerers N k "legacy algorithm"
+./addAlgorithm.sh LISTTABLES DATABASES org.gcube.dataaccess.algorithms.drmalgorithms.ListTables /gcube/devNext/NextNext transducerers N k "legacy algorithm"
+./addAlgorithm.sh GETTABLEDETAILS DATABASES org.gcube.dataaccess.algorithms.drmalgorithms.GetTableDetails /gcube/devNext/NextNext transducerers N k "legacy algorithm"
+./addAlgorithm.sh SUBMITQUERY DATABASES org.gcube.dataaccess.algorithms.drmalgorithms.SubmitQuery /gcube/devNext/NextNext transducerers N k "legacy algorithm"
+./addAlgorithm.sh RANDOMSAMPLEONTABLE DATABASES org.gcube.dataaccess.algorithms.drmalgorithms.RandomSampleOnTable /gcube/devNext/NextNext transducerers N k "legacy algorithm"
+./addAlgorithm.sh SAMPLEONTABLE DATABASES org.gcube.dataaccess.algorithms.drmalgorithms.SampleOnTable /gcube/devNext/NextNext transducerers N k "legacy algorithm"
+./addAlgorithm.sh SMARTSAMPLEONTABLE DATABASES org.gcube.dataaccess.algorithms.drmalgorithms.SmartSampleOnTable /gcube/devNext/NextNext transducerers N k "legacy algorithm" 
+

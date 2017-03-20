@@ -1,0 +1,42 @@
+The gCube System - VREManager Service
+------------------------------------------------------------
+
+This work is partially funded by the European Commission in the
+context of the D4Science project (www.d4science.eu), under the 
+1st call of FP7 IST priority.
+
+Authors
+-------
+
+* Gianpaolo Coro (gianpaolo.coro@isti.cnr.it), CNR Pisa,
+  Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo"
+
+Version and Release Date
+------------------------
+
+version 1.2.0 (02-09-2011)  
+
+Description
+--------------------
+
+Support library for statistics analysis on Time Series data.
+
+
+Download information
+--------------------
+
+Source code is available from SVN:
+http://svn.research-infrastructures.eu/d4science/gcube/trunk/content-management/StatisticsExtractor
+
+Binaries can be downloaded from:
+http://software.d4science.research-infrastructures.eu/
+
+Documentation 
+-------------
+VREManager documentation is available on-line from the Projects Documentation Wiki:
+not available
+
+Licensing
+---------
+
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.

@@ -1,0 +1,7 @@
+<application mode="online">
+	<group>InvestmentAnalysis</group>
+	<name>TechnoEconomicAnalysisService</name>
+	<version>2.1.0</version>
+	<description>Techno Economic Analysis Service</description>
+	<exclude>/resources/</exclude>
+</application>

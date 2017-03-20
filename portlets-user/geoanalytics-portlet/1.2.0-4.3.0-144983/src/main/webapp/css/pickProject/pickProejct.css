@@ -1,0 +1,30 @@
+#pickProjectContainer * {
+	outline:none;
+}
+#pickProjectContainer.spinner {
+	pointer-events: none;
+	position:relative;
+}
+#pickProjectContainer #spinner {
+	font-size: 7em;
+	color: #0271be;
+	position: absolute;
+	top:20%;
+	left: 50%;
+}
+#pickProjectContainer.spinner #blanket{
+	opacity: 0.2;
+}
+#pickProjectContainer #projectsHeader{
+	background-color: rgb(2,113,190);
+	background: rgb(2,113,190);
+	padding: 3px 12px 3px 12px;
+	color: #fff;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	margin-bottom: 25px
+}
+#pickProjectContainer #projects {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}

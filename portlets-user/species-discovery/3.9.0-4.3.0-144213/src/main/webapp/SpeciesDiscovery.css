@@ -1,0 +1,403 @@
+/** Add css rules here for your application. */
+
+@import url(switchbutton.css);
+ 
+#images-view .x-panel-body {
+	background: none repeat scroll 0 0 white;
+	font: 11px Arial, Helvetica, sans-serif;
+}
+
+#images-view .thumb {
+	background: none repeat scroll 0 0 #DDDDDD;
+	padding: 3px;
+}
+
+#images-view .thumb img {
+	height: 60px;
+	width: 80px;
+}
+
+#images-view .thumb-wrap {
+	border: 1px solid white;
+	float: left;
+	margin: 4px 0 4px 4px;
+	padding: 5px;
+}
+
+.x-theme-access #images-view .thumb-wrap {
+	border: 1px solid #232D38;
+}
+
+#images-view .thumb-wrap span {
+	display: block;
+	overflow: hidden;
+	text-align: center;
+}
+
+#images-view .x-view-over {
+	background: url("../gxt/images/default/grid/row-over.gif") repeat-x
+		scroll left top #EFEFEF;
+	border: 1px solid #DDDDDD;
+	padding: 4px;
+}
+
+#images-view .x-view-selected {
+	background: none no-repeat scroll right bottom #EFF5FB;
+	border: 1px solid #99BBE8;
+	padding: 4px;
+}
+
+#images-view .x-view-selected .thumb {
+	background: none repeat scroll 0 0 transparent;
+}
+
+#images-view .loading-indicator {
+	background-image:
+		url("../gxt/resources/images/default/grid/loading.gif");
+	background-position: left center;
+	background-repeat: no-repeat;
+	font-size: 11px;
+	margin: 10px;
+	padding-left: 20px;
+}
+
+/**FIX for portal css interference**/
+table {
+	clear: none !important;
+}
+
+.button-hyperlink .x-btn-text {
+	cursor: pointer !important;
+	cursor: hand !important;
+	border: none !important;
+	/* Disable the button-style */
+	background-color: transparent !important;
+	background: none !important;
+	background-image: none !important;
+/* 	padding: 0px !important; */
+	color: #4784C3 !important;
+	/*color: #000 !important;*/
+	font-size: 10px;
+/* 	width: 105px !important; */
+	/*font-family: Serif, "Times New Roman", Georgia;*/ /*color: black;*/
+	/*font-weight: bold;*/
+	text-decoration: underline !important;
+}
+
+/* the position of the icon is setted with -5px of margin in horizontal*/ 
+.button-hyperlink .x-btn-image { 
+/* 	background-position: -3px, 0px !important; */
+/* 	margin-right: 5px !important; */
+}
+
+/* remove images */
+.button-hyperlink .x-btn-tl,.button-hyperlink.x-btn-tr,.button-hyperlink .x-btn-tc,.button-hyperlink .x-btn-ml,.button-hyperlink .x-btn-mr,.button-hyperlink .x-btn-mc,.button-hyperlink .x-btn-bl,.button-hyperlink .x-btn-br,.button-hyperlink .x-btn-bc
+	{
+	background-image: none !important;
+	background: none !important;
+}
+
+.button-hyperlink .x-btn-small .x-btn-mr,.button-hyperlink .x-btn-small .x-btn-ml,.button-hyperlink .x-btn-small .x-btn-mc,.button-hyperlink .x-btn-small .x-btn-br,.button-hyperlink .x-btn-small .x-btn-bl,.button-hyperlink .x-btn-small .x-btn-bc,.button-hyperlink .x-btn-small .x-btn-tc,.button-hyperlink .x-btn-small .x-btn-tr,.button-hyperlink .x-btn-small .x-btn-tl
+	{
+	background-image: none !important;
+	background: none !important;
+}
+/* remove little dots in FF */
+.button-hyperlink .x-btn-tl i,.button-hyperlink .x-btn-tr i,.button-hyperlink .x-btn-tc i,.button-hyperlink .x-btn-ml i,.button-hyperlink .x-btn-mr i,.button-hyperlink .x-btn-mc i,.button-hyperlink .x-btn-bl i,.button-hyperlink .x-btn-br i,.button-hyperlink .x-btn-bc i
+	{
+	font-size: 0px;
+}
+
+
+
+table.imagetable-status {
+	font-family: verdana, arial, sans-serif;
+	font-size: 10px;
+	/*color:#333333;
+	border-width: 1px;
+	border-color: #999999;
+	*/
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 1px solid #e3e3e3;
+	margin-top: 20px;
+	background-color: #FFF;
+	width: 98%;
+	margin: 5px 0 0 10px;
+	/*border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	*/
+}
+
+
+table.imagetable-status colgroup {
+    width: 30%;
+    background-color: #D3E1F1;
+}
+
+table.imagetable-status td {
+	/*background:#dcddc0 url('images/cell-grey.jpg');*/
+	border-width: 1px;
+	border-style: solid;
+	border-color: #999999;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height: 22px;
+	padding: 5px;
+	/*background-repeat: repeat;*/
+}
+
+
+table.imagetable {
+	font-family: verdana, arial, sans-serif;
+	font-size: 10px;
+	/*color:#333333;
+	border-width: 1px;
+	border-color: #999999;
+	*/
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 1px solid #e3e3e3;
+/* 	margin-top: 20px; */
+	background-color: #f2f2f2;
+	width: 99%;
+	margin-bottom: 20px;
+	/*border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	*/
+}
+
+table.imagetable .title {
+	/*background:#b5cfd2 url('images/cell-blue.jpg');*/
+	background-color: #D3E1F1;
+	border-width: 1px;
+	width: 30%;
+	padding: 5px;
+	/*background-repeat: repeat;*/
+	border-style: solid;
+	border-color: #999999;
+}
+
+table.imagetable td {
+	/*background:#dcddc0 url('images/cell-grey.jpg');*/
+	background-color: #FFF;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #999999;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height: 22px;
+	padding: 5px;
+	/*background-repeat: repeat;*/
+}
+
+table.imagetable th {
+	font-weight: bold;
+	font-size: 12px;
+	height: 30px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+table.simpletable {
+	table-layout: fixed;
+	text-align: center;
+	width: 99%;
+	padding: 0px;
+	margin: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 1px solid #024e68;
+	font-size: 12px;
+}
+
+table.simpletable th {
+	font-weight: bold;
+	height: 30px;
+	text-align: center;
+	background-color: #f2f2f2;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 1px solid #024e68;
+}
+
+table.simpletable td {
+	text-align: center;
+	/*background:#FFD340;*/
+	background-color: #FFF;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 1px solid #024e68;
+}
+
+table.simpletable .commonname {
+	text-align: center;
+	width: 30%;
+	height: 22px;
+	background: #b5cfd2;
+	/*background:#b5cfd2;*/
+}
+
+.wizardButton {
+	height: 22px !important;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #F2F2F2;
+	/*background: #F2F2F2 url(images/white-grad.png) repeat-x scroll left top;*/
+	border-color: #BBB;
+	color: #464646;
+	font-size: 12px;
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+	cursor: hand;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.wizardButton[disabled]:hover,.wizardButton[disabled]:active,.wizardButton[disabled]
+	{
+	color: #CCC;
+	border-color: #BBB;
+	cursor: default;
+	opacity: 1.0;
+	/*background: #F2F2F2 url(images/white-grad.png) repeat-x scroll left top;*/
+	background: #F2F2F2;
+}
+
+.wizardButton:hover {
+	border-color: #222;
+	color: #222;
+	opacity: 0.8;
+}
+
+.wizardButton:active {
+	/*background: #e3e8f3 url(images/white-grad.png) repeat-x scroll left top;*/
+	
+}
+
+.toolbar-filter {
+	background-image: none !important;
+	border-width: 1px;
+	/*border-style: inset;*/
+	border-bottom-style: solid;
+	border-color: #B3B3B3;
+	background-color: #EEEEEE;
+	/*font-family: tahoma,arial,verdana,sans-serif;*/
+}
+
+.button-noimage .x-btn-text {
+	cursor: pointer !important;
+	cursor: hand !important;
+	border: none !important;
+	/* Disable the button-style */
+	background-color: transparent !important;
+	background: none !important;
+	background-image: none !important;
+	padding: 0px !important;
+	/*color: #000 !important;*/
+	font-size: 10px;
+	/*font-family: Serif, "Times New Roman", Georgia;*/
+}
+/* remove images */
+.button-noimage .x-btn-tl,.button-noimage-btn-tr,.button-noimage .x-btn-tc,.button-noimage .x-btn-ml,.button-noimage .x-btn-mr,.button-noimage .x-btn-mc,.button-noimage .x-btn-bl,.button-noimage .x-btn-br,.button-noimage .x-btn-bc
+	{
+	background-image: none !important;
+	background: none !important;
+}
+
+.button-noimage .x-btn-small .x-btn-mr,.button-noimage .x-btn-small .x-btn-ml,.button-noimage .x-btn-small .x-btn-mc,.button-noimage .x-btn-small .x-btn-br,.button-noimage .x-btn-small .x-btn-bl,.button-noimage .x-btn-small .x-btn-bc,.button-noimage .x-btn-small .x-btn-tc,.button-noimage .x-btn-small .x-btn-tr,.button-noimage .x-btn-small .x-btn-tl
+	{
+	background-image: none !important;
+	background: none !important;
+}
+/* remove little dots in FF */
+.button-noimage .x-btn-tl i,.button-noimage .x-btn-tr i,.button-noimage .x-btn-tc i,.button-noimage .x-btn-ml i,.button-noimage .x-btn-mr i,.button-noimage .x-btn-mc i,.button-noimage .x-btn-bl i,.button-noimage .x-btn-br i,.button-noimage .x-btn-bc i
+	{
+	font-size: 0px;
+}
+
+.labelCredits {
+	font-size: 11px;
+	font-style: italic;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-left: 30px;
+}
+
+.labelParameters {
+	font-size: 11px;
+	color: black;
+	font-weight: bold;
+}
+
+.logoDataSource {
+	margin: 15px;
+}
+
+.valueParameters {
+	font-size: 11px;
+	color: black;
+	margin-left: 20px;
+}
+
+table.parameters {
+	font-family: verdana, arial, sans-serif;
+	font-size: 10px;
+	border-spacing: 0px;
+	border: none;
+	padding: 1px;
+	width: 99%;
+}
+
+table.parameters .title {
+	font-weight: bold;
+}
+
+.status-of {
+	margin-right: 20px;
+}
+
+.image-load-synonyms {
+	cursor: pointer !important;
+	cursor: hand !important;
+	border: none !important;
+	margin-top: 3px;
+}
+
+.margin-occurrence-link {
+	margin-right: 5px;
+}
+
+.info-title {
+	color: #1C3C78;
+	font-weight: bold;
+	padding-bottom: 5px;
+	padding-top: 7px;
+}
+
+.info-query-description {
+	color: black;
+	padding-bottom: 3px;
+}
+
+.info-query-text {
+	color: gray;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+.info-padding {
+	padding-bottom: 5px;
+}
+
+/* gxt 2 css interference*/ 
+/* ul {
+	list-style: square !important; 
+	padding-left:10px !important; 
+	margin-left: 10px !important;
+} */

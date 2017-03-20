@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>messagesServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.messages.server.MessagesServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- mailWisdgetServlet servlet -->
+	<servlet>
+		<servlet-name>mailWisdgetServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsmail.server.WsMailServiceImpl</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsexplorer.server.WorkspaceExplorerServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- DO NOT REMOVE IT NEEDS TO DOWNOLAD ATTACHMENTS -->
+	<servlet>
+		<servlet-name>DownloadAttachService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.workspace.server.DownloadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>mailWisdgetServlet</servlet-name>
+		<url-pattern>/messages/mailWisdgetServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- DownloadService servlet -->
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>DownloadAttachService</servlet-name> -->
+<!-- 		<servlet-class>org.gcube.portlets.user.messages.server.DownloadServlet</servlet-class> -->
+<!-- 	</servlet> -->
+
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>DownloadAttachService</servlet-name> -->
+<!-- 		<url-pattern>/messages/DownloadAttachService</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+
+	<servlet-mapping>
+		<servlet-name>messagesServlet</servlet-name>
+		<url-pattern>/messages/message</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<url-pattern>/messages/WorkspaceExplorerService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DownloadAttachService</servlet-name>
+		<url-pattern>/messages/DownloadAttachService</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>Messages.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

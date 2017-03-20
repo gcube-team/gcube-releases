@@ -1,0 +1,15 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="gr.uoa.di.madgik.visualisations.VisualisationsLibrary"/>
+	<stylesheet src="GraphEditor.css"/>
+	<script src="code/grapheditor/app.js"></script>
+	<stylesheet src='code/grapheditor/app.css' />
+	
+	<!--
+	<entry-point class="gr.uoa.di.madgik.visualisations.GraphEditor.client.GraphEditor" />
+	-->
+	
+	<source path="client" />
+  	<public path="public" />
+	
+</module>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>Open Search Library</Description>
+		<Class>Search</Class>
+		<Name>opensearchlibrary</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Name>opensearchlibrary</Name>
+				<Version>1.7.0-SNAPSHOT</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.opensearch</groupId>
+					<artifactId>opensearchlibrary</artifactId>
+					<version>1.7.0-SNAPSHOT</version>
+				</MavenCoordinates>
+				<Files>
+					<File>opensearchlibrary-1.7.0-SNAPSHOT.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

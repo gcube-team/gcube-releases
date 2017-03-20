@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="GRSFManageWidget">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.datacatalogue.grsf_manage_widget.GRSFManageWidget' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/GRSFManageWidget/greet" class="org.gcube.datacatalogue.grsf_manage_widget.server.GreetingServiceImpl" />
+
+</module>

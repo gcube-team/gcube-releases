@@ -1,0 +1,312 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def borderColor value('theme.tabs.borderColor');
+@def cornerRadius value('theme.tabs.borderRadius', 'px');
+@def lastStopColor value('theme.tabs.lastStopColor');
+@def headerGradient value('theme.tabs.gradient');
+@def inactiveHeaderGradient value('theme.tabs.inactiveGradient');
+@def tabStripGradient value('theme.tabs.tabStripGradient');
+
+@def headingTextColor value('theme.tabs.headingText.color');
+@def headingTextSize value('theme.tabs.headingText.size');
+@def headingTextWeight value('theme.tabs.headingText.weight');
+@def headingTextFont value('theme.tabs.headingText.family');
+
+@def activeHeadingTextColor value('theme.tabs.activeHeadingText.color');
+@def activeHeadingTextSize value('theme.tabs.activeHeadingText.size');
+@def activeHeadingTextWeight value('theme.tabs.activeHeadingText.weight');
+@def activeHeadingTextFont value('theme.tabs.activeHeadingText.family');
+
+@def tabLeftPadding value('theme.tabs.padding.left', 'px');
+@def tabLeftPaddingIcon value('theme.tabs.paddingWithIcon.left', 'px');/*extra space for icon, default to 16px for icon*/
+@def tabRightPadding value('theme.tabs.padding.right', 'px');
+@def tabRightPaddingClosable value('theme.tabs.paddingWithClosable.right', 'px');/*extra space for close icon*/
+
+@def tabIconLeftOffset value('theme.tabs.iconLeftOffset', 'px');
+@def tabIconTopOffset value('theme.tabs.iconTopOffset', 'px');
+
+@def scrollerWidth value('theme.tabs.scrollerWidth', 'px');
+
+@def tabHeight value('theme.tabs.tabHeight', 'px');
+@def tabSpacing value('theme.tabs.tabSpacing', 'px');
+
+@def tabItemBorderLeft value('theme.tabs.tabItemBorderLeft');
+@def tabItemBorderTop value('theme.tabs.tabItemBorderTop');
+@def tabItemBorderRight value('theme.tabs.tabItemBorderRight');
+
+@def tabStripPaddingTop value('theme.tabs.tabStripPadding.top','px');
+@def tabBarBorder value('theme.tabs.tabBarBorder');
+@def tabBarBottomHeight value('theme.tabs.tabBarBottomHeight', 'px');
+@def tabStripBottomBorder value('theme.tabs.tabStripBottomBorder');
+@def tabBodyBorder value('theme.tabs.tabBodyBorder');
+@def tabTextPadding value('theme.tabs.tabTextPadding.toString');
+
+.tab {
+  overflow: hidden;
+  outline: none;
+}
+
+.tabBar {
+  background-color: lastStopColor;
+  border: tabBarBorder;
+  overflow: hidden;
+  padding-top: tabBarBottomHeight;
+}
+
+.tabStripWrap {
+  background: -webkit-linear-gradient(bottom, tabStripGradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(bottom, tabStripGradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(bottom, tabStripGradient); /* IE10+ */
+  background: linear-gradient(to top, tabStripGradient); /* W3C */
+
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: tabStripPaddingTop;
+}
+
+.tabStrip {
+  display: block;
+  /* widths great than this in ie8 causes north / south resize handles to have white background when tab panel put into window */
+  width: 65520px;
+
+  background: repeat-x top;
+  border-top: tabStripBottomBorder;
+  border-bottom: 0 none;
+}
+
+li.tabItem {
+  float: left;
+  position: relative;
+  margin-right: tabSpacing;
+  height: tabHeight;
+  cursor: pointer;
+}
+
+.tabStripActive.tabItem {
+  cursor: default;
+}
+
+.tabStrip li.tabEdge {
+  float: left;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 none !important;
+  font-size: 1px !important;
+  line-height: 1px !important;
+  overflow: hidden;
+  background: transparent !important;
+  width: 1px;
+}
+
+.tabStrip a, .tabStrip span, .tabStrip em {
+  display: block;
+}
+
+.tabStrip a {
+  text-decoration: none !important;
+  cursor: pointer;
+  outline: none;
+}
+
+.tabStripInner {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tabStripText {
+  font: normal headingTextWeight headingTextSize headingTextFont;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: tabTextPadding;
+}
+
+.tabWithIcon .tabStripText {
+  padding-left: tabLeftPaddingIcon;
+  background-position: 0 3px;
+  background-repeat: no-repeat;
+}
+
+.tabStripActive, .tabStripActive a.tabRight {
+  cursor: default;
+}
+
+.tabStripActive span.tabStripText {
+  cursor: default;
+  margin-top: -1px;
+}
+
+@sprite .tabStrip .tabStripClosable a.tabStripClose {
+  gwt-image: "tabClose";
+}
+
+@sprite .tabStrip .tabStripClosable a.tabStripClose:hover {
+  gwt-image: "tabClose";
+}
+
+.tabBody {
+  overflow: hidden;
+}
+
+.tabStripActive .tabRight {
+  margin-top: -1px;
+}
+
+.tabStripActive span.tabStripText {
+  font: normal activeHeadingTextWeight activeHeadingTextSize activeHeadingTextFont;
+  color: activeHeadingTextColor;
+}
+
+.tabRight {
+  padding: 0;
+}
+
+.tabStrip .tabStripClose {
+  display: none;
+}
+
+.tabStripClosable .tabStripClose {
+  background-repeat: no-repeat;
+  display: block;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.tabStripClosable .tabStripClose {
+  opacity: 0.6;
+}
+
+.tabStripActive .tabStripClose {
+  opacity: .8;
+}
+
+.tabStripClosable .tabStripClose:hover {
+  opacity: 1;
+}
+
+.tabBody {
+  border: tabBodyBorder;
+  border-bottom: 0 none;
+}
+
+.tabScrollerLeft, .tabScrollerRight {
+  margin-top: 1px;
+}
+
+.tabScrolling .tabStripWrap {
+  margin-left: scrollerWidth;
+  margin-right: scrollerWidth;
+}
+
+.tabScrolling {
+  position: relative;
+}
+
+.tabImage {
+  position: absolute;
+
+  top: tabIconTopOffset;
+  left: tabIconLeftOffset;
+}
+
+.tabStripOver {
+}
+
+
+
+.tabItem {
+  color: headingTextColor;
+}
+
+.tabStripActive.tabItem .tabStripText {
+  font: normal activeHeadingTextWeight activeHeadingTextSize activeHeadingTextFont;
+}
+
+.tabStripActive.tabItem {
+  background: -webkit-linear-gradient(bottom, headerGradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(bottom, headerGradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(bottom, headerGradient); /* IE10+ */
+  background: linear-gradient(to top, headerGradient); /* W3C */
+
+  border-top: 1px solid lastStopColor;
+}
+
+.tabItem {
+  border-bottom-left-radius: cornerRadius;
+  border-bottom-right-radius: cornerRadius;
+  border-bottom: tabItemBorderTop;
+  border-left: tabItemBorderLeft;
+  border-right: tabItemBorderRight;
+
+  padding-left: tabLeftPadding;
+  padding-right: tabRightPadding;
+
+  background: -webkit-linear-gradient(bottom, inactiveHeaderGradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(bottom, inactiveHeaderGradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(bottom, inactiveHeaderGradient); /* IE10+ */
+  background: linear-gradient(to top, inactiveHeaderGradient); /* W3C */
+}
+.tabItem.tabStripClosable {
+  padding-right: tabRightPaddingClosable;
+}
+
+@sprite .tabScrollerLeft {
+  gwt-image: "scrollerLeft";
+  width: scrollerWidth;
+  background: -webkit-linear-gradient(bottom, tabStripGradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(bottom, tabStripGradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(bottom, tabStripGradient); /* IE10+ */
+  background: linear-gradient(to top, tabStripGradient); /* W3C */
+  background-position: center;
+
+  margin-top: 1px;
+  border-right: 1px solid borderColor;
+  border-top: 1px solid borderColor;
+  border-bottom: 1px solid borderColor;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.tabScrollerLeftOver {
+}
+
+
+@sprite .tabScrollerRight {
+  gwt-image: "scrollerRight";
+  width: scrollerWidth;
+  background: -webkit-linear-gradient(bottom, tabStripGradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(bottom, tabStripGradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(bottom, tabStripGradient); /* IE10+ */
+  background: linear-gradient(to top, tabStripGradient); /* W3C */
+  background-position: center;
+
+  margin-top: 1px;
+  border-left: 1px solid borderColor;
+  border-top: 1px solid borderColor;
+  border-bottom: 1px solid borderColor;
+
+  right: 0;
+  top: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+.tabScrollerLeftDisabled, .tabScrollerRightDisabled {
+  cursor: default;
+  opacity: .5;
+}
+.tabScrollerRightOver {
+}

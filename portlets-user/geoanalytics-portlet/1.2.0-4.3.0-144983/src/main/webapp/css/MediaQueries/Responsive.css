@@ -1,0 +1,378 @@
+/***************************** Desktop ***********************************/
+@media (min-width: 768px) and (max-width: 1050px) {
+	div#DecisionSupportSystem div#searchBarRadioButtonsContainer {
+		width: 100%;
+		display: block;
+		margin-top: 5px;
+	}
+
+	div#DecisionSupportSystem #searchBarCenter{
+		padding-bottom:0px !important;
+		padding-top:5px !important;
+	}
+	#DecisionSupportSystem #DSSSearchbar{
+		margin:0px !important;
+	}
+	div#DecisionSupportSystem div#searchbarInputContainer {
+		width: 106%;
+		display: block;
+	}
+}
+/***************************** layers section ****************************/
+/*************************** functions section ***************************/
+@media (min-width: 1113px) and (max-width: 1115px) {
+	div#DecisionSupportSystem div.exportButtonContainer button.exportButton {
+		white-space: nowrap;
+	}
+}
+ @media (min-width: 1350px) and (max-width: 1507px) {
+	div#DecisionSupportSystem div#titleAndIcon{
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+#DecisionSupportSystem #functionsSelectionResponsivePane {
+	/* padding: 0 1.8em; */
+	position: relative;
+}
+#DecisionSupportSystem .slick-arrow {
+	background: rgb(2,113,190);
+    background-color: rgb(2,113,190);
+    height: 13em;
+}
+#DecisionSupportSystem .slick-slide.slick-active{
+	background: #fff;
+	background-color: #fff;
+	color: #fff;
+	height: 10em;
+	text-align: center;
+	/* padding: 10px; */
+	font-size: 1em;
+}
+#DecisionSupportSystem .slick-slide.slick-active .funcitonsSlick{
+	background: red;
+	background-color: red;
+	height: 100%;
+}
+#DecisionSupportSystem .slick-slide{
+	font-size: 0px;
+}
+/* #DecisionSupportSystem .slick-slide.slick-active:not(last-of-type){
+	margin-right: 0.5em;
+} */
+#DecisionSupportSystem .slick-slide{
+	margin-right: 0.5em;
+}
+/*************************** searchbar section ***************************/
+@media (min-width: 1350px) and (max-width: 1582px) {
+	div#DecisionSupportSystem div#searchBarCenter {
+		position: relative;
+	}
+	div#DecisionSupportSystem div#searchBarRadioButtonsContainer {
+		width: 100%;
+		display: block;
+		margin-top: 5px;
+	}
+
+	div#DecisionSupportSystem #searchBarCenter{
+		padding-bottom:0px !important;
+		padding-top:5px !important;
+	}
+	div#DecisionSupportSystem div#searchbarInputContainer {
+		width: 106%;
+		display: block;
+	}
+	canvas{
+		height: 87.8% !important;
+	}
+	div#DecisionSupportSystem #mapContainer {
+		height:820px;
+	}
+	div#DecisionSupportSystem #map {
+		width: 60%;
+		position: relative;
+		margin-left: 7px;
+		float: left;
+	}
+	div#DecisionSupportSystem div#searchBarRadioButtonsContainer {
+		width: 100%;
+		display: block;
+		margin-top: 10px;
+	}
+	div#DecisionSupportSystem div#searchbarInputContainer {
+		width: 106%;
+		display: block;
+	}
+	#DSSSearchbar{
+		margin:0px !important;
+	}
+	div#DecisionSupportSystem div#availableLayersContainer {
+		padding-top: 0px;
+		padding-bottom: 10px;
+	}
+	div#DecisionSupportSystem div#availableLayersIcon {
+		width: 100%;
+		margin-left: 35%;
+	}
+	div#DecisionSupportSystem .functionsAccordionTitle{
+		height: 15px;
+		padding-top: 35px;
+		text-align: center;
+	}
+}
+/***************************** Tablet ************************************/
+@media (min-width: 1349px) {
+	div#DecisionSupportSystem .hidden-desktop-large {
+		display: none !important;
+	}
+}
+@media (max-width: 1349px) and (min-width: 768px) {
+	/* hide some stuff */
+	div#DecisionSupportSystem div#collapsibleMenuLeft,
+	div#DecisionSupportSystem div#collapsibleMenuRight {
+		display:none !important;
+	}
+	/***************** map *****************/
+	div#DecisionSupportSystem #map {
+		width: 100%;
+		height: 100%;
+		position : relative;
+		margin: 0px;
+	}
+	/********** toolbar responsive *********/
+	#DecisionSupportSystem #toolbarNotVisibleInDesktops.hiddenPane {
+		height: 100px;
+	}
+	#DecisionSupportSystem #toolbarMenuNotVisibleInDesktops {
+		height: 95px;
+	}
+	#DecisionSupportSystem .toolbarMenuNotVisibleInDesktopsBtns {
+		background: rgb(2,113,190);
+		background-color: rgb(2,113,190);
+		height: 100%;
+	}
+	#DecisionSupportSystem .toolbarMenuNotVisibleInDesktopsBtns:not(#settingsResponsive) {
+		display: inline-block !important;
+		width: 100%;
+	}
+	#DecisionSupportSystem #settingsResponsive {
+		width: 17%;
+		display: inline-block !important;
+		color: #fff;
+		float: right;
+	}
+	#DecisionSupportSystem #settingsResponsive > div {
+		margin-top: 25px;
+	}
+	#DecisionSupportSystem #layersIconPlaceHolder {
+		background-image: url("../../img/layers.png");
+		background-size: 29px 30px;
+		background-repeat: no-repeat;
+		margin-left: 15px;
+		width: 29px;
+	}
+	#DecisionSupportSystem #layersResponsive > div {
+		margin-top: 25px;
+		color: #fff;
+		/* white-space: nowrap; */
+		/* overflow: visible; */
+		/* text-overflow: ellipsis; */
+	}
+	#DecisionSupportSystem #layersButtonCaret{
+		text-align:right;
+	}
+	#DecisionSupportSystem .toolbarMenuNotVisibleInDesktopsBtns .closeResponsivePane{
+		background-image: url("../../img/x-close.png");
+		background-size: 15px 15px;
+		background-repeat: no-repeat;
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		right: .5em;
+		top: .5em;
+		float:right;
+		margin-top: 0px !important;
+	}
+	#DecisionSupportSystem .toolbarMenuNotVisibleInDesktopsBtns .closeResponsivePane:hover{
+		background-color: rgb(76, 181,210);
+	}
+	#DecisionSupportSystem #layersButton{
+		margin-left: 20px;
+	}
+	#DecisionSupportSystem #functionResponsiveSubHeader{
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	#DecisionSupportSystem #layersButtonCaret {
+		margin-left: 10px;
+	}
+	#DecisionSupportSystem #functionsButtonCaret {
+		/* padding-top: 5px; */
+	}
+	#DecisionSupportSystem i.fa-caret-down{
+		font-size: 20px;
+	}
+	#DecisionSupportSystem #functionsResponsive > div {
+		margin-top: 25px;
+	}
+	#DecisionSupportSystem #functionsResponsive > div:last-of-type {
+		/* margin-top: -10px; */
+	}
+	#DecisionSupportSystem #functionsResponsive {
+		color: #fff;
+	}
+	#DecisionSupportSystem div#gearContainerResponsive {
+		display: inline-block;
+		background-image: url("../../img/Settings-gear.png");
+		background-size: 17px 17px;
+		background-repeat: no-repeat;
+	}
+	#DecisionSupportSystem #layersResponsive:not(.triangleAdded):hover,
+	#DecisionSupportSystem #functionsResponsive:not(.triangleAdded):hover,
+	#DecisionSupportSystem #settingsResponsive:not(.triangleAdded):hover {
+		
+		background: rgb(76, 181,210);
+    	background-color: rgb(76, 181,210);
+	}
+	
+	#DecisionSupportSystem div#toolbarPaneNotVisibleInDesktops {
+		height: 300px;
+		background: #fff;
+		background-color: #fff;
+		padding: 3px 0px 0px 0px;
+	}
+	#DecisionSupportSystem div#selectedLayersResponsivePane,
+	#DecisionSupportSystem div#layersSelectorResponsivePane {
+		height: 100%;
+		background: #fff;
+		background-color: #fff;
+	}
+	#DecisionSupportSystem #responsivePanes {
+		padding: 10px 0px 0px 0px;
+	}
+}
+
+	#DecisionSupportSystem .triangleAdded {
+		background: rgb(1,154,211);
+		background-color: rgb(1,154,211);
+		position: relative !important;
+	}
+
+	#DecisionSupportSystem #layersResponsive.triangleAdded:after,
+	#DecisionSupportSystem #layersResponsive.triangleAdded:before {
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 20px solid rgb(1,154,211);
+		bottom: -15px;
+		left: 50%;
+		position: absolute;
+		content: '';
+	}
+	#DecisionSupportSystem #functionsResponsive.triangleAdded:after,
+	#DecisionSupportSystem #functionsResponsive.triangleAdded:before {
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 20px solid rgb(1,154,211);
+		bottom: -15px;
+		left: 50%;
+		position: absolute;
+		content: '';
+	}
+@media (min-width:816px) and (max-width:995px){
+	#DecisionSupportSystem #functionsButtonCaret {
+		width: 92px;
+	}
+}
+@media (min-width:996px) and (max-width:1046px){
+	#DecisionSupportSystem #functionsButtonCaret {
+		margin: 0px;
+		width: 114px;
+	}
+}
+@media (min-width: 1080px) and (max-width: 1251px){
+	#DecisionSupportSystem #layersButtonCaret {
+		white-space: nowrap;
+	}
+}
+@media (min-width: 1023px) and (max-width: 1079px){
+	#DecisionSupportSystem #layersButtonCaret {
+		white-space: normal;
+		width: 80px;
+	}
+
+
+}
+@media (min-width: 957px) and (max-width: 979px){
+	#DecisionSupportSystem #layersButtonCaret {
+		width: 80px;
+	}
+}
+/************************ toolbar hover ******************************/
+#DecisionSupportSystem #layersResponsive #layersButton:hover,
+#DecisionSupportSystem #layersResponsive #layersButtonCaret:hover {
+/* 	background: rgb(1,154,211);
+    background-color: rgb(1,154,211);
+    cursor: pointer; */
+}
+#DecisionSupportSystem #layersResponsive.triangleAdded #layersButton:hover,
+#DecisionSupportSystem #layersResponsive.triangleAdded #layersButtonCaret:hover {
+	/* background: rgb(76, 181,210); */
+	/* background-color: rgb(76, 181,210); */
+	cursor: pointer;
+}
+#DecisionSupportSystem #layersResponsive.triangleAdded #layersButton.respTabClicked,
+#DecisionSupportSystem #layersResponsive.triangleAdded #layersButtonCaret.respTabClicked {
+	background: rgb(2,113,190);
+    background-color: rgb(2,113,190);
+    cursor: pointer;
+}
+#DecisionSupportSystem #functionsResponsive #functionResponsiveSection:hover,
+#DecisionSupportSystem #functionsResponsive #functionsButtonCaret:hover {
+	background: rgb(1,154,211);
+    background-color: rgb(1,154,211);
+    cursor: pointer;
+}
+#DecisionSupportSystem #functionsResponsive.triangleAdded #functionResponsiveSection:hover,
+#DecisionSupportSystem #functionsResponsive.triangleAdded #functionsButtonCaret:hover {
+	background: rgb(76, 181,210);
+    background-color: rgb(76, 181,210);
+    cursor: pointer;
+}
+
+#DecisionSupportSystem #functionsResponsive.triangleAdded #functionResponsiveSection.respTabClicked,
+#DecisionSupportSystem #functionsResponsive.triangleAdded #functionsButtonCaret.respTabClicked {
+	background: rgb(2,113,190);
+    background-color: rgb(2,113,190);
+    cursor: pointer;
+}
+#DecisionSupportSystem #tagsInputContainer {
+	margin-top: 10px;
+}
+/****************************** Phone ************************************/
+@media (max-width: 767px){
+	#DecisionSupportSystem #map {
+		position: static !important;
+		width: 100% !important;
+		margin-left: 0px !important;
+	}
+	#DecisionSupportSystem #coord-info-con > div {
+		width: 25% !important;
+		display: inline-block;
+	}
+	div#DecisionSupportSystem div#searchBarCenter{
+		position: static;
+	}
+	#DecisionSupportSystem #searchBarCenterElementsContainer {
+		white-space:normal;
+	}
+	#DecisionSupportSystem #searchBarRadioButtonsContainer > div {
+		width: 49.5%;
+		margin-top:15px;
+	}
+	div#DecisionSupportSystem input#DSSSearchbar {
+		margin-left:0px;
+		width: 91%;
+	}
+}
+//fix padding for #searchBarCenter on phone view

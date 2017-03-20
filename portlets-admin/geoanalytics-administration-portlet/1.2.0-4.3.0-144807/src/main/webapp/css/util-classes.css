@@ -1,0 +1,26 @@
+.aui .btn.portlet-button{
+	color: white;	
+	border: none;
+	text-shadow: none;
+	margin: 0 5px;
+	background: #0271be;
+	text-shadow: none;
+	padding:6px 12px;
+	width: 120px;
+	height: 35px;
+}
+
+.aui .btn.portlet-button:hover:enabled{
+    background: #4cb5d2;   
+    border: none;
+    color: white;
+    text-shadow: none;    
+}
+
+.aui .btn.portlet-button:focus {
+    background: #019ad3;
+    border: none;
+    color: white;
+    outline:0;
+    text-shadow: none;    
+}

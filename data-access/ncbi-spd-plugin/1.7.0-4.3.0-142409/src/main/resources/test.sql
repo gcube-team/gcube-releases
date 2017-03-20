@@ -1,0 +1,11 @@
+CREATE DATABASE tmp_ncbi;
+GRANT ALL PRIVILEGES ON DATABASE tmp_ncbi to USER;
+create table nodes(tax_id integer NOT NULL PRIMARY KEY,parent_tax_id integer NOT NULL references nodes(tax_id) ON DELETE CASCADE, rank varchar(128),embl_code varchar(64),division_id integer,inherited_div_flag boolean,genetic_code_id integer, inherited_GC_flag boolean,mitochondrial_genetic_code_id integer,inherited_MGC_flag boolean,GenBank_hidden_flag boolean,hidden_subtree_root_flag boolean,comments varchar);
+create table delnodes(tax_id integer);
+create table merged(old_tax_id integer,new_tax_id integer);
+create table citations(cit_id integer NOT NULL PRIMARY KEY,cit_key varchar(255),pubmed_id integer default 0,medline_id integer default 0,url text,text text,taxid_list varchar);
+create table names(tax_id integer NOT NULL references nodes(tax_id) ON DELETE CASCADE,name_txt text,unique_name varchar(255),name_class varchar(128));
+create table division(division_id integer NOT NULL PRIMARY KEY,division_code varchar(4),division_name varchar(64),comments varchar);
+create table gencode(genetic_code_id integer NOT NULL PRIMARY KEY,abbreviation varchar(64),name text,cde text,starts varchar(255));
+create table citation(tax_id integer NOT NULL references nodes(tax_id), cit_id integer NOT NULL references citations(cit_id));
+create table updates (id serial NOT NULL PRIMARY KEY, date date);

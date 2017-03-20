@@ -1,0 +1,10 @@
+#map:focus {
+	outline: #4A74A8 solid 0.15em;
+}
+
+#map {
+	height: 500px;
+	width: 100%;
+	background-color: #b5d0d0;
+	display:none;
+}

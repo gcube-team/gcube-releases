@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='gcubeloggedin'>
+	
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	
+<!-- 	<set-property name="user.agent" value="gecko1_8,safari" /> -->
+		
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.user.gcubeloggedin.client.GCubeLoggedin' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

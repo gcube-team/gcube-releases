@@ -1,0 +1,5 @@
+<service-map scope='/CNR.it' version="${project.version}">
+	<services>
+		<service name='XQueryAccessService' endpoint='http://node1-si.isti.cnr.it:8080/wsrf/services/gcube/informationsystem/collector/XQueryAccess' />
+	</services>
+</service-map>

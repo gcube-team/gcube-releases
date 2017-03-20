@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>vremodeler</artifactId>
+    <groupId>org.gcube.resourcemanagement</groupId>
+    <version>2.0.6-4.3.0-144804</version>
+    <relativePath>..</relativePath>
+  </parent>
+  <artifactId>vremodeler-stubs</artifactId>
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+  	
+  	<dependencies>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>gcf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.2.2</version>
+		</dependency>	
+	</dependencies>
+  	
+  	
+  	<build>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>copy-config</id>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<phase>process-resources</phase>
+						<configuration>
+							<outputDirectory>${project.build.outputDirectory}/META-INF</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${configDirectory}</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.gcube.tools</groupId>
+				<artifactId>maven-service-plugin</artifactId>
+				<configuration>
+					<wsdls>
+						<wsdl>
+							<name>ModelerFactory</name>
+							<namespace>${namespace}</namespace>
+							<additionalMappings>-Nhttp://gcube-system.org/namespaces/vremanagement/vremodeler/types=org.gcube.vremanagement.vremodeler.stubs</additionalMappings>
+						</wsdl>
+						<wsdl>
+							<name>ModelerService</name>
+							<namespace>${namespace}</namespace>
+							<additionalMappings>-Nhttp://gcube-system.org/namespaces/vremanagement/vremodeler/types=org.gcube.vremanagement.vremodeler.stubs</additionalMappings>
+						</wsdl>
+					</wsdls>
+				</configuration>
+				<executions>
+					<execution>
+						<id>generate-stubs</id>
+						<goals>
+							<goal>stub-gen</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${basedir}/target/generated-sources/stubs</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+
+	</build>
+  
+  
+</project>

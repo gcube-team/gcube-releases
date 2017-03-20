@@ -1,0 +1,8 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+	<stylesheet src="HorizontalBarsPlato.css"/>
+	<inherits name="gr.uoa.di.madgik.visualisations.VisualisationsLibrary"/>
+	
+	<entry-point class="gr.uoa.di.madgik.visualisations.HorizontalBarsPlato.client.HorizontalBarsPlato" />
+	
+</module>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="0.4.x">
+  <ID>0e001a70-b5da-11df-bb21-c3ebb0cacd65</ID>
+  <Type>GenericResource</Type>
+  <Scopes>
+    <Scope>/gcube/devsec</Scope>
+  </Scopes>
+  <Profile>
+    <SecondaryType>OpenSearchResource</SecondaryType>
+    <Name>OpenSearchResource_GENESI-DR_Dataset_L3_SHIP_SPECTROPHOTOMETER</Name>
+    <Description>Generic resource containing info for the GENESI-DR L3_SHIP_SPECTROPHOTOMETER external repository</Description>
+    <Body>
+      <OpenSearchResource>
+        <name>GENESI-DR Dataset: L3_SHIP_SPECTROPHOTOMETER</name>
+        <descriptionDocumentURI>http://genesi.nilu.no/genesi/calval/l3_ship_spectrophotometer/description/</descriptionDocumentURI>
+        <brokeredResults>false</brokeredResults>
+        <transformation>
+          <MIMEType>application/atom+xml</MIMEType>
+          <recordSplitXPath>*[local-name()='feed']/*[local-name()='entry']</recordSplitXPath>
+          <recordIdXPath>//*[local-name()='entry']/*[local-name()='id']</recordIdXPath>
+          <XSLTLink>OpenSearchXSLT_identity</XSLTLink>
+        </transformation>
+      </OpenSearchResource>
+    </Body>
+  </Profile>
+</Resource>

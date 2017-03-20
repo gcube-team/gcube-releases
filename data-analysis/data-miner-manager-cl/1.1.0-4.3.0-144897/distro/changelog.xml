@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data.analysis.data-miner-manager-cl.1-1-0">
+		<Change>Updated Monitor interface</Change>
+		<Change>Added encoded parameters in equivalent http request [ticket
+			#7167]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data.analysis.data-miner-manager-cl.1-0-0">
+		<Change>first release</Change>
+	</Changeset>
+</ReleaseNotes>

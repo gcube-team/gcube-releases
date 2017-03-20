@@ -1,0 +1,18 @@
+<project>
+	<target name="clean">
+	        <delete dir="builds"/>
+	</target>
+    <target name="uberjar" description="Create one big jarfile.">
+	    <jar destfile="builds/deps.jar" basedir="${basedir}">
+    	    <zipgroupfileset dir="${basedir}" includes="*.jar" excludes="deps.jar"/>
+    	</jar>
+    	<sleep seconds="1" />
+    	<jar jarfile="builds/uberjar.jar" basedir="${basedir}">
+    	        <zipfileset src="builds/deps.jar" excludes="META-INF/*.SF" />
+    	        <manifest>
+    	            <attribute name="Main-Class" value="com.rapidminer.RapidMiner" />
+    	        </manifest>
+    	    </jar>
+	</target>
+</project>
+

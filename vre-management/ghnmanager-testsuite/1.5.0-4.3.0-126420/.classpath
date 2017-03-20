@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SAMPLESERVICEDEPS"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/GCORELIBS"/>
+	<classpathentry kind="lib" path="/Dependencies/GHNManager/org.gcube.common.vremanagement.ghnmanager.stubs.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/VirtualPlatform.TRUNK"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/GCORESECURECLIENTLIBS"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/DISTRO.RESOURCES"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/gcf.TRUNK"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

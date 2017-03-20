@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.geoanalytics.geoanalytics-import-1.0.0" date="2016-09-30">
+		<Change>Initial release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.geoanalytics.geoanalytics-import-1.1.0" date="2017-03-03">
+		<Change>Add loggers for errors, warnings, debug and trace reasons</Change>
+		<Change>Changes in order to reflect the changes in database</Change>
+	</Changeset>
+</ReleaseNotes>
+

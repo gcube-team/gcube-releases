@@ -1,0 +1,59 @@
+.aui #layerInfoModal input[type="text"]{
+	width: 50%;
+}
+
+.aui #layerInfoModal textarea[type="text"]{
+	width: 50%;
+}
+
+.aui #layerInfoModal label.modalLayerNameError{
+	color: #b94a48;
+	font-size: 12px;
+	display: none;
+}
+
+.aui label#urlInputError{
+	color: #b94a48;
+	font-size: 12px;
+	display: none;
+	padding-left: 4px
+}
+
+
+.aui #contentOfImporter #wfs-cancel, .aui #contentOfImporter #wfs-nextImport, .aui .adminContainer #fetchLayersWfs {
+    text-shadow: 0px 0px 2px rgba(151, 151, 151, 1);
+    color: white;
+    margin: 0 0px 0 60px;
+    outline: 0;
+    background: #0271be;
+    border: none;
+    height: 35px;
+    width: 120px;
+    display: inline-block;
+}
+
+.aui .adminContainer #fetchLayersWfs.idleMe {
+    opacity: 0.42;
+    cursor: not-allowed;
+}
+
+.aui #contentOfImporter #wfs-cancel:hover, .aui #contentOfImporter #wfs-nextImport:hover, 
+	.aui #contentOfImporter #cancelWfsLayers:hover,
+ 	.aui #contentOfImporter #importWfsLayers:hover,
+ 	.aui .adminContainer #fetchLayersWfs:hover {
+    background: #4cb5d2;
+}
+
+.aui #contentOfImporter #cancelWfsLayers, .aui #contentOfImporter #importWfsLayers{
+	
+	text-shadow: 0px 0px 2px rgba(151, 151, 151, 1);
+    color: white;
+    margin: 0 0px 0 15px;
+    outline: 0;
+    background: #0271be;
+    border: none;
+    height: 30px;
+    width: 100px;
+    display: inline-block;
+	
+}

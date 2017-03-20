@@ -1,0 +1,13 @@
+<WSResource>
+        {$outer//Document/ID}
+        {$outer//Document/Source}
+        {$outer//Document/SourceKey}
+        <ServiceClass>{$outer//Document/Data/child::*[local-name()='ServiceClass']/text()}</ServiceClass>
+        <ServiceName>{$outer//Document/Data/child::*[local-name()='ServiceName']/text()}</ServiceName>
+        <SubType>{$outer//Document/Data/child::*[local-name()='ServiceClass']/text()}</SubType>
+        {$outer//Document/TerminationTimeHuman}
+        {$outer//Document/LastUpdateHuman}
+        <RI>{$outer//Document/Data/child::*[local-name()='RI']/text()}</RI>
+        <Type>WSResource</Type>
+        <scopes>{$scopes}</scopes>
+</WSResource>

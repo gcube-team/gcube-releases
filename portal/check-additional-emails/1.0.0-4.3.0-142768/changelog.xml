@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.additionalemailaddresses.1-0-0" date="2016-08-24">
+		<Change>First release of the check additional email addresses that is a dependency of all social login hooks</Change>
+	</Changeset>
+</ReleaseNotes>

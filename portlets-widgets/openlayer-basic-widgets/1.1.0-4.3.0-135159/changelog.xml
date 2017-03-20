@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.widgets.openlayer-basic-widgets.1-1-0"
+		date="2016-12-01">
+		<Change>Updated to support EPSG 4326</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.openlayer-basic-widgets.1-0-0"
+		date="2016-10-01">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

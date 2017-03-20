@@ -1,0 +1,15 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portal.ldap-export-servlet.1-2-0"
+		date="2016-09-12">
+		<Change>Feature #4999: LDAP Export script to export SSH public key</Change>
+		<Change>Bug fix for #4916: LDAP Export fails if user surname is empty</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.ldap-export-servlet.1-1-0"
+		date="2016-07-04">
+		<Change>Updated to use Liferay 6.2 API</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.ldap-export-servlet.1-0-0"
+		date="2015-12-11">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

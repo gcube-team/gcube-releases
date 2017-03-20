@@ -1,0 +1,69 @@
+The gCube System - ${name}
+--------------------------------------------------
+ 
+${description}
+ 
+ 
+${gcube.description}
+ 
+${gcube.funding}
+ 
+ 
+Version
+--------------------------------------------------
+ 
+${version} (${buildDate})
+ 
+Please see the file named "changelog.xml" in this directory for the release notes.
+ 
+ 
+Authors
+--------------------------------------------------
+
+* Alex Antoniadis (a.antoniadis-AT-di.uoa.gr), University of Athens, 
+  Department of Informatics and Telecommunications.
+
+* Panagiotis Liakos (p.liakos-AT-di.uoa.gr), University of Athens, 
+  Department of Informatics and Telecommunications.
+
+
+Maintainers
+-----------
+ 
+* Panagiotis Liakos (p.liakos-AT-di.uoa.gr), University of Athens, 
+  Department of Informatics and Telecommunications. 
+ 
+Download information
+--------------------------------------------------
+ 
+Source code is available from SVN: 
+    ${scm.url}
+ 
+Binaries can be downloaded from the gCube website: 
+   ${gcube.website}
+ 
+ 
+Installation
+--------------------------------------------------
+ 
+Installation documentation is available on-line in the gCube Wiki:
+    ${gcube.wikiRoot} 
+ 
+Documentation 
+--------------------------------------------------
+ 
+Documentation is available on-line in the gCube Wiki:
+    ${gcube.wikiRoot}/Index_Management_Framework
+
+
+Support 
+--------------------------------------------------
+ 
+Bugs and support requests can be reported in the gCube issue tracking tool:
+    ${gcube.issueTracking}
+ 
+ 
+Licensing
+--------------------------------------------------
+ 
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.

@@ -1,0 +1,14 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="com.google.gwt.user.theme.standard.Standard"/>
+	<script src="libs/jquery/jquery-1.11.0.min.js"></script>
+	<script src="libs/raphael/raphael-min.js"></script>
+	<script src="libs/raphael/g.raphael-min.js"></script>
+	<script src="libs/raphael/g.bar-min.js"></script>
+	<script src="libs/raphael/g.dot-min.js"></script>
+	<script src="libs/raphael/g.line-min.js"></script>
+	<script src="libs/raphael/g.pie-min.js"></script>
+	<script src="libs/raphael/g.tooltip.js"></script>
+	
+  	<public path="public" />
+</module>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- 
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+          -->
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">org.postgresql.Driver</property>
+		<property name="connection.provider_class">
+  			org.hibernate.connection.C3P0ConnectionProvider
+		</property>			
+		<!--  <property name="connection.url">jdbc:postgresql://geoserver.d4science-ii.research-infrastructures.eu/testPortingGianpaolo</property>-->
+		<!--  <property name="connection.url">jdbc:postgresql://geoserver-dev.d4science-ii.research-infrastructures.eu/aquamapsorgdb</property> -->
+		<property name="connection.url">jdbc:postgresql://dlib29.isti.cnr.it/timeseries</property>
+		<property name="connection.username">lucio</property>
+		<property name="connection.password">d4science</property>
+		<!-- <property name="dialect"> org.hibernate.dialect.PostgresPlusDialect</property> -->
+		<!-- <property name="dialect">org.hibernatespatial.postgis.PostgisDialect</property> --> 
+		<property name="dialect">org.hibernatespatial.postgis.PostgisDialect</property>
+		<property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+		<property name="c3p0.timeout">7200</property>
+		<property name="c3p0.max_size">10</property> 
+		<property name="c3p0.max_statements">0</property> 
+		<property name="c3p0.min_size">1</property>
+		<property name="current_session_context_class">thread</property>
+		<property name="hibernate.show_sql">false</property>
+		
+	</session-factory>
+</hibernate-configuration>

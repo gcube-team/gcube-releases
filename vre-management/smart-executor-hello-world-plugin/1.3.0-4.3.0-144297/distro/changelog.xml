@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.vre-management.smart-executor-hello-world-plugin.1.3.0" date="${buildDate}">
+		<Change>Added code to use iteration number and uuid provided with smar-executor-api-1.5.0 (refs #6733)</Change>
+		<Change>Fixed  input conversion from int to long to support Reminiscence (refs #772)</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.smart-executor-hello-world-plugin.1.2.0" date="2016-09-29">
+		<Change>Cleaning Code</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.smart-executor-hello-world-plugin.1.1.1" date="2016-02-08">
+		<Change>Cleaning code</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.smart-executor-hello-world-plugin.1.1.0" date="2015-12-09">
+		<Change>Upgraded to new Plugin API</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.smart-executor-hello-world-plugin.1.0.0" date="2015-02-05">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

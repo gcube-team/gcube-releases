@@ -1,0 +1,15 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.execution.resourceregistry-configuration-index.1-0-3" date="2014-06-30">
+   		<Change>Changed default database to H2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.resourceregistry-configuration-index.1-0-2" date="2014-03-28">
+   		<Change>Remove FW and Geo entities. Added missing configuration property for the new datanucleus version</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.resourceregistry-configuration-index.1-0-1" date="2013-07-15">
+   		<Change>Changed bridging period to 30 minutes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.resourceregistry-configuration-index.1-0-0" date="2012-09-06">
+   		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>
+

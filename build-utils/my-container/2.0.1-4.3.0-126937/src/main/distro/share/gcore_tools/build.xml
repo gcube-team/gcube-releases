@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<project>
+
+	<!-- load non-standard tasks -->
+	<taskdef classpath="${java.class.path}" resource="ise/antelope/tasks/antlib.xml" />
+	
+	<property name="build.stubs" value="${container.dir}/share/gcore_tools/build-stubs.xml" />
+	<property name="build.packages" value="${container.dir}/share/gcore_tools/build-packages.xml" />
+	<property name="etics.build" value="false" />
+	
+	<target name="generateWsdl">
+		
+		<!-- this is where we flatten wsdls -->		
+		<property name="target.schema.dir" value="${target.dir}/schema" />
+		<property name="target.service.schema.dir" value="${target.schema.dir}/${gar.id}" />
+		
+		<!-- we copy system wsdl into schema target -->
+		<mkdir dir="${target.schema.dir}" />
+		<copy toDir="${target.schema.dir}">
+			<fileset dir="${container.dir}/share/schema">
+				<include name="wsrf/**/*" />
+				<include name="ws/**/*" />
+				<include name="gcube/**/**/**/*" />	
+			</fileset>
+		</copy>
+		
+		<!-- we copy service wsdl into service schema target -->
+		<mkdir dir="${target.service.schema.dir}" />
+		<copy toDir="${target.service.schema.dir}">
+			<fileset dir="${wsdl.dir}" />
+		</copy>
+			
+		<ant antfile="${build.stubs}" target="flatten">
+			<property name="source.flatten.dir" location="${target.service.schema.dir}" />
+			<property name="target.flatten.dir" location="${target.service.schema.dir}" />
+			<property name="wsdl.source" value="${wsdl}.wsdl" />
+			<property name="wsdl.target" value="${wsdl}_flattened.wsdl" />
+			<property name="wsdl.porttype" value="${wsdl}PortType" />
+		</ant>
+		
+		<ant antfile="${build.stubs}" target="generateBinding">
+			<property name="source.binding.dir" value="${target.service.schema.dir}" />
+			<property name="target.binding.dir" value="${target.service.schema.dir}" />
+			<property name="porttype.wsdl" value="${wsdl}_flattened.wsdl" />
+			<property name="binding.root" value="${wsdl}" />
+		</ant>
+		
+	</target>
+
+
+	<target name="generateGar">
+		
+		<!-- we create it, in case no wsdl has been pre-processed -->
+		<mkdir dir="${target.schema.dir}" />
+		<fileset dir="${target.schema.dir}" id="garschema" >
+			<include name="${gar.id}/**" />
+		</fileset>
+		<property name="garschema.id" value="garschema" />
+		
+		<fileset dir="${lib.dir}" id="garlibs" />
+		<property name="garjars.id" value="garlibs" />
+		
+		<!-- these are the configuration files that we place into gar -->
+		<fileset dir="${configuration.dir}" id="garconfig" />
+		<property name="garetc.id" value="garconfig" />
+		
+		<ant antfile="${build.packages}" target="makeGar">
+			<property name="garserverdeployment.file" value="${deploymentFile}" />
+			<property name="garserverdeployment_NOSEC.file" value="${deploymentNOSECFile}" />
+			<property name="garclientdeployment.file" value="${clientdeploymentFile}" />
+			<property name="garclientserverdeployment.file" value="${clientserverdeploymentFile}" />
+			<property name="garjndiconfigdeployment.file" value="${jndiFile}" />
+			<property name="gar.dest" value="${target.dir}/gar"/>
+			<reference refid="${garjars.id}" />
+			<reference refid="${garschema.id}" />
+			<reference refid="${garetc.id}" />
+		</ant>
+
+		
+	</target>
+
+	<target name="deployGar">
+		
+		<ant antfile="${build.packages}" target="deployGar">
+			<property name="deploy.dir" location="${container.dir}" />
+		</ant>
+	</target>
+
+	<target name="makeAndDeployGar" depends="generateGar,deployGar">
+		<delete dir="${target.dir}"/>
+		<delete dir="tmp"/>
+		<delete file="${gar.id}.gar"/>
+	</target>
+
+	<target name="undeployGar">
+		<ant antfile="${build.packages}" target="undeployGar">
+			<property name="deploy.dir" location="${container.dir}" />
+		</ant>
+	</target>
+</project>

@@ -1,0 +1,39 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.admin.gcubereleases.1-4-0"
+		date="2016-11-15">
+		<Change>Feature #3248: extend gcube-releases portlet with new github
+			info
+		</Change>
+		<Change>Bug #5751: gCube Releases Portlet does not generate Javadoc
+		</Change>
+		<Change>Feature #3851: gCube Releases: hide release notes when
+			searching
+		</Change>
+		<Change>Feature #5773: perform a hard update on Release
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.gcubereleases.1-3-0"
+		date="2016-06-29">
+		<Change>Porting to Liferay 6.2
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.gcubereleases.1-2-2"
+		date="2016-04-01">
+		<Change>#3114 Fixed wrong DTD for Liferay 6.0
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.gcubereleases.1-2-0"
+		date="2015-7-17">
+		<Change>#312 Request for usability change realized
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.gcubereleases.1-1-0"
+		date="2015-5-12">
+		<Change>Added release date #https://support.d4science.org/issues/66
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.gcubereleases.1-0-0"
+		date="2015-2-20">
+		<Change>first release</Change>
+	</Changeset>
+</ReleaseNotes>

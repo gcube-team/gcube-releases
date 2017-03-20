@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!-- Ant buildfile for WSDL replacement -->
+<project name="wsdlInsertion" basedir="." default="insertWSDL">
+	
+	<!--
+	<property name="wsdl.file" value="SoftwareRepository.wsdl"/>
+    <property name="file.profile" value="profile.xml"/>
+    <property name="file.profile.bck" value="${file.profile}.bck"/>
+	-->
+	
+	<target name="insertWSDL" depends="loadAndfilterWSDL,fullfillProfile">
+		<echo message="Inserting WSDL"/>
+	</target>
+	
+	
+	<target name="loadAndfilterWSDL">
+		<echo message="Load WSDL file: ${wsdl.file}"/>
+		<loadfile property="wsdl.cleaned" srcFile="${wsdl.file}" encoding="utf-8">
+			<filterchain>
+				<tokenfilter>
+					<!-- Eliminating <? xml directives -->
+					<replaceregex pattern="&lt;\?.*" flags="s"/>
+				</tokenfilter>
+			</filterchain>
+		</loadfile>
+		
+		<!-- echo message="WSDL CLeaned:\n ${wsdl.cleaned}"/ -->
+	</target>
+	
+	
+	<target name="fullfillProfile">
+		<echo message="Load ${file.profile} file"/>
+		
+		<copy file="${file.profile}" tofile="${file.profile.bck}"/>
+
+		<loadfile property="profile" srcFile="${file.profile}" encoding="utf-8">
+			<filterchain>
+				<!-- Trasforming <WSDL>....</WSDL> in <WSDL/> -->
+				<tokenfilter>
+					<replaceregex pattern="&lt;WSDL&gt;.*&lt;/WSDL&gt;" replace="&lt;WSDL/&gt;" flags="m"/>
+				</tokenfilter>
+				<!-- Inserting wsdl at the place of <WSDL/> -->
+				<tokenfilter>
+					<replaceregex pattern="&lt;WSDL/&gt;" replace="&lt;WSDL&gt;${wsdl.cleaned}&lt;/WSDL&gt;" flags="m"/>
+				</tokenfilter>
+			</filterchain>
+		</loadfile>
+		<echo message="${profile}" file="${file.profile}"/>
+	</target>
+	
+</project> 

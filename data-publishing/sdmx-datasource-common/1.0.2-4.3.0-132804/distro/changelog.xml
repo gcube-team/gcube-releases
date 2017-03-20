@@ -1,0 +1,5 @@
+<ReleaseNotes> 
+	<Changeset component="sdmx-datasource-common.1-0-2" date="2016-10-07"> 
+		<Change>Updated lombok dependency</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="jmsenvironmentproviderlibrary-1.0.1-4.3.0-126240" date="2013-01-17">
+		<Change>update of dependencies range</Change>
+		<Change>corrected wrong imports</Change>
+	</Changeset>
+	<Changeset component="madgiknotificationhandlinglibrary-1.0.0" date="2012-09-07">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

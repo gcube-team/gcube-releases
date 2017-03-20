@@ -1,0 +1,27 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-access.spd-client-library.1-0-0" date="2012-09-14"> 
+		<Change>species products discovery client library release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.spd-client-library.1-1-0" date="2012-10-18"> 
+		<Change>new calls added</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.spd-client-library.1-2-0" date="2012-11-30"> 
+		<Change>new calls from execution portType</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.spd-client-library.2-0-0" date="2013-01-17"> 
+		<Change>porting to FWK framework</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.spd-client-library.3-0-0" date="2013-05-02"> 
+		<Change>porting to spd model 2.0.0 </Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.spd-client-library.3-0-1" date="2013-07-18"> 
+		<Change>better exception management added</Change>
+		<Change>getErrorLink added to Execution PortType</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.spd-client-library.3-1-1" date="2013-10-24"> 
+		<Change>changed return of getPluginDescription in case of empty set of plugins</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.spd-client-library.4-0-0" date="2017-02-01"> 
+		<Change>moved to smartgears</Change>
+	</Changeset>
+</ReleaseNotes>

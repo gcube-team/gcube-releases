@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.tagsPanelStyle {
+		display: inline-block;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<b:ControlGroup ui:field="tagsInsertGroup">
+			<b:ControlLabel for="tags" title="Product tags">
+				<font color="red">*</font>
+				Tags:
+			</b:ControlLabel>
+			<b:Controls>
+				<b:TextBox width="90%" placeholder="Enter one or more tag for the item"
+					b:id="tags" ui:field="tagsEnterTextBox" />
+				<span style="float:right; width:5%; color: #aaaaaa;">
+					<b:Popover ui:field="popoverTags" html="true" animation="true"
+						placement="LEFT">
+						<g:FocusPanel ui:field="focusPanelTags">
+							<b:Icon type="INFO_SIGN" size="TWO_TIMES" ui:field="infoIconTags" />
+						</g:FocusPanel>
+					</b:Popover>
+				</span>
+			</b:Controls>
+		</b:ControlGroup>
+
+		<b:ControlGroup>
+			<b:Controls>
+				<g:FlowPanel ui:field="tagsPanel" styleName="{style.tagsPanelStyle}"></g:FlowPanel>
+			</b:Controls>
+		</b:ControlGroup>
+	</g:HTMLPanel>
+</ui:UiBinder> 

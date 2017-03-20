@@ -1,0 +1,11 @@
+ <Resource>
+        {$profiles//Resource/ID}
+        <Type>{$profiles//Resource/Type/text()}</Type>
+        <SubType>{$subtype}</SubType>
+        <Scopes>{$scopes}</Scopes>
+        <Name>{$profiles//Resource/Profile/Name/text()}</Name>
+        <CreationTime>{$profiles//Resource/Profile/Body/SourceProperties/creationTime/text()}</CreationTime>
+        <UserCollection>{$profiles//Resource/Profile/Body/SourceProperties/user/text()}</UserCollection>
+        <LastUpdateTime>{$wsresource/LastUpdateHuman/text()}</LastUpdateTime>
+        <NumberOfMembers>{$wsresource//child::*[local-name()='Cardinality']/text()}</NumberOfMembers>
+</Resource>    

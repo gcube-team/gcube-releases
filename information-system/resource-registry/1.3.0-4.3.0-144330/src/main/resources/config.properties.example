@@ -1,0 +1,17 @@
+HOST=orientdb01-d-d4s.d4science.org;orientdb02-d-d4s.d4science.org:orientdb03-d-d4s.d4science.org
+REMOTE_PROTOCOL= remote:
+
+HTTP_PROTOCOL=http://
+HTTP_PORT=:2480
+DB=IS
+
+# OrientDB root access. Needed to be able to create new databases 
+USERNAME=root
+PASSWORD=rootpwd
+
+DEFAULT_CREATED_WRITER_USER_PASSWORD=CHANGE_ME
+DEFAULT_CREATED_READER_USER_PASSWORD=CHANGE_ME
+
+DEFAULT_ADMIN_USERNAME=admin
+DEFAULT_ADMIN_PASSWORD=admin
+CHANGED_ADMIN_PASSWORD=CHANGE_ME

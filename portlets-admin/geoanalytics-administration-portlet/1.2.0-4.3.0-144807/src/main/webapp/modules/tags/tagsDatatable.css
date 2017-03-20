@@ -1,0 +1,117 @@
+#tagsManagement table.dataTable tbody tr td{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#tagsManagement table#geoadmin-tags-datatable tbody tr {
+	background-color: #ffffff;
+}
+
+#tagsManagement table#geoadmin-tags-datatable tbody .geoadmin-tag-datatable-cell{
+	border-right: 6px solid white;
+	border-bottom: 6px solid white;
+	border-top: none;
+}
+
+#tagsManagement table#geoadmin-tags-datatable tbody tr:hover .geoadmin-tag-datatable-cell{
+	background-color: #4cb5d2;
+	color: white;
+	cursor: pointer;
+}
+
+#tagsManagement table#geoadmin-tags-datatable tbody tr.selected td{
+	background-color: #019ad3;
+	color: white;
+	cursor: pointer;
+}
+
+
+#tagsManagement table#geoadmin-tags-datatable td {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #eeeeee;
+}
+
+#tagsManagement table#geoadmin-tags-datatable td.taxonomyTerm {
+	background-color: white;
+}
+
+#tagsManagement table#geoadmin-tags-datatable tbody th, 
+#tagsManagement table#geoadmin-tags-datatable tbody td {
+    padding: 2px 4px;
+}
+
+#tagsManagement table#geoadmin-tags-datatable.hover tbody tr:hover, 
+#tagsManagement table#geoadmin-tags-datatable.display tbody tr:hover {
+	background-color: white;
+}
+
+#tagsManagement table#geoadmin-tags-datatable tbody tr:hover td.taxonomyTerm {
+	background-color: white;
+}
+
+#tagsManagement table#geoadmin-tags-datatable th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    padding: 6px 0px;
+	position: relative;
+	border-bottom: 0px;
+	color: #0271be;
+    font-size: small;
+    font-weight: 500;
+    text-align: left;
+}
+
+th, button{
+	outline: none;
+}
+
+#tagsManagement table.dataTable thead .sorting_desc,
+#tagsManagement table.dataTable thead .sorting_asc,
+#tagsManagement table.dataTable thead .sorting {
+	background-position: center;
+}
+
+#tagsManagement table.dataTable.no-footer {
+	border-bottom: none;
+}
+
+#tagsManagement .toolbar{
+	display:inline-block;
+}
+
+#tagsManagement  table#geoadmin-tags-datatable .geoadmin-tag-datatable-checkbox{
+	width:17px !important;
+	font-size:20px;
+	text-align:center;
+	background-image: none;
+}
+
+
+#tagsManagement .dataTables_wrapper .dataTables_paginate .paginate_button{
+	border: 1px solid lightgray; 
+	background:none;
+	color:#0271be !important;
+	margin-left: 0px;
+	outline:0;
+}
+
+#tagsManagement .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+	border: 1px solid lightgray; 
+	background: #4cb5d2; 
+	color:white !important;
+	outline:0;
+}
+
+#tagsManagement .dataTables_wrapper .dataTables_paginate .paginate_button.previous:focus,
+#tagsManagement .dataTables_wrapper .dataTables_paginate .paginate_button.next:focus,
+#tagsManagement .dataTables_wrapper .dataTables_paginate .paginate_button.current{
+	border: 1px solid lightgray; 
+	background: #0271be;
+	color:white !important;
+	outline:0;
+}

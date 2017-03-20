@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ID/>
+    <Type>Service</Type>
+    <Profile>
+    	<Description>IS-Registry: validate, register and unregister GCUBE resources to/from the IS. It also publishes Topics for notifications about GCUBE resource events</Description>
+        <Class>InformationSystem</Class>
+        <Name>IS-Registry</Name>
+        <Version>1.0.0</Version>
+        <Dependencies>
+			<Dependency>			
+					<Class>InformationSystem</Class>
+					<Name>IS-Collector</Name>
+					<Version>1.00.00</Version>
+			</Dependency>													
+		</Dependencies>
+        <Packages>
+            <Main>
+                <Description>IS-Registry: validate, register and unregister GCUBE resources to/from the IS. It also publishes Topics for notifications about GCUBE resource events</Description>
+                <Name>IS-Registry-service</Name>
+                <Version>2.0.0</Version>
+                <Mandatory level="VO"/>
+				<Shareable level="VO"/>
+				<GHNRequirements>
+					<Requirement category="Site" requirement="string" value="java1.5" operator="ge"/>
+				</GHNRequirements>
+				<Dependencies>
+					<Dependency>
+						<Service>
+							<Class>InformationSystem</Class>
+							<Name>IS-Registry</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>IS-Registry-stubs</Package>
+						<Version>2.0.0</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+				</Dependencies>
+				<GARArchive>org.gcube.informationsystem.registry.gar</GARArchive>
+                <PortType>
+                	<Name>gcube/informationsystem/registry/ResourceRegistration</Name>
+                    	<Security/>			
+						<WSDL/>
+            	</PortType>
+            	<PortType>
+                	<Name>gcube/informationsystem/registry/RegistryFactory</Name>
+                    	<Security/>			
+						<WSDL/>
+            	</PortType>
+            	<PortType>
+                	<Name>gcube/informationsystem/registry/Registry</Name>
+                    	<Security/>			
+						<WSDL/>
+            	</PortType>
+            </Main>
+            <Software>
+            	<Description>IS-Registry: validate, register and unregister GCUBE resources to/from the IS. It also publishes Topics for notifications about GCUBE resource events</Description>
+            	<Name>IS-Registry-stubs</Name>
+				<Version>2.0.0</Version>
+				<MultiVersion value="true"/>
+				<Mandatory level="GHN"/>
+				<Shareable level="VO"/>
+				<GHNRequirements>
+					<Requirement category="Site" operator="ge" requirement="string" value="java1.5"/>
+				</GHNRequirements>
+				<SpecificData>text</SpecificData>
+				<Type>library</Type>
+				<Files>
+					<File>org.gcube.informationsystem.registry.stubs.jar</File>
+				</Files>
+			</Software> 
+			<Software>
+				<Description>Test-suite for IS-Registry: provide sample interaction usages with an IS-Registry instance</Description>
+				<Name>IS-Registry-test-suite</Name>
+				<Version>2.0.0</Version>
+				<MultiVersion value="true"/>				
+				<Shareable level="VO"/>				
+				<Type>application</Type>
+				<Files>
+					<File>lib/org.gcube.informationsystem.registry.testsuite.jar</File>
+				</Files>
+			</Software>          
+        </Packages>
+    </Profile>
+</Resource>
+

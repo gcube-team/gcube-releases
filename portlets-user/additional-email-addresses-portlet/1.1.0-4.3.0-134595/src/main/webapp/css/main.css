@@ -1,0 +1,74 @@
+.AdditionalEmailAddressesPortlet .email-row .email-address p {
+	display: inline-block;
+}
+
+.AdditionalEmailAddressesPortlet .email-row .email-address span {
+	float: right;
+	clear: both;
+}
+
+.AdditionalEmailAddressesPortlet .email-row div[class^="span"] {
+    padding: 7px 7px 0px 7px;
+}
+
+.AdditionalEmailAddressesPortlet .even-row .email-address {
+	background-color: #f2f2f2;
+}
+
+.AdditionalEmailAddressesPortlet .email-row p {
+	color: #454545;
+}
+
+.AdditionalEmailAddressesPortlet span.inactive, .AdditionalEmailAddressesPortlet p.subtitle, .AdditionalEmailAddressesPortlet span.verify-email, .AdditionalEmailAddressesPortlet .max-emails-notification p {
+	font-size: 11px;
+    color: #989898;
+    text-decoration: underline;
+}
+
+.AdditionalEmailAddressesPortlet span.verify-email {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.AdditionalEmailAddressesPortlet .email-row .remove-email {
+	color: #989898;
+	cursor: pointer;
+}
+
+.AdditionalEmailAddressesPortlet #addtional-email-addresses-form button{
+	color: #464646;
+    border: 1px solid #BBB;
+    -moz-border-radius: 2em;
+    -webkit-border-radius: 2em;
+    border-radius: 4px;
+    background: #F2F2F2;
+    cursor: pointer;
+    padding: 4px 15px;
+    margin: 5px;
+}
+
+.AdditionalEmailAddressesPortlet #addtional-email-addresses-form button:hover{
+    border-color: #222;
+    color: #222;
+    opacity: 0.8;
+}
+
+.AdditionalEmailAddressesPortlet #cancel-email, .AdditionalEmailAddressesPortlet #save-email{
+	float: right;
+}
+
+.AdditionalEmailAddressesPortlet .email-row .inactive p{
+	color : #989898;
+}
+
+.AdditionalEmailAddressesPortlet span.active, .AdditionalEmailAddressesPortlet span.no-need-verify-email{
+	visibility: hidden;
+	font-size: 11px;
+    color: #989898;
+}
+
+.AdditionalEmailAddressesPortlet .add-email-input .span9{
+	margin-top: 15px;
+	background-repeat:no-repeat;
+  	background-image:url(../email_icon.png) no-repeat 0 0;
+}

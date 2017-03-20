@@ -1,0 +1,32 @@
+<DataHandlers>
+	<!-- <DataSource type="Collection" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.CollectionDataSource" /> -->
+	<!-- <DataSource type="MCollection" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.MCollectionDataSource" /> -->
+	<!-- <DataSource type="RSBlob" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.RSBlobDataSource" /> -->
+	<!-- <DataSource type="RSXML" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.RSXMLDataSource" /> -->
+	<!-- <DataSource type="CObject" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.CObjectDataSource" /> -->
+	<!-- <DataSource type="CompObject" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.CompCObjectDataSource" /> -->
+	<!-- <DataSource type="CMAggregate" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.CMAggregateDataSource" /> -->
+
+	<DataSource type="URIList" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.URIListDataSource" />
+	<DataSource type="FTP" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.FTPDataSource" />
+	<DataSource type="GRS2" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.GRS2DataSource" />
+	<DataSource type="RS2" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.RS2DataSource" />
+	<DataSource type="Local" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.PathDataSource" />
+	<DataSource type="TMDataSource" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.TMDataSource" />
+	<DataSource type="HTTPDataSource" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.HTTPDataSource" />
+	<DataSource type="SRUDataSource" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.SRUDataSource" />
+	<DataSource type="WorkspaceDataSource" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.WorkspaceDataSource" />
+	<DataSource type="PUSH" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.PushDataSource" />
+
+	<!-- <DataSink type="Collection" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.CollectionDataSink" /> -->
+	<!-- <DataSink type="MCollection" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.MCollectionDataSink" /> -->
+	<!-- <DataSink type="AlternativeRepresentation" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.AlternativeRepresentationDataSink" /> -->
+	<!-- <DataSink type="RSBlob" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.RSBlobDataSink" /> -->
+	<!-- <DataSink type="RSXML" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.RSXMLDataSink" /> -->
+	<DataSink type="RS2" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.RS2DataSink" />
+	<DataSink type="FTP" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.FTPDataSink" />
+	<DataSink type="GRS2" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.GRS2DataSink" />
+	<DataSink type="Local" class="org.gcube.datatransformation.datatransformationlibrary.datahandlers.impl.PathDataSink" />
+
+	<!-- <ContentTypeEvaluator type="CMS" class="org.gcube.datatransformation.datatransformationlibrary.contenttypeevaluators.impl.CMSContenTypeEvaluator" /> -->
+</DataHandlers>

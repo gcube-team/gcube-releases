@@ -1,0 +1,18 @@
+#tagsManagement .geoadmin-modal-header{
+	color: #0271be;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+#tagsManagement .modal textarea{
+	resize:none;
+	color: #0271be;
+}
+
+#tagsManagement .modal input{
+	color: #0271be;
+}
+
+#tagsManagement{
+	margin-bottom: 10px;
+}

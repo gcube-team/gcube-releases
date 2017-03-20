@@ -1,0 +1,49 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.execution.ResourceRegistry.1-3-5" date="2013-07-15">
+		<Change>clears the RR when exception raises while bridging.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.ResourceRegistry.1-3-4" date="2013-04-19">
+		<Change>Added a reset operation.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.ResourceRegistry.1-3-3" date="2013-01-07">
+		<Change>Fixed the resources place</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.ResourceRegistry.1-3-2" date="2012-11-26">
+		<Change>Fixed bug that caused an exception to be thrown in delete in RRElement even if the delete process was successful</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.ResourceRegistry.1-3-1" date="2012-10-20">
+		<Change>Changed to depended on RRGCubeBridge [1.0.0, 2.0.0].</Change>
+		<Change>Generic Resources are correctly updated during the first iteration</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.ResourceRegistry.1-3-0" date="2012-05-04">
+   		<Change>Added support for read/write policies and default behavior for all Resource Registry Elements.</Change>
+   		<Change>Added direct retrieve and persist methods in RegistryProvider to support non datanucleus datastores that wish to expose the write-through policy.</Change>
+   		<Change>Renamed datastores using more suitable labels.</Change>
+   		<Change>Added support for plugins and included their execution in the bridging task.</Change>
+   		<Change>Improved configuration model. A central properties file is now used, which can optionally point to other configuration. Included plugin config to configuration model.</Change>
+   		<Change>Fixed behavior in InMemory store.</Change>
+   </Changeset>
+
+	<Changeset component="org.gcube.execution.ResourceRegistry.1-2-1" date="2012-1-27">
+   		<Change>Fixed prefetch cache defect which caused data inaccessibility in some cases.</Change>
+   		<Change>Fixed data type handling in prefetch cache remove item method</Change>
+   </Changeset>
+   
+   <Changeset component="org.gcube.execution.ResourceRegistry.1-2-0" date="2011-11-04">
+		<Change>Support for in memory prefetching of element subset for increased query and loading time performance.</Change>
+		<Change>Fixed issue in browsable fields of collection operation</Change>
+	</Changeset>
+   
+   <Changeset component="org.gcube.execution.ResourceRegistry.1-1-0" date="2011-09-02">
+		<Change>Added support for repository provider configuration</Change>
+		<Change>Bridging period is now configurable</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.execution.ResourceRegistry.1-0-1" date="2011-07-29">
+		<Change>Increased maximum length of all derby db strings for which a maximum length has not already been defined to 1024.</Change>
+	</Changeset>
+
+	<Changeset component="org.gcube.execution.ResourceRegistry.1-0-0" date="2011-07-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

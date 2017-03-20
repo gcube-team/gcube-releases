@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlanRequest
+	xmlns="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployRequest"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://gcube-system.org/namespaces/resourcebroker/broker/xsd/deployRequest ../../../schema/deployRequest.xsd">
+	<Scope>/gcube/devsec</Scope>
+	<PackageGroup ID="1" service="service1">
+		<Package reuse="true">
+			<ServiceClass>VREManagement</ServiceClass>
+			<ServiceName>ResourceBroker</ServiceName>
+			<ServiceVersion>1.00.00</ServiceVersion>
+			<PackageName>ResourceBroker-service</PackageName>
+			<PackageVersion>1.00.00</PackageVersion>
+		</Package>
+	</PackageGroup>
+</PlanRequest>

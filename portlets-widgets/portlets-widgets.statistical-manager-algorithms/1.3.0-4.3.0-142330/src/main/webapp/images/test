@@ -1,0 +1,12 @@
+<table class='jobViewer-table'>
+	<colgroup>
+		<col>
+		<col class='jobViewer-table-oce-first'>
+	</colgroup>
+	<tbody>		
+		<tr>
+			<td>"+entry.getKey()+"</td>
+			<td>"+entry.getValue()+"</td>
+		</tr>		
+	</tbody>
+</table>

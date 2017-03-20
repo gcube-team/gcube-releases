@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+
+	<service name="gcube/datatransfer/scheduler">
+
+		<environment name="configDir" value="@config.dir@" type="java.lang.String"
+			override="false" />
+					
+		<environment name="dbname" value="transfer-scheduler-db"
+			type="java.lang.String" override="false" />
+			
+			
+		<environment name="messaging" value="true"
+				type="java.lang.Boolean" override="false" />
+		
+		<environment name="dbConfigurationFile"
+				value="db.properties" type="java.lang.String" override="false" />
+						
+		<environment name="scheduledBackupInHours"
+				value="12" type="java.lang.String" override="false" />
+
+		<environment name="checkForMonitorResultIntervalInSeconds"
+				value="4" type="java.lang.String" override="false" />
+				
+		<environment name="maxTimeForMonitoringWithQueuedResultInSeconds"
+				value="300" type="java.lang.String" override="false" />
+		
+		<environment name="checkForTransfersIntervalInSeconds"
+				value="600" type="java.lang.String" override="false" />
+
+		<environment name="checkISIntervalInSeconds"
+				value="60" type="java.lang.String" override="false" />
+				
+		<environment name="maxTimeToSetInactiveAnOngoingTransferInMS"
+				value="1800000" type="java.lang.String" override="false" />
+		 
+		<environment name="startScopes" value="/gcube/devsec" type="java.lang.String"
+			override="false" />
+		
+
+	</service>
+
+	<service name="gcube/datatransfer/scheduler/Scheduler">
+
+		<environment name="name" value="Scheduler" type="java.lang.String"
+			override="false" />
+	
+
+		<environment name="RPDName" value="SchedulerResourceProperties"
+			type="java.lang.String" override="false" />	
+		
+		<resource name="publicationProfile" type="org.gcube.common.core.state.GCUBEPublicationProfile">	
+			<resourceParams>
+				<parameter>
+					<name>factory</name>
+					<value>org.globus.wsrf.jndi.BeanFactory</value>
+				</parameter>
+				<parameter>
+					<name>mode</name>
+					<value>push</value>
+				</parameter>
+				<parameter>
+					<name>fileName</name>
+					<value>schedulerRegistration.xml</value>
+				</parameter>
+			</resourceParams>
+		</resource>
+		
+		<resource name="home"
+			type="org.gcube.datatransfer.scheduler.impl.state.SchedulerHome">
+			<resourceParams>
+				<parameter>
+					<name>factory</name>
+					<value>org.globus.wsrf.jndi.BeanFactory</value>
+				</parameter>
+				<parameter>
+					<name>resourceClass</name>
+					<value>org.gcube.datatransfer.scheduler.impl.state.SchedulerResource
+					</value>
+				</parameter>				
+
+			</resourceParams>
+
+		</resource>
+	</service>
+
+	<service name="gcube/datatransfer/scheduler/Management">
+		<environment name="name" value="Management" type="java.lang.String"
+			override="false" />		
+	</service>
+	
+	<service name="gcube/datatransfer/scheduler/Factory" />
+
+	
+</jndiConfig>

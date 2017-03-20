@@ -1,0 +1,72 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def borderWidth value('theme.progressbar.border.toString');
+@def borderColor value('theme.progressbar.border.color');
+@def borderStyle value('theme.progressbar.border.style');
+
+@def gradient value('theme.progressbar.backgroundGradient');
+
+@def textFamily value('theme.progressbar.text.family');
+@def textSize value('theme.progressbar.text.size');
+@def textWeight value('theme.progressbar.text.weight');
+@def textColor value('theme.progressbar.text.color');
+@def barTextColor value('theme.progressbar.barTextColor');
+
+@def textAlign value('theme.progressbar.textAlign');
+
+@def textPadding value('theme.progressbar.textPadding.toString');
+
+@def barGradient value('theme.progressbar.barGradient');
+
+@def barBorderWidth value('theme.progressbar.barBorder.toString');
+@def barBorderColor value('theme.progressbar.barBorder.color');
+@def barBorderStyle value('theme.progressbar.barBorder.style');
+
+
+@sprite .wrap {
+  gwt-image: 'innerBar';
+  height:auto;
+
+  border-width: borderWidth;
+  border-style: borderStyle;
+  border-color: borderColor;
+
+  position:relative;
+  overflow: hidden;
+}
+@sprite .bar {
+  gwt-image: 'bar';
+  height: auto;
+
+  z-index: 100;
+  width: 99%;
+  overflow: hidden;
+  position:relative;
+  top:0;
+
+  border-width: barBorderWidth;
+  border-style: barBorderStyle;
+  border-color: barBorderColor;
+}
+.text {
+  font-family: textFamily;
+  font-weight: textWeight;
+  font-size: textSize;
+  color: barTextColor;
+  text-align: textAlign;
+  padding: textPadding;
+}
+.textBack {
+  overflow:hidden;
+  z-index:99;
+  width:100%;
+  color: textColor;
+  position:absolute;
+  left:0;
+  top:0;
+}
