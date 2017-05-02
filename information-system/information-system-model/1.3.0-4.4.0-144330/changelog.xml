@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.information-system-model.1-3-0" date="2017-05-02">
+		<Change>Added deserialization support for unknown types with polymorphism support</Change>
+		<Change>Improved support for json serilization and deserialization</Change>
+		<Change>Added Propagation Constraint Concept</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-model.1-2-0" date="2016-12-16">
+		<Change>Added regex support in schema definition</Change>
+		<Change>Improved support for json serilization and deserialization</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-model.1-1-0" date="2016-11-03">
+		<Change>Reorganized package and renamed relations to be compliant with welle known practice</Change>
+		<Change>Added Utility for json serilization and deserialization</Change>
+		<Change>Added Jackson annotation to support json serilization and deserialization</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-model.1-0-0" date="2016-07-27">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

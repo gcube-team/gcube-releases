@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.elasticsearchportlet.1-0-0" date="2013-03-11">
+		<Change>First release of the portlet</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.elasticsearchportlet.1-1-0" date="2014-05-21">
+		<Change>Portlet is updated so as to use the latest ElasticSearch UI</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,7 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="org.gcube.content-management.time-series-geotools.1-6-1"
+		date="2012-10-22">
+		<Change>Release fixing some bugs related to points maps</Change>
+	</Changeset>
+</ReleaseNotes>

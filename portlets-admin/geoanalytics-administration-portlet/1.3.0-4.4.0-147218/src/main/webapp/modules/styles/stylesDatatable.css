@@ -1,0 +1,117 @@
+#stylesManagement table.dataTable tbody tr td{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#stylesManagement table#geoadmin-styles-datatable tbody tr {
+	background-color: #ffffff;
+}
+
+#stylesManagement table#geoadmin-styles-datatable tbody .geoadmin-style-datatable-cell{
+	border-right: 6px solid white;
+	border-bottom: 6px solid white;
+	border-top: none;
+}
+
+#stylesManagement table#geoadmin-styles-datatable tbody tr:hover .geoadmin-style-datatable-cell{
+	background-color: #4cb5d2;
+	color: white;
+	cursor: pointer;
+}
+
+#stylesManagement table#geoadmin-styles-datatable tbody tr.selected td{
+	background-color: #019ad3;
+	color: white;
+	cursor: pointer;
+}
+
+
+#stylesManagement table#geoadmin-styles-datatable td {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #eeeeee;
+}
+
+#stylesManagement table#geoadmin-styles-datatable td.taxonomyTerm {
+	background-color: white;
+}
+
+#stylesManagement table#geoadmin-styles-datatable tbody th, 
+#stylesManagement table#geoadmin-styles-datatable tbody td {
+    padding: 2px 4px;
+}
+
+#stylesManagement table#geoadmin-styles-datatable.hover tbody tr:hover, 
+#stylesManagement table#geoadmin-styles-datatable.display tbody tr:hover {
+	background-color: white;
+}
+
+#stylesManagement table#geoadmin-styles-datatable tbody tr:hover td.taxonomyTerm {
+	background-color: white;
+}
+
+#stylesManagement table#geoadmin-styles-datatable th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    padding: 6px 0px;
+	position: relative;
+	border-bottom: 0px;
+	color: #0271be;
+    font-size: small;
+    font-weight: 500;
+    text-align: left;
+}
+
+th, button{
+	outline: none;
+}
+
+#stylesManagement table.dataTable thead .sorting_desc,
+#stylesManagement table.dataTable thead .sorting_asc,
+#stylesManagement table.dataTable thead .sorting {
+	background-position: center;
+}
+
+#stylesManagement table.dataTable.no-footer {
+	border-bottom: none;
+}
+
+#stylesManagement .toolbar{
+	display:inline-block;
+}
+
+#stylesManagement  table#geoadmin-styles-datatable .geoadmin-style-datatable-checkbox{
+	width:17px !important;
+	font-size:20px;
+	text-align:center;
+	background-image: none;
+}
+
+
+#stylesManagement .dataTables_wrapper .dataTables_paginate .paginate_button{
+	border: 1px solid lightgray; 
+	background:none;
+	color:#0271be !important;
+	margin-left: 0px;
+	outline:0;
+}
+
+#stylesManagement .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+	border: 1px solid lightgray; 
+	background: #4cb5d2; 
+	color:white !important;
+	outline:0;
+}
+
+#stylesManagement .dataTables_wrapper .dataTables_paginate .paginate_button.previous:focus,
+#stylesManagement .dataTables_wrapper .dataTables_paginate .paginate_button.next:focus,
+#stylesManagement .dataTables_wrapper .dataTables_paginate .paginate_button.current{
+	border: 1px solid lightgray; 
+	background: #0271be;
+	color:white !important;
+	outline:0;
+}

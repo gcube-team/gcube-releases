@@ -1,0 +1,15 @@
+<ReleaseNotes>
+	<Changeset component="common-gcore-stubs-1.0.0" date="2013-01-11">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="common-gcore-stubs-1.1.0" date="2013-07-01">
+		<Change>Modular handler discovery and delegation</Change>
+		<Change>Fix: WSDL cache now releases the lock it acquires when clearing</Change>
+	</Changeset>
+	<Changeset component="common-gcore-stubs-1.1.1" date="2013-11-06">
+		<Change>Moved tests to separate suite</Change>
+	</Changeset>
+	<Changeset component="common-gcore-stubs-1.2.2-4.4.0-132342" date="2014-05-25">
+		<Change>Stub cache can be safely used across multiple classloaders</Change>
+	</Changeset>
+</ReleaseNotes>

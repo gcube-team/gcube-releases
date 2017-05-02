@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ID/>
+    <Type>Service</Type>
+    <Profile>
+        <Description>client for cloud deploying using eolus project</Description>
+        <Class>Common</Class>
+        <Name>EolusClient</Name>
+        <Version>1.0.0</Version>
+        <Packages>
+			<Software deployable="true">
+				<Description>client for cloud deploying using eolus project</Description>
+				<Name>EolusClient</Name>
+        		<Version>1.0.0</Version>
+        		<MultiVersion value="true"/>
+        		<Mandatory level="VO"/>
+        		<Shareable level="VO"/>
+       			<Type>library</Type>
+       			<Files><File>lib/org.gcube.common.eolus-client.jar</File></Files>
+    			</Software>
+		</Packages>
+		<SpecificData></SpecificData>
+    </Profile>
+</Resource>

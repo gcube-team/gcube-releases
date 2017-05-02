@@ -1,0 +1,34 @@
+<ReleaseNotes>
+	<Changeset component="xsearch-service.2-0-0" date="2014-10-29">
+		<Change>Implementation of xsearch-service API functionalities</Change>
+	</Changeset>
+	<Changeset component="xsearch-service.1-1-2" date="2013-12-12">
+		<Change>Ability to access authorized SPARQL endpoints</Change>
+	</Changeset>
+	<Changeset component="xsearch-service.1-1-1" date="2013-10-23">
+		<Change>Support for updating the list of entities and categories at runtime</Change>
+		<Change>Ability to access authorized SPARQL endpoints</Change>
+	</Changeset>
+	<Changeset component="xsearch-service.1-1-0" date="2013-07-18">
+		<Change>Analyzing search results starting from a specific offset</Change>
+		<Change>Synchronize the execution of parallel steps while analyzing search results</Change>
+	</Changeset>
+	<Changeset component="xsearch-service.1-0-3" date="2013-04-18">
+		<Change>Configurability enhancements</Change>
+		<Change>Added new dependencies that require FORTH maven repository</Change>
+	</Changeset>
+	<Changeset component="xsearch-service.1-0-2" date="2012-11-30">
+		<Change>Configurability enhancements</Change>
+		<Change>Javadoc documentation for certain classes</Change>
+	</Changeset>
+	<Changeset component="xsearch-service.1-0-1" date="2012-10-26">
+		<Change>Modification in the initialization process of xsearch-service</Change>
+		<Change>Configurability enhancements</Change>
+		<Change>Supporting exchange of messages using TCP connections</Change>
+		<Change>Retrieving the required configuration files during deployment time</Change>
+	</Changeset>
+	<Changeset component="xsearch-service.1-0-0" date="2012-10-12">
+		<Change>Initial commit of xsearch-service</Change>
+	</Changeset>
+</ReleaseNotes>
+

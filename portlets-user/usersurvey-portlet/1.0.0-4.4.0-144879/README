@@ -1,0 +1,41 @@
+The gCube System - Survey Portlet 
+------------------------------------------------------------
+This work is partially funded by the European Commission in the context of the Edison project Horizon 2020
+
+Description
+-----------
+A survey portlet for the portal user
+ 
+ 
+Version and Release Date
+------------------------
+December 2th 2016
+
+Please see the file named "changelog.xml" in this directory for the release notes.
+
+Authors
+-------
+Alessandro Olivieri	- Engineering.it Ingegneria Informatica	
+
+Maintainers
+-----------
+ 
+* Alessandro Olivieri at Engineering.it Ingegneria Informatica	
+
+Download information
+--------------------
+Source code is available from SVN:
+https://svn.d4science.research-infrastructures.eu/gcube/branches/portlets/user/usersurvey-portlet
+
+Binaries can be downloaded from:
+http://software.d4science.research-infrastructures.eu/
+
+Documentation 
+------------
+Documentation is available on-line from the Projects Documentation Wiki:
+ 
+
+Licensing
+---------
+
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory. 

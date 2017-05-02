@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Portions of this file Copyright 1999-2005 University of Chicago
+ Portions of this file Copyright 1999-2005 The University of Southern California.
+
+ This file or a portion of this file is licensed under the
+ terms of the Globus Toolkit Public License, found at
+ http://www.globus.org/toolkit/download/license.html.
+ If you redistribute this file, with or without
+ modifications, you must include this notice in the file.
+-->
+<definitions name="ServiceGroupRegistrationClient"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!--
+    Schema for ServiceGroupRegistrationClient. 
+    
+    This is a client side object only, used by the ServiceGroupRegistrationClient 
+    java class for serialization and deserialization of registration parameters. 
+-->
+
+<types>
+
+    <xsd:schema
+        xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+        xmlns:tns="http://mds.globus.org/servicegroup/client"
+        targetNamespace="http://mds.globus.org/servicegroup/client"
+        elementFormDefault="qualified"> 
+
+        <xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" 
+                    schemaLocation="../../../ws/addressing/WS-Addressing.xsd"  />
+
+       <!-- 
+            Parameter type for ServiceGroupRegistrationClient
+       -->
+
+      <xsd:complexType name="ServiceGroupRegistrationParameters">
+        <xsd:sequence>
+          <xsd:element name="ServiceGroupEPR"
+                       type="wsa:EndpointReferenceType" 
+                       minOccurs="0" maxOccurs="1"/>    
+          <xsd:element name="RegistrantEPR" 
+                       type="wsa:EndpointReferenceType"
+                       minOccurs="0" maxOccurs="1"/> 
+          <xsd:element name="InitialTerminationTime" 
+                       type="xsd:dateTime"
+                       minOccurs="0" maxOccurs="1" />                   
+          <xsd:element name="RefreshIntervalSecs"
+                       type="xsd:int"
+                       minOccurs="1" maxOccurs="1"/> 
+          <xsd:element name="SecurityDescriptorFile"
+                       type="xsd:string"
+                       minOccurs="0" maxOccurs="1"/>
+          <xsd:element name="Content" 
+                       type="xsd:anyType" 
+                       minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+      </xsd:complexType> 
+
+    </xsd:schema>
+
+</types>
+
+</definitions>

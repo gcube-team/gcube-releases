@@ -1,0 +1,3 @@
+HOWTO Test
+
+This component is tested through ResultSetClientLibrary

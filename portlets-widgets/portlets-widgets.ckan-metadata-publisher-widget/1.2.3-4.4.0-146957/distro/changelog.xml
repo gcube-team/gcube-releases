@@ -1,0 +1,26 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-2-3" date="2017-04-05">
+		<Change>Some bug fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-2-2" date="2017-02-27">
+		<Change>Some minor terms changed</Change>
+		<Change>added support for ticket #7207</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-2-1" date="2017-02-02">
+		<Change>Minor fixes to speed up role retrievals</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-2-0" date="2016-12-11">
+		<Change>A post is automatically created by the Product Catalogue user every time someone publishes</Change>
+		<Change>The user now can select all files in the hierarchy and publish them</Change>
+		<Change>The user can now associate the product to the available groups</Change>
+		<Change>Removed ASL session dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-1-0" date="2016-10-11">
+		<Change>Creation of a group is now supported</Change>
+		<Change>Association of a dataset to a group is now supported</Change>
+		<Change>Products are copied to .catalogue area when publishing is performed from workspace</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-0-0"	date="2016-06-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

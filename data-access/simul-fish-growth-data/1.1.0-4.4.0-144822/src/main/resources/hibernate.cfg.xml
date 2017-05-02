@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- PostgreSQL - @localhost -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/bbridge</property>
+		<property name="hibernate.connection.username">bbridge</property>
+		<property name="hibernate.connection.password">bbridgefoobar</property>
+
+		<!-- pool c3p0 -->
+		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.max_size">5</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+		<property name="hibernate.c3p0.acquire_increment">1</property>
+		<!-- new values for fixing the DB issues with Jboss7 -->
+		<property name="hibernate.c3p0.idle_test_period">40</property>
+		<property name="hibernate.c3p0.timeout">1800</property>
+		<!-- new properties that fix the DB issues we have in Jboss 7 -->
+		<property name="hibernate.c3p0.unreturnedConnectionTimeout">400</property>
+		<property name="hibernate.c3p0.debugUnreturnedConnectionStackTraces">true</property>
+
+		<!-- Sessions and transactions -->
+
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Mappings -->
+<!-- 		<mapping resource="entities.hbm.xml" /> -->
+	</session-factory>
+</hibernate-configuration>

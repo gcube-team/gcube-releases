@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.resource-registry.1-3-0" date="${buildDate}">
+		<Change>Added API Remove From Context</Change>
+		<Change>Added API to support Entity-Relation navigation</Change>
+		<Change>Added API to get the list of ER types and their own schema</Change>
+		<Change>Added support for Propagation Constraint</Change>
+		<Change>Added ResourceRegistryException serialization</Change>
+		<Change>Full Code Redesign</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry.1-2-0" date="2016-12-16">
+		<Change>Added API AddToContext</Change>
+		<Change>Added support for referentail Integrity Directive</Change>
+		<Change>Added API to support update Resource (with all facets)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry.1-1-0" date="2016-11-03">
+		<Change>Improved code quality</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry.1-0-0" date="2016-07-27">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

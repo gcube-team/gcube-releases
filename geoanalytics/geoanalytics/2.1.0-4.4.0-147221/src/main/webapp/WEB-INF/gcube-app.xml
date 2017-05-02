@@ -1,0 +1,11 @@
+<application mode="online">
+
+	<group>geoanalytics</group>
+	<name>geoanalytics-main-service</name>
+	<version>1.2.0</version>
+
+	<description>Geoanalytics main web service</description>
+
+	<exclude>/resources/</exclude>
+
+</application>

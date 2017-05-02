@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Stateless"
+    targetNamespace="http://acme.org/sample"
+    xmlns:tns="http://acme.org/sample"
+  	xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults">
+    
+    <import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+    
+ 	<types>
+	<xsd:schema targetNamespace="http://acme.org/sample">
+  		
+  		<xsd:element name="about" type="xsd:string" />
+		<xsd:element name="aboutResponse" type="xsd:string" />	
+		
+		<xsd:element name="SampleFault" type="tns:SampleFault"/>
+			<xsd:complexType name="SampleFault">
+                <xsd:complexContent>
+                        <xsd:extension base="corefaults:GCUBEUnrecoverableFault"/>
+                </xsd:complexContent>
+        </xsd:complexType>	
+        	
+	</xsd:schema>
+	</types>
+	
+	<message name="aboutInputMessage">
+		<part name="request" element="tns:about"/>
+	</message>
+	<message name="aboutOutputMessage">
+		<part name="response" element="tns:aboutResponse"/>
+	</message>
+	
+		<message name="SampleFaultMessage"> 
+		<part name="fault" element="tns:SampleFault"/>
+	</message>
+	
+	<portType name="StatelessPortType">
+	
+		<operation name="about">
+			<input message="tns:aboutInputMessage"/>
+			<output message="tns:aboutOutputMessage"/>
+			<fault name="fault" message="tns:SampleFaultMessage"/>
+			<fault name="fault1" message="corefaults:GCUBEFaultMessage"/>
+		</operation>
+
+	</portType>
+
+</definitions>

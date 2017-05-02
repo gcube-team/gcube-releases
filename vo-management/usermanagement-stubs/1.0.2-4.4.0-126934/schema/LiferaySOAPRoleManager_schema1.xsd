@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ws.usermanagement.vomanagement.gcube.org/" xmlns:tns="http://ws.usermanagement.vomanagement.gcube.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="GroupRetrievalFault" type="tns:GroupRetrievalFault"/>
+
+  <xs:element name="RoleRetrievalFault" type="tns:RoleRetrievalFault"/>
+
+  <xs:element name="UserManagementFileNotFoundException" type="tns:UserManagementFileNotFoundException"/>
+
+  <xs:element name="UserManagementIOException" type="tns:UserManagementIOException"/>
+
+  <xs:element name="UserManagementSystemException" type="tns:UserManagementSystemException"/>
+
+  <xs:element name="getRole" type="tns:getRole"/>
+
+  <xs:element name="getRoleId" type="tns:getRoleId"/>
+
+  <xs:element name="getRoleIdResponse" type="tns:getRoleIdResponse"/>
+
+  <xs:element name="getRoleResponse" type="tns:getRoleResponse"/>
+
+  <xs:element name="listAllowedRoles" type="tns:listAllowedRoles"/>
+
+  <xs:element name="listAllowedRolesResponse" type="tns:listAllowedRolesResponse"/>
+
+  <xs:element name="listRoles" type="tns:listRoles"/>
+
+  <xs:element name="listRolesByGroup" type="tns:listRolesByGroup"/>
+
+  <xs:element name="listRolesByGroupResponse" type="tns:listRolesByGroupResponse"/>
+
+  <xs:element name="listRolesByUser" type="tns:listRolesByUser"/>
+
+  <xs:element name="listRolesByUserAndGroup" type="tns:listRolesByUserAndGroup"/>
+
+  <xs:element name="listRolesByUserAndGroupResponse" type="tns:listRolesByUserAndGroupResponse"/>
+
+  <xs:element name="listRolesByUserResponse" type="tns:listRolesByUserResponse"/>
+
+  <xs:element name="listRolesResponse" type="tns:listRolesResponse"/>
+
+  <xs:complexType name="listRoles">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="listRolesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UserManagementSystemException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listRolesByUser">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listRolesByUserResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:roleModel" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="roleModel">
+    <xs:sequence>
+      <xs:element name="completeName" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="roleId" type="xs:string" minOccurs="0"/>
+      <xs:element name="roleName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getRole">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getRoleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:roleModel" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RoleRetrievalFault">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listRolesByGroup">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listRolesByGroupResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:roleModel" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GroupRetrievalFault">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UserManagementFileNotFoundException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UserManagementIOException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listRolesByUserAndGroup">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+      <xs:element name="arg1" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listRolesByUserAndGroupResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:roleModel" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getRoleId">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+      <xs:element name="arg1" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getRoleIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listAllowedRoles">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listAllowedRolesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:stringCoupleWrapper" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="stringCoupleWrapper">
+    <xs:sequence>
+      <xs:element name="key" type="xs:string" minOccurs="0"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

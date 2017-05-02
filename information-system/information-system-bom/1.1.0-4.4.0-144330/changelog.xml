@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.information-system-bom.1-1-0" date="2017-05-01">
+		<Change>Updated OrientDB Version</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-bom.1-0-0" date="2016-12-16">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,31 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-transfer.agent-library.1-0-0" date="2012-04-27">
+			<Change>First release of the component</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-library.1-1-0" date="2012-09-05">
+			<Change>Library adapted to CL FW</Change>
+			<Change>New methods for Async, Sync transfers</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-library.1-2-0" date="2013-01-12">
+			<Change>Fixed usage of client logger</Change>
+			<Change>included bom usage</Change>
+			<Change>Removed deprecated ScopeManager</Change>
+			<Change>Added operation to transfer file to remote URIs</Change>
+			<Change>Extended TransferOptions to include fileConversion</Change>
+			<Change>new op MonitorTransferWithProgress implemented</Change>
+			<Change>added transfer timeout option</Change>
+			<Change>moved to common some classes in order to remove dependency from the server</Change>
+			<Change>FW stack integration</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-library.1-3-0" date="2013-04-17">
+			<Change>Added operation to get the local FS</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-library.2-0-0" date="2013-07-09">
+			<Change>Added operations to add/remove tree sources</Change>
+			<Change>Added operations to schedule async tree transfers</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-library.2-0-1" date="2017-05-02">
+		<Change>outdated unit tests removed</Change>
+		<Change>dependency on gcf removed</Change>
+	</Changeset>
+</ReleaseNotes>

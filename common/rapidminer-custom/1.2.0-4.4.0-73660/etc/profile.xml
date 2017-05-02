@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>Custom version of RapidMiner library</Description>
+		<Class>Common</Class>
+		<Name>rapidminer-custom</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software deployable="true">
+				<Description>Custom version of RapidMiner library</Description>
+				<Name>rapidminer-custom</Name>
+				<Version>1.1.0</Version>
+				<MultiVersion value="true" />
+				<Mandatory level="VO" />
+				<Shareable level="VO" />
+				<Type>library</Type>
+				<Files>
+					<File>uberjar.jar</File>
+					<File>rapidMiner.jar</File>
+					<File>rapidMinerPluginText.jar</File>
+					<File>jahmm-0.6.1.jar</File>
+					<File>marytts-server-5.0-jar-with-dependencies.jar</File>
+					<File>TaxamatchPostgresv1.2.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+		<SpecificData></SpecificData>
+	</Profile>
+</Resource>

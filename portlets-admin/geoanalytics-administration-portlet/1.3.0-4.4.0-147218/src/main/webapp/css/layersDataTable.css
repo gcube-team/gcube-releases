@@ -1,0 +1,346 @@
+div.layersDataTableContainer * {
+	outline:none;	
+}
+.searchCon{
+	margin-left:0px !important;
+	margin-right:0px !important;
+}
+.adminContainer div.layersDataTableToolbarContainer div {
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top : 10px;
+	color: #0271be;
+	display : inline-block;
+	height : 2em;
+	cursor : pointer;
+}
+.adminContainer  div.layersDataTableToolbarContainer div:hover {
+	background: #4cb5d2;
+	background-color: #4cb5d2;
+	color : #fff;
+}
+div.layersDataTableToolbarContainer {
+    background: #eeeeee;
+    background-color: #eeeeee;
+}
+
+div.layersDataTableToolbarContainer.hiddenToolbar {
+    background: #fff;
+    background-color: #fff;
+}
+div.layersDataTableToolbarContainer.hiddenToolbar #deleteSelected,
+div.layersDataTableToolbarContainer.hiddenToolbar #editSelected{
+	background: #fff;
+} 
+
+
+/*************Modals*************/
+.modal-header .layerModalTitle {
+	color: #0271be;
+	margin: 0.5em 0 0.3em 0;
+}
+.modal-header .layerModalSubTitle {
+	color: #777;
+	font-size: 0.9em;
+	margin-bottom: 0px;
+}
+.modal-header .modalHeaderContainer {
+	display: inline-block;
+}
+.blueLineBottom{
+	border-bottom: 2px solid #0271be;
+    padding-bottom: 0.2em;
+}
+.blueLineBottom .close {
+	opacity: 1;
+	color: #d1d1d1;
+}
+.blueLineBottom .close:hover {
+	color: #0271be;
+}
+
+/*************Table*************/
+.layersDataTableContainer .dataTables_scrollHeadInner table,
+.layersDataTableContainer  table#layersDataTable {
+	table-layout: fixed;
+	border: none;
+	margin-bottom: 2em;
+}
+.layersDataTableContainer .dataTables_scrollHeadInner thead tr,
+.layersDataTableContainer  table#layersDataTable thead > tr {
+	border: none;
+}
+.layersDataTableContainer .dataTables_scrollHeadInner thead tr > th:first-of-type,
+.layersDataTableContainer  table#layersDataTable thead > tr th:first-of-type {
+	text-align: center;
+	cursor: auto;
+	position: relative;
+	width: 14px !important;
+}
+.layersDataTableContainer .dataTables_scrollHeadInner thead > tr th,
+.layersDataTableContainer  table#layersDataTable thead > tr th{
+	border: none;
+    font-weight: bold;
+    padding-bottom: 0px;
+    padding-left: 4px;
+    text-transform: capitalize;
+	color: #0271be;
+    margin-bottom: 0px;
+	text-align: left;
+}
+.layersDataTableAll {
+	padding-left:0.4em;
+	cursor: default;
+}
+.layersDataTableContainer  table#layersDataTable tbody {
+	border: none;
+	background-color: rgba(234, 236, 240, 1);
+    background: rgba(234, 236, 240, 1);
+}
+.layersDataTableContainer  table#layersDataTable tbody tr {
+    background: #fff;
+    padding: 0px;
+    background-color: #fff;
+}
+.layersDataTableContainer  table#layersDataTable tr td:first-of-type {
+    padding-top: 1px;
+}
+.layersDataTableContainer  table#layersDataTable tbody tr td {
+    padding: 0px 2px 0px 2px;
+    text-align: center;
+    line-height: 1em;
+    cursor: pointer;
+}.layersDataTableContainer  table#layersDataTable tbody tr td:first-of-type {
+	cursor:pointer;
+}
+.layersDataTableContainer  table#layersDataTable tbody tr td:first-of-type div {
+    display: inline-block;
+    width: 1.5em;
+    text-align: center;
+    padding: 0px 3px 0px 3px;
+}
+.layersDataTableContainer table#layersDataTable tbody tr td div {
+    background: #eeeeee;
+    background-color: #eeeeee;
+/*     padding: 2px 0px 0px 10px; */
+/*     text-align: left;
+    height: 1.5em; */
+    line-height: 1.5em;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+/*     width: inherit; */
+    height: 23px;
+}
+table#layersDataTable tbody tr td div i {
+    color: #eeeeee;
+}
+
+#layersDataTable tr:not(.selected):hover td div {
+    background: #4cb5d2;
+    background-color: #4cb5d2;
+    color: white;
+}
+#layersDataTable tr:hover td div i.icon-ok {
+    color: #4cb5d2;
+}
+
+.layersDataTableContainer #layersDataTable tr.selected td div {
+    background-color: rgb(42, 170, 230);
+    background: rgb(42, 170, 230);
+    color: #fff;
+}
+#layersDataTable tr td div i.icon-ok.whiteFont {
+    color: white;
+    font-size: 0.9em;
+}
+.layersDataTableContainer .dataTables_scrollHeadInner thead .sorting:after{
+    content: "\f0dc";
+    color: #0271be;
+}
+.layersDataTableContainer .dataTables_scrollHeadInner thead .sorting:after,
+.layersDataTableContainer .dataTables_scrollHeadInner thead .sorting_asc:after,
+.layersDataTableContainer .dataTables_scrollHeadInner thead .sorting_desc:after{
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-size: 0.9em;
+}
+.layersDataTableContainer .dataTables_scrollHeadInner thead .sorting:hover:after,
+#layersDataTable thead .sorting:hover:after,
+.layersDataTableContainer .dataTables_scrollHeadInner thead .sorting_desc:hover:after,
+ #layersDataTable thead .sorting_desc:hover:after,
+ .layersDataTableContainer .dataTables_scrollHeadInner thead .sorting_asc:hover:after,
+  #layersDataTable thead .sorting_asc:hover:after {
+    color: #009AE5;
+}
+.layersDataTableContainer .dataTables_scrollHeadInner thead .sorting_asc:after {
+    content: "\f0de";
+    color: #0271be;
+}
+.layersDataTableContainer .dataTables_scrollHeadInner thead .sorting:hover:after,
+#layersDataTable thead .sorting:hover:after,
+.layersDataTableContainer .dataTables_scrollHeadInner thead .sorting_desc:hover:after,
+ table.dataTable thead .sorting_desc:hover:after,
+ .layersDataTableContainer .dataTables_scrollHeadInner thead .sorting_asc:hover:after,
+  table.dataTable thead .sorting_asc:hover:after {
+    color: #009AE5;
+}
+.layersDataTableContainer .dataTables_scrollHeadInner thead .sorting_desc:after{
+    content: "\f0dd";
+    color: #0271be;
+}
+.layersDataTableContainer .dataTables_scrollHeadInner thead th,
+#layersDataTable thead th {
+    background-image: none !important;
+}
+
+#layersDataTable {
+	margin-bottom : 2em !important;
+}
+#layersDataTable_info {
+    padding-left: 10px;
+    font-size: 0.9em;
+    padding-top: 7px;
+    color: #0271be;
+    margin-bottom:0px;
+}
+ #layersDataTable_wrapper div.dataTables_length{
+	margin-top: 5px;
+}
+#layersDataTable_length label{
+	color: #0271be;
+	padding-left: 3px;
+	margin-bottom: 0px;
+	font-size: 0.9em;
+}
+
+#layersDataTable_length label > select {
+    width: 65px !important;
+    margin-bottom: 0px;
+    height: 25px;
+}
+
+#layersDataTable_filter div.searchDiv {
+    background: #0271be;
+    background-color: #0271be;
+    cursor: pointer;
+    padding: 5px 10px 3px 10px;
+    border-radius: 50%;
+    color: white;
+    display: inline-block;
+    float: right;
+    height: 25px;
+    position: absolute;
+    right: 2.4em;
+}
+#layersDataTable_filter div.refreshDiv {
+    background: #7EAB10;
+    background-color: #7EAB10;
+    cursor: pointer;
+    padding: 5px 10px 3px 10px;
+    border-radius: 50%;
+    color: white;
+    display: inline-block;
+    float: right;
+    height: 25px;
+    position: absolute;
+    right: 0;
+}
+#layersDataTable_filter div.searchDiv:not(.active):hover {
+    background: #009AE5;
+    background-color: #009AE5;
+}
+#layersDataTable_filter div.searchDiv.active {
+    background: #019ad3;
+    background-color: #019ad3;
+}
+#layersDataTable_filter div.searchDiv .icon-search {
+	display:inline-block;
+	-ms-transform: scale(1.2,1.4) !important;
+    -webkit-transform: scale(1.2,1.4) !important;
+    transform: sscale(1.2,1.4) !important;
+}
+#layersDataTable_filter label {
+    display: inline-block;
+}
+#layersDataTable_filter label > input {
+    margin-bottom: -9px !important;
+    margin-right: 3.2em;
+	border-radius: 1em 0 0 1em;
+	display:none;
+}
+#layersDataTable_filter {
+    margin-top: 1.1em;
+    margin-bottom: 1em;
+    width: 250px;
+    height: 30px;
+    position: relative;
+}
+div.dataTables_paginate.paging_full_numbers#layersDataTable_paginate{
+    font-family: FontAwesome;	
+}
+div.dataTables_paginate.paging_full_numbers#layersDataTable_paginate a.paginate_button.disabled {
+	background:#e0e0e0 !important;
+	background-color:#e0e0e0 !important;
+}
+
+div.dataTables_paginate.paging_full_numbers#layersDataTable_paginate a.paginate_button {
+	color: white !important;
+	background: #0271be;
+	background-color: #0271be;
+	border:0px;
+	padding: 2px 15px;
+	margin-top: 6px;
+	font-size: 0.9em;
+	border-radius:0px;
+}
+div.dataTables_paginate.paging_full_numbers#layersDataTable_paginate a.first {
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+div.dataTables_paginate.paging_full_numbers#layersDataTable_paginate a.first:after {
+	content: "\f049";
+}
+div.dataTables_paginate.paging_full_numbers#layersDataTable_paginate a.paginate_button#layersDataTable_previous {
+	background: #0271be;
+	background-color: #0271be;
+	color: white;
+	border:0px;
+}
+div.dataTables_paginate.paging_full_numbers#layersDataTable_paginate a.previous:after {
+	content: "\f04a";
+}
+div.dataTables_paginate.paging_full_numbers#layersDataTable_paginate span a.paginate_button.current {
+	background: rgb(41, 131, 173);
+	background-color: rgb(41, 131, 173);
+	color: white !important;
+	border:0px;
+	cursor : default;
+}
+div.dataTables_paginate.paging_full_numbers#layersDataTable_paginate a.paginate_button#GroupTeamsTableUsers_next {
+	background: #0271be;
+	background-color: #0271be;
+	color: white !important;
+	border:0px;
+}
+.paging_full_numbers#layersDataTable_paginate a.next:after {
+	content: "\f04e";
+}
+div.dataTables_paginate.paging_full_numbers#layersDataTable_paginate a.last {
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+.paging_full_numbers#layersDataTable_paginate a.last:after {
+	content: "\f050";
+}
+div.dataTables_paginate.paging_full_numbers#layersDataTable_paginate a.paginate_button:not(.disabled):hover{
+	border:0px;
+	color: white;
+	background: #4CB5D2 !important;
+	background-color: #4CB5D2 !important;
+}
+.layersDataTableContainer .dataTables_scroll .dataTables_scrollBody{
+	border : none;
+}

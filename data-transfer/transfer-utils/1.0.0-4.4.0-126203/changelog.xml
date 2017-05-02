@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.datatransfer.transfer-utils.1-0-0" date="2014-03-31" >
+			<Change>First release of the component</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="ComputationFactory"
+	targetNamespace="http://gcube-system.org/namespaces/data/analysis/statisticalmanager"
+	xmlns:tns="http://gcube-system.org/namespaces/data/analysis/statisticalmanager"
+	xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+	xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+	xmlns:smtypes="http://gcube-system.org/namespaces/data/analysis/statisticalmanager/types">
+
+	<import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+
+	<types>
+		<xsd:schema
+			targetNamespace="http://gcube-system.org/namespaces/data/analysis/statisticalmanager">
+			<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types"
+				schemaLocation="../gcube/common/core/types/GCUBETypes.xsd" />
+			<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+				schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+
+			<xsd:import
+				namespace="http://gcube-system.org/namespaces/data/analysis/statisticalmanager/types"
+				schemaLocation="SMTypes.xsd" />
+
+			<xsd:complexType name="SMAlgorithmsRequest">
+				<xsd:sequence>
+					<xsd:element name="parameters" type="tns:SMTypeParameter"
+						minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="getAlgorithmsInput" type="tns:SMAlgorithmsRequest" />
+			
+			<xsd:element name="getAlgorithmsUserInput" type="tns:SMAlgorithmsRequest" />
+
+			<xsd:complexType name="SMAlgorithm">
+				<xsd:sequence>
+					<xsd:element name="category" type="xsd:string" />
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="SMAlgorithms">
+				<xsd:sequence>
+					<xsd:element name="list" type="tns:SMAlgorithm"
+						minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="SMGroupedAlgorithms">
+				<xsd:sequence>
+					<xsd:element name="category" type="xsd:string" />
+					<xsd:element name="list" type="tns:SMAlgorithm"
+						minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="SMListGroupedAlgorithms">
+				<xsd:sequence>
+					<xsd:element name="list" type="tns:SMGroupedAlgorithms"
+						minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="getAlgorithmsOutput" type="tns:SMListGroupedAlgorithms" />
+			<xsd:element name="getAlgorithmsUserOutput" type="tns:SMListGroupedAlgorithms" />
+
+
+
+
+
+			<xsd:complexType name="SMTypeParameter">
+				<xsd:sequence>
+					<xsd:element name="name" type="smtypes:StatisticalServiceType" />
+					<xsd:element name="values" type="xsd:string" minOccurs="0"
+						maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="SMParameter">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="defaultValue" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="type" type="tns:SMTypeParameter" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="SMParameters">
+				<xsd:sequence>
+					<xsd:element name="list" type="tns:SMParameter"
+						minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:element name="getAlgorithmParametersInput" type="xsd:string" />
+			<xsd:element name="getAlgorithmParametersOutput" type="tns:SMParameters" />
+			
+			
+<!-- 				<xsd:complexType name="SMTypeOutput"> -->
+<!-- 				<xsd:sequence> -->
+<!-- 					<xsd:element name="name" type="smtypes:StatisticalServiceType" /> -->
+<!-- 					<xsd:element name="values" type="xsd:string" minOccurs="0" -->
+<!-- 						maxOccurs="unbounded" /> -->
+<!-- 				</xsd:sequence> -->
+<!-- 			</xsd:complexType> -->
+
+			<xsd:complexType name="SMOutput">
+				<xsd:sequence>
+					<xsd:element name="name" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="type" type="xsd:string" />
+					<xsd:element name="size" type="xsd:int" />
+					
+				</xsd:sequence>
+			</xsd:complexType>
+
+			
+			
+		<xsd:element name="getAlgorithmOutputsInput" type="xsd:string" />
+			<xsd:element name="getAlgorithmOutputsOutput" type="tns:SMOutput" />	
+			
+			
+			
+			
+			
+			
+			
+
+			
+
+			<xsd:complexType name="SMComputationsRequest">
+				<xsd:complexContent>
+					<xsd:extension base="smtypes:SMPagedRequest">
+						<xsd:sequence>
+							<xsd:element name="parameters" type="tns:SMTypeParameter"
+						minOccurs="0" maxOccurs="unbounded" />
+						</xsd:sequence>
+					</xsd:extension>
+				</xsd:complexContent>
+			</xsd:complexType>
+			<xsd:element name="getComputationsInput" type="tns:SMComputationsRequest" />
+
+			<xsd:complexType name="SMComputations">
+				<xsd:sequence>
+					<xsd:element name="list" type="smtypes:SMComputation"
+						minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="getComputationsOutput" type="tns:SMComputations" />
+			
+			<xsd:element name="getComputationInput" type="xsd:string" />
+			<xsd:element name="getComputationOutput" type="smtypes:SMComputation" />
+
+			<xsd:complexType name="SMComputationConfig">
+				<xsd:sequence>
+					<xsd:element name="parameters" type="smtypes:SMEntries" />
+					<xsd:element name="algorithm" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:complexType name="SMComputationRequest">
+				<xsd:sequence>
+					<xsd:element name="user" type="xsd:string" />
+					<xsd:element name="title" type="xsd:string" />
+					<xsd:element name="description" type="xsd:string" />
+					<xsd:element name="config" type="tns:SMComputationConfig" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="executeComputationInput" type="tns:SMComputationRequest" />
+			<xsd:element name="executeComputationOutput" type="xsd:string" />
+			
+			<xsd:element name="resubmitComputationInput" type="xsd:string" />
+			<xsd:element name="resubmitComputationOutput" type="xsd:string" />
+			
+			<xsd:element name="removeComputationInput" type="xsd:string" />
+			<xsd:element name="removeComputationOutput" type="coretypes:VOID" />
+
+		</xsd:schema>
+	</types>
+	
+
+	<message name="getAlgorithmsInputMessage">
+		<part name="request" element="tns:getAlgorithmsInput" />
+	</message>
+
+	<message name="getAlgorithmsOutputMessage">
+		<part name="response" element="tns:getAlgorithmsOutput" />
+	</message>
+	
+	<message name="getAlgorithmsUserInputMessage">
+		<part name="request" element="tns:getAlgorithmsUserInput" />
+	</message>
+
+	<message name="getAlgorithmsUserOutputMessage">
+		<part name="response" element="tns:getAlgorithmsUserOutput" />
+	</message>
+
+	<message name="getAlgorithmParametersInputMessage">
+		<part name="request" element="tns:getAlgorithmParametersInput" />
+	</message>
+
+	<message name="getAlgorithmParametersOutputMessage">
+		<part name="response" element="tns:getAlgorithmParametersOutput" />
+	</message>
+	
+	
+	
+	
+	<message name="getAlgorithmOutputsInputMessage">
+		<part name="request" element="tns:getAlgorithmOutputsInput" />
+	</message>
+
+	<message name="getAlgorithmOutputsOutputMessage">
+		<part name="response" element="tns:getAlgorithmOutputsOutput" />
+	</message>
+	
+	
+	
+
+	<message name="getComputationsInputMessage">
+		<part name="request" element="tns:getComputationsInput" />
+	</message>
+
+	<message name="getComputationsOutputMessage">
+		<part name="response" element="tns:getComputationsOutput" />
+	</message>
+	
+	<message name="getComputationInputMessage">
+		<part name="request" element="tns:getComputationInput" />
+	</message>
+
+	<message name="getComputationOutputMessage">
+		<part name="response" element="tns:getComputationOutput" />
+	</message>
+
+	<message name="executeComputationInputMessage">
+		<part name="requestComputation" element="tns:executeComputationInput" />
+	</message>
+
+	<message name="executeComputationOutputMessage">
+		<part name="responseComputation" element="tns:executeComputationOutput" />
+	</message>
+	
+	<message name="resubmitComputationInputMessage">
+		<part name="requestComputation" element="tns:resubmitComputationInput" />
+	</message>
+
+	<message name="resubmitComputationOutputMessage">
+		<part name="responseComputation" element="tns:resubmitComputationOutput" />
+	</message>
+	
+	<message name="removeComputationInputMessage">
+		<part name="requestRemoveComputation" element="tns:removeComputationInput" />
+	</message>
+
+	<message name="removeComputationOutputMessage">
+		<part name="responseRemoveComputation" element="tns:removeComputationOutput" />
+	</message>
+
+	<portType name="ComputationFactoryPortType">
+
+		<operation name="executeComputation">
+			<input message="tns:executeComputationInputMessage" />
+			<output message="tns:executeComputationOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+		
+		<operation name="resubmitComputation">
+			<input message="tns:resubmitComputationInputMessage" />
+			<output message="tns:resubmitComputationOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+
+
+
+
+		<operation name="getAlgorithmParameters">
+			<input message="tns:getAlgorithmParametersInputMessage" />
+			<output message="tns:getAlgorithmParametersOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+		
+	
+		
+		<operation name="getAlgorithmOutputs">
+			<input message="tns:getAlgorithmOutputsInputMessage" />
+			<output message="tns:getAlgorithmOutputsOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+
+
+
+
+
+		<operation name="getAlgorithms">
+			<input message="tns:getAlgorithmsInputMessage" />
+			<output message="tns:getAlgorithmsOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+
+		<operation name="getAlgorithmsUser">
+			<input message="tns:getAlgorithmsUserInputMessage" />
+			<output message="tns:getAlgorithmsUserOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+		
+		
+		<operation name="getComputations">
+			<input message="tns:getComputationsInputMessage" />
+			<output message="tns:getComputationsOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+		
+		<operation name="getComputation">
+			<input message="tns:getComputationInputMessage" />
+			<output message="tns:getComputationOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+		
+		<operation name="removeComputation">
+			<input message="tns:removeComputationInputMessage" />
+			<output message="tns:removeComputationOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+	</portType>
+
+</definitions>

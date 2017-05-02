@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ws.usermanagement.vomanagement.gcube.org/" xmlns:tns="http://ws.usermanagement.vomanagement.gcube.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="GroupRetrievalFault" type="tns:GroupRetrievalFault"/>
+
+  <xs:element name="RoleRetrievalFault" type="tns:RoleRetrievalFault"/>
+
+  <xs:element name="UserManagementPortalException" type="tns:UserManagementPortalException"/>
+
+  <xs:element name="UserManagementSystemException" type="tns:UserManagementSystemException"/>
+
+  <xs:element name="UserRetrievalFault" type="tns:UserRetrievalFault"/>
+
+  <xs:element name="getMembershipRequestComment" type="tns:getMembershipRequestComment"/>
+
+  <xs:element name="getMembershipRequestCommentResponse" type="tns:getMembershipRequestCommentResponse"/>
+
+  <xs:element name="getMembershipRequests" type="tns:getMembershipRequests"/>
+
+  <xs:element name="getMembershipRequestsResponse" type="tns:getMembershipRequestsResponse"/>
+
+  <xs:element name="getUser" type="tns:getUser"/>
+
+  <xs:element name="getUserByScreenName" type="tns:getUserByScreenName"/>
+
+  <xs:element name="getUserByScreenNameResponse" type="tns:getUserByScreenNameResponse"/>
+
+  <xs:element name="getUserCustomAttributeByName" type="tns:getUserCustomAttributeByName"/>
+
+  <xs:element name="getUserCustomAttributeByNameResponse" type="tns:getUserCustomAttributeByNameResponse"/>
+
+  <xs:element name="getUserCustomAttributes" type="tns:getUserCustomAttributes"/>
+
+  <xs:element name="getUserCustomAttributesResponse" type="tns:getUserCustomAttributesResponse"/>
+
+  <xs:element name="getUserId" type="tns:getUserId"/>
+
+  <xs:element name="getUserIdResponse" type="tns:getUserIdResponse"/>
+
+  <xs:element name="getUserResponse" type="tns:getUserResponse"/>
+
+  <xs:element name="listPendingUsersByGroup" type="tns:listPendingUsersByGroup"/>
+
+  <xs:element name="listPendingUsersByGroupResponse" type="tns:listPendingUsersByGroupResponse"/>
+
+  <xs:element name="listUnregisteredUsersByGroup" type="tns:listUnregisteredUsersByGroup"/>
+
+  <xs:element name="listUnregisteredUsersByGroupResponse" type="tns:listUnregisteredUsersByGroupResponse"/>
+
+  <xs:element name="listUsers" type="tns:listUsers"/>
+
+  <xs:element name="listUsersAndGroupsByRole" type="tns:listUsersAndGroupsByRole"/>
+
+  <xs:element name="listUsersAndGroupsByRoleResponse" type="tns:listUsersAndGroupsByRoleResponse"/>
+
+  <xs:element name="listUsersAndRolesByGroup" type="tns:listUsersAndRolesByGroup"/>
+
+  <xs:element name="listUsersAndRolesByGroupResponse" type="tns:listUsersAndRolesByGroupResponse"/>
+
+  <xs:element name="listUsersByGroup" type="tns:listUsersByGroup"/>
+
+  <xs:element name="listUsersByGroupAndRole" type="tns:listUsersByGroupAndRole"/>
+
+  <xs:element name="listUsersByGroupAndRoleResponse" type="tns:listUsersByGroupAndRoleResponse"/>
+
+  <xs:element name="listUsersByGroupResponse" type="tns:listUsersByGroupResponse"/>
+
+  <xs:element name="listUsersResponse" type="tns:listUsersResponse"/>
+
+  <xs:complexType name="listUsers">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="listUsersResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:userModel" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="userModel">
+    <xs:sequence>
+      <xs:element name="customAttrsMap">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="entry" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="key" minOccurs="0" type="xs:string"/>
+                  <xs:element name="value" minOccurs="0" type="xs:string"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="email" type="xs:string" minOccurs="0"/>
+      <xs:element name="firstname" type="xs:string" minOccurs="0"/>
+      <xs:element name="fullname" type="xs:string" minOccurs="0"/>
+      <xs:element name="lastname" type="xs:string" minOccurs="0"/>
+      <xs:element name="screenName" type="xs:string" minOccurs="0"/>
+      <xs:element name="userId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UserManagementSystemException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UserRetrievalFault">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listUsersAndGroupsByRole">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listUsersAndGroupsByRoleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:userGroupListCoupleWrapper" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="userGroupListCoupleWrapper">
+    <xs:sequence>
+      <xs:element name="groupModels" type="tns:groupModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="userModel" type="tns:userModel" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="groupModel">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="groupId" type="xs:string" minOccurs="0"/>
+      <xs:element name="groupName" type="xs:string" minOccurs="0"/>
+      <xs:element name="logoId" type="xs:long"/>
+      <xs:element name="parentGroupId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UserManagementPortalException">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RoleRetrievalFault">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listUsersByGroup">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listUsersByGroupResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:userModel" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMembershipRequestComment">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+      <xs:element name="arg1" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMembershipRequestCommentResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GroupRetrievalFault">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listUsersAndRolesByGroup">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listUsersAndRolesByGroupResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:userRoleListCoupleWrapper" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="userRoleListCoupleWrapper">
+    <xs:sequence>
+      <xs:element name="roleModels" type="tns:roleModel" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="userModel" type="tns:userModel" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="roleModel">
+    <xs:sequence>
+      <xs:element name="completeName" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="roleId" type="xs:string" minOccurs="0"/>
+      <xs:element name="roleName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listUsersByGroupAndRole">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+      <xs:element name="arg1" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listUsersByGroupAndRoleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:userModel" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getUser">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getUserResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:userModel" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getUserId">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getUserIdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listUnregisteredUsersByGroup">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listUnregisteredUsersByGroupResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:userModel" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getUserCustomAttributes">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getUserCustomAttributesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:stringCoupleWrapper" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="stringCoupleWrapper">
+    <xs:sequence>
+      <xs:element name="key" type="xs:string" minOccurs="0"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMembershipRequests">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMembershipRequestsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:userModel" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getUserByScreenName">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getUserByScreenNameResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:userModel" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listPendingUsersByGroup">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listPendingUsersByGroupResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:userModel" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getUserCustomAttributeByName">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+      <xs:element name="arg1" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getUserCustomAttributeByNameResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

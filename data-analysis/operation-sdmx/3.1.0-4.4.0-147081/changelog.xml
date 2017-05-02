@@ -1,0 +1,20 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-analysis.operation-sdmx.3-1-0" date="2017-04-04"> 
+		<Change>Support for secure Fusion Registry</Change>
+		<Change>Downloads Fusion Registry credentials from Information System</Change>
+		<Change>Data Structure export from Templates</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-sdmx.3-0-1" date="2017-26-02"> 
+		<Change>Data Structure export added</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-sdmx.2-1-1" date="2015-05-21"> 
+		<Change>Integration fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-sdmx.2-0-0" date="2013-11-14"> 
+		<Change>Ported to model 3.0</Change>
+		<Change>Updated to latest worker API</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-sdmx.1-0-0" date="2013-10-25"> 
+		<Change>First version</Change>
+	</Changeset>
+</ReleaseNotes>

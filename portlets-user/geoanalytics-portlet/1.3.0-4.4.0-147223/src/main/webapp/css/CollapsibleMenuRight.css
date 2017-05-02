@@ -1,0 +1,1257 @@
+/*********************************************** panel ***********************************************************/
+div#DecisionSupportSystem div#collapsibleMenuRight {
+    /* position: absolute; */
+    /* max-height: 96%; */
+    /* top: 2%; */
+    right: 2%;
+    height: 700px;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButtonClosed {
+ 	background: #fff;
+ 	background-color: #fff;
+ 	margin-left: 97.7%;
+ 	height: 50px;
+ 	width: 18px;
+ 	border: 2px solid #e5e5e5;
+ 	display: inline-block;
+ 	z-index: 33;
+ 	position: absolute;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton {
+ 	background: #fff;
+ 	background-color: #fff;
+ 	top: 0px;
+ 	height: 55px;
+ 	width: 22px;
+ 	border: 2px solid #e5e5e5;
+ 	display: none;
+}
+div#DecisionSupportSystem div#functionsPanel {
+	background: #fff;
+	background-color: #fff;
+	/* padding: 4px; */
+	/* position: absolute; */
+	/* overflow-y: scroll; */
+	height: 100%;
+	width: 85%;
+	left: 1.6%;
+}
+div#DecisionSupportSystem div#collapsibleMenuRight.shown {/* right: 40px; */}
+div#DecisionSupportSystem div#functionsPanel {
+	display:none;
+	/* padding: 20px; */
+}
+div#DecisionSupportSystem div#collapsibleMenuRight.shown div#functionsPanel {
+	/* position: absolute; */
+	/* z-index: 33; */
+	display: inline-block;
+	padding-top: 0px;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightContainer {
+	height: 100%;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightContainer.rightButtonClicked {
+	width: 93%;
+}
+/***************************************** top section, chosen function ***********************************************/
+div#DecisionSupportSystem h4#chosenFunctionName{
+	margin: 0px;
+}
+div#DecisionSupportSystem div.infoSquare{
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	border: 2px solid #e5e5e5;
+	padding:8%;
+}
+div#DecisionSupportSystem span#chosenFunctionNameSubHeading {
+	color: #e5e5e5;
+}
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer {
+	background: RGB(255,255, 255);
+	background-color: RGB(255,255, 255);
+	margin: 0px;
+	padding: 0px;
+}
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer div#chosenFunctionGeneralInfoContainer,
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer div#chosenFunctionDescriptionContainer,
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer div#levelOfDetailContainer {
+	padding: 20px;
+}
+div#DecisionSupportSystem div.accordion {
+	height: 90%;
+	/* overflow-x: hidden; */
+}
+/*********************************************** level of detail *****************************************************/
+div#DecisionSupportSystem div.levelOfDetailSubHeading {
+	text-align: center;
+	color: #e5e5e5;
+	margin-left: -30px;
+}
+div#DecisionSupportSystem div.levelOfDetailHeadingContainer {
+	padding: 20px 0px 20px 20px;
+}
+div#DecisionSupportSystem h5.chooseSomeAttributeTitle {
+	color: rgb(2,113,190);
+	margin: 0px;
+}
+div#DecisionSupportSystem div.chooseSomeAttributeTitleSubtext {
+	color: rgb(166,166,166);
+}
+div#DecisionSupportSystem i.fa.fa-caret-down{
+	margin-left: 5px;
+}
+div#DecisionSupportSystem div.exportButtonContainer {
+	text-align: center;
+}
+div#DecisionSupportSystem div.exportButtonContainer button {
+	padding: 7px;
+	/* margin-right: 10px; */
+	border-radius: 8px;
+	border: 0px;
+}
+div#DecisionSupportSystem button.exportButton {
+	color: rgb(166,166,166);
+	background-color: rgb(217,217,217);
+	background: rgb(217,217,217);
+}
+div#DecisionSupportSystem button.runFunctionButton {
+	color: #fff;
+	background-color: RGB(2, 113, 190);
+	background: RGB(2, 113, 190);
+}
+div#DecisionSupportSystem button i {
+	font-size: 18px;
+	color: rgb(166,166,166);
+}
+div#DecisionSupportSystem select.functionAttributesDropdown {
+	border-radius: 5px;
+	padding: 0 10px;
+	height: 40px;
+}
+/******************************************** level of detail slider *************************************************/
+div#DecisionSupportSystem div.levelOfDetailSliderElement {
+	padding-left: 15px
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range] {
+  -webkit-appearance: none;
+  margin: 0px 0;
+  width: 100%;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]:focus {
+  outline: none;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #74A9D8;
+  background-color: #74A9D8;
+  border-radius: 30px;
+  border: 0px solid #010101;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 5px #000031;
+  border: 0px solid #00001E;
+  height: 20px;
+  width: 20px;
+  border-radius: 15px;
+  background: #FFFFFF;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7.5px;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]:focus::-webkit-slider-runnable-track {
+  background: #74A9D8;
+  background-color: #74A9D8;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-moz-range-track {
+  width: 100%;
+  height: 15px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #74A9D8;
+  background-color: #74A9D8;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 5px #000031;
+  border: 4px solid #00001E;
+  height: 26px;
+  width: 26px;
+  border-radius: 15px;
+  background: #FFFFFF;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-ms-track {
+  width: 100%;
+  height: 15px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-ms-fill-lower {
+  background: #74A9D8;
+  background-color: #74A9D8;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-ms-fill-upper {
+  background: gray;
+  background-color: gray;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 5px #000031;
+  border: 4px solid #00001E;
+  height: 26px;
+  width: 26px;
+  border-radius: 15px;
+  background: #FFFFFF;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]:focus::-ms-fill-lower {
+  background: #74A9D8;
+  background-color: #74A9D8;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]:focus::-ms-fill-upper {
+  background: #fff;
+  background: #fff;
+}
+/****************************************** choose attribute dropdown ************************************************/
+div#DecisionSupportSystem div.chooseSomeAttributeTitleAndSubtextContainer {
+	padding: 20px;
+}
+div#DecisionSupportSystem div.functionAtrributesDropdownContainer {
+	margin-top: 20px;
+}
+/*********************************************** area of interest ****************************************************/
+div#DecisionSupportSystem div.levelOfDetailSubHeading {
+	text-align: center;
+	color: #e5e5e5;
+}
+div#DecisionSupportSystem input.viewPortRadios {
+	visibility: visible;
+	margin-right: 5px;
+	margin-top: 0px;
+	width: 17px;
+	height: 17px;
+}
+div#DecisionSupportSystem label.viewportLabels {
+	display:inline;
+	margin-right: 25px;
+}
+div#DecisionSupportSystem div#functionRunAndExportButtons button {
+	background-color: #fff;
+	background: #fff;
+	border-radius: 30px;
+	border: 2px solid #e5e5e5;
+}
+div#DecisionSupportSystem div#functionRunAndExportButtons button > h4 {
+	margin: 5px;
+}
+/********************************************* available functions ***************************************************/
+div#DecisionSupportSystem h4#internalAvailableFunctionName {
+	margin: 0px;
+}
+div#DecisionSupportSystem div.internalAvailableFunctionContainer {
+	padding: 20px;
+	background: green;
+	background-color: green;
+	margin: 0px 5px 5px 0px;
+}
+div#DecisionSupportSystem span#internalAvailableFunctionNameSubHeading {
+	color: #e5e5e5;
+}
+div#DecisionSupportSystem h4.internalAvailableFunctionName {
+	margin: 0px;
+	color: #fff;
+}
+/*********************************************** scrollbar ***********************************************************/
+div#DecisionSupportSystem div.accordion::-webkit-scrollbar-track {
+	background-color: #fff;
+}
+div#DecisionSupportSystem div.accordion::-webkit-scrollbar-corner {
+	background-color: #fff;
+}
+div#DecisionSupportSystem div.accordion::-webkit-scrollbar-thumb {
+	background-color: #e5e5e5;
+}
+/******************************************* Side menus arrows *******************************************************/
+div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-left,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-left-border {
+	display : initial;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-right,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-right-border {
+	display : none;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-left,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-left-border {
+	display: none;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-right,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-right-border {
+	display: initial;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton{
+	float: right;
+	margin-right: 12%;
+}
+div#DecisionSupportSystem  div#collapsibleMenuRightButton.clicked {
+	/* float: left; */
+	/* margin: 0px; */
+	z-index: 33;
+	position: absolute;
+	display: initial;
+}
+/*********************************************** accordion ***********************************************************/
+div#DecisionSupportSystem div.accordion-heading{
+	background: RGB(2, 113, 190);
+	background-color: RGB(2, 113, 190);
+	position: relative;
+}
+div#DecisionSupportSystem h4.chosenFunctionName {
+	color:RGB(255,255,255);
+	margin:0px;
+}
+div#DecisionSupportSystem span.chosenFunctionNameSubHeading {
+	color:RGB(157,195,230);
+}
+div#DecisionSupportSystem a.accordion-toggle:hover{
+	font-weight: normal;
+}
+div#DecisionSupportSystem div.accordion-heading.clicked:before,
+div#DecisionSupportSystem div.accordion-heading.clicked:after{
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid blue;
+	bottom: -10px;
+	content: '';
+	left: 50%;
+	margin-left: -20px;
+	position: absolute;
+	color: #fff;
+	pointer-events: none;
+}/*********************************************** panel ***********************************************************/
+div#DecisionSupportSystem div#collapsibleMenuRight {
+    /* position: absolute; */
+    /* max-height: 96%; */
+    /* top: 2%; */
+    /* right: 2%; */
+    height: 700px;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButtonClosed {
+ 	background: #fff;
+ 	background-color: #fff;
+ 	margin-left: 97.7%;
+ 	height: 50px;
+ 	width: 18px;
+ 	border: 2px solid #e5e5e5;
+ 	display: inline-block;
+ 	z-index: 33;
+ 	position: absolute;
+ }
+div#DecisionSupportSystem div#collapsibleMenuRightButton {
+ 	background: #fff;
+ 	background-color: #fff;
+ 	top: 0px;
+ 	height: 55px;
+ 	width: 22px;
+ 	border: 2px solid #e5e5e5;
+ 	display: none;
+ }
+div#DecisionSupportSystem div#functionsPanel {
+	background: #fff;
+	background-color: #fff;
+	/* padding: 4px; */
+	/* position: absolute; */
+	/* overflow-y: scroll; */
+	/* overflow-x: hidden; */
+	height: 100%;
+	width: 85%;
+	left: 1.6%;
+}
+div#DecisionSupportSystem div#collapsibleMenuRight.shown {/* right: 40px; */}
+div#DecisionSupportSystem div#functionsPanel {
+	display:none;
+	/* padding: 20px; */
+}
+div#DecisionSupportSystem div#collapsibleMenuRight.shown div#functionsPanel {
+	/* position: absolute; */
+	/* z-index: 33; */
+	/* display: inline-block; */
+	padding-top: 0px;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightContainer {
+	height: 100%;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightContainer.rightButtonClicked {
+	width: 93%;
+}
+/***************************************** top section, chosen function ***********************************************/
+div#DecisionSupportSystem h4#chosenFunctionName{
+	margin: 0px;
+}
+div#DecisionSupportSystem div.infoSquare{
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	border: 2px solid #e5e5e5;
+	padding:8%;
+}
+div#DecisionSupportSystem span#chosenFunctionNameSubHeading {
+	color: #e5e5e5;
+}
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer {
+	background: RGB(255,255, 255);
+	background-color: RGB(255,255, 255);
+	margin: 0px;
+	padding: 0px;
+}
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer div#chosenFunctionGeneralInfoContainer,
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer div#chosenFunctionDescriptionContainer,
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer div#levelOfDetailContainer {
+	padding: 20px;
+}
+
+/*********************************************** level of detail *****************************************************/
+div#DecisionSupportSystem div.levelOfDetailSubHeading {
+	text-align: center;
+	color: #e5e5e5;
+	margin-left: 5px;
+}
+div#DecisionSupportSystem div.levelOfDetailHeadingContainer {
+	padding: 20px 0px 20px 20px;
+}
+/****************************************** choose attribute dropdown ************************************************/
+div#DecisionSupportSystem div.chooseSomeAttributeTitleAndSubtextContainer {
+	padding: 20px;
+}
+div#DecisionSupportSystem div.functionAtrributesDropdownContainer {
+	margin-top: 20px;
+}
+/*********************************************** area of interest ****************************************************/
+div#DecisionSupportSystem div.levelOfDetailSubHeading {
+	text-align: center;
+	color: RGB(89,89,89);
+}
+div#DecisionSupportSystem input.viewPortRadios {
+	visibility: visible;
+	margin-right: 5px;
+	margin-top: 0px;
+	width: 17px;
+	height: 17px;
+}
+div#DecisionSupportSystem label.viewportLabels {
+	display:inline;
+	margin-right: 25px;
+}
+div#DecisionSupportSystem div#functionRunAndExportButtons button {
+	background-color: #fff;
+	background: #fff;
+	border-radius: 30px;
+	border: 2px solid #e5e5e5;
+}
+div#DecisionSupportSystem div#functionRunAndExportButtons button > h4 {
+	margin: 5px;
+}
+/********************************************* available functions ***************************************************/
+div#DecisionSupportSystem h4#internalAvailableFunctionName {
+	margin: 0px;
+}
+div#DecisionSupportSystem div.internalAvailableFunctionContainer {
+	padding: 20px;
+	background: green;
+	background-color: green;
+	margin: 0px 5px 5px 0px;
+}
+div#DecisionSupportSystem span#internalAvailableFunctionNameSubHeading {
+	color: #e5e5e5;
+}
+div#DecisionSupportSystem h4.internalAvailableFunctionName {
+	margin: 0px;
+	color: #fff;
+}
+/*********************************************** scrollbar ***********************************************************/
+div#DecisionSupportSystem div#functionsPanel::-webkit-scrollbar-track {
+	background-color: #fff;
+}
+div#DecisionSupportSystem div#functionsPanel::-webkit-scrollbar-corner {
+	background-color: #fff;
+}
+div#DecisionSupportSystem div#functionsPanel::-webkit-scrollbar-thumb {
+	background-color: #e5e5e5;
+}
+/******************************************* Side menus arrows *******************************************************/
+div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-left,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-left-border {
+	display : initial;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-right,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-right-border {
+	display : none;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-left,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-left-border {
+	display: none;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-right,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-right-border {
+	display: initial;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton{
+	float: right;
+	margin-right: 12%;
+}
+div#DecisionSupportSystem  div#collapsibleMenuRightButton.clicked {
+	/* float: left; */
+	/* margin: 0px; */
+	z-index: 33;
+	position: absolute;
+	display: initial;
+}
+/*********************************************** accordion ***********************************************************/
+div#DecisionSupportSystem div.accordion-heading{
+	background: RGB(2, 113, 190);
+	background-color: RGB(2, 113, 190);
+	/* padding: 10px 10px 20px 10px; */
+	position: relative;
+}
+div#DecisionSupportSystem div.accordion-heading:hover{
+	background: RGB(76, 181,210);
+	background-color: RGB(76, 181,210);
+}
+div#DecisionSupportSystem div.accordion-heading.clicked{
+	background: RGB(1,154,211);
+	background-color: RGB(1,154,211);
+}
+div#DecisionSupportSystem h4.chosenFunctionName {
+	color:RGB(255,255,255);
+	margin:0px;
+}
+div#DecisionSupportSystem span.chosenFunctionNameSubHeading {
+	color:RGB(157,195,230);
+}
+div#DecisionSupportSystem div.accordion-heading.clicked span.chosenFunctionNameSubHeading {
+	color: RGB(222,235,247,);
+}
+div#DecisionSupportSystem a.accordion-toggle:hover{
+	font-weight: normal;
+}
+div#DecisionSupportSystem div.accordion-heading.clicked:before,
+div#DecisionSupportSystem div.accordion-heading.clicked:after{
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid RGB(1,154,211);
+	bottom: -20px;
+	content: '';
+	left: 50%;
+	margin-left: -20px;
+	position: absolute;
+	color: #fff;
+	pointer-events: none;
+	z-index: 123;
+}
+div#DecisionSupportSystem div.accordion-heading{
+	overflow: visible;
+}
+div#DecisionSupportSystem a.accordion-toggle {
+	/* padding: 25px; */
+}
+/******************************************* Admin settings button ***************************************************/
+div#DecisionSupportSystem div#adminSettingsButtonContainer{
+	position: absolute;
+	bottom: 0%;
+	z-index: 123;
+	/* padding: 10px; */
+}
+div#DecisionSupportSystem button#adminSettingsButton {
+	background-color: #fff;
+	background: #fff;
+	border-radius: 30px;
+	border: 2px solid #e5e5e5;
+	font-size: 17px;
+	position: absolute;
+	z-index: 33;
+}
+div#DecisionSupportSystem button#adminSettingsButton i{
+	margin-right: 15px
+}
+div#DecisionSupportSystem div#gearContainer {
+	display: inline-block;
+}
+div#DecisionSupportSystem div#gearContainer {
+	display: inline-block;
+	zoom: 2;
+	color: #fff;
+}
+div#DecisionSupportSystem div#setting {
+	display: inline-block;
+	color: #fff;
+	margin-left: 10px;
+	padding-top: 2px;
+	position: absolute;
+}
+div#DecisionSupportSystem div#adminSettingsButtonContainer {
+	background-color: RGB(2, 113, 190);
+	background: RGB(2, 113, 190);
+	margin-left: 0px;
+	margin-top: 10px;
+	width: 95%;
+	padding: 20px 20px;
+	position: absolute;
+	bottom: 0%;
+	cursor: pointer;
+}/*********************************************** panel ***********************************************************/
+div#DecisionSupportSystem div#collapsibleMenuRight {
+    /* position: absolute; */
+    /* max-height: 96%; */
+    /* top: 2%; */
+    /* right: 2%; */
+    height: 700px;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButtonClosed {
+ 	background: #fff;
+ 	background-color: #fff;
+ 	margin-left: 97.7%;
+ 	height: 50px;
+ 	width: 18px;
+ 	border: 2px solid #e5e5e5;
+ 	display: inline-block;
+ 	z-index: 33;
+ 	position: absolute;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton {
+ 	background: #fff;
+ 	background-color: #fff;
+ 	top: 0px;
+ 	height: 55px;
+ 	width: 22px;
+ 	border: 2px solid #e5e5e5;
+ 	display: none;
+}
+div#DecisionSupportSystem div#functionsPanel {
+	background: #fff;
+	background-color: #fff;
+	/* padding: 4px; */
+	/* position: absolute; */
+	/* overflow-y: scroll; */
+	height: 100%;
+	width: 85%;
+	left: 1.6%;
+}
+div#DecisionSupportSystem div#collapsibleMenuRight.shown {/* right: 40px; */}
+div#DecisionSupportSystem div#functionsPanel {
+	display:none;
+	/* padding: 20px; */
+}
+div#DecisionSupportSystem div#collapsibleMenuRight.shown div#functionsPanel {
+	/* position: absolute; */
+	/* z-index: 33; */
+	/* display: inline-block; */
+	padding-top: 0px;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightContainer {
+	height: 100%;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightContainer.rightButtonClicked {
+	width: 93%;
+}
+/***************************************** top section, chosen function ***********************************************/
+div#DecisionSupportSystem h4#chosenFunctionName{
+	margin: 0px;
+}
+div#DecisionSupportSystem div.infoSquare{
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	border: 2px solid #e5e5e5;
+	padding:8%;
+}
+div#DecisionSupportSystem span#chosenFunctionNameSubHeading {
+	color: #e5e5e5;
+}
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer {
+	background: RGB(255,255, 255);
+	background-color: RGB(255,255, 255);
+	margin: 0px;
+	padding: 0px;
+}
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer div#chosenFunctionGeneralInfoContainer,
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer div#chosenFunctionDescriptionContainer,
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer div#levelOfDetailContainer {
+	padding: 20px;
+}
+div#DecisionSupportSystem div.accordion {
+	height: 90%;
+	/* overflow-x: hidden; */
+}
+/*********************************************** level of detail *****************************************************/
+div#DecisionSupportSystem div.levelOfDetailSubHeading {
+	text-align: center;
+	color: #e5e5e5;
+	margin-left: -30px;
+}
+div#DecisionSupportSystem div.levelOfDetailHeadingContainer {
+	padding: 20px 0px 20px 20px;
+}
+div#DecisionSupportSystem h5.chooseSomeAttributeTitle {
+	color: rgb(2,113,190);
+	margin: 0px;
+}
+div#DecisionSupportSystem div.chooseSomeAttributeTitleSubtext {
+	color: rgb(166,166,166);
+}
+div#DecisionSupportSystem i.fa.fa-caret-down{
+	margin-left: 5px;
+	/* float: right; */
+}
+div#DecisionSupportSystem div.exportButtonContainer {
+	text-align: center;
+}
+div#DecisionSupportSystem div.exportButtonContainer button {
+	padding: 7px;
+	/* margin-right: 10px; */
+	border-radius: 8px;
+	border: 0px;
+	font-size: 14px;
+	white-space: normal;
+}
+div#DecisionSupportSystem button.exportButton {
+	color: rgb(166,166,166);
+	background-color: rgb(217,217,217);
+	background: rgb(217,217,217);
+}
+div#DecisionSupportSystem button.runFunctionButton {
+	color: #fff;
+	background-color: RGB(2, 113, 190);
+	background: RGB(2, 113, 190);
+}
+div#DecisionSupportSystem button i {
+	font-size: 18px;
+	color: rgb(166,166,166);
+}
+div#DecisionSupportSystem select.functionAttributesDropdown {
+	border-radius: 5px;
+	padding: 0 10px;
+	height: 40px;
+}
+.geoanalytics-wrapper-portlet #sampleModel .chooseLayer2 input{
+	padding: 8px 0;
+    border-radius: 7px;
+    border: 1px solid rgb(204, 204, 204);
+}
+/******************************************** level of detail slider *************************************************/
+div#DecisionSupportSystem div.levelOfDetailSliderElement {
+	padding-left: 15px
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range] {
+  -webkit-appearance: none;
+  margin: 0px 0;
+  width: 100%;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]:focus {
+  outline: none;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #74A9D8;
+  background-color: #74A9D8;
+  border-radius: 30px;
+  border: 0px solid #010101;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 5px #000031;
+  border: 0px solid #00001E;
+  height: 20px;
+  width: 20px;
+  border-radius: 15px;
+  background: #FFFFFF;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7.5px;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]:focus::-webkit-slider-runnable-track {
+  background: #74A9D8;
+  background-color: #74A9D8;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-moz-range-track {
+  width: 100%;
+  height: 15px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #74A9D8;
+  background-color: #74A9D8;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 5px #000031;
+  border: 4px solid #00001E;
+  height: 26px;
+  width: 26px;
+  border-radius: 15px;
+  background: #FFFFFF;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-ms-track {
+  width: 100%;
+  height: 15px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-ms-fill-lower {
+  background: #74A9D8;
+  background-color: #74A9D8;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-ms-fill-upper {
+  background: gray;
+  background-color: gray;
+  border: 0px solid #010101;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 5px #000031;
+  border: 4px solid #00001E;
+  height: 26px;
+  width: 26px;
+  border-radius: 15px;
+  background: #FFFFFF;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]:focus::-ms-fill-lower {
+  background: #74A9D8;
+  background-color: #74A9D8;
+}
+div#DecisionSupportSystem input.levelOfDetailSlider[type=range]:focus::-ms-fill-upper {
+  background: #fff;
+  background: #fff;
+}
+/****************************************** choose attribute dropdown ************************************************/
+div#DecisionSupportSystem div.chooseSomeAttributeTitleAndSubtextContainer {
+	padding: 20px;
+}
+div#DecisionSupportSystem div.functionAtrributesDropdownContainer {
+	margin-top: 20px;
+}
+/*********************************************** area of interest ****************************************************/
+div#DecisionSupportSystem div.levelOfDetailSubHeading {
+	text-align: center;
+	color: #e5e5e5;
+}
+div#DecisionSupportSystem input.viewPortRadios {
+	visibility: visible;
+	margin-right: 5px;
+	margin-top: 0px;
+	width: 17px;
+	height: 17px;
+}
+div#DecisionSupportSystem label.viewportLabels {
+	display:inline;
+	margin-right: 25px;
+}
+div#DecisionSupportSystem div#functionRunAndExportButtons button {
+	background-color: #fff;
+	background: #fff;
+	border-radius: 30px;
+	border: 2px solid #e5e5e5;
+}
+div#DecisionSupportSystem div#functionRunAndExportButtons button > h4 {
+	margin: 5px;
+}
+/********************************************* available functions ***************************************************/
+div#DecisionSupportSystem h4#internalAvailableFunctionName {
+	margin: 0px;
+}
+div#DecisionSupportSystem div.internalAvailableFunctionContainer {
+	padding: 20px;
+	background: green;
+	background-color: green;
+	margin: 0px 5px 5px 0px;
+}
+div#DecisionSupportSystem span#internalAvailableFunctionNameSubHeading {
+	color: #e5e5e5;
+}
+div#DecisionSupportSystem h4.internalAvailableFunctionName {
+	margin: 0px;
+	color: #fff;
+}
+/*********************************************** scrollbar ***********************************************************/
+div#DecisionSupportSystem div.accordion::-webkit-scrollbar-track {
+	background-color: #fff;
+}
+div#DecisionSupportSystem div.accordion::-webkit-scrollbar-corner {
+	background-color: #fff;
+}
+div#DecisionSupportSystem div.accordion::-webkit-scrollbar-thumb {
+	background-color: #e5e5e5;
+}
+/******************************************* Side menus arrows *******************************************************/
+div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-left,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-left-border {
+	display : initial;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-right,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-right-border {
+	display : none;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-left,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-left-border {
+	display: none;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-right,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-right-border {
+	display: initial;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton{
+	float: right;
+	margin-right: 12%;
+}
+div#DecisionSupportSystem  div#collapsibleMenuRightButton.clicked {
+	/* float: left; */
+	/* margin: 0px; */
+	z-index: 33;
+	position: absolute;
+	display: initial;
+}
+/*********************************************** accordion ***********************************************************/
+div#DecisionSupportSystem div.accordion-heading{
+	background: RGB(2, 113, 190);
+	background-color: RGB(2, 113, 190);
+	position: relative;
+}
+div#DecisionSupportSystem h4.chosenFunctionName {
+	color:RGB(255,255,255);
+	margin:0px;
+}
+div#DecisionSupportSystem span.chosenFunctionNameSubHeading {
+	color:RGB(157,195,230);
+}
+div#DecisionSupportSystem a.accordion-toggle:hover{
+	font-weight: normal;
+}
+div#DecisionSupportSystem div.accordion-heading.clicked:before,
+div#DecisionSupportSystem div.accordion-heading.clicked:after{
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid blue;
+	bottom: -10px;
+	content: '';
+	left: 50%;
+	margin-left: -20px;
+	position: absolute;
+	color: #fff;
+	pointer-events: none;
+}/*********************************************** panel ***********************************************************/
+div#DecisionSupportSystem div#collapsibleMenuRight {
+    /* position: absolute; */
+    /* max-height: 96%; */
+    /* top: 2%; */
+    /* right: 2%; */
+    height: 100%;
+    width: 24%;
+    float: left;
+    margin-left: 2px !important;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButtonClosed {
+ 	background: #fff;
+ 	background-color: #fff;
+ 	margin-left: 97.7%;
+ 	height: 50px;
+ 	width: 18px;
+ 	border: 2px solid #e5e5e5;
+ 	display: inline-block;
+ 	z-index: 33;
+ 	position: absolute;
+ }
+div#DecisionSupportSystem div#collapsibleMenuRightButton {
+ 	background: #fff;
+ 	background-color: #fff;
+ 	top: 0px;
+ 	height: 55px;
+ 	width: 22px;
+ 	border: 2px solid #e5e5e5;
+ 	display: none;
+ }
+div#DecisionSupportSystem div#functionsPanel {
+	background: #fff;
+	background-color: #fff;
+	/* padding: 4px; */
+	/* position: absolute; */
+	/* overflow-y: scroll; */
+	/* overflow-x: hidden; */
+	height: 100%;
+	width: 85%;
+	left: 1.6%;
+}
+div#DecisionSupportSystem div#collapsibleMenuRight.shown {/* right: 40px; */margin-left: 0px;}
+div#DecisionSupportSystem div#functionsPanel {
+	display:none;
+	/* padding: 20px; */
+}
+div#DecisionSupportSystem div#collapsibleMenuRight.shown div#functionsPanel {
+	position: relative;
+	/* z-index: 33; */
+	/* display: inline-block; */
+	padding-top: 0px;
+	width: 100%;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightContainer {
+	height: 100%;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightContainer.rightButtonClicked {
+	width: 93%;
+}
+/***************************************** top section, chosen function ***********************************************/
+div#DecisionSupportSystem h4#chosenFunctionName{
+	margin: 0px;
+}
+div#DecisionSupportSystem div.infoSquare{
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	border: 2px solid #e5e5e5;
+	padding:8%;
+}
+div#DecisionSupportSystem span#chosenFunctionNameSubHeading {
+	color: #e5e5e5;
+}
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer {
+	background: RGB(255,255, 255);
+	background-color: RGB(255,255, 255);
+	margin: 0px;
+	padding: 0px;
+}
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer div#chosenFunctionGeneralInfoContainer,
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer div#chosenFunctionDescriptionContainer,
+div#DecisionSupportSystem div#chosenFunctionContainer.internalAvailableFunctionContainer div#levelOfDetailContainer {
+	padding: 20px;
+}
+
+/*********************************************** level of detail *****************************************************/
+div#DecisionSupportSystem div.levelOfDetailSubHeading {
+	text-align: center;
+	color: #e5e5e5;
+	margin-left: 5px;
+}
+div#DecisionSupportSystem div.levelOfDetailHeadingContainer {
+	padding: 20px 0px 20px 20px;
+}
+/****************************************** choose attribute dropdown ************************************************/
+div#DecisionSupportSystem div.chooseSomeAttributeTitleAndSubtextContainer {
+	padding: 20px;
+}
+div#DecisionSupportSystem div.functionAtrributesDropdownContainer {
+	margin-top: 20px;
+}
+/*********************************************** area of interest ****************************************************/
+div#DecisionSupportSystem div.levelOfDetailSubHeading {
+	text-align: center;
+	color: RGB(89,89,89);
+	position: relative;
+}
+div#DecisionSupportSystem input.viewPortRadios {
+	visibility: visible;
+	margin-right: 5px;
+	margin-top: 0px;
+	width: 17px;
+	height: 17px;
+}
+div#DecisionSupportSystem label.viewportLabels {
+	display:inline;
+	margin-right: 25px;
+}
+div#DecisionSupportSystem div#functionRunAndExportButtons button {
+	background-color: #fff;
+	background: #fff;
+	border-radius: 30px;
+	border: 2px solid #e5e5e5;
+}
+div#DecisionSupportSystem div#functionRunAndExportButtons button > h4 {
+	margin: 5px;
+}
+/********************************************* available functions ***************************************************/
+div#DecisionSupportSystem h4#internalAvailableFunctionName {
+	margin: 0px;
+}
+div#DecisionSupportSystem div.internalAvailableFunctionContainer {
+	padding: 20px;
+	background: green;
+	background-color: green;
+	margin: 0px 5px 5px 0px;
+}
+div#DecisionSupportSystem span#internalAvailableFunctionNameSubHeading {
+	color: #e5e5e5;
+}
+div#DecisionSupportSystem h4.internalAvailableFunctionName {
+	margin: 0px;
+	color: #fff;
+}
+/*********************************************** scrollbar ***********************************************************/
+div#DecisionSupportSystem div#functionsPanel::-webkit-scrollbar-track {
+	background-color: #fff;
+}
+div#DecisionSupportSystem div#functionsPanel::-webkit-scrollbar-corner {
+	background-color: #fff;
+}
+div#DecisionSupportSystem div#functionsPanel::-webkit-scrollbar-thumb {
+	background-color: #e5e5e5;
+}
+/******************************************* Side menus arrows *******************************************************/
+div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-left,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-left-border {
+	display : initial;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-right,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton div.triangle-right-border {
+	display : none;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-left,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-left-border {
+	display: none;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-right,
+	div#DecisionSupportSystem div#collapsibleMenuRightButton.clicked div.triangle-right-border {
+	display: initial;
+}
+div#DecisionSupportSystem div#collapsibleMenuRightButton{
+	float: right;
+	margin-right: 12%;
+}
+div#DecisionSupportSystem  div#collapsibleMenuRightButton.clicked {
+	/* float: left; */
+	/* margin: 0px; */
+	z-index: 33;
+	position: absolute;
+	display: initial;
+}
+/*********************************************** accordion ***********************************************************/
+div#DecisionSupportSystem div.accordion-heading{
+	background: RGB(2, 113, 190);
+	background-color: RGB(2, 113, 190);
+	/* padding: 5px 0px; */
+	position: relative;
+}
+div#DecisionSupportSystem div.accordion-heading:hover{
+	background: RGB(76, 181,210);
+	background-color: RGB(76, 181,210);
+}
+div#DecisionSupportSystem div.accordion-heading.clicked{
+	background: RGB(1,154,211);
+	background-color: RGB(1,154,211);
+}
+div#DecisionSupportSystem h4.chosenFunctionName {
+	color:RGB(255,255,255);
+	margin:0px;
+}
+div#DecisionSupportSystem span.chosenFunctionNameSubHeading {
+	color:RGB(157,195,230);
+}
+div#DecisionSupportSystem div.accordion-heading.clicked span.chosenFunctionNameSubHeading {
+	color: RGB(222,235,247,);
+}
+div#DecisionSupportSystem a.accordion-toggle:hover{
+	font-weight: normal;
+}
+div#DecisionSupportSystem div.accordion-heading.clicked:before,
+div#DecisionSupportSystem div.accordion-heading.clicked:after{
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid RGB(1,154,211);
+	bottom: -15px;
+	content: '';
+	left: 50%;
+	margin-left: -20px;
+	position: absolute;
+	color: #fff;
+	pointer-events: none;
+	z-index: 123;
+}
+div#DecisionSupportSystem div.accordion-heading{
+	overflow: visible;
+}
+div#DecisionSupportSystem a.accordion-toggle {
+	padding: 32px;
+	/* display: inline-block; */
+}
+/******************************************* Admin settings button ***************************************************/
+div#DecisionSupportSystem div#adminSettingsButtonContainer{
+	position: absolute;
+	bottom: 0%;
+	z-index: 123;
+	/* padding: 10px; */
+}
+div#DecisionSupportSystem button#adminSettingsButton {
+	background-color: #fff;
+	background: #fff;
+	border-radius: 30px;
+	border: 2px solid #e5e5e5;
+	font-size: 17px;
+	position: absolute;
+	z-index: 33;
+}
+div#DecisionSupportSystem button#adminSettingsButton i{
+	margin-right: 15px
+}
+div#DecisionSupportSystem div#gearContainer {
+	display: inline-block;
+}
+div#DecisionSupportSystem div#gearContainer {
+	display: inline-block;
+	background-image: url("../img/Settings-gear.png");
+	background-size: 9px 9px;
+	background-repeat: no-repeat;
+	height: 10px;
+	width: 10px;
+}
+div#DecisionSupportSystem div#setting {
+	display: inline-block;
+	color: #fff;
+	margin-left: 5px;
+	padding-top: 0px;
+	position: absolute;
+}
+div#DecisionSupportSystem div#adminSettingsButtonContainer {
+	background-color: RGB(2, 113, 190);
+	background: RGB(2, 113, 190);
+	margin-left: 0px;
+	margin-top: 10px;
+	width: 100%;
+	padding: 20px 20px;
+	position: absolute;
+	bottom: 0%;
+	cursor: pointer;
+}
+div#DecisionSupportSystem .levelOfDetailSubHeadingText{
+	position: absolute;
+	left: 10px;
+	top: -5px;
+}

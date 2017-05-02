@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="Survey">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='it.eng.edison.usersurvey_portlet.Survey' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/Survey/greet" class="it.eng.edison.usersurvey_portlet.server.GreetingServiceImpl" />
+
+</module>

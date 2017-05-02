@@ -1,0 +1,10 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:view='urn:import:org.gcube.portlets.widgets.fileupload.client.view'>
+	<g:HTMLPanel>
+		<div class="progressContainer">
+			<view:FileSubmit ui:field='fileSubmit' />
+			<view:UploadProgress ui:field='uploadProgress' />
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

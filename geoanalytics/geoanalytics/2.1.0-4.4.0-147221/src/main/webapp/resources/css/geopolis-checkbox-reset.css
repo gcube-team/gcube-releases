@@ -1,0 +1,27 @@
+/*************************************** Checkbox styling *********************************/
+input[type="checkbox"] {
+    visibility: visible;
+}
+
+input[type="checkbox"] + label span {
+    display:none;
+}
+
+
+input[type="checkbox"] + label {
+    margin-left: 0px;
+}
+
+/*************************************** Radio styling *********************************/
+input[type="radio"] {
+    visibility: visible;
+}
+
+input[type="radio"] + label span {
+    display:none;
+}
+
+
+input[type="radio"] + label {
+    margin-left: 0px;
+}

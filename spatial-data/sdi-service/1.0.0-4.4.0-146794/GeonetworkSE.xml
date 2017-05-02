@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Resource version="0.4.x">
+    <ID>2a3131f6-6ef6-4520-b8bf-70b29c7824f9</ID>
+    <Type>RuntimeResource</Type>
+    <Profile>
+        <Category>Gis</Category>
+        <Platform>
+            <Name>geonetwork</Name>
+            <Version>3</Version>
+            <MinorVersion>0</MinorVersion>
+            <RevisionVersion>5</RevisionVersion>
+            <BuildVersion>0</BuildVersion>
+        </Platform>
+        <RunTime>
+            <HostedOn>node3-d-d4s.d4science.org</HostedOn>
+            <Status>READY</Status>
+        </RunTime>
+        <AccessPoint>
+            <Interface>
+                <Endpoint EntryName="geonetwork">http://node3-d-d4s.d4science.org/geonetwork</Endpoint>
+            </Interface>
+            <AccessData>
+                <Username>admin</Username>
+                <Password>5jykeFZrlF1Xfa4vohyDYg==</Password>
+            </AccessData>
+            <Properties>
+                <Property>
+                    <Name>priority</Name>
+                    <Value encrypted="false">1</Value>
+                </Property>
+            </Properties>
+        </AccessPoint>
+    </Profile>
+</Resource>

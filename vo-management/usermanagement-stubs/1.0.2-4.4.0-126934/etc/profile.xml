@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>UserManagement Service Stubs</Description>
+		<Class>DVOS</Class>
+		<Name>usermanagement-stub</Name>
+		<Version>1.0.2</Version>
+		<Packages>
+			<Software>
+				<Description>UserManagement Service Stub</Description>
+				<Name>usermanagement-stub</Name>
+				<Version>1.0.2</Version>
+				<Files>
+					<File>lib/org.gcube.vo-management.usermanagement-stub.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<!-- Ant buildfile for Libraries
+
+Version 0.1
+
+INPUT PROPERTIES
+
+This buildfile assumes that the following properties have or may have been defined in a "build.properties" file  
+in the configuration directory of the service (or else using the -D flag on the command line). 
+
+package:       			(mandatory) Root package of the service implementation: it should be the first package in the 
+						implementation hierarchy which uniquely identifies the implementation. 
+lib.dir:	   			(mandatory) directory with auxiliary dependencies.
+etics.build:   			(optional) Set to 'true', it indicates that build structures and procedures 
+						should be optimised for remote builds in ETICS. If it is omitted, this buildfile will optimise build structures and procedures 
+						for local builds.    
+-->
+
+<project default="deploy" name="Ecological Modelling Buildfile">
+	
+	<!-- environment -->
+	<property environment="env" />
+
+	<!-- external environment -->
+	<echo message="container.dir ->${env.GLOBUS_LOCATION}" level="info"/>
+	<property name="container.dir" value="${env.GLOBUS_LOCATION}" />
+
+	<!-- load non-standard tasks -->
+	<taskdef resource="ise/antelope/tasks/antlib.xml">
+	  <classpath>
+	    <pathelement location="${container.dir}/lib/AntelopeTasks_3.4.2.jar"/>
+	  </classpath>
+	</taskdef>
+	
+	<!-- discriminate between local and remote build -->
+	<property name="etics.build" value="false" />
+		
+	<!-- library-specific locations -->	
+	<property name="library.dir" location="." />
+	<property name="etc.dir.name" value="etc" />
+	<property name="etc.dir" value="${library.dir}/${etc.dir.name}" />
+	<property name="source.dir" value="${library.dir}/src" />
+	
+	<!-- load input properties  -->
+	<property file="${etc.dir}/build.properties" />
+
+	<stringutil property="package.dir" string="${package}"><!-- derive package.dir from ${package} -->
+		<replace regex="\." replacement="/"/>
+	</stringutil>
+
+	<!-- file defaults -->
+	<property name="jarfile" value="${package}.jar" />
+
+	<if name="etics.build" value="true">	
+		<property name="build.location" location="${library.dir}" />
+		<property name="lib.location" value="${build.location}/lib" />
+		<else>
+			<property name="build.location" location="${env.BUILD_LOCATION}" />
+			<property name="lib.location" location="${build.location}/${lib.dir}" />
+		</else>
+	</if>
+				
+	<!-- temporary build locations -->
+	<property name="build.dir" location="${build.location}/build" />
+	<property name="build.classes.dir" location="${build.dir}/classes" />
+	<property name="build.lib.dir" location="${build.dir}/lib" />	
+
+	<!-- misc defaults -->
+	<property name="java.debug" value="on" />
+		
+	<!-- initialisation tasks -->
+	<target name="init" depends="clean" description="creates build structures"> 
+	
+		<!-- input summary -->
+		<echo message="Root Package -> ${package}" level="info"/>
+		<echo message="Configuration -> ${etc.dir}" level="info"/>
+		<echo message="External dependencies -> ${lib.location}" level="info"/>
+
+		<!-- output summary -->
+		<echo message="Library Jar -> ${jarfile}" level="info"/>
+
+		<!-- create temporary build folders -->
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${build.classes.dir}" />
+		<mkdir dir="${build.lib.dir}" />
+		
+		<!-- create dependency location, if it does not exist already -->
+		<mkdir dir="${lib.location}" />
+
+		
+	</target>	
+	
+	<target name="build" depends="init" description="build the library">
+		<javac srcdir="${source.dir}" destdir="${build.classes.dir}" debug="${java.debug}" deprecation="${java.deprecation}" description="Compile the library">
+			<include name="**/*.java" />
+			<classpath>
+				<fileset dir="${container.dir}/lib">
+					<include name="*.jar" />
+					<exclude name="${jarfile}" />
+				</fileset>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+					<exclude name="**/${jarfile}" />
+				</fileset>
+			</classpath>
+		</javac>
+	</target>
+	
+	<target name="jar" depends="build" description="jar the library">
+		<copy toDir="${build.classes.dir}/META-INF">
+			<fileset dir="${etc.dir}" casesensitive="yes" />
+		</copy>
+		<copy todir="${build.classes.dir}">
+			<fileset dir="${source.dir}">
+		          <include name="org/**/*.xsd"/>
+		     	  <include name="org/**/*.xml"/>
+		     	  <include name="org/**/*.properties"/>
+		     </fileset>
+		</copy>
+		<jar jarfile="${build.lib.dir}/${jarfile}" basedir="${build.classes.dir}"/>
+	</target>
+	
+	<target name="jar-dev" depends="build" description="jar the library including the source code">
+		<copy toDir="${build.classes.dir}/META-INF">
+			<fileset dir="${etc.dir}" casesensitive="yes" />
+		</copy>
+		<copy todir="${build.classes.dir}">
+			<fileset dir="${source.dir}">
+				  <include name="org/**/*.java"/>
+		          <include name="org/**/*.xsd"/>
+		     	  <include name="org/**/*.xml"/>
+		     	  <include name="org/**/*.properties"/>
+		     </fileset>
+		</copy>
+		<jar jarfile="${build.lib.dir}/${jarfile}" basedir="${build.classes.dir}"/>
+	</target>
+	
+	<target name="deploy" depends="jar" description="deploy the library">
+		<if name="etics.build" value="true">	
+			<copy file="${build.lib.dir}/${jarfile}" toDir="${lib.location}"/>
+		<else>
+			<copy file="${build.lib.dir}/${jarfile}" toDir="${container.dir}/lib"/>
+		</else>
+		</if>
+	</target>
+	
+	<target name="undeploy" description="undeploy the library jar">
+		<delete file="${container.dir}/lib/${jarfile}"/>			
+	</target>
+	
+	<target name="doc" description="Generate the library javadoc">
+		<javadoc access="public" author="true" sourcepath="${source.dir}" packagenames="${package}.*"
+			destdir="doc/api" nodeprecated="false" nodeprecatedlist="false" 
+			noindex="false" nonavbar="false" notree="false" 
+			source="1.6" 
+			splitindex="true" 
+			use="true" version="true" failonerror="false">
+			<classpath>
+				<fileset dir="${lib.location}">
+					<include name="**/*.jar" />
+					<exclude name="**/${jarfile}" />
+				</fileset>
+				<fileset dir="${container.dir}/lib">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</javadoc>
+	</target>
+	
+	<target name="clean">
+		<delete dir="${build.dir}" quiet="true"/>
+	</target>
+</project>

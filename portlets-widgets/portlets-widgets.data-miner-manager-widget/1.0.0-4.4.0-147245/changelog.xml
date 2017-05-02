@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.widgets.data-miner-manager-widget.1-0-0"
+		date="2017-03-31">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

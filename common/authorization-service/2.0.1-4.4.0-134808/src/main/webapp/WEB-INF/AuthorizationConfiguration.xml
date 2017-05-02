@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Configuration>
+        <Rule path="/token/user" requiresToken="false"/>
+        <Rule path="/apikey" requiresToken="true" acceptedTokenTypes="USER"/>
+        <Rule path="/policyManager" requiresToken="true"/>
+        <Rule path="/token/external" requiresToken="true" acceptedTokenTypes="USER" />
+        <Rule path="/token/node" requiresToken="false" />
+        <Rule path="/token/service" requiresToken="true" acceptedTokenTypes="CONTAINER"/>
+</Configuration>

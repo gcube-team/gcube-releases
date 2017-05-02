@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.tabular-data-template-operation.1-0-0" date="2017-01-30">
+		<Change>Moved to Portal Context -  Removed ASL Session</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-template-operation.1-0-0" date="2014-05-16">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

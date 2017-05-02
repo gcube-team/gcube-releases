@@ -1,0 +1,9 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-analysis.operation-labels.1-0-0" date="2013-02-18"> 
+		<Change>first release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-labels.1-0-4" date="2015-05-21"> 
+		<Change>changed AddLabel operation to from Column operation to table operation</Change>
+		<Change>changed the parameter required for AddLabel</Change>
+	</Changeset>	
+</ReleaseNotes>

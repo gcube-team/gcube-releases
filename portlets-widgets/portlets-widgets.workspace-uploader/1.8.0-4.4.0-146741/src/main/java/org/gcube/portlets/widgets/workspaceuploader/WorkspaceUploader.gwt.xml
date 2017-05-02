@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='workspaceuploader'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name="com.google.gwt.resources.Resources" />
+	<inherits name="com.google.gwt.json.JSON" />
+
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+	<!--Inherit the GCubeClientContext widget code -->
+	<inherits name='org.gcube.portal.clientcontext.GCubeClientContext' />
+	<!-- Other module inherits -->
+
+	<stylesheet src='workspaceuploader.css' />
+	<!-- Specify the app entry point class. -->
+	<!-- <entry-point class='org.gcube.portlets.widgets.workspaceuploader.client.WorkspaceUploader' 
+		/> -->
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

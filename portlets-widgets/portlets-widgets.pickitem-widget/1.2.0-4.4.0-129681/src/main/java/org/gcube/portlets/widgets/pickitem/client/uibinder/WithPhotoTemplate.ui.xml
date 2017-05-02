@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:FocusPanel ui:field="focusDiv" styleName="user-table pickperson">
+		<g:HTMLPanel ui:field="mainDiv">
+			<div class="user-table-row">
+				<div class="user-table-col smallphoto">
+					<a href="">
+						<g:Image title="" styleName="pickperson-photo" url=""
+							ui:field="avatarImage" width="30px" height="30px" />
+					</a>
+				</div>
+
+				<div class="user-table-col content">
+					<div>
+						<g:HTML styleName="pick-label" ui:field="contentArea" />
+					</div>
+				</div>
+			</div>
+		</g:HTMLPanel>
+	</g:FocusPanel>
+</ui:UiBinder> 

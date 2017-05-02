@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emails>
+	<scope name="/d4science.research-infrastructures.eu/Arts-Humanities/gMan">
+		<email>assante@isti.cnr.it</email>
+		<email>pasquale.pagano@isti.cnr.it</email>
+		<email>leonardo.candela@isti.cnr.it</email>
+		<email>pedro.andrade@cern.ch</email>
+		<email>andrea.manzi@cern.ch</email>
+	</scope>
+	<scope name="/d4science.research-infrastructures.eu/Arts-Humanities">
+		<email>assante@isti.cnr.it</email>
+		<email>pasquale.pagano@isti.cnr.it</email>
+		<email>leonardo.candela@isti.cnr.it</email>
+		<email>pedro.andrade@cern.ch</email>
+		<email>andrea.manzi@cern.ch</email>
+	</scope>
+	<scope name="/d4science.research-infrastructures.eu/Ecosystem">
+		<email>assante@isti.cnr.it</email>
+		<email>pasquale.pagano@isti.cnr.it</email>
+		<email>leonardo.candela@isti.cnr.it</email>
+		<email>pedro.andrade@cern.ch</email>
+		<email>andrea.manzi@cern.ch</email>
+	</scope>
+	<scope name="/d4science.research-infrastructures.eu/Ecosystem/EM">
+		<email>assante@isti.cnr.it</email>
+		<email>pasquale.pagano@isti.cnr.it</email>
+		<email>leonardo.candela@isti.cnr.it</email>
+		<email>pedro.andrade@cern.ch</email>
+		<email>andrea.manzi@cern.ch</email>
+	</scope>
+	<scope name="/d4science.research-infrastructures.eu/Ecosystem/TryIt">
+		<email>assante@isti.cnr.it</email>
+		<email>pasquale.pagano@isti.cnr.it</email>
+		<email>leonardo.candela@isti.cnr.it</email>
+		<email>pedro.andrade@cern.ch</email>
+		<email>andrea.manzi@cern.ch</email>
+	</scope>
+	<scope name="/d4science.research-infrastructures.eu/FARM">
+		<email>assante@isti.cnr.it</email>
+		<email>pasquale.pagano@isti.cnr.it</email>
+		<email>leonardo.candela@isti.cnr.it</email>
+		<email>pedro.andrade@cern.ch</email>
+		<email>andrea.manzi@cern.ch</email>
+	</scope>
+	<scope name="/d4science.research-infrastructures.eu/FARM/AquaMaps">
+		<email>assante@isti.cnr.it</email>
+		<email>pasquale.pagano@isti.cnr.it</email>
+		<email>leonardo.candela@isti.cnr.it</email>
+		<email>pedro.andrade@cern.ch</email>
+		<email>andrea.manzi@cern.ch</email>
+	</scope>
+	<scope name="/d4science.research-infrastructures.eu/FARM/FCPPS">
+		<email>assante@isti.cnr.it</email>
+		<email>pasquale.pagano@isti.cnr.it</email>
+		<email>leonardo.candela@isti.cnr.it</email>
+		<email>pedro.andrade@cern.ch</email>
+		<email>andrea.manzi@cern.ch</email>
+	</scope>
+	<scope name="/d4science.research-infrastructures.eu/FARM/ICIS">
+		<email>assante@isti.cnr.it</email>
+		<email>pasquale.pagano@isti.cnr.it</email>
+		<email>leonardo.candela@isti.cnr.it</email>
+		<email>pedro.andrade@cern.ch</email>
+		<email>andrea.manzi@cern.ch</email>
+	</scope>
+		<scope name="/d4science.research-infrastructures.eu/INSPIRE">
+		<email>assante@isti.cnr.it</email>
+		<email>pasquale.pagano@isti.cnr.it</email>
+		<email>pedro.andrade@cern.ch</email>
+		<email>andrea.manzi@cern.ch</email>
+	</scope>
+</emails>

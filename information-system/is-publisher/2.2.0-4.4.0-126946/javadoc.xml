@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="javadoc">
+<target name="javadoc">
+<javadoc access="public" author="true" classpath="" destdir="doc" doctitle="DISIP" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="org.diligentproject.informationservice.disip.impl,org.diligentproject.informationservice.disip.test,org.diligentproject.informationservice.disip.impl.interfaces" source="1.5" sourcepath="." splitindex="true" use="true" version="true"/>
+</target>
+</project>

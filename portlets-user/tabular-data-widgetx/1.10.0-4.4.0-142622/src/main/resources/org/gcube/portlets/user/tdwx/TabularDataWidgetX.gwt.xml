@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='TabularDataWidgetX'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<!-- <inherits name="com.google.gwt.i18n.I18N" /> -->
+	
+	<!-- -->
+	<inherits name='com.sencha.gxt.ui.GXT' />
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-TRACE" />
+	
+	<!--Inherit the GCubeClientContext widget code -->
+	<inherits name='org.gcube.portal.clientcontext.GCubeClientContext' />
+
+	<!--Other -->
+    <inherits name='org.gcube.portlets.user.td.widgetcommonevent.WidgetCommonEvent' />
+
+	<!--  
+	<set-configuration-property name="locale.cookie"
+		value="TDLangCookie" />
+	<set-configuration-property name="locale.queryparam"
+		value="TDLang" />
+	<set-configuration-property name="locale.usemeta"
+		value="Y" />
+	<set-configuration-property name="locale.useragent"
+		value="Y" />
+
+	<set-configuration-property name="locale.searchorder"
+		value="cookie,queryparam,meta,useragent" />
+
+	<extend-property name="locale" values="en" />
+	<extend-property name="locale" values="it" />
+	<extend-property name="locale" values="es" />
+	<set-property name="locale" value="en, it, es" />
+	<set-property-fallback name="locale" value="en" />	
+	 -->
+
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+
+	<!--Loggers Enabled by default -->
+	<!-- <set-property name="log_ConsoleLogger" value="ENABLED" /> -->
+	<!-- Not in GWT 2.6 <set-property name="log_FirebugLogger" value="ENABLED" /> -->
+	<!-- <set-property name="log_SystemLogger" value="ENABLED" /> -->
+
+	<set-property name="log_ConsoleLogger" value="DISABLED" />
+	<set-property name="log_DivLogger" value="DISABLED" />
+	<set-property name="log_GWTLogger" value="DISABLED" />
+	<set-property name="log_SystemLogger" value="DISABLED" /> 
+
+</module>

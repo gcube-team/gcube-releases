@@ -1,0 +1,64 @@
+/**
+ * 
+ */
+package org.gcube.informationsystem.resourceregistry.publisher.proxy;
+
+import java.io.StringReader;
+import java.io.StringWriter;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.ws.EndpointReference;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
+
+/**
+ * @author Luca Frosini (ISTI - CNR)
+ */
+class JaxRSEndpointReference {
+
+	private static final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+
+	private static final String addressLocalName = "Address";
+
+	String address;
+
+	static {
+		factory.setNamespaceAware(true);
+	}
+
+	public JaxRSEndpointReference(EndpointReference reference) {
+		this(serialise(reference));
+	}
+
+	public JaxRSEndpointReference(String reference) {
+
+		try {
+
+			Document document = factory.newDocumentBuilder().parse(new InputSource(new StringReader(reference)));
+
+			NodeList addresses = document.getElementsByTagNameNS("*", addressLocalName);
+
+			if (addresses.getLength() == 0)
+				throw new RuntimeException("reference does not contain an address");
+
+			address = addresses.item(0).getTextContent();
+
+		} catch (Exception e) {
+			throw new IllegalArgumentException("reference is not a gCore reference", e);
+		}
+
+	}
+
+	@Override
+	public String toString() {
+		return address;
+	}
+
+	// helper
+	private static String serialise(EndpointReference reference) {
+		StringWriter writer = new StringWriter();
+		reference.writeTo(new StreamResult(writer));
+		return writer.toString();
+	}
+}

@@ -1,0 +1,1022 @@
+/* Author: Massimiliano Assante, ISTI-CNR */
+/* License: EUPL */
+
+@import "compass";
+@import "mixins";
+
+@import url(custom_common.css);
+
+$dockbarGradientEnd: #FFF;
+$dockbarGradientStart: #FFF;
+
+$dockbarOpenGradientEnd: #0993DD;
+$dockbarOpenGradientStart: #0EA6F9;
+
+$navbarGradientStart: #0271BE; 
+$navbarGradientEnd: #0271BE;
+
+$footerFontColor: #FFF;
+
+$navbarSelected: #019AD3;
+$navbarHover: #4CB5D2;
+$dockbarCustomColor: #FFF;
+
+/* --- Hide the My Calendars section in Calendar portlet  **/
+
+div#_1_WAR_calendarportlet_calendarListContainer > div:first-child {
+	display: none;
+}
+
+div#_1_WAR_calendarportlet_calendarListContainer > div:last-child {
+	display: none;
+}
+
+#_1_WAR_calendarportlet_myCalendarList {
+	display: none;
+}
+/* --- End Hide the My Calendars section **/
+
+/* --- Custom vars, styles and mixins **/
+
+@mixin navbarGradient($start, $end) {
+ 	background: #0271BE;
+}
+
+@mixin navbar-border-radius($radius) {
+  -webkit-border-radius: $radius !important;
+     -moz-border-radius: $radius !important;
+      -ms-border-radius: $radius !important;
+          border-radius: $radius !important;
+}
+
+@mixin portlet-border-radius($radius) {
+  -webkit-border-radius: $radius !important;
+     -moz-border-radius: $radius !important;
+      -ms-border-radius: $radius !important;
+          border-radius: $radius !important;
+}
+@mixin navbar-transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+
+
+body {
+	padding-top: 0px !important; 
+}
+.aui body {
+	@include respond-to(phone, tablet) {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+.aui input[readonly], .aui select[readonly], .aui textarea[readonly] {
+	cursor: auto !important;
+	background-color: #FFF !important;
+}
+div#wrapper {
+	@include respond-to(desktop) {
+		padding: 2em 2em 0;
+	}
+	@include respond-to(phone, tablet) {
+		padding-top: 2px;
+	}
+	background-size: 100% 100%;
+	margin-top: -5px;
+    min-height: 600px;
+}
+
+
+.aui .row {
+	margin-left: 0;
+}
+
+.aui header#banner {
+	background: transparent;
+}
+
+.aui .btn {
+	@include portlet-border-radius(5px);
+}
+
+.aui ul, .aui ol {
+    padding: 0;
+	margin: 0 0 10px 25px;
+}
+/* For GXT tree compatibility */
+.aui span.x-tree3-node-text {
+	top: 0;
+}
+/* end GXT tree compatibility */
+
+@media (min-width : 1024px) {
+
+	/* For making default portlet padding narrow-er  */
+	.aui .row-fluid [class*="span"] {
+  	 	margin-left: 1%;
+	}
+	.aui .row-fluid [class*="span"]:first-child {
+  		margin-left: 0;
+	}
+	.aui .row-fluid .span3 {
+  		width: 24.2%;
+	}
+	.aui .row-fluid .span4 {
+    	width: 32.5%;
+	}
+	.aui .row-fluid .span5 {
+    	width: 41.65%
+	}	
+	.aui .row-fluid .span6 {
+   		width: 49.5%;
+	}	
+}
+/* useful in phone mode */
+.aui .dockbar .navbar-inner .container .btn-navbar .user-avatar-image {
+    position: relative;
+    top: 2px;
+    width: 28px;
+    height: 28px;
+}
+/* when user is signed out remove the dockbar v space*/
+body.signed-in {
+	padding-top: 0px;
+	header#banner {
+		margin-top: 35px;
+	}	
+}
+
+body.signed-out {
+		div#wrapper {
+			background-position: 0px 0px;
+		}
+		div#gcube-hide-dockbar {
+				@include respond-to(desktop) {
+					display: none;
+				}
+		}	
+}
+	
+div.custom-footer-container a {
+	font: 10px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	color: #fff;
+	text-decoration: none;
+	&:hover {
+		color: #FFF;
+		text-decoration: underline;
+	}
+	&:visited {
+		color: #FFF;
+		text-decoration: underline;
+	}
+}
+
+footer {
+	border-top: 6px solid #FFF;
+}
+
+@include respond-to(desktop) {
+	img.d4science-logo {
+		text-align: left;
+		height: 70px !important;
+	}
+
+	h1.site-title {
+		margin-top: 0;
+		margin-bottom: 3px;
+		text-align: left;
+		padding: 15px;
+	}
+}
+/* --- End Custom */
+
+/* ---------- Base styles ---------- */
+
+.aui {
+	.separator {
+		border-color: #BFBFBF transparent #FFF;
+		border-style: solid;
+		border-width: 1px 0;
+	}
+
+	.site-title {
+		a:hover {
+			text-decoration: none;
+		}
+
+		.site-name {
+			display: inline-block;
+		}
+	}
+	
+	#heading .site-title img {
+		@include respond-to(phone, tablet) {
+			margin-top: 25px;
+    		width: 250px;
+		}
+	}
+	
+	.poweredBy-link {
+		margin-top: 25px;
+		float: right;
+		a:hover {
+			opacity: 0.7;
+		}
+		a {
+			@include respond-to(phone, tablet) {
+				display: none;
+			}	
+		}	
+	}	
+
+	#skip-to-content:focus {
+		clip: rect(auto auto auto auto);
+		margin-top: 35px;
+		right: 5px;
+		z-index: 200;
+	}
+
+	#sign-in {
+		background: url(@theme_image_path@/common/key.png) no-repeat 3px 50%;
+		font-weight: bold;
+		padding: 5px 5px 5px 25px;
+		position: absolute;
+		right: 0;
+		top: -1.2em;
+	}
+
+	.redirected-to-message {
+		margin-right: 10px;
+
+		a {
+			background: #ECFBFF;
+			border: 1px solid #ADE5FA;
+			color: #8D8D8D;
+			padding: 5px;
+		}
+	}
+
+	.site-navigation {
+		margin-bottom: 6px;
+
+		.lfr-nav-item {
+			span, a {
+				@include ellipsis;
+
+				max-width: 300px;
+			}
+		}
+	}
+
+	.taglib-portal-message {
+		margin-bottom: 0;
+	}
+
+	/* ---------- Dockbar ---------- */
+
+	.dockbar {
+		&.navbar {
+			.nav {
+				li {
+					&.dropdown {
+						&.active {
+							.dropdown-toggle {
+								color: #999;
+								background-color: transparent;
+
+								&:hover {
+									color: #FFF;
+								}
+							}
+						}
+
+						&.staging-toggle .dropdown-menu {
+							background-color: #55B8EC;
+						}
+					}
+				}
+
+				> li {
+					> a {
+						margin: 0 5px 0 0;
+						padding: 6px 10px;
+
+						&:hover {
+							background-color: #2FA4F5;
+						}
+					}
+				}
+			}
+		}
+
+		.info-button {
+			top: 9px;
+
+			a {
+				margin-top: -4px;
+
+				&:hover {
+					color: #FFF;
+				}
+			}
+		}
+
+		.staging-bar {
+			.staging-toggle {
+				color: #FFF;
+
+				li a {
+					color: #FFF;
+					font-weight: 300;
+					text-decoration: none;
+				}
+
+				.btn-link {
+					color: #FFF;
+					font-size: 12px;
+				}
+			}
+		}
+
+		.page-customization-bar .btn {
+			border-color: transparent;
+
+			&:hover, &:focus {
+				background: transparent;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.dockbar, .dockbar-split .dockbar {
+		.navbar-inner {
+			background-color: $dockbarGradientStart;
+
+			@include background-image(linear-gradient($dockbarGradientStart 0%, $dockbarGradientStart 47%, $dockbarGradientEnd 100%));
+
+			.nav {
+				> li {
+					background-color: $dockbarGradientStart;
+
+					@include background-image(linear-gradient($dockbarGradientStart 0%, $dockbarGradientStart 47%, $dockbarGradientEnd 100%));
+				}
+			}
+		}
+	}
+
+	.dockbar-split .dockbar {
+			
+		.info-button {
+			top: 9px;
+		}
+
+		.navbar-inner {
+			.nav-account-controls {
+				
+
+				&.nav-account-controls-notice {
+					top: 50px;
+				}
+			}
+
+			.nav-add-controls {
+				background: transparent;
+				border-top-width: 0;
+
+				&.nav-add-controls-notice {
+					top: 70px;
+				}
+
+				> li {
+					background-color: transparent;
+
+					@include background-image(none);
+
+					> a {
+						background: #45CBF5;
+						line-height: inherit;
+						padding: 6px 8px;
+
+						@include respond-to(phone, tablet) {
+							background: transparent;
+						}
+
+						&:hover {
+							background: #5BBAE8;
+						}
+
+						&.toggle-controls-link {
+							background: #92F545;
+
+							@include respond-to(phone, tablet) {
+								background: transparent;
+							}
+						}
+					}
+				}
+			}
+
+			.page-customization-bar {
+				background-color: #6DA4E4;
+				background-color: rgba(109, 168, 228, 0.9);
+				line-height: 20px;
+			}
+
+			.page-customization-bar-text {
+				height: 43px;
+			}
+
+			.staging-bar {
+				margin: 6px 0;
+
+				> li {
+					background: transparent;
+				}
+			}
+		}
+	}
+	/* Customization dockbar*/
+	.dockbar.navbar-static-top {
+	 	position: fixed;
+	 	z-index: 300;
+	 	@include respond-to(phone,tablet) {
+			position: relative;
+		}
+	}
+	
+	.dockbar-split .dockbar .navbar-inner .nav > li > a, 
+	.dockbar .navbar-inner .nav > li > a,
+	.dockbar .navbar-inner .nav-collapse > .nav > li > a {
+   	 	color: #999;
+   	 	font-weight: 400;
+   	 	&:hover {
+			color: #FFF;
+		}
+	}
+	
+	.dockbar .navbar-inner .container .btn-navbar {
+    	color: #999;
+	}
+
+	.dockbar.navbar .nav > li > input#searchbox {
+ 	   	margin:  8px 0 0;
+ 	   	font-family: "Helvetica Neue",​Helvetica,​Arial,​sans-serif;
+	  	font-size:	16px;
+		font-weight: 200;
+		@include navbar-border-radius(5px);
+ 	  	border: 1px solid #cccccc;
+ 	  	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+ 	   	@include navbar-transition(border linear 0.2s, box-shadow linear 0.2s);
+ 	   	width: 150px;
+	}
+	/* when search box is phone or tablet*/
+	span .btn.btn-navbar input#searchbox-phone {
+		width: 148px;
+		@include navbar-border-radius(5px);
+		@include navbar-transition(border linear 0.2s, box-shadow linear 0.2s);  
+	}
+	span .btn.btn-navbar input#searchbox-phone {
+		@include navbar-border-radius(5px);
+		@include navbar-transition(border linear 0.2s, box-shadow linear 0.2s);  
+	}
+	
+	/* ---------- Main navigation ---------- */
+
+	#navigation {
+		.add-page-editor {
+			input {
+				margin-top: 0;
+			}
+		}
+
+		.brand {
+			margin-left: 0;
+			padding: 0 20px 0 0;
+
+			img {
+				height: 40px;
+				width: auto;
+			}
+		}
+
+		.nav {
+			li {
+				&.dropdown {
+					> .dropdown-toggle {
+						padding-right: 0;
+
+						.caret {
+							border-bottom-color: #FFF;
+							border-top-color: #FFF;
+						}
+					}
+				}
+
+				&.open {
+					> a {
+						background-color: $navbarHover;
+						color: #FFF;
+					}
+				}
+
+				&.active > a {
+					background-color: $navbarSelected;
+					background-image: none;
+				}
+			}
+
+			> li > a {
+				padding: 8px 15px;
+			}
+
+			.dropdown-menu {
+				background: $navbarSelected;
+				border-width: 0;
+				margin: 0;
+
+				&:after, &:before {
+					border-width: 0;
+				}
+
+				a {
+					color: #FFF;
+
+					&:hover {
+						background: none;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		.navbar-inner {
+			@include navbarGradient($navbarGradientStart, $navbarGradientEnd);
+			border-width: 0px;
+			min-height: 36px;
+
+			li a {
+				color: #FFF;
+				font-weight: 400;
+			}
+		}
+	}
+
+	.modify-pages {
+		.delete-tab {
+			background: #555;
+			border: 2px solid #FFF;
+			color: #FFF;
+			font-size: 16px;
+			padding: 4px;
+			right: -10px;
+			top: 0;
+			z-index: 300;
+		}
+
+		.lfr-nav-item .lfr-nav-child-toggle {
+			padding: 10px;
+
+			i {
+				margin: 0;
+			}
+
+			@include respond-to(phone, tablet) {
+				line-height: 1em;
+				padding: 14px;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+
+		.drag-handle {
+			background-color: rgba(255, 255, 255, 0.75);
+			color: #009AE5;
+		}
+	}
+
+	/* ---------- Breadcrumbs ---------- */
+
+	.breadcrumb {
+		background-color: transparent;
+	}
+
+	#breadcrumbs {
+		margin-bottom: 45px;
+
+		.breadcrumb {
+			margin-bottom: 0;
+		}
+	}
+
+	/* ---------- Portlet wrapper and icons ---------- */
+	
+	.portlet {
+		border: 1px solid #e1e8ed;
+		@include portlet-border-radius(6px);
+	}
+	
+	.portlet-content, .portlet-minimized .portlet-content-container {
+		border-top-width: 0;
+		padding: 12px 10px 10px;
+	}
+
+	.portlet-topper {
+		background: #fff;
+		color: #01497C;
+		padding: 0;
+
+		.portlet-title {
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 2.2;
+			margin: 0;
+
+			i, span img {
+				display: none;
+			}
+		}
+
+		.portlet-topper-toolbar {
+			font-size: 0.8em;
+			margin: -10px 0 0;
+			padding: 0;
+			right: 10px;
+			top: 50%;
+		}
+	}
+
+	.lfr-configurator-visibility .portlet-topper {
+		background-color: #A9A9A9;
+	}
+
+	.signed-in.controls-visible .portlet-title {
+		padding-right: 80px;
+	}
+
+	.portlet-asset-publisher .asset-title, .portlet-asset-publisher .header-title, .portlet-asset-publisher li.title-list, .portlet-blogs .entry-title, .portlet-blogs .header-title, .portlet-message-boards .header-title {
+		@include hyphenation;
+	}
+
+	.portlet-asset-publisher .asset-content, .portlet-asset-publisher .asset-summary, .portlet-blogs .entry-body, .portlet-journal-content .journal-content-article, .portlet-message-boards .thread-body {
+		word-wrap: break-word;
+	}
+
+	.edit-actions {
+		list-style: none;
+		margin-left: 0;
+		margin-right: 0;
+
+		li {
+			float: left;
+			margin-right: 10px;
+		}
+	}
+
+	.portlet-icons {
+		float: none;
+	}
+
+	.page-maximized .portlet-icons {
+		font-size: 11px;
+	}
+
+	.dropdown-menu > li.portlet-close > a {
+		color: #C00;
+		font-weight: bold;
+
+		&:focus, &:hover {
+			background-color: #C00;
+			background-image: none;
+			color: #FFF;
+		}
+	}
+
+	/* ---------- Set password reminder portlet ---------- */
+
+	.update-reminder-query {
+		.control-group {
+			max-width: 350px;
+		}
+
+		.reminder-query-answer {
+			height: 30px;
+			width: 100%;
+		}
+
+		.reminder-query-question {
+			width: 100%;
+		}
+	}
+
+	/* ---------- Staging bar ---------- */
+
+	.navbar-inner .nav.staging-bar {
+		border-top-width: 0;
+		position: static;
+
+		li {
+			.page-variations {
+				display: inline-block;
+				margin-left: 8px;
+
+				a {
+					text-decoration: none;
+				}
+			}
+		}
+
+		li.dropdown {
+			position: static;
+		}
+	}
+
+	.portlet-staging-bar {
+		.row-fluid .layout-revision-info {
+			.layout-revision-version {
+				label {
+					color: #B6DDF5;
+				}
+			}
+		}
+
+		.label-submit {
+			background-color: #469DE3;
+		}
+
+		.layout-branch-selector, .layout-set-branch-selector {
+			.icon-caret-down {
+				background-color: #469DE3;
+			}
+		}
+
+		.page-variations-options, .site-pages-variation-options {
+			.lfr-icon-menu {
+				background-color: #50AFE9;
+
+				.icon-globe, .icon-file {
+					background-color: #469DE3;
+				}
+			}
+		}
+	}
+
+	/* ---------- Footer ---------- */
+
+.custom-footer-container {
+	width: 100%;
+	height: auto;
+	color: white;
+}
+
+.custom-footer-right {
+	text-align: right;
+	float: right;
+	height: auto;
+}
+
+.custom-footer {
+	background-color: #000;
+	height: 120px;
+	padding: 10px;
+}
+
+	/* ---------- Hudcrumbs ---------- */
+
+	.lfr-hudcrumbs {
+		position: fixed;
+		top: 0;
+		z-index: 300;
+
+		.breadcrumb {
+			background: #414445;
+			background: rgba(0, 0, 0, 0.8);
+
+			li {
+				a, span {
+					color: #FFF;
+				}
+			}
+		}
+	}
+
+	/* ---------- Miscellaneous ---------- */
+
+	.lfr-panel-container {
+		background-color: transparent;
+	}
+
+	.lfr-portlet-title-editable-content .field {
+		display: inline;
+		float: none;
+	}
+
+	.portlet-journal-content .lfr-icon-actions {
+		margin-bottom: 3px;
+	}
+
+	/* ---------- Extras ---------- */
+
+	#navigation {
+		.nav {
+			li {
+				&.open {
+					> a {
+						@include box-shadow(none);
+					}
+				}
+			}
+
+			.dropdown-menu {
+				@include border-radius(0);
+			}
+
+			> .active > a {
+				background-color: $dockbarGradientStart;
+
+				@include background-image(linear-gradient($dockbarGradientStart 0%, $dockbarGradientStart 47%, $dockbarGradientEnd 100%));
+				@include box-shadow(none);
+				@include filter-gradient($dockbarGradientStart, $dockbarGradientEnd, vertical);
+			}
+		}
+
+		.navbar-inner {
+			@include border-radius(0);
+			@include box-shadow(none);
+
+			li a {
+				@include text-shadow(none);
+			}
+		}
+	}
+
+	.update-reminder-query .reminder-query-answer {
+		@include box-sizing(border-box);
+	}
+
+	.modify-pages .delete-tab {
+		@include border-radius(50%);
+		@include text-shadow(none);
+		@include transition(opacity 0.3s ease);
+
+		&:hover {
+			@include box-shadow(0 1px 1px -1px #000);
+		}
+	}
+
+	%portlet-action-bar-custom {
+		@include border-radius(20px);
+		@include box-shadow(inset 0 1px 3px #000);
+	}
+
+	.portlet-borderless-bar {
+		@extend %portlet-action-bar-custom;
+
+		.portlet-actions {
+			@include box-shadow(inset 2px 1px 2px #000);
+		}
+
+		.portlet-title-default {
+			@include box-shadow(inset -2px 1px 2px #000);
+		}
+	}
+
+	.portlet-content, .portlet-minimized .portlet-content-container {
+		@include border-radius(0 0 3px 3px);
+	}
+
+	.portlet-content {
+		.lfr-icon-actions {
+			@extend %portlet-action-bar-custom;
+		}
+	}
+
+	.portlet-minimized {
+		.portlet-content {
+			border-width: 0;
+		}
+
+		.portlet-topper {
+			@include border-radius(3px);
+		}
+	}
+
+	.portlet-nested-portlets .portlet-body {
+		.portlet, .portlet-borderless-container {
+			@include box-shadow(none);
+		}
+	}
+
+	.portlet-topper {
+		@include border-radius(3px 3px 0 0);
+	}
+
+	.dockbar .staging-bar .staging-toggle > a {
+		@include border-radius(3px);
+	}
+
+	.dockbar-split .dockbar {
+		.navbar-inner {
+			@include box-shadow(none);
+			@include text-shadow(none);
+
+			@include respond-to(phone, tablet) {
+				background-color: $dockbarGradientStart;
+
+				@include background-image(linear-gradient($dockbarGradientStart, $dockbarGradientEnd));
+			}
+
+			.nav {
+				li.dropdown.open {
+					> .dropdown-toggle {
+						background-color: $dockbarOpenGradientStart;
+
+						@include background-image(linear-gradient($dockbarOpenGradientStart, $dockbarOpenGradientEnd));
+						@include box-shadow(none);
+					}
+				}
+
+				li.dropdown.active {
+					> .staging-link.dropdown-toggle {
+						background-color: #55B8EC;
+						background-image: none;
+					}
+				}
+			}
+		}
+	}
+
+	.lfr-hudcrumbs {
+		ul {
+			@include border-top-left-radius(0);
+			@include border-top-right-radius(0);
+		}
+
+		.breadcrumb li {
+			a, span {
+				@include text-shadow(-1px -1px #000);
+			}
+		}
+	}
+
+	/* ---------- IE8 ---------- */
+
+	&.ie8 {
+		.dockbar-split .dockbar .navbar-inner .info-button a {
+			margin-top: -2px;
+		}
+	}
+	/* Feedback */
+
+	.feedback-container {
+		text-align: center;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 13px;
+		line-height: 15px;
+		top: 30%;
+		right: -54px;
+		width: 120px;
+		background-color: #E3E3E3;
+		border: 1px solid #ACACAC;
+		border-width: 0 1px 1px 1px;
+		position: absolute;
+		padding: 5px;
+		overflow: hidden;
+		z-index: 100;
+		-webkit-box-shadow: 0 4px 8px #AAA;
+		-moz-box-shadow: 0 4px 8px #AAA;
+		box-shadow: 0 4px 8px #AAA;
+		-webkit-border-radius: 3px; 
+		-moz-border-radius : 3px; 
+		border-radius :	3px;
+		/* rotate 90 degree css3*/
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+	
+		transform: rotate(-90deg);
+		border-width: 1px 1px 0;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		
+		@include respond-to(phone, tablet) {
+			display: none;
+		}
+	}
+
+	.feedback-container a, .feedback-container a:active, .feedback-container a:focus, .feedback-container a:visited  {
+		text-decoration: none;
+		color: #222;
+	}
+
+	.feedback-container a:hover {
+		color: #0271BE;
+	}
+}
+
+

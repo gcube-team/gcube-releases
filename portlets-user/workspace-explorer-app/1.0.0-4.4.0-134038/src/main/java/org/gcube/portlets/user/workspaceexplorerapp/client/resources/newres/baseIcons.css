@@ -1,0 +1,32 @@
+/* Prevent our icons from css obfuscation */
+@external .myBaseIcon_*; /* Do some css stuff */
+.myBaseIcon_home:hover {
+	/*     opacity: 0.5; */
+	
+}
+
+/* Our sample icon */
+@sprite .myBaseIcon_home {
+	gwt-image: "home";
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 3px;
+	margin-right: 2px;
+}
+
+/* Our sample icon */
+@sprite .myBaseIcon_vre_folder {
+	gwt-image: "vre_folder";
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 3px;
+	margin-right: 2px;
+}
+
+@sprite .myBaseIcon_new_folder {
+	gwt-image: "new_folder";
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 3px;
+	margin-right: 2px;
+}

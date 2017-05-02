@@ -1,0 +1,102 @@
+---
+credentials: {type: x509, 
+encodedCredentails: /tmp/x509up_u1004}
+endpoint: https://carach5.ics.muni.cz:11443/
+id: 4-1
+name: Cesnet-Metacloud
+resourceTemplates: 
+nodeTemplates: 
+   - refId: 3-1
+#---
+#credentials: {type: x509, 
+#encodedCredentails: /tmp/x509up_u1000}
+#endpoint: https://carach5.ics.muni.cz:11443/
+#id: 4-1
+#name: 100IT
+#resourceTemplates: 
+#nodeTemplates: 
+#   - refId: 3-1
+#---
+#credentials: {type: x509, 
+#encodedCredentails: /tmp/x509up_u1000}
+#endpoint: https://fc-one.i3m.upv.es:11443
+#id: 4-2
+#name: UPV-GRYCAP
+#resourceTemplates:
+#nodeTemplates: 
+#   - refId: 3-2
+#---
+#credentials: {type: x509, 
+#encodedCredentails: /tmp/x509up_u1004}
+#endpoint: http://cloud.recas.ba.infn.it:8787/occi/
+#id: 4-3
+#name: Recas-Bari
+#resourceTemplates:
+#nodeTemplates: 
+#   - refId: 3-3
+#---
+#credentials: {type: x509, 
+#encodedCredentails: /tmp/x509up_u1004}
+#endpoint: https://stack-server-01.ct.infn.it:8787/
+#id: 4-4
+#name: INFN-Catania-Stack
+#resourceTemplates:
+#nodeTemplates: 
+#   - refId: 3-8
+#   - refId: 3-9
+#---
+#credentials: {type: x509, 
+#encodedCredentails: /tmp/x509up_u1004}
+#endpoint: https://controller.ceta-ciemat.es:8787/
+#id: 4-5
+#name: CETA-GRID
+#resourceTemplates:
+#nodeTemplates: 
+#   - refId: 3-4
+#---
+#credentials: {type: x509, 
+#encodedCredentails: /tmp/x509up_u1004}
+#endpoint: https://fc.scai.fraunhofer.de:8787/
+#id: 4-6
+#name: SCAI
+#resourceTemplates:
+#nodeTemplates: 
+#   - refId: 3-5
+#---
+#credentials: {type: x509, 
+#encodedCredentails: /tmp/x509up_u1004}
+#endpoint: https://sbgcloud.in2p3.fr:8787/occi1.1/
+#id: 4-7
+#name: IN2P3-IRES
+#resourceTemplates:
+#nodeTemplates: 
+#   - refId: 3-6
+#   - refId: 3-7
+#---
+#credentials: {type: x509, 
+#encodedCredentails: /tmp/x509up_u1004}
+#endpoint: https://cloud.ifca.es:8787/occi1.1
+#id: 4-8
+#name: IFCA-LCG2
+#resourceTemplates:
+#nodeTemplates: 
+#   - refId: 3-10
+#---
+#credentials: {type: x509, 
+#encodedCredentails: /tmp/x509up_u1004}
+#endpoint: http://server4-epsh.unizar.es:8787
+#id: 4-9
+#name: BIFI
+#resourceTemplates:
+#nodeTemplates: 
+#   - refId: 3-11
+#---
+#credentials: {type: x509, 
+#encodedCredentails: /tmp/x509up_u1004}
+#endpoint: https://egi-cloud.pd.infn.it:8787/
+#id: 4-10
+#name: INFN-Padova-Stack
+#resourceTemplates:
+#nodeTemplates: 
+#   - refId: 3-12
+

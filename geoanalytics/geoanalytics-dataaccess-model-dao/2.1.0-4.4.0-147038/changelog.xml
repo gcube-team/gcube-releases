@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.model.dao.1-0-0" date="2016-07-29">
+		<Change>First release</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.model.dao.1-1-0" date="2016-11-24">
+		<Change>Added new functions</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.model.dao.1-2-0" date="2017-03-03">
+		<Change>Added new functions</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.model.dao.2-1-0" date="2017-04-21">
+		<Change>Style management</Change>
+	</Changeset>
+</ReleaseNotes>

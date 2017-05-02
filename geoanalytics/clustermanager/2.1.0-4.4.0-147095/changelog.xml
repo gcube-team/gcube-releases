@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.geoanalytics.clustermanager" date="2016-09-30">
+		<Change>Initial release</Change>
+	</Changeset>
+</ReleaseNotes>
+

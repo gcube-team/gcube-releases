@@ -1,0 +1,25 @@
+.aui #layerInfoModal input[type="text"] {
+	width: 50%;
+}
+
+.aui #layerInfoModal textarea[type="text"] {
+	width: 50%;
+}
+
+.aui #layerInfoModal label.modalLayerNameError {
+	color: #b94a48;
+	font-size: 12px;
+	display: none;
+}
+
+.aui label#urlInputError {
+	color: #b94a48;
+	font-size: 12px;
+	display: none;
+	padding-left: 4px
+}
+
+.aui .adminContainer #firstV {
+	line-height: 0px;
+	padding: 10px;
+}

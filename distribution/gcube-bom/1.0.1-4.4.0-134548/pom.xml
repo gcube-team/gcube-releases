@@ -1,0 +1,164 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>org.gcube.distribution</groupId>
+	<artifactId>gcube-bom</artifactId>
+	<version>1.0.1-4.4.0-134548</version>
+	<packaging>pom</packaging>
+	<name>gCube BOM</name>
+	<description>This artifact contains gCube commons library version declaration for dependency management</description>
+	
+	<properties>
+		<distroDirectory>distro</distroDirectory>
+	</properties>
+
+	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/trunk/distributions/${project.artifactId}</connection>
+		<developerConnection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/trunk/distributions/${project.artifactId}</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/trunk/distributions/${project.artifactId}</url>
+	</scm>
+	
+	<dependencyManagement>
+		<dependencies>
+			
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-encryption</artifactId>
+				<version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.resources</groupId>
+				<artifactId>common-gcore-resources</artifactId>
+				<version>1.3.3-4.4.0-144114</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-gcore-stubs</artifactId>
+				<version>1.2.2-4.4.0-132342</version>
+			</dependency>
+			
+			
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-scope</artifactId>
+				<version>1.2.0-4.4.0-125717</version>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-scope-maps</artifactId>
+				<version>1.0.6-4.4.0-142513</version>
+			</dependency>
+			
+			
+			<dependency>
+				<groupId>org.gcube.resources</groupId>
+				<artifactId>registry-publisher</artifactId>
+				<version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.resources.discovery</groupId>
+				<artifactId>ic-client</artifactId>
+				<version>1.0.3-4.4.0-142544</version>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.resources.discovery</groupId>
+				<artifactId>discovery-client</artifactId>
+				<version>1.0.1-4.4.0-125857</version>
+			</dependency>
+			
+			
+			<!-- Facets Based Resource Model related dependencies -->
+			<dependency>
+				<groupId>org.gcube.information-system</groupId>
+				<artifactId>information-system-model</artifactId>
+				<version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.information-system</groupId>
+				<artifactId>gcube-resources</artifactId>
+				<version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.information-system</groupId>
+				<artifactId>resource-registry-publisher</artifactId>
+				<version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.information-system</groupId>
+				<artifactId>resource-registry-client</artifactId>
+				<version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version>
+			</dependency>
+			<!-- END Facets Based Resource Model related dependencies -->
+			
+			
+			<!-- Clients Related Dependencies -->
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-generic-clients</artifactId>
+				<version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-gcube-calls</artifactId>
+				<version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-jaxws-calls</artifactId>
+				<version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-clients</artifactId>
+				<version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</version>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-fw-clients</artifactId>
+				<version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version>
+			</dependency>
+			<!-- END Clients Related Dependencies -->
+			
+			<!-- Authorization Related Dependencies -->
+			<dependency>
+				<groupId>org.gcube.common</groupId>
+				<artifactId>authorization-client</artifactId>
+				<version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</version>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.common</groupId>
+				<artifactId>common-authorization</artifactId>
+				<version>2.0.2-4.4.0-144378</version>
+			</dependency>
+			<!-- END Authorization Related Dependencies -->
+
+			<!-- Accounting Related Dependencies -->
+			<dependency>
+				<groupId>org.gcube.data.publishing</groupId>
+				<artifactId>document-store-lib</artifactId>
+				<version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.accounting</groupId>
+				<artifactId>accounting-lib</artifactId>
+				<version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</version>
+			</dependency>
+			<!-- END Accounting Related Dependencies -->
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.5</version>
+			</dependency>
+
+			
+		</dependencies>
+	</dependencyManagement>
+	
+</project>

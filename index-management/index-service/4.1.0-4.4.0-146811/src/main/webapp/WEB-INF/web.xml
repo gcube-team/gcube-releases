@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.4">
+  <display-name>Restful Web Application</display-name>
+  <listener>
+    <listener-class>org.gcube.rest.index.service.accessors.IndexAccessor</listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.gcube.rest.index.service.accessors.CacheAccessor</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>jersey-servlet</servlet-name>
+    <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+    <init-param>
+      <param-name>com.sun.jersey.config.property.packages</param-name>
+      <param-value>org.gcube.rest.index.service</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jersey-servlet</servlet-name>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+</web-app>
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<!-- <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" -->
+<!-- 	xmlns="http://java.sun.com/xml/ns/javaee" -->
+<!-- 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" -->
+<!-- 	id="WebApp_ID" version="3.0"> -->
+<!-- 	<display-name>org.gcube.rest.index.service</display-name> -->
+<!-- 	<listener> -->
+<!-- 		<listener-class>org.gcube.rest.index.service.IndexAccessor</listener-class> -->
+<!-- 	</listener> -->
+<!-- 	<servlet> -->
+<!-- 	  <servlet-name>gCube Index REST Service</servlet-name> -->
+<!-- 	<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class> -->
+<!-- 	  <init-param> -->
+<!-- 	    <param-name>com.sun.jersey.config.property.packages</param-name> -->
+<!-- 	    <param-value>org.gcube.rest.index.service</param-value> -->
+<!-- 	  </init-param> -->
+<!-- 	  <load-on-startup>1</load-on-startup> -->
+<!-- 	</servlet> -->
+<!-- 	<servlet-mapping> -->
+<!-- 	  <servlet-name>gCube Index REST Service</servlet-name> -->
+<!-- 	  <url-pattern>/*</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+<!-- </web-app> -->
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<!-- <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"> -->
+<!-- 	<display-name>Archetype Created Web Application</display-name> -->
+<!-- 	<context-param> -->
+<!-- 		<param-name>resteasy.scan</param-name> -->
+<!-- 		<param-value>true</param-value> -->
+<!-- 	</context-param> -->
+<!-- 	<listener> -->
+<!-- 		<listener-class>org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap</listener-class> -->
+<!-- 	</listener> -->
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>resteasy-servlet</servlet-name> -->
+<!-- 		<servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class> -->
+<!-- 		<load-on-startup>1</load-on-startup>  -->
+<!-- 	</servlet> -->
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>resteasy-servlet</servlet-name> -->
+<!-- 		<url-pattern>/*</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+<!-- 	<listener> -->
+<!-- 	    <listener-class>org.gcube.rest.index.service.IndexAccessor</listener-class> -->
+<!-- 	</listener> -->
+<!-- </web-app> -->

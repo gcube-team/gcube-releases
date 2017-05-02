@@ -1,0 +1,8 @@
+<application mode='online'>
+		<name>${artifactId}</name>
+		<group>SDI</group>
+		<version>${version}</version>
+		<description>${description}</description>		
+		<local-persistence location='target' />
+</application>
+

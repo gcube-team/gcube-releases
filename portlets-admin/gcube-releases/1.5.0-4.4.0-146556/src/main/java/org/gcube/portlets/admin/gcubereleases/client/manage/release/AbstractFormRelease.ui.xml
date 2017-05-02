@@ -1,0 +1,69 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:dp="urn:import:com.google.gwt.user.datepicker.client" 
+	xmlns:b2="urn:import:com.github.gwtbootstrap.datepicker.client.ui">
+
+	<g:FlowPanel styleName="marginTop20">
+		<b:Form type="HORIZONTAL" ui:field="form_new_release">
+			<b:Fieldset>
+				<b:ControlGroup ui:field="input_id_group">
+					<b:ControlLabel for="input_id">Id</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox placeholder="org.gcube.X-X-X" b:id="input_id"
+							ui:field="input_id"></b:TextBox>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup ui:field="input_name_group">
+					<b:ControlLabel for="input_name">Name</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox placeholder="gCube X.X.X" b:id="input_name"
+							ui:field="input_name"></b:TextBox>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup ui:field="input_description_group">
+					<b:ControlLabel for="input_description">Description</b:ControlLabel>
+					<b:Controls>
+						<b:TextArea b:id="input_description" visibleLines="5"
+							ui:field="input_description" />
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup ui:field="input_URI_group">
+					<b:ControlLabel for="input_URI">URI</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox placeholder="Etics distribution.xml" b:id="input_URI"
+							ui:field="input_URI"></b:TextBox>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup ui:field="input_release_date_group">
+					<b:ControlLabel for="input_release_date">Release date</b:ControlLabel>
+					<b:Controls>
+						<dp:DateBox ui:field="input_release_date"/>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:ControlGroup>
+					<b:ControlLabel for="select_online">On Line</b:ControlLabel>
+					<b:Controls>
+						<b:ListBox b:id="select_online" ui:field="select_online">
+							<g:item>TRUE</g:item>
+							<g:item>FALSE</g:item>
+						</b:ListBox>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:FluidRow ui:field="validator_field">
+
+				</b:FluidRow>
+				<b:FormActions styleName="form-action-personal">
+					<b:SubmitButton type="PRIMARY" ui:field="submit_button">Save Release</b:SubmitButton>
+				</b:FormActions>
+			</b:Fieldset>
+		</b:Form>
+	</g:FlowPanel>
+</ui:UiBinder> 

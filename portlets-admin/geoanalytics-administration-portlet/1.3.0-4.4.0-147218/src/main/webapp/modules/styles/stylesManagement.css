@@ -1,0 +1,93 @@
+#stylesManagement .geoadmin-modal-header,
+#stylesManagement .geoadmin-modal-header p{
+	color: white;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+#stylesManagement .modal textarea{
+	resize:none;
+	color: #0271be;
+}
+
+#stylesManagement .modal input{
+	color: #0271be;
+}
+
+#stylesManagement{
+	margin-bottom: 10px;
+}
+
+#geoadmin-create-style-content-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    
+    height: 33px;
+    line-height: 30px;
+    opacity: -0.9;
+    width: 121px;
+    background-color: antiquewhite;
+}
+
+.aui #geoadmin-create-style-content {
+    cursor: text;
+    background: white;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+#geoadmin-create-style-content-browseButton{
+    background-color: #0271be;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    height: 28px;
+}
+
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#styleUpload {
+	position: relative;
+    overflow: hidden;
+    background-color: #0271be;
+}
+
+.aui #stylesManagement #geoadmin-create-style-modal .modal-body .control-group .fileUpload {
+	color: white;
+    background-color: #0271be;
+    background-repeat: repeat-x;
+    
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    
+    webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    border-radius: 5px !important;
+    
+}

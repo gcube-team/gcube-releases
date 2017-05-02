@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>${description}</Description>
+		<Class>Common</Class>
+		<Name>${artifactId}</Name>
+		<Version>${version}</Version>
+		<Packages>
+			<Software>
+				<Description>${description}</Description>
+				<Name>${artifactId}</Name>
+				<Version>${version}</Version>
+				<Files>
+					<File>${build.finalName}.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+
+</Resource>
+

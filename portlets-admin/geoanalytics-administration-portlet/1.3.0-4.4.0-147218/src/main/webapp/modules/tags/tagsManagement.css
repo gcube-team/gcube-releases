@@ -1,0 +1,19 @@
+#geoadmin-tags .geoadmin-modal-header,
+#geoadmin-tags .geoadmin-modal-header p{
+	color: white;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+#geoadmin-tags .modal textarea{
+	resize:none;
+	color: #0271be;
+}
+
+#geoadmin-tags .modal input{
+	color: #0271be;
+}
+
+#geoadmin-tags{
+	margin-bottom: 10px;
+}

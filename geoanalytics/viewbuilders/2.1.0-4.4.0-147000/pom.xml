@@ -1,0 +1,564 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>gr.cite.gaap</groupId>
+  <artifactId>viewbuilders</artifactId>
+  <version>2.1.0-4.4.0-147000</version>
+  <packaging>jar</packaging>
+
+  <name>viewbuilders</name>
+
+<scm>
+		<connection>scm:svn:http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/viewbuilders</connection>
+		<developerConnection>scm:http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/viewbuilders</developerConnection>
+		<url>http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/viewbuilders</url>
+	</scm>
+
+ <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<gr.cite.geoanalytics.common.version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</gr.cite.geoanalytics.common.version>
+		<gr.cite.geoanalytics.dataaccess-model.version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-model.version>
+		<gr.cite.geoanalytics.dataaccess-model-dao.version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-model-dao.version>
+		<org.hibernate.version>5.2.9.Final</org.hibernate.version>
+		<c3p0.version>0.9.1.2</c3p0.version>
+		<org.springframework.version>4.3.1.RELEASE</org.springframework.version>
+		<org.springsecurity.version>4.1.0.RELEASE</org.springsecurity.version>
+		<gr.cite.gaap.servicelayer-commons.version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</gr.cite.gaap.servicelayer-commons.version>
+		<gr.cite.commons.data-repository.version>[1.0.0-SNAPSHOT,2.0.0-SNAPSHOT)</gr.cite.commons.data-repository.version>
+		<gr.cite.commons.data-repository-client.version>[1.0.0-SNAPSHOT,2.0.0-SNAPSHOT)</gr.cite.commons.data-repository-client.version>
+		<gr.cite.commons.data-repository-api.version>[1.0.0-SNAPSHOT,2.0.0-SNAPSHOT)</gr.cite.commons.data-repository-api.version>
+		<com.google.guava.version>19.0</com.google.guava.version>
+		<javax.servlet.servlet-api.version>3.0.1</javax.servlet.servlet-api.version>
+		<javax.servlet.jstl.version>1.2</javax.servlet.jstl.version>
+		<javax.mail.version>1.4</javax.mail.version>
+		<javax.activation.version>1.1.1</javax.activation.version>
+		<javax.inject.version>1</javax.inject.version>
+		<org.slf4j.version>1.7.7</org.slf4j.version>
+		<org.geotools.version>9.3</org.geotools.version>
+		<org.postgis.postgis-jdbc.version>2.0.0</org.postgis.postgis-jdbc.version>
+		<org.apache.commons-fileupload.version>1.3</org.apache.commons-fileupload.version>
+		<org.apache.commons-lang.version>2.4</org.apache.commons-lang.version>
+		<com.fasterxml.jackson.core.version>2.5.3</com.fasterxml.jackson.core.version>
+		<org.junit.version>4.11</org.junit.version>
+		<org.mockito.version>1.9.5</org.mockito.version>
+		<log4j.version>1.2.16</log4j.version>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+<!-- 		<gr.cite.clustermanager.version>[0.0.1-SNAPSHOT, 1.0.0-SNAPSHOT)</gr.cite.clustermanager.version> -->
+		<gr.cite.gos.GeospatialOperationServiceClient.version>[0.0.1-SNAPSHOT, 1.0.0-SNAPSHOT)</gr.cite.gos.GeospatialOperationServiceClient.version>
+	</properties>
+
+
+	<repositories>
+		<repository>
+			<id>OSGEO GeoTools repo</id>
+			<url>http://download.osgeo.org/webdav/geotools</url>
+		</repository>
+
+<!-- 		<repository>
+			<id>Hibernate Spatial repo</id>
+			<url>http://www.hibernatespatial.org/repository</url>
+		</repository> -->
+
+		<repository>
+			<id>springsource-repo</id>
+			<name>SpringSource Repository</name>
+			<url>http://repo.springsource.org/release</url>
+		</repository>
+
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>http://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>spring-social-google</id>
+			<name>Spring social Google repo</name>
+			<url>https://github.com/GabiAxel/maven/tree/master</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+
+<!-- 		<repository> -->
+<!-- 			<id>archiva.snapshots</id> -->
+<!-- 			<name>Internal Snapshot Repository</name> -->
+<!-- 			<url>http://maven.local.cite.gr:8080/repository/snapshots/</url> -->
+<!-- 		</repository> -->
+
+<!-- 		<repository> -->
+<!-- 			<id>archiva.releases</id> -->
+<!-- 			<name>Internal Releases Repository</name> -->
+<!-- 			<url>http://maven.local.cite.gr:8080/repository/internal/</url> -->
+<!-- 		</repository> -->
+
+		<repository>
+			<id>terracotta-releases</id>
+			<url>http://www.terracotta.org/download/reflector/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<name>oss.sonatype.org</name>
+			<id>oss.sonatype.org</id>
+			<url>http://oss.sonatype.org/content/groups/public</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>gr.cite.gaap</groupId>
+			<artifactId>servicelayer-commons</artifactId>
+			<version>${gr.cite.gaap.servicelayer-commons.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>common</artifactId>
+			<version>${gr.cite.geoanalytics.common.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>dataaccess-model</artifactId>
+			<version>${gr.cite.geoanalytics.dataaccess-model.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>dataaccess-model-dao</artifactId>
+			<version>${gr.cite.geoanalytics.dataaccess-model-dao.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${com.google.guava.version}</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>javax.ws.rs</groupId>
+		    <artifactId>javax.ws.rs-api</artifactId>
+		    <version>2.0.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${org.springsecurity.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${org.springsecurity.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${org.springsecurity.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${org.springsecurity.version}</version>
+		</dependency>
+
+		<!-- <dependency> -->
+		<!-- <groupId>c3p0</groupId> -->
+		<!-- <artifactId>c3p0</artifactId> -->
+		<!-- <version>${c3p0.version}</version> -->
+		<!-- </dependency> -->
+
+		<!-- Hibernate c3p0 connection pool -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>${org.hibernate.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${javax.servlet.servlet-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>${javax.inject.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${javax.servlet.jstl.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>${javax.mail.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>${javax.activation.version}</version>
+		</dependency>
+
+		<!-- For cluster management -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>gr.cite</groupId> -->
+<!-- 			<artifactId>clustermanager</artifactId> -->
+<!-- 			<version>${gr.cite.clustermanager.version}</version> -->
+<!-- 		</dependency> -->
+
+
+		<!-- For geospatial operation services -->
+		<dependency>
+			<groupId>gr.cite.gos</groupId>
+			<artifactId>GeospatialOperationServiceClient</artifactId>
+			<version>${gr.cite.gos.GeospatialOperationServiceClient.version}</version>
+		</dependency>
+
+		<!-- Data repository -->
+		<dependency>
+			<groupId>gr.cite.commons</groupId>
+			<artifactId>data-repository-api</artifactId>
+			<version>${gr.cite.commons.data-repository-api.version}</version>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>gr.cite.commons</groupId> -->
+		<!-- <artifactId>data-repository</artifactId> -->
+		<!-- <version>${gr.cite.commons.data-repository.version}</version> -->
+		<!-- </dependency> -->
+
+		<dependency>
+			<groupId>gr.cite.commons</groupId>
+			<artifactId>data-repository-client</artifactId>
+			<version>${gr.cite.commons.data-repository-client.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.fasterxml.jackson.core</groupId>
+					<artifactId>jackson-databind</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.fasterxml.jackson.core</groupId>
+					<artifactId>jackson-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<artifactId>log4j-over-slf4j</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>logback-classic</artifactId>
+					<groupId>ch.qos.logback</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>logback-core</artifactId>
+					<groupId>ch.qos.logback</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>metrics-logback</artifactId>
+					<groupId>com.codahale.metrics</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>dropwizard-jackson</artifactId>
+					<groupId>io.dropwizard</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>
+						jackson-module-jaxb-annotations
+					</artifactId>
+					<groupId>com.fasterxml.jackson.module</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- Geotools -->
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-epsg-hsql</artifactId>
+			<version>${org.geotools.version}</version>
+		</dependency>
+		<!-- Provides support for PostGIS. Note the different groupId -->
+		<!-- <dependency> <groupId>org.geotools.jdbc</groupId> <artifactId>gt-jdbc-postgis</artifactId> 
+			<version>${org.geotools.version}</version> </dependency> -->
+		<!-- Provides support for shapefiles -->
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-shapefile</artifactId>
+			<version>${org.geotools.version}</version>
+		</dependency>
+		<!-- Provides GUI components -->
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-swing</artifactId>
+			<version>${org.geotools.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-main</artifactId>
+			<version>${org.geotools.version}</version>
+		</dependency>
+
+		<!-- -->
+
+		<dependency>
+			<groupId>org.postgis</groupId>
+			<artifactId>postgis-jdbc</artifactId>
+			<version>${org.postgis.postgis-jdbc.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${com.fasterxml.jackson.core.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${com.fasterxml.jackson.core.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${org.apache.commons-fileupload.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>${org.apache.commons-lang.version}</version>
+		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j.version}</version>
+		</dependency>
+		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-simple</artifactId> 
+			<version>${org.slf4j.version}</version> </dependency> -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${org.slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${org.slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- Testing -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${org.junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${org.mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Spring dependencies to resolve spring security conflicts -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+	</dependencies>
+	
+<!-- 	<distributionManagement> -->
+<!-- 		<repository> -->
+<!-- 			<id>archiva.internal</id> -->
+<!-- 			<name>Internal Release Repository</name> -->
+<!-- 			<url>http://maven.local.cite.gr:8080/repository/internal/</url> -->
+<!-- 		</repository> -->
+<!-- 		<snapshotRepository> -->
+<!-- 			<id>archiva.snapshots</id> -->
+<!-- 			<name>Internal Snapshot Repository</name> -->
+<!-- 			<url>http://maven.local.cite.gr:8080/repository/snapshots/</url> -->
+<!-- 		</snapshotRepository> -->
+<!-- 	</distributionManagement> -->
+		
+		<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 				<artifactId>maven-enforcer-plugin</artifactId> -->
+<!-- 				<version>1.3.1</version> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<id>enforce</id> -->
+<!-- 						<configuration> -->
+<!-- 							<rules> -->
+<!-- 								<DependencyConvergence /> -->
+<!-- 							</rules> -->
+<!-- 						</configuration> -->
+<!-- 						<goals> -->
+<!-- 							<goal>enforce</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 			</plugin> -->
+			
+			<plugin>
+				<groupId>com.googlecode.maven-overview-plugin</groupId>
+				<artifactId>maven-overview-plugin</artifactId>
+				<version>1.6</version>
+			</plugin>
+			
+			<plugin>
+			    <groupId>net.alchim31.maven</groupId>
+			    <artifactId>yuicompressor-maven-plugin</artifactId>
+			    <version>1.3.0</version>
+			    <executions>
+			        <execution>
+			            <id>compressyui</id>
+			            <phase>process-resources</phase>
+			            <goals>
+			                <goal>compress</goal>
+			            </goals>
+			            <configuration>
+			                <nosuffix>false</nosuffix>
+			                <warSourceDirectory>${basedir}\WebContent</warSourceDirectory>
+                			<webappDirectory>${project.build.directory}\min</webappDirectory>
+			                <jswarn>false</jswarn>
+			            </configuration>
+			        </execution>
+			    </executions>
+			</plugin>
+		</plugins>
+		
+		<pluginManagement>
+		<plugins>
+		<plugin>
+		 <groupId>org.eclipse.m2e</groupId>
+		 <artifactId>lifecycle-mapping</artifactId>
+		 <version>1.0.0</version>
+		 <configuration>
+		   <lifecycleMappingMetadata>
+		     <pluginExecutions>
+		       <pluginExecution>
+		         <pluginExecutionFilter>
+		           <groupId>net.alchim31.maven</groupId>
+		           <artifactId>yuicompressor-maven-plugin</artifactId>
+		           <versionRange>[1.0.0,)</versionRange>
+		           <goals>
+		             <goal>compress</goal>
+		           </goals>
+		         </pluginExecutionFilter>
+		         <action>
+		           <execute >
+		             <runOnIncremental>false</runOnIncremental>
+		           </execute>
+		         </action>
+		       </pluginExecution>
+		     </pluginExecutions>
+		   </lifecycleMappingMetadata>
+		 </configuration>
+		</plugin>
+		</plugins>
+	</pluginManagement>
+	</build>
+</project>

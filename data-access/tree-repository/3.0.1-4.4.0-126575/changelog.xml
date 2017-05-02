@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="tree-repository-1.0.0" date="2012-04-26">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="tree-repository-3.0.0" date="2013-01-11">
+		<Change>eliminated dependencies on client libraries and gCore stack</Change>
+		<Change>all retrieved trees have source identifier attribute</Change>
+		<Change>added standalone distribution artifact with embedded dependencies for manual deployment</Change>
+		<Change>internally aligned with changes in dependencies</Change>
+	</Changeset>
+	<Changeset component="tree-repository-3.0.1-4.4.0-126575" date="2013-05-29">
+		<Change>source properties updated after stream operations</Change>
+	</Changeset>
+</ReleaseNotes>

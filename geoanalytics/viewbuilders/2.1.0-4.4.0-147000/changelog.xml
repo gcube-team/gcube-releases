@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.gaap.viewbuilders.0-0-1" date="2016-07-29">
+		<Change>First release</Change>
+	</Changeset>
+	
+	<Changeset component="gr.cite.gaap.viewbuilders.0-2-0" date="2017-03-03">
+		<Change>Removed regular views and added Materialized Views</Change>
+		<Change>Corrected drop statements</Change>
+	</Changeset>
+	
+	<Changeset component="gr.cite.gaap.viewbuilders.2-1-0" date="2017-04-20">
+		<Change>Added Cluster</Change>
+	</Changeset>
+</ReleaseNotes>

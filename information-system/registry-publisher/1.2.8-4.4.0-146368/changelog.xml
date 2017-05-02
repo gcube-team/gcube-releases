@@ -1,0 +1,30 @@
+<ReleaseNotes>
+		<Changeset component="org.gcube.information-system.registry-publisher.1-2-8" date="2017-03-27">
+		<Change>adde update and create only on VOs</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry-publisher.1-2-7" date="2016-10-3">
+		<Change>removed scope promotion on PublisherImpl</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry-publisher.1-2-6" date="2014-09-10">
+		<Change>remove log4j.properties file from src/main/resources folder</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry-publisher.1-2-5" date="2014-09-10">
+		<Change>add dependency range for ic-client on pom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry-publisher.1-2-4" date="2014-06-30">
+		<Change>added method removeByID in AdvancedPublisher class</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry-publisher.1-2-3" date="2014-04-03">
+		<Change>added filtering on scope promotion for some kind of resources: genericResource, GcoreEndpoint and Software</Change>
+		<Change>update remove operation</Change>
+	</Changeset>
+    <Changeset component="org.gcube.information-system.registry-publisher.1-2-2" date="2014-01-30">
+		<Change>bug fixing</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry-publisher.1-2-1" date="2013-10-30">
+		<Change>Second Release</Change>
+	</Changeset>
+	<Changeset component="registry-publisher-1.0.0" date="2013-01-17">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

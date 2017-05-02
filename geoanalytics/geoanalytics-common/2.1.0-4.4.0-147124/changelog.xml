@@ -1,0 +1,23 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.geoanalytics.geoanalytics-common.1-0-0" date="2016-07-29">
+		<Change>First release</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.geoanalytics-common.1-1-0" date="2016-11-24">
+		<Change>Pom is changed. More specific: Exclude geotoolkit dependencies. Change range of org.gcube.spatial.data.version to [3.0.0-SNAPSHOT, 3.1.0-SNAPSHOT). Include Geotools repository. Include jvnet dependencies. Exclude geoapi 3.0.0. Include geotools dependencies</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.geoanalytics-common.1-2-0" date="2017-03-03">
+		<Change>Loggers have been added</Change>
+		<Change>Extent logic so as to drop views and materialized views correctly</Change>
+		<Change>Rename and refactor Taxonomy to Geocodesystem</Change>
+		<Change>Remove MV suffix from Materialized Views</Change>
+		<Change>Improve wfs import functionality</Change>
+		<Change>Revise delete layer mechanism</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.geoanalytics-common.2-1-0" date="2017-04-21">
+		<Change>Remove ShapeImport references</Change>
+		<Change>Remove trash comments</Change>
+		<Change>Cluster logic has been added</Change>
+		<Change>Remove TaxonomyLayer</Change>
+		<Change>Logic for style management and environment initializer has been added</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='tokengenerator'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.user.tokengenerator.client.TokenGenerator' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

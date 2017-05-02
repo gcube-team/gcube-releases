@@ -1,0 +1,11 @@
+<application mode="online">
+
+	<group>Index</group>
+	<name>FullTextIndexNode</name>
+	<version>4.0.0</version>
+
+	<description>Restful Version of FulltextIndex</description>
+
+	<exclude>/resources/</exclude>
+
+</application>

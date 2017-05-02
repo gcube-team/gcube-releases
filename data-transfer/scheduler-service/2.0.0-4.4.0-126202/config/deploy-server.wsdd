@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment name="defaultServerConfig" 
+    xmlns="http://xml.apache.org/axis/wsdd/" 
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+    xmlns:aggr="http://mds.globus.org/aggregator/types">
+
+	<service name="gcube/datatransfer/scheduler/Scheduler" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.datatransfer.scheduler.impl.porttype.Scheduler"/>
+        <wsdlFile>share/schema/data-transfer.scheduler-service/Scheduler_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+        <parameter name="instance" value="gcube/datatransfer/scheduler/Scheduler"/> 
+   		<parameter name="providers" value="GCUBEProvider SubscribeProvider GetCurrentMessageProvider"/>
+   		<parameter name="loadOnStartup" value="true"/>
+		
+    </service>
+    
+    	<service name="gcube/datatransfer/scheduler/Factory" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.datatransfer.scheduler.impl.porttype.Factory"/>
+        <wsdlFile>share/schema/data-transfer.scheduler-service/Factory_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+   		<parameter name="providers" value="GCUBEProvider SubscribeProvider GetCurrentMessageProvider"/>
+   		<parameter name="loadOnStartup" value="true"/>
+		
+    </service>
+    
+    	<service name="gcube/datatransfer/scheduler/Management" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.datatransfer.scheduler.impl.porttype.Management"/>
+        <wsdlFile>share/schema/data-transfer.scheduler-service/Management_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+
+   		<parameter name="providers" value="GCUBEProvider SubscribeProvider GetCurrentMessageProvider"/>
+   		<parameter name="loadOnStartup" value="true"/>
+		
+    </service>
+</deployment>

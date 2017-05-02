@@ -1,0 +1,30 @@
+<ReleaseNotes>
+
+	<Changeset component="org.gcube.portlets.GeoanalyticsAdministrationHome.1-0-0" date="2016-09-29">
+		<Change>First release</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.portlets.GeoanalyticsAdministrationHome.1-1-0" date="2016-11-25">
+		<Change>Fixed bugs preventing the portlet to load</Change>
+		<Change>Improved the importers' UI</Change>
+		<Change>Dynamic discovery of the backend service</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.portlets.GeoanalyticsAdministrationHome.1-2-0" date="2017-03-03">
+		<Change>Fixed TSV Importer</Change>
+		<Change>Added WFS Importer</Change>
+		<Change>Added ShapeFile Importer</Change>
+		<Change>Added Layers Management</Change>
+		<Change>Added Tags Management</Change>
+		<Change>Replaced ASL with Portal Context</Change>
+	</Changeset>
+
+	<Changeset component="org.gcube.portlets.GeoanalyticsAdministrationHome.1-3-0" date="2017-04-21">			
+		<Change>Added Styles Management</Change>
+		<Change>Added Layer Import Monitor</Change>
+		<Change>Added Template Layer import option on Shapefile Importer</Change>	
+		<Change>Added EndpointManager for caching endpoints</Change>				
+		<Change>Enriched Layers Management with diverse functionality</Change>
+	</Changeset>
+	
+</ReleaseNotes>

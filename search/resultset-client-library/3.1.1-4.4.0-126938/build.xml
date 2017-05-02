@@ -1,0 +1,60 @@
+<project default="compile" basedir=".">
+    <property name="project.build" value="build"/>
+    <property name="build.classes" value="${project.build}/classes"/>
+    <target name="compile" depends="clean , setenv" description="Compile project source code">
+        <echo>Compiling project source code</echo>
+        <javac srcdir="."
+            destdir="${build.classes}"
+            classpathref="classpath"
+            debug="on"
+            optimize="on"
+            deprecation="on"/>
+    </target>
+	<target name="jar" depends="compile">
+	    <jar destfile="ResultSetClientLibrary.jar" basedir="${build.classes}" includes="**/*.class"/>
+	</target>
+	<target name="setenv" description="Check for libraries and print out config information">
+        <mkdir dir="${project.build}"/>
+        <mkdir dir="${build.classes}"/>
+        <path id="classpath">
+            <pathelement location="${build.classes}"/>
+            <fileset dir="${globus.location}/lib">
+                <include name="*.jar"/>
+            </fileset>
+            <fileset dir="${resultset.library.location}">
+                <include name="ResultSetLibrary.jar"/>
+            </fileset>
+            <fileset dir="${resultsetservice.stubs.location}">
+                <include name="org.gcube.common.searchservice.resultsetservice.stubs.jar"/>
+            </fileset>
+            <fileset dir="${resultsetservice.service.location}">
+                <include name="org.gcube.common.searchservice.resultsetservice.jar"/>
+            </fileset>
+            <pathelement path="${java.class.path}"/>
+        </path>
+    </target>
+	 
+		<target name="javadoc">
+			<javadoc access="public" 
+				author="true" 
+				destdir="doc/api" 
+				nodeprecated="false" 
+				nodeprecatedlist="false" 
+				noindex="false" 
+				nonavbar="false" 
+				notree="false" 
+				packagenames="org.gcube.common.searchservice.searchlibrary.elements,org.gcube.common.searchservice.searchlibrary.rsreader,org.gcube.common.searchservice.searchlibrary.rswriter,org.gcube.common.searchservice.searchlibrary.rsclient.elements.pool" 
+				source="1.5" 
+				sourcepath="." 
+				splitindex="true" 
+				use="true" 
+				version="true">
+	            <fileset dir="${resultset.library.location}"/>
+	            <fileset dir="${resultsetservice.service.location}"/>
+	            <fileset dir="${resultsetservice.stubs.location}"/>
+			</javadoc>
+		</target>
+    <target name="clean" description="Delete classes and existing library">
+        <delete quiet="true" dir="${project.build}"/>
+    </target>
+</project>

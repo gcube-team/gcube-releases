@@ -1,0 +1,384 @@
+<#setting url_escaping_charset='ISO-8859-1'>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gmd:MD_Metadata xmlns:gco="http://www.isotc211.org/2005/gco"
+	xmlns:fra="http://www.cnig.gouv.fr/2005/fra" xmlns:gmx="http://www.isotc211.org/2005/gmx"
+	xmlns:gmi="http://www.isotc211.org/2005/gmi" xmlns:gmd="http://www.isotc211.org/2005/gmd"
+	xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink">
+	<gmd:fileIdentifier>
+		<gco:CharacterString>${UUIDIdentifier}</gco:CharacterString>
+	</gmd:fileIdentifier>
+	<gmd:language>
+		<gmd:LanguageCode codeListValue="eng"
+			codeList="http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/ML_gmxCodelists.xml#LanguageCode">English</gmd:LanguageCode>
+	</gmd:language>
+	<gmd:characterSet>
+		<gmd:MD_CharacterSetCode codeListValue="utf8"
+			codeList="http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode">UTF-8</gmd:MD_CharacterSetCode>
+	</gmd:characterSet>
+	<gmd:hierarchyLevel>
+		<gmd:MD_ScopeCode codeSpace="eng" codeListValue="dataset"
+			codeList="http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml#MD_ScopeCode">Dataset</gmd:MD_ScopeCode>
+	</gmd:hierarchyLevel>
+	
+						<!-- RESPONSIBLE PARTIES : contact-->
+
+	<#list responsibleParties as responsibleParty>
+	
+	<gmd:contact>
+		<#include "ResponsibleParty.ftlx">
+	</gmd:contact>
+	
+	</#list>
+	
+	
+						<!-- PUBLICATION TIME -->
+	
+	<gmd:dateStamp>
+		<gco:DateTime>${.now?iso_utc}</gco:DateTime>
+	</gmd:dateStamp>
+	
+	
+	
+			<!-- SPATIAL REPRESENTATION INFO -->
+			
+	<gmd:spatialRepresentationInfo>
+		<gmd:MD_VectorSpatialRepresentation>
+			<gmd:topologyLevel>
+				<gmd:MD_TopologyLevelCode codeListValue="geometryOnly"
+					codeList="http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml#MD_TopologyLevelCode">Geometry only</gmd:MD_TopologyLevelCode>
+			</gmd:topologyLevel>
+			<gmd:geometricObjects>
+				<gmd:MD_GeometricObjects>
+					<gmd:geometricObjectType>
+						<gmd:MD_GeometricObjectTypeCode
+							codeListValue="surface"
+							codeList="http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml#MD_GeometricObjectTypeCode">Surface</gmd:MD_GeometricObjectTypeCode>
+					</gmd:geometricObjectType>
+					<gmd:geometricObjectCount>
+						<gco:Integer>${geometricObjectCount?c}</gco:Integer>
+					</gmd:geometricObjectCount>
+				</gmd:MD_GeometricObjects>
+			</gmd:geometricObjects>
+		</gmd:MD_VectorSpatialRepresentation>
+	</gmd:spatialRepresentationInfo>
+	<gmd:referenceSystemInfo>
+		<gmd:MD_ReferenceSystem>
+			<gmd:referenceSystemIdentifier>
+				<gmd:RS_Identifier>
+					<gmd:code>
+						<gco:CharacterString>http://www.opengis.net/def/crs/EPSG/0/4326</gco:CharacterString>
+					</gmd:code>
+				</gmd:RS_Identifier>
+			</gmd:referenceSystemIdentifier>
+		</gmd:MD_ReferenceSystem>
+	</gmd:referenceSystemInfo>
+	
+	<!-- IDENTIFICATION INFO -->
+
+	<gmd:identificationInfo>
+		<gmd:MD_DataIdentification>
+			<gmd:citation>
+				<gmd:CI_Citation>
+					<gmd:title>
+						<gco:CharacterString>${title}</gco:CharacterString>
+					</gmd:title>
+					<gmd:date>
+						<gmd:CI_Date>
+							<gmd:date>
+								<gco:Date>${creationTime?string["yyyy-MM-dd"]}</gco:Date>
+							</gmd:date>
+							<gmd:dateType>
+								<gmd:CI_DateTypeCode codeSpace="eng"
+									codeListValue="creation"
+									codeList="http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode">Creation</gmd:CI_DateTypeCode>
+							</gmd:dateType>
+						</gmd:CI_Date>
+					</gmd:date>
+					<gmd:identifier>
+						<gmd:MD_Identifier>
+							<gmd:code>
+								<gco:CharacterString>${UUIDIdentifier}</gco:CharacterString>
+							</gmd:code>
+						</gmd:MD_Identifier>
+					</gmd:identifier>
+					<gmd:presentationForm>
+						<gmd:CI_PresentationFormCode
+							codeListValue="imageDigital"
+							codeList="http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode">Image digital</gmd:CI_PresentationFormCode>
+					</gmd:presentationForm>
+				</gmd:CI_Citation>
+			</gmd:citation>
+			<gmd:abstract>
+				<gco:CharacterString>${abstractField}</gco:CharacterString>
+			</gmd:abstract>
+			<gmd:purpose>
+				<gco:CharacterString>${purpose}</gco:CharacterString>
+			</gmd:purpose>
+			<gmd:credit>
+				<gco:CharacterString>${credit}</gco:CharacterString>
+			</gmd:credit>
+			
+					<!-- RESPONSIBLE PARTIES -->
+
+	<#list responsibleParties as responsibleParty>
+	
+	<gmd:pointOfContact>
+		<#include "ResponsibleParty.ftlx">
+	</gmd:pointOfContact>
+	
+	</#list>
+			
+			
+			<gmd:resourceMaintenance>
+				<gmd:MD_MaintenanceInformation>
+					<gmd:maintenanceAndUpdateFrequency>
+						<gmd:MD_MaintenanceFrequencyCode
+							codeListValue="asNeeded"
+							codeList="http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode">As needed</gmd:MD_MaintenanceFrequencyCode>
+					</gmd:maintenanceAndUpdateFrequency>
+				</gmd:MD_MaintenanceInformation>
+			</gmd:resourceMaintenance>
+
+<!-- KEYWORDS -->
+
+			<#list keywords as keyword>
+			<gmd:descriptiveKeywords>
+				<gmd:MD_Keywords>
+					<#list keyword.values as value>
+					<gmd:keyword>
+						<gco:CharacterString>${value}</gco:CharacterString>
+					</gmd:keyword>
+					</#list>
+					<gmd:type>
+						<gmd:MD_KeywordTypeCode codeListValue="${keyword.type}"
+							codeList="http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"/>
+					</gmd:type>
+					<gmd:thesaurusName>
+						<gmd:CI_Citation>
+							<gmd:title>
+								<gco:CharacterString>${keyword.thesaurus}</gco:CharacterString>
+							</gmd:title>
+							<gmd:date>
+								<gmd:CI_Date>
+									<gmd:date>
+										<gco:Date>${keyword.creationDate?string["yyyy-MM-dd"]}</gco:Date>
+									</gmd:date>
+									<gmd:dateType>
+										<gmd:CI_DateTypeCode codeSpace="eng"
+											codeListValue="publication"
+											codeList="http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"/>
+									</gmd:dateType>
+								</gmd:CI_Date>
+							</gmd:date>
+						</gmd:CI_Citation>
+					</gmd:thesaurusName>
+				</gmd:MD_Keywords>
+			</gmd:descriptiveKeywords>
+			</#list>
+
+
+<!-- LEGAL ACCESS AND USE -->
+      <gmd:resourceConstraints>
+        <gmd:MD_Constraints>
+          <gmd:useLimitation>
+            <gco:CharacterString>The global seafloor geomorphic feature map is available for download from bluehabitats.org</gco:CharacterString>
+          </gmd:useLimitation>
+        </gmd:MD_Constraints>
+      </gmd:resourceConstraints>
+      <gmd:resourceConstraints>
+	<gmd:MD_LegalConstraints>
+		<gmd:accessConstraints>
+			<gmd:MD_RestrictionCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions"/>
+		</gmd:accessConstraints>
+		<gmd:otherConstraints>
+			<gco:CharacterString>no limitations</gco:CharacterString>
+		</gmd:otherConstraints>
+	</gmd:MD_LegalConstraints>
+</gmd:resourceConstraints>
+
+
+<!-- SPATIAL RESOLUTION & TOPIC CATEGORY--> 
+
+			<gmd:spatialResolution>
+				<gmd:MD_Resolution>
+					<gmd:distance>
+						<gco:Distance
+							uom="http://schemas.opengis.net/iso/19139/20070417/resources/uom/gmxUom.xml#xpointer(//*[@gml:id='m'])">${spatialResolution}</gco:Distance>
+					</gmd:distance>
+				</gmd:MD_Resolution>
+			</gmd:spatialResolution>
+			<gmd:language>
+				<gmd:LanguageCode codeListValue="eng"
+					codeList="http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/ML_gmxCodelists.xml#LanguageCode">English</gmd:LanguageCode>
+			</gmd:language>
+			<gmd:topicCategory>
+				<gmd:MD_TopicCategoryCode>${topicCategory}</gmd:MD_TopicCategoryCode>
+			</gmd:topicCategory>
+			
+			
+
+
+<!-- EXTENT -->
+
+			<gmd:extent>
+				<gmd:EX_Extent>
+					<gmd:geographicElement>
+						<gmd:EX_GeographicBoundingBox>
+							<gmd:extentTypeCode>
+								<gco:Boolean>true</gco:Boolean>
+							</gmd:extentTypeCode>
+							<gmd:westBoundLongitude>
+								<gco:Decimal>${boundingBox.west}</gco:Decimal>
+							</gmd:westBoundLongitude>
+							<gmd:eastBoundLongitude>
+								<gco:Decimal>${boundingBox.east}</gco:Decimal>
+							</gmd:eastBoundLongitude>
+							<gmd:southBoundLatitude>
+								<gco:Decimal>${boundingBox.south}</gco:Decimal>
+							</gmd:southBoundLatitude>
+							<gmd:northBoundLatitude>
+								<gco:Decimal>${boundingBox.north}</gco:Decimal>
+							</gmd:northBoundLatitude>
+						</gmd:EX_GeographicBoundingBox>
+					</gmd:geographicElement>
+				</gmd:EX_Extent>
+			</gmd:extent>
+
+
+		</gmd:MD_DataIdentification>
+	</gmd:identificationInfo>
+
+	
+
+
+<!-- ONLINE REsources and protocols -->
+
+	<gmd:distributionInfo>
+		<gmd:MD_Distribution>
+			<#list distributionInfo.protocols as protocol>
+			<gmd:distributionFormat>
+				<gmd:MD_Format>
+					<gmd:name>
+						<gco:CharacterString>${protocol.name()}</gco:CharacterString>
+					</gmd:name>
+					<gmd:version>
+						<gco:CharacterString>${protocol.version}</gco:CharacterString>
+					</gmd:version>
+				</gmd:MD_Format>
+			</gmd:distributionFormat>
+			</#list>
+			<gmd:transferOptions>
+				<gmd:MD_DigitalTransferOptions>
+					<#list distributionInfo.onlines as online>
+					<gmd:onLine>
+						<gmd:CI_OnlineResource>
+							<gmd:linkage>
+								<gmd:URL>${online.uri}</gmd:URL>
+							</gmd:linkage>
+							<gmd:protocol>
+								<gco:CharacterString>${online.protocol.declaration}</gco:CharacterString>
+							</gmd:protocol>
+							<gmd:name>
+								<gco:CharacterString>${online.title}</gco:CharacterString>
+							</gmd:name>
+						</gmd:CI_OnlineResource>
+					</gmd:onLine>
+					</#list>
+				</gmd:MD_DigitalTransferOptions>
+			</gmd:transferOptions>
+		</gmd:MD_Distribution>
+	</gmd:distributionInfo>
+
+
+
+
+	<!-- DATA QUALITY INFO -->
+
+<gmd:dataQualityInfo>
+    <gmd:DQ_DataQuality>
+      <gmd:scope>
+        <gmd:DQ_Scope>
+          <gmd:level>
+            <gmd:MD_ScopeCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset"/>
+          </gmd:level>
+        </gmd:DQ_Scope>
+      </gmd:scope>
+      <gmd:report>
+        <gmd:DQ_DomainConsistency>
+          <gmd:result>
+            <gmd:DQ_ConformanceResult>
+              <gmd:specification>
+                <gmd:CI_Citation>
+                  <gmd:title>
+                    <gco:CharacterString>Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services</gco:CharacterString>
+                  </gmd:title>
+                  <gmd:alternateTitle>
+                    <gco:CharacterString>INSPIRE Data Specifications on Species distribution – Guidelines</gco:CharacterString>
+                  </gmd:alternateTitle>
+                  <gmd:date>
+                    <gmd:CI_Date>
+                      <gmd:date>
+                        <gco:Date>2010-12-08</gco:Date>
+                      </gmd:date>
+                      <gmd:dateType>
+                        <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode" codeListValue="publication" codeSpace="eng"/>
+                      </gmd:dateType>
+                    </gmd:CI_Date>
+                  </gmd:date>
+                  <gmd:date>
+                    <gmd:CI_Date>
+                      <gmd:date>
+                        <gco:Date>2013-12-10</gco:Date>
+                      </gmd:date>
+                      <gmd:dateType>
+                        <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode" codeListValue="lastRevision" codeSpace="eng"/>
+                      </gmd:dateType>
+                    </gmd:CI_Date>
+                  </gmd:date>
+                </gmd:CI_Citation>
+              </gmd:specification>
+              <gmd:explanation>
+                <gco:CharacterString>${guidelinesConformityExplanation!"The conformity to the above INSPIRE data specification has not been fully evaluated. In the absence of an explicit way to specify in ISO 19115 such absence of full evaluation, or eventual intermediate degree of conformity, and in order to fulfill the INSPIRE metadata validation, a conformity metadata element has been added (with the degree arbitrarily set to 'false')"}</gco:CharacterString>
+              </gmd:explanation>
+              <gmd:pass>
+                <gco:Boolean>${guidelinesConformityPass!"false"}</gco:Boolean>
+              </gmd:pass>
+            </gmd:DQ_ConformanceResult>
+          </gmd:result>
+        </gmd:DQ_DomainConsistency>
+      </gmd:report>
+      <gmd:lineage>
+        <gmd:LI_Lineage>
+          <gmd:statement>
+            <gco:CharacterString>${lineageStatement}</gco:CharacterString>
+          </gmd:statement>
+        </gmd:LI_Lineage>
+      </gmd:lineage>
+    </gmd:DQ_DataQuality>
+  </gmd:dataQualityInfo>
+
+
+
+<!-- 
+
+	<gmd:metadataConstraints>
+		<gmd:MD_LegalConstraints>
+			<gmd:useLimitation>
+				<gco:CharacterString>CC-BY-SA</gco:CharacterString>
+			</gmd:useLimitation>
+			<gmd:accessConstraints>
+				<gmd:MD_RestrictionCode codeListValue="license"
+					codeList="http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode">License</gmd:MD_RestrictionCode>
+			</gmd:accessConstraints>
+			<gmd:useConstraints>
+				<gmd:MD_RestrictionCode codeListValue="license"
+					codeList="http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode">License</gmd:MD_RestrictionCode>
+			</gmd:useConstraints>
+			<gmd:otherConstraints>
+				<gco:CharacterString>other restrictions</gco:CharacterString>
+			</gmd:otherConstraints>
+		</gmd:MD_LegalConstraints>
+	</gmd:metadataConstraints>
+	 -->
+</gmd:MD_Metadata>

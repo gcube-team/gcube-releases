@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+.iconButton {
+	border: none;
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.iconButton .iconButtonImage {
+	vertical-align: center;
+}
+
+.iconButtonRef {
+	vertical-align: center;
+	cursor: pointer;
+}

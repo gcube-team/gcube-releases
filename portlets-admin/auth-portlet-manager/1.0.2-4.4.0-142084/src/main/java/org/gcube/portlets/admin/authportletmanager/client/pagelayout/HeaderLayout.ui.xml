@@ -1,0 +1,11 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	
+<b:Row>
+	<b:Column size="12">
+	   <b:PageHeader subtext=" policy for user and roles">Management</b:PageHeader>
+	</b:Column>
+</b:Row>
+	
+</ui:UiBinder> 

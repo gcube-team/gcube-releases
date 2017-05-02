@@ -1,0 +1,24 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<g:HTMLPanel>
+		<b:Modal ui:field="m" title="My Modal" backdrop="STATIC"
+			keyboard="true" animation="true">
+			<b:HelpBlock ui:field="helpBlock" />
+			<b:Icon type="COG" size="THREE_TIMES" spin="true" ui:field="loading"
+				visible="true" />
+				<b:Image ui:field="avatarImage" visible="false" width="150px"></b:Image>
+			<b:HelpBlock>
+				<div style="margin-top: 50px">&nbsp;</div>
+				By entering this VRE you agree to the terms indicated in the
+				<a href="/terms-of-use" target="_blank">Terms of Use</a>
+				of this gateway.
+			</b:HelpBlock>
+
+			<b:ModalFooter>
+				<b:Button type="DEFAULT" ui:field="confirmRequest" enabled="false"></b:Button>
+				<b:Button type="DEFAULT" ui:field="close">Close</b:Button>
+			</b:ModalFooter>
+		</b:Modal>
+	</g:HTMLPanel>
+</ui:UiBinder> 

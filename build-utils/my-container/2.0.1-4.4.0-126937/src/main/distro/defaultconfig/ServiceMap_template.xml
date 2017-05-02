@@ -1,0 +1,36 @@
+<ServiceMap>
+	<!-- only profiles are published in ISICProfile instances -->
+	<Service name="ISICProfileRegistrationPT" endpoint ="http://dlib27.isti.cnr.it:8000/wsrf/services/diligentproject/informationservice/disic/DISICRegistrationService"/>
+	<Service name="ISICProfileRegistrationPT" endpoint ="http://dlib27.isti.cnr.it:8000/wsrf/services/diligentproject/informationservice/disic/DISICRegistrationService"/>
+	
+	<!-- only states are published in the ISICState instances -->
+	<Service name="ISICStateRegistrationPT" endpoint ="http://pc-simi.isti.cnr.it:8000/wsrf/services/diligentproject/informationservice/disic/DISICRegistrationService"/>
+	<Service name="ISICStateRegistrationPT" endpoint ="http://pc-simi.isti.cnr.it:8000/wsrf/services/diligentproject/informationservice/disic/DISICRegistrationService"/>
+	
+	<!-- both profiles and state are published in the ISICAll instances-->
+	<Service name="ISICAllRegistrationPT" endpoint ="http://dlib01.isti.cnr.it:8000/wsrf/services/diligentproject/informationservice/disic/DISICRegistrationService"/>
+	<Service name="ISICAllRegistrationPT" endpoint ="http://dlib01.isti.cnr.it:8000/wsrf/services/diligentproject/informationservice/disic/DISICRegistrationService"/>
+
+
+	<Service name="ISICProfileQueryPT" endpoint ="http://dlib27.isti.cnr.it:8000/wsrf/services/diligentproject/informationservice/disic/DISICService"/>
+	<Service name="ISICStateQueryPT" endpoint ="http://pc-simi.isti.cnr.it:8000/wsrf/services/diligentproject/informationservice/disic/DISICService"/>
+	<Service name="ISICAllQueryPT" endpoint ="http://dlib01.isti.cnr.it:8000/wsrf/services/diligentproject/informationservice/disic/DISICService"/>
+	
+	<!-- 
+	<Service name ="ISRegistry" resources="selected" endpoint ="http://pc-simi.isti.cnr.it:8080/wsrf/services/gcube/informationsystem/registry/RegistryFactory">
+		<Resources>
+			<GHN publish="true"/>
+			<RI publish="true"/>
+			<GenericResources publish="true"/>
+			<gLiteBridge publish="true"/>
+			<MetadataCollection publish="false"/>
+			<Collection publish="false"/>
+			<CS publish="false"/>
+			<CSInstance publish="false"/>
+			<ExternalRI publish="true"/>
+			<TransformationProgram publish="false"/>
+		</Resources>
+	</Service>
+	<Service name ="ISRegistry" resources="all" endpoint ="http://pc-simi.isti.cnr.it:8080/wsrf/services/gcube/informationsystem/registry/RegistryFactory"/>
+	 -->				
+</ServiceMap>

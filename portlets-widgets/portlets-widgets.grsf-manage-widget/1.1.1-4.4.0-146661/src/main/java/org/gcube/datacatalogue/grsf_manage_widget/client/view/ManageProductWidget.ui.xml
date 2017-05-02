@@ -1,0 +1,106 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.loader-image {
+		display: block;
+		margin: auto auto;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<b:Modal ui:field="manageProductModal" title="Manage item"
+			backdrop="STATIC" keyboard="true" animation="true" closeVisible="true">
+			<g:VerticalPanel width="100%">
+
+				<!-- Loader image at the beginning -->
+				<b:Image ui:field="loadingImage" styleName="{style.loader-image}"
+					visible="true"></b:Image>
+
+				<!-- Alert blocks for info/errors -->
+				<b:AlertBlock type="INFO" close="false" animation="true"
+					visible="false" ui:field="infoBlock"></b:AlertBlock>
+
+				<b:Form type="VERTICAL" visible="true" ui:field="formUpdate"
+					width="100%">
+
+					<b:ControlGroup ui:field="productTitleGroup">
+						<b:ControlLabel for="title" title="Item title">
+							<b>Title:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:TextArea alternateSize="LARGE" placeholder="Item title"
+								readOnly="true" width="97%" b:id="title" title="Item title"
+								ui:field="titleTextArea" />
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="productDescriptionGroup">
+						<b:ControlLabel for="description" title="Item description">
+							<b>Description:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:TextArea alternateSize="LARGE" placeholder="Item description"
+								readOnly="true" width="97%" b:id="description" title="Item description"
+								ui:field="descriptionTextArea" />
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="productGrsfTypeGroup">
+						<b:ControlLabel for="productGrsfType" title="The GRSF Item type">
+							<b>GRSF Type:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox b:id="productGrsfType" alternateSize="LARGE"
+								width="97%" title="The GRSF Item type" readOnly="true"
+								ui:field="productGrsfType"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="currentStatusGroup">
+						<b:ControlLabel for="currentStatus"
+							title="The current status of this Item">
+							<b>Current Status:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox b:id="currentStatus" alternateSize="LARGE"
+								readOnly="true" width="97%" title="The current status of this Item"
+								ui:field="currentStatus">
+							</b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="listBoxStatusGroup">
+						<b:ControlLabel for="listboxStatus" title="The new status of this Item">
+							<b>New Status:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:ListBox b:id="listboxStatus" alternateSize="LARGE"
+								width="97%" title="Select a new status" enabled="true" ui:field="listBoxStatus"></b:ListBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="annotationAreaGroup">
+						<b:ControlLabel for="annotation"
+							title="An annotation message to send along the update">
+							<b>Annotation:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:TextArea b:id="annotation" alternateSize="LARGE"
+								placeholder="Add an annotation message" enabled="true" width="97%"
+								title="An annotation message to send along the update" ui:field="annotationArea"></b:TextArea>
+						</b:Controls>
+					</b:ControlGroup>
+
+				</b:Form>
+
+			</g:VerticalPanel>
+			<b:ModalFooter>
+				<!-- Gear to wait while application tokens are retrieved -->
+				<b:Icon type="GEAR" spin="true" ui:field="loaderIcon"
+					visible="false" />
+				<b:Button ui:field="cancelButton">Cancel</b:Button>
+				<b:Button icon="FILE" type="PRIMARY" ui:field="confirmButton">Send</b:Button>
+			</b:ModalFooter>
+		</b:Modal>
+	</g:HTMLPanel>
+</ui:UiBinder> 

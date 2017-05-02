@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.user.joinvre.JoinVRE' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/joinVRE/greet" class="org.gcube.portlets.user.joinvre.server.JoinServiceImpl" />
+
+</module>

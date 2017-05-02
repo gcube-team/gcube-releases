@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="DataTransferAgent"
+	targetNamespace="http://gcube-system.org/namespaces/datatransfer/agent/datatransferagent"
+	xmlns="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:tns="http://gcube-system.org/namespaces/datatransfer/agent/datatransferagent"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+    xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+    xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"	
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<import
+		namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		location="../gcube/common/core/providers/GCUBEProvider.wsdl" />
+
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+		location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+		location="../wsrf/notification/WS-BaseN.wsdl" />
+
+
+	<wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+
+	<types>
+		<xsd:schema
+			targetNamespace="http://gcube-system.org/namespaces/datatransfer/agent/datatransferagent"
+			xmlns:tns="http://gcube-system.org/namespaces/datatransfer/agent/datatransferagent"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults">
+
+			
+			<xsd:simpleType name="postProcessType">
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration  value="FileConversion"/>
+					<xsd:enumeration  value="FileUnzip"/>
+					<xsd:enumeration  value="OriginalFileRemove"/>
+   	 			</xsd:restriction>
+			</xsd:simpleType>
+	
+			<xsd:simpleType name="transferType">
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration  value="TreeBasedTransfer"/>
+   	 				<xsd:enumeration  value="FileBasedTransfer"/>
+   	 				<xsd:enumeration  value="LocalFileBasedTransfer"/>
+     			</xsd:restriction>
+			</xsd:simpleType>
+			
+			<xsd:simpleType name="storageType">
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration  value="LocalGHN"/>
+   	 				<xsd:enumeration  value="StorageManager"/>
+   	 				<xsd:enumeration  value="DataStorage"/>
+     			</xsd:restriction>
+			</xsd:simpleType>
+			
+			<xsd:simpleType name="storageAccessType">
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration  value="SHARED"/>
+   	 				<xsd:enumeration  value="PUBLIC"/>
+   	 				<xsd:enumeration  value="PRIVATE"/>
+     			</xsd:restriction>
+			</xsd:simpleType>
+
+					
+			<xsd:complexType name="SourceData">
+				<xsd:sequence>
+					<xsd:element name="type" type="tns:transferType" />
+					<xsd:element name="scope" type="xsd:string" />
+					<xsd:choice>
+						<xsd:element name="inputSource" type="tns:InputPattern" />
+						<xsd:element name="inputURIs" type="xsd:string" minOccurs="1" maxOccurs="unbounded"  />
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:complexType name="anyHolder">
+				<xsd:sequence>
+					<xsd:any processContents="skip" namespace="##any"
+						maxOccurs="1" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:complexType name="InputPattern">
+				<xsd:sequence>
+					<xsd:element name="pattern" type="tns:anyHolder"
+						nillable="true" minOccurs="0" />
+					<xsd:element name="sourceId" type="xsd:string"
+						nillable="true" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:complexType name="StorageManagerDetails">
+				<xsd:sequence>
+					<xsd:element name="serviceClass" type="xsd:string"   />
+					<xsd:element name="serviceName" type="xsd:string" />
+					<xsd:element name="Owner" type="xsd:string" />
+					<xsd:element name="accessType" type="tns:storageAccessType" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:complexType name="TransferOptions">
+				<xsd:sequence>
+					<xsd:element name="overwrite" type="xsd:boolean" />
+					<xsd:element name="storageType" type="tns:storageType" />
+					<xsd:element name="transferTimeout" type="xsd:long" />
+					<xsd:element name="storageManagerDetails" type="tns:StorageManagerDetails" />
+					<xsd:element name="postProcess" type="tns:postProcessType"  minOccurs="0" maxOccurs="unbounded" />
+					<xsd:element name="conversionType" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			
+			<xsd:complexType name="OutUriData">
+				<xsd:sequence>
+					<xsd:element name="OutUris" type="xsd:string"  minOccurs="1" maxOccurs="unbounded" />
+					<xsd:element name="options" type="tns:TransferOptions" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			
+			
+			<xsd:complexType name="DestData">
+				<xsd:sequence>
+					<xsd:element name="type" type="xsd:string" />
+					<xsd:element name="scope" type="xsd:string" />
+					<xsd:choice>
+						<xsd:element name="outSourceId" type="xsd:string" />
+						<xsd:element name="outUri" type="tns:OutUriData" />
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:complexType>
+		
+
+			<xsd:complexType name="CancelTransferMessage">
+				<xsd:sequence>
+					<xsd:element name="TransferID" type="xsd:string" />
+					<xsd:element name="forceStop" type="xsd:boolean" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+			<xsd:complexType name="StartTransferMessage">
+				<xsd:sequence>
+					<xsd:element name="Source" type="tns:SourceData" />
+					<xsd:element name="Dest" type="tns:DestData" />
+					<xsd:element name="syncOp" type="xsd:boolean" />
+				</xsd:sequence>
+			</xsd:complexType>
+		
+			<xsd:complexType name="MonitorTransferReportMessage">
+				<xsd:sequence>
+					<xsd:element name="transferID" type="xsd:string" />
+					<xsd:element name="totalTransfers" type="xsd:int" />
+					<xsd:element name="transferCompleted" type="xsd:int" />
+					<xsd:element name="totalBytes" type="xsd:long" />
+					<xsd:element name="bytesTransferred" type="xsd:long" />
+					<xsd:element name="transferStatus" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:complexType>
+		
+		
+			<xsd:element name="startTransfer" type="tns:StartTransferMessage" />
+
+			<xsd:element name="startTransferResponse" type="xsd:string"/>
+
+			<xsd:element name="cancelTransfer" type="tns:CancelTransferMessage" />
+
+			<xsd:element name="cancelTransferResponse" type="xsd:string"/>
+			
+			<xsd:element name="monitorTransfer" type="xsd:string"/>
+
+			<xsd:element name="monitorTransferResponse" type="xsd:string"/>
+			
+			<xsd:element name="monitorTransferWithProgress" type="xsd:string"/>
+			
+			<xsd:element name="monitorTransferWithProgressResponse" type="tns:MonitorTransferReportMessage"/>
+
+			<xsd:element name="getTransferOutcomes" type="xsd:string"/>
+			
+			<xsd:element name="getTransferOutcomesResponse" type="xsd:string"/>
+			
+			<xsd:element name="getLocalSources" type="xsd:string"/>
+			
+			<xsd:element name="getLocalSourcesResponse" type="xsd:string"/>
+			
+			<xsd:complexType name="CreateTreeSourceMsg">
+				<xsd:sequence>
+					<xsd:element name="sourceID" type="xsd:string" />
+					<xsd:element name="endpoint" type="xsd:string" />
+					<xsd:element name="port" type="xsd:int" />
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="createTreeSource" type="tns:CreateTreeSourceMsg"/>
+			<xsd:element name="createTreeSourceResponse" type="xsd:string"/>
+
+			<xsd:element name="getTreeSources" type="xsd:string"/>			
+			<xsd:element name="getTreeSourcesResponse" type="xsd:string"/>
+			
+			<xsd:element name="removeGenericResource" type="xsd:string"/>			
+			<xsd:element name="removeGenericResourceResponse" type="xsd:string"/>
+			
+			<!-- FAULTS -->
+			<xsd:element name="TransferFault">
+				<xsd:complexType >
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="CancelTransferFault">
+				<xsd:complexType >
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="MonitorTransferFault">
+				<xsd:complexType >
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="GetTransferOutcomesFault">
+				<xsd:complexType >
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+		
+		
+		
+
+		   <!-- RESOURCE PROPERTIES  -->
+		  	
+			<xsd:element name="SupportedTransfer" type="xsd:string" nillable="false"/>
+			<xsd:element name="FileSystemRoot" type="xsd:string" nillable="false"/>
+			
+			<xsd:element name="AgentResourceProperties">
+		        <xsd:complexType>
+		               <xsd:sequence>                          
+		                      <xsd:element ref="tns:SupportedTransfer" minOccurs="1" maxOccurs="unbounded"/>
+		                      <xsd:element ref="tns:FileSystemRoot" minOccurs="1" maxOccurs="1"/>
+		              </xsd:sequence>
+		        </xsd:complexType>
+		     </xsd:element>
+			
+			
+			</xsd:schema>
+			</types>
+
+
+			<message name="StartTransferRequest">
+				<part name="request" element="tns:startTransfer" />
+			</message>
+			<message name="StartTransferResponse">
+				<part name="response" element="tns:startTransferResponse" />
+			</message>
+			
+			<message name="CancelTransferRequest">
+				<part name="request" element="tns:cancelTransfer" />
+			</message>
+			<message name="CancelTransferResponse">
+				<part name="response" element="tns:cancelTransferResponse" />
+			</message>
+			
+			<message name="MonitorTransferRequest">
+				<part name="request" element="tns:monitorTransfer" />
+			</message>
+			<message name="MonitorTransferResponse">
+				<part name="response" element="tns:monitorTransferResponse" />
+			</message>
+			
+			<message name="MonitorTransferWithProgressRequest">
+				<part name="request" element="tns:monitorTransferWithProgress" />
+			</message>
+			<message name="MonitorTransferWithProgressResponse">
+				<part name="response" element="tns:monitorTransferWithProgressResponse" />
+			</message>
+		
+			<message name="GetTransferOutcomesRequest">
+				<part name="request" element="tns:getTransferOutcomes" />
+			</message>
+			<message name="GetTransferOutcomesResponse">
+				<part name="response" element="tns:getTransferOutcomesResponse" />
+			</message>
+			
+			<message name="GetLocalSourcesRequest">
+				<part name="request" element="tns:getLocalSources" />
+			</message>
+			<message name="GetLocalSourcesResponse">
+				<part name="response" element="tns:getLocalSourcesResponse" />
+			</message>
+			
+			<message name="createTreeSourceRequest">
+				<part name="request" element="tns:createTreeSource" />
+			</message>
+			<message name="createTreeSourceResponse">
+				<part name="response" element="tns:createTreeSourceResponse" />
+			</message>
+
+			<message name="getTreeSourcesRequest">
+				<part name="request" element="tns:getTreeSources" />
+			</message>
+			<message name="getTreeSourcesResponse">
+				<part name="response" element="tns:getTreeSourcesResponse" />
+			</message>
+			
+			<message name="removeGenericResourceRequest">
+				<part name="request" element="tns:removeGenericResource" />
+			</message>
+			<message name="removeGenericResourceResponse">
+				<part name="response" element="tns:removeGenericResourceResponse" />
+			</message>
+
+			<message name="TransferFaultMessage">
+				<part name="fault" element="tns:TransferFault" />
+			</message>
+		
+			<message name="CancelTransferFaultMessage">
+				<part name="fault" element="tns:CancelTransferFault" />
+			</message>
+			
+			<message name="MonitorTransferFaultMessage">
+				<part name="fault" element="tns:MonitorTransferFault" />
+			</message>
+			
+			<message name="GetTransferOutcomesFaultMessage">
+				<part name="fault" element="tns:GetTransferOutcomesFault" />
+			</message>
+			
+		
+			<!--========P O R T T Y P E===============	-->
+			<portType name="DataTransferAgentPortType"
+			wsdlpp:extends="wsntw:NotificationProducer
+		                    provider:GCUBEProvider"
+		 		 wsrp:ResourceProperties="tns:AgentResourceProperties">
+		
+				<operation name="startTransfer">
+					<input message="tns:StartTransferRequest" />
+					<output message="tns:StartTransferResponse" />
+					<fault name="fault" message="tns:TransferFaultMessage" />
+				</operation>
+				<operation name="cancelTransfer">
+					<input message="tns:CancelTransferRequest" />
+					<output message="tns:CancelTransferResponse" />
+					<fault name="fault" message="tns:CancelTransferFaultMessage" />
+				</operation>
+				<operation name="monitorTransfer">
+					<input message="tns:MonitorTransferRequest" />
+					<output message="tns:MonitorTransferResponse" />
+					<fault name="fault" message="tns:MonitorTransferFaultMessage" />
+				</operation>
+					<operation name="monitorTransferWithProgress">
+					<input message="tns:MonitorTransferWithProgressRequest" />
+					<output message="tns:MonitorTransferWithProgressResponse" />
+					<fault name="fault" message="tns:MonitorTransferFaultMessage" />
+				</operation>
+				<operation name="getTransferOutcomes">
+					<input message="tns:GetTransferOutcomesRequest" />
+					<output message="tns:GetTransferOutcomesResponse" />
+					<fault name="fault" message="tns:GetTransferOutcomesFaultMessage" />
+				</operation>
+				<operation name="getLocalSources">
+					<input message="tns:GetLocalSourcesRequest" />
+					<output message="tns:GetLocalSourcesResponse" />
+				</operation>
+				<operation name="createTreeSource">
+					<input message="tns:createTreeSourceRequest" />
+					<output message="tns:createTreeSourceResponse" />
+				</operation>
+				<operation name="getTreeSources">
+					<input message="tns:getTreeSourcesRequest" />
+					<output message="tns:getTreeSourcesResponse" />
+				</operation>
+				<operation name="removeGenericResource">
+					<input message="tns:removeGenericResourceRequest" />
+					<output message="tns:removeGenericResourceResponse" />
+				</operation>
+			</portType>
+
+</definitions>

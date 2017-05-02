@@ -1,0 +1,83 @@
+package gr.cite.gaap.datatransferobjects;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.util.Assert;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import gr.cite.geoanalytics.util.http.CustomException;
+
+public class ShapefileImportProperties {
+	private static Logger logger = LoggerFactory.getLogger(TsvImportProperties.class);
+
+	private String newLayerName;
+	private String geocodeSystem;
+	private String geocodeMapping;
+	
+    @JsonProperty("isTemplate")
+	private boolean isTemplate;
+
+	public ShapefileImportProperties() {
+		super();
+		logger.trace("Initialized default contructor for TsvImportProperties");
+	}
+
+	public String getNewLayerName() {
+		return newLayerName;
+	}
+
+	public void setNewLayerName(String newLayerName) {
+		this.newLayerName = newLayerName;
+	}
+
+	public String getGeocodeSystem() {
+		return geocodeSystem;
+	}
+
+	public void setGeocodeSystem(String geocodeSystem) {
+		this.geocodeSystem = geocodeSystem;
+	}
+
+	public String getGeocodeMapping() {
+		return geocodeMapping;
+	}
+
+	public void setGeocodeMapping(String geocodeMapping) {
+		this.geocodeMapping = geocodeMapping;
+	}
+
+	public boolean isTemplate() {
+		return isTemplate;
+	}
+
+	public void setTemplate(boolean isTemplate) {
+		this.isTemplate = isTemplate;
+	}
+
+	public void validate() throws CustomException {
+		try {
+			Assert.notNull(newLayerName, "Layer name cannot be empty");
+			Assert.hasLength(newLayerName, "Layer name cannot be empty");
+
+			if (isTemplate) {
+				Assert.notNull(geocodeSystem, "Geocode System name cannot be empty");
+				Assert.hasLength(geocodeSystem, "Geocode System name cannot be empty");
+
+				Assert.notNull(geocodeMapping, "Geocode Mapping cannot be empty");
+				Assert.hasLength(geocodeMapping, "Geocode Mapping cannot be empty");
+			}
+		} catch (IllegalArgumentException e) {
+			throw new CustomException(HttpStatus.BAD_REQUEST, e.getMessage());
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "\nNew Layer = " + newLayerName 
+				+ "\nIs Template = " + isTemplate 
+				+ "\nGeocode System = " + geocodeSystem 
+				+ "\nGeocode Mapping = " + geocodeMapping + "\n";
+	}
+}

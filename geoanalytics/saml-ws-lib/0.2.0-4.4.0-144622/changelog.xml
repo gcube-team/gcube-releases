@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.repo.auth.saml-ws-lib.0-0-1" date="2016-07-29">
+		<Change>First release</Change>
+	</Changeset>
+	<Changeset component="gr.cite.repo.auth.saml-ws-lib.0-2-0" date="2017-03-03">
+		<Change>Add loggers</Change>
+		<Change> remove the maven-source-plugin in pom configuration</Change>
+	</Changeset>
+</ReleaseNotes>

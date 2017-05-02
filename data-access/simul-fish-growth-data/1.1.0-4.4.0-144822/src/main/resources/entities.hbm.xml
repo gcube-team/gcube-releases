@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<class name="gr.i2s.fishgrowth.model.Usage">
+		<id name="id" type="long">
+		</id>
+		<property name="usage" column="usage" type="int" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.SimilarSite" table="SimilarSite">
+		<id name="id" type="long">
+			<generator class="sequence">
+				<param name="sequence">SeqGlobal</param>
+			</generator>
+		</id>
+		<property name="siteId" column="siteId" type="long" />
+		<property name="similarId" column="similarId" type="long" />
+		<property name="grade" column="grade" type="int" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.SampleData">
+		<id name="id" type="long">
+			<generator class="sequence">
+				<param name="sequence">SeqGlobal</param>
+			</generator>
+		</id>
+		<property name="simulModelId" column="simulModelId" type="long" />
+		<property name="uploadSource" column="uploadSource" type="string" />
+		<property name="dateFrom" column="dateFrom" type="date" />
+		<property name="dateTo" column="dateTo" type="date" />
+		<property name="openWeight" column="openWeight" type="double" />
+		<property name="closeWeight" column="closeWeight" type="double" />
+		<property name="avgTemperature" column="avgTemperature" type="int" />
+		<property name="openFishNo" column="openFishNo" type="int" />
+		<property name="closeFishNo" column="closeFishNo" type="int" />
+		<property name="fcr" column="fcr" type="double" />
+		<property name="mortalityRate" column="mortalityRate" type="double" />
+		<property name="sfr" column="sfr" type="double" />
+		<property name="sgr" column="sgr" type="double" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.WeightLimit">
+		<id name="id" type="long">
+			<generator class="sequence">
+				<param name="sequence">SeqGlobal</param>
+			</generator>
+		</id>
+		<property name="simulModelId" column="simulModelId" type="long" />
+		<property name="uploadSource" column="uploadSource" type="string" />
+		<property name="kpiKind" column="kpiKind" type="int" />
+		<property name="toWeight" column="toWeight" type="double" />
+	</class>
+	
+	<class name="gr.i2s.fishgrowth.model.Species" table="Species">
+		<id name="id" type="long">
+		</id>
+		<property name="designation" column="designation" type="string" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.Region" table="Region">
+		<id name="id" type="long">
+		</id>
+		<property name="designation" column="designation" type="string" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.CurrentRating" table="CurrentRating">
+		<id name="id" type="long">
+		</id>
+		<property name="designation" column="designation" type="string" />
+		<property name="aa" column="aa" type="int" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.OxygenRating" table="OxygenRating">
+		<id name="id" type="long">
+		</id>
+		<property name="designation" column="designation" type="string" />
+		<property name="aa" column="aa" type="int" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.FeedQuality" table="FeedQuality">
+		<id name="id" type="long">
+		</id>
+		<property name="designation" column="designation" type="string" />
+		<property name="aa" column="aa" type="int" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.BroodstockQuality" table="BroodstockQuality">
+		<id name="id" type="long">
+		</id>
+		<property name="designation" column="designation" type="string" />
+		<property name="aa" column="aa" type="int" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.Fcr" table="Fcr">
+		<id name="id" type="long">
+		</id>
+		<property name="ownerId" column="ownerId" type="string" />
+		<property name="fromWeight" column="fromWeight" type="double" />
+		<property name="temperature" column="temperature" type="int" />
+		<property name="value" column="value" type="double" />
+		<property name="modelerId" column="simulModelId" type="long" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.Sfr" table="Sfr">
+		<id name="id" type="long">
+		</id>
+		<property name="ownerId" column="ownerId" type="string" />
+		<property name="fromWeight" column="fromWeight" type="double" />
+		<property name="temperature" column="temperature" type="int" />
+		<property name="value" column="value" type="double" />
+		<property name="modelerId" column="simulModelId" type="long" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.Mortality" table="Mortality">
+		<id name="id" type="long">
+		</id>
+		<property name="ownerId" column="ownerId" type="string" />
+		<property name="fromWeight" column="fromWeight" type="double" />
+		<property name="temperature" column="temperature" type="int" />
+		<property name="value" column="value" type="double" />
+		<property name="modelerId" column="simulModelId" type="long" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.Site" table="Site">
+		<id name="id" type="long">
+			<generator class="sequence">
+				<param name="sequence">SeqGlobal</param>
+			</generator>
+		</id>
+		<property name="ownerId" column="ownerId" type="string" />
+		<property name="designation" column="designation" type="string" />
+		<property name="periodJanA" column="periodJanA" type="int" />
+		<property name="periodJanB" column="periodJanB" type="int" />
+		<property name="periodFebA" column="periodFebA" type="int" />
+		<property name="periodFebB" column="periodFebB" type="int" />
+		<property name="periodMarA" column="periodMarA" type="int" />
+		<property name="periodMarB" column="periodMarB" type="int" />
+		<property name="periodAprA" column="periodAprA" type="int" />
+		<property name="periodAprB" column="periodAprB" type="int" />
+		<property name="periodMayA" column="periodMayA" type="int" />
+		<property name="periodMayB" column="periodMayB" type="int" />
+		<property name="periodJunA" column="periodJunA" type="int" />
+		<property name="periodJunB" column="periodJunB" type="int" />
+		<property name="periodJulA" column="periodJulA" type="int" />
+		<property name="periodJulB" column="periodJulB" type="int" />
+		<property name="periodAugA" column="periodAugA" type="int" />
+		<property name="periodAugB" column="periodAugB" type="int" />
+		<property name="periodSepA" column="periodSepA" type="int" />
+		<property name="periodSepB" column="periodSepB" type="int" />
+		<property name="periodOctA" column="periodOctA" type="int" />
+		<property name="periodOctB" column="periodOctB" type="int" />
+		<property name="periodNovA" column="periodNovA" type="int" />
+		<property name="periodNovB" column="periodNovB" type="int" />
+		<property name="periodDecA" column="periodDecA" type="int" />
+		<property name="periodDecB" column="periodDecB" type="int" />
+		<property name="periodYear" column="periodYear" type="int" />
+		<property name="oxygenRatingId" column="oxygenRatingId" type="long" />
+		<property name="currentRatingId" column="currentRatingId"
+			type="long" />
+		<property name="regionId" column="regionId" type="long" />
+		<property name="latitude" column="latitude" type="string" />
+		<property name="longitude" column="longitude" type="string" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.SiteFull" table="SiteFullView">
+		<id name="id" type="long" />
+		<property name="ownerId" column="ownerId" type="string" />
+		<property name="designation" column="designation" type="string" />
+		<property name="periodJanA" column="periodJanA" type="int" />
+		<property name="periodJanB" column="periodJanB" type="int" />
+		<property name="periodFebA" column="periodFebA" type="int" />
+		<property name="periodFebB" column="periodFebB" type="int" />
+		<property name="periodMarA" column="periodMarA" type="int" />
+		<property name="periodMarB" column="periodMarB" type="int" />
+		<property name="periodAprA" column="periodAprA" type="int" />
+		<property name="periodAprB" column="periodAprB" type="int" />
+		<property name="periodMayA" column="periodMayA" type="int" />
+		<property name="periodMayB" column="periodMayB" type="int" />
+		<property name="periodJunA" column="periodJunA" type="int" />
+		<property name="periodJunB" column="periodJunB" type="int" />
+		<property name="periodJulA" column="periodJulA" type="int" />
+		<property name="periodJulB" column="periodJulB" type="int" />
+		<property name="periodAugA" column="periodAugA" type="int" />
+		<property name="periodAugB" column="periodAugB" type="int" />
+		<property name="periodSepA" column="periodSepA" type="int" />
+		<property name="periodSepB" column="periodSepB" type="int" />
+		<property name="periodOctA" column="periodOctA" type="int" />
+		<property name="periodOctB" column="periodOctB" type="int" />
+		<property name="periodNovA" column="periodNovA" type="int" />
+		<property name="periodNovB" column="periodNovB" type="int" />
+		<property name="periodDecA" column="periodDecA" type="int" />
+		<property name="periodDecB" column="periodDecB" type="int" />
+		<property name="periodYear" column="periodYear" type="int" />
+		<property name="oxygenRatingId" column="oxygenRatingId" type="long" />
+		<property name="currentRatingId" column="currentRatingId"
+			type="long" />
+		<property name="regionId" column="regionId" type="long" />
+		<property name="latitude" column="latitude" type="string" />
+		<property name="longitude" column="longitude" type="string" />
+		<property name="oxygenRatingDesignation" column="oxygenRatingDesignation"
+			type="string" />
+		<property name="currentRatingDesignation" column="currentRatingDesignation"
+			type="string" />
+		<property name="regionDesignation" column="regionDesignation"
+			type="string" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.Modeler" table="SimulModel">
+		<id name="id" type="long">
+			<generator class="sequence">
+				<param name="sequence">SeqGlobal</param>
+			</generator>
+		</id>
+		<property name="ownerId" column="ownerId" type="string" />
+		<property name="designation" column="designation" type="string" />
+		<property name="comments" column="comments" type="string" />
+		<property name="speciesId" column="speciesId" type="long" />
+		<property name="siteId" column="siteId" type="long" />
+		<property name="broodstockQualityId" column="broodstockQualityId"
+			type="long" />
+		<property name="broodstockGeneticImprovement" column="broodstockGeneticImprovement"
+			type="boolean" />
+		<property name="feedQualityId" column="feedQualityId" type="long" />
+		<property name="uploadFilenameData" column="uploadFilenameData"
+			type="string" />
+		<property name="uploadFilenameWeights" column="uploadFilenameWeights"
+			type="string" />
+		<property name="uploadFileLocationData" column="uploadFileLocationData"
+			type="string" />
+		<property name="uploadFileLocationWeights" column="uploadFileLocationWeights"
+			type="string" />
+		<property name="uploadFileTypeData" column="uploadFileTypeData"
+			type="string" />
+		<property name="uploadFileTypeWeights" column="uploadFileTypeWeights"
+			type="string" />
+		<property name="statusId" column="statusId" type="long" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.ModelerFull" table="SimulModelFullView">
+		<id name="id" type="long">
+		</id>
+		<property name="ownerId" column="ownerId" type="string" />
+		<property name="designation" column="designation" type="string" />
+		<property name="comments" column="comments" type="string" />
+		<property name="speciesId" column="speciesId" type="long" />
+		<property name="siteId" column="siteId" type="long" />
+		<property name="broodstockQualityId" column="broodstockQualityId"
+			type="long" />
+		<property name="broodstockGeneticImprovement" column="broodstockGeneticImprovement"
+			type="boolean" />
+		<property name="feedQualityId" column="feedQualityId" type="long" />
+		<property name="uploadFilenameData" column="uploadFilenameData"
+			type="string" />
+		<property name="uploadFilenameWeights" column="uploadFilenameWeights"
+			type="string" />
+		<property name="uploadFileLocationData" column="uploadFileLocationData"
+			type="string" />
+		<property name="uploadFileLocationWeights" column="uploadFileLocationWeights"
+			type="string" />
+		<property name="uploadFileTypeData" column="uploadFileTypeData"
+			type="string" />
+		<property name="uploadFileTypeWeights" column="uploadFileTypeWeights"
+			type="string" />
+		<property name="statusId" column="statusId" type="long" />
+		<property name="speciesDesignation" column="speciesDesignation"
+			type="string" />
+		<property name="siteDesignation" column="siteDesignation"
+			type="string" />
+		<property name="broodstockQualityDesignation" column="broodstockQualityDesignation"
+			type="string" />
+		<property name="feedQualityDesignation" column="feedQualityDesignation"
+			type="string" />
+		<property name="statusDesignation" column="statusDesignation"
+			type="string" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.Scenario" table="Scenario">
+		<id name="id" type="long">
+			<generator class="sequence">
+				<param name="sequence">SeqGlobal</param>
+			</generator>
+		</id>
+		<property name="ownerId" column="ownerId" type="string" />
+		<property name="designation" column="designation" type="string" />
+		<property name="comments" column="comments" type="string" />
+		<property name="modelerId" column="simulModelId" type="long" />
+		<property name="targetDate" column="targetDate" type="date" />
+		<property name="startDate" column="startDate" type="date" />
+		<property name="fishNo" column="fishNo" type="int" />
+		<property name="weight" column="weight" type="double" />
+		<property name="resultsWeight" column="resultsWeight" type="double" />
+		<property name="resultsGrowth" column="resultsGrowth" type="double" />
+		<property name="resultsEconFCR" column="resultsEconFCR" type="double" />
+		<property name="resultsBiolFCR" column="resultsBiolFCR" type="double" />
+		<property name="resultsSGR" column="resultsSGR" type="double" />
+		<property name="resultsMortality" column="resultsMortality"
+			type="double" />
+		<property name="resultsGraphData" column="resultsGraphData"
+			type="string" />
+		<property name="statusId" column="statusId" type="long" />
+	</class>
+	<class name="gr.i2s.fishgrowth.model.ScenarioFull" table="ScenarioFullView">
+		<id name="id" type="long">
+		</id>
+		<property name="ownerId" column="ownerId" type="string" />
+		<property name="designation" column="designation" type="string" />
+		<property name="comments" column="comments" type="string" />
+		<property name="modelerId" column="simulModelId" type="long" />
+		<property name="targetDate" column="targetDate" type="date" />
+		<property name="startDate" column="startDate" type="date" />
+		<property name="fishNo" column="fishNo" type="int" />
+		<property name="weight" column="weight" type="double" />
+		<property name="resultsWeight" column="resultsWeight" type="double" />
+		<property name="resultsGrowth" column="resultsGrowth" type="double" />
+		<property name="resultsEconFCR" column="resultsEconFCR" type="double" />
+		<property name="resultsBiolFCR" column="resultsBiolFCR" type="double" />
+		<property name="resultsSGR" column="resultsSGR" type="double" />
+		<property name="resultsMortality" column="resultsMortality"
+			type="double" />
+		<property name="resultsGraphData" column="resultsGraphData"
+			type="string" />
+		<property name="statusId" column="statusId" type="long" />
+		<property name="modelerDesignation" column="simulModelDesignation"
+			type="string" />
+		<property name="modelerStatusId" column="simulModelStatusId"
+			type="long" />
+		<property name="modelerStatusDesignation" column="simulModelStatusDesignation"
+			type="string" />
+		<property name="statusDesignation" column="statusDesignation"
+			type="string" />
+	</class>
+
+</hibernate-mapping>

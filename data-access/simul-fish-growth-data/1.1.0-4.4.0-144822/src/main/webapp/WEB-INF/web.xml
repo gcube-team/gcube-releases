@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<filter>
+		<description>
+		</description>
+		<display-name>DatabaseFilter</display-name>
+		<filter-name>DatabaseFilter</filter-name>
+		<filter-class>org.gcube.data.simulfishgrowthdata.servlet.DatabaseFilter</filter-class>
+		<init-param>
+			<param-name>DBEndpointName</param-name>
+			<param-value>SimulFishGrowth</param-value>
+		</init-param>
+		<!-- 		
+		<init-param>
+			<param-name>debug.HibernateConfig</param-name>
+			<param-value>hibernate.debug.cfg.xml</param-value>
+		</init-param>
+		 -->
+
+	</filter>
+	<filter-mapping>
+		<filter-name>DatabaseFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<servlet-name>API REST Service</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<!-- Register resources and providers under org.gcube.data.simulfishgrowthdata.api -->
+		<init-param>
+			<param-name>jersey.config.server.provider.packages</param-name>
+			<param-value>org.gcube.data.simulfishgrowthdata.api</param-value>
+		</init-param>
+		<!-- http://stackoverflow.com/a/17840647/874502 -->
+		<init-param>
+			<param-name>jersey.config.server.provider.classnames</param-name>
+			<param-value>com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jersey.config.disableMoxyJson</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>StartupServicesServlet</display-name>
+		<servlet-name>StartupServicesServlet</servlet-name>
+		<servlet-class>org.gcube.data.simulfishgrowthdata.servlet.StartupServicesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>API REST Service</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>StartupServicesServlet</servlet-name>
+		<url-pattern>/StartupServicesServlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>

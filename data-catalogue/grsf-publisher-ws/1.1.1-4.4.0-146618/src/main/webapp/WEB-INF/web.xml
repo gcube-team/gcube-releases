@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+	<display-name>GRSF Restful Web App</display-name>
+	<servlet>
+		<servlet-name>jersey-servlet</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>jersey.config.server.provider.packages</param-name>
+			<param-value>org.gcube.data_catalogue.grsf_publish_ws</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jersey.config.beanValidation.enableOutputValidationErrorEntity.server</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>jersey-servlet</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<description>Context of pending products under manage activities</description>
+		<param-name>ManageVRE</param-name>
+		<param-value>/d4science.research-infrastructures.eu/FARM/GRSF_Admin</param-value>
+		<!-- <param-value>/gcube/devNext/NextNext</param-value> -->
+		<!-- <param-value>/gcube/preprod/Dorne</param-value> -->
+	</context-param>
+
+	<context-param>
+		<description>Context of products no longer under manage activities</description>
+		<param-name>PublicVRE</param-name>
+		<param-value>/d4science.research-infrastructures.eu/FARM/GRSF</param-value>
+		<!-- <param-value>/gcube/devNext/NextNext</param-value> -->
+		<!-- <param-value>/gcube/preprod/preVRE</param-value> -->
+	</context-param>
+</web-app>
