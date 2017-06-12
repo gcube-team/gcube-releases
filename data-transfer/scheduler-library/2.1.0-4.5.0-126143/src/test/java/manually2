@@ -1,0 +1,21 @@
+<org.gcube.datatransfer.scheduler.library.obj.SchedulerObj>
+  <typeOfSchedule>
+    <directedScheduled>false</directedScheduled>
+    <manuallyScheduled>
+  	<instanceString>19.09.12-16.27</instanceString>
+    </manuallyScheduled>
+  </typeOfSchedule>
+  <typeOfTransfer>FileBasedTransfer</typeOfTransfer>
+  <scope>/gcube/devsec/</scope>
+  <unzipFile>false</unzipFile>
+  <overwrite>true</overwrite>
+  <syncOp>false</syncOp>
+  <agentHostname>pcitgt1012.cern.ch</agentHostname>
+  <inputUrls>
+    <string>ftp://andrea:bilico1980@pcd4science3.cern.ch/mimosa.jpg</string>
+</inputUrls>
+  <destinationFolder>/home/nick/Downloads/test</destinationFolder>
+  <storageType>
+    <__value__>LocalGHN</__value__>
+  </storageType>
+</org.gcube.datatransfer.scheduler.library.obj.SchedulerObj>

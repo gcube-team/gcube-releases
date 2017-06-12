@@ -1,0 +1,63 @@
+.aui .header{
+	text-align:center;
+	background:white;
+	border:0px;
+}
+
+.aui .tea-context-menu{
+	text-align:left;
+	border:black solid 1px;
+	width: 150px;
+	padding-top:0px;
+	margin-bottom:20px;	
+	display:none;
+	position:absolute;
+	z-index:999;
+}
+
+.aui .tea-context-menu > li > a{
+	font-size:13px;
+	text-shadow: none;
+	text-align:left;
+	
+	border-radius: 0px !important;
+	outline:0;
+		
+	color:black;
+	background:white;
+	
+	padding-top:5px;
+	padding-bottom: 5px;
+}
+
+.aui .tea-context-menu > li >  a:hover{
+	//background:#00aaff;
+	background:rgb(2, 113, 190);
+	color:white;
+}
+.aui .tea-context-menu > li >  a:hover > i{
+	font-size:16px;
+	color:white;
+}
+
+.aui .tea-context-menu > li >  a > i{
+	font-size:16px;
+	color:black;
+}
+
+.aui .tea-context-menu > li >  a.remove-file{
+	font-weight:bold;
+	color:#C00;
+}
+
+.aui .tea-context-menu > li > a.remove-file > i{
+	color:#C00;
+}
+.aui .tea-context-menu > li >  a.remove-file:hover > i{
+	color:white;
+}
+
+.aui .tea-context-menu > li >  a.remove-file:hover{
+	color:white;
+	background:#C00;
+}

@@ -1,0 +1,7 @@
+<ServiceMap>
+ 	<Service name ="ISICAllQueryPT" endpoint ="http://node1.p.d4science.research-infrastructures.eu:8080/wsrf/services/gcube/informationsystem/collector/XQueryAccess"/>
+        <Service name ="ISICAllRegistrationPT" endpoint ="http://node1.p.d4science.research-infrastructures.eu:8080/wsrf/services/gcube/informationsystem/collector/Sink"/>
+	<Service name ="ISICAllCollectionPT" endpoint ="http://node1.p.d4science.research-infrastructures.eu:8080/wsrf/services/gcube/informationsystem/collector/wsdaix/XMLCollectionAccess"/>
+	<Service name ="ISICAllStoragePT" endpoint ="http://node1.p.d4science.research-infrastructures.eu:8080/wsrf/services/gcube/informationsystem/collector/XMLStorageAccess"/>
+	<Service name ="MessageBroker" endpoint ="tcp://message-broker.d4science.research-infrastructures.eu:6166"/>
+</ServiceMap>

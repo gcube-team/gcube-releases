@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>Service used to receive data from other hosting nodes</Description>
+		<Class>DataTransfer</Class>
+		<Name>data-transfer-service</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Name>data-transfer-service</Name>
+				<Version>1.2.1-4.5.0-141906</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.data.transfer</groupId>
+					<artifactId>data-transfer-service</artifactId>
+					<version>1.2.1-4.5.0-141906</version>
+				</MavenCoordinates>
+				<Files>
+					<File>data-transfer-service.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>
+
+

@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor 
+	license agreements. See the NOTICE file distributed with this work for additional 
+	information regarding copyright ownership. The ASF licenses this file to 
+	You under the Apache License, Version 2.0 (the "License"); you may not use 
+	this file except in compliance with the License. You may obtain a copy of 
+	the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
+	by applicable law or agreed to in writing, software distributed under the 
+	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
+	OF ANY KIND, either express or implied. See the License for the specific 
+	language governing permissions and limitations under the License. -->
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+	<display-name>Jackrabbit JCR Server</display-name>
+
+	<context-param>
+		<param-name>user</param-name>
+		<param-value>workspacerep.imarine</param-value>
+	</context-param>
+	<context-param>
+		<param-name>pass</param-name>
+		<!--<param-value>workspacerep.imarine</param-value>-->
+		<param-value>gcube2010*onan</param-value>
+	</context-param>
+
+	<!-- <context-param> <param-name>user</param-name> <param-value>admin</param-value> 
+		</context-param> <context-param> <param-name>pass</param-name> <param-value>gcube2010*onan</param-value> 
+		</context-param> -->
+
+	<listener>
+		<!-- Releases all Derby resources when the webapp is undeployed. -->
+		<!-- See https://issues.apache.org/jira/browse/JCR-1301 -->
+		<listener-class>
+			org.apache.jackrabbit.j2ee.DerbyShutdown
+		</listener-class>
+	</listener>
+
+
+	<!-- ====================================================================== -->
+	<!-- R E P O S I T O R Y S T A R T U P S E R V L E T -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>RepositoryStartup</servlet-name>
+		<description>
+			Repository servlet that starts the repository and
+			registers it to JNDI ans RMI.
+			If you already have the repository
+			registered in this appservers JNDI
+			context,
+			or if its accessible via
+			RMI, you do not need to use this servlet.
+		</description>
+		<servlet-class>org.apache.jackrabbit.j2ee.RepositoryStartupServlet</servlet-class>
+
+		<init-param>
+			<param-name>bootstrap-config</param-name>
+			<param-value>jackrabbit/bootstrap.properties</param-value>
+			<description>
+				Property file that hold the same initialization
+				properties than
+				the init-params below. If a parameter is specified in
+				both
+				places the one in the bootstrap-config wins.
+			</description>
+		</init-param>
+
+		<!-- <init-param> <param-name>repository-config</param-name> <param-value>/WEB-INF/repository/repository.xml</param-value> 
+			<description>the repository config location</description> </init-param> <init-param> 
+			<param-name>repository-home</param-name> <param-value>jackrabbit/repository</param-value> 
+			<description>the repository home</description> </init-param> <init-param> 
+			<param-name>repository-name</param-name> <param-value>jackrabbit.repository</param-value> 
+			<description>Repository Name under which the repository is registered via 
+			JNDI/RMI</description> </init-param> -->
+
+		<!-- the following 3 parameters deal with registering the repository to 
+			a RMI registry. if all parameters are omitted, the repository will not be 
+			registered. -->
+		<!-- <init-param> <param-name>rmi-port</param-name> <param-value>0</param-value> 
+			<description> The RMI port for registering the repository in the RMI Registry. 
+			If equals 0, the default port is used. </description> </init-param> <init-param> 
+			<param-name>rmi-host</param-name> <param-value>localhost</param-value> <description> 
+			The RMI host for registering the repository in the RMI Registry. If equals 
+			"" or missing, the default host is used. </description> </init-param> <init-param> 
+			<param-name>rmi-uri</param-name> <param-value></param-value> <description> 
+			The RMI uri for registering the repository in the RMI Registry. If missing, 
+			the uri is composed using the other rmi parameters and will have the format: 
+			//{rmi-host}:{rmi-port}/{repository-name} </description> </init-param> -->
+		<!-- JNDI environment variables for creating the initial context (all init 
+			parameters starting with java.naming.* will be added to the initial context 
+			environment). -->
+		<!-- <init-param> <param-name>java.naming.provider.url</param-name> <param-value>http://www.apache.org/jackrabbit</param-value> 
+			</init-param> <init-param> <param-name>java.naming.factory.initial</param-name> 
+			<param-value>org.apache.jackrabbit.core.jndi.provider.DummyInitialContextFactory</param-value> 
+			</init-param> -->
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+
+
+	<!-- ====================================================================== -->
+	<!-- R E P O S I T O R Y S E R V L E T -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>Repository</servlet-name>
+		<description>
+			This servlet provides other servlets and jsps a common
+			way to access
+			the repository. The repository can be accessed via JNDI,
+			RMI or Webdav.
+		</description>
+		<servlet-class>org.apache.jackrabbit.j2ee.RepositoryAccessServlet</servlet-class>
+
+		<init-param>
+			<param-name>bootstrap-config</param-name>
+			<param-value>jackrabbit/bootstrap.properties</param-value>
+			<description>
+				Property file that hold the same initialization
+				properties than
+				the init-params below. If a parameter is specified in
+				both
+				places the one in the bootstrap-config wins.
+			</description>
+		</init-param>
+		<!-- <init-param> <param-name>repository.context.attribute.name</param-name> 
+			<param-value>javax.jcr.Repository</param-value> <description> If this is 
+			set, the RepositoryAccessServlet expects a Repository in the ServletContext 
+			attribute having this name. This allows servlets of this module to be used 
+			with repositories initialized by the jackrabbit-jcr-servlet module utilities. 
+			</description> </init-param> -->
+		<!-- <init-param> <param-name>repository-name</param-name> <param-value>jackrabbit.repository</param-value> 
+			<description>Repository Name that is used to retrieve it via JNDI</description> 
+			</init-param> -->
+		<!-- JNDI environment variables for creating the initial context (all init 
+			parameters starting with java.naming.* will be added to the initial context 
+			environment). -->
+		<!-- <init-param> <param-name>java.naming.provider.url</param-name> <param-value>http://www.apache.org/jackrabbit</param-value> 
+			</init-param> <init-param> <param-name>java.naming.factory.initial</param-name> 
+			<param-value>org.apache.jackrabbit.core.jndi.provider.DummyInitialContextFactory</param-value> 
+			</init-param> -->
+		<!-- RMI url, if RMI remoting is needed -->
+		<!-- <init-param> <param-name>rmi-uri</param-name> <param-value>///jackrabbit.repository</param-value> 
+			<description>The URI for the RMI connection.</description> </init-param> -->
+
+		<load-on-startup>3</load-on-startup>
+	</servlet>
+
+	<!-- ====================================================================== -->
+	<!-- W E B D A V S E R V L E T -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>Webdav</servlet-name>
+		<description>
+			The webdav servlet that connects HTTP request to the
+			repository.
+		</description>
+		<servlet-class>org.apache.jackrabbit.j2ee.SimpleWebdavServlet</servlet-class>
+
+		<init-param>
+			<param-name>resource-path-prefix</param-name>
+			<param-value>/repository</param-value>
+			<description>
+				defines the prefix for spooling resources out of the
+				repository.
+			</description>
+		</init-param>
+		<!-- <init-param> <param-name>missing-auth-mapping</param-name> <param-value>anonymous:anonymous</param-value> 
+			<description> Defines how a missing authorization header should be handled. 
+			1) If this init-param is missing, a 401 response is generated. This is suitable 
+			for clients (eg. webdav clients) for which sending a proper authorization 
+			header is not possible if the server never sent a 401. 2) If this init-param 
+			is present with an empty value, null-credentials are returned, thus forcing 
+			an null login on the repository. 3) If this init-param is present with the 
+			value 'guestcredentials' java.jcr.GuestCredentials are used to login to the 
+			repository. 4) If this init-param has a 'user:password' value, the respective 
+			simple credentials are generated. </description> </init-param> -->
+		<!-- Optional parameter to define the value of the 'WWW-Authenticate' header -->
+		<!-- <init-param> <param-name>authenticate-header</param-name> <param-value>Basic 
+			realm="Jackrabbit Webdav Server"</param-value> <description> Defines the 
+			value of the 'WWW-Authenticate' header. </description> </init-param> -->
+		<!-- Parameter used to configure behaviour of webdav resources such as: 
+			- distinction between collections and non-collections - resource filtering -->
+		<init-param>
+			<param-name>resource-config</param-name>
+			<param-value>/WEB-INF/config.xml</param-value>
+			<description>
+				Defines various dav-resource configuration parameters.
+			</description>
+		</init-param>
+		<!-- Optional parameter to define the behaviour of the referrer-based CSRF 
+			protection -->
+		<!-- <init-param> <param-name>csrf-protection</param-name> <param-value>host1.domain.com,host2.domain.org</param-value> 
+			<description> Defines the behaviour of the referrer based CSRF protection 
+			1) If omitted or left empty the (default) behaviour is to allow only requests 
+			with an empty referrer header or a referrer host equal to the server host 
+			2) May also contain a comma separated list of additional allowed referrer 
+			hosts 3) If set to 'disabled' no referrer checking will be performed at all 
+			</description> </init-param> -->
+		<load-on-startup>4</load-on-startup>
+	</servlet>
+
+	<!-- ====================================================================== -->
+	<!-- J C R R E M O T I N G S E R V L E T -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>JCRWebdavServer</servlet-name>
+		<description>
+			The servlet used to remote JCR calls over HTTP.
+		</description>
+		<servlet-class>org.apache.jackrabbit.j2ee.JcrRemotingServlet</servlet-class>
+		<init-param>
+			<param-name>missing-auth-mapping</param-name>
+			<param-value></param-value>
+			<description>
+				Defines how a missing authorization header should be
+				handled.
+				1) If this init-param is missing, a 401 response is
+				generated.
+				This is suitable for clients (eg. webdav clients) for
+				which
+				sending a proper authorization header is not possible if the
+				server never sent a 401.
+				2) If this init-param is present with an
+				empty value,
+				null-credentials are returned, thus forcing an null
+				login
+				on the repository.
+				3) If this init-param is present with the
+				value 'guestcredentials'
+				java.jcr.GuestCredentials are used to login
+				to the repository.
+				4) If this init-param has a 'user:password' value,
+				the respective
+				simple credentials are generated.
+			</description>
+		</init-param>
+		<!-- Optional parameter to define the value of the 'WWW-Authenticate' header -->
+		<!-- <init-param> <param-name>authenticate-header</param-name> <param-value>Basic 
+			realm="Jackrabbit Webdav Server"</param-value> <description> Defines the 
+			value of the 'WWW-Authenticate' header. </description> </init-param> -->
+		<init-param>
+			<param-name>resource-path-prefix</param-name>
+			<param-value>/server</param-value>
+			<description>
+				defines the prefix for spooling resources out of the
+				repository.
+			</description>
+		</init-param>
+		<!-- Init parameters specific for JcrRemotingServlet -->
+		<!-- <init-param> <param-name>home</param-name> <param-value></param-value> 
+			<description>JcrRemotingServlet: Optional home directory for JcrRemotingServlet 
+			temporary files (default: "jackrabbit")</description> </init-param> <init-param> 
+			<param-name>temp-directory</param-name> <param-value></param-value> <description>JcrRemotingServlet: 
+			Optional temporary directory name (under home, default: "tmp")</description> 
+			</init-param> -->
+		<init-param>
+			<param-name>batchread-config</param-name>
+			<param-value>/WEB-INF/batchread.properties</param-value>
+			<description>JcrRemotingServlet: Optional mapping from node type
+				names to default depth.</description>
+		</init-param>
+		<!-- init-param> <param-name>concurrency-level</param-name> <param-value>50</param-value> 
+			<description>Number of concurrent requests expected. Default value is 50.</description> 
+			</init-param -->
+		<!-- Optional parameter to define the behaviour of the referrer-based CSRF 
+			protection -->
+		<!-- <init-param> <param-name>csrf-protection</param-name> <param-value>host1.domain.com,host2.domain.org</param-value> 
+			<description> Defines the behaviour of the referrer based CSRF protection 
+			1) If omitted or left empty the (default) behaviour is to allow only requests 
+			with an empty referrer header or a referrer host equal to the server host 
+			2) May also contain a comma separated list of additional allowed referrer 
+			hosts 3) If set to 'disabled' no referrer checking will be performed at all 
+			</description> </init-param> -->
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+
+	<!-- ====================================================================== -->
+	<!-- R M I B I N D I N G S E R V L E T -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>RMI</servlet-name>
+		<servlet-class>org.apache.jackrabbit.servlet.remote.RemoteBindingServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PortalUserManager</servlet-name>
+		<display-name>PortalUserManager</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.PortalUserManager</servlet-class>
+	</servlet>
+
+
+
+
+	<!-- ====================================================================== -->
+	<!-- ACCESS MANAGER SERVLETS -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>DeleteAcesServlet</servlet-name>
+		<display-name>DeleteAcesServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.accessmanager.DeleteAcesServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ModifyAceServlet</servlet-name>
+		<display-name>ModifyAceServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.accessmanager.ModifyAceServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>RemoveDefaultRead</servlet-name>
+		<display-name>RemoveDefaultRead</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.accessmanager.RemoveDefaultRead</servlet-class>
+	</servlet>
+
+
+	<!-- ====================================================================== -->
+	<!-- PRIVILEGE SERVLETS -->
+	<!-- ====================================================================== -->
+
+	<servlet>
+		<servlet-name>CanAddChildren</servlet-name>
+		<display-name>CanAddChildren</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.accessmanager.privileges.CanAddChildren</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CanDelete</servlet-name>
+		<display-name>CanDelete</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.accessmanager.privileges.CanDelete</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CanDeleteChildren</servlet-name>
+		<display-name>CanDeleteChildren</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.accessmanager.privileges.CanDeleteChildren</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CanModifyProperties</servlet-name>
+		<display-name>CanModifyProperties</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.accessmanager.privileges.CanModifyProperties</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CanReadNode</servlet-name>
+		<display-name>CanReadNode</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.accessmanager.privileges.CanReadNode</servlet-class>
+	</servlet>
+
+	<!-- ====================================================================== -->
+	<!-- PRIVILEGE MANAGER SERVLETS -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>CreateCostumePrivilegeServlet</servlet-name>
+		<display-name>CreateCostumePrivilegeServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.privilegemanager.CreateCostumePrivilegeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetRegisteredPrivileges</servlet-name>
+		<display-name>GetRegisteredPrivileges</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.privilegemanager.GetRegisteredPrivileges</servlet-class>
+	</servlet>
+
+	<!-- ====================================================================== -->
+	<!-- USER MANAGER SERVLETS -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>CreateGroupServlet</servlet-name>
+		<display-name>CreateGroupServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.usermanager.CreateGroupServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CreateUserServlet</servlet-name>
+		<display-name>CreateUserServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.usermanager.CreateUserServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteAuthorizableServlet</servlet-name>
+		<display-name>DeleteAuthorizableServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.usermanager.DeleteAuthorizableServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetDisplayNameServlet</servlet-name>
+		<display-name>GetDisplayNameServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.usermanager.GetDisplayNameServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetVersionServlet</servlet-name>
+		<display-name>GetVersionServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.usermanager.GetVersionServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GroupMembershipServlet</servlet-name>
+		<display-name>GroupMembershipServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.usermanager.GroupMembershipServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>IsGroupServlet</servlet-name>
+		<display-name>IsGroupServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.usermanager.IsGroupServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListGroupsServlet</servlet-name>
+		<display-name>ListGroupsServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.usermanager.ListGroupsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListUsersServlet</servlet-name>
+		<display-name>ListUsersServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.usermanager.ListUsersServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>SetDisplayNameServlet</servlet-name>
+		<display-name>SetDisplayNameServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.usermanager.SetDisplayNameServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SetVersionServlet</servlet-name>
+		<display-name>SetVersionServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.usermanager.SetVersionServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateGroupServlet</servlet-name>
+		<display-name>UpdateGroupServlet</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.usermanager.UpdateGroupServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ChangePass</servlet-name>
+		<display-name>ChangePass</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.usermanager.ChangePass</servlet-class>
+	</servlet>
+
+	<!-- ====================================================================== -->
+	<!-- ACCOUNTING SERVLETS -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>GetAccountingById</servlet-name>
+		<display-name>GetAccountingById</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.accounting.servlets.GetAccountingById</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SaveAccountingItem</servlet-name>
+		<display-name>SaveAccountingItem</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.accounting.servlets.SaveAccountingItem</servlet-class>
+	</servlet>
+
+	<!-- ====================================================================== -->
+	<!-- TRASH SERVLETS -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>EmptyTrash</servlet-name>
+		<display-name>EmptyTrash</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.trash.EmptyTrash</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteFromTrash</servlet-name>
+		<display-name>DeleteFromTrash</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.trash.DeleteFromTrash</servlet-class>
+	</servlet>
+
+	<!-- ====================================================================== -->
+	<!-- ACL SERVLETS -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>GetACL</servlet-name>
+		<display-name>GetACL</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.acl.GetACL</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetACLByUser</servlet-name>
+		<display-name>GetACLByUser</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.acl.GetACLByUser</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetDeniedMap</servlet-name>
+		<display-name>GetDeniedMap</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.acl.GetDeniedMap</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetEACL</servlet-name>
+		<display-name>GetEACL</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.acl.GetEACL</servlet-class>
+	</servlet>
+
+
+	<!-- ====================================================================== -->
+	<!-- FTP SERVLETS -->
+	<!-- ====================================================================== -->
+
+	<servlet>
+		<servlet-name>CreateFolder</servlet-name>
+		<display-name>CreateFolder</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.ftp.CreateFolder</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Delete</servlet-name>
+		<display-name>Delete</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.ftp.Delete</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UploadFile</servlet-name>
+		<display-name>UploadFile</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.ftp.UploadFile</servlet-class>
+	</servlet>
+
+	<!-- ====================================================================== -->
+	<!-- GET SERVLETS -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>Clone</servlet-name>
+		<display-name>Clone</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.get.Clone</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Copy</servlet-name>
+		<display-name>Copy</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.get.Copy</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ExecuteQuery</servlet-name>
+		<display-name>ExecuteQuery</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.get.ExecuteQuery</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetChildrenById</servlet-name>
+		<display-name>GetChildrenById</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.get.GetChildrenById</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetHiddenItemsById</servlet-name>
+		<display-name>GetHiddenItemsById</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.get.GetHiddenItemsById</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetItemById</servlet-name>
+		<display-name>GetItemById</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.get.GetItemById</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetItemByPath</servlet-name>
+		<display-name>GetItemByPath</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.get.GetItemByPath</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetParentById</servlet-name>
+		<display-name>GetParentById</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.get.GetParentById</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetParentsById</servlet-name>
+		<display-name>GetParentsById</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.get.GetParentsById</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetReferences</servlet-name>
+		<display-name>GetReferences</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.get.GetReferences</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListFolder</servlet-name>
+		<display-name>ListFolder</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.get.ListFolder</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Move</servlet-name>
+		<display-name>Move</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.get.Move</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SearchItems</servlet-name>
+		<display-name>SearchItems</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.get.SearchItems</servlet-class>
+	</servlet>
+
+	<!-- ====================================================================== -->
+	<!-- POST SERVLETS -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>AddNode</servlet-name>
+		<display-name>AddNode</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.post.AddNode</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ChangePrimaryType</servlet-name>
+		<display-name>ChangePrimaryType</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.post.ChangePrimaryType</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CopyContent</servlet-name>
+		<display-name>CopyContent</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.post.CopyContent</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CreateReference</servlet-name>
+		<display-name>CreateReference</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.post.CreateReference</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>MoveToTrashIds</servlet-name>
+		<display-name>MoveToTrashIds</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.post.MoveToTrashIds</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RemoveData</servlet-name>
+		<display-name>RemoveData</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.post.RemoveData</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RemoveItem</servlet-name>
+		<display-name>RemoveItem</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.post.RemoveItem</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SaveItem</servlet-name>
+		<display-name>SaveItem</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.post.SaveItem</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CreateItem</servlet-name>
+		<display-name>CreateItem</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.post.CreateItem</servlet-class>
+	</servlet>
+	<!-- ====================================================================== -->
+	<!-- REST SERVLETS -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>CreateFolder</servlet-name>
+		<display-name>CreateFolder</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.rest.CreateFolder</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Delete</servlet-name>
+		<display-name>Delete</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.rest.Delete</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Download</servlet-name>
+		<display-name>Download</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.rest.Download</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetPublicLink</servlet-name>
+		<display-name>GetPublicLink</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.rest.GetPublicLink</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>List</servlet-name>
+		<display-name>List</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.rest.List</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Unzip</servlet-name>
+		<display-name>Unzip</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.rest.Unzip</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Upload</servlet-name>
+		<display-name>Upload</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.servlets.rest.Upload</servlet-class>
+	</servlet>
+
+
+	<!-- ====================================================================== -->
+	<!-- VERSION SERVLETS -->
+	<!-- ====================================================================== -->
+
+
+	<servlet>
+		<servlet-name>DownloadVersion</servlet-name>
+		<display-name>DownloadVersion</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.versioning.DownloadVersion</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetVersion</servlet-name>
+		<display-name>GetVersion</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.versioning.GetVersion</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetCurrentVersion</servlet-name>
+		<display-name>GetCurrentVersion</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.versioning.GetCurrentVersion</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RemoveVersion</servlet-name>
+		<display-name>RemoveVersion</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.versioning.RemoveVersion</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RestoreVersion</servlet-name>
+		<display-name>RestoreVersion</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.versioning.RestoreVersion</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SaveCurrentVersion</servlet-name>
+		<display-name>SaveCurrentVersion</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.versioning.SaveCurrentVersion</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>VersionHistory</servlet-name>
+		<display-name>VersionHistory</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.versioning.VersionHistory</servlet-class>
+	</servlet>
+
+
+	<!-- ====================================================================== -->
+	<!-- SESSION SERVLETS -->
+	<!-- ====================================================================== -->
+	<servlet>
+		<servlet-name>ActiveSessions</servlet-name>
+		<display-name>ActiveSessions</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.session.ActiveSessions</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CreateSession</servlet-name>
+		<display-name>CreateSession</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.session.CreateSession</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ReleaseSession</servlet-name>
+		<display-name>ReleaseSession</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.session.ReleaseSession</servlet-class>
+	</servlet>
+
+	<!-- ====================================================================== -->
+	<!-- LOCK SERVLETS -->
+	<!-- ====================================================================== -->
+
+	<servlet>
+		<servlet-name>IsLocked</servlet-name>
+		<display-name>IsLocked</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.session.lock.IsLocked</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LockSession</servlet-name>
+		<display-name>LockSession</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.session.lock.LockSession</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UnlockSession</servlet-name>
+		<display-name>UnlockSession</display-name>
+		<description></description>
+		<servlet-class>org.apache.jackrabbit.j2ee.workspacemanager.session.lock.UnlockSession</servlet-class>
+	</servlet>
+
+
+	<!-- ====================================================================== -->
+	<!-- S E R V L E T M A P P I N G -->
+	<!-- ====================================================================== -->
+	<servlet-mapping>
+		<servlet-name>RepositoryStartup</servlet-name>
+		<url-pattern>/admin/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Webdav</servlet-name>
+		<url-pattern>/repository/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JCRWebdavServer</servlet-name>
+		<url-pattern>/server/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RMI</servlet-name>
+		<url-pattern>/rmi</url-pattern>
+	</servlet-mapping>
+
+	<!-- ====================================================================== -->
+	<!-- MY SERVLET MAPPING -->
+	<!-- ====================================================================== -->
+
+	<servlet-mapping>
+		<servlet-name>PortalUserManager</servlet-name>
+		<url-pattern>/PortalUserManager</url-pattern>
+	</servlet-mapping>
+
+	<!-- ====================================================================== -->
+	<!-- ACCESS MANAGER SERVLETS MAPPING -->
+	<!-- ====================================================================== -->
+	<servlet-mapping>
+		<servlet-name>DeleteAcesServlet</servlet-name>
+		<url-pattern>/DeleteAcesServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ModifyAceServlet</servlet-name>
+		<url-pattern>/ModifyAceServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RemoveDefaultRead</servlet-name>
+		<url-pattern>/RemoveDefaultRead</url-pattern>
+	</servlet-mapping>
+
+	<!-- ====================================================================== -->
+	<!-- PRIVILEGES SERVLETS MAPPING -->
+	<!-- ====================================================================== -->
+
+	<servlet-mapping>
+		<servlet-name>CanAddChildren</servlet-name>
+		<url-pattern>/CanAddChildren</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CanDelete</servlet-name>
+		<url-pattern>/CanDelete</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CanDeleteChildren</servlet-name>
+		<url-pattern>/CanDeleteChildren</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CanModifyProperties</servlet-name>
+		<url-pattern>/CanModifyProperties</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CanReadNode</servlet-name>
+		<url-pattern>/CanReadNode</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- ====================================================================== -->
+	<!-- PRIVILEGE MANAGER SERVLETS MAPPING -->
+	<!-- ====================================================================== -->
+	<servlet-mapping>
+		<servlet-name>CreateCostumePrivilegeServlet</servlet-name>
+		<url-pattern>/CreateCostumePrivilegeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetRegisteredPrivileges</servlet-name>
+		<url-pattern>/GetRegisteredPrivileges</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- ====================================================================== -->
+	<!-- USER MANAGER SERVLETS MAPPING -->
+	<!-- ====================================================================== -->
+	<servlet-mapping>
+		<servlet-name>CreateGroupServlet</servlet-name>
+		<url-pattern>/CreateGroupServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreateUserServlet</servlet-name>
+		<url-pattern>/CreateUserServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteAuthorizableServlet</servlet-name>
+		<url-pattern>/DeleteAuthorizableServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetDisplayNameServlet</servlet-name>
+		<url-pattern>/GetDisplayNameServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetVersionServlet</servlet-name>
+		<url-pattern>/GetVersionServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GroupMembershipServlet</servlet-name>
+		<url-pattern>/GroupMembershipServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>IsGroupServlet</servlet-name>
+		<url-pattern>/IsGroupServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListGroupsServlet</servlet-name>
+		<url-pattern>/ListGroupsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListUsersServlet</servlet-name>
+		<url-pattern>/ListUsersServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SetDisplayNameServlet</servlet-name>
+		<url-pattern>/SetDisplayNameServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SetVersionServlet</servlet-name>
+		<url-pattern>/SetVersionServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateGroupServlet</servlet-name>
+		<url-pattern>/UpdateGroupServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ChangePass</servlet-name>
+		<url-pattern>/ChangePass</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- ====================================================================== -->
+	<!-- ACCOUNTING SERVLETS MAPPING -->
+	<!-- ====================================================================== -->
+
+	<servlet-mapping>
+		<servlet-name>GetAccountingById</servlet-name>
+		<url-pattern>/GetAccountingById</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SaveAccountingItem</servlet-name>
+		<url-pattern>/post/SaveAccountingItem</url-pattern>
+	</servlet-mapping>
+
+	<!-- ====================================================================== -->
+	<!-- TRASH SERVLETS MAPPING -->
+	<!-- ====================================================================== -->
+
+	<servlet-mapping>
+		<servlet-name>EmptyTrash</servlet-name>
+		<url-pattern>/trash/EmptyTrash</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteFromTrash</servlet-name>
+		<url-pattern>/trash/DeleteFromTrash</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- ====================================================================== -->
+	<!-- ACL SERVLETS MAPPING -->
+	<!-- ====================================================================== -->
+
+	<servlet-mapping>
+		<servlet-name>GetACL</servlet-name>
+		<url-pattern>/acl/GetACL</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetACLByUser</servlet-name>
+		<url-pattern>/acl/GetACLByUser</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetDeniedMap</servlet-name>
+		<url-pattern>/acl/GetDeniedMap</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetEACL</servlet-name>
+		<url-pattern>/acl/GetEACL</url-pattern>
+	</servlet-mapping>
+
+	<!-- ====================================================================== -->
+	<!-- FTP SERVLETS MAPPING -->
+	<!-- ====================================================================== -->
+	<servlet-mapping>
+		<servlet-name>CreateFolder</servlet-name>
+		<url-pattern>/post/CreateFolder</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Delete</servlet-name>
+		<url-pattern>/post/Delete</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadFile</servlet-name>
+		<url-pattern>/post/UploadFile</url-pattern>
+	</servlet-mapping>
+	<!-- ====================================================================== -->
+	<!-- GET SERVLETS MAPPING -->
+	<!-- ====================================================================== -->
+
+	<servlet-mapping>
+		<servlet-name>Clone</servlet-name>
+		<url-pattern>/get/Clone</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Copy</servlet-name>
+		<url-pattern>/get/Copy</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExecuteQuery</servlet-name>
+		<url-pattern>/get/ExecuteQuery</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetChildrenById</servlet-name>
+		<url-pattern>/get/GetChildrenById</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetHiddenItemsById</servlet-name>
+		<url-pattern>/get/GetHiddenItemsById</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetItemById</servlet-name>
+		<url-pattern>/get/GetItemById</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetItemByPath</servlet-name>
+		<url-pattern>/get/GetItemByPath</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetParentById</servlet-name>
+		<url-pattern>/get/GetParentById</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetParentsById</servlet-name>
+		<url-pattern>/get/GetParentsById</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetReferences</servlet-name>
+		<url-pattern>/get/GetReferences</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListFolder</servlet-name>
+		<url-pattern>/get/ListFolder</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Move</servlet-name>
+		<url-pattern>/get/Move</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SearchItems</servlet-name>
+		<url-pattern>/get/SearchItems</url-pattern>
+	</servlet-mapping>
+
+	<!-- ====================================================================== -->
+	<!-- POST SERVLETS MAPPING -->
+	<!-- ====================================================================== -->
+	<servlet-mapping>
+		<servlet-name>AddNode</servlet-name>
+		<url-pattern>/post/AddNode</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ChangePrimaryType</servlet-name>
+		<url-pattern>/post/ChangePrimaryType</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CopyContent</servlet-name>
+		<url-pattern>/post/CopyContent</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreateReference</servlet-name>
+		<url-pattern>/post/CreateReference</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MoveToTrashIds</servlet-name>
+		<url-pattern>/post/MoveToTrashIds</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RemoveData</servlet-name>
+		<url-pattern>/post/RemoveData</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RemoveItem</servlet-name>
+		<url-pattern>/post/RemoveItem</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SaveItem</servlet-name>
+		<url-pattern>/post/SaveItem</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreateItem</servlet-name>
+		<url-pattern>/post/CreateItem</url-pattern>
+	</servlet-mapping>
+
+	<!-- ====================================================================== -->
+	<!-- REST SERVLETS MAPPING -->
+	<!-- ====================================================================== -->
+	<servlet-mapping>
+		<servlet-name>CreateFolder</servlet-name>
+		<url-pattern>/rest/CreateFolder</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Delete</servlet-name>
+		<url-pattern>/rest/Delete</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Download</servlet-name>
+		<url-pattern>/rest/Download</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetPublicLink</servlet-name>
+		<url-pattern>/rest/GetPublicLink</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>List</servlet-name>
+		<url-pattern>/rest/List</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Unzip</servlet-name>
+		<url-pattern>/rest/Unzip</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Upload</servlet-name>
+		<url-pattern>/rest/Upload</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- ====================================================================== -->
+	<!-- VERSION SERVLETS MAPPING -->
+	<!-- ====================================================================== -->
+
+	<servlet-mapping>
+		<servlet-name>DownloadVersion</servlet-name>
+		<url-pattern>/versioning/DownloadVersion</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetVersion</servlet-name>
+		<url-pattern>/versioning/GetVersion</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetCurrentVersion</servlet-name>
+		<url-pattern>/versioning/GetCurrentVersion</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RemoveVersion</servlet-name>
+		<url-pattern>/versioning/RemoveVersion</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RestoreVersion</servlet-name>
+		<url-pattern>/versioning/RestoreVersion</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SaveCurrentVersion</servlet-name>
+		<url-pattern>/versioning/SaveCurrentVersion</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>VersionHistory</servlet-name>
+		<url-pattern>/versioning/VersionHistory</url-pattern>
+	</servlet-mapping>
+	<!-- ====================================================================== -->
+	<!-- SESSION SERVLETS MAPPING -->
+	<!-- ====================================================================== -->
+	<servlet-mapping>
+		<servlet-name>ActiveSessions</servlet-name>
+		<url-pattern>/ActiveSessions</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CreateSession</servlet-name>
+		<url-pattern>/CreateSession</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ReleaseSession</servlet-name>
+		<url-pattern>/ReleaseSession</url-pattern>
+	</servlet-mapping>
+
+	<!-- ====================================================================== -->
+	<!-- LOCK SERVLETS MAPPING -->
+	<!-- ====================================================================== -->
+	<servlet-mapping>
+		<servlet-name>IsLocked</servlet-name>
+		<url-pattern>/get/IsLocked</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LockSession</servlet-name>
+		<url-pattern>/get/LockSession</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UnlockSession</servlet-name>
+		<url-pattern>/get/UnlockSession</url-pattern>
+	</servlet-mapping>
+
+	<!-- ====================================================================== -->
+	<!-- W E L C O M E F I L E S -->
+	<!-- ====================================================================== -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<error-page>
+		<exception-type>org.apache.jackrabbit.j2ee.JcrApiNotFoundException</exception-type>
+		<location>/error/classpath.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>javax.jcr.RepositoryException</exception-type>
+		<location>/error/repository.jsp</location>
+	</error-page>
+
+</web-app>

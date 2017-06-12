@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Resource version="0.4.x">
+	<ID>b78909d3-4bef-4b3a-b3a1-7eb39fd86a27</ID>
+	<Scopes>
+		<Scope>/gcube</Scope>
+		<Scope>/gcube/devsec</Scope>
+	</Scopes>
+	<Type>GenericResource</Type>
+	<Profile>
+		<SecondaryType>DataSource</SecondaryType>
+		<Name>Sarda Sarda collection</Name>
+		<Description>Sarda Sarda collection</Description>
+		<Body>
+			<SourceProperties>
+				<creationTime>2012-10-25T16:43:33.116+02:00</creationTime>
+				<user>true</user>
+			</SourceProperties>
+			<other>test</other>
+		</Body>
+	</Profile>
+</Resource>

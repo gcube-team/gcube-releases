@@ -1,0 +1,26 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-service.1-0-0" date="2016-10-01">
+		<Change>First release of the techno economic analysis service</Change>
+	</Changeset>
+	
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-service.2-0-0" date="2016-11-24">	
+		<Change>Improved error messages.</Change>	
+		<Change>Added extra parameters in analysis and request.</Change>	
+	</Changeset>
+	
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-service.2-1-0" date="2017-03-03">	
+		<Change>Added Spring framework.</Change>	
+		<Change>Added caching of endpoints.</Change>	
+		<Change>Fixed Bugs and improved various analysis calculation</Change>
+	</Changeset>
+	
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-service.2-2-0" date="2017-04-20">	
+		<Change>Removed periodic thread from EndpointManager.</Change>	
+		<Change>Analysis results now spans the year range [current_year + 1, current_year + 10]</Change>
+	</Changeset>
+	
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-service.2-3-0" date="2017-05-24">	
+		<Change>Start year and end year are based on current year</Change>	
+		<Change>Performed some minor structural changes</Change>
+	</Changeset>
+</ReleaseNotes>

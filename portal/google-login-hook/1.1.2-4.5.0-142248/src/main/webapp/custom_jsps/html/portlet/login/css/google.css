@@ -1,0 +1,42 @@
+.social-hook div[class*="-hook-icon"] {
+    display: inline-block;
+    padding: 0px 6px;
+    color: white;
+    margin-right: -5px;
+    box-shadow: 2px 0px 8px -2px rgba(0,0,0,0.7), -2px 1px 1px 1px rgba(0,0,0,0.3);
+    z-index: 10;
+    position: relative;
+    width: 10%
+}
+
+.social-hook div[class$="-hook-text"] {
+    display: inline-block;
+    padding: 0px 10px;
+    border-radius: 0px 5px 5px 0px;
+    color: white;
+    box-shadow: 1px 1px 3px 1.5px rgba(0,0,0,0.3);
+    width: 50%;
+}
+
+.social-hook a[class$="-hook-link"] {
+	text-align: center;
+}
+
+.social-hook div[class$="-hook-label-wrapper"]{
+	white-space: nowrap;
+}
+    
+.social-hook div[class$="-hook-label-wrapper"]:hover{
+	opacity : 0.85;
+}
+
+.social-hook .google-hook-text, .social-hook .google-hook-icon{
+	background-color: rgb(209, 72, 54);
+}
+
+@media (max-width: 480px) { 
+	.social-hook div[class$="-hook-text"] {
+	    min-width: 50%;
+	    width: inherit;
+	}
+}

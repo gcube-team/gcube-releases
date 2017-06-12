@@ -1,0 +1,430 @@
+#geotiff-importer-container{
+	display: inline-block;	
+	padding-left:0px;
+	left:0px;
+	right:0px;
+	margin:auto;
+	min-width: calc(100% - 2px) ;
+}
+
+.geotiff-importer-container-button{
+	min-width: 700px ;
+	border-top-left-radius:11px;	
+	border-top-right-radius:11px;	
+	border: 1px solid black;
+	-webkit-box-shadow: 3px 4px 15px -2px rgba(0,0,0,0.74);
+	-moz-box-shadow: 3px 4px 15px -2px rgba(0,0,0,0.74);
+	box-shadow: 3px 4px 15px -2px rgba(0,0,0,0.74);	
+}
+
+#geotiff-importer-container #geotiff-importer-modal-body{
+	padding:0px;
+ 	display:table;
+ 	width:100% ;
+}
+
+#geotiff-importer-container #geotiff-importer-modal-body .geotiff-importer-row{
+	padding:0px;
+ 	display:table-row;
+}
+
+#geotiff-importer-container #geotiff-importer-modal-body .geotiff-importer-row.scrollable{
+ 	display:inline-block;
+}
+
+#geotiff-importer-container #geotiff-importer-modal-body.scrollable{
+	padding:0px;
+    overflow-y:scroll;
+    display:inline-block;
+	//max-height: calc(100vh - 350px);
+}
+
+
+#geotiff-importer-container #geotiff-importer-modal-header{
+	border-radius: 9px 9px 0px 0px;
+	border-color:black;
+	margin-bottom:10px;
+}
+
+#geotiff-importer-container #geotiff-importer-modal-header >  h5{
+	font-size:16px;
+	margin-bottom:15px;
+	margin-top:15px;
+}
+
+#geotiff-importer-container .control-label{
+	cursor:default;
+	font-weight:bold;
+	font-size:13px;
+}
+
+#geotiff-importer-container h5{
+	margin-bottom:30px;
+	text-align:center;
+}
+
+#geotiff-importer-container select{
+	min-height: 30px;
+    max-height: 20px;
+    outline: 0;
+    min-width: 160px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+}
+
+#geotiff-importer #geotiff-importer-show-button{
+	background: rgb(2, 113, 190);
+	color:white;
+	margin-left: 0px;
+	margin-top: 10px;
+	display:inline-block;
+	padding: 20px 20px;
+	font-size: 15px;
+	cursor: pointer;	
+}
+
+#geotiff-importer #geotiff-importer-show-button:hover{
+	background: rgb(4, 133, 220);
+	color:white;
+}
+
+#geotiff-importer #geotiff-importer-show-button:focus{
+	background: rgb(2,93, 170);
+	color:white;
+	outline:0;
+}
+
+#geotiff-importer-container #geotiff-importer-modal-header{
+	background: rgb(2, 113, 190);
+	color:white;
+}
+
+#geotiff-importer-container #geotiff-importer-close-button{
+    float:right; 
+    cursor:pointer;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    background: none;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;      
+	outline:0;
+	margin-top:15px;
+}
+
+#geotiff-importer-container #geotiff-importer-close-button:before {
+    content: "×";
+}
+
+#geotiff-importer-container #geotiff-importer-div-purpose{
+	margin-top:25px;
+}
+
+ #geotiff-importer-container #geotiff-importer-browsefiles-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.aui #geotiff-importer-container #geotiff-importer-cancel,
+.aui #geotiff-importer-container #geotiff-importer-import-button{
+	text-shadow: 0px 0px 2px rgba(151, 151, 151, 1);
+    color: white;
+    margin: 0 0px 0 60px;
+    outline: 0;
+    background: #0271be;
+    border: none;
+    height: 35px;
+    width:120px;
+    display: inline-block;
+}
+
+.aui #geotiff-importer-container #geotiff-importer-cancel:hover,
+.aui #geotiff-importer-container #geotiff-importer-import-button:hover{
+	background: #4cb5d2;
+}
+
+.aui #geotiff-importer-container #geotiff-importer-patch-browsefiles button{
+	height:28px;
+}
+
+
+#geotiff-importer-container #geotiff-importer-div-submit{
+	display:inline-block;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+#geotiff-importer-container .numberCircle {
+  display:inline-block;
+  line-height:0px;
+  
+  border-radius:50%;
+  border:2px solid rgb(2, 113, 190);
+  
+  font-size:14px;
+}
+
+#geotiff-importer-container .numberCircle span {
+  display:inline-block;
+
+  padding-top:50%;
+  padding-bottom:50%;
+
+  margin-left:8px;
+  margin-right:8px;
+}
+
+#geotiff-importer-container .border-between > [class*='col-']:before {
+	 background: #e3e3e3;
+	 bottom: 0;
+	 content: " ";
+	 left: 0;
+	 position: absolute;
+	 width: 1px;
+	 top: 0;
+}
+
+#geotiff-importer-container .border-between > [class*='col-']:first-child:before {
+	display: none;
+}
+
+
+#geotiff-importer-container .help-inline label, #geotiff-importer-container .help-inline{
+	font-size:12px;
+}
+
+/************************************************* jQuery Tags Input *************************************************/
+
+#geotiff-importer-container div.tagsinput {
+	background:white;
+	overflow-y:auto;
+	padding:5px;
+	width:auto !important;
+	min-height:55px !important;
+	max-height:55px !important;	
+	margin-bottom: 6px;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    color: rgb(2, 113, 190);
+}
+
+#geotiff-importer-container div#geotiff-importer-tagsinput_addTag.error {
+	border:0;
+}
+
+#geotiff-importer-container div.tagsinput span.tag {
+	border-radius: 7px 7px 7px 7px;
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border: 2px solid white;
+	display:block;
+	float:left;
+	background:black;
+	color:white;
+	font-size:13px;
+	font-weight:bold;
+	padding:2px 5px 2px 5px;
+	margin-right:5px;
+	margin-bottom:5px;
+}
+
+#geotiff-importer-container div.tagsinput span.tag a {
+	font-weight:100;
+	color:white;
+	font-size:13px;
+}
+
+#geotiff-importer-container div.tagsinput input {
+	width:80px;
+	font-family:helvetica;
+	font-size:13px;
+	border:1px solid transparent;
+	background:transparent;
+	color:#000;
+	outline:0;
+	margin:0 5px 5px 0;
+	padding:5px;
+}
+
+#geotiff-importer-container div.tagsinput div {
+	display:block;
+	float:left;
+}
+
+#geotiff-importer-container .tags_clear {
+	clear:both;
+	width:100%;
+	height:0;
+}
+
+#geotiff-importer-container .not_valid {
+	background:#FBD8DB	!important;
+	color:#90111A	!important;
+}
+
+.aui #contentOfImporter #geotiff-importer-container .geotiff-importer-color-red {
+	color:#b94a48;
+}
+
+.aui #contentOfImporter #geotiff-importer-container .geotiff-importer-color-red > label {
+	color:#b94a48;
+	margin-left:5px;
+}
+
+@media (min-width: 200px){
+	.aui #geotiff-importer-container input[type="color"], 
+	.aui #geotiff-importer-container input[type="date"], 
+	.aui #geotiff-importer-container input[type="datetime"], 
+	.aui #geotiff-importer-container input[type="datetime-local"], 
+	.aui #geotiff-importer-container input[type="email"], 
+	.aui #geotiff-importer-container input[type="month"], 
+	.aui #geotiff-importer-container input[type="number"], 
+	.aui #geotiff-importer-container input[type="password"], 
+	.aui #geotiff-importer-container input[type="search"], 
+	.aui #geotiff-importer-container input[type="tel"], 
+	.aui #geotiff-importer-container input[type="text"], 
+	.aui #geotiff-importer-container input[type="time"], 
+	.aui #geotiff-importer-container input[type="url"], 
+	.aui #geotiff-importer-container input[type="week"], 
+	.aui #geotiff-importer-container .input-prepend .add-on, 
+	.aui #geotiff-importer-container .navbar-search .search-query, 
+	.aui #geotiff-importer-container .uneditable-input{
+		font-size:14px;
+		margin-bottom:0px;
+		height:20px;
+	}
+}
+
+.aui #geotiff-importer-container #geotiff-importer-patch-browsefiles {  
+    position: relative;
+    overflow: hidden;
+	font-size:14px;
+}
+
+.aui #geotiff-importer-container #geotiff-importer-selected-file{
+	cursor: text;
+	background:white;
+	border-top-right-radius:0px;
+	border-bottom-right-radius:0px;
+	margin-bottom: 6px;
+    border-radius: 5px;
+}
+
+#geotiff-importer-patch-browsefiles button {
+    background-color: #0271be;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+
+.aui #contentOfImporter #geotiff-importer-container #geotiff-importer-modal-body textarea {
+    margin-bottom: 6px;
+    border-radius: 5px;
+    resize:vertical ;
+}
+
+.aui #contentOfImporter #geotiff-importer-container label {
+    color: #595959;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.aui #contentOfImporter #geotiff-importer-container label .makeMeOrange {
+	float: right;
+}
+
+.aui #contentOfImporter #geotiff-importer-container textarea::-webkit-input-placeholder {
+	color: #ccc !important;
+	font-size: 13px;
+    font-weight: 200;
+}
+ 
+.aui #contentOfImporter #geotiff-importer-container textarea:-moz-placeholder { /* Firefox 18- */
+	color: #ccc !important;  
+	font-size: 13px;
+    font-weight: 200;
+}
+ 
+.aui #contentOfImporter #geotiff-importer-container textarea::-moz-placeholder {  /* Firefox 19+ */
+	color: #ccc !important;  
+	font-size: 13px;
+    font-weight: 200;
+}
+ 
+.aui #contentOfImporter #geotiff-importer-container textarea:-ms-input-placeholder {  
+	color: #ccc !important;  
+	font-size: 13px;
+    font-weight: 200;
+}
+
+#geotiff-importer-browsefiles-button {
+	height: 33px;
+    line-height: 30px;
+    position: relative;
+    opacity: -0.9;
+    cursor: pointer;
+    width: 121px;
+    background-color: antiquewhite;
+}
+
+.adminContainer .navbarTop #geotiff-importer-container {
+	margin-top: 10px !important;
+}
+
+.adminContainer .navbarTop #geotiff-importer-container hr {
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+.adminContainer .navbarTop .headerDescription {
+	color: #bfbfbf;
+}	
+
+@media (max-width: 979px){
+	.aui .btn {
+	    padding: 4px 12px;
+	    font-size: 14px;
+	}
+}
+
+@media (max-width: 979px){
+	.aui input[type="color"], 
+	.aui input[type="date"], 
+	.aui input[type="datetime"], 
+	.aui input[type="datetime-local"], 
+	.aui input[type="email"], 
+	.aui input[type="month"], 
+	.aui input[type="number"], 
+	.aui input[type="password"], 
+	.aui input[type="search"], 
+	.aui input[type="tel"], 
+	.aui input[type="text"], 
+	.aui input[type="time"], 
+	.aui input[type="url"], 
+	.aui input[type="week"], 
+	.aui select, 
+	.aui textarea, 
+	.aui .input-prepend .add-on, 
+	.aui .navbar-search .search-query, 
+	.aui .uneditable-input {
+	    font-size: 14px;
+	    height: auto;
+	    line-height: normal;
+	}
+}
+
+@media (max-width: 767px) and (max-width: 979px){
+	.aui .btn {
+	    display: inline-block;
+	}
+}

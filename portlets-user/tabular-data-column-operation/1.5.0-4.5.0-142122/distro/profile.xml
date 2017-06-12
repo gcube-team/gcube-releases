@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<ID></ID>
+	<Type>Library</Type>
+	<Profile>
+		<Description>Tabular Data Column Operation allows the users to perform the split and merge operations on tabular data columns</Description>
+		<Class>PortletsUser</Class>
+		<Name>tabular-data-column-operation</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>Tabular Data Column Operation allows the users to perform the split and merge operations on tabular data columns</Description>
+				<Name>tabular-data-column-operation</Name>
+				<Version>1.5.0-4.5.0-142122</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.portlets.user.tdcolumnoperation</groupId>
+					<artifactId>tabular-data-column-operation</artifactId>
+					<version>1.5.0-4.5.0-142122</version>
+				</MavenCoordinates>
+				<Type>library</Type>
+				<Files>
+					<File>tabular-data-column-operation-1.5.0-4.5.0-142122.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>
+
+

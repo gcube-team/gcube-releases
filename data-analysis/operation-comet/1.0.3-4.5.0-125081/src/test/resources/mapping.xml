@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MappingData on="2014-05-28T15:13:16.522+02:00" producedBy="http://cotrix.org"
+	version="1.1" id="ag-prod-cnt-map%3A1.1%3A1">
+	<Description>A Mapping between codelist v.1.1 and v.1 of codelist
+		ag-prod-cnt-map</Description>
+	<ProcessConfiguration minimumScore="1.0"
+		maximumNumberOfCandidates="1">
+		<SourceDataProvider providedType="http://cotrix.org/codelist"
+			version="1.1" dataSourceId="http://cotrix.org/codelist/ag-prod-cnt-map"
+			providerId="http://cotrix.org" />
+		<TargetDataProvider providedType="http://cotrix.org/codelist"
+			version="1" dataSourceId="http://cotrix.org/codelist/ag-prod-cnt-map"
+			providerId="http://cotrix.org" />
+	</ProcessConfiguration>
+
+
+	<Mapping>
+		<SourceElement>
+			<ElementIdentifier elementId="Fis-123456" />
+			<PropertyList>
+				<Property name="urn" type="{http://cotrix.org}description"
+					value="urn:faodata:member:faostat:area:area:area:area:4d6f81c8-d01f-4093-bb72-3f0ae150932d" />
+			</PropertyList>
+		</SourceElement>
+		<TargetElementMappings>
+			<MappingDetail score="1.0" scoreType="AUTHORITATIVE">
+				<TargetElement>
+					<ElementIdentifier elementId="Fis-123456" />
+					<PropertyList>
+						<Property name="urn" type="{http://cotrix.org}description"
+							value="urn:faodata:member:faostat:area:area:area:area:4d6f81c8-d01f-4093-bb72-3f0ae150932d" />
+					</PropertyList>
+				</TargetElement>
+			</MappingDetail>
+			<MappingDetail score="1.0" scoreType="AUTHORITATIVE">
+				<TargetElement>
+					<ElementIdentifier elementId="3" />
+					<PropertyList>
+						<Property name="urn" type="{http://cotrix.org}description"
+							value="urn:faodata:member:faostat:area:area:area:area:4d6f81c8-d01f-4093-bb72-3f0ae150932d" />
+					</PropertyList>
+				</TargetElement>
+			</MappingDetail>
+		</TargetElementMappings>
+	</Mapping>
+<Mapping>
+		<SourceElement>
+			<ElementIdentifier elementId="Fis-123457" />
+			<PropertyList>
+				<Property name="urn" type="{http://cotrix.org}description"
+					value="urn:faodata:member:faostat:area:area:area:area:4d6f81c8-d01f-4093-bb72-3f0ae150932d" />
+			</PropertyList>
+		</SourceElement>
+		<TargetElementMappings>
+			<MappingDetail score="1.0" scoreType="AUTHORITATIVE">
+				<TargetElement>
+					<ElementIdentifier elementId="Fis-123457" />
+					<PropertyList>
+						<Property name="urn" type="{http://cotrix.org}description"
+							value="urn:faodata:member:faostat:area:area:area:area:4d6f81c8-d01f-4093-bb72-3f0ae150932d" />
+					</PropertyList>
+				</TargetElement>
+			</MappingDetail>			
+		</TargetElementMappings>
+	</Mapping>
+
+</MappingData>

@@ -1,0 +1,1 @@
+java -cp ./org.gcube.informationsystem.registry.stubs.jar:$CLASSPATH org/gcube/informationsystem/registry/stubs/testsuite/RegistryRegistrationTest $1 $2 $3 $4

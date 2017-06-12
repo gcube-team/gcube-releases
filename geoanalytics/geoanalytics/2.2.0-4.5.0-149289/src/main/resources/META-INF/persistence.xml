@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/persistence/persistence_2_1.xsd">
+   <persistence-unit name="gr.cite.geoanalytics">
+      <description> Persistence unit for Geoanalytics </description>
+<!--  <provider>org.hibernate.ejb.HibernatePersistence</provider> --> <!--this is for hibernate versions before 5.2.1  -->
+	  <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>  <!-- this is for hibernate versions after 5.2.1 -->
+      <class>gr.cite.geoanalytics.dataaccess.entities.accounting.Accounting</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.auditing.Auditing</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.annotation.Annotation</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.document.Document</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.mimetype.MimeType</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.project.Project</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.principal.PrincipalProject</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.project.ProjectDocument</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.project.ProjectLayer</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.plugin.Plugin</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.plugin.PluginConfiguration</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.plugin.PluginLibrary</class>
+<!--       <class>gr.cite.geoanalytics.dataaccess.entities.shape.Shape</class> -->
+<!--       <class>gr.cite.geoanalytics.dataaccess.entities.shape.ShapeDocument</class> -->
+      <class>gr.cite.geoanalytics.dataaccess.entities.sysconfig.SysConfig</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.geocode.GeocodeSystem</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.geocode.Geocode</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.geocode.TaxonomyTermLink</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.workflow.Workflow</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.workflow.WorkflowTask</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.workflow.WorkflowTaskDocument</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.principal.Principal</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.principal.PrincipalMembership</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.principal.AccessControl</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.principal.AccessRight</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.principal.PrincipalData</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.tag.Tag</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.tenant.Tenant</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.tenant.TenantActivation</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.style.Style</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.layer.Layer</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.layer.LayerImport</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.layer.LayerTag</class>
+      <class>gr.cite.geoanalytics.dataaccess.entities.layer.LayerTenant</class>
+   </persistence-unit>
+</persistence>

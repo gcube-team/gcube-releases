@@ -1,0 +1,8 @@
+share/schema/mds/index/index_port_type.wsdl
+share/schema/mds/index/index_entry_service.wsdl
+share/schema/mds/index/index_entry_bindings.wsdl
+share/schema/mds/index/index_service.wsdl
+share/schema/mds/index/index_bindings.wsdl
+share/schema/mds/index/index_entry_port_type.wsdl
+etc/gpt/packages/globus_wsrf_mds_index_schema/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_mds_index_schema/pkg_data_noflavor_pgm.gpt

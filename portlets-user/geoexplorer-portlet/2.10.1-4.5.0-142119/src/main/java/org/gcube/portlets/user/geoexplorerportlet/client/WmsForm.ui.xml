@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+
+	<b:WellForm type="HORIZONTAL" ui:field="form_wms_add_layer"
+		styleName="margin10">
+		<b:Fieldset styleName="noBorder">
+			<b:ControlGroup ui:field="input_layer_title_group">
+				<b:ControlLabel for="input_layer_title">Layer Title</b:ControlLabel>
+				<b:Controls>
+					<b:TextBox placeholder="Type Layer display title (optional)..."
+						b:id="input_layer_title" ui:field="input_layer_title"></b:TextBox>
+				</b:Controls>
+			</b:ControlGroup>
+
+			<b:ControlGroup ui:field="input_layer_name_group">
+				<b:ControlLabel for="input_layer_name">Layer Name</b:ControlLabel>
+				<b:Controls>
+					<b:TextBox placeholder="Type Layer Name" b:id="input_layer_name"
+						ui:field="input_layer_name"></b:TextBox>
+				</b:Controls>
+			</b:ControlGroup>
+
+			<b:ControlGroup ui:field="input_WMS_URI_group">
+				<b:ControlLabel for="input_WMS_URI">WMS request</b:ControlLabel>
+				<b:Controls>
+					<b:TextBox placeholder="Type WMS request" b:id="input_WMS_URI"
+						ui:field="input_WMS_URI"></b:TextBox>
+				</b:Controls>
+			</b:ControlGroup>
+
+			<b:FluidRow ui:field="validator_field"></b:FluidRow>
+
+			<g:HorizontalPanel ui:field="hp_form_actions"
+				styleName="formActionsWmsDialog">
+				<b:FormActions>
+					<b:Button ui:field="submit_add_layer">Add Layer</b:Button>
+				</b:FormActions>
+				<b:Button ui:field="close_dialog">Close</b:Button>
+			</g:HorizontalPanel>
+		</b:Fieldset>
+	</b:WellForm>
+</ui:UiBinder> 

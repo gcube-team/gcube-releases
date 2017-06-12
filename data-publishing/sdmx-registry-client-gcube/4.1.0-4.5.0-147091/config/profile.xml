@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ID></ID>
+    <Type>Service</Type>
+    <Profile>
+    	<Description>Contains a GCube Registry descriptor implementation that recovers Registry endpoint through GCube IS service.</Description>
+        <Class>DataPublishing</Class>
+        <Name>sdmx-registry-client-gcube</Name>
+        <Version>1.0.0</Version>
+        <Packages>
+            <Software>
+                <Description>Contains a GCube Registry descriptor implementation that recovers Registry endpoint through GCube IS service.</Description>
+            	<Name>sdmx-registry-client-gcube</Name>
+				<Version>4.1.0-4.5.0-147091</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.data.publishing</groupId>
+					<artifactId>sdmx-registry-client-gcube</artifactId>
+					<version>4.1.0-4.5.0-147091</version>
+				</MavenCoordinates>
+				<Type>library</Type>
+				<Files>
+					<File>sdmx-registry-client-gcube-4.1.0-4.5.0-147091.jar</File>
+				</Files>
+			</Software>           
+        </Packages>
+    </Profile>
+</Resource>
+
+

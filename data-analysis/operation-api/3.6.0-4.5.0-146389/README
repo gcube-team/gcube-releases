@@ -1,0 +1,40 @@
+The gCube System - Operation API
+------------------------------------------------------------
+
+This work has been supported by the following European projects: iMarine (FP7-INFRASTRUCTURES-2011-2)
+
+Authors
+-------
+
+Fabio Sinibaldi (fabio.sinibaldi@isti.cnr.it), CNR Pisa, 
+Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo".
+
+  
+Version and Release Date
+------------------------
+
+v. 3.6.0-4.5.0-146389 (${release.date})
+
+Description
+-----------
+
+Tabular Data Operation API module
+  
+Download information
+--------------------
+Source code URL: https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-analysis/tabulardata/operation-api
+
+
+Documentation 
+-------------
+
+Tabular Data Operation API module
+
+
+Licensing
+---------
+
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.
+
+
+

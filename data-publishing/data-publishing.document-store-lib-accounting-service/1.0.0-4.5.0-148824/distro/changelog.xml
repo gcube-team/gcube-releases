@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.document-store-lib.persistence.PersistenceAccountingService.1-0-0" date="2016-12-15">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

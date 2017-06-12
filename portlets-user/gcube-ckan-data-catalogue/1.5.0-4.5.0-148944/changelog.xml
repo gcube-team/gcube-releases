@@ -1,0 +1,35 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.gcubeckan.gcube-ckan-datacatalog.1-5-0"
+		date="2017-05-10">
+		<Change>Metadata model v.3 supported</Change>
+		<Change>Minor fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.gcubeckan.gcube-ckan-datacatalog.1-4-0"
+		date="2017-04-10">
+		<Change>Added share link facility</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.gcubeckan.gcube-ckan-datacatalog.1-3-0"
+		date="2017-02-28">
+		<Change>Some optimizations improvements</Change>
+		<Change>Manage button style modified</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.gcubeckan.gcube-ckan-datacatalog.1-2-1"
+		date="2017-02-01">
+		<Change>Some optimizations improvements</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.gcubeckan.gcube-ckan-datacatalog.1-2-0"
+		date="2016-12-01">
+		<Change>Groups tab changed</Change>
+		<Change>[Task #5615] Logout is performed before browser tab is closed</Change>
+		<Change>Portlet's borders are removed by default</Change>
+		<Change>Removed asl session</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.gcubeckan.gcube-ckan-datacatalog.1-1-0"
+		date="2016-10-10">
+		<Change>Version update due to changes at underneath libraries</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.gcubeckan.gcube-ckan-datacatalog.1-0-0"
+		date="2016-07-12">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

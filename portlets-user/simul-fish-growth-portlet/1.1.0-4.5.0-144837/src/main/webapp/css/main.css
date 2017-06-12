@@ -1,0 +1,291 @@
+
+.analysis-table > thead tr  th 
+{
+	background:transparent!important;
+	color:#0271be;
+	cursor:pointer;
+	font-weight: 700!important;
+}
+
+.search-text-box
+{
+	border-radius:200px!important;
+	position: absolute;
+	width: 200px!important;
+	right: -380px;
+	margin-top: 5px!important;
+	position: absolute;
+	z-index: 1;
+	float: left;
+}
+
+
+.search-btn
+{
+	border-radius: 400px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	background: #0271be;
+	background-color: #0271be;
+	color: white;
+	border: 0px;
+	float: right;
+	position: absolute;
+	z-index: 1999;
+	margin-left: 190px!important;
+}
+
+#s-con{
+ position: relative;
+    overflow: hidden;
+    width: 250px;
+    height: 60px; 
+    float:right;
+    }
+    
+._show {
+ -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    
+}    
+._hide {
+ 	-webkit-animation: slideback 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slideback 0.5s forwards;
+}
+@-webkit-keyframes slideback {
+    100% { right: -250px; }
+}
+
+@keyframes slideback {
+    100% { right: -250px; }
+}
+
+@-webkit-keyframes slide {
+    100% { right: 27px; }
+}
+
+@keyframes slide {
+    100% { right: 27px; }
+}
+
+
+/***************************/
+.i2s-form > .form-group
+{
+	width:20%;
+	display:-web-inline-box;
+} 
+
+.i2s  .control-label {
+	width:110px;
+	/*color: #4cb5d2;*/
+
+}
+.i2s .field.field-first
+{
+	margin-bottom:0px!important;
+}
+.i2s-large .control-label {
+width:180px!important;
+}
+
+.i2s-medium .control-label{
+	width:135px!important;
+}
+
+.i2s-sm-inputs input {
+	max-width:80px;
+}
+.i2s  select {
+	max-width:100%;
+	
+}
+.datepicker-dropdown td
+{
+	cursor:pointer;
+}
+.datepicker-dropdown td:hover{
+	background: rgba(76, 181, 210 , 0.6);
+}
+
+td.active.day {
+	background: #4cb5d2;
+	color: white;
+	text-align: center;
+	border-radius: 6px;
+}
+.i2s-label
+{
+
+padding:5px;
+}
+.next ,.prev {
+cursor:pointer;
+}
+
+.i2s-datepicker-icon {
+	
+	margin-left: -40px;
+	
+	border-bottom-left-radius: 0px!important;
+	border-top-left-radius: 0px!important;
+	display: inline-block;
+	padding: 4px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	color: #333333;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	background-color: #f1f1f1;
+	border: 1px solid #cfcfcf;
+	border-top-right-radius:4px;
+	border-bottom-right-radius:4px;
+}
+
+.align-right
+{
+	text-align: right;
+	padding-right:5px;
+	max-width:80px;
+	}
+	
+	.aui .feedback-container {
+		right:-53px!important;
+	}
+	
+	
+
+	
+.i2s-btn {
+	background:#fff!important;
+}	
+.i2s-info-btn {
+	color:#0271be!important;
+}	
+.i2s-danger-btn {
+	color:#f1331e!important;
+}
+
+.i2s-success-btn {
+	color:green!important;
+}
+
+.i2s-cancel-btn {
+    background: rgba(241, 241, 241,0.8) !important;
+    
+    text-shadow:0px 0px 0px !important;
+
+}
+
+.i2s-calm-btn {
+	color:#0271be!important;
+}
+
+.i2s-panel-container .accordion-heading.toggler-header {
+	background:#0271BE!important;
+}
+
+.i2s-panel-container .title-text {
+	color:#fff!important;
+	font-weight:600;
+}
+
+
+/*Input file*/
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+	display:none;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.425rem 0.8rem;
+}
+
+.no-js .inputfile + label {
+    display: none;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label * {
+    /* pointer-events: none; */
+    /* in case of FastClick lib use */
+    color:#fff!important;
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    /* 4px */
+    margin-right: 0.25em;
+    /* 4px */
+}
+
+
+.inputfile + label {
+background:#0271BE;
+color:white;
+}
+
+.i2s-error-page-container {
+	 width: 60%;
+    max-width: 750px;
+	background:white;
+	height:auto;
+	left: 0;
+    margin: auto;
+    top: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 20px;
+     box-shadow: 5px 5px 5px #888888;
+}
+
+.i2s-error-page-container .i2s-m-error-msg {
+	text-align:center;
+	color:red;
+	
+}
+.i2s-error-page-container .i2s-m-error-msg  > i{
+	
+	color:red;
+	font-size:25px;
+	
+}
+.i2s-error-details-msg {
+	display:none;
+	opacity:0;
+	-webkit-transition: display 2s, opacity 2s; /* For Safari 3.1 to 6.0 */
+    transition: display 2s, opacity 4s;
+    max-height:400px;
+    overflow: auto;
+}
+.i2s-error-details-msg-show {
+	display:block;
+	opacity:1;
+}

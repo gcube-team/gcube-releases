@@ -1,0 +1,8 @@
+<ReleaseNotes>
+<Changeset component="gr.cite.login.login-hook.1-2-0" date="2017-02-06">
+		<Change>Implemented support for oAuth 2</Change>
+	</Changeset>
+	<Changeset component="gr.cite.login.login-hook.1-0-0" date="2016-03-30">
+		<Change>Login hook for liferay login portlet. Offers a more attractive social login UI</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,56 @@
+/** Add css rules here for your application. */
+@import url(messages/old-dialog.css);
+
+.session-expired {
+	line-height: 40px;
+	font-family: 'Architects Daughter', arial, sans-serif;
+	font-size: 15px;
+	text-align: center;
+	height: 350px;
+	background-color: white;
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
+
+/* Format for the abstract search result list */
+.row-relevant.x-grid3-row .x-grid3-cell-inner {
+	/*background-color:gray; !important;*/
+	font-weight: bold !important;
+}
+
+.row-relevant.x-grid3-row-selected .x-grid3-cell-inner {
+	/*background-color:#48BF47 !important;*/
+	font-weight: bold !important;
+}
+
+.row-relevant.x-grid3-row-over { /*background-color:#48BF47 !important;
+ background-image:none !important;*/
+	
+}
+
+/* SmartFolder buttons */
+.smartAttach {
+	color: #15428B;
+	cursor: pointer;
+	cursor: hand;
+	font-weight: normal;
+	font-size: 13px;
+	/*background: #FFF;
+	border-bottom: 1px inset #EDE;
+	*/
+}
+
+.mysmartAttach:HOVER{
+	color: #71A6D2;
+}

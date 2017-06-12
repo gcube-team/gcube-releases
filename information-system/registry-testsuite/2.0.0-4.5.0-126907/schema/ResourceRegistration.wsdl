@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="ResourceRegistration"
+	targetNamespace="http://gcube-system.org/namespaces/informationsystem/registry/resourceregistration"
+	xmlns="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:tns="http://gcube-system.org/namespaces/informationsystem/registry/resourceregistration"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<types>
+		<xsd:schema
+			targetNamespace="http://gcube-system.org/namespaces/informationsystem/registry/resourceregistration"
+			xmlns:tns="http://gcube-system.org/namespaces/informationsystem/registry/resourceregistration"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+			<!-- MESSAGES -->
+
+			<xsd:complexType name="UpdateMessage">
+				<xsd:sequence>
+					<xsd:element name="uniqueID" type="xsd:string" />
+					<xsd:element name="type" type="xsd:string" />
+					<xsd:element name="xmlProfile" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+
+			<xsd:complexType name="CreateMessage">
+				<xsd:sequence>
+					<xsd:element name="profile" type="xsd:string"
+						minOccurs="1" maxOccurs="1" />
+					<xsd:element name="type" type="xsd:string" />			
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="RemoveMessage">
+				<xsd:sequence>
+					<xsd:element name="uniqueID" type="xsd:string"
+						minOccurs="1" maxOccurs="1" />
+					<xsd:element name="type" type="xsd:string" minOccurs="1"
+						maxOccurs="1" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:element name="create" type="tns:CreateMessage" />
+
+			<xsd:element name="createResponse">
+				<xsd:complexType />
+			</xsd:element>			
+
+			<xsd:element name="update" type="tns:UpdateMessage" />
+
+			<xsd:element name="updateResponse">
+				<xsd:complexType />
+			</xsd:element>
+
+			<xsd:element name="remove" type="tns:RemoveMessage" />
+
+			<xsd:element name="removeResponse">
+				<xsd:complexType />
+			</xsd:element>
+
+			<!-- FAULTS -->
+			<xsd:complexType name="InvalidResourceFault" />
+			<xsd:element name="InvalidResourceFaultElement" type="tns:InvalidResourceFault" />
+
+			<xsd:complexType name="ResourceNotAcceptedFault" />
+			<xsd:element name="ResourceNotAcceptedFaultElement" type="tns:ResourceNotAcceptedFault" />
+
+			<xsd:complexType name="CreateFault" />
+			<xsd:element name="CreateFaultElement" type="tns:CreateFault" />
+
+ 			<xsd:complexType name="UpdateFault"/>
+			<xsd:element name="UpdateFaultElement" type="tns:UpdateFault" />
+
+			<xsd:complexType name="RemoveFault" />
+			<xsd:element name="RemoveFaultElement" type="tns:RemoveFault" />
+
+			<xsd:complexType name="ResourceDoesNotExistFault" />
+			<xsd:element name="ResourceDoesNotExistFaultElement" type="tns:ResourceDoesNotExistFault" />
+		</xsd:schema>
+	</types>
+
+
+	<message name="CreateRequest">
+		<part name="request" element="tns:create" />
+	</message>
+	<message name="CreateResponse">
+		<part name="response" element="tns:createResponse" />
+	</message>
+	<message name="UpdateRequest">
+		<part name="request" element="tns:update" />
+	</message>
+	<message name="UpdateResponse">
+		<part name="response" element="tns:updateResponse" />
+	</message>
+	<message name="RemoveRequest">
+		<part name="request" element="tns:remove" />
+	</message>
+	<message name="RemoveResponse">
+		<part name="response" element="tns:removeResponse" />
+	</message>
+	<message name="InvalidResourceFaultMessage">
+		<part name="fault" element="tns:InvalidResourceFaultElement" />
+	</message>
+	<message name="ResourceNotAcceptedFaultMessage">
+		<part name="fault" element="tns:ResourceNotAcceptedFaultElement" />
+	</message>
+	<message name="CreateFaultMessage">
+		<part name="fault" element="tns:CreateFaultElement" />
+	</message>
+	<message name="UpdateFaultMessage">
+		<part name="fault" element="tns:UpdateFaultElement" />
+	</message>
+	<message name="RemoveFaultMessage">
+		<part name="fault" element="tns:RemoveFaultElement" />
+	</message>
+	<message name="ResourceDoesNotExistFaultMessage">
+		<part name="fault" element="tns:ResourceDoesNotExistFaultElement" />
+	</message>
+
+
+	<!--========P O R T T Y P E===============	-->
+	<portType name="ResourceRegistrationPortType">
+
+		<operation name="create">
+			<input message="tns:CreateRequest" />
+			<output message="tns:CreateResponse" />
+			<fault name="fault" message="tns:InvalidResourceFaultMessage" />
+			<fault name="fault1" message="tns:ResourceNotAcceptedFaultMessage" />
+			<fault name="fault2" message="tns:CreateFaultMessage" />
+		</operation>
+		<operation name="update">
+			<input message="tns:UpdateRequest" />
+			<output message="tns:UpdateResponse" />
+			<fault name="fault" message="tns:InvalidResourceFaultMessage" />
+			<fault name="fault1" message="tns:ResourceNotAcceptedFaultMessage" />
+			<fault name="fault2" message="tns:UpdateFaultMessage" />  
+		</operation>
+		<operation name="remove">
+			<input message="tns:RemoveRequest" />
+			<output message="tns:RemoveResponse" />			
+			<fault name="fault" message="tns:ResourceDoesNotExistFaultMessage" />
+			<fault name="fault1" message="tns:RemoveFaultMessage" />
+		</operation>
+	</portType>
+
+</definitions>

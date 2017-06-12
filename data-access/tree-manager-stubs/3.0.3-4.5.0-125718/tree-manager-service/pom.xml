@@ -1,0 +1,168 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>tree-manager</artifactId>
+		<groupId>org.gcube.data.access</groupId>
+		<version>3.0.3-4.5.0-125718</version>
+		<relativePath>..</relativePath>
+	</parent>
+
+	<artifactId>tree-manager-service</artifactId>
+	<name>Tree Manager Service</name>
+	<description>A service with a tree-based interface of CRUD operations over an unbounded number of data sources</description>
+
+	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/trunk/data-access/tree-manager</connection>
+		<developerConnection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-access/tree-manager</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/trunk/data-access/tree-manager</url>
+	</scm>
+
+	<dependencies>
+
+		<!-- reactor dependencies -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>tree-manager-stubs</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>tree-manager-framework</artifactId>
+			<version>[3.0.0-SNAPSHOT,4.0.0-SNAPSHOT)</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>gcf</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>streams</artifactId>
+			<version>2.0.2-4.5.0-126131</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>trees</artifactId>
+			<version>1.4.2-4.5.0-126454</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.6.4</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- test dependencies -->
+		
+		<dependency>
+			<groupId>org.gcube.tools</groupId>
+			<artifactId>my-container</artifactId>
+			<version>[2..0-SNAPSHOT,3.0.0-SNAPSHOT)</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- my-container distribution for integration testing -->
+		<dependency>
+			<groupId>org.gcube.tools</groupId>
+			<artifactId>my-container</artifactId>
+			<version>[2.0.0-SNAPSHOT,3.0.0-SNAPSHOT)</version>
+			<type>tar.gz</type>
+			<classifier>distro</classifier>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>1.8.5</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.6.4</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+
+		<plugins>
+
+			<!-- builds Gar at install time -->
+			<plugin>
+				<groupId>org.gcube.tools</groupId>
+				<artifactId>maven-service-plugin</artifactId>
+				<configuration>
+					<fullGar>true</fullGar>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-gar</id>
+						<goals>
+							<goal>gar-gen</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- installs my-container distribution for integration testing -->
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>install-my-container</id>
+						<phase>generate-test-resources</phase><!-- runs before tests -->
+						<configuration>
+							<includeArtifactIds>my-container</includeArtifactIds>
+							<includeTypes>tar.gz</includeTypes>
+							<overWriteIfNewer>false</overWriteIfNewer>
+							<outputDirectory>${project.basedir}</outputDirectory>
+							<markersDirectory>${project.basedir}</markersDirectory>
+						</configuration>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- generates service archive -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+	</build>
+</project>

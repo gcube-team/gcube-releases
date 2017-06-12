@@ -1,0 +1,143 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>gr.cite</groupId>
+	<artifactId>clustermanager</artifactId>
+	<version>2.2.0-4.5.0-149015</version>
+	<packaging>jar</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<gr.cite.geoanalytics.dataaccess-geoserverbridge-gsmanager.version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-geoserverbridge-gsmanager.version>
+		<gr.cite.geoanalytics.dataaccess-geoserverbridge.version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-geoserverbridge.version>
+		<org.apache.curator.curator-framework.version>2.10.0</org.apache.curator.curator-framework.version>
+		<org.apache.curator.curator-recipes.version>2.10.0</org.apache.curator.curator-recipes.version>
+		<org.junit.version>3.8.1</org.junit.version>
+		<log4j.version>1.2.17</log4j.version>
+		<com.fasterxml.jackson>2.6.3</com.fasterxml.jackson>
+		<jersey-client.version>1.19.1</jersey-client.version>
+		<javax.ws.rs>2.0.1</javax.ws.rs>
+		<org.springframework.version>4.3.8.RELEASE</org.springframework.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- zookeeper curator -->
+
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-framework</artifactId>
+			<version>${org.apache.curator.curator-framework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-recipes</artifactId>
+			<version>${org.apache.curator.curator-recipes.version}</version>
+		</dependency>
+
+		<!-- Testing -->
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${org.junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Logging -->
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<!-- jersey client to handle some http calls -->
+		
+		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+    		<artifactId>jersey-client</artifactId>
+		    <version>${jersey-client.version}</version>
+		</dependency>
+		
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.glassfish.jersey.core</groupId> -->
+<!-- 			<artifactId>jersey-client</artifactId> -->
+<!-- 			<version>${jersey-client.version}</version> -->
+<!-- 		</dependency> -->
+
+		<dependency>
+		    <groupId>javax.ws.rs</groupId>
+		    <artifactId>javax.ws.rs-api</artifactId>
+		    <version>${javax.ws.rs}</version>
+		    <scope>provided</scope>
+		</dependency>
+
+		<!-- Spring injection -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		
+		<!-- jackson -->
+		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${com.fasterxml.jackson}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${com.fasterxml.jackson}</version>
+		</dependency>
+
+		<!-- ic-client and common-scope (for discovery of gos services) -->
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>ic-client</artifactId>
+			<version>1.0.3-4.5.0-142544</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-scope</artifactId>
+			<version>1.2.0-4.5.0-125717</version>
+		</dependency>
+
+		
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

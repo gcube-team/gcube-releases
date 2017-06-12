@@ -1,0 +1,33 @@
+<Scheduler xmlns="http://mds.globus.org/batchproviders/2004/09">
+ <Queue name="another queue">
+ <totalnodes>151</totalnodes>
+ <freenodes>139</freenodes>
+ <maxtime>unlimited</maxtime>
+ <maxCPUtime>unlimited</maxCPUtime>
+ <maxCount>143</maxCount>
+ <maxReqNodes>unlimited</maxReqNodes>
+ <maxRunningJobs>0</maxRunningJobs>
+ <maxJobsInQueue>0</maxJobsInQueue>
+ <maxTotalMemory>unlimited</maxTotalMemory>
+ <maxSingleMemory>unlimited</maxSingleMemory>
+ <whenActive>0</whenActive>
+ <status>enabled</status>
+ <dispatchType>batch</dispatchType>
+</Queue> 
+<Queue name="dque">
+ <totalnodes>151</totalnodes>
+ <freenodes>139</freenodes>
+ <maxtime>unlimited</maxtime>
+ <maxCPUtime>unlimited</maxCPUtime>
+ <maxCount>151</maxCount>
+ <maxReqNodes>unlimited</maxReqNodes>
+ <maxRunningJobs>0</maxRunningJobs>
+ <maxJobsInQueue>0</maxJobsInQueue>
+ <maxTotalMemory>unlimited</maxTotalMemory>
+ <maxSingleMemory>unlimited</maxSingleMemory>
+ <whenActive>0</whenActive>
+ <status>enabled</status>
+ <dispatchType>batch</dispatchType>
+</Queue> 
+</Scheduler> 
+

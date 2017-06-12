@@ -1,0 +1,175 @@
+#geoadmin-import-monitor table.dataTable tbody tr td{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable tbody tr {
+	background-color: #ffffff;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable tbody .geoadmin-import-monitor-datatable-cell{
+	border-right: 6px solid white;
+	border-bottom: 6px solid white;
+	border-top: none;
+	text-align:center;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable tbody tr:hover .geoadmin-import-monitor-datatable-cell{
+	background-color: #4cb5d2;
+	color: white;
+	cursor: pointer;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable tbody tr.selected td{
+	background-color: #019ad3;
+	color: white;
+	cursor: pointer;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable td {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #eeeeee;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable tbody th, 
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable tbody td {
+    padding: 2px 4px;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable.hover tbody tr:hover, 
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable.display tbody tr:hover {
+	background-color: white;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable tbody tr:hover td.taxonomyTerm {
+	background-color: white;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable th {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+	position: relative;
+	border-bottom: 0px;
+	color: #0271be;
+    font-size: small;
+    font-weight: 500;
+    text-align: center;
+    margin: 0px;
+    padding: 6px;
+}
+
+th, button{
+	outline: none;
+}
+
+#geoadmin-import-monitor table.dataTable.no-footer {
+	border-bottom: none;
+}
+
+#geoadmin-import-monitor .toolbar{
+	display:inline-block;
+}
+
+#geoadmin-import-monitor .dataTables_wrapper .dataTables_paginate{
+	margin:10px;
+}
+
+#geoadmin-import-monitor .dataTables_wrapper .dataTables_paginate .paginate_button{
+	border: 1px solid lightgray; 
+	background:none;
+	color:#0271be !important;
+	margin-left: 0px;
+	outline:0;
+}
+
+#geoadmin-import-monitor .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+	border: 1px solid lightgray; 
+	background: #4cb5d2; 
+	color:white !important;
+	outline:0;
+}
+
+#geoadmin-import-monitor .dataTables_wrapper .dataTables_paginate .paginate_button.previous:focus,
+#geoadmin-import-monitor .dataTables_wrapper .dataTables_paginate .paginate_button.next:focus,
+#geoadmin-import-monitor .dataTables_wrapper .dataTables_paginate .paginate_button.current{
+	border: 1px solid lightgray; 
+	background: #0271be;
+	color:white !important;
+	outline:0;
+}
+
+#geoadmin-import-monitor table.dataTable thead .sorting,
+#geoadmin-import-monitor table.dataTable thead .sorting_asc,
+#geoadmin-import-monitor table.dataTable thead .sorting_desc {
+    background-image: none;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable thead tr th.sorting:after{
+    content: url(../../images/sort_both.png);
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable thead tr th.sorting_asc:after{
+    content: url(../../images/sort_asc.png);
+    position: relative;
+    top: 5px;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable thead tr th.sorting_desc:after{
+    content: url(../../images/sort_desc.png);
+    position: relative;
+    top: 5px;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable th.checkbox,
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable td.checkbox{
+	display:inline-block;
+	width:20px;
+	height:20px;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable th.checkbox > input[type="checkbox"] {
+	padding: 4px 0px;
+    margin: 0px;
+    float: none;	
+    transform: scale(1.25);    
+    appearance:none; 
+    -webkit-appearance:none; 
+    outline: none;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable th.checkbox>input[type="checkbox"]:before {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 22px;
+	content: "\f096";
+	background: #fff;
+	font-weight: normal;
+	position: relative;
+}
+
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable th.checkbox > input[type="checkbox"]:checked:after {
+    content: "\2714";
+    font-weight: bold;
+    left: 3px;
+    position: absolute;
+    color: #0271be;
+    font-size: 15px;
+}
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable tbody tr:hover .geoadmin-import-monitor-datatable-cell{
+	background-color: #4cb5d2;
+	color: white;
+	cursor: pointer;
+}
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable .geoadmin-import-monitor-datatable-cell.white,
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable tbody tr:hover .geoadmin-import-monitor-datatable-cell.white,
+#geoadmin-import-monitor table#geoadmin-import-monitor-datatable tbody tr:focus  .geoadmin-import-monitor-datatable-cell.white{
+	background:white;
+}

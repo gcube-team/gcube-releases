@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="ResultSet" targetNamespace="http://gcube.org/common/searchservice/ResultSetService" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://gcube.org/common/searchservice/ResultSetService" xmlns:wsrlw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl" xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd" xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider">
+  <import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+  <import namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" location="../wsrf/notification/WS-BaseN.wsdl"/>
+  <import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" location="../gcube/common/core/providers/GCUBEProvider.wsdl"/>
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl" location="../wsrf/lifetime/WS-ResourceLifetime.wsdl"/>
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" location="../wsrf/properties/WS-ResourceProperties.wsdl"/>
+  <types>
+    <xsd:schema targetNamespace="http://gcube.org/common/searchservice/ResultSetService" xmlns:rpns0="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.xsd" xmlns:rpns1="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.xsd" xmlns:tns="http://gcube.org/common/searchservice/ResultSetService" xmlns:wsbf="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.xsd" schemaLocation="../wsrf/lifetime/WS-ResourceLifetime.xsd"/>
+
+<xsd:import namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.xsd" schemaLocation="../wsrf/notification/WS-BaseN.xsd"/>
+
+<xsd:import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" schemaLocation="../gcube/common/core/providers/GCUBEProvider.xsd"/>
+
+	<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" schemaLocation="../ws/addressing/WS-Addressing.xsd"/>
+	<xsd:import namespace="http://docs.oasis-open.org/wsn/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.xsd" schemaLocation="../wsrf/faults/WS-BaseFaults.xsd"/>
+	<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+
+	<xsd:element name="StatefulResourceProperties">
+    	<xsd:complexType><xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:ServiceID"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:ServiceName"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:VO"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="rpns0:FixedTopicSet"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:RI"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:ServiceClass"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="1" ref="rpns0:Topic"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:GHN"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="rpns1:TerminationTime"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="1" ref="provider:Scope"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="1" ref="rpns0:TopicExpressionDialects"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="rpns1:CurrentTime"/>
+          </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+	<xsd:element name="endAuthoringRequest" type="xsd:string"/>
+	<xsd:element name="endAuthoringResponse">
+		<xsd:complexType/>
+	</xsd:element>
+
+	<xsd:element name="startNewPartRequest" type="xsd:string"/>
+	<xsd:element name="startNewPartResponse">
+		<xsd:complexType/>
+	</xsd:element>
+
+	<xsd:element name="createResourceRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="unbounded" name="properties" type="xsd:string"/>
+				<xsd:element name="dataFlow" type="xsd:boolean"/>
+				<xsd:element name="resourceType" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="createResourceResponse">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="wsa:EndpointReference"/>
+			<xsd:element name="sessionToken" type="xsd:string"/>
+			<xsd:element name="port" type="xsd:int"/>
+			<xsd:element name="SSLsupport" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="createResourceExtendedRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="unbounded" name="properties" type="xsd:string"/>
+				<xsd:element name="dataFlow" type="xsd:boolean"/>
+				<xsd:element name="resourceType" type="xsd:string"/>
+				<xsd:element name="accessReads" type="xsd:int"/>
+				<xsd:element name="forward" type="xsd:boolean"/>
+				<xsd:element name="expire_date" type="xsd:long"/>
+				<xsd:element maxOccurs="1" minOccurs="0" name="pKey" type="xsd:base64Binary"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="createResourceExtendedResponse">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="wsa:EndpointReference"/>
+			<xsd:element name="sessionToken" type="xsd:string"/>
+			<xsd:element name="port" type="xsd:int"/>
+			<xsd:element name="SSLsupport" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name="createSerializedResourceRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="properties" type="xsd:string"/>
+				<xsd:element name="dataFlow" type="xsd:boolean"/>
+				<xsd:element name="resourceType" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="createSerializedResourceResponse">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="wsa:EndpointReference"/>
+			<xsd:element name="sessionToken" type="xsd:string"/>
+			<xsd:element name="port" type="xsd:int"/>
+			<xsd:element name="SSLsupport" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="createSecureSerializedResourceRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="properties" type="xsd:string"/>
+				<xsd:element name="dataFlow" type="xsd:boolean"/>
+				<xsd:element name="resourceType" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="createSecureSerializedResourceResponse">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="wsa:EndpointReference"/>
+			<xsd:element name="sessionToken" type="xsd:string"/>
+			<xsd:element name="port" type="xsd:int"/>
+			<xsd:element name="SSLsupport" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:element name="addResultsRequest">
+	<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="unbounded" name="results" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="addResultsResponse" type="xsd:boolean"/>
+
+	<xsd:element name="addTextRequest">
+	<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="unbounded" name="results" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="addTextResponse" type="xsd:boolean"/>
+
+	<xsd:element name="wrapResourceRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="headFileName" type="xsd:string"/>
+				<xsd:element name="resourceType" type="xsd:string"/>
+				<xsd:element maxOccurs="1" minOccurs="0" name="privateKey" type="xsd:base64Binary"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="wrapResourceResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="wsa:EndpointReference"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+				<xsd:element name="port" type="xsd:int"/>
+    			<xsd:element name="SSLsupport" type="xsd:boolean"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="wrapLocalFileRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="filename" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="wrapLocalFileResponse">
+		<xsd:complexType/>
+	</xsd:element>
+
+	<xsd:element name="getPropertiesRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="type" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="getPropertiesResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="unbounded" name="properties" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="getHeadFileNameRequest" type="xsd:string"/>
+	<xsd:element name="getHeadFileNameResponse" type="xsd:string"/>
+
+	<xsd:element name="accessResourceRequest">
+			<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+				<xsd:element name="resourceType" type="xsd:string"/>
+				<xsd:element maxOccurs="1" minOccurs="0" name="privateKey" type="xsd:base64Binary"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="accessResourceResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="wsa:EndpointReference"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+				<xsd:element name="port" type="xsd:int"/>
+				<xsd:element name="SSLsupport" type="xsd:boolean"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="getNextPartRequest">
+	<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="maxWaitTime" type="xsd:int"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="getNextPartResponse" type="xsd:boolean"/>
+
+	<xsd:element name="getPreviousPartRequest" type="xsd:string"/>
+	<xsd:element name="getPreviousPartResponse" type="xsd:boolean"/>
+
+	<xsd:element name="getCurrentContentPartNameRequest" type="xsd:string"/>
+	<xsd:element name="getCurrentContentPartNameResponse" type="xsd:string"/>
+
+	<xsd:element name="getCurrentContentPartPayloadRequest" type="xsd:string"/>
+	<xsd:element name="getCurrentContentPartPayloadResponse" type="xsd:string"/>
+
+	<xsd:element name="nextAvailableRequest" type="xsd:string"/>
+	<xsd:element name="nextAvailableResponse" type="xsd:boolean"/>
+
+	<xsd:element name="getFirstPartRequest" type="xsd:string"/>
+	<xsd:element name="getFirstPartResponse" type="xsd:boolean"/>
+
+	<xsd:element name="isFirstRequest" type="xsd:string"/>
+	<xsd:element name="isFirstResponse" type="xsd:boolean"/>
+
+	<xsd:element name="clearRequest" type="xsd:string"/>
+	<xsd:element name="clearResponse">
+		<xsd:complexType/>
+	</xsd:element>
+
+	<xsd:element name="isLastRequest" type="xsd:string"/>
+	<xsd:element name="isLastResponse" type="xsd:boolean"/>
+
+	<xsd:element name="getNumberOfResultsRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="type" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="getNumberOfResultsResponse" type="xsd:int"/>
+
+	<xsd:element name="getResultsRequest">
+			<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="from" type="xsd:int"/>
+				<xsd:element name="to" type="xsd:int"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="getResultsResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="unbounded" name="results" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="getAllResultsRequest" type="xsd:string"/>
+	<xsd:element name="getAllResultsResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="unbounded" name="results" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="getResultRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="index" type="xsd:int"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="getResultResponse" type="xsd:string"/>
+
+	<xsd:element name="getHostIPRequest" type="xsd:string"/>
+	<xsd:element name="getHostIPResponse" type="xsd:string"/>
+
+	<xsd:element name="getHostNameRequest" type="xsd:string"/>
+	<xsd:element name="getHostNameResponse" type="xsd:string"/>
+
+	<xsd:element name="splitEncodedRequest" type="xsd:string"/>
+	<xsd:element name="splitEncodedResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="unbounded" name="pages" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="splitClearRequest" type="xsd:string"/>
+	<xsd:element name="splitClearResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="unbounded" name="pages" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="getFileContentRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="filename" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="getFileContentResponse" type="xsd:string"/>
+
+	<xsd:element name="retrieveCustomPropertiesRequest" type="xsd:string"/>
+	<xsd:element name="retrieveCustomPropertiesResponse" type="xsd:string"/>
+
+	<xsd:element name="cloneRSRequest" type="xsd:string"/>
+	<xsd:element name="cloneRSResponse" type="xsd:string"/>
+
+	<xsd:element name="keepTopPropRequest">
+			<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="count" type="xsd:int"/>
+				<xsd:element name="type" type="xsd:short"/>
+				<xsd:element maxOccurs="unbounded" name="properties" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="keepTopPropResponse" type="xsd:string"/>
+
+	<xsd:element name="keepTopRequest">
+			<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="count" type="xsd:int"/>
+				<xsd:element name="type" type="xsd:short"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="keepTopResponse" type="xsd:string"/>
+
+	<xsd:element name="executeQueryOnHeadRequest">
+			<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="xPath" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="executeQueryOnHeadResponse" type="xsd:string"/>
+
+	<xsd:element name="executeQueryOnDocumentRequest">
+			<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="xPath" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="executeQueryOnDocumentResponse" type="xsd:string"/>
+
+	<xsd:element name="executeQueryOnResultsRequest">
+			<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="xPath" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="executeQueryOnResultsResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element maxOccurs="unbounded" name="results" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>	
+
+	<xsd:element name="filterRSRequest">
+			<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="xpath" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="filterRSResponse" type="xsd:string"/>
+
+	<xsd:element name="filterRSPropRequest">
+			<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="xpath" type="xsd:string"/>
+				<xsd:element maxOccurs="unbounded" name="properties" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="filterRSPropResponse" type="xsd:string"/>
+
+	<xsd:element name="transformByXSLTRequest">
+			<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="transformation" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="transformByXSLTResponse" type="xsd:string"/>
+
+	<xsd:element name="transformRSRequest">
+			<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="transformation" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="transformRSResponse" type="xsd:string"/>
+
+	<xsd:element name="transformRSPropRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="xslt" type="xsd:string"/>
+				<xsd:element maxOccurs="unbounded" name="properties" type="xsd:string"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="transformRSPropResponse" type="xsd:string"/>
+
+	<xsd:element name="isFlowControledRequest" type="xsd:string"/>
+	<xsd:element name="isFlowControledResponse" type="xsd:boolean"/>
+
+	<xsd:element name="canAttachRequest" type="xsd:string"/>
+	<xsd:element name="canAttachResponse" type="xsd:boolean"/>
+
+	<xsd:element name="canStreamRequest" type="xsd:string"/>
+ 	<xsd:element name="canStreamResponse">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="port" type="xsd:int"/>
+			<xsd:element name="SSLsupport" type="xsd:boolean"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:element name="destroySessionRequest" type="xsd:string"/>
+	<xsd:element name="destroySessionResponse">
+		<xsd:complexType/>
+	</xsd:element>
+	
+	<xsd:element name="ReclaimNotificationMessage" type="tns:ReclaimNotificationMessageType"/>
+	<xsd:complexType name="ReclaimNotificationMessageType">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" ref="tns:ReclaimedEpr" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ReclaimNotificationMessageWrapperType">
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="1" ref="tns:ReclaimNotificationMessage"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="removePreviousPartRequest" type="xsd:string"/>
+	<xsd:element name="removePreviousPartResponse" type="xsd:boolean"/>
+
+	<xsd:element name="disableAccessLeasingRequest" type="xsd:string"/>
+	<xsd:element name="disableAccessLeasingResponse" type="xsd:boolean"/>
+	
+	<xsd:element name="extendAccessLeasingRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="accessExtend" type="xsd:int"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="extendAccessLeasingResponse">
+		<xsd:complexType/>
+	</xsd:element>
+
+	<xsd:element name="getAccessLeasingRequest" type="xsd:string"/>
+	<xsd:element name="getAccessLeasingResponse" type="xsd:int"/>
+
+	<xsd:element name="isForwardRequest" type="xsd:string"/>
+	<xsd:element name="isForwardResponse" type="xsd:boolean"/>
+
+	<xsd:element name="setForwardRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="forward" type="xsd:boolean"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="setForwardResponse" type="xsd:boolean"/>
+
+	<xsd:element name="disableTimeLeasingRequest" type="xsd:string"/>
+	<xsd:element name="disableTimeLeasingResponse" type="xsd:boolean"/>
+	
+	<xsd:element name="extendTimeLeasingRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="timeExtend" type="xsd:long"/>
+				<xsd:element name="sessionToken" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="extendTimeLeasingResponse">
+		<xsd:complexType/>
+	</xsd:element>
+
+	<xsd:element name="getTimeLeasingRequest" type="xsd:string"/>
+	<xsd:element name="getTimeLeasingResponse" type="xsd:long"/>
+
+
+
+</xsd:schema>
+  </types>
+  <message name="WrapLocalFileRequest">
+    <part name="request" element="tns:wrapLocalFileRequest"/>
+  </message>
+  <message name="GetHostNameResponse">
+    <part name="response" element="tns:getHostNameResponse"/>
+  </message>
+  <message name="CreateResourceExtendedRequest">
+    <part name="request" element="tns:createResourceExtendedRequest"/>
+  </message>
+  <message name="KeepTopPropResponse">
+    <part name="response" element="tns:keepTopPropResponse"/>
+  </message>
+  <message name="CreateSerializedResourceResponse">
+    <part name="response" element="tns:createSerializedResourceResponse"/>
+  </message>
+  <message name="GetNumberOfResultsResponse">
+    <part name="response" element="tns:getNumberOfResultsResponse"/>
+  </message>
+  <message name="DisableAccessLeasingResponse">
+    <part name="response" element="tns:disableAccessLeasingResponse"/>
+  </message>
+  <message name="GetCurrentContentPartPayloadRequest">
+    <part name="request" element="tns:getCurrentContentPartPayloadRequest"/>
+  </message>
+  <message name="GetResultResponse">
+    <part name="response" element="tns:getResultResponse"/>
+  </message>
+  <message name="SetForwardResponse">
+    <part name="response" element="tns:setForwardResponse"/>
+  </message>
+  <message name="GetFirstPartRequest">
+    <part name="request" element="tns:getFirstPartRequest"/>
+  </message>
+  <message name="GetAllResultsResponse">
+    <part name="response" element="tns:getAllResultsResponse"/>
+  </message>
+  <message name="GetHostIPResponse">
+    <part name="response" element="tns:getHostIPResponse"/>
+  </message>
+  <message name="EndAuthoringRequest">
+    <part name="request" element="tns:endAuthoringRequest"/>
+  </message>
+  <message name="GetResultRequest">
+    <part name="request" element="tns:getResultRequest"/>
+  </message>
+  <message name="GetNextPartResponse">
+    <part name="response" element="tns:getNextPartResponse"/>
+  </message>
+  <message name="StartNewPartResponse">
+    <part name="response" element="tns:startNewPartResponse"/>
+  </message>
+  <message name="RemovePreviousPartResponse">
+    <part name="response" element="tns:removePreviousPartResponse"/>
+  </message>
+  <message name="GetNextPartRequest">
+    <part name="request" element="tns:getNextPartRequest"/>
+  </message>
+  <message name="ExecuteQueryOnResultsRequest">
+    <part name="request" element="tns:executeQueryOnResultsRequest"/>
+  </message>
+  <message name="RetrieveCustomPropertiesRequest">
+    <part name="request" element="tns:retrieveCustomPropertiesRequest"/>
+  </message>
+  <message name="ClearRequest">
+    <part name="request" element="tns:clearRequest"/>
+  </message>
+  <message name="GetResultsRequest">
+    <part name="request" element="tns:getResultsRequest"/>
+  </message>
+  <message name="NextAvailableRequest">
+    <part name="request" element="tns:nextAvailableRequest"/>
+  </message>
+  <message name="RetrieveCustomPropertiesResponse">
+    <part name="response" element="tns:retrieveCustomPropertiesResponse"/>
+  </message>
+  <message name="IsLastResponse">
+    <part name="response" element="tns:isLastResponse"/>
+  </message>
+  <message name="WrapResourceRequest">
+    <part name="request" element="tns:wrapResourceRequest"/>
+  </message>
+  <message name="CanStreamResponse">
+    <part name="response" element="tns:canStreamResponse"/>
+  </message>
+  <message name="GetPropertiesRequest">
+    <part name="request" element="tns:getPropertiesRequest"/>
+  </message>
+  <message name="RemovePreviousPartRequest">
+    <part name="request" element="tns:removePreviousPartRequest"/>
+  </message>
+  <message name="ExecuteQueryOnDocumentResponse">
+    <part name="response" element="tns:executeQueryOnDocumentResponse"/>
+  </message>
+  <message name="GetPreviousPartRequest">
+    <part name="request" element="tns:getPreviousPartRequest"/>
+  </message>
+  <message name="CreateResourceResponse">
+    <part name="response" element="tns:createResourceResponse"/>
+  </message>
+  <message name="SplitEncodedResponse">
+    <part name="response" element="tns:splitEncodedResponse"/>
+  </message>
+  <message name="CreateSerializedResourceRequest">
+    <part name="request" element="tns:createSerializedResourceRequest"/>
+  </message>
+  <message name="CloneRSResponse">
+    <part name="response" element="tns:cloneRSResponse"/>
+  </message>
+  <message name="IsLastRequest">
+    <part name="request" element="tns:isLastRequest"/>
+  </message>
+  <message name="FilterRSRequest">
+    <part name="request" element="tns:filterRSRequest"/>
+  </message>
+  <message name="GetHostNameRequest">
+    <part name="request" element="tns:getHostNameRequest"/>
+  </message>
+  <message name="ExtendAccessLeasingRequest">
+    <part name="request" element="tns:extendAccessLeasingRequest"/>
+  </message>
+  <message name="GetHostIPRequest">
+    <part name="request" element="tns:getHostIPRequest"/>
+  </message>
+  <message name="DisableTimeLeasingResponse">
+    <part name="response" element="tns:disableTimeLeasingResponse"/>
+  </message>
+  <message name="TransformRSRequest">
+    <part name="request" element="tns:transformRSRequest"/>
+  </message>
+  <message name="TransformRSResponse">
+    <part name="response" element="tns:transformRSResponse"/>
+  </message>
+  <message name="EndAuthoringResponse">
+    <part name="response" element="tns:endAuthoringResponse"/>
+  </message>
+  <message name="TransformRSPropResponse">
+    <part name="response" element="tns:transformRSPropResponse"/>
+  </message>
+  <message name="IsForwardRequest">
+    <part name="request" element="tns:isForwardRequest"/>
+  </message>
+  <message name="SplitClearRequest">
+    <part name="request" element="tns:splitClearRequest"/>
+  </message>
+  <message name="CloneRSRequest">
+    <part name="request" element="tns:cloneRSRequest"/>
+  </message>
+  <message name="ExtendAccessLeasingResponse">
+    <part name="response" element="tns:extendAccessLeasingResponse"/>
+  </message>
+  <message name="IsFlowContoledRequest">
+    <part name="request" element="tns:isFlowControledRequest"/>
+  </message>
+  <message name="TransformByXSLTResponse">
+    <part name="response" element="tns:transformByXSLTResponse"/>
+  </message>
+  <message name="GetAccessLeasingRequest">
+    <part name="request" element="tns:getAccessLeasingRequest"/>
+  </message>
+  <message name="ClearResponse">
+    <part name="response" element="tns:clearResponse"/>
+  </message>
+  <message name="GetPropertiesResponse">
+    <part name="response" element="tns:getPropertiesResponse"/>
+  </message>
+  <message name="AddResultsRequest">
+    <part name="request" element="tns:addResultsRequest"/>
+  </message>
+  <message name="SetForwardRequest">
+    <part name="request" element="tns:setForwardRequest"/>
+  </message>
+  <message name="AddResultsResponse">
+    <part name="response" element="tns:addResultsResponse"/>
+  </message>
+  <message name="FilterRSPropResponse">
+    <part name="response" element="tns:filterRSPropResponse"/>
+  </message>
+  <message name="GetResultsResponse">
+    <part name="response" element="tns:getResultsResponse"/>
+  </message>
+  <message name="StartNewPartRequest">
+    <part name="request" element="tns:startNewPartRequest"/>
+  </message>
+  <message name="IsFlowContoledResponse">
+    <part name="response" element="tns:isFlowControledResponse"/>
+  </message>
+  <message name="GetNumberOfResultsRequest">
+    <part name="request" element="tns:getNumberOfResultsRequest"/>
+  </message>
+  <message name="KeepTopPropRequest">
+    <part name="request" element="tns:keepTopPropRequest"/>
+  </message>
+  <message name="ExecuteQueryOnDocumentRequest">
+    <part name="request" element="tns:executeQueryOnDocumentRequest"/>
+  </message>
+  <message name="SplitEncodedRequest">
+    <part name="request" element="tns:splitEncodedRequest"/>
+  </message>
+  <message name="KeepTopResponse">
+    <part name="response" element="tns:keepTopResponse"/>
+  </message>
+  <message name="GetFirstPartResponse">
+    <part name="response" element="tns:getFirstPartResponse"/>
+  </message>
+  <message name="CanAttachRequest">
+    <part name="request" element="tns:canAttachRequest"/>
+  </message>
+  <message name="ExecuteQueryOnResultsResponse">
+    <part name="response" element="tns:executeQueryOnResultsResponse"/>
+  </message>
+  <message name="GetTimeLeasingRequest">
+    <part name="request" element="tns:getTimeLeasingRequest"/>
+  </message>
+  <message name="DestroySessionResponse">
+    <part name="response" element="tns:destroySessionResponse"/>
+  </message>
+  <message name="FilterRSResponse">
+    <part name="response" element="tns:filterRSResponse"/>
+  </message>
+  <message name="AccessResourceResponse">
+    <part name="response" element="tns:accessResourceResponse"/>
+  </message>
+  <message name="IsFirstResponse">
+    <part name="response" element="tns:isFirstResponse"/>
+  </message>
+  <message name="AddTextResponse">
+    <part name="response" element="tns:addTextResponse"/>
+  </message>
+  <message name="CanStreamRequest">
+    <part name="request" element="tns:canStreamRequest"/>
+  </message>
+  <message name="IsFirstRequest">
+    <part name="request" element="tns:isFirstRequest"/>
+  </message>
+  <message name="GetHeadFileNameResponse">
+    <part name="response" element="tns:getHeadFileNameResponse"/>
+  </message>
+  <message name="WrapLocalFileResponse">
+    <part name="response" element="tns:wrapLocalFileResponse"/>
+  </message>
+  <message name="TransformByXSLTRequest">
+    <part name="request" element="tns:transformByXSLTRequest"/>
+  </message>
+  <message name="SplitClearResponse">
+    <part name="response" element="tns:splitClearResponse"/>
+  </message>
+  <message name="ExtendTimeLeasingResponse">
+    <part name="response" element="tns:extendTimeLeasingResponse"/>
+  </message>
+  <message name="WrapResourceResponse">
+    <part name="response" element="tns:wrapResourceResponse"/>
+  </message>
+  <message name="GetTimeLeasingResponse">
+    <part name="response" element="tns:getTimeLeasingResponse"/>
+  </message>
+  <message name="IsForwardResponse">
+    <part name="response" element="tns:isForwardResponse"/>
+  </message>
+  <message name="FilterRSPropRequest">
+    <part name="request" element="tns:filterRSPropRequest"/>
+  </message>
+  <message name="GetHeadFileNameRequest">
+    <part name="request" element="tns:getHeadFileNameRequest"/>
+  </message>
+  <message name="ExecuteQueryOnHeadRequest">
+    <part name="request" element="tns:executeQueryOnHeadRequest"/>
+  </message>
+  <message name="DisableAccessLeasingRequest">
+    <part name="request" element="tns:disableAccessLeasingRequest"/>
+  </message>
+  <message name="GetFileContentRequest">
+    <part name="request" element="tns:getFileContentRequest"/>
+  </message>
+  <message name="GetPreviousPartResponse">
+    <part name="response" element="tns:getPreviousPartResponse"/>
+  </message>
+  <message name="GetCurrentContentPartNameRequest">
+    <part name="request" element="tns:getCurrentContentPartNameRequest"/>
+  </message>
+  <message name="GetCurrentContentPartPayloadResponse">
+    <part name="response" element="tns:getCurrentContentPartPayloadResponse"/>
+  </message>
+  <message name="ExecuteQueryOnHeadResponse">
+    <part name="response" element="tns:executeQueryOnHeadResponse"/>
+  </message>
+  <message name="ExtendTimeLeasingRequest">
+    <part name="request" element="tns:extendTimeLeasingRequest"/>
+  </message>
+  <message name="DisableTimeLeasingRequest">
+    <part name="request" element="tns:disableTimeLeasingRequest"/>
+  </message>
+  <message name="GetCurrentContentPartNameResponse">
+    <part name="response" element="tns:getCurrentContentPartNameResponse"/>
+  </message>
+  <message name="CanAttachResponse">
+    <part name="response" element="tns:canAttachResponse"/>
+  </message>
+  <message name="DestroySessionRequest">
+    <part name="request" element="tns:destroySessionRequest"/>
+  </message>
+  <message name="GetFileContentResponse">
+    <part name="response" element="tns:getFileContentResponse"/>
+  </message>
+  <message name="CreateResourceRequest">
+    <part name="request" element="tns:createResourceRequest"/>
+  </message>
+  <message name="GetAllResultsRequest">
+    <part name="request" element="tns:getAllResultsRequest"/>
+  </message>
+  <message name="NextAvailableResponse">
+    <part name="response" element="tns:nextAvailableResponse"/>
+  </message>
+  <message name="CreateResourceExtendedResponse">
+    <part name="response" element="tns:createResourceExtendedResponse"/>
+  </message>
+  <message name="TransformRSPropRequest">
+    <part name="request" element="tns:transformRSPropRequest"/>
+  </message>
+  <message name="AccessResourceRequest">
+    <part name="request" element="tns:accessResourceRequest"/>
+  </message>
+  <message name="KeepTopRequest">
+    <part name="request" element="tns:keepTopRequest"/>
+  </message>
+  <message name="GetAccessLeasingResponse">
+    <part name="response" element="tns:getAccessLeasingResponse"/>
+  </message>
+  <message name="AddTextRequest">
+    <part name="request" element="tns:addTextRequest"/>
+  </message>
+  <portType name="ResultSetPortType" wsrp:ResourceProperties="tns:StatefulResourceProperties">
+    <operation name="createResource">
+      <input message="tns:CreateResourceRequest"/>
+      <output message="tns:CreateResourceResponse"/>
+    </operation>
+    <operation name="createResourceExtended">
+      <input message="tns:CreateResourceExtendedRequest"/>
+      <output message="tns:CreateResourceExtendedResponse"/>
+    </operation>
+    <operation name="createSerializedResource">
+      <input message="tns:CreateSerializedResourceRequest"/>
+      <output message="tns:CreateSerializedResourceResponse"/>
+    </operation>
+    <operation name="startNewPart">
+      <input message="tns:StartNewPartRequest"/>
+      <output message="tns:StartNewPartResponse"/>
+    </operation>
+    <operation name="endAuthoring">
+      <input message="tns:EndAuthoringRequest"/>
+      <output message="tns:EndAuthoringResponse"/>
+    </operation>
+    <operation name="addResults">
+      <input message="tns:AddResultsRequest"/>
+      <output message="tns:AddResultsResponse"/>
+    </operation>
+    <operation name="addText">
+      <input message="tns:AddTextRequest"/>
+      <output message="tns:AddTextResponse"/>
+    </operation>
+    <operation name="wrapResource">
+      <input message="tns:WrapResourceRequest"/>
+      <output message="tns:WrapResourceResponse"/>
+    </operation>
+    <operation name="wrapLocalFile">
+      <input message="tns:WrapLocalFileRequest"/>
+      <output message="tns:WrapLocalFileResponse"/>
+    </operation>
+    <operation name="getProperties">
+      <input message="tns:GetPropertiesRequest"/>
+      <output message="tns:GetPropertiesResponse"/>
+    </operation>
+    <operation name="getHeadFileName">
+      <input message="tns:GetHeadFileNameRequest"/>
+      <output message="tns:GetHeadFileNameResponse"/>
+    </operation>
+    <operation name="accessResource">
+      <input message="tns:AccessResourceRequest"/>
+      <output message="tns:AccessResourceResponse"/>
+    </operation>
+    <operation name="getNextPart">
+      <input message="tns:GetNextPartRequest"/>
+      <output message="tns:GetNextPartResponse"/>
+    </operation>
+    <operation name="nextAvailable">
+      <input message="tns:NextAvailableRequest"/>
+      <output message="tns:NextAvailableResponse"/>
+    </operation>
+    <operation name="getPreviousPart">
+      <input message="tns:GetPreviousPartRequest"/>
+      <output message="tns:GetPreviousPartResponse"/>
+    </operation>
+    <operation name="getFirstPart">
+      <input message="tns:GetFirstPartRequest"/>
+      <output message="tns:GetFirstPartResponse"/>
+    </operation>
+    <operation name="isLast">
+      <input message="tns:IsLastRequest"/>
+      <output message="tns:IsLastResponse"/>
+    </operation>
+    <operation name="isFirst">
+      <input message="tns:IsFirstRequest"/>
+      <output message="tns:IsFirstResponse"/>
+    </operation>
+    <operation name="getNumberOfResults">
+      <input message="tns:GetNumberOfResultsRequest"/>
+      <output message="tns:GetNumberOfResultsResponse"/>
+    </operation>
+    <operation name="getResult">
+      <input message="tns:GetResultRequest"/>
+      <output message="tns:GetResultResponse"/>
+    </operation>
+    <operation name="getResults">
+      <input message="tns:GetResultsRequest"/>
+      <output message="tns:GetResultsResponse"/>
+    </operation>
+    <operation name="getAllResults">
+      <input message="tns:GetAllResultsRequest"/>
+      <output message="tns:GetAllResultsResponse"/>
+    </operation>
+    <operation name="getHostIP">
+      <input message="tns:GetHostIPRequest"/>
+      <output message="tns:GetHostIPResponse"/>
+    </operation>
+    <operation name="getHostName">
+      <input message="tns:GetHostNameRequest"/>
+      <output message="tns:GetHostNameResponse"/>
+    </operation>
+    <operation name="clear">
+      <input message="tns:ClearRequest"/>
+      <output message="tns:ClearResponse"/>
+    </operation>
+    <operation name="splitEncoded">
+      <input message="tns:SplitEncodedRequest"/>
+      <output message="tns:SplitEncodedResponse"/>
+    </operation>
+    <operation name="splitClear">
+      <input message="tns:SplitClearRequest"/>
+      <output message="tns:SplitClearResponse"/>
+    </operation>
+    <operation name="getFileContent">
+      <input message="tns:GetFileContentRequest"/>
+      <output message="tns:GetFileContentResponse"/>
+    </operation>
+    <operation name="retrieveCustomProperties">
+      <input message="tns:RetrieveCustomPropertiesRequest"/>
+      <output message="tns:RetrieveCustomPropertiesResponse"/>
+    </operation>
+    <operation name="keepTop">
+      <input message="tns:KeepTopRequest"/>
+      <output message="tns:KeepTopResponse"/>
+    </operation>
+    <operation name="keepTopProp">
+      <input message="tns:KeepTopPropRequest"/>
+      <output message="tns:KeepTopPropResponse"/>
+    </operation>
+    <operation name="executeQueryOnHead">
+      <input message="tns:ExecuteQueryOnHeadRequest"/>
+      <output message="tns:ExecuteQueryOnHeadResponse"/>
+    </operation>
+    <operation name="executeQueryOnDocument">
+      <input message="tns:ExecuteQueryOnDocumentRequest"/>
+      <output message="tns:ExecuteQueryOnDocumentResponse"/>
+    </operation>
+    <operation name="executeQueryOnResults">
+      <input message="tns:ExecuteQueryOnResultsRequest"/>
+      <output message="tns:ExecuteQueryOnResultsResponse"/>
+    </operation>
+    <operation name="cloneRS">
+      <input message="tns:CloneRSRequest"/>
+      <output message="tns:CloneRSResponse"/>
+    </operation>
+    <operation name="filterRS">
+      <input message="tns:FilterRSRequest"/>
+      <output message="tns:FilterRSResponse"/>
+    </operation>
+    <operation name="filterRSProp">
+      <input message="tns:FilterRSPropRequest"/>
+      <output message="tns:FilterRSPropResponse"/>
+    </operation>
+    <operation name="transformByXSLT">
+      <input message="tns:TransformByXSLTRequest"/>
+      <output message="tns:TransformByXSLTResponse"/>
+    </operation>
+    <operation name="transformRS">
+      <input message="tns:TransformRSRequest"/>
+      <output message="tns:TransformRSResponse"/>
+    </operation>
+    <operation name="transformRSProp">
+      <input message="tns:TransformRSPropRequest"/>
+      <output message="tns:TransformRSPropResponse"/>
+    </operation>
+    <operation name="getCurrentContentPartName">
+      <input message="tns:GetCurrentContentPartNameRequest"/>
+      <output message="tns:GetCurrentContentPartNameResponse"/>
+    </operation>
+    <operation name="getCurrentContentPartPayload">
+      <input message="tns:GetCurrentContentPartPayloadRequest"/>
+      <output message="tns:GetCurrentContentPartPayloadResponse"/>
+    </operation>
+    <operation name="isFlowControled">
+      <input message="tns:IsFlowContoledRequest"/>
+      <output message="tns:IsFlowContoledResponse"/>
+    </operation>
+    <operation name="canAttach">
+      <input message="tns:CanAttachRequest"/>
+      <output message="tns:CanAttachResponse"/>
+    </operation>
+    <operation name="canStream">
+      <input message="tns:CanStreamRequest"/>
+      <output message="tns:CanStreamResponse"/>
+    </operation>
+    <operation name="destroySession">
+      <input message="tns:DestroySessionRequest"/>
+      <output message="tns:DestroySessionResponse"/>
+    </operation>
+    <operation name="removePreviousPart">
+      <input message="tns:RemovePreviousPartRequest"/>
+      <output message="tns:RemovePreviousPartResponse"/>
+    </operation>
+    <operation name="disableAccessLeasing">
+      <input message="tns:DisableAccessLeasingRequest"/>
+      <output message="tns:DisableAccessLeasingResponse"/>
+    </operation>
+    <operation name="extendAccessLeasing">
+      <input message="tns:ExtendAccessLeasingRequest"/>
+      <output message="tns:ExtendAccessLeasingResponse"/>
+    </operation>
+    <operation name="getAccessLeasing">
+      <input message="tns:GetAccessLeasingRequest"/>
+      <output message="tns:GetAccessLeasingResponse"/>
+    </operation>
+    <operation name="isForward">
+      <input message="tns:IsForwardRequest"/>
+      <output message="tns:IsForwardResponse"/>
+    </operation>
+    <operation name="setForward">
+      <input message="tns:SetForwardRequest"/>
+      <output message="tns:SetForwardResponse"/>
+    </operation>
+    <operation name="disableTimeLeasing">
+      <input message="tns:DisableTimeLeasingRequest"/>
+      <output message="tns:DisableTimeLeasingResponse"/>
+    </operation>
+    <operation name="extendTimeLeasing">
+      <input message="tns:ExtendTimeLeasingRequest"/>
+      <output message="tns:ExtendTimeLeasingResponse"/>
+    </operation>
+    <operation name="getTimeLeasing">
+      <input message="tns:GetTimeLeasingRequest"/>
+      <output message="tns:GetTimeLeasingResponse"/>
+    </operation>
+    <operation name="GetResourceProperty">
+      <input name="GetResourcePropertyRequest" message="wsrpw:GetResourcePropertyRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourceProperty"/>
+      <output name="GetResourcePropertyResponse" message="wsrpw:GetResourcePropertyResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourcePropertyResponse"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+    </operation>
+    <operation name="Subscribe">
+      <input message="wsntw:SubscribeRequest" wsa:Action="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification/Subscribe"/>
+      <output message="wsntw:SubscribeResponse" wsa:Action="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification/SubscribeResponse"/>
+      <fault name="TopicNotSupportedFault" message="wsntw:TopicNotSupportedFault"/>
+      <fault name="SubscribeCreationFailedFault" message="wsntw:SubscribeCreationFailedFault"/>
+      <fault name="InvalidTopicExpressionFault" message="wsntw:InvalidTopicExpressionFault"/>
+      <fault name="ResourceUnknownFault" message="wsntw:ResourceUnknownFault"/>
+      <fault name="TopicPathDialectUnknownFault" message="wsntw:TopicPathDialectUnknownFault"/>
+    </operation>
+    <operation name="GetCurrentMessage">
+      <input message="wsntw:GetCurrentMessageRequest" wsa:Action="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification/GetCurrentMessage"/>
+      <output message="wsntw:GetCurrentMessageResponse" wsa:Action="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification/GetCurrentMessageResponse"/>
+      <fault name="TopicNotSupportedFault" message="wsntw:TopicNotSupportedFault"/>
+      <fault name="InvalidTopicExpressionFault" message="wsntw:InvalidTopicExpressionFault"/>
+      <fault name="ResourceUnknownFault" message="wsntw:ResourceUnknownFault"/>
+      <fault name="NoCurrentMessageOnTopicFault" message="wsntw:NoCurrentMessageOnTopicFault"/>
+    </operation>
+    <operation name="GetMultipleResourceProperties">
+      <input name="GetMultipleResourcePropertiesRequest" message="wsrpw:GetMultipleResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetMultipleResourceProperties"/>
+      <output name="GetMultipleResourcePropertiesResponse" message="wsrpw:GetMultipleResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetMultipleResourcePropertiesResponse"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+    </operation>
+    <operation name="Destroy">
+      <input message="wsrlw:DestroyRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/Destroy"/>
+      <output message="wsrlw:DestroyResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/DestroyResponse"/>
+      <fault name="ResourceUnknownFault" message="wsrlw:ResourceUnknownFault"/>
+      <fault name="ResourceNotDestroyedFault" message="wsrlw:ResourceNotDestroyedFault"/>
+    </operation>
+    <operation name="QueryResourceProperties">
+      <input name="QueryResourcePropertiesRequest" message="wsrpw:QueryResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/QueryResourceProperties"/>
+      <output name="QueryResourcePropertiesResponse" message="wsrpw:QueryResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/QueryResourcePropertiesResponse"/>
+      <fault name="UnknownQueryExpressionDialectFault" message="wsrpw:UnknownQueryExpressionDialectFault"/>
+      <fault name="QueryEvaluationErrorFault" message="wsrpw:QueryEvaluationErrorFault"/>
+      <fault name="InvalidQueryExpressionFault" message="wsrpw:InvalidQueryExpressionFault"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+    </operation>
+    <operation name="SetResourceProperties">
+      <input name="SetResourcePropertiesRequest" message="wsrpw:SetResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/SetResourceProperties"/>
+      <output name="SetResourcePropertiesResponse" message="wsrpw:SetResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/SetResourcePropertiesResponse"/>
+      <fault name="InvalidSetResourcePropertiesRequestContentFault" message="wsrpw:InvalidSetResourcePropertiesRequestContentFault"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+      <fault name="SetResourcePropertyRequestFailedFault" message="wsrpw:SetResourcePropertyRequestFailedFault"/>
+      <fault name="UnableToModifyResourcePropertyFault" message="wsrpw:UnableToModifyResourcePropertyFault"/>
+    </operation>
+    <operation name="SetTerminationTime">
+      <input message="wsrlw:SetTerminationTimeRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/SetTerminationTime"/>
+      <output message="wsrlw:SetTerminationTimeResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/SetTerminationTimeResponse"/>
+      <fault name="ResourceUnknownFault" message="wsrlw:ResourceUnknownFault"/>
+      <fault name="UnableToSetTerminationTimeFault" message="wsrlw:UnableToSetTerminationTimeFault"/>
+      <fault name="TerminationTimeChangeRejectedFault" message="wsrlw:TerminationTimeChangeRejectedFault"/>
+    </operation>
+  </portType>
+</definitions>

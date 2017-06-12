@@ -1,0 +1,79 @@
+Geoanalytics platform installation and upgrade guidelines
+
+Installation
+Pre-Requisites
+Java 8
+LIBXML 2.9.3
+LIBJSON 0.11.99
+
+Install - Download
+Postgres 9.5+
+Extensions
+PostGIS 2.2.1
+Postgis_topology 2.2.1
+plpgsql
+uuid-ossp
+Apache Tomcat 8+
+Geoserver 2.9+
+SmartGears
+Geoanalytics.war from Etics
+
+Postgres
+Install postgres:
+apt-get install postgresql-9.5 postgis postgresql-9.5-postgis-2.2 postgresql-client-9.5 postgresql-contrib-9.5 postgresql-9.5-postgis-2.2 postgresql-9.5-postgis-scripts libdbd-pg-perl
+Connect to postgres as user postgres.
+(Root user) sudo su
+(postgres user) su – postgres
+(connect to postgres) psql
+Create the database, extensions and give ownership to user geopolis,
+CREATE DATABASE geoanalytics;
+CREATE USER geopolis WITH PASSWORD 'cc';
+ALTER DATABASE geoanalytics OWNER TO geopolis;
+GRANT ALL PRIVILEGES ON DATABASE geoanalytics to geopolis;
+\connect geoanalytics
+CREATE EXTENSION IF NOT EXISTS plpgsql;
+CREATE EXTENSION IF NOT EXISTS postgis;
+SELECT PostGIS_full_version();(Press q to exit version screen)
+CREATE EXTENSION IF NOT EXISTS postgis_topology;
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+(View installed extensions) SELECT name, default_version,installed_version FROM pg_available_extensions where installed_version is not null;
+(Exit PSQL console) \q
+Download scripts from repository(geoanalyticsDB folder first)
+(Create db using scripts) psql -d geoanalytics < /home/gcube/install/2016-12-02/geoanalyticsWithNewUpdates.sql 2>error.txt
+(Execute the rest of the scripts(with the proper order, it is included in the files' titles) the same way as above)
+psql
+(connect to db) \c geoanalytics
+(view all tables, views and matterialized views) \d
+(If there are tables or views whose owner is not geopolis, give ownership to geopolis manually)
+ALTER TABLE "XXXXXX" OWNER TO geopolis;
+ALTER VIEW "CCCCCC" OWNER TO geopolis;
+
+Apache Tomcat
+https://tomcat.apache.org/download-80.cgi
+Geoserver
+http://geoserver.org/download/
+Deploy it in the same tomcat server with the geoanalytics application.
+Change the default password for the admin user.
+SmartGears
+https://wiki.gcube-system.org/gcube/SmartGears_Web_Hosting_Node_(wHN)_Installation
+Geoanalytics
+Download latest version from ETICS.
+Once deployed you need to configure it properly so that the application can connect with the db and the geoserver with the credentials you have created.
+Navigate to apache tomcat webapps folder, then into geoanalytics application, then WEB-INF folder.
+Open geoanalytics.properties file and configure the following properties:
+gr.cite.geoanalytics.dataaccess.dbUser, set it to geopolis
+gr.cite.geoanalytics.dataaccess.dbPass, set it to the password you have created when creating the geopolis user for the geoanalytics database
+gr.cite.geoanalytics.dataaccess.geoServerBridge.url, the geoserver is usually deployed in the same tomcat as the geoanalytics application so it usually is http://localhost:8080/geoserver
+gr.cite.geoanalytics.dataaccess.geoServerBridge.user, set it to admin
+gr.cite.geoanalytics.dataaccess.geoServerBridge.pass, set it to the NEW password you have created for the admin user of geoserver
+gr.cite.geoanalytics.security.portmapping.http, set it to 8080
+gr.cite.geoanalytics.security.portmapping.https, set it to 8443
+gr.cite.geoanalytics.persistence.dbusername, set it to geopolis
+gr.cite.geoanalytics.persistence.dbpassword, set it to the password you have created when creating the geopolis user for the geoanalytics database
+
+
+Upgrade
+Download latest sql scripts from the latest version folder
+Run scripts as described above(in case of new tables, check if the new tables' owner is geopolis, otherwise change the ownership manually as described above)
+Download latest .war from ETICS.
+Deploy it, configure geoanalytics.properties file as described above.

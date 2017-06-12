@@ -1,0 +1,10 @@
+<Resource>
+        {$profiles//Resource/ID}
+        <Type>{$profiles//Resource/Type/text()}</Type>
+        <SubType>{$subtype}</SubType>
+        <Scopes>{$scopes}</Scopes>
+        <ServiceClass>{$profiles//Resource/Profile/Class/text()}</ServiceClass>
+        <ServiceName>{$profiles//Resource/Profile/Name/text()}</ServiceName>
+        <Version>{$profiles//Resource/Profile/Packages/Software[1]/Version/text()}</Version>
+        <Shareable>{$profiles//Resource/Profile/Packages/Software/Shareable/string(@level)}</Shareable>
+</Resource>

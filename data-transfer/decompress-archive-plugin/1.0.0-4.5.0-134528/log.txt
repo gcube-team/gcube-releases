@@ -1,0 +1,928 @@
+0    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Creating destination folder /home/fabio/workspaces/unzips/Demo
+3    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Reading zip file 
+4    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Overall_Prediction_Analysis/Probability_Discrepancies_Trend.png 
+4    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+4    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+5    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Overall_Prediction_Analysis/Probability_Discrepancies_Trend.png
+7    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Overall_Prediction_Analysis/Probability_Trend.png 
+7    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+8    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+8    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Overall_Prediction_Analysis/Probability_Trend.png
+8    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_360.png 
+8    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+9    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+9    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_360.png
+9    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_340.png 
+9    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+11   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+11   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_340.png
+12   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_364.png 
+12   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+12   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+12   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_364.png
+13   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_344.png 
+13   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+13   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+13   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_344.png
+14   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_732.png 
+14   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+14   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+14   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_732.png
+15   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_96.png 
+15   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+15   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+15   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_96.png
+16   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_736.png 
+16   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+16   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+17   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_736.png
+17   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_208.png 
+17   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+17   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+18   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_208.png
+18   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_204.png 
+18   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+18   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+19   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_204.png
+19   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_368.png 
+19   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+19   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+20   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_368.png
+20   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_604.png 
+20   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+20   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+20   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_604.png
+21   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_352.png 
+21   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+21   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+22   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_352.png
+22   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_332.png 
+22   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+22   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+22   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_332.png
+23   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_744.png 
+23   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+23   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+23   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_744.png
+24   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_896.png 
+24   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+24   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+24   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_896.png
+25   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_84.png 
+25   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+25   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+25   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_84.png
+26   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_895.png 
+26   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+26   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+26   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_895.png
+26   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_898.png 
+26   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+27   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+27   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_898.png
+27   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_86.png 
+27   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+27   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+28   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_86.png
+28   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_897.png 
+28   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+28   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+28   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_897.png
+29   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_608.png 
+29   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+29   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+29   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_608.png
+30   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_90.png 
+30   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+30   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+30   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_90.png
+31   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_891.png 
+31   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+31   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+31   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_891.png
+32   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_92.png 
+32   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+32   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+32   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_92.png
+32   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_740.png 
+32   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+33   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+33   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_740.png
+33   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_356.png 
+33   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+33   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+34   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_356.png
+34   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_357.png 
+34   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+34   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+34   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_357.png
+35   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_334.png 
+35   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+35   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+35   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_334.png
+36   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_388.png 
+36   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+36   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+36   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_388.png
+36   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_320.png 
+36   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+37   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+37   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_320.png
+37   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_384.png 
+37   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+37   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+37   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_384.png
+38   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_380.png 
+38   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+38   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+38   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_380.png
+39   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_480.png 
+39   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+39   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+39   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_480.png
+40   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_887.png 
+40   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+40   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+40   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_887.png
+40   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_711.png 
+40   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+41   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+41   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_711.png
+41   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_484.png 
+41   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+41   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+41   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_484.png
+42   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_710.png 
+42   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+42   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+42   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_710.png
+43   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_222.png 
+43   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+43   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+43   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_222.png
+44   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_882.png 
+44   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+44   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+44   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_882.png
+44   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_488.png 
+44   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+45   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+45   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_488.png
+45   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_226.png 
+45   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+45   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+46   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_226.png
+46   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_328.png 
+46   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+46   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+46   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_328.png
+47   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_324.png 
+47   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+47   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+47   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_324.png
+48   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_622.png 
+48   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+48   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+48   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_622.png
+48   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_621.png 
+48   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+49   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+49   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_621.png
+49   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_376.png 
+49   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+49   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+50   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_376.png
+50   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_620.png 
+50   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+50   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+51   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_620.png
+51   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_626.png 
+51   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+51   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+52   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_626.png
+52   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_372.png 
+52   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+52   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+52   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_372.png
+53   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_624.png 
+53   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+53   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+53   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_624.png
+54   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_470.png 
+54   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+54   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+54   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_470.png
+54   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_724.png 
+55   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+55   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+55   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_724.png
+55   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_723.png 
+55   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+55   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+56   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_723.png
+56   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_212.png 
+56   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+56   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+56   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_212.png
+57   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_474.png 
+57   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+57   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+57   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_474.png
+58   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_876.png 
+58   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+58   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+58   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_876.png
+58   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_478.png 
+59   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+59   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+59   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_478.png
+59   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_872.png 
+60   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+60   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+60   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_872.png
+60   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_214.png 
+60   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+60   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+61   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_214.png
+61   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_219.png 
+61   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+61   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+62   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_219.png
+62   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_218.png 
+62   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+62   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+63   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_218.png
+63   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_316.png 
+63   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+63   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+63   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_316.png
+64   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_8.png 
+64   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+64   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+64   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_8.png
+65   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_312.png 
+65   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+65   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+65   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_312.png
+66   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_71.png 
+66   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+66   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+66   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_71.png
+67   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_52.png 
+67   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+67   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+67   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_52.png
+68   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_77.png 
+68   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+68   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+68   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_77.png
+68   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_104.png 
+69   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+69   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+69   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_104.png
+69   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_192.png 
+69   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+69   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+70   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_192.png
+70   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_191.png 
+70   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+70   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+70   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_191.png
+71   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_300.png 
+71   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+71   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+71   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_300.png
+72   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_304.png 
+72   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+72   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+72   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_304.png
+72   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_308.png 
+72   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+73   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+73   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_308.png
+73   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_60.png 
+73   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+73   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+74   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_60.png
+74   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_81.png 
+74   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+74   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+74   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_81.png
+75   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_44.png 
+75   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+75   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+75   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_44.png
+75   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_704.png 
+76   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+76   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+76   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_704.png
+76   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_87.png 
+76   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+77   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+77   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_87.png
+77   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_390.png 
+77   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+77   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+77   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_390.png
+78   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_391.png 
+78   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+78   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+78   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_391.png
+79   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_598.png 
+79   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+79   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+79   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_598.png
+80   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_393.png 
+80   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+80   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+80   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_393.png
+80   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_394.png 
+80   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+81   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+81   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_394.png
+81   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_705.png 
+81   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+81   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+81   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_705.png
+82   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_395.png 
+82   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+82   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+82   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_395.png
+83   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_706.png 
+83   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+83   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+83   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_706.png
+83   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_396.png 
+83   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+84   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+84   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_396.png
+84   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_591.png 
+84   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+84   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+85   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_591.png
+85   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_508.png 
+85   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+85   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+85   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_508.png
+86   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_500.png 
+86   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+86   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+86   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_500.png
+87   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_504.png 
+87   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+87   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+87   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_504.png
+87   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_50.png 
+88   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+88   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+88   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_50.png
+88   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_77.png 
+89   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+89   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+89   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_77.png
+90   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_76.png 
+90   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+90   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+90   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_76.png
+90   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_74.png 
+91   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+91   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+91   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_74.png
+91   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_532.png 
+91   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+91   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+92   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_532.png
+92   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_533.png 
+92   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+92   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+92   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_533.png
+93   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_670.png 
+93   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+93   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+93   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_670.png
+94   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_37.png 
+94   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+94   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+94   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_37.png
+95   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_826.png 
+95   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+95   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+95   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_826.png
+95   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_16.png 
+96   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+96   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+96   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_16.png
+96   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_34.png 
+96   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+96   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+97   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_34.png
+97   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_678.png 
+97   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+97   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+97   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_678.png
+98   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_296.png 
+98   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+98   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+98   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_296.png
+99   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_152.png 
+99   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+99   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+99   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_152.png
+99   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_155.png 
+100  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+100  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+100  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_155.png
+100  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_12.png 
+100  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+100  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+101  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_12.png
+101  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_154.png 
+101  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+101  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+101  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_154.png
+102  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_157.png 
+102  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+102  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+102  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_157.png
+103  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_156.png 
+103  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+103  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+103  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_156.png
+104  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_31.png 
+104  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+104  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+104  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_31.png
+104  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_408.png 
+105  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+105  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+105  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_408.png
+105  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_548.png 
+105  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+105  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+106  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_548.png
+106  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_404.png 
+106  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+106  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+106  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_404.png
+107  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_683.png 
+107  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+107  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+107  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_683.png
+108  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_818.png 
+108  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+108  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+108  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_818.png
+109  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_47.png 
+109  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+109  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+109  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_47.png
+110  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_48.png 
+110  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+110  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+110  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_48.png
+110  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_686.png 
+110  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+110  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+111  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_686.png
+111  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_162.png 
+111  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+111  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+111  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_162.png
+112  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_540.png 
+112  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+112  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+112  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_540.png
+113  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_41.png 
+113  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+113  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+113  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_41.png
+114  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_166.png 
+114  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+114  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+114  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_166.png
+115  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_516.png 
+115  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+115  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+115  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_516.png
+116  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_793.png 
+116  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+116  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+116  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_793.png
+116  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_512.png 
+117  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+117  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+117  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_512.png
+117  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_414.png 
+118  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+118  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+118  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_414.png
+118  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_690.png 
+118  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+119  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+119  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_690.png
+119  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_694.png 
+119  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+119  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+120  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_694.png
+120  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_274.png 
+120  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+120  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+120  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_274.png
+121  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_170.png 
+121  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+121  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+121  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_170.png
+122  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_37.png 
+122  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+122  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+122  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_37.png
+123  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_58.png 
+123  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+123  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+123  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_58.png
+123  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_410.png 
+124  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+124  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+124  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_410.png
+124  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_38.png 
+124  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+125  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+125  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_38.png
+125  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_57.png 
+125  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+125  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+126  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_57.png
+126  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_36.png 
+126  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+126  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+126  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_36.png
+127  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_178.png 
+127  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+127  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+127  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_178.png
+128  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_51.png 
+128  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+128  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+128  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_51.png
+128  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_798.png 
+128  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+128  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+129  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_798.png
+129  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_175.png 
+129  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+129  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+129  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_175.png
+130  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_270.png 
+130  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+130  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+130  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_270.png
+130  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_32.png 
+131  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+131  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+131  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_32.png
+131  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_174.png 
+131  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+132  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+132  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_174.png
+132  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_796.png 
+132  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+132  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+133  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_796.png
+133  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_528.png 
+133  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+133  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+133  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_528.png
+134  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_422.png 
+134  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+134  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+134  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_422.png
+134  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_67.png 
+135  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+135  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+135  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_67.png
+135  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_28.png 
+135  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+135  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+136  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_28.png
+136  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_288.png 
+136  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+136  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+136  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_288.png
+137  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_24.png 
+137  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+137  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+137  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_24.png
+137  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_188.png 
+138  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+138  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+138  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_188.png
+138  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_520.png 
+138  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+138  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+139  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_520.png
+139  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_61.png 
+139  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+139  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+139  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_61.png
+140  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_184.png 
+140  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+140  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+140  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_184.png
+141  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_630.png 
+141  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+141  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+141  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_630.png
+141  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_258.png 
+141  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+142  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+142  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_258.png
+142  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_434.png 
+142  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+142  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+142  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_434.png
+143  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_579.png 
+143  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+143  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+143  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_579.png
+144  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_578.png 
+144  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+144  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+144  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_578.png
+145  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_116.png 
+145  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+145  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+145  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_116.png
+145  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_772.png 
+145  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+146  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+146  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_772.png
+146  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_776.png 
+146  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+146  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+146  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_776.png
+147  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_570.png 
+147  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+147  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+147  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_570.png
+148  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_862.png 
+148  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+148  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+148  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_862.png
+148  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_574.png 
+149  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+149  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+149  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_574.png
+149  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_111.png 
+149  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+149  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+149  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_111.png
+150  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_254.png 
+150  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+150  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+150  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_254.png
+151  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_638.png 
+151  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+151  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+151  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_638.png
+151  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_430.png 
+151  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+152  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+152  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_430.png
+152  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_250.png 
+152  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+152  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+152  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_250.png
+153  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_634.png 
+153  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+153  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+153  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_634.png
+154  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_251.png 
+154  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+154  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+154  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_251.png
+154  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_252.png 
+154  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+154  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+155  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_252.png
+155  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_780.png 
+155  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+155  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+156  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_780.png
+157  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_850.png 
+157  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+157  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+157  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_850.png
+158  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_784.png 
+158  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+158  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+158  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_784.png
+158  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_580.png 
+158  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+159  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+159  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_580.png
+159  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_120.png 
+159  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+159  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+160  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_120.png
+160  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_788.png 
+160  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+160  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+160  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_788.png
+161  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_583.png 
+161  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+161  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+161  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_583.png
+161  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_584.png 
+162  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+162  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+162  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_584.png
+162  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_124.png 
+162  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+162  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+163  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_124.png
+163  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_858.png 
+163  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+163  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+163  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_858.png
+164  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_855.png 
+164  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+164  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+164  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_855.png
+165  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_585.png 
+165  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+165  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+165  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_585.png
+165  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_586.png 
+166  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+166  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+166  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_586.png
+166  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_856.png 
+166  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+166  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+167  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_856.png
+167  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_266.png 
+167  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+167  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+167  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_266.png
+168  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_647.png 
+168  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+168  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+168  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_647.png
+168  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_262.png 
+169  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+169  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+169  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_262.png
+169  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_644.png 
+169  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+169  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+169  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_644.png
+170  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_238.png 
+170  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+170  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+170  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_238.png
+171  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_239.png 
+171  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+171  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+171  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_239.png
+171  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_459.png 
+171  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+171  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+172  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_459.png
+172  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_558.png 
+172  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+172  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+172  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_558.png
+173  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_136.png 
+173  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+173  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+173  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_136.png
+174  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_555.png 
+174  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+174  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+174  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_555.png
+175  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_554.png 
+175  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+175  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+175  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_554.png
+176  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_132.png 
+176  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+176  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+176  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_132.png
+176  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_844.png 
+176  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+176  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+177  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_844.png
+177  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_845.png 
+177  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+177  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+177  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_845.png
+178  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_846.png 
+178  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+178  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+178  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_846.png
+178  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_840.png 
+179  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+179  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+179  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_840.png
+179  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_841.png 
+179  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+180  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+180  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_841.png
+180  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_842.png 
+180  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+180  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+181  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_842.png
+181  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_843.png 
+181  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+181  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+181  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_843.png
+182  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_450.png 
+182  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+182  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+182  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_450.png
+183  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_18.png 
+183  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+183  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+183  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_18.png
+183  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_654.png 
+184  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+184  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+184  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_654.png
+184  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_659.png 
+184  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+184  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+184  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_659.png
+185  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_234.png 
+185  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+185  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+185  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_234.png
+185  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_660.png 
+186  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+186  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+186  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_660.png
+186  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_662.png 
+186  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+186  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+186  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_662.png
+187  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_566.png 
+187  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+187  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+187  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_566.png
+187  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_768.png 
+188  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+188  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+188  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_768.png
+188  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_144.png 
+188  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+188  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+188  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_144.png
+189  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_21.png 
+189  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+189  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+189  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_21.png
+190  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_834.png 
+190  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+190  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+190  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_834.png
+190  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_764.png 
+190  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+191  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+191  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_764.png
+191  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_830.png 
+191  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+191  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+191  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_830.png
+192  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_27.png 
+192  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+192  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+192  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_FaoArea_27.png
+192  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_460.png 
+193  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+193  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+193  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_460.png
+193  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_666.png 
+193  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+193  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+193  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_666.png
+194  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_461.png 
+194  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+194  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+194  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_461.png
+199  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_462.png 
+199  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+199  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+199  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_462.png
+200  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_463.png 
+200  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+200  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+200  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_463.png
+200  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_242.png 
+201  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - File already exists, overwrite policy is true 
+201  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Deleting existing content
+201  [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/Demo/Demo/Prediction_Analysis_By_Area/Hspec_(prob>0.8)_for_LME_242.png
+0    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Creating destination folder /home/fabio/workspaces/unzips/hl
+3    [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Reading zip file 
+16   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting META-INF/ 
+17   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/hl/META-INF
+17   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Extracting META-INF/MANIFEST.MF 
+17   [main] DEBUG org.gcube.data.transfer.plugins.decompress.DecompressPlugin  - Destination file is /home/fabio/workspaces/unzips/hl/META-INF/MANIFEST.MF

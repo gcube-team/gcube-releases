@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.simul-fish-growth-1-0-0" date="2016-04-26">
+		<Change>First release of the portlet</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,7 @@
+---
+
+- name: Install the 'GHN' package
+  shell: echo 'installing GHN'
+
+# TODO: handler to start container
+# TODO: handler to stop container

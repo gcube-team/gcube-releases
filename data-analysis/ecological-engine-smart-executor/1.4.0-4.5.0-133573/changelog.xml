@@ -1,0 +1,19 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="org.gcube.data-analysis.ecological-engine-smart-executor.1.0.0-SNAPSHOT"
+		date="2015-05-27">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.ecological-engine-smart-executor.1.2.0-SNAPSHOT"
+		date="2016-02-08">
+		<Change>Management of SAI algorithm</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.ecological-engine-smart-executor.1.3.0-SNAPSHOT"
+		date="2016-04-01">
+		<Change>Web application publisher</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.ecological-engine-smart-executor.1.4.0-SNAPSHOT"
+		date="2016-27-09">
+		<Change>Moved generic Worker to Dataminer</Change>
+	</Changeset>
+</ReleaseNotes>

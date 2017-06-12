@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    					http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+http://www.springframework.org/schema/security
+http://www.springframework.org/schema/security/spring-security-4.1.xsd">
+
+	<http use-expressions="false">
+		<csrf disabled="true" />
+		<form-login login-processing-url="/static/j_spring_security_check"
+			login-page="/login" authentication-failure-url="/login_error" />
+		<logout logout-url="/logout" success-handler-ref="geoanalyticsLogoutHandler" />
+		<remember-me key="geoanalyticsKey" token-validity-seconds="604800" />
+		<!-- <intercept-url pattern="/login" requires-channel="https" /> <intercept-url 
+			pattern="/resources/**" access="ROLE_ANONYMOUS" /> <intercept-url pattern="/login" 
+			requires-channel="https" /> <intercept-url pattern="/resources/**" access="ROLE_ANONYMOUS" 
+			/> -->
+		<port-mappings>
+			<port-mapping http="${gr.cite.geoanalytics.security.portmapping.http}"
+				https="${gr.cite.geoanalytics.security.portmapping.https}" />
+		</port-mappings>
+		<!-- <intercept-url pattern="/login*" access="IS_AUTHENTICATED_ANONYMOUSLY" 
+			requires-channel="https" /> -->
+		<!-- <intercept-url pattern="/login_error*" access="IS_AUTHENTICATED_ANONYMOUSLY" 
+			requires-channel="https" /> -->
+		<!-- <intercept-url pattern="/resend_password" access="IS_AUTHENTICATED_ANONYMOUSLY" 
+			requires-channel="https" /> -->
+		<!-- <intercept-url pattern="/static/j_spring_security_check" requires-channel="https" 
+			/> -->
+		<!-- <intercept-url pattern="/admin/users/change_password" requires-channel="https" 
+			/> -->
+		<intercept-url pattern="/login*" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/login_error*" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/resend_password" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<intercept-url pattern="/static/j_spring_security_check" />
+		<intercept-url pattern="/admin/users/change_password" />
+<!-- 		<intercept-url pattern="/admin/**" access="ROLE_AppAdmin" /> -->
+		<intercept-url pattern="/admin/**" access="ROLE_User" />
+		<intercept-url pattern="/projects/**" access="ROLE_User" />
+		<intercept-url pattern="/documents/**" access="ROLE_User" />
+		<intercept-url pattern="/shapes/**" access="ROLE_User" />
+
+		<custom-filter position="FIRST" ref="httpsCookieFilter" />
+
+		<session-management session-fixation-protection="migrateSession"
+			session-authentication-error-url="/login_error">
+			<concurrency-control max-sessions="1"
+				error-if-maximum-exceeded="false" expired-url="/login"
+				session-registry-alias="sessionRegistry" />
+		</session-management>
+		<custom-filter ref="requestContextFilter" before="FORM_LOGIN_FILTER" />
+		<custom-filter ref="portalPreAuthenticationFilter"
+			position="PRE_AUTH_FILTER" />
+	</http>
+	
+	<global-method-security secured-annotations="enabled" pre-post-annotations="enabled">
+	    <expression-handler ref="expressionHandler"/>
+	</global-method-security>
+
+	<beans:bean name="httpsCookieFilter"
+		class="gr.cite.geoanalytics.security.HttpsCookieFilter" />
+
+	<beans:bean name="pwEncoder" class="gr.cite.geoanalytics.security.PBKDF2PasswordEncoder" />
+	
+	<beans:bean id="authenticationProvider"
+		class="gr.cite.geoanalytics.security.GeoanalyticsUserAuthenticationProvider">
+		<beans:property name="userDetailsService" ref="userDetailsService" />
+<!-- 		<beans:property name="passwordEncoder" ref="pwEncoder" /> -->
+	</beans:bean>
+
+	<beans:bean id="rememberMeAuthenticationProvider"
+		class="gr.cite.geoanalytics.security.GeoanalyticsRememberMeAuthenticationProvider">
+		<beans:constructor-arg value="geoanalyticsKey" />
+	</beans:bean>
+
+	<beans:bean id="requestContextFilter"
+		class="org.springframework.web.filter.RequestContextFilter" />
+	<beans:bean id="webexpressionHandler"
+		class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
+		
+	<authentication-manager alias="authenticationManager">
+		<authentication-provider ref="portalPreAuthenticationProvider" />
+		<authentication-provider ref="authenticationProvider" />
+		<authentication-provider ref="rememberMeAuthenticationProvider" />
+	</authentication-manager>
+
+	<beans:bean id="authenticationTrustResolver"
+		class="org.springframework.security.authentication.AuthenticationTrustResolverImpl" />
+
+	<beans:bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<beans:property name="basenames">
+			<beans:list>
+				<beans:value>WEB-INF/geoanalytics-security-messages</beans:value>
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+
+	<beans:bean id="geoanalyticsLogoutHandler"
+		class="gr.cite.geoanalytics.security.GeoanalyticsLogoutHandler" />
+
+	<!-- Portal preauthentication -->
+
+	<beans:bean id="portalPreAuthenticationProvider"
+		class="gr.cite.geoanalytics.security.GeoanalyticsPortalPreAuthenticationProvider">
+		<beans:property name="preAuthenticatedUserDetailsService"
+			ref="preAuthenticationUserDetailsService" />
+	</beans:bean>
+
+	<!-- <beans:bean id="portalPreAuthenticationFailureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler"> -->
+	<!-- <beans:constructor-arg name="defaultFailureUrl" value="/login_error" 
+		/> -->
+	<!-- </beans:bean> -->
+
+	<beans:bean id="preAuthenticationUserDetailsService"
+		class="gr.cite.geoanalytics.security.GeoanalyticsPreAuthenticatedUserDetailsService" />
+
+	<beans:bean id="portalPreAuthenticationFilter"
+		class="gr.cite.geoanalytics.security.GeoanalyticsPortalPreAuthenticationFilter">
+		<beans:property name="authenticationManager" ref="authenticationManager" />
+	</beans:bean>
+	<!-- / -->
+
+</beans:beans>

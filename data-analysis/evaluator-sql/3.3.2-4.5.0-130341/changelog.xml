@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-analysis.evaluator-sql.1-0-0" date="2013-10-21"> 
+		<Change>Porting to cube manager 3</Change>
+	</Changeset> 
+	<Changeset component="org.gcube.data-analysis.evaluator-sql.3-3-1" date="2015-05-21"> 
+		<Change>Ported to new model</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.evaluator-sql.3-3-2" date="2015-06-21"> 
+		<Change>Integration fixes</Change>
+	</Changeset>
+</ReleaseNotes>

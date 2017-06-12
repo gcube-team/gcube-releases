@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	<portlet>
+		<portlet-name>EODA-portal</portlet-name>
+		<display-name>EODA Portal Wrapper</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.EODAPortal
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/eodaportal/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>EODA Portal</title>
+			<short-title>EODA Portal</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>portletSetupShowBorders</name>
+				<value>false</value>
+			</preference>
+		</portlet-preferences>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+</portlet-app>

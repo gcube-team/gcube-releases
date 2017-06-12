@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+
+	<service name="gcube/datatransfer/agent">
+
+		<environment name="configDir" value="@config.dir@" type="java.lang.String"
+			override="false" />
+					
+		<environment name="dbname" value="transfer-agent-db"
+			type="java.lang.String" override="false" />
+			
+			
+		<environment name="supportedTransfers"
+				value="FTP,HTTP" type="java.lang.String" override="false" />
+			
+		<environment name="messaging" value="true"
+				type="java.lang.Boolean" override="false" />
+				
+		<environment name="scheduledBackupInHours"
+				value="12" type="java.lang.String" override="false" />
+		
+		<environment name="dbConfigurationFile"
+				value="db.properties" type="java.lang.String" override="false" />
+				
+		<environment name="connectionTimeout"
+				value="2000" type="java.lang.Integer" override="false" />
+				
+		<environment name="transferTimeout"
+				value="600000" type="java.lang.Integer" override="false" />
+				
+		<environment name="intervalForDBCheckInMS"
+				value="10000" type="java.lang.Integer" override="false" />
+		
+		<environment name="retryLimit"
+				value="3" type="java.lang.Integer" override="false" />
+				
+		<environment name="vfsRoot"
+				value="/tmp" type="java.lang.String" override="false" />
+		
+		<environment name="awsKeyID"
+				value="" type="java.lang.String" override="false" />
+				
+		<environment name="awsKey"
+				value="" type="java.lang.String" override="false" />
+	
+	<!-- 
+		<environment name="startScopes" value="" type="java.lang.String"
+			override="false" />
+		 -->
+
+	</service>
+
+	<service name="gcube/datatransfer/agent/DataTransferAgent">
+
+		<environment name="name" value="DataTransferAgent" type="java.lang.String"
+			override="false" />
+	
+
+		<environment name="RPDName" value="AgentResourceProperties"
+			type="java.lang.String" override="false" />	
+		
+		<resource name="publicationProfile" type="org.gcube.common.core.state.GCUBEPublicationProfile">	
+			<resourceParams>
+				<parameter>
+					<name>factory</name>
+					<value>org.globus.wsrf.jndi.BeanFactory</value>
+				</parameter>
+				<parameter>
+					<name>mode</name>
+					<value>push</value>
+				</parameter>
+				<parameter>
+					<name>fileName</name>
+					<value>agentRegistration.xml</value>
+				</parameter>
+			</resourceParams>
+		</resource>
+		
+		<resource name="home"
+			type="org.gcube.datatransfer.agent.impl.state.AgentResourceHome">
+			<resourceParams>
+				<parameter>
+					<name>factory</name>
+					<value>org.globus.wsrf.jndi.BeanFactory</value>
+				</parameter>
+				<parameter>
+					<name>resourceClass</name>
+					<value>org.gcube.datatransfer.agent.impl.state.AgentResource
+					</value>
+				</parameter>				
+
+			</resourceParams>
+
+		</resource>
+	</service>
+
+</jndiConfig>

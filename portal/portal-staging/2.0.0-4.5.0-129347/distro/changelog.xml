@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portal.portal-staging.2-0-0" date="2016-06-23">
+		<Change>First Release after migration to Liferay 6.2</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,9 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.vremanagement.whnmanager.1-0-0" date="2013-12-12"> 
+		<Change>first release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vremanagement.whnmanager.1-0-0" date="2013-12-12"> 
+		<Change>porting to authorization 2.0 and smartgears 2.0</Change>
+	</Changeset>
+	
+</ReleaseNotes>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime"
+	version="2.0">
+	<endpoint name="tabularresourcemanager"
+		implementation="org.gcube.data.analysis.tabulardata.service.TabularResourceManagerImpl"
+		url-pattern="/tabularresourcemanager" />
+	<endpoint name="externalresourcemanager"
+		implementation="org.gcube.data.analysis.tabulardata.service.ExternalResourceManagerImpl"
+		url-pattern="/externalresourcemanager" />
+	<endpoint name="querymanager"
+		implementation="org.gcube.data.analysis.tabulardata.service.QueryManagerImpl"
+		url-pattern="/querymanager" />
+	<endpoint name="historymanager"
+		implementation="org.gcube.data.analysis.tabulardata.service.HistoryManagerImpl"
+		url-pattern="/historymanager" />
+	<endpoint name="operationmanager"
+		implementation="org.gcube.data.analysis.tabulardata.service.OperationManagerImpl"
+		url-pattern="/operationmanager" />
+	<endpoint name="taskmanager"
+		implementation="org.gcube.data.analysis.tabulardata.service.TaskManagerImpl"
+		url-pattern="/taskmanager" />
+	<endpoint name="templatemanager"
+		implementation="org.gcube.data.analysis.tabulardata.service.TemplateManagerImpl"
+		url-pattern="/templatemanager" />
+		
+	<endpoint name="rulemanager"
+		implementation="org.gcube.data.analysis.tabulardata.service.RuleManagerImpl"
+		url-pattern="/rulemanager" />
+
+</endpoints>

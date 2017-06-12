@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:c="urn:import:org.gcube.portlets.widgets.imagepreviewerwidget.client.resources">
+
+	<g:HTMLPanel>
+		<b:Modal ui:field="mainModalPanel" backdrop="NORMAL" keyboard="true"
+			closeVisible="true" animation="true" dynamicSafe="true">
+
+			<g:HTMLPanel styleName="body-container">
+				<g:HTMLPanel styleName="image-container">
+					<b:Image styleName="image-loading" ui:field="loadingImage"></b:Image>
+					<b:Image styleName="shown-image" ui:field="shownImage"></b:Image>
+				</g:HTMLPanel>
+
+				<g:HorizontalPanel ui:field="commands" styleName="command-container">
+				<g:SimplePanel styleName="arrowYPos-left">
+						<b:Button title="Previous" ui:field="prevButton"
+							styleName="img-prev-arrow-left"></b:Button>
+					</g:SimplePanel>
+					<b:Button title="Download" ui:field="downloadButtonSmart"></b:Button>
+					<b:Button title="Close" ui:field="closeButtonSmart"></b:Button>
+					<b:Button title="Download" ui:field="downloadButton">Download</b:Button>
+					<b:Button title="Close" ui:field="closeButton">Close</b:Button>
+					<g:SimplePanel styleName="arrowYPos-right">
+						<b:Button title="Next" ui:field="nextButton" styleName="img-prev-arrow-right"></b:Button>
+					</g:SimplePanel>
+				</g:HorizontalPanel>
+			</g:HTMLPanel>
+		</b:Modal>
+	</g:HTMLPanel>
+</ui:UiBinder> 

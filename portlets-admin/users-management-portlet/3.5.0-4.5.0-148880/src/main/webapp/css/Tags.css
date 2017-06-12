@@ -1,0 +1,142 @@
+div#usersManagementPortletContainer div.modal-header,
+div#usersManagementPortletContainer  div.modal-footer{
+	border: 0px !important;
+}
+div#usersManagementPortletContainer div.text-tag.span2 {
+	padding : 0px;
+}
+div#usersManagementPortletContainer div#border,
+div#usersManagementPortletContainer  div#borderFirstScreen {
+	/* height:3px; */
+	border-top: 2px solid #0271be;
+/* 	padding-bottom: 0.2em; */
+}
+div#usersManagementPortletContainer div.text-tag.span2:not(:first-of-type) {
+	margin-left : 10px !important;
+}
+div#usersManagementPortletContainer div.text-wrap {
+	width :inherit !important;
+}
+div#usersManagementPortletContainer span#textAboveTagsInput div.row div.text-core.span9 div.text-wrap,
+ div#usersManagementPortletContainer span#textAboveTagsInputInAssignRolesModal div.row div.text-core.span9 div.text-wrap,
+ div#usersManagementPortletContainer span#textAboveTagsInputInAssignUsersToGroupsModal div.row div.text-core.span9 div.text-wrap {
+	width :100% !important;
+}
+div#usersManagementPortletContainer span#textAboveTagsInput div.row div.text-core.span9,
+	div#usersManagementPortletContainer span#textAboveTagsInputInAssignRolesModal div.row div.text-core.span9,
+		div#usersManagementPortletContainer span#textAboveTagsInputInAssignUsersToGroupsModal div.row div.text-core.span9 {
+	min-height: 45px !important;
+	margin-top : -10px;
+	height:100% !important;
+}
+div#usersManagementPortletContainer span#textAboveTagsInput div.row:first div.text-core.span9 {
+	position: static;
+}
+div#usersManagementPortletContainer span#textAboveTagsInput div.row div.text-core.span9 div.text-wrap ,
+	div#usersManagementPortletContainer span#textAboveTagsInputInAssignRolesModal div.row div.text-core.span9 div.text-wrap,
+	div#usersManagementPortletContainer span#textAboveTagsInputInAssignUsersToGroupsModal div.row div.text-core.span9 div.text-wrap {
+	position:static;
+}
+div#usersManagementPortletContainer span#textAboveTagsInput div.row div.text-core.span9 div.text-wrap div.text-tags,
+div#usersManagementPortletContainer span#textAboveTagsInputInAssignRolesModal div.row div.text-core.span9 div.text-wrap div.text-tags,
+div#usersManagementPortletContainer span#textAboveTagsInputInAssignUsersToGroupsModal div.row div.text-core.span9 div.text-wrap div.text-tags{
+	position:static;
+}
+div#usersManagementPortletContainer span#textAboveTagsInput div.row div.text-core.span9 div.text-button {
+	padding: 0px 0px 8px 5px !important;
+	text-align: -webkit-center;
+}
+div#usersManagementPortletContainer #assignUsersRolesModal div.text-button.span12,
+ div#usersManagementPortletContainer #assignUsersToGroupsModal div.text-button.span12 {
+	padding-right: 0px;
+}
+div#usersManagementPortletContainer div.text-button.span12{
+	padding-left:10px !important;	
+	border-radius : 6px !important;
+}
+div#usersManagementPortletContainer a.tag-remove {
+	/* margin-left : 5px; */
+	font-size : 14px;
+	padding: 3px 0px 3px 2px;
+	/* margin-top : 4px; */
+}
+div#usersManagementPortletContainer div#requestsAcceptanceBody > div.row:first-of-type > div.text-core > div.text-wrap > div.text-tags > div.text-tag:not(:last-of-type){
+	margin-right : 15px !important;
+}
+div#usersManagementPortletContainer span#textAboveTagsInput> div.row div.text-tags > div.text-tag:not(:last-of-type),
+div#usersManagementPortletContainer span#textAboveTagsInputInAssignRolesModal> div.row div.text-tags > div.text-tag:not(:last-of-type),
+div#usersManagementPortletContainer span#textAboveTagsInputInAssignUsersToGroupsModal> div.row div.text-tags > div.text-tag:not(:last-of-type){
+	margin-right : 15px !important;
+}
+div#usersManagementPortletContainer a.tag-remove:hover {
+	/* background : white;
+	background-color : white; */
+	text-decoration : none;
+	color: red;
+}
+div#usersManagementPortletContainer span#textAboveTagsInput div.row:nth-last-child(-n+2) div.text-core.span9 div.text-wrap div.text-dropdown.text-position-below,
+div#usersManagementPortletContainer span#textAboveTagsInputInAssignRolesModal div.row:nth-last-child(-n+2) div.text-core.span9 div.text-wrap div.text-dropdown.text-position-below,
+div#usersManagementPortletContainer span#textAboveTagsInputInAssignUsersToGroupsModal div.row:nth-last-child(-n+2) div.text-core.span9 div.text-wrap div.text-dropdown.text-position-below {
+	margin-left: -5px;
+    top: 100% !important;
+}
+div#usersManagementPortletContainer textarea#userNamesList {
+	width :100% !important;
+	display : none !important;
+}
+div#usersManagementPortletContainer textarea#userNamesListInAssignRolesModal,
+div#usersManagementPortletContainer textarea#userNamesListInAssignUsersToGroupsModal {
+	width :100% !important;
+	display : none !important;
+}
+div#usersManagementPortletContainer div.text-tags {
+	padding-top:0px !important;
+	padding-bottom:0px !important;
+	padding-left : 0px !important;
+}
+div#usersManagementPortletContainer div.text-button {
+	background : rgb(234,234,234) !important;
+	background-color : rgb(234,234,234) !important;
+	border : 0px !important;
+	text-align : 
+}
+div#usersManagementPortletContainer div.text-button span {
+	padding-top : 7px;
+	display : inline-block;
+	text-align: center;
+	font-size : 14px;
+	color: #0271be;
+	white-space : nowrap;
+}
+div.modal-body div.row ~ div.row div.text-button span {
+	/* text-transform : capitalize; */
+}
+div#usersManagementPortletContainer a.text-remove {
+	display : none !important;
+}
+div#usersManagementPortletContainer div.text-button.span12 {
+	border-radius : 7px;
+}
+div#usersManagementPortletContainer div#requestsAcceptanceBody > div.row > div.text-core.span11 > div.text-wrap {
+	position: static !important;
+}
+div#usersManagementPortletContainer div#requestsAcceptanceBody > div.row > div.text-core.span11 > div.text-wrap > div.text-tags{
+	position : static;
+}
+div#usersManagementPortletContainer input#singleTag {
+	margin-top : 0px;
+	margin-left : 10px;
+}
+div#usersManagementPortletContainer div#singleTagSection.hiddenSection,
+div#usersManagementPortletContainer  div#multipleTagsSection.hiddenSection,
+div#usersManagementPortletContainer div#singleTagSectionInAssignRolesModal.hiddenSection, 
+div#usersManagementPortletContainer  div#multipleTagsSectionInAssignRolesModal.hiddenSection,
+div#usersManagementPortletContainer div#singleTagSectionInAssignUsersToGroupsModal.hiddenSection, 
+div#usersManagementPortletContainer  div#multipleTagsSectionInAssignUsersToGroupsModal.hiddenSection{
+	display :none;
+}
+.recipients .text-tag,
+.emailCBCContainer .text-tag {
+	margin-right: 1em;
+	margin-bottom: 0.5em;
+}

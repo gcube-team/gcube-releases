@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.resource-registry.1-4-0" date="2017-06-12">
+		<Change>Removed uneeded dependecies declaration (thinkerpopo frames)</Change>
+		<Change>Added Context UUID cache</Change>
+		<Change>Added Source Resource in relation including only header. This reflect the behaviour set on jackson marshalling.</Change>
+		<Change>Implemented possibility to create a relation and target entity with one call.</Change>
+		<Change>Defined custom pattern (defined in is-model) for DateTimeFormat to support timezone. The value is also changed on DB configuration when the database is created.</Change>
+		<Change>Creating an admin with specific username (get from configuration file) instead of the default one 'admin'</Change>
+		<Change>Deprecated properties are not get configuration file anymore</Change>
+		<Change>Defined Connection Strategy to server as global constant of thew registry</Change>
+		<Change>Refactored some code for ER creation/update</Change>
+		<Change>Extemded Exception management to throw ERAvailableInAnotherContext wich is usef for clients</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry.1-3-0" date="2017-03-16">
+		<Change>Added API Remove From Context</Change>
+		<Change>Added API to support Entity-Relation navigation</Change>
+		<Change>Added API to get the list of ER types and their own schema</Change>
+		<Change>Added support for Propagation Constraint</Change>
+		<Change>Added ResourceRegistryException serialization</Change>
+		<Change>Full Code Redesign</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry.1-2-0" date="2016-12-16">
+		<Change>Added API AddToContext</Change>
+		<Change>Added support for referentail Integrity Directive</Change>
+		<Change>Added API to support update Resource (with all facets)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry.1-1-0" date="2016-11-03">
+		<Change>Improved code quality</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry.1-0-0" date="2016-07-27">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

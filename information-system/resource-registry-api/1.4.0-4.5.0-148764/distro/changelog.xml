@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.resource-registry-api.1-4-0" date="${buildDate}">
+		<Change>Added ERAvalailableInanotherContext exception and its hierarchy to improve context management of ERs</Change>
+		<Change>Imporved HTTPCall class to support HEAD methods and Exception managements in such a case</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-api.1-3-0" date="2017-03-16">
+		<Change>Added HTTP utilities for clients implementations</Change>
+		<Change>Added ResourceRegistryException json serialization</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-api.1-2-0" date="2016-12-16">
+		<Change>Added API AddToContext</Change>	
+		<Change>Added API to support update Resource (with all facets)</Change>
+		<Change>Reaourganized Exceptions</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-api.1-1-0" date="2016-11-03">
+		<Change>Improved code quality</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-api.1-0-0" date="2016-07-27">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

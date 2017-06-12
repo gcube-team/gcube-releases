@@ -1,0 +1,14 @@
+{{GATEWAY_NAME}}
+----------------------------------
+{{USER_FULLNAME}} would like to access {{SELECTED_VRE_NAME}} VRE, please manage this request:
+
+{{MANAGE_REQUEST_URL}}
+
+Further info about {{USER_FULLNAME}}:
+
+Email: {{USER_EMAIL}}
+Username: {{USER_ID}}
+Optional message:
+{{OPTIONAL_MESSAGE}}
+
+You received this email because you are a manager of {{SELECTED_VRE_NAME}}.

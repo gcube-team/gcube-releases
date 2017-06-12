@@ -1,0 +1,58 @@
+<project default="deploy" name="org.gcube.common.informationsystem.client" basedir=".">
+<property environment="env" />
+<property name="globus.location" location="${env.GLOBUS_LOCATION}"/>
+<property name="package.root" value="org/gcube/common"/>
+<target name="clean">
+	<delete dir="./build" />
+</target>
+
+<target name="compile" depends="clean">
+	<mkdir dir="./build"/>
+	<copy todir="./build/">
+	 <fileset dir="./src">
+                 <include name="org/**/*.properties"/>
+	 </fileset>
+	 </copy>
+        <javac srcdir="./src" destdir="./build" source="1.5" target="1.5">
+        	<include name="org/**/*.java"/>
+        	<exclude name="org/gcube/common/informationsystem/client/test/**"/>            
+            <classpath>
+				<fileset dir="${globus.location}/lib">
+                    <include name="*.jar"/>
+                </fileset>
+
+            </classpath>	    
+        </javac>
+</target>
+<target name="makeJar" depends="compile">
+	<mkdir dir="./lib"/>
+         <jar jarfile="./lib/org.gcube.common.informationsystem.client.jar" basedir="./build">
+                <include name="**/*.class"/>
+				<include name="**/*.properties"/>
+         </jar>
+
+</target>
+
+<target name="deploy" depends="makeJar">
+		<copy todir="${env.GLOBUS_LOCATION}/lib">
+			<fileset dir="./lib">
+			       <include name="*.jar"/>
+			</fileset>
+		</copy>
+		<delete file="./lib/*.jar" />
+</target>
+
+<target name="javadoc">
+<mkdir dir="doc/api" />
+
+<javadoc access="public" author="true" destdir="doc/api" doctitle="IS-Client" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="${package.root}.*" source="1.5" sourcepath="./src" splitindex="true" use="true" version="true">
+<classpath>
+			<fileset dir="${env.GLOBUS_LOCATION}/lib">
+				<include name="*.jar" />
+				<exclude name="${lib.jar}" />
+			</fileset>
+</classpath>
+</javadoc>
+</target>
+
+</project>

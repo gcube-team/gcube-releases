@@ -1,0 +1,183 @@
+/* .adminContainer #InternalServerErrorModal {
+	border-radius: 1.1em;
+	padding-bottom: 1em;
+}
+.adminContainer #InternalServerErrorModal .modal-header {
+	border-bottom: 0px;
+	background: #0271BE;
+	background-color: #0271BE;
+	color: #fff;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+}
+.adminContainer #InternalServerErrorModal .close {
+    color: #fff;
+    opacity: 1;
+    font-size: 1.2em;
+}
+.adminContainer #InternalServerErrorModal .close:hover {
+    color: #aaeeff !important;
+}
+.adminContainer #InternalServerErrorModal  .modal-body {
+	background: #fff;
+	background-color: #fff;
+}
+.adminContainer #InternalServerErrorModal .modal-footer {
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+	border-top: none;	
+	display: block;
+	width: 100%;
+	padding: 0.5em 0em 1em 0em;
+	background: #fff;
+	background-color: #fff;
+}
+.adminContainer #InternalServerErrorModal .modal-footer button {
+	color : #fff;
+	background: #0271BE;
+	background-color: #0271BE;
+	border-radius: 0.4em;
+	padding: 0.4em;
+	margin-right: 1em;
+	font-weight: normal;
+	font-size: 17px;
+	border:none;
+}
+.adminContainer #InternalServerErrorModal .modal-footer button:hover {
+	color : #0271BE;
+	background: #eeeeee;
+	background-color: #eeeeee;
+} */
+.adminContainer .modal.fade {
+	border-radius: 1.1em;
+	padding-bottom: 1em;
+}
+.adminContainer .layersModal.modal.fade .modal-header {
+	color:white;
+	background-color: white;
+}
+.adminContainer .modal.fade .modal-header {
+	border-bottom: 0px;
+	background: #0271BE;
+	background-color: #0271BE;
+	color: #fff;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+}
+.adminContainer .modal.fade .close {
+	color: #fff;
+    opacity: 0.9;
+    font-size: 1.2em;
+}
+.adminContainer .modal.fade .close:hover {
+    color: #aaeeff !important;
+}
+.adminContainer .modal.fade  .modal-body {
+	background: #fff;
+	background-color: #fff;
+	max-height: 470px;
+}
+.adminContainer .modal.fade .modal-footer {
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+	border-top: none;	
+	display: block;
+	width: 100%;
+	padding: 0.5em 0em 1em 0em;
+	background: #fff;
+	background-color: #fff;
+}
+
+/*.adminContainer .modal.fade .modal-footer button {
+	color : #fff;
+	background: #0271BE;
+	background-color: #0271BE;
+	border-radius: 0.4em;
+	padding: 0.4em;
+	margin-right: 1em;
+	font-weight: normal;
+	font-size: 17px;
+	border:none;
+}
+.adminContainer .modal.fade .modal-footer button:hover {
+	color : #0271BE;
+	background: #eeeeee;
+	background-color: #eeeeee;
+}*/
+
+/*** Edit layer modal ***/
+#editLayerModal {
+	width: 25%;
+	left: 0;
+	margin-left: 37.5%;
+}
+#editLayerModal .modal-body {
+	font-size: 0.8em;
+	max-height: none;
+}
+#editLayerModal .layerModalTitle {
+	margin: 0;
+	color: #fff;
+}
+#editLayerModal .layerToEditName {
+	color: #fff;
+}
+#editLayerModal .blueLineBottom{
+	background: #0271BE;
+	background-color: #0271BE;
+	padding:0.3em 0.3em 0 0.3em;
+	border-top-right-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+}
+#editLayerModal .modal-header {
+	padding: 0.5em;
+}
+#editedLayerDescription {
+	border-radius:0.5em;
+}
+#editLayerModal .ediLayerPropertiesContainer:not(last-of-type) {
+	margin-bottom: 1em;
+}
+#editLayerModal .editLayerLabels {
+	color : #777;
+}
+#editLayerModal .progressContainer {
+	width:220px;
+	text-align: center;
+}
+#editLayerModal .ieowjMessage{
+	color: #777;
+	opacity: 0.7;
+	
+}
+#editLayerModal .progress {
+	border-radius: .5em;
+	margin-top : .5em;
+}
+
+#editLayerModal .modal-footer {
+	padding:0
+}
+#editLayerModal #editLayerModalDeleteLayer {
+	float: left;
+    margin-left: 1em;
+}
+/* #tagsContainer {
+	max-width: 220px;
+} */
+.layersTagsInputTagsContainer{
+	max-width:220px;
+}
+#tagsContainer .bootstrap-tagsinput {
+	float:right;
+	width: 206px;
+}
+#RenderLayerInMapModal {
+	width: 80%;
+	left: 0;
+	margin-left: 10%;
+	height: 65%;
+}
+#RenderLayerInMapModal .modal-body {
+	max-height: none;
+}

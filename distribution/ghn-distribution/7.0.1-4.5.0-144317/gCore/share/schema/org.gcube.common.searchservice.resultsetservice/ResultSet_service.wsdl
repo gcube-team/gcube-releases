@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ResultSet" targetNamespace="http://gcube.org/common/searchservice/ResultSetService/service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:binding="http://gcube.org/common/searchservice/ResultSetService/bindings" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:import namespace="http://gcube.org/common/searchservice/ResultSetService/bindings" location="ResultSet_bindings.wsdl"/>
+  <wsdl:service name="ResultSetService">
+    <wsdl:port name="ResultSetPortTypePort" binding="binding:ResultSetPortTypeSOAPBinding">
+      <soap:address location="http://localhost:8080/wsrf/services/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

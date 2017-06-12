@@ -1,0 +1,5 @@
+<ReleaseNotes>	
+	<Changeset component="org.gcube.portal.plugins.session-timeout-hook.1-0-0" date="2016-11-15">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

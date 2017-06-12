@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>maven-parent</artifactId>
+    <groupId>org.gcube.tools</groupId>
+    <version>1.0.0</version>
+  </parent>
+  <groupId>org.gcube.application</groupId>
+  <artifactId>aquamapsservice</artifactId>
+  <version>5.0.7-4.5.0-132827</version>
+  <name>AquaMaps Service</name>
+   <properties>
+   		<stubsArtifactId>aquamapsservice-stubs</stubsArtifactId>
+		<serviceArtifactId>aquamapsservice-service</serviceArtifactId>
+   
+   
+		<wsdlDirectory>${project.basedir}/../wsdl</wsdlDirectory>
+		<wsdlOutputDirectory>${project.basedir}/../target/generated-sources/wsdl</wsdlOutputDirectory>
+		<configDirectory>${project.basedir}/../config</configDirectory>
+		<distroDirectory>${project.basedir}/../distro</distroDirectory>
+		<namespace>http://gcube-system.org/namespaces/application/aquamaps</namespace>
+	</properties>
+	
+	
+	<build>
+
+		<!-- defines basic configuration for the service plugin -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.gcube.tools</groupId>
+					<artifactId>maven-service-plugin</artifactId>
+					<version>1.2.0</version>
+					<configuration>
+						<serviceId>aquamapsservice</serviceId>
+						<basePackage>org.gcube.application.aquamaps.aquamapsservice</basePackage>
+						<wsdlDirectory>${wsdlDirectory}</wsdlDirectory>
+						<wsdlOutputDirectory>${wsdlOutputDirectory}</wsdlOutputDirectory>
+						<configurationDirectory>${configDirectory}</configurationDirectory>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+	</build>
+	<packaging>pom</packaging>
+	<modules>
+		<module>aquamapsservice-stubs</module>
+		<module>aquamapsservice-service</module>
+	</modules>
+	
+	<dependencyManagement>
+    <dependencies>
+       <dependency>
+           <groupId>org.gcube.distribution</groupId>
+           <artifactId>maven-bom</artifactId>
+           <version>2.2.1-4.5.0-148648</version>
+           <type>pom</type>
+           <scope>import</scope>		
+      </dependency>
+   </dependencies>
+</dependencyManagement>
+	<description>gCube Service for AquaMaps Suite.</description>
+	<scm>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/trunk/application/AquaMaps/${project.artifactId}</url>
+	</scm>
+</project>

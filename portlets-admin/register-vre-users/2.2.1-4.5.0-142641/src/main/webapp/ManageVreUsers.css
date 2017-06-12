@@ -1,0 +1,10 @@
+@import url(newtheme.css);
+@import url(coherence.css);
+.approve-icon { 
+	background-image:url(images/vre_approve.png) !important; 
+}
+
+.loading-indicator {
+	background-position: 5px 50%;
+	background-image: url("images/loader.gif");
+}

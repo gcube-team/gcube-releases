@@ -1,0 +1,179 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def fontFamily value('theme.grid.columnHeader.text.family');
+@def fontSize value('theme.grid.columnHeader.text.size');
+@def textColor value('theme.grid.columnHeader.text.color');
+@def fontWeight value('theme.grid.columnHeader.text.weight');
+
+@def lineHeight value('theme.grid.columnHeader.lineHeight');
+
+@def padding value('theme.grid.columnHeader.padding');
+
+@def gradient value('theme.grid.columnHeader.gradient');
+@def overGradient value('theme.grid.columnHeader.overGradient');
+
+@def borderWidth value('theme.grid.columnHeader.borderWidth', 'px');
+@def borderColor value('theme.grid.columnHeader.borderColor');
+@def borderStyle value('theme.grid.columnHeader.borderStyle');
+
+@def menuWidth value('theme.grid.columnHeader.menuButtonWidth', 'px');
+
+@def menuGradient value('theme.grid.columnHeader.menuGradient');
+@def menuBorderWidth value('theme.grid.columnHeader.menuBorder.toString');
+@def menuBorderStyle value('theme.grid.columnHeader.menuBorder.style');
+@def menuBorderColor value('theme.grid.columnHeader.menuBorder.color');
+
+@def menuHoverGradient value('theme.grid.columnHeader.menuHoverGradient');
+@def menuHoverBorderWidth value('theme.grid.columnHeader.menuHoverBorder.toString');
+@def menuHoverBorderStyle value('theme.grid.columnHeader.menuHoverBorder.style');
+@def menuHoverBorderColor value('theme.grid.columnHeader.menuHoverBorder.color');
+
+@def menuActiveGradient value('theme.grid.columnHeader.menuActiveGradient');
+@def menuActiveBorderWidth value('theme.grid.columnHeader.menuActiveBorder.toString');
+@def menuActiveBorderStyle value('theme.grid.columnHeader.menuActiveBorder.style');
+@def menuActiveBorderColor value('theme.grid.columnHeader.menuActiveBorder.color');
+
+.headerInner {}
+.header {
+  cursor: default;
+  padding: 0px 0 0 0;
+
+  overflow:hidden;
+
+  background: -webkit-linear-gradient(top, gradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, gradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, gradient); /* IE10+ */
+  background: linear-gradient(to bottom, gradient); /* W3C */
+
+  border-style: borderStyle;
+  border-width: borderWidth 0 0;
+  border-color: borderColor;
+}
+
+.headRow .head {
+  line-height: lineHeight;
+  vertical-align: top;
+
+  -moz-outline: none;
+  -moz-user-focus: normal;
+  outline: 0 none;
+
+  font-family: fontFamily;
+  font-size: fontSize;
+  font-weight: fontWeight;
+  color: textColor;
+
+  border-style: borderStyle;
+  border-color: borderColor;
+  border-width: 0 borderWidth borderWidth 0;
+}
+
+.headInner {
+  overflow: hidden;
+  zoom: 1;
+  padding: padding;
+
+  cursor: inherit;
+  position: relative;
+  vertical-align: middle;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.head {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: ignore;
+}
+
+.headButton {
+  background: literal('url(')value('columnHeaderBtn.getSafeUri.asString',')') no-repeat center center, -webkit-linear-gradient(top, menuGradient); /* Chrome10+,Safari5.1+ */
+  background: literal('url(')value('columnHeaderBtn.getSafeUri.asString',')') no-repeat center center, -o-linear-gradient(top, menuGradient); /* Opera 11.10+ */
+  background: literal('url(')value('columnHeaderBtn.getSafeUri.asString',')') no-repeat center center, -ms-linear-gradient(top, menuGradient); /* IE10+ */
+  background: literal('url(')value('columnHeaderBtn.getSafeUri.asString',')') no-repeat center center, linear-gradient(to bottom, menuGradient); /* W3C */
+
+  border-width: menuBorderWidth;
+  border-style: menuBorderStyle;
+  border-color: menuBorderColor;
+
+  background-position: center center;
+
+  display: none;
+  position: absolute;
+  width: menuWidth;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  cursor: pointer;
+  outline: none;
+}
+
+.headOver .headButton,.headMenuOpen .headButton {
+  display: block;
+}
+
+.headOver .headButton {
+  background: literal('url(')value('columnHeaderBtn.getSafeUri.asString',')') no-repeat center center, -webkit-linear-gradient(top, menuHoverGradient); /* Chrome10+,Safari5.1+ */
+  background: literal('url(')value('columnHeaderBtn.getSafeUri.asString',')') no-repeat center center, -o-linear-gradient(top, menuHoverGradient); /* Opera 11.10+ */
+  background: literal('url(')value('columnHeaderBtn.getSafeUri.asString',')') no-repeat center center, -ms-linear-gradient(top, menuHoverGradient); /* IE10+ */
+  background: literal('url(')value('columnHeaderBtn.getSafeUri.asString',')') no-repeat center center, linear-gradient(to bottom, menuHoverGradient); /* W3C */
+
+  border-width: menuHoverBorderWidth;
+  border-style: menuHoverBorderStyle;
+  border-color: menuHoverBorderColor;
+}
+
+.headMenuOpen .headButton {
+  background: literal('url(')value('columnHeaderBtn.getSafeUri.asString',')') no-repeat center center, -webkit-linear-gradient(top, menuActiveGradient); /* Chrome10+,Safari5.1+ */
+  background: literal('url(')value('columnHeaderBtn.getSafeUri.asString',')') no-repeat center center, -o-linear-gradient(top, menuActiveGradient); /* Opera 11.10+ */
+  background: literal('url(')value('columnHeaderBtn.getSafeUri.asString',')') no-repeat center center, -ms-linear-gradient(top, menuActiveGradient); /* IE10+ */
+  background: literal('url(')value('columnHeaderBtn.getSafeUri.asString',')') no-repeat center center, linear-gradient(to bottom, menuActiveGradient); /* W3C */
+
+  border-width: menuActiveBorderWidth;
+  border-style: menuActiveBorderStyle;
+  border-color: menuActiveBorderColor;
+}
+
+.headOver .headInner, .headMenuOpen .headInner {
+  background: -webkit-linear-gradient(top, overGradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, overGradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, overGradient); /* IE10+ */
+  background: linear-gradient(to bottom, overGradient); /* W3C */
+}
+
+@eval max com.sencha.gxt.themebuilder.base.client.CssResourceThemeUtils.maxPxSize(sortAscHeaderIcon().getHeight(),sortDescHeaderIcon().getHeight());
+
+.sortIcon {
+  background-repeat: no-repeat;
+  display: none;
+  height: max;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+.sortAsc .sortIcon, .sortDesc .sortIcon {
+  display: inline;
+}
+
+@sprite .sortAsc .sortIcon {
+  gwt-image: 'sortAscHeaderIcon';
+}
+
+@sprite .sortDesc .sortIcon {
+  gwt-image: 'sortDescHeaderIcon';
+}
+
+@sprite .columnMoveTop {
+  gwt-image: 'columnMoveTop';
+}
+
+@sprite .columnMoveBottom {
+  gwt-image: 'columnMoveBottom';
+}

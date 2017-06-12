@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<!-- 
+  Portions of this file Copyright 1999-2005 University of Chicago
+  Portions of this file Copyright 1999-2005 The University of Southern California.
+  
+  This file or a portion of this file is licensed under the
+  terms of the Globus Toolkit Public License, found at
+  http://www.globus.org/toolkit/download/license.html.
+  If you redistribute this file, with or without
+  modifications, you must include this notice in the file.
+-->
+
+<!-- ===================================================================
+
+   Build File for Deploying Java WS Core into Tomcat
+
+Notes:
+   This is a build file for use with the Jakarta Ant build tool.
+
+Prerequisites:
+
+   jakarta-ant from http://jakarta.apache.org
+
+Build Instructions:
+   To build, run
+
+     java org.apache.tools.ant.Main <target>
+
+   on the directory where this file is located with the target you want.
+
+Copyright:
+Copyright (c) 1999 University of Chicago and The University of 
+Southern California. All Rights Reserved.
+
+==================================================================== -->
+
+<project default="deployTomcat" basedir=".">
+    
+    <description>
+        This build script may be used to deploy the toolkit into
+        Tomcat.
+
+        The targets in this script honor the following parameters:
+
+        deployTomcat:
+        deploySecureTomcat:
+        redeployTomcat:
+        redeploySecureTomcat:
+
+           - deploy.dir    The installation directory to deploy
+                           from. Defaults to $GLOBUS_LOCATION.
+           - tomcat.dir    The root directory of the Tomcat
+                           installation.
+        war:
+
+           - deploy.dir    The installation directory to use for
+                           generating the war file. Defaults to
+                           $GLOBUS_LOCATION.
+           - war.file      The name of the war file to create.
+
+    </description>
+    <property name="env.GLOBUS_LOCATION" value="../../../"/>
+    <property name="deploy.dir" location="${env.GLOBUS_LOCATION}"/>
+    <property name="abs.deploy.dir" location="${deploy.dir}"/>
+
+    <property name="webapp.name" value="wsrf"/>
+
+    <!-- =================================================================== -->
+    <!-- Tomcat deployment                                                   -->
+    <!-- =================================================================== -->
+
+    <target name="_baseTomcatDeploy">
+        <fail message="Must specify -Dtomcat.dir=&lt;tomcat root&gt;" 
+            unless="tomcat.dir"/>
+        <available file="${tomcat.dir}" type="dir" property="tomcat.dir.exists"/>
+        <fail message="${tomcat.dir} directory does not exists" 
+            unless="tomcat.dir.exists"/>
+
+        <mkdir dir="${webapp.dir}" />
+        <copy toDir="${webapp.dir}" >
+            <fileset dir="${abs.deploy.dir}" casesensitive="yes">
+                <include name="share/schema/**"/>
+            </fileset>
+        </copy>
+
+        <mkdir dir="${webapp.webinf.dir}" />
+        <copy toDir="${webapp.webinf.dir}" >
+            <fileset dir="${abs.deploy.dir}" casesensitive="yes">
+                <include name="etc/**"/>
+                <exclude name="etc/globus_packages/**"/>
+                <exclude name="etc/gpt/**"/>
+                <exclude name="etc/globus_core/**"/>
+                <exclude name="etc/ssh/**"/>
+                <include name="libexec/**"/>
+            </fileset>
+        </copy>
+
+        <chmod perm="755">
+           <fileset dir="${webapp.webinf.dir}">
+               <include name="libexec/**"/>
+           </fileset>
+        </chmod>
+
+        <mkdir dir="${webapp.webinf.dir}/classes" />
+        <copy toDir="${webapp.webinf.dir}/classes" >
+            <fileset dir="${abs.deploy.dir}" casesensitive="yes">
+                <include name="client-config.wsdd"/>
+            </fileset>
+        </copy>
+        <copy file="${abs.deploy.dir}/container-log4j.properties" 
+            toFile="${webapp.webinf.dir}/classes/log4j.properties"/>
+
+        <mkdir dir="${webapp.webinf.lib.dir}" />
+        <copy file="${basedir}/web.xml" toDir="${webapp.webinf.dir}"/>
+
+        <copy file="${abs.deploy.dir}/lib/xalan.jar" 
+            toDir="${tomcat.dir}/common/endorsed" 
+            failonerror="false"/>
+
+    </target>
+
+    <target name="deployTomcat" 
+        description="Deploy GT4 into Tomcat. Must specify -Dtomcat.dir=&lt;tomcat root&gt;">
+        <property name="webapp.dir" value="${tomcat.dir}/webapps/${webapp.name}"/>
+        <property name="webapp.webinf.dir" value="${webapp.dir}/WEB-INF"/>
+        <property name="webapp.webinf.lib.dir" value="${webapp.webinf.dir}/lib"/>
+
+        <antcall target="_baseTomcatDeploy"/>
+
+        <copy toDir="${webapp.webinf.lib.dir}" >
+            <fileset dir="${abs.deploy.dir}/lib" casesensitive="yes">
+                <include name="*.jar"/>
+                <include name="*.zip"/>
+                <exclude name="servlet.jar"/>
+                <exclude name="xml-apis.jar"/>
+            </fileset>
+        </copy>
+
+    </target>
+
+    <target name="redeployTomcat"
+        description="Redeploy GT4 into Tomcat. Must specify -Dtomcat.dir=&lt;tomcat root&gt;">
+        <fail message="Must specify -Dtomcat.dir=&lt;tomcat root&gt;" 
+            unless="tomcat.dir"/>
+        <delete dir="${tomcat.dir}/webapps/${webapp.name}"/>
+        <antcall target="deployTomcat" />
+    </target>
+
+    <!-- =================================================================== -->
+    <!-- Tomcat deployment with transport security                           -->
+    <!-- =================================================================== -->
+
+    <target name="deploySecureTomcat" 
+        description="Deploy GT4 into Tomcat with transport security. Must specify -Dtomcat.dir=&lt;tomcat root&gt;">
+        <property name="webapp.dir" value="${tomcat.dir}/webapps/${webapp.name}"/>
+        <property name="webapp.webinf.dir" value="${webapp.dir}/WEB-INF"/>
+        <property name="webapp.webinf.lib.dir" value="${webapp.webinf.dir}/lib"/>
+
+        <antcall target="_baseTomcatDeploy"/>
+
+        <copy toDir="${webapp.webinf.lib.dir}" >
+            <fileset dir="${abs.deploy.dir}/lib" casesensitive="yes">
+                <include name="*.jar"/>
+                <include name="*.zip"/>
+                <exclude name="servlet.jar"/>
+                <exclude name="xml-apis.jar"/>
+                <exclude name="cog-tomcat.jar"/>
+                <exclude name="cog-jglobus.jar"/>
+                <exclude name="cryptix.jar"/>
+                <exclude name="cryptix-asn1.jar"/>
+                <exclude name="cryptix32.jar"/>
+                <exclude name="jce-jdk13-125.jar"/>
+                <exclude name="jgss.jar"/>
+                <exclude name="puretls.jar"/>
+                <exclude name="log4j-1.2.8.jar"/>
+                <exclude name="commons-logging.jar"/>
+            </fileset>
+        </copy>
+
+        <copy toDir="${tomcat.dir}/common/lib" >
+            <fileset dir="${abs.deploy.dir}/lib" casesensitive="yes">
+                <include name="cog-jglobus.jar"/>
+                <include name="xml-apis.jar"/>
+                <include name="cryptix.jar"/>
+                <include name="cryptix-asn1.jar"/>
+                <include name="cryptix32.jar"/>
+                <include name="jce-jdk13-125.jar"/>
+                <include name="jgss.jar"/>
+                <include name="log4j-1.2.8.jar"/>
+                <include name="puretls.jar"/>
+            </fileset>
+        </copy>
+
+        <copy file="${abs.deploy.dir}/lib/cog-tomcat.jar" 
+            toDir="${tomcat.dir}/server/lib" 
+            failonerror="false"/>
+
+        <replace file="${webapp.webinf.dir}/etc/globus_wsrf_core/server-config.wsdd">
+            <replacetoken><![CDATA[<!-- @TOMCAT_SEC_HANDLER@ -->]]></replacetoken>
+            <replacevalue><![CDATA[<handler type="java:org.globus.wsrf.impl.security.authentication.transport.TomcatTransportSecurityHandler"/>]]></replacevalue>
+        </replace>
+    </target>
+
+    <target name="redeploySecureTomcat"
+        description="Redeploy GT4 into Tomcat (transport security enabled). Must specify -Dtomcat.dir=&lt;tomcat root&gt;">
+        <fail message="Must specify -Dtomcat.dir=&lt;tomcat root&gt;" 
+            unless="tomcat.dir"/>
+        <delete dir="${tomcat.dir}/webapps/${webapp.name}"/>
+        <delete>
+            <fileset dir="${tomcat.dir}/common/lib" casesensitive="yes">
+                <include name="cog-jglobus.jar"/>
+                <include name="xml-apis.jar"/>
+                <include name="cryptix.jar"/>
+                <include name="cryptix-asn1.jar"/>
+                <include name="cryptix32.jar"/>
+                <include name="jce-jdk13-125.jar"/>
+                <include name="jgss.jar"/>
+                <include name="log4j-1.2.8.jar"/>
+                <include name="puretls.jar"/>
+            </fileset>
+        </delete>
+        <delete file="${tomcat.dir}/server/lib/cog-tomcat.jar"/>
+        <antcall target="deploySecureTomcat" />
+    </target>
+
+    <!-- =================================================================== -->
+    <!-- This target generates the war file that should run in any servlet   -->
+    <!-- container. Some shared files might need to be installed separately  -->
+    <!-- =================================================================== -->
+
+    <target name="war" 
+        description="Creates a war file. Must specify -Dwar.file=&lt;war file path&gt;">
+        <fail message="Must specify -Dwar.file=&lt;war file path&gt;" 
+            unless="war.file"/>
+        <mkdir dir="temp-tomcat"/>
+        <antcall target="deployTomcat">
+            <param name="tomcat.dir" value="temp-tomcat"/>
+        </antcall>
+        <war destfile="${war.file}"
+            webxml="temp-tomcat/webapps/${webapp.name}/WEB-INF/web.xml" 
+            excludes="WEB-INF/web.xml" 
+            basedir="temp-tomcat/webapps/${webapp.name}"/>
+        <delete dir="temp-tomcat"/>
+    </target>
+
+</project>

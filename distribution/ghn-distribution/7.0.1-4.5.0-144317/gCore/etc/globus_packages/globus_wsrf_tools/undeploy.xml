@@ -1,0 +1,16 @@
+<project default="undeploy" basedir=".">
+
+
+<property environment="env"/>
+<property file="build.properties"/>
+<property file="${user.home}/build.properties"/>
+<property name="env.GLOBUS_LOCATION" value="../../.."/>
+<property name="deploy.dir" value="${env.GLOBUS_LOCATION}"/>
+
+
+<target name="undeploy">
+  <delete verbose="true" dir="${deploy.dir}/etc/globus_wsrf_tools"/>
+  <delete verbose="true" file="${deploy.dir}/lib/wsrf_tools.jar"/>
+  <delete verbose="true" dir="${deploy.dir}/share/globus_wsrf_tools"/>
+</target>
+</project>

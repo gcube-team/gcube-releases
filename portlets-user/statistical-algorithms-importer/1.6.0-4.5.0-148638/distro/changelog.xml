@@ -1,0 +1,29 @@
+<ReleaseNotes>
+	<Changeset component="${groupId}.${artifactId}.1-6-0" date="2017-06-12">
+		<Change>Support Java 8 compatibility [ticket #8541]</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-5-0" date="2017-02-15">
+		<Change>Updated PortalContext support[ticket #6279]</Change>
+		<Change>Added support only for file data type in output
+			parameter[ticket #7120]
+		</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-4-0" date="2016-12-01">
+		<Change>Updated Storage support</Change>
+		<Change>Added PortalContext</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-3-0" date="2016-10-01">
+		<Change>SAI enhancements [Ticket #4896]</Change>
+		<Change>Updated to Auth 2.0</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-2-0" date="2016-10-01">
+		<Change>Update to Liferay 6.2</Change>
+		<Change>Added GitHub Connector</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-1-0" date="2016-05-01">
+		<Change>Fixed back button behavior [Ticket #3283]</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-0-0" date="2016-02-28">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

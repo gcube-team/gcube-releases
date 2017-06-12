@@ -1,0 +1,19 @@
+<web-app>
+	<display-name>Accounting Service</display-name>
+	<description>Accounting service</description>
+	<servlet>
+    	<servlet-name>org.gcube.data.publishing.accounting.service.AccountingResource</servlet-name>
+    	
+    	<init-param>
+			<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+			<param-value>true</param-value>
+		</init-param>
+    	
+    	
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>org.gcube.data.publishing.accounting.service.AccountingResource</servlet-name>
+        <url-pattern>/gcube/service/*</url-pattern>
+    </servlet-mapping>
+</web-app>
+
