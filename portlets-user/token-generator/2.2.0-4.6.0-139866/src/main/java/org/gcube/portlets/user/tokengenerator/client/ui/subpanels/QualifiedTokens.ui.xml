@@ -1,0 +1,97 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.buttons-commands {
+		margin-top: 5px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel width="100%">
+
+			<b:Hero ui:field="hero">
+				<b:Heading size="4">
+					About Qualified Token
+				</b:Heading>
+				<b:Paragraph ui:field="tokenDescription">It is a token associated with a
+					mnemonic label.
+					All the
+					operations performed with this token will be
+					accounted to
+					your user
+					profile. The mnemonic label will help you in
+					identifying
+					better your
+					different exploitation pattern of the
+					infrastructure
+					services.</b:Paragraph>
+			</b:Hero>
+
+			<!-- Gear to wait while qualified tokens are retrieved -->
+			<b:Icon type="GEAR" spin="true" ui:field="loaderIcon" visible="true" />
+
+			<!-- Error panel part when auth is not reachable -->
+			<g:VerticalPanel ui:field="serviceUnavailablePanel"
+				width="100%" visible="false">
+				<b:AlertBlock type="ERROR"
+					text="Sorry, it is not possible to contact the service!" close="false"></b:AlertBlock>
+			</g:VerticalPanel>
+
+			<b:Form width="100%" visible="false" ui:field="mainForm" type="VERTICAL">
+
+				<!-- List of already created qualified tokens -->
+				<b:ControlGroup ui:field="qualifiedTokensGroupPanel"
+					visible="false">
+					<b:ControlLabel for="qualifiedtokens">
+						<b>Your qualified Tokens</b>
+					</b:ControlLabel>
+					<b:Controls>
+						<b:ListBox alternateSize="XLARGE" b:id="qualifiedtokens"
+							width="97%" ui:field="createdQualifiedTokens">
+						</b:ListBox>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<!-- Show the selected token -->
+				<b:ControlGroup ui:field="showTokenControlGroup">
+					<b:ControlLabel for="token">
+						<b>Selected Qualified Token</b>
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox b:id="token" ui:field="tokenClear" readOnly="true"
+							visible="false"></b:TextBox>
+						<b:PasswordTextBox b:id="token" ui:field="tokenHide"
+							readOnly="true"></b:PasswordTextBox>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<!-- Create new qualified/application token textboxs -->
+				<b:ControlGroup ui:field="newQualifiedTokenGroup"
+					visible="false">
+					<b:ControlLabel for="qualifier">
+						<b>Qualifier</b>
+					</b:ControlLabel>
+					<b:Controls>
+						<b:TextBox b:id="qualifier" ui:field="tokenQualifierTextBox"
+							placeholder="Insert the qualifier"></b:TextBox>
+					</b:Controls>
+				</b:ControlGroup>
+
+				<b:AlertBlock ui:field="alertArea" visible="false"></b:AlertBlock>
+
+				<!-- Buttons -->
+				<g:FlowPanel styleName="{style.buttons-commands}">
+					<b:Button ui:field="createNewQualifiedToken" icon="PLUS"
+						block="false" title="Create a new qualified Token" visible="false">Qualified
+						Token</b:Button>
+					<b:Button ui:field="generateButton" visible="false" type="PRIMARY"
+						block="false" title="Generate a new qualified Token">Generate</b:Button>
+				</g:FlowPanel>
+
+				<g:FlowPanel styleName="{style.buttons-commands}">
+					<b:Button text="Show" ui:field="showToken"></b:Button>
+				</g:FlowPanel>
+			</b:Form>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

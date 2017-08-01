@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+.grid-row-red {
+	background-color: #FF8989 !important;
+}
+
+.grid-row-no-color{
+	background-color: #FFFFFF !important;
+}

@@ -1,0 +1,14 @@
+<accessRights>
+  <accessRightDefinitions>
+  	<accessRightDefinition id="e4690588-e2aa-11e4-b908-00155d10e309" parentId = "f01e410a-dd45-11e4-b908-00155d10e309" name = "CanViewUniverse" type = "View" class="Normal" description="" />
+  	<accessRightDefinition id="edf4aa52-e2aa-11e4-b908-00155d10e309" parentId = "f01e410a-dd45-11e4-b908-00155d10e309" name = "CanEditUniverse" type = "Edit" class="Normal" description="" />
+  	<accessRightDefinition id="d5714530-a012-11e5-8dba-00155d10e309" parentId = "a9950793-a012-11e5-8dba-00155d10e309" name = "CanEditUserOperations" type = "Edit" class="Normal" description="" />
+  	<accessRightDefinition id="a75937b4-e2be-11e4-b908-00155d10e309" parentId = "0ba724ad-75c1-4179-9e8e-04d7b3805f49" name = "CanEditDataImportPage" type = "Edit" class="Normal" description="" />
+  </accessRightDefinitions>
+  <accessRightHierarchy>
+  	 <accessRightStructure id="f01e410a-dd45-11e4-b908-00155d10e309" name="Universe" description="" />
+  	 <accessRightStructure id="a9950793-a012-11e5-8dba-00155d10e309" name="UserOperations" parentId = "f01e410a-dd45-11e4-b908-00155d10e309" description="" />
+ 	 <accessRightStructure id="80cefa33-dc78-11e4-b908-00155d10e309" name="Administration" parentId = "f01e410a-dd45-11e4-b908-00155d10e309" description="" />
+  	<accessRightStructure id="0ba724ad-75c1-4179-9e8e-04d7b3805f49" parentId="80cefa33-dc78-11e4-b908-00155d10e309" name="DataImportPage" description="" />
+  </accessRightHierarchy>
+</accessRights>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+	<portlet>
+		<portlet-name>Login</portlet-name>
+		<display-name>gCube Login Portlet</display-name>
+	        <portlet-class>org.gcube.portlets.user.gcubelogin.server.portlet.LoginPortlet</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/WEB-INF/jsp/LoginPortlet_view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>gCube Login Portlet</title>
+			<short-title>gCube Login Portlet</short-title>
+			<keywords>Login,Portlet</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>		
+	</portlet>
+</portlet-app>

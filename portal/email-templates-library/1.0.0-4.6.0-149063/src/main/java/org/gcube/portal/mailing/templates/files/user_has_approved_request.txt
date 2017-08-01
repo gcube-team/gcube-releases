@@ -1,0 +1,10 @@
+{{GATEWAY_NAME}}
+----------------------------------
+Hi {{REQUESTING_USER_FIRST_NAME}},
+
+{{USER_FULLNAME}} has approved your access request for {{SELECTED_VRE_NAME}} VRE.
+
+From now on you can access it at {{VRE_URL}} using your email {{REQUESTING_USER_EMAIL}}
+
+---
+You received this email because you requested access to {{SELECTED_VRE_NAME}} on {{MANAGE_REQUEST_DATE}}.

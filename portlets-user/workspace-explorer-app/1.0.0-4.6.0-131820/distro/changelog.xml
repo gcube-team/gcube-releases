@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.workspace-explorer-app.1-0-0"
+		date="2016-09-13">
+		<Change>first release</Change>
+	</Changeset>
+</ReleaseNotes>

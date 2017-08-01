@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+	     	XML Schema for GCUBE Running Instances Version 1.2 	Last modified: 29/04/2010 Contact: http://www.gcube-system.org
+		</xs:documentation>
+	</xs:annotation>
+	
+	<!-- RUNNING INSTANCE -->
+	
+	<xs:redefine schemaLocation="CommonTypeDefinitions.xsd">
+		<xs:complexType name="ProfileType">
+			<xs:complexContent>
+				<xs:restriction base="ProfileType">
+					<xs:sequence>
+						<xs:element name="Description" type="xs:string" minOccurs="0"/>
+						<xs:element name="Version" type="xs:string"/>
+						<xs:element ref="GHN"/>
+				  		<xs:element ref="Service"/>
+						<xs:element name="ServiceName" type="xs:string"/>
+						<xs:element name="ServiceClass" type="xs:string"/>						
+						<xs:element ref="RunningInstanceSecurity" minOccurs="0"/>
+						<xs:element ref="DeploymentData"/>
+						<xs:element name="RIEquivalenceFunctions" type="RIFunctionType" minOccurs="0"/>
+						<xs:element ref="AccessPoint"/>
+						<xs:element ref="SpecificData" minOccurs="0"/>
+						<xs:element ref="Accounting" minOccurs="0"/>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:redefine>
+	
+	<xs:complexType name="RunningInstanceSecurityType">
+		<xs:sequence>
+			<xs:element name="RunningInstanceIdentity" type="identity" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="EntryName" type="xs:string" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="DateType">
+		<xs:attribute name="value" type="xs:dateTime" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="RIFunctionType">
+		<xs:sequence>
+			<xs:element name="Function" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Name" type="xs:string"/>
+						<xs:element name="ActualParameters">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Param" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Name" type="xs:string"/>
+												<xs:element name="Value" type="xs:string" maxOccurs="unbounded"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="RunningInstanceSecurity">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RunningInstanceInterface" type="RunningInstanceSecurityType" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="AccessPoint">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="RunningInstanceInterfaces"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="GHN">
+		<xs:complexType>
+			<xs:attribute name="UniqueID" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="DeploymentData">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ActivationTime" type="DateType"/>
+				<xs:element name="TerminationTime" type="DateType" minOccurs="0"/>
+				<xs:element name="Status" type="xs:string" minOccurs="0"/>
+				<xs:element name="MessageState" type="xs:string" minOccurs="0"/>
+				<xs:element name="AvailablePlugins" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="Plugin" minOccurs="0" maxOccurs="unbounded"/>							
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RunningInstanceInterfaces">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Endpoint" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Endpoint">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:anyURI">
+					<xs:attribute name="EntryName" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FactoryURI" type="xs:anyURI"/>
+	
+	<xs:element name="Service">
+		<xs:complexType>
+			<xs:attribute name="UniqueID" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Plugin">
+		<xs:complexType>
+		<xs:sequence>			
+			<xs:element name="Service">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="Class" type="xs:string"/>
+					<xs:element name="Name" type="xs:string"/>
+					<xs:element name="Version" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+			<xs:element name="Package" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Version" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>			
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="Accounting">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="ScopedAccounting" minOccurs="0"  maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="ScopedAccounting">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TotalINCalls" type="xs:string" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="AverageINCalls" type="AverageType" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element name="AverageInvocationTime" type="AverageType" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element name="TopCallerGHN" type="TopCallerGHNType" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+			<xs:attribute name="scope" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="TopCallerGHNType">
+		<xs:sequence>
+			<xs:element name="GHNName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="avgHourlyCalls" type="xs:long" use="required"/>
+		<xs:attribute name="avgDailyCalls" type="xs:long" use="required"/>
+		<xs:attribute name="totalCalls" type="xs:long" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="AverageType">
+		<xs:attribute name="interval" type="xs:long" use="required"/>
+		<xs:attribute name="average" type="xs:double" use="required"/>
+	</xs:complexType>
+	
+	<xs:element name="SpecificData" type="FreeXMLType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+			insert here any other property you think is useful to describe a RI-specific feature
+			</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	
+</xs:schema>

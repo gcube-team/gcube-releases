@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel styleName="openOptionsPanel" ui:field="myPanel">
+		<table style="width: 790px; text-align: center;">
+			<tr>
+				<td>
+					<g:Image ui:field="loadingReport" />
+				</td>
+			</tr>		
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

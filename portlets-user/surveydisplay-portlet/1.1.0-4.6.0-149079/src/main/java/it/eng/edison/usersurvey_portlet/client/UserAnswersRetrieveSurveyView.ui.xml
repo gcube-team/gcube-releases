@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel ui:field="verticalPanel">
+			<b:WellForm ui:field="wellFormAnswer">
+				<b:Heading ui:field="titleSurveyHeading" size="3" />
+				<b:Controls ui:field="save">
+					<b:Button icon="ARROW_LEFT" visible="true"
+						ui:field="backToHomeSurveyButton">Back to Home</b:Button>
+					<b:Paragraph ui:field="mandatoryFieldParagraph">* Mandatory field</b:Paragraph>
+				</b:Controls>
+			</b:WellForm>
+
+			<b:WellForm ui:field="wellFormAnswerBottom">
+				<b:Controls ui:field="saveBottom">
+					<b:Button icon="ARROW_LEFT" visible="true"
+						ui:field="backToHomeSurveyButtonBottom">Back to Home</b:Button>
+					<b:Button icon="CHECK" visible="true" ui:field="sendAnswersSurveyButtonBottom">Send
+						Answers</b:Button>
+					<b:Paragraph ui:field="mandatoryFieldParagraphBottom">* Mandatory field</b:Paragraph>
+				</b:Controls>
+			</b:WellForm>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

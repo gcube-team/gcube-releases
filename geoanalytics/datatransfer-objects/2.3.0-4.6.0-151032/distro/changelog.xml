@@ -1,0 +1,27 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.geoanalytics.datatransfer-objects.0-0-1" date="2016-09-30">
+		<Change>Initial release</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.geoanalytics.datatransfer-objects.0-0-2" date="2016-11-24">
+		<Change>Removed the spatial repository</Change>
+		<Change>Support groups and groups' rights to projects</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.geoanalytics.datatransfer-objects.0-3-0" date="2017-03-03">
+		<Change>Added various datatransfer objects for importers and layer management.</Change>
+	</Changeset>
+		
+	<Changeset component="org.gcube.geoanalytics.datatransfer-objects.2-1-0" date="2017-04-20">
+		<Change>Fixed and added various datatransfer objects for importers and layer management.</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.geoanalytics.datatransfer-objects.2-2-0" date="2017-05-24">
+		<Change>Added various datatransfer objects to support clustered mode</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.geoanalytics.datatransfer-objects.2-3-0" date="2017-07-07">
+		<Change>Added various datatransfer objects to support external layers, attributes and more</Change>
+	</Changeset>
+</ReleaseNotes>
+

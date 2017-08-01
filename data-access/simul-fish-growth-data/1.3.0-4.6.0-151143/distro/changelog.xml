@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.simul-fish-growth-1-0-0" date="2016-04-26">
+		<Change>First release of the portlet</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.simul-fish-growth-1-3-0" date="2017-06-26">
+		<Change>Global model, support technoeco + geoanltcs</Change>
+	</Changeset>
+</ReleaseNotes>

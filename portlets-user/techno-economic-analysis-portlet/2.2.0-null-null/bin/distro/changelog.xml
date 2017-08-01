@@ -1,0 +1,23 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-portlet.1-0-0" date="2016-10-01">
+		<Change>First release of the techno economic analysis portlet.</Change>	
+	</Changeset>
+	
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-portlet.2-0-0" date="2016-11-24">
+		<Change>Added notification and improved error messages.</Change>	
+		<Change>Added extra parameters in UI.</Change>	
+		<Change>Improved validation of input fields.</Change>			
+	</Changeset>
+	
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-portlet.2-1-0" date="2017-03-03">
+		<Change>Replaced ASL with Portal Context.</Change>
+		<Change>Added caching of endpoints.</Change>		
+		<Change>Added workspace integration.</Change>		
+	</Changeset>
+	
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-portlet.2-2-0" date="2017-04-20">
+		<Change>Removed periodic thread from EndpointManager.</Change>	
+		<Change>Choosing a model after reset now fills the fields with their default values instead of leaving them blank.</Change>
+		<Change>Fixed Microsoft Edge bug not bringing the fishSpecies when choosing a model</Change>			
+	</Changeset>
+</ReleaseNotes>

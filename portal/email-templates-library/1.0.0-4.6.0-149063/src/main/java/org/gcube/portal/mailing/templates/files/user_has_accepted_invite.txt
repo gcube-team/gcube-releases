@@ -1,0 +1,12 @@
+{{GATEWAY_NAME}}
+----------------------------------
+{{USER_FULLNAME}} has accepted the invite on {{SELECTED_VRE_NAME}} VRE.
+
+Further info about {{USER_FULLNAME}}:
+
+Email: {{USER_EMAIL}}
+Username: {{USER_ID}}
+
+
+You received this email because you are a manager of {{SELECTED_VRE_NAME}}.
+The invite was sent by {{USER_WHO_INVITED}} ({{USER_WHO_INVITED_USERNAME}}) on {{INVITE_DATE}}.

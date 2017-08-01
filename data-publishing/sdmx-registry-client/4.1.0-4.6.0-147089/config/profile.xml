@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ID></ID>
+    <Type>Service</Type>
+    <Profile>
+    	<Description>SDMX Registry Client API and implementation for interacting with SDMX Fusion Registry. It provides methods for submitting and retrieving a subset of structural metadata described in the SDMX standards.</Description>
+        <Class>DataPublishing</Class>
+        <Name>sdmx-registry-client</Name>
+        <Version>1.0.0</Version>
+        <Packages>
+            <Software>
+                <Description>SDMX Registry Client API and implementation for interacting with SDMX Fusion Registry. It provides methods for submitting and retrieving a subset of structural metadata described in the SDMX standards.</Description>
+            	<Name>sdmx-registry-client</Name>
+				<Version>4.1.0-4.6.0-147089</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.data.publishing</groupId>
+					<artifactId>sdmx-registry-client</artifactId>
+					<version>4.1.0-4.6.0-147089</version>
+				</MavenCoordinates>
+				<Type>library</Type>
+				<Files>
+					<File>sdmx-registry-client-4.1.0-4.6.0-147089.jar</File>
+				</Files>
+			</Software>           
+        </Packages>
+    </Profile>
+</Resource>
+
+

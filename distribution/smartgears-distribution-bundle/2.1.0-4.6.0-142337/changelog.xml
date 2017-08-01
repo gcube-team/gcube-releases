@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.distribution.smartgears-distribution-bundle.2-1-0" date="2017-08-01">
+		<Change>Fixed distro files</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution-bundle.2-0-0" date="2016-12-15">
+		<Change>Environment variable values replaced instead of just appended in ~/.bashrc (refs #2179)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution-bundle.1-0-6" date="2016-02-15">
+		<Change>Environment variable values replaced instead of just appended in ~/.bashrc (refs #2179)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution-bundle.1-0-5" date="2016-02-01">
+		<Change>Improved setup (refs #77)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution-bundle.1-0-4" date="2015-10-16">
+		<Change>Passing smartgears-distribution version as argument when compiling</Change>
+		<Change>Used tomcat 7 range instead of fixed version</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution-bundle.1-0-3" date="2015-07-6">
+		<Change>Reorganized package creation</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution-bundle.1-0-2" date="2015-05-15">
+		<Change>Reorganized package creation</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution-bundle.1-0-1" date="2015-04-15">
+		<Change>Adding Bundle Version on container.xml to be published on ghn profile</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution-bundle.1-0-0" date="2015-03-11">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

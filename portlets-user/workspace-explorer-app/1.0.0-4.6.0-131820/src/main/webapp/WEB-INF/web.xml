@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<welcome-file-list>
+		<welcome-file>WorkspaceExplorerApp.html</welcome-file>
+	</welcome-file-list>
+	<context-param>
+		<description>scope for using HL</description>
+		<param-name>scope</param-name>
+		<!-- <param-value>/d4science.research-infrastructures.eu</param-value> -->
+		<param-value>/gcube</param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>workspaceExplorerAppServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.workspaceexplorerapp.server.WorkspaceExplorerAppServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DownloadServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.workspaceexplorerapp.server.DownloadWorkspaceExplorerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>workspaceExplorerAppServlet</servlet-name>
+		<url-pattern>/workspaceexplorerapp/WorkspaceExplorerAppService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DownloadServlet</servlet-name>
+		<url-pattern>/workspaceexplorerapp/DownloadServlet</url-pattern>
+	</servlet-mapping>
+	<display-name>workspace-explorer-app</display-name>
+	<welcome-file-list>
+		<welcome-file>WorkspaceExplorerApp.html</welcome-file>
+	</welcome-file-list>
+</web-app>

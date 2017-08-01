@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.gcube-resources.1-5-0" date="2017-08-01">
+		<Change>Removed List and Set use in AccessPointFacet as workaround fo OrientDB bug #9021</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.gcube-resources.1-4-0" date="2017-06-07">
+		<Change>Added SimpleFacet for is-exporter-se-plugin purpose</Change>
+		<Change>Used the DATETIME_PATTERN constant defined in is-model in EventFacet. This is mandatory to be compliant with new datetime serilization/deserialization format.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.gcube-resources.1-3-0" date="2017-03-16">
+		<Change>Fixed Date serilization on EventFacet</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.information-system.gcube-resources.1-2-0" date="2016-12-16">
+		<Change>Fixed some inheritance issues</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.information-system.gcube-resources.1-1-0" date="2016-11-03">
+		<Change>Reorganized package and renamed relations to be compliant with welle known practice</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.information-system.gcube-resources.1-0-0" date="2016-07-27">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

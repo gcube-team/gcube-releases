@@ -1,0 +1,6 @@
+<service-map scope='/infra/vo' version="1.4">
+	<services>
+		<service name='service1' endpoint='http://acme.org:8000/service1' />
+		<service name='service2' endpoint='http://acme2.org:8000/service2' />
+	</services>
+</service-map>

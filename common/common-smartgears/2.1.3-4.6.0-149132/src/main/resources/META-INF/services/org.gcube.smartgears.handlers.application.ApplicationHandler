@@ -1,0 +1,3 @@
+org.gcube.smartgears.handlers.application.lifecycle.ProfileManager
+org.gcube.smartgears.handlers.application.request.RequestValidator
+org.gcube.smartgears.handlers.application.request.RequestAccounting

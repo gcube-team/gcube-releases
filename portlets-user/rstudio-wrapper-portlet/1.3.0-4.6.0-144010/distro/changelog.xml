@@ -1,0 +1,18 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlet.user.rstudio-wrapper-portlet.1-3-0"
+		date="2017-02-21">
+		<Change>RStudio instance allocation takes into account the number of instance available in the given context and assign the RStudio instance balancing the load.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.rstudio-wrapper-portlet.1-2-0"
+		date="2016-09-15">
+		<Change>added possibility to look for service endpoint RConnector
+			resource in the
+			scope
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.rstudio-wrapper-portlet.1-0-0"
+		date="2016-04-11">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

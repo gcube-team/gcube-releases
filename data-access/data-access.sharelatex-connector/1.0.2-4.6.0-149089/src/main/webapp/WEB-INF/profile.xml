@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>${description}</Description>
+		<Class>DataAccess</Class>
+		<Name>sharelatex-connector</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Name>sharelatex-connector</Name>
+				<Version>1.0.2-4.6.0-149089</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.data.access</groupId>
+					<artifactId>sharelatex-connector</artifactId>
+					<version>1.0.2-4.6.0-149089</version>
+				</MavenCoordinates>
+				<Files>
+					<File>sharelatex-connector.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>
+

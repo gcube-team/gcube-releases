@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='resource_sweeper'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<!-- Other module inherits -->
+	<inherits name='com.extjs.gxt.ui.GXT' />
+	<inherits name='com.extjs.gxt.themes.Themes' />
+	
+<!-- 		<set-property name="user.agent" value="gecko1_8" /> -->
+	
+	
+	<inherits name='org.gcube.resourcemanagement.support.Resource_support' />
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.admin.resourcesweeper.client.Resource_sweeper' />
+
+	<stylesheet src='Resource_sweeper.css' />
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

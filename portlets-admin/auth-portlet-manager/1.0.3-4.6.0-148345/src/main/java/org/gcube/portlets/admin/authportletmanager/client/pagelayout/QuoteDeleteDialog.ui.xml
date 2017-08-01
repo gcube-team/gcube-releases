@@ -1,0 +1,67 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.panel {
+		background-color: #d9e2e8;
+		border-radius: 4px;
+		border: 2px solid #888;
+		/*padding: 10px;*/
+		width: 80%;
+		margin-left: 10%;
+	}
+	
+	.panel_text {
+		background-color: #F3F7FB;
+		border-radius: 4px;
+		border: 1px solid #ccc;
+		padding: 10px;
+	}
+	
+	.r_loader_space {
+		margin-top: 10px;
+		text-align: center;
+		/*height:30px;*/
+		margin-bottom: 20px;
+		width: 100%;
+		margin-left: 0px;
+	}
+	
+	.footer_dialog {
+		text-align: right;
+	}
+	
+	.button_dialog {
+		margin-left: 10px;
+	}
+	
+	.label_summary {
+		text-align: center;
+		width: 100%;
+		margin-left: 5px;
+	}
+	</ui:style>
+	<g:FlowPanel styleName="{style.panel}">
+		<b:FluidRow>
+			<b:Column size="12">
+				<g:FlowPanel styleName="{style.panel_text}">
+					<b:FluidRow>
+						<b:Heading size="2">
+							Confirm Delete ?
+						</b:Heading>
+					</b:FluidRow>
+					<b:Row ui:field="r_loader_space" addStyleNames='{style.r_loader_space}'>
+
+					</b:Row>
+
+					<b:FluidRow addStyleNames='{style.footer_dialog}'>
+						<b:Button type="PRIMARY" dismiss="MODAL" ui:field="b_confirm_exit"
+							addStyleNames='{style.button_dialog}'>NO</b:Button>
+						<b:Button type="DANGER" ui:field="b_confirm_delete"
+							addStyleNames='{style.button_dialog}'>YES</b:Button>
+					</b:FluidRow>
+				</g:FlowPanel>
+			</b:Column>
+		</b:FluidRow>
+	</g:FlowPanel>
+</ui:UiBinder>

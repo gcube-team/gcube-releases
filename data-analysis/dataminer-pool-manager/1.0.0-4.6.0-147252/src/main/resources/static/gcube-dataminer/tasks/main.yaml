@@ -1,0 +1,4 @@
+---
+
+- name: Install the 'DATAMINER' package
+  shell: echo 'installing DATAMINER'

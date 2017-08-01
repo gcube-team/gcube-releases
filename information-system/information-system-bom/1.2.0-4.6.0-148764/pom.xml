@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>org.gcube.information-system</groupId>
+	<artifactId>information-system-bom</artifactId>
+	<version>1.2.0-4.6.0-148764</version>
+	<packaging>pom</packaging>
+	<name>Information System Bom</name>
+	<description>Used to declare version used from different projects</description>
+
+	<properties>
+		<orientdb.version>2.2.18</orientdb.version>
+		<!-- OrientDB version has impact on jackson and thinkerpop version. 
+				When OrientDB version is changed jackson and thinkerpop version
+				must be coherent with the one declared by orientdb -->
+		<jackson.version>2.6.0</jackson.version>
+		<thinkerpop.version>2.6.0</thinkerpop.version>
+		
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+		<serviceClass>InformationSystem</serviceClass>
+	</properties>
+
+	<scm>
+		<connection>scm:https://svn.d4science.research-infrastructures.eu/gcube/trunk/information-system/${project.artifactId}</connection>
+		<developerConnection>scm:https://svn.d4science.research-infrastructures.eu/gcube//trunk/information-system/${project.artifactId}</developerConnection>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/information-system/${project.artifactId}</url>
+	</scm>
+	
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.orientechnologies</groupId>
+				<artifactId>orientdb-core</artifactId>
+				<version>${orientdb.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.orientechnologies</groupId>
+				<artifactId>orientdb-graphdb</artifactId>
+				<version>${orientdb.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.orientechnologies</groupId>
+				<artifactId>orientdb-client</artifactId>
+				<version>${orientdb.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<!-- 
+			<dependency>
+				<groupId>com.tinkerpop</groupId>
+				<artifactId>frames</artifactId>
+				<version>${thinkerpop.version}</version>
+			</dependency>
+			-->
+		</dependencies>
+	</dependencyManagement>
+
+</project>

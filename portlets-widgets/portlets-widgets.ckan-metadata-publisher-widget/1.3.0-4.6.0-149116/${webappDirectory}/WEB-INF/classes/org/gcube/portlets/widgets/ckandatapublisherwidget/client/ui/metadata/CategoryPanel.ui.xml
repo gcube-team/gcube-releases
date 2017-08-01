@@ -1,0 +1,12 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<g:HTMLPanel>
+		<g:VerticalPanel width="100%">
+			<b:PageHeader ui:field="categoryHeader"></b:PageHeader>
+			<!-- Here will be placed the metadata fields formats -->
+			<g:VerticalPanel ui:field="fieldsPanel" visible="false"
+				width="100%"></g:VerticalPanel>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

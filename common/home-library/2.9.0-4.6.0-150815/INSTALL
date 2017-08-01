@@ -1,0 +1,18 @@
+* Configure the Home Library
+** How to specify the persistence dir.
+	The Home Library need a persistence dir where to save the user home content and structure.
+	To determine where to create the persistence dir the Home Library use the following algorithm:
+	1. if an HOME_LIBRARY_PERSISTENCE_DIR environment variable is specified this is used a base dir, otherwise:
+	2. if the system property catalina.base is set (generically set by tomcat), "catalina.base/webapps/usersArea" is used a base dir, 
+		otherwise
+	3. the system tmp directory is used a base dir. 
+	Inside the base dir a home_library_persitence dir is created and used.
+
+
+* Dependencies
+	The home library require some library to be used:
+	-xstream-1.3.1.jar XML serialization (XStream)
+	-xpp3_min-1.1.4c.jar XML serialization (XStream)
+	-bcprov-ext-jdk15-141.jar manipulate pdf
+	-iText-2.1.4.jar manipulate pdf
+	-ij140g.jar manipulate images

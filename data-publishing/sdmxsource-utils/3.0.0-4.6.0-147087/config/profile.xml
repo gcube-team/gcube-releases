@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ID></ID>
+    <Type>Service</Type>
+    <Profile>
+    	<Description>Library that contains several utilities that helps with the management of SDMXSource libraries</Description>
+        <Class>DataPublishing</Class>
+        <Name>sdmxsource-utils</Name>
+        <Version>1.0.0</Version>
+        <Packages>
+            <Software>
+                <Description>Library that contains several utilities that helps with the management of SDMXSource libraries</Description>
+            	<Name>sdmxsource-utils</Name>
+				<Version>3.0.0-4.6.0-147087</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.data.publishing</groupId>
+					<artifactId>sdmxsource-utils</artifactId>
+					<version>3.0.0-4.6.0-147087</version>
+				</MavenCoordinates>
+				<Type>library</Type>
+				<Files>
+					<File>sdmxsource-utils-3.0.0-4.6.0-147087.jar</File>
+				</Files>
+			</Software>           
+        </Packages>
+    </Profile>
+</Resource>
+
+

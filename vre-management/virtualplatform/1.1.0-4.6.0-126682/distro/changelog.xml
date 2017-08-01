@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.vre-management.virtualplatform.1-1-0" date="2013-11-04">
+		<Change>Mavenized</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.virtualplatform.1-0-0" date="2011-06-30">
+		<Change>Virtual Platform definition, first release</Change>
+	</Changeset>
+</ReleaseNotes>

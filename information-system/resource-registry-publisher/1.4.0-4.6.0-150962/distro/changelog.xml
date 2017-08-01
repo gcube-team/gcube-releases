@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.resource-registry-publisher.1-4-0" date="${buildDate}">
+		<Change>Added HAProxy discovery support #8757</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-publisher.1-3-0" date="2017-06-07">
+		<Change>Removed common-generic-clients, common-gcube-calls and common-fw-clients from dependencies</Change>
+		<Change>The client is now a generic http-client (using HTTPCall class provided in API) autoquery th old is to get resource-registry instance. It is not implement as gcube-proxy anymore.</Change>
+		<Change>Added exists() method which uses HEAD HTTP method to get existence from Resource Registry</Change>
+		<Change>Adde the method to create a relation and target entity with one call by usign the new API provided from Resource Registry.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-publisher.1-2-0" date="2017-03-16">
+		<Change>Added API Remove From Context</Change>
+		<Change>Added ResourceRegistryException json deserialization</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-publisher.1-1-0" date="2016-12-16">
+		<Change>Added API AddToContext</Change>	
+		<Change>Added API to support update Resource (with all facets)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-publisher.1-0-0" date="2016-11-03">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

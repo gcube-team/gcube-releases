@@ -1,0 +1,82 @@
+#geoadmin-layers #geoadmin-layers-edit-description {
+	resize:none;
+}
+
+#geoadmin-layers div#geoadmin-layers-edit-modal.modal.fade {
+	width: 40%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	padding-bottom: 0;
+}
+
+#geoadmin-layers .modal-footer #geoadmin-layers-edit-modal-delete {
+	float: left;
+}
+
+#geoadmin-layers #geoadmin-layers-edit-modal .modal-footer  {
+	float: left;
+}
+
+/************************************************* jQuery Tags Input *************************************************/
+
+#geoadmin-layers div.tagsinput {
+	background:white;
+	overflow-y:auto;
+	padding:5px;
+	min-height:70px !important;
+	max-height:70px !important;	
+	margin: 0;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    color: rgb(2, 113, 190);
+}
+
+#geoadmin-layers div#geoadmin-layers-edit-tags_addTag.error {
+	border:0;
+}
+
+#geoadmin-layers div.tagsinput span.tag {
+	border-radius: 7px 7px 7px 7px;
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border: 2px solid white;
+	display:block;
+	float:left;
+	background:black;
+	color:white;
+	font-size:13px;
+	font-weight:bold;
+	padding:2px 5px 2px 5px;
+	margin-right:5px;
+	margin-bottom:5px;
+}
+
+#geoadmin-layers div.tagsinput span.tag a {
+	font-weight:100;
+	color:white;
+	font-size:13px;
+}
+
+#geoadmin-layers div.tagsinput input {
+	width:80px;
+	font-family:helvetica;
+	font-size:13px;
+	border:1px solid transparent;
+	background:transparent;
+	color:#000;
+	outline:0;
+	margin:0 5px 5px 0;
+	padding:5px;
+}
+
+#geoadmin-layers div.tagsinput div {
+	display:block;
+	float:left;
+}
+
+#geoadmin-layers .tags_clear {
+	clear:both;
+	width:100%;
+	height:0;
+}

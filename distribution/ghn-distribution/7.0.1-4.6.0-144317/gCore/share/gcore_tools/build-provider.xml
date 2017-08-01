@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!--
+Ant buildfile for GCUBEProvider
+-->
+<project default="all" name="GSBT GT4 buildfile" basedir=".">
+
+	<!-- Define the environment variable -->
+	<property environment="env" />
+	<property name="container.dir" location="${env.GLOBUS_LOCATION}" />
+	<property name="build.stubs" location="${container.dir}/share/gcore_tools/build-stubs-provider.xml" />
+	<property name="build.dir" location="${container.dir}/share/schema/gcube/common/core/providers/" />
+
+	<property name="source.dir" location="${build.dir}/build" />
+	<property name="classes.dir" location="${build.dir}/classes" />
+
+
+
+	<target name="generateStubs" depends="mergePackageMapping" description="Generate stub classes">
+		<echo message="GENERATING STUBS:" level="info"/>
+		<ant antfile="${build.stubs}" target="generateBinding">
+			<property name="source.binding.dir" value="${build.dir}" />
+			<property name="target.binding.dir" value="${source.dir}" />
+			<property name="porttype.wsdl" value="GCUBEProvider.wsdl" />
+			<property name="binding.root" value="GCUBEProvider" />
+		</ant>
+		<ant antfile="${build.stubs}" target="generateStubs">
+			<property name="mapping.file" location="${source.dir}/namespace2package.final" />
+			<property name="source.stubs.dir" location="${source.dir}" />
+			<property name="target.stubs.dir" location="${source.dir}" />
+			<property name="wsdl.file" value="GCUBEProvider_service.wsdl" />
+		</ant>
+		<ant antfile="${build.stubs}" target="generateBinding">
+			<property name="source.binding.dir" value="${build.dir}" />
+			<property name="target.binding.dir" value="${source.dir}" />
+			<property name="porttype.wsdl" value="GCUBENotificationProvider.wsdl" />
+			<property name="binding.root" value="GCUBENotificationProvider" />
+		</ant>
+		<ant antfile="${build.stubs}" target="generateStubs">
+			<property name="mapping.file" location="${source.dir}/namespace2package.final" />
+			<property name="source.stubs.dir" location="${source.dir}" />
+			<property name="target.stubs.dir" location="${source.dir}" />
+			<property name="wsdl.file" value="GCUBENotificationProvider_service.wsdl" />
+		</ant>
+	</target>
+
+	<target name="mergePackageMapping" description="merge service namespace mappings file with global one">
+		<ant antfile="${build.stubs}" target="mergePackageMapping">
+			<property name="mapping.src" location="${build.dir}/namespace2package.mappings" />
+			<property name="mapping.dst" location="${source.dir}/namespace2package.final" />
+		</ant>
+	</target>
+
+	<target name="init" depends="clean">
+		<mkdir dir="${source.dir}" />
+		<mkdir dir="${classes.dir}" />
+	</target>
+
+	<target name="clean">
+		<delete dir="${source.dir}" />
+		<delete dir="${classes.dir}" />
+	</target>
+
+	<property name="lib.jar" value="org.gcube.common.core.porttypes.gcubeprovider.jar"/>
+	<property name="package.root" value="org/gcube/common/core/porttypes/gcubeprovider/stubs"/>
+	
+	<target name="jar">
+	 	<jar jarfile="${build.dir}/${lib.jar}" basedir="${classes.dir}">
+			<include name="${package.root}/**/*.class" />
+		</jar>
+	</target>
+
+	<target name="deploy">
+		<copy todir="${env.GLOBUS_LOCATION}/lib">
+			<fileset dir="${build.dir}">
+			       <include name="*.jar"/>
+			</fileset>
+		</copy>
+		<delete file="${build.dir}/${lib.jar}" /> 
+	</target>
+
+	 <target name="compile" depends="generateStubs">
+		<echo message="COMPILING STUBS:" level="info"/>
+		<javac srcdir="${source.dir}" includes="${package.root}/**" destdir="${classes.dir}" debug="on" deprecation="on">
+				<classpath>
+					<fileset dir="${env.GLOBUS_LOCATION}/lib">
+						<include name="*.jar" />
+						<exclude name="${lib.jar}" />
+					</fileset>
+				</classpath>
+			</javac>
+	</target>
+				
+	<!-- Default target "all" generates the GAR file -->
+	<target name="all" depends="init,compile,jar,deploy" />
+
+</project>

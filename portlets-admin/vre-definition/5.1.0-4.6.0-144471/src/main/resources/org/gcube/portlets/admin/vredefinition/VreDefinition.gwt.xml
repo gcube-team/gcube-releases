@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='vredefinition'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+
+	<!-- Other module inherits -->
+	<inherits name='com.github.gwtbootstrap.datepicker.Datepicker' />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.admin.vredefinition.client.VREDefinition' />
+
+	<!-- Bootstrap import -->
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+	<set-property name="bootstrap.responsiveDesign" value="true" />
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

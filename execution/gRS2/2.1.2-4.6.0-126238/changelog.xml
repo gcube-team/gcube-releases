@@ -1,0 +1,48 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.execution.gRS2.2-1-2" date="2014-10-31">
+	    <Change>Fixed memory issue with tcp connections</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.gRS2.2-1-1" date="2014-01-20">
+	    <Change>Moved xstream version to 1.4.4.</Change>
+	    <Change>Fixed a bug that cause HTTP protocol to fail due to Java 1.7 API changes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.gRS2.2-1-0" date="2012-10-20">
+	    <Change>Extended RecordReaderDelegate in order to support setting window size to RandomReaders that is needed from ASLSearch</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.gRS2.2-0-0" date="2012-07-04">
+	    <Change>Performance improvements on the TCP transfer method</Change>
+	    <Change>Exceptions can be transfered though the gRS2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.gRS2.1-3-0" date="2012-05-03">
+	    <Change>support HTTP as gRS2 transfer method</Change>
+	    <Change>Changes in reader iterators: hasNext() now closes reader after timeout expiration and always returns false from that point on. next() throws NoSuchElementException if hasNext() is false.</Change>
+	    <Change>Revised network congestion prevention policy in TCPReaderMirror: No sleeps are performed between iterations anymore when throughput must be maximum. 
+	    Long sleeps are performed when either the consumer does not need more result or when the producer does not have results available and the consumer still has results to process. 
+	    Short sleeps are performed when the producer does not have results available but the producer could need additional result soon (i.e. its buffer is empty)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.gRS2.1-2-0" date="2012-02-17">
+		<Change>Reader buffer capacity is now configurable. The default value is the capacity of the writer, as before.</Change>
+	    <Change>Support for URL resolver</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.gRS2.1-1-3" date="2011-07-01">
+		<Change>TCP communication between a producer and a consumer is now gracefully closed in all cases if the consumer decides to close its reader without having read all available records</Change>
+		<Change>Added optional inactivity option to keep-alive reader</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.gRS2.1-1-2" date="2011-04-29">
+		<Change>Added record hide/show functionality which enables clients to prevent records from being disposed while still being able to reattach the latter to the same buffer instance</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.gRS2.1-1-1" date="2011-03-25">
+		<Change>Fixed keep-alive reader issue</Change>
+		<Change>Fixed random reader seek issue</Change>
+		<Change>Added local file cleanup functionality to FileField definition</Change>
+		<Change>Locator elevation utility renamed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.gRS2.1-1-0" date="2011-02-07">
+		<Change>Updated interface access and core redesign</Change>
+	</Changeset>
+	<Changeset component="org.gcube.execution.gRS2.1-0-1" date="2010-10-08">
+		<Change>Fixed lifecycle synchronization issue</Change>
+		<Change>Fixed record statistics purging</Change>
+		<Change>Fixed buffering tie-break</Change>
+	</Changeset>
+</ReleaseNotes>

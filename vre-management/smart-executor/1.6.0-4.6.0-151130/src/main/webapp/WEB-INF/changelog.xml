@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.vre-management.smart-executor.1.6.0" date="2017-08-01">
+	    <Change>Setting explictly the context before running the plugin to avoid wrong context made from quartz thread reuse</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.smart-executor.1.5.0" date="2017-03-16">
+		<Change>Provided access to UUID and iteration number fro a plugin (refs #6733)</Change>
+	    <Change>Added support to implements Reminiscence for a Scheduled Task (refs #772)</Change>
+	    <Change>Removed config file support added in release 1.2.0 now available via Reminiscence (refs #772)</Change>
+	    <Change>Migrated from CouchDB to OrientDB (refs #6565)</Change>
+	    <Change>Added accountign by using TaskUsageRecord (refs #6116)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.smart-executor.1.4.0" date="2016-11-07">
+		<Change>SmartExecutor has been passed to Authorization 2.0 (refs #4944 #2112)</Change>
+		<Change>Provided to plugins the possibility to specify progress percentage (refs #440)</Change>
+		<Change>>Provided to plugins the possibility to define a custom notifier (refs #5089)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.smart-executor.1.3.0" date="2016-02-08">
+		<Change>Using Persistence (CouchDB) to save Scheduled Task configuration (refs #579)</Change>
+		<Change>Added Unscheduling feature for repetitive task (refs #521)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.smart-executor.1.2.0" date="2015-12-31"> 
+		<Change>Removed Support for Config File to run task at service startup</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.smart-executor.1.1.0" date="2015-12-09">
+	    <Change>Added Support for Config File to run task at service startup (refs #508)</Change>
+		<Change>Added Recurrent and Scheduled Task support (refs #111)</Change>
+		<Change>Saving Task Evolution on Persistence (CouchDB) (refs #89)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.smart-executor.1.0.0" date="2015-02-05"> 
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

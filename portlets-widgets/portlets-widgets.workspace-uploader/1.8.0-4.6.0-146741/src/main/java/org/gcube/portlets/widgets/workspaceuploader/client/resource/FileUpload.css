@@ -1,0 +1,78 @@
+@external progressContainer, progressBarContainer, FileSubmit, bar-container, progress, blue, myBackground;
+
+.progressContainer {
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+}
+
+.progressBarContainer {
+    text-align: center;
+    width: 100%;
+    margin: 10px 0 0 -3px;
+    
+}
+
+/* Progress Bar Styles */
+
+.bar-container {
+	font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+	color: #404040;
+	margin: 0px auto;
+	width: 330px;
+}
+
+.bar-container > div {
+	margin: 2px;
+}
+
+.progress {
+	height: 25px;
+	border-radius: 6px;
+}
+
+.progress > span {
+	position: relative;
+	float: left;
+	margin: 0 -1px;
+	min-width: 30px;
+	height: 18px;
+	line-height: 16px;
+	text-align: right;
+	background-color: #DDD;
+	border: 1px solid;
+	border-color: #FFF;
+	border-radius: 6px;
+}
+
+.progress>span>span {
+	padding: 0 8px;
+	font-size: 11px;
+	font-weight: bold;
+	color: #404040;
+	color: rgba(0, 0, 0, 0.7);
+	text-shadow: 0 1px rgba(255, 255, 255, 0.4);
+}
+
+@sprite .myBackground>span:before  {
+	gwt-image: "progressTexture"; 
+	other: repeat-x;
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	height: 18px;
+	border-radius: 6px;
+} 
+
+.progress .blue {
+	background: #5aaadb;
+	border-color: #7bbbe2;
+	background-image: -webkit-linear-gradient(top, #aed5ed, #7bbbe2 70%, #5aaadb);
+	background-image: -moz-linear-gradient(top, #aed5ed, #7bbbe2 70%, #5aaadb);
+	background-image: -o-linear-gradient(top, #aed5ed, #7bbbe2 70%, #5aaadb);
+	background-image: linear-gradient(to bottom, #aed5ed, #7bbbe2 70%, #5aaadb);
+}

@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-catalogue.catalogue-ws.1-0-0"
+		date="2017-05-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,10 @@
+<application mode='online'>
+		<name>AccountService</name>
+		<group>DataPublishing</group>
+		<version>${version}</version>
+		<description>AccountService webapp</description>
+		<local-persistence location='target' />
+		
+		<exclude handlers='request-accounting'>/*</exclude>
+</application>
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Class>DataAccess</Class>
+		<Name>tree-manager-service</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Main>
+				<Name>tree-manager-service</Name>
+				<Version>3.0.3-4.6.0-125718</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.data.access</groupId>
+					<artifactId>tree-manager-service</artifactId>
+					<version>3.0.3-4.6.0-125718</version>
+				</MavenCoordinates>
+				<GARArchive>tree-manager-service-3.0.3-4.6.0-125718.gar</GARArchive>
+				<PortType>
+					<Name>gcube/data/tm/binder</Name>
+				</PortType>
+				<PortType>
+					<Name>gcube/data/tm/reader</Name>
+				</PortType>
+				<PortType>
+					<Name>gcube/data/tm/writer</Name>
+				</PortType>
+			</Main>
+			<Software>
+				<Name>tree-manager-stubs</Name>
+				<Version>3.0.3-4.6.0-125718</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.data.access</groupId>
+					<artifactId>tree-manager-stubs</artifactId>
+					<version>3.0.3-4.6.0-125718</version>
+				</MavenCoordinates>
+				<Type>library</Type>
+				<Files>
+					<File>tree-manager-stubs-3.0.3-4.6.0-125718.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>
+

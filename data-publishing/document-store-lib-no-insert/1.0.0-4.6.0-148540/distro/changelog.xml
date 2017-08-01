@@ -1,0 +1,5 @@
+<ReleaseNotes>    
+	<Changeset component="org.gcube.accounting.accounting-lib-persistence-no-insert.1-0-0" date="2017-04-21">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

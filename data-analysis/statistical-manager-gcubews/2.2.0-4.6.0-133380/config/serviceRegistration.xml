@@ -1,0 +1,27 @@
+<ServiceGroupRegistrationParameters
+  xmlns:sgc="http://mds.globus.org/servicegroup/client"
+	    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+ 	    xmlns:agg="http://mds.globus.org/aggregator/types"
+ 	    xmlns="http://mds.globus.org/servicegroup/client">
+    
+    <!-- Specifies that the RPD registration will be renewed every 60 seconds -->
+    <RefreshIntervalSecs>5</RefreshIntervalSecs>
+        
+    <!-- <Content> specifies registration specific information -->
+    <Content xsi:type="agg:AggregatorContent"
+        xmlns:agg="http://mds.globus.org/aggregator/types">
+
+        <agg:AggregatorConfig xsi:type="agg:AggregatorConfig">
+         <agg:GetMultipleResourcePropertiesPollType xmlns:sm="http://gcube-system.org/namespaces/data/analysis/statisticalmanager">
+                <agg:PollIntervalMillis>5000</agg:PollIntervalMillis>
+                <agg:ResourcePropertyNames>sm:computation</agg:ResourcePropertyNames> 
+             </agg:GetMultipleResourcePropertiesPollType>
+        </agg:AggregatorConfig>
+
+        <agg:AggregatorData/>
+    </Content>
+      
+    
+</ServiceGroupRegistrationParameters>

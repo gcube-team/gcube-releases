@@ -1,0 +1,10 @@
+<application mode='online'>
+	<name>SocialNetworking</name>
+	<group>Portal</group>
+	<version>2.0.0-SNAPSHOT</version>
+	<description>SocialNetworking Service</description>
+	<local-persistence location='target' />
+	<exclude>/rest/</exclude>
+	<exclude>/rest/swagger.yaml</exclude>
+	<exclude>/rest/swagger.json</exclude>
+</application>

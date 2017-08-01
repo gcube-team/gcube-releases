@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="${groupId}.${artifactId}.1-1-0" date="2016-10-03">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-10-0" date="2016-27-09">
+		<Change>Changed basic signature and http functions</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,11 @@
+<application mode='online'>
+		<name>data-transfer-service</name>
+		<group>DataTransfer</group>
+		<version>1.2.1-4.6.0-141906</version>
+		<description>Data Tansfer Service</description>
+		<!--  <servlets>
+			<servlet name="org.gcube.data.analysis.rconnector.RConnector" entryPointName="connector"/>
+		</servlets> -->
+		<local-persistence location='target' />
+</application>
+

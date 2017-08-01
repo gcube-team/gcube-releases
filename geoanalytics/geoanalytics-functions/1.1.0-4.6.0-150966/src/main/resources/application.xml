@@ -1,0 +1,65 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans	
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<context:component-scan base-package="gr.cite.geoanalytics.functions, gr.cite.clustermanager, gr.cite.geoanalytics.client" /> 
+
+	<!-- This is created on runtime and added to classpath, so please DO NOT ALTER NAME -->
+	<context:property-placeholder location="classpath*:**/runtime.properties" ignore-unresolvable="true" /> 
+
+	<!-- This is used only when testing -->
+<!-- 	<context:property-placeholder location="classpath:/test.properties" ignore-unresolvable="true" /> -->
+	
+
+	<bean id="pathfinder" class="gr.cite.geoanalytics.functions.discovery.PathFinder" />
+
+	<bean id="geoanalyticsStore" class="gr.cite.geoanalytics.functions.output.GeoanalyticsStore">
+		 <constructor-arg value="${gr.cite.geoanalytics.functions.geoanalytics.endpoint}" />
+	</bean>
+
+	<bean id="geoanalyticsImportManagement" class="gr.cite.geoanalytics.client.GeoanalyticsImportManagement">
+		 <constructor-arg value="${gr.cite.geoanalytics.token}" />
+	</bean>
+	
+	<bean id="trafficShaper" class="gr.cite.clustermanager.trafficshaping.SimpleTrafficShaper" />
+
+
+	<bean id="dataMonitor" class="gr.cite.clustermanager.actuators.layers.DataMonitor" factory-method="getInstance">
+		<constructor-arg value="${gr.cite.clustermanager.connectionString}" />
+	</bean>
+	
+	<bean id="dataCreatorGeoanalytics" class="gr.cite.clustermanager.actuators.layers.DataCreatorGeoanalytics" factory-method="getInstance">
+		<constructor-arg value="${gr.cite.clustermanager.connectionString}" />
+	</bean>
+	
+	<bean id="executionMonitor" class="gr.cite.clustermanager.actuators.functions.ExecutionMonitor" scope = "singleton">
+		<constructor-arg value="${gr.cite.clustermanager.connectionString}" />
+	</bean>
+	
+	<bean id="executionNotifier" class="gr.cite.clustermanager.actuators.functions.ExecutionNotifier" scope = "singleton">
+		<constructor-arg value="${gr.cite.clustermanager.connectionString}" />
+	</bean>
+	
+	<bean id="featureExploreRandomNPVParallel" class="gr.cite.geoanalytics.functions.experiments.FeatureExploreRandomNPVParallel" />
+	
+	
+	<bean id="featureBasedAlgorithmParallelSimAn" class="gr.cite.geoanalytics.functions.exploration.FeatureBasedAlgorithmParallelSimAn">
+		<constructor-arg type="int" value="${gr.cite.geoanalytics.functions.spark.geo.splits.x}" />
+		<constructor-arg type="int" value="${gr.cite.geoanalytics.functions.spark.geo.splits.y}" />
+	</bean>
+	
+<!-- 	<bean id="randomEvaluator" class="gr.cite.geoanalytics.functions.common.model.functions.RandomEvaluator" /> -->
+	
+	<bean id="featureBasedAlgorithmParallel" class="gr.cite.geoanalytics.functions.exploration.FeatureBasedAlgorithmParallel">
+		<constructor-arg type="int" value="${gr.cite.geoanalytics.functions.spark.geo.splits.x}" />
+		<constructor-arg type="int" value="${gr.cite.geoanalytics.functions.spark.geo.splits.y}" />
+	</bean>
+	
+</beans>

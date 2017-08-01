@@ -1,0 +1,42 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def itemPadding value('theme.menu.bar.itemPadding.toString');
+
+@def textColor value('theme.menu.bar.itemText.color');
+@def textFamily value('theme.menu.bar.itemText.family');
+@def textSize value('theme.menu.bar.itemText.size');
+@def textWeight value('theme.menu.bar.itemText.weight');
+@def textLineHeight value('theme.menu.bar.itemLineHeight');
+
+@def hoverItemGradient value('theme.menu.bar.hoverItemGradient');
+@def activeItemGradient value('theme.menu.bar.activeItemGradient');
+
+.over {
+  background: -webkit-linear-gradient(top, hoverItemGradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, hoverItemGradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, hoverItemGradient); /* IE10+ */
+  background: linear-gradient(to bottom, hoverItemGradient); /* W3C */
+}
+
+.active {
+  background: -webkit-linear-gradient(top, activeItemGradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, activeItemGradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, activeItemGradient); /* IE10+ */
+  background: linear-gradient(to bottom, activeItemGradient); /* W3C */
+}
+
+.menuBarItem {
+  font-size: textSize;
+  font-family: textFamily;
+  font-weight: textWeight;
+  color: textColor;
+  line-height: textLineHeight;
+
+  padding: itemPadding;
+  float:left;
+}

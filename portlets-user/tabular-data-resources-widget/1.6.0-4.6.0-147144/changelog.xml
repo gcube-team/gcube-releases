@@ -1,0 +1,42 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-resources-widget.1-6-0"
+		date="2017-04-01">
+		<Change>Migrate to DataMiner [Ticket #6078]</Change>
+	</Changeset>	
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-resources-widget.1-5-0"
+		date="2017-02-15">
+		<Change>Migrate to PortalContext [Ticket #6548]</Change>
+	</Changeset>	
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-resources-widget.1-4-0"
+		date="2015-10-15">
+		<Change>Added support to WorkspaceExplorer [issue #428]</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-resources-widget.1-3-0"
+		date="2015-07-03">
+		<Change>Added support to Storage Id [issue #180]</Change>
+		<Change>Added ListView to show Resources [issue #209]</Change>
+		<Change>Added extension to downloaded files [issue #258]</Change>
+		<Change>Updated charts viewer</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-resources-widget.1-2-0"
+		date="2015-04-30">
+		<Change>Updated dependency</Change>
+		<Change>Updated External File management</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-resources-widget.1-1-0"
+		date="2015-02-16">
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-resources-widget.1-0-0"
+		date="2014-10-31">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

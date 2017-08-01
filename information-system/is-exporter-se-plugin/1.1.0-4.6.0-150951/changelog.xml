@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.informationsystem.is-exporter-se-plugin.1.1.0" date="2017-08-01">
+		<Change>Removed List and Set usage as workaround fo OrientDB bug #9021</Change>
+	</Changeset>
+	<Changeset component="org.gcube.informationsystem.is-exporter-se-plugin.1.0.0" date="2017-06-07">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

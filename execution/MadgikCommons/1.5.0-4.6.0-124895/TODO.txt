@@ -1,0 +1,6 @@
+SSL - HTTPS
+http://java.sun.com/j2se/1.5.0/docs/guide/security/jsse/JSSERefGuide.html
+http://www.heatonresearch.com/articles/146/page5.html
+http://forums.sun.com/thread.jspa?threadID=515154
+http://stackoverflow.com/questions/875467/java-client-certificates-over-https-ssl
+http://vafer.org/blog/20061010073725

@@ -1,0 +1,312 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+
+
+	<groupId>org.gcube.data.analysis</groupId>
+	<artifactId>data-miner-manager-cl</artifactId>
+	<version>1.3.0-4.6.0-148453</version>
+
+	<name>data-miner-manager-cl</name>
+	<description>DataMiner Manager Client Library</description>
+
+
+	<scm>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-analysis/data-miner-manager-cl</url>
+	</scm>
+
+
+	<developers>
+		<developer>
+			<name>Giancarlo Panichi</name>
+			<email>g.panichi@isti.cnr.it</email>
+			<organization>CNR Pisa, Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo"</organization>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<properties>
+		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+		<distroDirectory>distro</distroDirectory>
+		<configDirectory>config</configDirectory>
+
+
+		<!-- Java Version -->
+		<javaVersion>1.7</javaVersion>
+		
+		
+		<!-- GWT configuration -->
+		<gwtVersion>2.6.1</gwtVersion>
+		<gwtLogVersion>3.3.2</gwtLogVersion>
+		<!-- <gxtVersion>3.1.1</gxtVersion> -->
+		<!-- <gxt2Version>2.6.1</gxt2Version> -->
+		
+
+		<KEYS>${env.KEYS}</KEYS>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+
+	<profiles>
+		<profile>
+			<id>localRun</id>
+			<dependencies>
+				<!-- Logger -->
+				<dependency>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+					<scope>compile</scope>
+				</dependency>
+				<dependency>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+
+				<dependency>
+					<groupId>xerces</groupId>
+					<artifactId>xerces</artifactId>
+					<version>2.4.0</version>
+				</dependency>
+
+				<!-- Storage -->
+				<dependency>
+					<groupId>org.gcube.contentmanagement</groupId>
+					<artifactId>storage-manager-core</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+				<dependency>
+					<groupId>org.gcube.contentmanagement</groupId>
+					<artifactId>storage-manager-wrapper</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+
+				<!-- Home Library <dependency> <groupId>org.gcube.common</groupId> <artifactId>home-library</artifactId> 
+					<scope>runtime</scope> </dependency> <dependency> <groupId>org.gcube.common</groupId> 
+					<artifactId>home-library-jcr</artifactId> <scope>runtime</scope> </dependency> 
+					<dependency> <groupId>org.gcube.common</groupId> <artifactId>home-library-model</artifactId> 
+					<scope>runtime</scope> </dependency> -->
+
+				<!-- Authorization -->
+				<dependency>
+					<groupId>org.gcube.common</groupId>
+					<artifactId>common-authorization</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+				<dependency>
+					<groupId>org.gcube.common</groupId>
+					<artifactId>authorization-client</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+
+
+			</dependencies>
+		</profile>
+	</profiles>
+
+
+	<dependencies>
+
+		<!-- Authorization -->
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>common-authorization</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>authorization-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Storage -->
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-core</artifactId>
+			<version>2.6.1-4.6.0-142241</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-wrapper</artifactId>
+			<version>2.4.1-4.6.0-142243</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Information System Client IC-Client -->
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>ic-client</artifactId>
+		</dependency>
+
+		<!-- Nord52 -->
+		<dependency>
+			<groupId>org.n52.wps</groupId>
+			<artifactId>52n-wps-client-lib</artifactId>
+			<version>[3.3.1,3.3.3)</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>gt-opengis</artifactId>
+					<groupId>org.geotools</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>xerces</groupId>
+					<artifactId>xercesImpl</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+
+		<!-- LOGGING -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.5</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>[3.0.0,4.0.0)</version>
+			<scope>test</scope>
+		</dependency>
+
+
+	</dependencies>
+
+	<repositories>
+
+		<repository>
+			<id>gCubeExternal</id>
+			<name>gcube-externals</name>
+			<url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-externals/</url>
+		</repository>
+
+		<repository>
+			<id>n52-releases</id>
+			<name>52n Releases</name>
+			<url>http://52north.org/maven/repo/releases/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<!-- <repository> -->
+		<!-- <id>52north-releases</id> -->
+		<!-- <name>52north-releases</name> -->
+		<!-- <url>http://maven.research-infrastructures.eu/nexus/content/repositories/52north-releases/</url> -->
+		<!-- </repository> -->
+
+	</repositories>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>gcube-bom</artifactId>
+				<version>1.0.2-4.6.0-148527</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+	<build>
+		<!-- Generate compiled stuff in the folder used for developing mode -->
+		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
+		<sourceDirectory>src/main/java</sourceDirectory>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+
+
+		<plugins>
+			
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-javadoc-plugin</artifactId> 
+				<version>2.9.1</version> </plugin> -->
+
+			<!-- GWT Maven Plugin -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>${gwtVersion}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>resources</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<runTarget>DataMinerManagerCL.html</runTarget>
+					<hostedWebapp>${webappDirectory}</hostedWebapp>
+					<module>org.gcube.data.analysis.dataminermanagercl.dataminermanagercl</module>
+					<!-- <compileSourcesArtifacts> <artifact>com.github.highcharts4gwt:highcharts</artifact> 
+						</compileSourcesArtifacts> -->
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${javaVersion}</source>
+					<target>${javaVersion}</target>
+				</configuration>
+			</plugin>
+			
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+
+		</plugins>
+	</build>
+</project>

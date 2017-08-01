@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>The Gcube Url Shortener uses the Google URL Shortener at goo.gl. It is a service that takes long URLs and squeezes them into fewer characters to make a link that is easier to share, tweet, or email to friends.</Description>
+		<Class>PortletUser</Class>
+		<Name>gcube-url-shortener</Name>
+		<Version>1.1.1-4.6.0-146951</Version>
+		<Packages>
+			<Software>
+				<Name>gcube-url-shortener</Name>
+				<Version>1.1.1-4.6.0-146951</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.portlets.user</groupId>
+					<artifactId>gcube-url-shortener</artifactId>
+					<version>1.1.1-4.6.0-146951</version>
+				</MavenCoordinates>
+				<Files>
+					<File>target/gcube-url-shortener-1.1.1-4.6.0-146951.war</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

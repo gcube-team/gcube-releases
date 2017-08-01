@@ -1,0 +1,153 @@
+#RolesManagementContainer span#numOfSelectedRowsUserReqs, span#numOfSelectedRows {
+	padding-right: 4px;
+}
+#RolesManagementContainer #usersManagementDiv {
+	font-size: 18px;
+	color : #4cb5d2;
+	display : inline;
+	padding-left : 15px;
+}
+#RolesManagementContainer div#userRequestsNotifications.notificationsHidden {
+	display : none;
+}
+#RolesManagementContainer div#userRequestsNotifications.notificationsShown {
+	font-size: 14px;
+	background-color : #c00000;
+	background : #c00000;
+	color: white;
+	display: inline;
+	border-radius : 50%;
+	padding: 6px 9px;
+	margin-left: 8px;
+	cursor : pointer;
+}
+#RolesManagementContainer div#toolbarHr {
+	border-bottom : 1px solid #4cb5d2;
+	/* height : 1em; */
+}
+#RolesManagementContainer div#toolbar.shownToolbar {
+	background : #e7e7e7;
+	background-color : #e7e7e7;
+}
+#RolesManagementContainer div#toolbar.shownToolbar > div#displaySelected {
+	cursor : default !important;
+	float : right;
+}
+#RolesManagementContainer div.toolbarContainer {
+	margin-top : 5px;
+	margin-bottom: 10px;
+}
+#RolesManagementContainer div#toolbar div {
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top : 10px;
+	color : #4cb5d2;
+	display : inline-block;
+	height : 2em;
+	cursor : pointer;
+}
+#RolesManagementContainer div#toolbar div:hover {
+	background: #4cb5d2;
+	background-color: #4cb5d2;
+	color : #eeeeee;
+}
+#RolesManagementContainer div#toolbar div#editSelected.hidden{
+	display:none;
+}
+#RolesManagementContainer div#toolbar.hiddenToolbar {
+	background : #e7e7e7;
+	background-color : #e7e7e7;
+	color : #e7e7e7;
+	
+	/* background-color : #eeeeee;
+	background : #eeeeee;
+	color : #eeeeee; */
+}
+#RolesManagementContainer div#toolbar.hiddenToolbar div:not(#addNew){
+	background-color : #e7e7e7;
+	background : #e7e7e7;
+	color : #e7e7e7;
+} 
+#RolesManagementContainer div#toolbar.hiddenToolbar:hover div:not(#addNew) {
+	background-color : #e7e7e7;
+	background : #e7e7e7;
+	color : #e7e7e7;
+	
+	/* background-color : #eeeeee;
+	background : #eeeeee;
+	color : #eeeeee; */
+	cursor : default;
+}
+/* div#toolbar.hiddenToolbar {
+	display:none;
+} */
+#RolesManagementContainer div#usersRequestsTableToolbarContainer div {
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top : 10px;
+	color : #4cb5d2;
+	display : inline-block;
+	height : 2em;
+	cursor : pointer;
+}
+#RolesManagementContainer div#usersRequestsTableToolbarContainer div:hover {
+	background: #4cb5d2;
+	background-color: #4cb5d2;
+	color : white;
+}
+#RolesManagementContainer div#usersRequestsTableToolbarContainer.shownToolbar > div#displaySelectedUserReqs {
+	cursor : default !important;
+	float : right;
+}
+#RolesManagementContainer div#usersRequestsTableToolbarContainer.shownToolbar:hover div:last-of-type {
+	background-color : #e7e7e7;
+	background : #e7e7e7;
+	color : rgb(13, 99, 200);
+}
+#RolesManagementContainer div#usersRequestsTableToolbarContainer {
+	background-color : #e7e7e7;
+	background : #e7e7e7;
+	margin-bottom : 10px;
+}
+#RolesManagementContainer div#usersRequestsTableToolbarContainer.hiddenToolbar, #RolesManagementContainer div#usersRequestsTableToolbarContainer.hiddenToolbar div {
+	background-color : white;
+	background : white;
+	color : white;
+	cursor : default !important;
+}
+#RolesManagementContainer div#usersRequestsModal div.modal-body {
+	padding-top : 0px !important;
+}
+#RolesManagementContainer div#requestsAcceptanceToolbar i,#RolesManagementContainer span {
+	display : inline-block;
+}
+#RolesManagementContainer div#requestsAcceptanceToolbar {
+	background : rgb(234, 234, 234);
+	background-color : rgb(234, 234, 234);
+	display : block;
+}
+#RolesManagementContainer div#requestsAcceptanceToolbar i{
+	transform : scale(3,1);
+	-webkit-transform : scale(1.5,1.5);
+}
+#RolesManagementContainer span#toolbarText {
+	margin-left: 10px;
+}
+#RolesManagementContainer #currentUsersTableRefresh, #RolesManagementContainer #reloadUsersRequestsTable {
+	border : none;
+}
+#RolesManagementContainer div#addNew {
+	background : #e7e7e7;
+	background-color : #e7e7e7;
+	padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+    color: #4cb5d2;
+    height: 2em;
+    cursor: pointer;
+}
+/* div#addNew:hover {
+	background: #4cb5d2;
+	background-color: #4cb5d2;
+	color : white;
+} */

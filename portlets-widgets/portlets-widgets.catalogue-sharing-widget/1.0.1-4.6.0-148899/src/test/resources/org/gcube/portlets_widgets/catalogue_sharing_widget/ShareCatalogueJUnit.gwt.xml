@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="ShareCatalogue">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets_widgets.catalogue_sharing_widget.ShareCatalogue' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/ShareCatalogue/greet" class="org.gcube.portlets_widgets.catalogue_sharing_widget.server.GreetingServiceImpl" />
+
+</module>

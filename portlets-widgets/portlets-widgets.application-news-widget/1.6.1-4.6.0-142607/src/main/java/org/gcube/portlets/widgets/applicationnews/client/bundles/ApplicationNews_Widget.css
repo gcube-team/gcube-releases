@@ -1,0 +1,187 @@
+@external newsbutton, div-table, div-table-row , div-table-col, div-table-col.content,  div-table-col.edit, div-table-col.close, 
+div-table-col.photo, div-table-col.labels, feed-border, link, tweet-content, info-content, tweet-separator, tweet-actions, time, 
+linkpreview-image,link-preview, linkpreview-bgcolor, linkpreview-title, linkpreview-url, linkpreview-desc, member-photo, content, linkpreview-image, labels, edit, photo, close, buttonBackground;
+table {
+	border-collapse: separate !important;
+	border-spacing: 0;
+}
+
+.newsbutton {
+	padding-left: 5px !important;
+	padding-right: 19px !important;
+	color: white !important;
+	background-color: #0571A6 !important;
+	border: 1px solid #045A8B !important;
+}
+
+@sprite .buttonBackground {
+	gwt-image: "buttonImage";
+	background-position: right center !important;
+	background-repeat: no-repeat !important;
+	width: 120px;
+	height: 25px;
+}
+
+
+@sprite .feed-border {
+	gwt-image: "feedPreviewBorderImage";
+	display: block;
+	height: 8px;
+	width: 600px;
+}
+
+.div-table {
+	display: table;
+	width: 590px;
+	background-clip: border-box;
+	background-image: none;
+	background-origin: padding-box;
+	border-bottom-color: #DADADA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	padding: 10px 7px 3px 7px;
+}
+
+.div-table-row {
+	display: table-row;
+	text-align: left;
+}
+
+.div-table-col {
+	display: table-cell;
+	text-align: left;
+}
+
+.div-table-col.content {
+	padding-left: 10px;
+	vertical-align: top;
+}
+
+.div-table-col.edit {
+	padding-left: 5px;
+	vertical-align: top;
+	width: 15px;
+}
+
+.div-table-col.close {
+	padding-left: 5px;
+	vertical-align: top;
+	width: 15px;
+}
+
+.div-table-col.photo {
+	width: 60px;
+}
+
+.div-table-col.labels {
+	width: 60px;
+}
+
+
+.link {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 16x;
+	line-height: 18px;
+	color: #3B5998;
+}
+
+.tweet-content {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	color: #333;
+}
+
+.info-content {
+	padding-top: 7px;
+	padding-bottom: 10px;
+	padding-left: 7px;
+	font-family: Arial, sans-serif;
+	font-size: 15px;
+	line-height: 22px;
+	color: #333;
+}
+
+.tweet-separator {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.tweet-actions {
+	padding-top: 5px;
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+		sans-serif;
+	font-size: 11px;
+	text-align: left;
+	overflow: hidden;
+	clear: both;
+}
+
+.tweet-actions .time {
+	padding-left: 15px;
+	padding-right: 15px;
+	white-space: nowrap;
+}
+
+.tweet-actions div {
+	color: #666;
+}
+
+.tweet-actions div a {
+	color: #3B5998;
+}
+
+a.link,a.link:active,a.link:visited {
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+		sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	color: #3B5998;
+}
+
+/* Other */
+.linkpreview-image {
+	margin: 3px;
+}
+
+.link-preview {
+	padding: 5px;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	background-clip: border-box;
+	background-color: #FBFBFB;
+	background-image: none;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	width: 500px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.linkpreview-bgcolor {
+	background-color: #FBFBFB;
+}
+
+.linkpreview-title {
+	margin-top: 3px;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 15px;
+}
+
+.linkpreview-url {
+	margin-top: 10px;
+	color: #666;
+	font-size: 10px;
+}
+
+.linkpreview-desc {
+	padding-top: 5px;
+	color: #333;
+	font-size: 10px;
+}
+
+.member-photo {
+	display: block;
+	padding: 2px;
+	border: 1px solid #E6E6E6;
+}

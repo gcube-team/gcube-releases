@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+
+
+.wizard-title {
+	padding: 5px;
+	font-weight: bold;
+	font-size: small;
+	background-color: #C3D9FF;
+}
+
+.wizard-footer {
+	padding: 5px;
+	font-weight: bold;
+	font-size: small;
+	text-align: right;
+	background-color: #CDEB8B
+}
+
+.source-selection-hover:hover {
+	cursor: pointer;
+}
+
+
+
+.column-excluded {
+	background-color: #e6e0da !important;
+	color: #bfa698;
+}
+
+.importSelection-sources {
+	padding: 30px; 
+    display: block;
+    margin-top: 20px;
+	
+}
+
+.importSelection-source {
+	padding-bottom: 20px;
+}
+
+
+
+.sdmxRegistryUrlStyle {
+	padding-top:5px;
+}
+
+.sdmxRegistryUrlInputStyle {
+	width:300px!important;
+}
+
+
+input#sdmxRegistryUrlInputFieldId-input {
+	width:300px!important;
+}

@@ -1,0 +1,8 @@
+{{GATEWAY_NAME}}
+----------------------------------
+Hi {{REQUESTING_USER_FIRST_NAME}},
+
+we regret to inform you that {{USER_FULLNAME}} has rejected your access request for {{SELECTED_VRE_NAME}} VRE.
+
+---
+You received this email because you requested access to {{SELECTED_VRE_NAME}} on {{MANAGE_REQUEST_DATE}}.

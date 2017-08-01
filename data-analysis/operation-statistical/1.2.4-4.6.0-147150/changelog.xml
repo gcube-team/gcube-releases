@@ -1,0 +1,18 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-analysis.operation-statistical.1-0-0" date="2013-02-18"> 
+		<Change>first release</Change>
+	</Changeset>	
+	<Changeset component="org.gcube.data-analysis.operation-statistical.1-2-1" date="2015-05-21"> 
+		<Change>Custom Operations for Fao Ocean Area</Change>
+		<Change>Custom Operations for CSquare Codes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-statistical.1-2-2" date="2015-06-05"> 
+		<Change>Integration with smp id</Change>		
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-statistical.1-2-3" date="2015-11-20"> 
+		<Change>Integration with Statistical Manager cl 2.0</Change>		
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-statistical.1-2-4" date="2017-03-28"> 
+		<Change>Integration with DataMiner</Change>		
+	</Changeset>
+</ReleaseNotes>

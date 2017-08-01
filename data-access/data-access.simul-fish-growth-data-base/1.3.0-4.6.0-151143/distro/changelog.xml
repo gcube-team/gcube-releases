@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data.simul-fish-growth-data-base" date="2017-06-26">
+		<Change>First release of the library</Change>
+	</Changeset>
+</ReleaseNotes>

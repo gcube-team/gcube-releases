@@ -1,0 +1,5 @@
+<ReleaseNotes> 
+	<Changeset component="${groupId}.${artifactId}.1.0.0" date="2013-10-11"> 
+		<Change>Project decoupled from database-resource</Change>
+	</Changeset>
+</ReleaseNotes>
