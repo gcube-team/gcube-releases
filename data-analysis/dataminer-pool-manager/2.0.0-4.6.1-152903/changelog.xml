@@ -1,0 +1,8 @@
+<ReleaseNotes>
+<Changeset component="dataminer-pool-manager.1-0-0" date="2017-09-19">
+  <Change>First Release</Change>
+</Changeset>
+<Changeset component="dataminer-pool-manager.2-0-0" date="2017-09-19">
+  <Change>Second Release</Change>
+</Changeset>
+</ReleaseNotes>

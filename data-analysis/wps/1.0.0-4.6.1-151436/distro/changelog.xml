@@ -1,0 +1,26 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-analysis.r-connector.2.1.2" date="2017-03-27">
+		<Change>add user script is executed also when configfile.csv is not present</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.r-connector.2.1.2" date="2017-02-22">
+		<Change>porting to tabualr-data-cl 2.0.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.r-connector.2.1.0" date="2016-10-03">
+		<Change>porting to smartgears 2.0</Change>
+	</Changeset>
+     <Changeset component="org.gcube.data-analysis.r-connector.2.0.1" date="2016-05-13">
+		<Change>algorithm for cookie encryption modified to support RStudio server 0.99</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.r-connector.2.0.0" date="2016-03-15">
+		<Change>connect method with empty parameters added</Change>
+		<Change>Authorization Framework integration</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.r-connector.1-0-1"
+		date="2015-5-20">
+		<Change>Bug fixing</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.r-connector.1-0-0"
+		date="2014-11-02">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

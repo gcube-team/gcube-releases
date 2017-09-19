@@ -1,0 +1,45 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+
+
+@sprite .up, .allRight, .right, .left, .allLeft, .down {
+  gwt-image: "background";
+  position: relative;
+}
+
+
+.up:after, .allRight:after, .right:after, .left:after, .allLeft:after, .down:after {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+}
+
+@sprite .up:after {
+  gwt-image: "upBtn";
+}
+
+@sprite .allRight:after {
+  gwt-image: "allRightBtn";
+}
+
+@sprite .right:after {
+  gwt-image: "rightBtn";
+}
+
+@sprite .left:after {
+  gwt-image: "leftBtn";
+}
+
+@sprite .allLeft:after {
+  gwt-image: "allLeftBtn";
+}
+
+@sprite .down:after {
+  gwt-image: "downBtn";
+}

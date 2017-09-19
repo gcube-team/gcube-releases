@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!-- 
+  Portions of this file Copyright 1999-2005 University of Chicago
+  Portions of this file Copyright 1999-2005 The University of Southern California.
+  
+  This file or a portion of this file is licensed under the
+  terms of the Globus Toolkit Public License, found at
+  http://www.globus.org/toolkit/download/license.html.
+  If you redistribute this file, with or without
+  modifications, you must include this notice in the file.
+-->
+
+<project default="runServer" name="globus_wsrf_test_base" basedir=".">
+
+    <description>
+        Targets for executing tests with binary installations.
+        Make sure GLOBUS_LOCATION env. variable is properly set.
+        Then execute ant -f runtests.xml -Dtests.jar=&lt;jar file&gt;
+        (where &lt;jar file&gt; contains test classes)
+    </description>
+
+    <!-- 
+    Give user a chance to override without editing this file
+    (and without typing -D each time it compiles it) 
+    -->
+    
+    <property environment="env"/>
+    
+    <property file="build.properties"/>
+    <property file="${user.home}/build.properties"/>
+    
+    <property name="env.GLOBUS_LOCATION" value="../../../install"/>
+    <property name="deploy.dir" location="${env.GLOBUS_LOCATION}"/>
+    <property name="abs.deploy.dir" location="${deploy.dir}"/>
+
+    <property name="test.dir" value="tests"/>
+    <property name="tests.dir" value="${test.dir}/classes"/>
+
+    <property name="junit.reports.dir" 
+              location="${test.dir}/test-reports"/>
+    <property name="junit.html.reports.dir" 
+              location="${test.dir}/test-reports-html"/>
+    <property name="junit.haltonfailure" value="true"/>
+    <property name="junit.test.format" value="xml"/>
+    <property name="junit.timeout" value="600000"/>
+    <property name="junit.jvmarg" value="-Dignore" />
+
+    <property name="test.server.url" 
+              value="http://localhost:8080/wsrf/services/"/>
+
+    <target name="init">
+      <fail message="Must specify tests jar file (-Dtests.jar=&lt;jar&gt;)" 
+            unless="tests.jar"/>
+      <mkdir dir="${test.dir}"/>
+      <delete dir="${tests.dir}"/>
+      <mkdir dir="${tests.dir}"/>
+      <unjar src="${tests.jar}" dest="${tests.dir}"/>
+    </target>
+
+    <target name="runServer" 
+            description="Executes tests contained in a jar file 
+                         (in internal container)"
+            depends="init">
+      <property name="server.arg" 
+                value="-Dweb.server.url=${test.server.url}" />
+      <antcall target="runTests"/>
+      <antcall target="runSecurityTests"/>
+    </target>
+
+    <target name="run" 
+            description="Executes tests contained in a jar file 
+                         (in external container)"
+            depends="init">
+      <property name="server.arg" value="-Dignore" />
+      <antcall target="runTests"/>
+      <antcall target="runSecurityTests"/>
+    </target>
+
+    <target name="runTests" unless="securityTestsOnly">
+      <patternset id="package.fileset">
+         <include name="**/PackageTests.class" />
+      </patternset>
+      <antcall target="_runCustomTests">
+          <reference refid="package.fileset" torefid="test.fileset"/>
+      </antcall>
+      <patternset id="post.package.fileset">
+         <include name="**/PostPackageTests.class" />
+      </patternset>
+      <antcall target="_runCustomTests">
+          <reference refid="post.package.fileset" torefid="test.fileset"/>
+      </antcall>
+    </target>
+
+    <target name="runSecurityTests" unless="basicTestsOnly">
+      <patternset id="security.fileset">
+         <include name="**/SecurityTests.class" />
+      </patternset>
+      <antcall target="_runCustomTests">
+          <reference refid="security.fileset" torefid="test.fileset"/>
+      </antcall>
+      <patternset id="post.security.fileset">
+         <include name="**/PostSecurityTests.class" />
+      </patternset>
+      <antcall target="_runCustomTests">
+          <reference refid="post.security.fileset" torefid="test.fileset"/>
+      </antcall>
+    </target>
+
+   <target name="_runCustomTests">
+      <mkdir dir="${junit.reports.dir}" />
+      <junit printsummary="yes" 
+             haltonfailure="${junit.haltonfailure}" 
+             fork="yes" 
+             timeout="${junit.timeout}">
+            <sysproperty key="org.globus.wsrf.container.webroot" 
+                value="${abs.deploy.dir}"/>
+            <sysproperty key="GLOBUS_LOCATION" 
+                value="${abs.deploy.dir}"/>
+            <classpath>
+                <pathelement location="${abs.deploy.dir}"/>
+                <fileset dir="${abs.deploy.dir}/lib">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>
+        <formatter type="${junit.test.format}" />
+        <batchtest todir="${junit.reports.dir}">
+         <fileset dir="${tests.dir}">
+            <patternset refid="test.fileset"/>
+         </fileset>
+        </batchtest>
+        <jvmarg value="-Djava.endorsed.dirs=${abs.deploy.dir}/endorsed"/>
+        <jvmarg value="${server.arg}" />
+        <jvmarg line="${junit.jvmarg}" />
+      </junit>
+    </target>
+
+
+   <target name="generateTestReport"
+           description="Generates html report of test results. Must be executed after test are executed">
+       <delete dir= "${junit.html.reports.dir}"/>
+       <mkdir dir = "${junit.html.reports.dir}"/>
+       <junitreport todir="${junit.reports.dir}">
+          <fileset dir="${junit.reports.dir}">
+            <include name="TEST-*.xml"/>
+          </fileset>
+          <report format="frames" todir="${junit.html.reports.dir}"/>
+      </junitreport>
+   </target>
+
+</project>

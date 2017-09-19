@@ -1,0 +1,101 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def radius      value('theme.tip.borderRadius', 'px');
+@def borderStyle value('theme.tip.border.style');
+@def borderColor value('theme.tip.border.color');
+@def borderWidth value('theme.tip.border.toString');
+
+@def css3Leftover value('theme.tip.radiusMinusBorderWidth.toString');
+
+@def padding value('theme.tip.padding.toString');
+@def margin value('theme.tip.margin.toString');
+
+@def opacity value('theme.tip.opacity');
+@def backgroundColor value('theme.tip.backgroundColor');
+
+
+@def headerColor value('theme.tip.headerText.color');
+@def headerSize value('theme.tip.headerText.size');
+@def headerWeight value('theme.tip.headerText.weight');
+@def headerFamily value('theme.tip.headerText.family');
+@def messageColor value('theme.tip.messageText.color');
+@def messageSize value('theme.tip.messageText.size');
+@def messageWeight value('theme.tip.messageText.weight');
+@def messageFamily value('theme.tip.messageText.family');
+
+@def headerPadding value('theme.tip.headerPadding.toString');
+@def messagePadding value('theme.tip.messagePadding.toString');
+
+
+.tipWrap {
+  border-color: borderColor;
+  border-style: borderStyle;
+  border-width: borderWidth;
+  border-radius: radius;
+
+  background-color: backgroundColor;
+
+  opacity: opacity;
+
+  margin: margin;
+  /* applying the radius as padding here, avoiding us needing to do math when working out the sliced padding,
+     which already has the padding from the images */
+  padding: css3Leftover;
+}
+
+.tip {
+  padding: padding;
+}
+
+.tools {
+  float: right;
+}
+
+.heading {
+  color: headerColor;
+  font-size: headerSize;
+  font-weight: headerWeight;
+  font-family: headerFamily;
+}
+
+.headingWrap {
+  padding: headerPadding;
+}
+
+.text {
+  color: messageColor;
+  font-size: messageSize;
+  font-weight: messageWeight;
+  font-family: messageFamily;
+}
+
+.textWrap {
+  padding: messagePadding;
+}
+
+.anchor {}
+
+@sprite .anchorBottom {
+  gwt-image: "anchorBottom";
+  position: absolute;
+}
+
+@sprite .anchorRight {
+  gwt-image: "anchorRight";
+  position: absolute;
+}
+
+@sprite .anchorLeft {
+  gwt-image: "anchorLeft";
+  position: absolute;
+}
+
+@sprite .anchorTop {
+  gwt-image: "anchorTop";
+  position: absolute;
+}

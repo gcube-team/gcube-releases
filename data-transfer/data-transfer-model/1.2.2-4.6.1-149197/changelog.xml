@@ -1,0 +1,18 @@
+<ReleaseNotes>
+	<Changeset component="data-transfer-model-1.0.0" date="2016-02-22">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="data-transfer-model-1.1.0" date="2016-09-09">
+		<Change>Added Destination</Change>
+		<Change>Added Plugin</Change>
+	</Changeset>
+	<Changeset component="data-transfer-model-1.2.0" date="2016-10-09">
+		<Change>Improved Plugin handling</Change>		
+	</Changeset>
+	<Changeset component="data-transfer-model-1.2.1" date="2017-02-19">
+		<Change>REST Constants</Change>		
+	</Changeset>
+	<Changeset component="data-transfer-model-1.2.2" date="2017-05-18">
+		<Change>Improved marshal checks JSON</Change>		
+	</Changeset>
+</ReleaseNotes>

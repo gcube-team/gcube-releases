@@ -1,0 +1,97 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:b2="urn:import:com.github.gwtbootstrap.datepicker.client.ui">
+	<ui:style>
+	.error {
+		color: red;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<div
+			style="padding-bottom: 9px!important; margin: 20px 0 30px!important; border-bottom: 1px solid #eee!important;">
+			<h2 style="display:inline; margin-left: 40px; margin-right: 40px;"> VRE Information </h2>
+		</div>
+		<b:Row>
+			<b:Form type="HORIZONTAL" ui:field="vreInformationForm">
+				<b:Fieldset>
+					<b:ControlGroup>
+
+						<b:ControlLabel for="name" title="VRE's Name">
+							Name:
+						</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox alternateSize="LARGE" placeholder="Enter VRE Name"
+								b:id="name" title="VRE's Name" ui:field="vreNameTextBox" />
+							<b:HelpInline ui:field="vreNameError" styleName="{style.error}"
+								visible="false" text="VRE must have a name and it must not contain spaces"></b:HelpInline>
+						</b:Controls>
+
+						<br></br>
+
+						<b:ControlLabel for="designer" title="VRE's Designer">
+							Designer:
+						</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox readOnly="true" alternateSize="LARGE"
+								placeholder="VRE Designer" b:id="designer" title="VRE's Designer"
+								ui:field="vreDesignerTextBox" />
+							<b:HelpInline ui:field="vreDesignerError" styleName="{style.error}"
+								visible="false" text="VRE must have a Designer"></b:HelpInline>
+						</b:Controls>
+
+						<br></br>
+
+						<b:ControlLabel for="managers" title="VRE's Managers">
+							Managers:
+						</b:ControlLabel>
+						<b:Controls>
+							<b:ListBox alternateSize="LARGE" b:id="managers" title="VRE's Managers"
+								ui:field="vreManagersListBox">
+							</b:ListBox>
+						</b:Controls>
+
+						<br></br>
+
+						<b:ControlLabel for="description" title="VRE's Description">
+							Description:
+						</b:ControlLabel>
+						<b:Controls>
+							<b:TextArea alternateSize="LARGE" b:id="description"
+								visibleLines="5" width="50%" title="VRE's Description" ui:field="vreDescriptionTextArea"
+								placeholder="Enter VRE Description">
+							</b:TextArea>
+							<b:HelpInline ui:field="vreDescriptionError"
+								styleName="{style.error}" visible="false" text="VRE must have a Description"></b:HelpInline>
+						</b:Controls>
+
+						<br></br>
+
+						<b:ControlLabel for="vreStartTime" title="VRE's from date">
+							From:
+						</b:ControlLabel>
+						<b:Controls>
+							<b2:DateBoxAppended format="yyyy/mm/dd" icon="CALENDAR"
+								autoClose="true" title="VRE's from date" ui:field="vreFromDate" />
+						</b:Controls>
+
+						<br></br>
+
+						<b:ControlLabel for="vreEndTime" title="VRE's to date">
+							To:
+						</b:ControlLabel>
+						<b:Controls>
+							<b2:DateBoxAppended format="yyyy/mm/dd" icon="CALENDAR"
+								autoClose="true" title="VRE's to date" ui:field="vreToDate" />
+						</b:Controls>
+
+					</b:ControlGroup>
+				</b:Fieldset>
+			</b:Form>
+
+		</b:Row>
+		<!-- Functionalities -->
+		<g:VerticalPanel width="100%" ui:field="vreFunctionalities">
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

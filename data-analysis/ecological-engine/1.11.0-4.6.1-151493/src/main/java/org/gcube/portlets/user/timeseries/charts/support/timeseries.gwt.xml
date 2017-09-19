@@ -1,0 +1,9 @@
+<module>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	
+	 <source path='assertions'/>
+	 <source path='exceptions'/>
+	 <source path='types'/>
+	 <source path='tablemodel'/>
+</module>

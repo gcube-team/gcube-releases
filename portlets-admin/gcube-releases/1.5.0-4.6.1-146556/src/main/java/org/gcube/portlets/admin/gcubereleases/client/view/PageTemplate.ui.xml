@@ -1,0 +1,68 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<g:FlowPanel>
+		<g:FlowPanel ui:field="p_release_manager">
+			<b:Row>
+				<b:Column size="3">
+					<b:Button type="LINK" text="Manage Releases" ui:field="b_releases_manage"></b:Button>
+				</b:Column>
+				<b:Column size="3">
+					<b:Button type="LINK" text="New Release" ui:field="b_release_new"></b:Button>
+				</b:Column>
+				<b:Column size="3">
+					<b:Button type="LINK" text="Delete Packages" ui:field="b_release_package"></b:Button>
+				</b:Column>
+				<b:Column size="3">
+					<b:Button type="LINK" text="Click Statistics" ui:field="b_click_statistics"></b:Button>
+				</b:Column>
+			</b:Row>
+		</g:FlowPanel>
+
+		<g:FlowPanel ui:field="base_container">
+			<b:FluidRow styleName="right-position">
+				<b:Column size="3" ui:field="h_other_release">
+					<b:NavPills>
+						<b:Dropdown text="Other Releases" ui:field="dropdown_releases">
+						</b:Dropdown>
+					</b:NavPills>
+				</b:Column>
+			</b:FluidRow>
+
+			<b:FluidRow>
+				<b:Hero styleName="hero-unit-personal">
+					<b:FluidRow ui:field="h_title">
+					</b:FluidRow>
+				</b:Hero>
+			</b:FluidRow>
+
+			<b:FluidRow ui:field="h_release_info">
+			</b:FluidRow>
+
+			<b:FluidRow ui:field="h_filter">
+				<b:Column size="4">
+					<b:Accordion>
+						<b:AccordionGroup width="300px" ui:field="accordionGroup">
+							<b:NavList ui:field="navList">
+							</b:NavList>
+						</b:AccordionGroup>
+					</b:Accordion>
+					<!-- </b:PanelGroup> -->
+				</b:Column>
+				<b:Column size="4" offset="3">
+					<b:ControlGroup>
+						<b:Controls>
+							<b:TextBox styleName="no_Margin" ui:field="filterText"
+								placeholder="Filter by Artifact" />
+							<b:Button text="Search" ui:field="filterBtn">Send</b:Button>
+						</b:Controls>
+					</b:ControlGroup>
+				</b:Column>
+			</b:FluidRow>
+
+			<b:FluidRow ui:field="h_release_notes">
+			</b:FluidRow>
+
+		</g:FlowPanel>
+	</g:FlowPanel>
+</ui:UiBinder> 

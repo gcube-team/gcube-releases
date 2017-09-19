@@ -1,0 +1,58 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+	
+	<context-param>
+		<param-name>Environment</param-name>
+		<param-value>Dev</param-value>
+		<!-- Possible Values: Dev, Proto, Prod -->
+		<description>This is a context parameter example</description>
+	</context-param>
+
+	<servlet>
+		<servlet-name>REST-API</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>jersey.config.server.provider.packages</param-name>
+			<param-value>
+				io.swagger.jaxrs.listing,
+				org.gcube.dataanalysis.dataminer.poolmanager.rest</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+
+
+
+
+
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>REST-API</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+
+	</servlet-mapping>
+
+
+
+
+	<!-- <servlet> <servlet-name>Jersey2Config</servlet-name> <servlet-class>io.swagger.jersey.config.JerseyJaxrsConfig</servlet-class> 
+		<init-param> <param-name>api.version</param-name> <param-value>1.0.0</param-value> 
+		</init-param> <init-param> <param-name>swagger.api.basepath</param-name> 
+		<param-value>http://localhost:8080/api</param-value> </init-param> <load-on-startup>2</load-on-startup> 
+		</servlet> -->
+
+
+
+	<!-- <security-constraint> <web-resource-collection> <web-resource-name>Viewpoint 
+		Secure URLs</web-resource-name> <url-pattern>/api/*</url-pattern> </web-resource-collection> 
+		<user-data-constraint> <transport-guarantee>CONFIDENTIAL</transport-guarantee> 
+		</user-data-constraint> </security-constraint> -->
+
+
+
+
+
+</web-app>

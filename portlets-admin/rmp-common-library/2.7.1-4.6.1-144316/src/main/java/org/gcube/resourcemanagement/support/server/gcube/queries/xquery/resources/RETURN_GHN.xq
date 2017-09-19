@@ -1,0 +1,18 @@
+<Resource>
+        {$profiles//Resource/ID}
+        <Type>{$profiles//Resource/Type/text()}</Type>
+        <SubType>{$subtype}</SubType>
+        <Status>{$profiles//Resource/Profile/GHNDescription/Status/text()}</Status>
+        <Name>{$profiles//Resource/Profile/GHNDescription/Name/text()}</Name>
+        <Uptime>{$profiles//Resource/Profile/GHNDescription/Uptime/text()}</Uptime>
+        <LastUpdate>{$profiles//Resource/Profile/GHNDescription/LastUpdate/text()}</LastUpdate>
+        <LocalAvailableSpace>{$profiles//Resource/Profile/GHNDescription/LocalAvailableSpace/text()}</LocalAvailableSpace>
+       	<VirtualSize>{$profiles//Resource/Profile/GHNDescription/MainMemory/string(@VirtualSize)}</VirtualSize>
+       	<VirtualAvailable>{$profiles//Resource/Profile/GHNDescription/MainMemory/string(@VirtualAvailable)}</VirtualAvailable>
+        <LoadLast1Min>{$profiles//Resource/Profile/GHNDescription/Load/string(@Last1Min)}</LoadLast1Min>
+        <LoadLast5Min>{$profiles//Resource/Profile/GHNDescription/Load/string(@Last5Min)}</LoadLast5Min>
+        <LoadLast15Min>{$profiles//Resource/Profile/GHNDescription/Load/string(@Last15Min)}</LoadLast15Min>
+        <gcf-version>{$gcf-version}</gcf-version>
+        <ghn-version>{$ghn-version}</ghn-version>
+        <Scopes>{$scopes}</Scopes>
+</Resource>

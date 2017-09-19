@@ -1,0 +1,172 @@
+
+<!-- this is your main configuration XML (example name GuidedTour.xml), the 
+	source tag have to link this file: -->
+<guidedtour width="780" height="450" usemask="false">
+	<title>Workspace</title>
+	<guide>http://gcube.wiki.gcube-system.org/gcube/index.php/Workspace
+	</guide>
+	<themecolor>BLUE</themecolor>
+	<steps>
+		<step showTitle="true" v-alignment="ALIGN_TOP">
+			<title>Workspace</title>
+			<bodies>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 40px;">
+							<b>Workspace</b>
+							is a free Storage (and Sharing) area provided as-a-Service.							
+						</div>
+						<div style="padding-bottom: 40px;">You can use it to store your own files and to share them with others.</div>
+						<div style="padding-bottom: 40px;">
+							As you can see it resembles your Operating System 
+							<b>files manager</b>, however there are few things you should know to better exploit the Workspace.							
+						</div>
+						<div style="padding-bottom: 10px;">
+							<b>Discover</b>
+							the Workspace features through this quick tour, click next.
+						</div>
+					</div>
+					]]>
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/1.png" />
+			</images>
+		</step>
+		<step showTitle="true" v-alignment="ALIGN_TOP">
+			<title>General Info</title>
+			<bodies>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 10px;">
+							Please note the following:								
+						</div>
+						<div style="padding-top: 5px;">	
+							<ul style="list-style-type: circle; padding-left: 10px;">
+								<li>right-click on any item to access the actions of a specific folder or file;</li>	
+								<li>you can perform operations either on the tree or on the right view;</li>	
+								<li>the window on the right shows the content of the folder selected in the Tree.</li>
+							</ul>	
+						</div>						
+					</div>
+					]]>
+				</body>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 40px;">
+							<b>Please note:</b> the buttons present on the workspace top bar (see the image) are related to the current item selected below the bar.							
+						</div>										
+					</div>
+					]]>
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/8.png" />
+				<image url="images/tour/7.png" />
+			</images>
+		</step>
+		<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Sharing</title>
+			<bodies>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 40px;">
+							You can <b>Share</b>
+							your folders with any other user of the system.							
+						</div>
+						<div style="padding-bottom: 40px;">
+							<b>Right click on a Folder</b>
+							select share and choose the users you want to share the folder with.
+						</div>
+					</div>
+					]]>
+				</body>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 10px;">
+							<b>Share Permissions</b>
+							are very important! There are 3 types of sharing permissions you can set:
+						</div>
+						<div>
+							<ul style="list-style-type: circle; padding-left: 10px;">
+								<li>Read Only: users can only read files;</li>	
+								<li>Write Owner: users can update their own files;</li>	
+								<li>Write Any: users can update any file.</li>
+							</ul>	
+						</div>			
+						<div style="padding-top: 10px;">	
+							<b>Please note:</b> the sharing permission is applied on cascade to any file or sub-folder of your shared folder. The owner of the folder is set as Administrator and can do anything she likes.
+						</div>																		
+					</div>
+					]]>
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/2.png" />
+				<image url="images/tour/3.png" />
+			</images>
+		</step>
+		<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Special Folders</title>
+			<bodies>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 40px;">
+							<div style="padding-bottom: 10px;">	
+								The folder you see on your right
+								is a special folder created automatically by the System.
+							</div>
+							<div style="padding-bottom: 30px;">
+								It contains one folder for each group you are subscribed to, please consider:
+							</div>	
+								<ul style="list-style-type: circle; padding-left: 10px;">
+									<li>The users of a channel folder are the ones subscribed to the related Channel (i.e. Staff is shared with the whole institute).</li>	
+									<li>Any action on these special folders (upload/delete/read) is notified to the other users of the folder.</li>	
+									<li>Any action on these special folders is tracked.</li>
+								</ul>	
+							</div>				
+							<div style="padding-top: 30px; padding-bottom: 40px;">	
+								<b>Please note:</b> the sharing permission is applied by an administrator of the Channel.
+							</div>	
+						</div>																	
+					</div>
+					]]>
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/4.png" />
+			</images>
+		</step>
+		<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Creating Links</title>
+			<bodies>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 40px;">
+							Whenever you need to <b>attach</b>
+							a file or folder of your workspace you can use this useful feature:
+						</div>
+						<div style="padding-bottom: 40px;">
+							<ul>
+								<li><b>Get Link:</b> create a short URL (e.g. http://goo.gl/TK8toC) you can attach to your emails to make users (belonging to your shared folder)
+								point directly that specific folder;</li>				
+							</ul>	
+						</div>		
+						<div style="padding-bottom: 40px;">
+							<ul>
+								<li><b>Public Link:</b> geneate a short URL to make <b>any user</b> (having the URL) download that file. Does not work with folders of course.</li>
+							</ul>	
+						</div>	
+						<div style="padding-bottom: 40px;">
+							The tour is finished, remember to click on the "Don't show this again" checkbox located at the bottom of this window to not make this popup appear in the future. Enjoy using Workspace.
+						</div>																																	
+					</div>
+					]]>
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/6.png" />
+			</images>
+		</step>
+	</steps>
+</guidedtour>

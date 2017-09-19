@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Deployer" targetNamespace="http://gcube-system.org/namespaces/vremanagement/deployer" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor" xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" xmlns:gtwsdl0="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://gcube-system.org/namespaces/vremanagement/deployer" xmlns:wsrlw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl" xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd" xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults" xmlns:vretypes="http://gcube-system.org/common/vremanagement/types">
+  <import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+  <import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" location="../gcube/common/core/providers/GCUBEProvider.wsdl"/>
+  <import namespace="http://gcube-system.org/common/vremanagement/types" location="VREManagementTypes.wsdl"/>
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl" location="../wsrf/lifetime/WS-ResourceLifetime.wsdl"/>
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" location="../wsrf/properties/WS-ResourceProperties.wsdl"/>
+  <types>
+    <xsd:schema targetNamespace="http://gcube-system.org/namespaces/vremanagement/deployer" xmlns:rpns0="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.xsd" xmlns:tns="http://gcube-system.org/namespaces/vremanagement/deployer" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" schemaLocation="../ws/addressing/WS-Addressing.xsd"/>
+
+<xsd:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.xsd" schemaLocation="../wsrf/lifetime/WS-ResourceLifetime.xsd"/>
+
+<xsd:import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" schemaLocation="../gcube/common/core/providers/GCUBEProvider.xsd"/>
+
+   
+   	<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+   	<xsd:import namespace="http://gcube-system.org/common/vremanagement/types" schemaLocation="VREManagementTypes.xsd"/>
+	    	
+   	<xsd:element name="VOID" type="coretypes:VOID"/>
+		
+	<xsd:element name="deployParameters">
+            <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="1" name="package" nillable="false" type="vretypes:PackageInfo"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="1" name="targetScope" type="xsd:string"/>
+                        <xsd:element name="callbackID" nillable="true" type="xsd:string"/>
+                        <xsd:element nillable="true" ref="wsa:EndpointReference"/>                                                
+                     </xsd:sequence>
+             </xsd:complexType>
+     </xsd:element>
+     <xsd:element name="updateParameters">
+             <xsd:complexType>
+                     <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="1" name="undeployPackage" type="vretypes:PackageInfo"/>
+                        <!-- added deploy package field from previous version-->
+                        <xsd:element maxOccurs="unbounded" minOccurs="1" name="deployPackage" type="vretypes:PackageInfo"/>
+                        <!-- added target scope field from previous version-->   
+                        <xsd:element maxOccurs="unbounded" minOccurs="1" name="targetScope" type="xsd:string"/>                     
+                        <xsd:element name="callbackID" nillable="true" type="xsd:string"/>
+                        <xsd:element default="false" name="cleanState" type="xsd:boolean"/>
+                        <xsd:element default="false" name="updateOnlyBinaryFiles" type="xsd:boolean"/>
+                        <xsd:element nillable="true" ref="wsa:EndpointReference"/>                                                
+             </xsd:sequence>
+          </xsd:complexType>
+     </xsd:element>
+	
+	 <xsd:element name="undeployParameters">
+          <xsd:complexType>
+             <xsd:sequence>
+                         <xsd:element maxOccurs="unbounded" minOccurs="0" name="package" nillable="false" type="vretypes:PackageInfo"/>
+                         <xsd:element maxOccurs="unbounded" minOccurs="1" name="targetScope" type="xsd:string"/>
+                         <xsd:element default="true" name="cleanState" type="xsd:boolean"/>
+                         <xsd:element name="callbackID" nillable="true" type="xsd:string"/>
+                         <xsd:element nillable="true" ref="wsa:EndpointReference"/>                         
+             </xsd:sequence>
+          </xsd:complexType>
+     </xsd:element>
+    
+     <xsd:element name="booleanResponse" type="xsd:boolean"/>
+    
+     <xsd:element name="patchParameters">
+          <xsd:complexType>
+             <xsd:sequence>
+                    <xsd:element name="package" type="vretypes:PackageInfo"/>
+                    <xsd:element name="patchURI" type="xsd:anyURI"/>
+                    <xsd:element name="callbackID" type="xsd:string"/>
+                    <xsd:element ref="wsa:EndpointReference"/>
+                    <xsd:element name="restart" type="xsd:boolean"/>
+             </xsd:sequence>
+           </xsd:complexType>
+      </xsd:element>
+     
+      <xsd:complexType name="DeployedPackage">	
+		<xsd:sequence>
+				<xsd:element name="ID" nillable="false" type="xsd:string"/> 
+		  		<xsd:element name="ServiceClass" nillable="false" type="xsd:string"/> 
+		  		<xsd:element name="ServiceName" nillable="false" type="xsd:string"/>
+		  		<xsd:element name="ServiceVersion" nillable="false" type="xsd:string"/>
+		  		<xsd:element name="PackageName" nillable="false" type="xsd:string"/>		  		
+		  		<xsd:element name="PackageVersion" nillable="false" type="xsd:string"/> 
+		  		<xsd:element name="DeploymentTime" nillable="true" type="xsd:dateTime"/>
+		 </xsd:sequence>
+  	  </xsd:complexType>
+
+	  <xsd:element name="DeployedPackages" type="tns:DeployedPackage"/>
+	
+	  <xsd:element name="NumberOfDeployedPackages" type="xsd:int"/>
+	  
+	  <xsd:element name="LastDeployment" type="xsd:string"/>
+
+	  <!--  RESOURCE PROPERTIES -->
+	  <xsd:element name="DeployerResourceProperties">
+         <xsd:complexType>
+               <xsd:sequence>                          
+                      <xsd:element maxOccurs="unbounded" minOccurs="0" ref="tns:DeployedPackages"/>
+                      <xsd:element maxOccurs="1" minOccurs="0" ref="tns:LastDeployment"/>
+               
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:ServiceID"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:ServiceName"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:VO"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:RI"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:ServiceClass"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:GHN"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="rpns0:TerminationTime"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="1" ref="provider:Scope"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="rpns0:CurrentTime"/>
+          </xsd:sequence>
+         </xsd:complexType>             
+	  </xsd:element>
+  </xsd:schema>
+  </types>
+  <message name="PatchInputMessage">
+    <part name="parameters" element="tns:patchParameters"/>
+  </message>
+  <message name="DeployInputMessage">
+    <part name="parameters" element="tns:deployParameters"/>
+  </message>
+  <message name="UndeployInputMessage">
+    <part name="parameters" element="tns:undeployParameters"/>
+  </message>
+  <message name="VoidMessage">
+    <part name="request" element="tns:VOID"/>
+  </message>
+  <message name="UpdateInputMessage">
+    <part name="parameters" element="tns:updateParameters"/>
+  </message>
+  <portType name="DeployerPortType" wsrp:ResourceProperties="tns:DeployerResourceProperties">
+    <operation name="Deploy">
+      <input message="tns:DeployInputMessage"/>
+      <output message="tns:VoidMessage"/>
+      <fault name="fault" message="corefaults:GCUBEFaultMessage"/>
+    </operation>
+    <operation name="Undeploy">
+      <input message="tns:UndeployInputMessage"/>
+      <output message="tns:VoidMessage"/>
+      <fault name="fault" message="corefaults:GCUBEFaultMessage"/>
+    </operation>
+    <operation name="Patch">
+      <input message="tns:PatchInputMessage"/>
+      <output message="tns:VoidMessage"/>
+      <fault name="fault" message="corefaults:GCUBEFaultMessage"/>
+    </operation>
+    <operation name="Update">
+      <input message="tns:UpdateInputMessage"/>
+      <output message="tns:VoidMessage"/>
+      <fault name="fault" message="corefaults:GCUBEFaultMessage"/>
+    </operation>
+    <operation name="GetMultipleResourceProperties">
+      <input name="GetMultipleResourcePropertiesRequest" message="gtwsdl0:GetMultipleResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetMultipleResourceProperties"/>
+      <output name="GetMultipleResourcePropertiesResponse" message="gtwsdl0:GetMultipleResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetMultipleResourcePropertiesResponse"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="gtwsdl0:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="gtwsdl0:ResourceUnknownFault"/>
+    </operation>
+    <operation name="GetResourceProperty">
+      <input name="GetResourcePropertyRequest" message="gtwsdl0:GetResourcePropertyRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourceProperty"/>
+      <output name="GetResourcePropertyResponse" message="gtwsdl0:GetResourcePropertyResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourcePropertyResponse"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="gtwsdl0:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="gtwsdl0:ResourceUnknownFault"/>
+    </operation>
+    <operation name="Destroy">
+      <input message="wsrlw:DestroyRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/Destroy"/>
+      <output message="wsrlw:DestroyResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/DestroyResponse"/>
+      <fault name="ResourceUnknownFault" message="wsrlw:ResourceUnknownFault"/>
+      <fault name="ResourceNotDestroyedFault" message="wsrlw:ResourceNotDestroyedFault"/>
+    </operation>
+    <operation name="QueryResourceProperties">
+      <input name="QueryResourcePropertiesRequest" message="gtwsdl0:QueryResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/QueryResourceProperties"/>
+      <output name="QueryResourcePropertiesResponse" message="gtwsdl0:QueryResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/QueryResourcePropertiesResponse"/>
+      <fault name="UnknownQueryExpressionDialectFault" message="gtwsdl0:UnknownQueryExpressionDialectFault"/>
+      <fault name="QueryEvaluationErrorFault" message="gtwsdl0:QueryEvaluationErrorFault"/>
+      <fault name="InvalidQueryExpressionFault" message="gtwsdl0:InvalidQueryExpressionFault"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="gtwsdl0:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="gtwsdl0:ResourceUnknownFault"/>
+    </operation>
+    <operation name="SetResourceProperties">
+      <input name="SetResourcePropertiesRequest" message="gtwsdl0:SetResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/SetResourceProperties"/>
+      <output name="SetResourcePropertiesResponse" message="gtwsdl0:SetResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/SetResourcePropertiesResponse"/>
+      <fault name="InvalidSetResourcePropertiesRequestContentFault" message="gtwsdl0:InvalidSetResourcePropertiesRequestContentFault"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="gtwsdl0:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="gtwsdl0:ResourceUnknownFault"/>
+      <fault name="SetResourcePropertyRequestFailedFault" message="gtwsdl0:SetResourcePropertyRequestFailedFault"/>
+      <fault name="UnableToModifyResourcePropertyFault" message="gtwsdl0:UnableToModifyResourcePropertyFault"/>
+    </operation>
+    <operation name="SetTerminationTime">
+      <input message="wsrlw:SetTerminationTimeRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/SetTerminationTime"/>
+      <output message="wsrlw:SetTerminationTimeResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/SetTerminationTimeResponse"/>
+      <fault name="ResourceUnknownFault" message="wsrlw:ResourceUnknownFault"/>
+      <fault name="UnableToSetTerminationTimeFault" message="wsrlw:UnableToSetTerminationTimeFault"/>
+      <fault name="TerminationTimeChangeRejectedFault" message="wsrlw:TerminationTimeChangeRejectedFault"/>
+    </operation>
+  </portType>
+</definitions>

@@ -1,0 +1,388 @@
+body {
+	overflow-x:hidden;
+}
+
+.techno-economic-analysis-portlet #analysisForm{
+	padding-top:20px;
+}
+
+.techno-economic-analysis-portlet .tea_results_label_div{
+	display:inline-block;	
+	position: relative;
+	float:left;
+	font-weight: bold;
+	text-align:left;
+}
+
+.techno-economic-analysis-portlet .tea_results_value_div {
+	float:right;
+	display:inline-block;	
+	position: relative;
+	text-align:left;
+}
+.techno-economic-analysis-portlet .tea_results_label {
+	margin-top:10px;
+	float:left;
+	padding:5px;
+}
+
+.techno-economic-analysis-portlet .tea_results_value {
+	float:right;
+	background-color: #F2F2F2;
+	margin-left: auto;
+    margin-right: auto;
+    padding:5px;
+	margin-top:10px;
+	min-width:200px !important;
+}
+
+.techno-economic-analysis-portlet .tea-indicators-container{
+	display:inline-block;
+}
+
+.techno-economic-analysis-portlet #tea-results-container{
+	min-height: 400px;
+}
+
+.techno-economic-analysis-portlet #tea_dep_table_view td,
+.techno-economic-analysis-portlet #tea_dep_table_view th {
+	padding: 5px;
+	padding-left: 10px;
+	text-align: right;
+}
+
+.techno-economic-analysis-portlet .tea_head_cols {
+	padding: 5px;
+	text-align: left;
+	color:gray;
+}
+
+@media (max-width: 979px) {
+	.techno-economic-analysis-portlet .tea_loader {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.techno-economic-analysis-portlet .tea_help_container {
+	background-color: #F8F8F8;
+	margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.techno-economic-analysis-portlet .tea_help_text {
+	font-size: small;
+	font-weight: lighter;
+	text-align: left;
+	color: gray;
+}
+
+.techno-economic-analysis-portlet .row {
+	margin-left: 0px;
+}
+
+.techno-economic-analysis-portlet .tea-perform-button{
+	text-align: center;
+	margin: 0px auto 0px auto;
+}
+
+.techno-economic-analysis-portlet .nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.techno-economic-analysis-portlet .nav-tabs, .nav-pills {
+    text-align:center;
+}
+
+.techno-economic-analysis-portlet #indicators {
+    text-align:center;
+}
+
+.techno-economic-analysis-portlet #tea_dep_details_chart_area,
+.techno-economic-analysis-portlet #tea_dep_profit_loss_chart_area,
+.techno-economic-analysis-portlet #tea_dep_net_profit_chart_area,
+.techno-economic-analysis-portlet #tea_dep_details_chart_area {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+.techno-economic-analysis-portlet #tea_dep_table_view {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.techno-economic-analysis-portlet #tea_is_off_shore_aqua_farm {
+	display: none;
+}
+
+.techno-economic-analysis-portlet #tea_is_off_shore_aqua_farm+label:before {
+	border: 2px solid #ccc;
+	content: "\00a0";
+	display: inline-block;
+	font: 16px/1em sans-serif;
+	padding: 0;
+	vertical-align: top;
+	width: 25px;
+	height: 25px;
+	border-radius: 5px;
+}
+
+.techno-economic-analysis-portlet #tea_is_off_shore_aqua_farm:checked+label:before {
+	background: #fff;
+	color: #666;
+	content: "";
+	background: url(../../img/orange_tick.png) no-repeat 3px 1.5px;
+	background-size: 18px 20px;
+	text-align: center;
+}
+
+.techno-economic-analysis-portlet #tea_is_off_shore_aqua_farm:checked+label:after {
+	font-weight: bold;
+}
+
+.techno-economic-analysis-portlet #tea-results-container ul.nav>li>a {
+	color: white;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background: lightgray;
+	color: gray;
+	border: 0;
+}
+
+.techno-economic-analysis-portlet #tea-results-container ul.nav>li.active.techno-economic-analysis-portlet-success>a {
+	background: rgb(2, 113, 190);
+	color: white;
+}
+
+.techno-economic-analysis-portlet #tea-results-container ul.nav>li.active.techno-economic-analysis-portlet-success>a:focus {
+	background: rgb(2, 113, 190);
+	color: white;
+}
+
+.techno-economic-analysis-portlet #tea-results-container ul.nav>li.techno-economic-analysis-portlet-success>a {
+	background: rgb(240, 240, 240);
+	color: #019ad3;
+}
+
+.techno-economic-analysis-portlet #tea_perform_button {
+	color: white;
+	text-shadow: none;
+	background: rgb(2, 113, 190);
+	width: 30%;
+	outline: 0;
+	display: inline-block;
+	margin: 0px auto 0px auto;
+}
+
+.techno-economic-analysis-portlet #tea_perform_button:disabled  {
+	cursor: not-allowed;
+}
+
+.techno-economic-analysis-portlet #tea_production_model {
+	outline: 0;
+}
+
+.techno-economic-analysis-portlet .tea_currency {
+	width: 50px;
+}
+
+.aui .tea-color-red {
+	color: #b94a48;
+}
+
+.aui .tea-color-red>label {
+	color: #b94a48;
+	font-size: 13px;
+}
+
+.aui input[type="color"], 
+.aui input[type="date"], 
+.aui input[type="datetime"], 
+.aui input[type="datetime-local"], 
+.aui input[type="email"], 
+.aui input[type="month"], 
+.aui input[type="number"], 
+.aui input[type="password"], 
+.aui input[type="search"], 
+.aui input[type="tel"], 
+.aui input[type="text"], 
+.aui input[type="time"], 
+.aui input[type="url"], 
+.aui input[type="week"], 
+.aui .techno-economic-analysis-portlet select, .aui textarea, 
+.aui .uneditable-input {
+    color: #8D8D8D;
+    font-weight: 200;
+    margin: 0;
+    border-radius:4px;
+}
+
+.aui .control-label{
+    margin: 0;
+}
+
+*{outline:none;}
+
+.aui .techno-economic-analysis-portlet #tea-results-container ul.nav-tabs {
+   	border: 0;
+}
+
+.techno-economic-analysis-portlet #tea_left_form,
+.techno-economic-analysis-portlet #tea_mid_form,
+.techno-economic-analysis-portlet #tea_right_form  {
+	margin: 0;
+	padding-left: 40px;
+}
+
+.techno-economic-analysis-portlet .form-horizontal .control-group .control-label {
+	text-align: right;
+}
+
+.portlet header.portlet-topper {
+	margin: 0.2em;
+}
+
+.techno-economic-analysis-portlet #tea_perform_button {
+	border-radius: 0.5em;
+	border: 0;
+}
+
+.techno-economic-analysis-portlet .tea_note_text {
+	text-align: center;
+	font-size: small;
+	font-style: italic;
+	font-weight: lighter;
+	color: gray;
+}
+
+.aui .techno-economic-analysis-portlet {
+	display: table;
+	width: 100%;
+}
+
+.aui .techno-economic-analysis-portlet .tea-workspace-container {
+	display: table-cell;
+	width: 12%;
+	z-index: 0;
+	padding-top: 5px;
+	vertical-align: top;
+}
+
+.aui .techno-economic-analysis-portlet .custom-container {
+	display: table-cell;
+}
+
+.aui .btn {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	z-index: 0;
+}
+
+.aui .tea-color-warning {
+	color: #9F6000;
+}
+
+.aui .btn-group {
+	font-size: 14px;
+}
+
+#tea-reset-button {
+	color: #019ad3;
+	background: rgb(240, 240, 240) url(../../img/reset.png) no-repeat 5px 6px;
+	padding-left: 26px;
+	height: 28px;
+	border-radius: 4px;
+	border: none;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+#tea-insert-text {
+	color: #aaa;
+	font-style: italic;
+}
+
+/* Load Workspace button */
+
+.aui .btn.load-analysis {
+	background: rgb(2, 113, 190);
+	color: white;
+	text-shadow: none;
+	border: none;
+	margin: 0 20px;
+	position: relative;
+}
+
+.aui .btn.load-analysis:hover {
+	background: #4cb5d2;
+	border: none;
+	color: white;
+}
+
+.aui .btn.load-analysis:focus {
+	background: #019ad3;
+	border: none;
+	color: white;
+	outline: 0;
+}
+
+.aui .btn.load-analysis.center {
+	float:none;
+	right: 0;
+}
+
+.aui .btn.load-analysis.right {
+	float:right;
+}
+
+/* Save Workspace button */
+
+.aui .btn.save-analysis {
+	color: white;
+	border: none;
+	text-shadow: none;
+	margin: 0 20px;
+	float:left;
+	background: rgb(2, 113, 190);
+	display: none;
+}
+
+.aui .btn.save-analysis:hover {
+	background: #4cb5d2;
+	border: none;
+	color: white;
+}
+
+.aui .btn.save-analysis:focus {
+	background: #019ad3;
+	border: none;
+	color: white;
+	outline: 0;
+}
+
+.aui .fa.fa-info-circle.label-tooltip {
+	color: #0271be;
+	font-size: 20px;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+.aui .fa.fa-times-circle-o.label-tooltip {
+	color: #b50303;
+	font-size: 20px;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+.aui .form-horizontal .controls {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,12 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.information-system.resource-checker-se-plugin.1-1-0"
+		date="2017-06-29">
+		<Change>Added check for HomeLibraryWebApp GCoreEP</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.information-system.resource-checker-se-plugin.1-0-0"
+		date="2017-04-29">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,5 @@
+06:27:20 [INFO] gr.cite.bluebridge.endpoint.EndpointManager(60) - Initiliazing Endpoint Manager with refresh interval 180 minutes
+06:27:21 [INFO] gr.cite.bluebridge.endpoint.EndpointManager(87) - Discovering service endpoints for scope /gcube/preprod/preECO
+06:27:22 [INFO] gr.cite.bluebridge.endpoint.EndpointManager(92) - Discovered 2 service endpoints for scope /gcube/preprod/preECO
+06:27:22 [INFO] gr.cite.bluebridge.endpoint.EndpointManager(140) - Returned 2 service endpoint(s)
+06:27:24 [INFO] gr.cite.bluebridge.analytics.controllers.AnalyticsResource(138) - Successful request!

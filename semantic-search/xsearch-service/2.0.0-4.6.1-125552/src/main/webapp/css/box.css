@@ -1,0 +1,108 @@
+/* Bubble pop-up */
+
+.bubbleInfo {
+    position: relative;
+    /*left: 10px;
+    top: 10px;*/
+    display: none;
+    border:solid 2px gray; 
+    padding-top: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 7px;
+    min-width: 300px;
+    max-width: 700px;
+    background-color: lightgoldenrodyellow;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    z-index: 99;
+}
+
+.popup {
+    position: relative;
+    z-index: 99;
+}
+
+.popup_title{
+    font-size:20px;
+}
+
+.closePopup {
+    font-size: 11px;
+    color:red;
+}
+
+.imgRemoveSt{
+    display: none;
+}
+
+.imgOfDesc {
+    max-width:150px; 
+}
+
+.infodata {
+    font-size: 15px;
+    color: darkslategray;
+}
+
+.infodata a {
+    color: darkslategray;
+}
+
+.infodata a:hover {
+    color: red;
+}
+
+#inforow {
+    display:block;
+    padding-top: 20px;
+}
+
+.logos {
+    position: fixed;
+    left: 5px;
+    bottom: 30px;
+}
+
+
+.infoboxPropertyTable {
+    position:relative;
+    float: left;
+    padding: 5px;
+    margin: 6px;
+    border: 1px solid gray;
+    max-width: 500px;
+    word-wrap: break-word;
+    word-break: break-all;
+    
+}
+
+.infoboxPropertyTitle {
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+infoboxPropertyValues {
+    vertical-align: top;
+    margin-bottom: 10px;
+    
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+td {
+    color: #000000;
+    font-family: Tahoma,Arial,Helvetica;
+    font-size: 12px;
+}
+
+.em_minepage {
+    color:red;
+}

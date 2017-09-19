@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-widgets.grsf-manage-widget.1-2-0"	date="2017-08-10">
+		<Change>Minor changes to reflect the new model of grsf records</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.grsf-manage-widget.1-1-1"	date="2017-04-10">
+		<Change>Minor improvements</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.grsf-manage-widget.1-1-0"	date="2017-02-28">
+		<Change>Minor improvements</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.grsf-manage-widget.1-0-0"	date="2017-01-31">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

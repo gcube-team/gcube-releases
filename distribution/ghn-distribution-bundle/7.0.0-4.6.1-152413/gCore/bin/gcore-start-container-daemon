@@ -1,0 +1,48 @@
+#! /bin/sh
+#
+# Portions of this file Copyright 1999-2005 University of Chicago
+# Portions of this file Copyright 1999-2005 The University of Southern California.
+#
+# This file or a portion of this file is licensed under the
+# terms of the Globus Toolkit Public License, found at
+# http://www.globus.org/toolkit/download/license.html.
+# If you redistribute this file, with or without
+# modifications, you must include this notice in the file.
+#
+RESTART_DELAY=20
+RESTART_FILE=$GLOBUS_LOCATION/config/.restart
+RESTART_AND_CLEAN_FILE=$GLOBUS_LOCATION/config/.restartAndClean
+
+#kill the running daemons (if any)
+rm -rf nohup.out 1>/dev/null 2>&1
+
+ps -fwww -u $LOGNAME | grep "org.globus.wsrf.container.ServiceContainer" | grep -v grep | grep -v $$ |  awk '{print $2}' | xargs -n1 kill -9 1>/dev/null 2>&1
+
+#give the time to close the socket correctly
+sleep 1
+
+nohup $GLOBUS_LOCATION/bin/gcore-start-container-reboot "$@"  1>nohup.out 2>&1 &
+
+
+while [  1 ]; do
+	sleep 10
+	if [ -e $RESTART_FILE ]; then
+		rm -rf $RESTART_FILE
+		sleep $RESTART_DELAY
+		nohup $GLOBUS_LOCATION/bin/gcore-start-container-reboot "$@" 1>nohup.out 2>&1 &
+	fi
+	
+	if [ -e $RESTART_AND_CLEAN_FILE ]; then
+		rm -rf $RESTART_AND_CLEAN_FILE
+		sleep $RESTART_DELAY
+		#clean up the state
+		rm -f $GLOBUS_LOCATION/config/GHNProfile.xml* 2>&1 1>/dev/null
+   		rm -f $GLOBUS_LOCATION/etc/*/RIProfile.xml* 2>&1 1>/dev/null
+   		rm -rf $HOME/.gcore/ 2>&1 1>/dev/null
+   		#restart
+		nohup $GLOBUS_LOCATION/bin/gcore-start-container-reboot "$@" 1>nohup.out 2>&1 &
+	fi
+done
+
+
+

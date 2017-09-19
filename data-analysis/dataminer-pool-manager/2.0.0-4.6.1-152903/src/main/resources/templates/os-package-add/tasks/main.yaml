@@ -1,0 +1,8 @@
+---
+
+- name: adding OS Package <name>
+  package: 
+    name: <name>
+    state: "{{os_package_state}}"
+  become: true
+

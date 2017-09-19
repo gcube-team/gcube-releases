@@ -1,0 +1,30 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-access.gbif-spd-plugin.1-0-0" date="2012-05-04"> 
+		<Change>GBIF plugin for species product discovery first release</Change>
+	</Changeset> 
+	<Changeset component="org.gcube.data-access.gbif-spd-plugin.1-1-0" date="2012-09-14"> 
+		<Change>bug fixing</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.gbif-spd-plugin.1-2-0" date="2012-09-14"> 
+		<Change>info for repository added</Change>
+		<Change>added more credits on occurrences</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.gbif-spd-plugin.1-3-0" date="2012-09-14"> 
+		<Change>porting to the spd fwk 1.2.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.gbif-spd-plugin.1-4-0" date="2013-01-17"> 
+		<Change>porting to the spd fwk 2.0.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.gbif-spd-plugin.1-6-0" date="2013-05-02"> 
+		<Change>porting to the spd fwk 2.2.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.gbif-spd-plugin.1-7-0" date="2013-07-18">
+		<Change>Sync with spd-model-library changes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.gbif-spd-plugin.1-8-2" date="2015-06-29">
+		<Change>new matching elements for basis of record added</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.gbif-spd-plugin.1-9-0" date="2017-02-01">
+		<Change>gCore dependencies removed</Change>
+	</Changeset>
+</ReleaseNotes>

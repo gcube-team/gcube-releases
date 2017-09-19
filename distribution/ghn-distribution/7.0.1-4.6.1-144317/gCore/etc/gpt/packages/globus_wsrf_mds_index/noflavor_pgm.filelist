@@ -1,0 +1,13 @@
+lib/wsrf_mds_index.jar
+lib/wsrf_mds_index_stubs.jar
+etc/gpt/./packages/globus_wsrf_mds_index/undeploy.xml
+etc/globus_wsrf_mds_index/server-config.wsdd
+etc/globus_wsrf_mds_index/jndi-config.xml
+etc/globus_wsrf_mds_index/downstream.xml
+etc/globus_wsrf_mds_index/upstream.xml
+etc/globus_wsrf_mds_index/entry-security-config.xml
+etc/globus_wsrf_mds_index/factory-security-config.xml
+etc/globus_wsrf_mds_index/hierarchy.xml
+etc/globus_wsrf_mds_index/index-security-config.xml
+etc/gpt/packages/globus_wsrf_mds_index/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_mds_index/pkg_data_noflavor_pgm.gpt

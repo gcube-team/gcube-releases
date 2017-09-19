@@ -1,0 +1,12 @@
+#* This text, as part of a multi-line comment, is not visible
+
+#set ($css_class = "${css_class} dockbar-split")
+
+*#
+
+#if ($theme.getSetting("div-wrapper-image-name") !="")
+	#set ($div-wrapper-image-name = $themeDisplay.getPathThemeImages() + "/custom/" + $theme.getSetting("div-wrapper-image-name"))
+#else
+	#set ($div-wrapper-image-name = $themeDisplay.getPathThemeImages() + "/custom/default_background.jpg") 
+#end
+

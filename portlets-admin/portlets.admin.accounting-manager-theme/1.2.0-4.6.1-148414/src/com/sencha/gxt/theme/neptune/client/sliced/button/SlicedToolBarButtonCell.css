@@ -1,0 +1,116 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@external x-toolbar-mark;
+
+@def tbpadding value('theme.toolbar.buttonOverride.padding.toString');
+
+@def tbfontSize value('theme.toolbar.buttonOverride.font.size');
+@def tbfontFamily value('theme.toolbar.buttonOverride.font.family');
+@def tbfontWeight value('theme.toolbar.buttonOverride.font.weight');
+@def tbfontColor value('theme.toolbar.buttonOverride.font.color');
+
+@def tbsmallFontSize value('theme.toolbar.buttonOverride.smallFontSize','px');
+@def tbmediumFontSize value('theme.toolbar.buttonOverride.mediumFontSize','px');
+@def tblargeFontSize value('theme.toolbar.buttonOverride.largeFontSize','px');
+@def tbsmallLineHeight value('theme.toolbar.buttonOverride.smallLineHeight','px');
+@def tbmediumLineHeight value('theme.toolbar.buttonOverride.mediumLineHeight','px');
+@def tblargeLineHeight value('theme.toolbar.buttonOverride.largeLineHeight','px');
+
+.x-toolbar-mark .text {
+  padding: tbpadding;
+  text-align: center;
+  font-size: tbfontSize;
+  color: tbfontColor;
+  font-weight: tbfontWeight;
+  font-family: tbfontFamily;
+}
+
+.x-toolbar-mark .small .text {
+  line-height: tbsmallLineHeight;
+  font-size: tbsmallFontSize;
+}
+
+.x-toolbar-mark .medium .text {
+  line-height: tbmediumLineHeight;
+  font-size: tbmediumFontSize;
+}
+
+.x-toolbar-mark .large .text {
+  line-height: tblargeLineHeight;
+  font-size: tblargeFontSize;
+}
+
+  /*
+
+  @sprite .x-toolbar-mark .split  {
+    gwt-image: 'toolBarSplit';
+  }
+
+
+  @sprite .x-toolbar-mark .splitBottom  {
+    gwt-image: 'toolBarSplitBottom';
+  }
+
+
+  @sprite .x-toolbar-mark .arrow  {
+    gwt-image: 'toolBarArrow';
+  }
+
+  @sprite .x-toolbar-mark .arrowBottom  {
+    gwt-image: 'toolBarArrowBottom';
+  }
+
+  */
+
+@sprite .x-toolbar-mark .split {
+  gwt-image: 'toolBarSplit';
+  width: auto;
+  height: auto;
+}
+
+.x-toolbar-mark .split {
+  background-position: right center;
+  padding-right: 14px;
+  background-repeat: no-repeat;
+}
+
+@sprite .x-toolbar-mark .splitBottom {
+  gwt-image: 'toolBarSplitBottom';
+  width: auto;
+  height: auto;
+}
+
+.x-toolbar-mark .splitBottom {
+  background-position: center bottom;
+  padding-bottom: 14px;
+  background-repeat: no-repeat;
+}
+
+@sprite .x-toolbar-mark .arrow {
+  gwt-image: 'toolBarArrow';
+  width: auto;
+  height: auto;
+}
+
+.x-toolbar-mark .arrow {
+  padding-right: 10px;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+@sprite .x-toolbar-mark .arrowBottom {
+  gwt-image: 'toolBarArrowBottom';
+  width: auto;
+  height: auto;
+}
+
+.x-toolbar-mark .arrowBottom {
+  background-position: center bottom;
+  padding-bottom: 14px;
+  background-repeat: no-repeat;
+}

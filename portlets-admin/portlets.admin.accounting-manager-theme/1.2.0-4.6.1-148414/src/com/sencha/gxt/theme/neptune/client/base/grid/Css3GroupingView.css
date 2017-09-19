@@ -1,0 +1,56 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def borderWidth value('theme.grid.group.border.toString');
+@def borderColor value('theme.grid.group.border.color');
+@def borderStyle value('theme.grid.group.border.style');
+
+@def backgroundColor value('theme.grid.group.backgroundColor');
+
+@def textFamily value('theme.grid.group.text.family');
+@def textSize value('theme.grid.group.text.size');
+@def textWeight value('theme.grid.group.text.weight');
+@def textColor value('theme.grid.group.text.color');
+
+@def padding value('theme.grid.group.padding.toString');
+
+@def iconSpacing value('theme.grid.group.iconSpacing', 'px');
+
+.group .groupHead {
+  cursor: pointer;
+  padding: padding;
+
+  background-color: backgroundColor;
+
+  border-color: borderColor;
+  border-width: borderWidth;
+  border-style: borderStyle;
+}
+
+.bodyCollapsed {
+  display: none;
+}
+
+@sprite .group .grid-cell .grid-cellInner {
+  gwt-image: 'collapse';
+  width: auto;
+  height: auto;
+  background-position: left center;
+  padding-left: iconSpacing;
+
+  font-family: textFamily;
+  font-size: textSize;
+  font-weight: textWeight;
+  color: textColor;
+}
+
+@sprite .groupCollapsed .grid-cell .grid-cellInner {
+  gwt-image: 'expand';
+  width: auto;
+  height: auto;
+  background-position: left center;
+}

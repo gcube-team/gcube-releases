@@ -1,0 +1,4 @@
+dependencies:
+#  - { role: gcube-dataminer }
+#  - { role: os-unzip }
+#  - { role: os-java-1.7.0 }

@@ -1,0 +1,20 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-transfer.scheduler-db.1-0-0" date="2012-09-12">
+			<Change>First release of the component</Change>
+	</Changeset>
+    <Changeset component="org.gcube.data-transfer.scheduler-db.1-1-0" date="2013-01-11">
+			<Change>Extended management of DataSource and DataStorages</Change>
+			<Change>Added agent statistics</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.scheduler-db.1.2.0" date="2013-04-17" >
+			<Change>Implemented the option to keep a number of backups</Change>
+			<Change>New transfer field - Bytes that have been transferred and size </Change>
+			<Change>For calendar fields - We added also a string representative of it </Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.scheduler-db.2-0-0" date="2013-09-07" >
+			<Change>Changed schema to reflect new Tree Transfers and their outcomes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.scheduler-db.2-1-0" date="2014-01-31" >
+			<Change>updated datanucleus deps and plugins</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema targetNamespace="http://www.ggf.org/namespaces/2005/12/WS-DAIX" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:wrs="http://java.sun.com/xml/ns/jdbc" xmlns:wsdai="http://www.ggf.org/namespaces/2005/12/WS-DAI"
+    xmlns:wsdaix="http://www.ggf.org/namespaces/2005/12/WS-DAIX">
+    <xsd:import namespace="http://www.ggf.org/namespaces/2005/12/WS-DAI" schemaLocation="./wsdai_core_types.xsd" />
+    <!-- type for wrapping mixed content XML -->
+    <xsd:complexType name="XMLWrapperType" mixed="true">
+        <xsd:sequence>
+            <xsd:any namespace="##any" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <!-- properties -->
+    <!-- the descriptive properties for an XML schema document  -->
+    <xsd:complexType name="SchemaDescriptionType">
+        <xsd:sequence>
+            <xsd:element name="targetNamespace" type="xsd:anyURI" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <!-- the descriptive properties for an XML document  -->
+    <xsd:complexType name="DocumentDescriptionType">
+        <xsd:attribute name="name" type="xsd:string" />
+    </xsd:complexType>
+    <!-- a structure representing the hierarchy of collections -->
+    <!-- schemas and document names  -->
+    <xsd:complexType name="CollectionType">
+        <xsd:sequence>
+            <xsd:element name="Collection" type="wsdaix:CollectionType" minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element name="Schema" type="wsdaix:SchemaDescriptionType" minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element name="Document" type="wsdaix:DocumentDescriptionType" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+        <xsd:attribute name="name" type="xsd:anyURI" />
+    </xsd:complexType>
+    <xsd:element name="TopLevelCollection" type="wsdaix:CollectionType" />
+    <!-- the number of documents in the data resource -->
+    <xsd:element name="NumberOfDocuments" type="xsd:long" />
+    <!-- indicates whether the XML resource supports collections -->
+    <xsd:element name="SupportsCollections" type="xsd:boolean" />
+    <!-- indicates whether the XML resource supports XML Schemas -->
+    <xsd:element name="SupportsSchemas" type="xsd:boolean" />
+    <!-- indicates whether the XML resource supports nested collections -->
+    <xsd:element name="SupportsCollectionNesting" type="xsd:boolean" />
+    <!-- property and configuration documents -->
+    <xsd:complexType name="XMLCollectionPropertyDocumentType">
+        <xsd:complexContent>
+            <xsd:extension base="wsdai:PropertyDocumentType">
+                <xsd:sequence>
+                    <xsd:element ref="wsdaix:TopLevelCollection" />
+                    <xsd:element ref="wsdaix:NumberOfDocuments" />
+                    <xsd:element ref="wsdaix:SupportsCollections" />
+                    <xsd:element ref="wsdaix:SupportsCollectionNesting" />
+                    <xsd:element ref="wsdaix:SupportsSchemas" />
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:element name="XMLCollectionPropertyDocument" type="wsdaix:XMLCollectionPropertyDocumentType" />
+    <!-- the properties used to configure an xml collection data resource -->
+    <xsd:complexType name="XMLCollectionConfigurationDocumentType">
+        <xsd:complexContent>
+            <xsd:extension base="wsdai:ConfigurationDocumentType">
+                <xsd:sequence>
+                    <xsd:element ref="wsdaix:SupportsCollections" />
+                    <xsd:element ref="wsdaix:SupportsCollectionNesting" />
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    <xsd:element name="XMLCollectionConfigurationDocument" type="wsdaix:XMLCollectionConfigurationDocumentType"
+        substitutionGroup="wsdai:ConfigurationDocument" />
+</xsd:schema>

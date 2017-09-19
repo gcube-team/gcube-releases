@@ -1,0 +1,86 @@
+.user-image {
+	height: 70px !important;
+	width: auto;
+	border-radius: 6px;
+	padding: 2px;
+	color: #FFF;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 7%;
+}
+
+.error-msg {
+	font-family: "Architects Daughter", arial, sans-serif;
+}
+
+.user-stats-title {
+	display: block;
+	font-size: 16px;
+	color: #555;
+	margin-bottom: 10px;
+	word-break: break-all;
+}
+
+.statistic-value {
+	color: #0084B4 !important;
+	font-size: 14px;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+/* not for every "statistic-value" */
+.statistic-value-underline:hover {
+	text-decoration: underline;
+}
+
+.statistic-value-inline {
+	color: #0084B4 !important;
+	font-size: 14px;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.loading-image-center {
+	display: block;
+	margin: auto auto;
+}
+
+.loading-image-center-small {
+	width: 20px;
+	height: auto;
+	display: block;
+	margin: auto auto;
+}
+
+.alert-icon-center {
+	display: block;
+	margin: auto auto;
+}
+
+.button-improve-profile {
+	margin: 0 0 0 10px !important;
+	font-family: Tahoma, Helvetica, Arial, sans-serif !important;
+	line-height: 12px !important;
+	font-size: 12px !important;
+	padding: 5px 15px !important;
+	font-weight: normal !important;
+	display: inline !important;
+}
+
+.privacy-checkbox-statistics-style {
+	margin-top: 10px;
+}
+
+.improve-profile-hint-message {
+	margin-top: 15px !important;
+	padding: 25px !important;
+}
+
+.buttons-statistics-style {
+	padding: 2px 3px !important;
+}
+
+.buttons-statistics-disabled-events {
+	pointer-events: none !important;
+}

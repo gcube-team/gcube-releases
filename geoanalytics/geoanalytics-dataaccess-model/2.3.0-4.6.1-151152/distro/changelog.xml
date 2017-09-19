@@ -1,0 +1,20 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.model.1-0-0" date="2016-07-29">
+		<Change>First release</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.model.1-1-0" date="2016-11-22">
+		<Change>Removed the hibernate spatial repository</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.model.1-2-0" date="2017-03-02">
+		<Change>Updated to be aligned with the new schema</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.model.2-1-0" date="2017-04-21">
+		<Change>Style management logic added</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.model.2-2-0" date="2017-05-24">
+		<Change>Updated to be aligned with the new schema</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.dataaccess.model.2-3-0" date="2017-07-12">
+		<Change>Attribute management logic added</Change>
+	</Changeset>
+</ReleaseNotes>

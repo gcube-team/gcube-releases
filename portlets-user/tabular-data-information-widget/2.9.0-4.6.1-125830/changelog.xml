@@ -1,0 +1,44 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.tabular-data-information-widget.2-9-0" date="2015-10-15">
+		<Change>Updated i18N support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-information-widget.2-8-0" date="2015-07-03">
+		<Change>Updated Licencies</Change>
+		<Change>Removed resources button [issue #209]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-information-widget.2-7-0" date="2015-04-30">
+		<Change>Updated i18n support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-information-widget.2-6-0" date="2015-02-16">
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+		<Change>Fixed Creation Date in TabResourcesProperties [issue #3149]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-information-widget.2-5-0" date="2014-10-31">
+		<Change>Added Multi Tab Management</Change>
+		<Change>Added Resources Button</Change>
+		<Change>Fixed Final and Lock error</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-information-widget.2-4-0" date="2014-09-12">
+		<Change>Added valid from and valid until</Change>
+		<Change>Added licences</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-information-widget.2-3-0" date="2014-07-04">
+		<Change>Added Owner Information</Change>
+		<Change>Added Share Information</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-information-widget.2-2-0" date="2014-06-05">
+		<Change>Added Validation</Change>
+		<Change>Added Final</Change>
+		<Change>Updated Pom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-information-widget.2-1-0" date="2014-04-04">
+		<Change>Added save operation on tabular resource metadata</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-information-widget.2-0-0" date="2014-02-01">
+		<Change>Table Metadata View</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-information-widget.1-0-0" date="2013-10-18">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

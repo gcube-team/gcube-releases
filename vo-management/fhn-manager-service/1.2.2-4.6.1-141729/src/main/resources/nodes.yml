@@ -1,0 +1,36 @@
+!!org.gcube.resources.federation.fhnmanager.api.type.Node
+hostname: hostname
+id: 4-1@https://carach5.ics.muni.cz:11443/compute/68091
+nodeTemplate: {refId: 3-1}
+resourceTemplate: {refId: 'http://fedcloud.egi.eu/occi/compute/flavour/1.0#small'}
+serviceProfile: {refId: 2-1}
+status: waiting
+vmProvider: {refId: 4-1}
+#workload: {allTimeAverageWorkload: 0.5, lastDayWorkload: 0.7, lastHourWorkload: 0.2, nowWorkload: 0.8}
+--- !!org.gcube.resources.federation.fhnmanager.api.type.Node
+hostname: hostname
+id: 4-1@https://carach5.ics.muni.cz:11443/compute/68102
+nodeTemplate: {refId: 3-1}
+resourceTemplate: {refId: 'http://fedcloud.egi.eu/occi/compute/flavour/1.0#small'}
+serviceProfile: {refId: 2-1}
+status: waiting
+vmProvider: {refId: 4-1}
+#workload: {allTimeAverageWorkload: 0.5, lastDayWorkload: 0.7, lastHourWorkload: 0.2, nowWorkload: 0.8}
+--- !!org.gcube.resources.federation.fhnmanager.api.type.Node
+hostname: hostname
+id: 4-1@https://carach5.ics.muni.cz:11443/compute/68051
+nodeTemplate: {refId: 3-1}
+resourceTemplate: {refId: 'http://fedcloud.egi.eu/occi/compute/flavour/1.0#small'}
+serviceProfile: {refId: 2-1}
+status: waiting
+vmProvider: {refId: 4-1}
+#workload: {allTimeAverageWorkload: 0.5, lastDayWorkload: 0.7, lastHourWorkload: 0.2, nowWorkload: 0.8}
+--- !!org.gcube.resources.federation.fhnmanager.api.type.Node
+hostname: hostname
+id: 4-1@https://carach5.ics.muni.cz:11443/compute/68050
+nodeTemplate: {refId: 3-1}
+resourceTemplate: {refId: 'http://fedcloud.egi.eu/occi/compute/flavour/1.0#small'}
+serviceProfile: {refId: 2-1}
+status: waiting
+vmProvider: {refId: 4-1}
+#workload: {allTimeAverageWorkload: 0.5, lastDayWorkload: 0.7, lastHourWorkload: 0.2, nowWorkload: 0.8}

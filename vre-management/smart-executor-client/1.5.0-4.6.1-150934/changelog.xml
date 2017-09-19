@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.vre-management.smart-executor.1.5.0" date="2017-09-18">
+		<Change>Exposed unSchedule(executionIdentifier) API</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.smart-executor.1.4.0" date="2017-03-16">
+		<Change>Fixed classes javadoc</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.smart-executor-client.1.3.0" date="2016-11-07">
+		<Change>SmartExecutor has been passed to Authorization 2.0 (refs #4944 #2112)</Change>
+		<Change>Provided to plugins the possibility to define a custom notifier (refs #5089)</Change>
+	</Changeset>
+    <Changeset component="org.gcube.vre-management.smart-executor-client.1.2.0" date="2016-02-08">
+		<Change>Using Persistence (CouchDB) to save Scheduled Task configuration (refs #579)</Change>
+		<Change>Added Unscheduling feature for repetitive task (refs #521)</Change>
+	</Changeset>
+    <Changeset component="org.gcube.vre-management.smart-executor-client.1.1.0" date="2015-12-09">
+		<Change>Added Recurrent and Scheduled Task support (refs #111)</Change>
+		<Change>Saving Task Evolution on Persistence (CouchDB) (refs #89)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.smart-executor-client.1.0.0" date="2015-02-05">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

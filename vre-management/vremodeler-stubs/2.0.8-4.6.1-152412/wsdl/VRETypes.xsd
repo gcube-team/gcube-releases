@@ -1,0 +1,200 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://gcube-system.org/namespaces/vremanagement/vremodeler/types"
+	xmlns:tns="http://gcube-system.org/namespaces/vremanagement/vremodeler/types"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<!-- VRE types -->
+	<xs:complexType name="VREDescription">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="description" type="xs:string" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="designer" type="xs:string" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="manager" type="xs:string" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="startTime" type="xs:dateTime" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="endTime" type="xs:dateTime" minOccurs="1"
+				maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<!-- GHNPerFunctionalities Types -->
+
+	<xs:complexType name="FunctionalityNodes">
+		<xs:sequence>
+			<xs:element name="functionalities" type="tns:GHNsPerFunctionality" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="selectableGHNs" type="tns:GHNList" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="GHNsPerFunctionality">
+		<xs:sequence>
+			<xs:element name="id" type="xs:int" />
+			<xs:element name="description" type="xs:string" />
+			<xs:element name="ghns" type="tns:GHNList" />
+			<xs:element name="missingServices" type="tns:RunningInstanceMessage" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="foundServices" type="tns:RunningInstanceMessage" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- GHN Type -->
+
+	<xs:complexType name="GHNList">
+		<xs:sequence>
+			<xs:element name="list" type="tns:GHNType" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="GHNType">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="host" type="xs:string" />
+			<xs:element name="securityEnabled" type="xs:boolean" />
+			<xs:element name="memory">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="diskSpace" type="xs:long" />
+						<xs:element name="memorySize" type="xs:long" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="site">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="location" type="xs:string" />
+						<xs:element name="country" type="xs:string" />
+						<xs:element name="domain" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="relatedRIs" type="tns:RunningInstanceMessage"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="selected" type="xs:boolean" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="RunningInstanceMessage">
+		<xs:sequence>
+			<xs:element name="serviceName" type="xs:string" />
+			<xs:element name="serviceClass" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Collection Type -->
+	<xs:complexType name="CollectionList">
+		<xs:sequence>
+			<xs:element name="list" type="tns:CollectionType"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="CollectionType">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="info">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="description" type="xs:string" />
+						<xs:element name="numberOfMembers" type="xs:int" />
+						<xs:element name="creationTime" type="xs:dateTime" />
+						<xs:element name="lastUpdateTime" type="xs:dateTime" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="selected" type="xs:boolean" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Functionality Types -->
+
+	<xs:complexType name="FunctionalityList">
+		<xs:sequence>
+			<xs:element name="list" type="tns:FunctionalityItem"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="FunctionalityItem">
+		<xs:sequence>
+			<xs:element name="id" type="xs:int" />
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="description" type="xs:string" />
+			<xs:element name="mandatory" type="xs:boolean" />
+			<xs:element name="selected" type="xs:boolean" />
+			<xs:element name="selectableResourcesDescription" type="tns:ResourceDescriptionItem"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="childs" type="tns:FunctionalityItem"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ResourceDescriptionItem">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="description" type="xs:string" />
+			<xs:element name="resource" type="tns:ResourceItem"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="minSelectable" type="xs:int"/>
+			<xs:element name="maxSelectable" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ResourceItem">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="description" type="xs:string" />
+			<xs:element name="selected" type="xs:boolean" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="SetFunctionality">
+		<xs:sequence>
+			<xs:element name="functionalityIds" type="xs:int"
+				minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="resourcesDescription" type="tns:SelectedResourceDescriptionType"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="SelectedResourceDescriptionType">
+		<xs:sequence>
+			<xs:element name="descriptionId" type="xs:string" />
+			<xs:element name="resourceId" type="xs:string" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- <xs:complexType name="SetFunctionality"> <xs:sequence> <xs:element 
+		name="functionalities" type="xs:int" minOccurs="0" maxOccurs="unbounded"/> 
+		</xs:sequence> </xs:complexType> <xs:complexType name="SelectedFunctionality"> 
+		<xs:sequence> <xs:element name="functionalityId" type="xs:int" minOccurs="1" 
+		maxOccurs="1"/> <xs:element name="resourcesDescription" type="tns:SelectedResourceDescriptionType" 
+		minOccurs="0" maxOccurs="unbounded"/> </xs:sequence> </xs:complexType> <xs:complexType 
+		name="SelectedResourceDescriptionType"> <xs:sequence> <xs:element name="descriptionId" 
+		type="xs:string"/> <xs:element name="resourceId" type="xs:string" minOccurs="0" 
+		maxOccurs="unbounded"/> </xs:sequence> </xs:complexType> -->
+
+	<!-- VRE Report Type -->
+	<xs:complexType name="ReportList">
+		<xs:sequence>
+			<xs:element name="list" type="tns:Report" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Report">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="description" type="xs:string" />
+			<xs:element name="state" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

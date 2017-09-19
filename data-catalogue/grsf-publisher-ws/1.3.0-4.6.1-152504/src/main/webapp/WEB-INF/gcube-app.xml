@@ -1,0 +1,24 @@
+<application mode='online'>
+	<name>GRSFPublisher</name>
+	<group>Data-Catalogue</group>
+	<version>1.3.0</version>
+	<description>Data Catalogue Service</description>
+	<local-persistence location='target' />
+	<exclude>/rest/</exclude>
+	<exclude>/rest/firms/stock/hello</exclude>
+	<exclude>/rest/FIRMS/stock/hello</exclude>
+	<exclude>/rest/ram/stock/hello</exclude>
+	<exclude>/rest/RAM/stock/hello</exclude>
+	<exclude>/rest/GRSF/stock/hello</exclude>
+	<exclude>/rest/grsf/stock/hello</exclude>
+	<exclude>/rest/FishSource/stock/hello</exclude>
+	<exclude>/rest/fishsource/stock/hello</exclude>
+	<exclude>/rest/firms/fishery/hello</exclude>
+	<exclude>/rest/FIRMS/fishery/hello</exclude>
+	<exclude>/rest/ram/fishery/hello</exclude>
+	<exclude>/rest/RAM/fishery/hello</exclude>
+	<exclude>/rest/GRSF/fishery/hello</exclude>
+	<exclude>/rest/grsf/fishery/hello</exclude>
+	<exclude>/rest/FishSource/fishery/hello</exclude>
+	<exclude>/rest/fishsource/fishery/hello</exclude>
+</application>

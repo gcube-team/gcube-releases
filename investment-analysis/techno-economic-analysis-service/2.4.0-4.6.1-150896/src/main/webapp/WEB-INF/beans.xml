@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+	http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.3.xsd
+ 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+	
+ 	<!-- Enables the Spring MVC @Controller programming model -->	
+	<mvc:annotation-driven /> 
+	
+	<task:annotation-driven />
+		   
+	<!-- @Controller, @Service, @Configuration, etc. -->
+	<context:component-scan base-package="gr.cite.bluebridge.analytics.controllers"/>
+	
+	<!-- Properties File -->	
+	<context:property-placeholder location="classpath:configuration.properties"	ignore-unresolvable="true" />	
+
+ 	<bean id="endpointManager" class="gr.cite.bluebridge.endpoint.EndpointManager"></bean> 
+			
+ 	<bean id="singletonHttpClient" class="gr.cite.bluebridge.analytics.web.SingletonHttpClient">
+		<property name="HTTP_CONNECTION_TIMEOUT" value="${http.connection.timeout}"/>
+	</bean> 
+	
+	<bean id="simulFishGrowthDataAPI" class="gr.cite.bluebridge.endpoint.ServiceProfile">
+		<property name="serviceClass" value="Search" 	/>
+		<property name="serviceName" value="SimulFishGrowthData" 	/>
+		<property name="pathEndsWith" value="/api" 	/>
+	</bean>	
+	
+	<bean id="simulFishGrowthDatabase" class="gr.cite.bluebridge.endpoint.DatabaseProfile">
+		<property name="name" value="SimulFishGrowth" 	/>
+	</bean>	
+
+</beans>

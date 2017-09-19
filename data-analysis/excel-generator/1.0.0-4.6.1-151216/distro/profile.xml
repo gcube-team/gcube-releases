@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<ID></ID>
+	<Type>Library</Type>
+	<Profile>
+		<Description>${project.description}</Description>
+		<Class>DataAnalysis</Class>
+		<Name>${project.artifactId}</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>${project.description}</Description>
+				<Name>${project.artifactId}</Name>
+				<Version>${project.version}</Version>
+				<MavenCoordinates>
+					<groupId>${project.groupId}</groupId>
+					<artifactId>${project.artifactId}</artifactId>
+					<version>${project.version}</version>
+				</MavenCoordinates>
+				<Type>Library</Type>
+				<Files>
+					<File>${project.build.finalName}.${project.packaging}</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>
+
+

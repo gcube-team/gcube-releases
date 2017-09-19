@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="${groupId}.${artifactId}.1-5-0" date="2017-07-31">
+		<Change>service interface classes movedo to wps project</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-1-0" date="2016-10-03">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

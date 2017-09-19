@@ -1,0 +1,194 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>org.gcube.data.analysis.tabulardata</groupId>
+	<artifactId>operation-sdmx</artifactId>
+	<version>3.2.0-4.6.1-152532</version>
+
+	<name>Tabular Data SDMX Operations</name>
+	<description>Tabular Data service SDMX operations bundle</description>
+
+	<scm>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-analysis/tabulardata/operation-sdmx</url>
+	</scm>
+
+	<repositories>
+		<repository>
+			<id>sdmxsource</id>
+			<url>http://maven.research-infrastructures.eu/nexus/content/repositories/MTRepo/</url>
+		</repository>
+	</repositories>
+
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>tabular-model-util</artifactId>
+			<version>2.1.1-4.6.1-130678</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.analysis</groupId>
+			<artifactId>excel-generator</artifactId>
+			<version>1.0.0-4.6.1-151216</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>tabular-model</artifactId>
+			<version>3.4.0-4.6.1-152975</version>
+		</dependency>
+	
+		<dependency>
+		  <groupId>org.gcube.data.analysis.tabulardata</groupId>
+		  <artifactId>tabular-data-commons</artifactId>
+		  <version>3.0.0-4.6.1-144781</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>operation-api</artifactId>
+			<version>3.7.0-4.6.1-150922</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.publishing</groupId>
+			<artifactId>sdmx-registry-client-gcube</artifactId>
+			<version>4.2.0-4.6.1-150480</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxApi</artifactId>
+			<version>1.5.6.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxDataParser</artifactId>
+			<version>1.5.6.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxStructureParser</artifactId>
+			<version>1.5.6.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxStructureRetrieval</artifactId>
+			<version>1.5.6.6</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.sdmxsource</groupId>
+		  <artifactId>SdmxStructureRetrieval</artifactId>
+		  <version>1.5.6.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>14.0.1</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>commons-dbutils</groupId>
+			<artifactId>commons-dbutils</artifactId>
+			<version>1.5</version>
+		</dependency>
+
+
+
+		<!-- test dependencies -->
+
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>cube-manager</artifactId>
+			<version>3.5.3-4.6.1-130370</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>operation-tester</artifactId>
+			<version>2.0.4-4.6.1-130681</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.13</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.jboss.weld.se</groupId>
+		    <artifactId>weld-se-core</artifactId>
+		    <version>2.0.4.Final</version>
+		    <scope>test</scope>
+		</dependency>
+
+<!-- 
+		<dependency>
+			<groupId>org.jboss.weld.se</groupId>
+			<artifactId>weld-se</artifactId>
+			<version>1.1.7.Final</version>
+			<scope>test</scope>
+		</dependency>
+ -->
+		<dependency>
+			<groupId>com.googlecode.jeeunit</groupId>
+			<artifactId>jeeunit-weld-se</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.jeeunit</groupId>
+			<artifactId>jeeunit-cdi</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

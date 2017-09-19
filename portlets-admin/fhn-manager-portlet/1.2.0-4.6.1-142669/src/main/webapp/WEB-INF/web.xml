@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>Manager</servlet-name>
+		<servlet-class>org.gcube.portlets.admin.fhn_manager_portlet.server.FHNManagerServiceImpl</servlet-class>
+	</servlet>
+	
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>scopeService</servlet-name> -->
+<!-- 		<servlet-class>org.gcube.portlets.user.gcubewidgets.server.ScopeServiceImpl</servlet-class> -->
+<!-- 	</servlet> -->
+	
+	
+<!-- 		<servlet-mapping> -->
+<!-- 		<servlet-name>scopeService</servlet-name> -->
+<!-- 		<url-pattern>/fhnmanager/scopeService</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+	
+	<servlet-mapping>
+		<servlet-name>Manager</servlet-name>
+		<url-pattern>/fhnmanager/Manager</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>fhnManager.html</welcome-file>
+	</welcome-file-list>
+
+
+	<!-- CACHE CONFIGURATION -->
+	<context-param>
+    <param-name>cache.nodes.TTL</param-name>
+    <param-value>60000</param-value> <!-- 1m -->
+	</context-param>
+	<context-param>
+    <param-name>cache.templates.TTL</param-name>
+    <param-value>600000</param-value> <!-- 10m -->
+	</context-param>
+	<context-param>
+    <param-name>cache.providers.TTL</param-name>
+    <param-value>6000000</param-value> <!-- 100m -->
+	</context-param>
+	<context-param>
+    <param-name>cache.profiles.TTL</param-name>
+    <param-value>6000000</param-value> <!-- 100m -->
+	</context-param>
+</web-app>

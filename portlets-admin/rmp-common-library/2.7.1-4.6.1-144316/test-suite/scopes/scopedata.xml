@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infrastructures>
+<!-- 
+	<infrastructure>
+		<name>d4science</name>
+		<vos>
+			<vo>
+				<name>d4science</name>
+				<src>ServiceMap_d4science.research-infrastructures.eu.xml</src>
+				<scope>/d4science.research-infrastructures.eu</scope>
+			</vo>
+			<vo>
+				<name>d4science/FARM</name>
+				<src>ServiceMap_FARM.xml</src>
+				<scope>/d4science.research-infrastructures.eu/FARM</scope>
+			</vo>
+			<vo>
+				<name>d4science/Ecosystem</name>
+				<src>ServiceMap_Ecosystem.xml</src>
+				<scope>/d4science.research-infrastructures.eu/Ecosystem</scope>
+			</vo>
+		</vos>
+	</infrastructure>
+ -->
+	 <infrastructure>
+		<name>gcube</name>
+		<vos>
+			<vo>
+				<name>gcube</name>
+				<src>ServiceMap_gcube.xml</src>
+				<scope>/gcube</scope>
+			</vo> 
+			<vo>
+				<name>gcube/devsec</name>
+				<src>ServiceMap_devsec.xml</src>
+				<scope>/gcube/devsec</scope>
+			</vo>
+		</vos>
+	</infrastructure>
+<!-- 
+	<infrastructure>
+		<name>testing</name>
+		<vos>
+			<vo>
+				<name>testing</name>
+				<src>ServiceMap_testing.xml</src>
+				<scope>/testing</scope>
+			</vo>
+			<vo>
+				<name>testing/vo1</name>
+				<src>ServiceMap_vo1.xml</src>
+				<scope>/testing/vo1</scope>
+			</vo>
+		</vos>
+	</infrastructure>
+ -->
+</infrastructures>

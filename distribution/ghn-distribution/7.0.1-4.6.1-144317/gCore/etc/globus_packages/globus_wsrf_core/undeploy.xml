@@ -1,0 +1,63 @@
+<project default="undeploy" basedir=".">
+
+
+<property environment="env"/>
+<property file="build.properties"/>
+<property file="${user.home}/build.properties"/>
+<property name="env.GLOBUS_LOCATION" value="../../.."/>
+<property name="deploy.dir" value="${env.GLOBUS_LOCATION}"/>
+
+
+<target name="undeploy">
+  <delete verbose="true" dir="${deploy.dir}/etc/globus_wsrf_core"/>
+  <delete verbose="true" file="${deploy.dir}/lib/wsrf_core.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/wsrf_core_stubs.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/management/shutdown_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/management/shutdown_port_type.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/management/shutdown_service.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/notification/notification_consumer_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/notification/notification_consumer_flattened.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/notification/notification_consumer_service.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/notification/subscription_manager_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/notification/subscription_manager_flattened.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/notification/subscription_manager_service.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/security/authorization/authz_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/security/authorization/authz_port_type.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/security/authorization/authz_service.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/security/secconv/secure_conversation_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/security/secconv/secure_conversation_port_type.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/security/secconv/secure_conversation_service.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/types/timestamp.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/core/types/timestamp.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/ws/addressing/WS-Addressing.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/ws/policy/policy.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/ws/policy/utility.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/ws/secconv/ws-secureconversation.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/ws/security/oasis-200401-wss-wssecurity-secext-1.0.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/ws/security/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/ws/security/xmldsig-core-schema.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/ws/trust/ws-trust.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/ws/trust/ws-trust.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/ws/xml.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/faults/WS-BaseFaults.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/faults/WS-BaseFaults.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/lifetime/WS-ResourceLifetime.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/lifetime/WS-ResourceLifetime.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/lifetime/WS-ResourceLifetime_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/lifetime/WS-ResourceLifetime_service.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/notification/WS-BaseN.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/notification/WS-BaseN.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/notification/WS-BaseN_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/notification/WS-BaseN_service.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/notification/WS-Topics.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/properties/WS-ResourceProperties.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/properties/WS-ResourceProperties.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/properties/WS-ResourceProperties_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/properties/WS-ResourceProperties_service.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/servicegroup/WS-ServiceGroup.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/servicegroup/WS-ServiceGroup.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/servicegroup/WS-ServiceGroup_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/wsrf/servicegroup/WS-ServiceGroup_service.wsdl"/>
+  <delete verbose="true" dir="${deploy.dir}/share/globus_wsrf_core"/>
+</target>
+</project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<endpoints
+  xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime"
+  version="2.0">
+    <endpoint
+      name="smart-executor"
+      implementation="org.gcube.vremanagement.executor.SmartExecutorImpl"
+      url-pattern="/gcube/vremanagement/smart-executor"/>    
+</endpoints>

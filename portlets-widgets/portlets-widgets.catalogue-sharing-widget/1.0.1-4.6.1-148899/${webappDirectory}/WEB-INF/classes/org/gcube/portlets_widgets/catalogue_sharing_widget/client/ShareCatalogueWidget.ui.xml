@@ -1,0 +1,64 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<g:HTMLPanel>
+		<b:Modal ui:field="modalShareLink" title="Please, select the URL and copy it in the clipboard by Ctrl + C or Cmd + C"
+			backdrop="STATIC" keyboard="true" animation="true">
+			<g:VerticalPanel width="100%">
+
+				<b:Icon type="COG" size="FOUR_TIMES" spin="true" ui:field="loadingIcon"
+					visible="true" />
+
+				<!-- Alert blocks for info/errors -->
+				<b:AlertBlock type="ERROR" close="false" animation="true"
+					visible="false" ui:field="errorBlock" width="100%"></b:AlertBlock>
+
+				<b:Form type="VERTICAL" ui:field="formWithInformation"
+					visible="false" width="100%">
+					<b:Fieldset>
+						<!-- <b:ControlGroup> -->
+						<!-- <b:ControlLabel for="input01"> -->
+						<!-- <b>Item's title:</b> -->
+						<!-- </b:ControlLabel> -->
+						<!-- <b:Controls> -->
+						<!-- <b:TextBox alternateSize="XLARGE" b:id="input01" -->
+						<!-- width="98%" placeholder="Item's title" readOnly="true" -->
+						<!-- ui:field="itemTitle"></b:TextBox> -->
+						<!-- </b:Controls> -->
+						<!-- </b:ControlGroup> -->
+						<!-- <b:ControlGroup> -->
+						<!-- <b:ControlLabel for="input04"> -->
+						<!-- <b>Item's name:</b> -->
+						<!-- </b:ControlLabel> -->
+						<!-- <b:Controls> -->
+						<!-- <b:TextBox alternateSize="XLARGE" b:id="input04" -->
+						<!-- width="98%" placeholder="Item's title" readOnly="true" -->
+						<!-- ui:field="itemName"></b:TextBox> -->
+						<!-- </b:Controls> -->
+						<!-- </b:ControlGroup> -->
+						<b:ControlGroup>
+							<b:ControlLabel for="input02">
+								<b>Item's url:</b>
+							</b:ControlLabel>
+							<b:Controls>
+								<b:TextArea alternateSize="XLARGE" b:id="input02"
+									width="98%" placeholder="Item's long url" readOnly="true"
+									ui:field="itemLongUrl"></b:TextArea>
+							</b:Controls>
+						</b:ControlGroup>
+						<b:ControlGroup>
+							<b:ControlLabel for="input03">
+								<b>Item's short url:</b>
+							</b:ControlLabel>
+							<b:Controls>
+								<b:TextBox alternateSize="XLARGE" b:id="input03"
+									width="98%" placeholder="Item's short url" readOnly="true"
+									ui:field="itemShortUrl"></b:TextBox>
+							</b:Controls>
+						</b:ControlGroup>
+					</b:Fieldset>
+				</b:Form>
+			</g:VerticalPanel>
+		</b:Modal>
+	</g:HTMLPanel>
+</ui:UiBinder> 

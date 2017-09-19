@@ -1,0 +1,31 @@
+package org.gcube.common.resources.gcore.utils;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.datatype.DatatypeConstants;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+public class DateFormatterAdapter extends XmlAdapter<String, Calendar> {
+
+	@Override
+	public String marshal(Calendar cal) throws Exception {
+		GregorianCalendar c = new GregorianCalendar();
+		c.setTime(cal.getTime());
+		XMLGregorianCalendar date2 = DatatypeFactory.newInstance().newXMLGregorianCalendar(c);
+		date2.setMillisecond(DatatypeConstants.FIELD_UNDEFINED);
+		return date2.toXMLFormat();
+	}
+
+	@Override
+	public Calendar unmarshal(String date) throws Exception {
+		XMLGregorianCalendar gregorianDate = DatatypeFactory.newInstance().newXMLGregorianCalendar(date);
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(gregorianDate.toGregorianCalendar().getTime());
+		return cal;
+		
+	}
+
+}

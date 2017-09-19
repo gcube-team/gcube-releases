@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	version="2.0">
+	<portlet>
+		<portlet-name>joinvre</portlet-name>
+		<display-name>gCube Join VRE Portlet</display-name>
+		<portlet-class>org.gcube.portlets.user.joinvre.server.portlet.JoinVREPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Explore Virtual Research Environments</title>
+			<short-title>JoinVRE Portlet</short-title>
+			<keywords>JoinVRE Portlet</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>portlet-setup-show-borders</name>
+				<value>true</value>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

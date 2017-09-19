@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='resource_ishealth_monitor'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Other module inherits -->
+	<inherits name='com.extjs.gxt.ui.GXT' />
+	<!-- Adapters for highcharts in gxt -->
+	<inherits name='org.adapters.highcharts.gxt.gxthighcharts' />
+	<inherits name='org.gcube.resourcemanagement.support.Resource_support' />
+
+
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.admin.ishealthmonitor.client.Resource_ishealth_monitor' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

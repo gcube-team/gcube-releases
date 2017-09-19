@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<t:root xmlns:t="http://gcube-system.org/namespaces/data/trees"
+	t:id="oai:generic.eprints.org:359">
+	<title>Association patterns and social dynamics of killer whales
+		(Orcinus orca) in Greater Puget Sound</title>
+	<collectionID>7374617475733D756E707562</collectionID>
+	<creationTime>2011-09-29T22:10:02.000+02:00</creationTime>
+	<lastUpdateTime>2011-09-29T22:10:02.000+02:00</lastUpdateTime>
+	<provenance>
+		<statement>This item has been created by the gCube OAI-TM plugin via
+			OAI-PMH metadata harvesting from the metadata provider aquacomm at
+			http://aquaticcommons.org/cgi/oai2</statement>
+		<recordID>oai:generic.eprints.org:359</recordID>
+	</provenance>
+	<metadata>
+		<schema>oai_dc</schema>
+		<schemaLocation>http://www.openarchives.org/OAI/2.0/oai_dc/
+		</schemaLocation>
+		<record>
+			<oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+				xmlns:xsx="http://www.w3.org/2001/XMLSchema-instance"
+				xsx:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+				xmlns:dc="http://purl.org/dc/elements/1.1/">
+				<dc:title>Association patterns and social dynamics of killer whales (Orcinus orca) in Greater Puget Sound</dc:title>
+				<dc:creator>Heimlich-Boran, Sara Lou</dc:creator>
+				<dc:subject>Ecology</dc:subject>
+				<dc:subject>Biology</dc:subject>
+				<dc:description>Killer whales were observed in the inland marine waters of Washington and British Columbia from March to November 1982 and January to November 1983. The majority of the research occurred in Haro Strait in the San Juan Islands.  All whales were individually identifiable from naturally occurring marks and scars on the dorsal fin and back. Many whales were identified visually in the field with the aid of a photographic guide to individuals (Biggs et al. 1987).  Seventy-two whales comprised the study population.  Data collection concentrated on group composition and spacing, identification and associations of all whales present, and the recording of the dominant behavior occurring at that time. Behaviors were categorized from combinations of quantifiable parameters of group composition, spacing of individuals, speed and direction of travel, and the occurrence of specific behaviors such as leaps, tail slaps, penile erections, etc. (Osborne 1986).  Behaviors were pooled into four major groups: feeding, travel, rest and social/sexual behaviors. 
+
+The results suggest the following hypothesis about the social organization of the killer whales resident to Greater Puget Sound.  As a whale ages, it moves from an integrated position within the community, based on its relationship with its mother to a less integrated period during adolescence in which social ties remain primarily through the older female generation.  With full adulthood, dependency upon these “allo-mothers” (N.J. Haenel 1986) declines and direct affiliation with the mothers are re-established.  Adult whales remain with the maternal sub-group. Close associations between adult whales appear to be based on relationship between direct kin.  Fission from the main material sub-group and the establishment of separate subgroups may be the result of several factors including the age of the older female and the number, ages, and sex of her offspring, including adult sons.  When older females die out, siblings or cousins may separate more permanently, forming new lineages or pods.</dc:description>
+				<dc:date>1988</dc:date>
+				<dc:type>Thesis</dc:type>
+				<dc:type>NonPeerReviewed</dc:type>
+				<dc:format>application/pdf</dc:format>
+				<dc:identifier>http://aquaticcommons.org/359/1/MS_Thesis_Social_Dynamics_Killer_Whales_Puget_Sound_1988.pdf</dc:identifier>
+				<dc:identifier>      Heimlich-Boran, Sara Lou           (1988) Association patterns and social dynamics of killer whales (Orcinus orca) in Greater Puget Sound.  Masters thesis, San Jose State University.           </dc:identifier>
+				<dc:relation>http://aquaticcommons.org/359/</dc:relation>
+			</oai_dc:dc>
+		</record>
+	</metadata>
+	<content>
+		<contentType>main</contentType>
+		<mimeType>text/url</mimeType>
+		<url>http://aquaticcommons.org/359/1/MS_Thesis_Social_Dynamics_Killer_Whales_Puget_Sound_1988.pdf
+		</url>
+	</content>
+	<content>
+		<contentType>alternative</contentType>
+		<mimeType>text/html; charset=utf-8</mimeType>
+		<url>http://aquaticcommons.org/359/</url>
+	</content>
+</t:root>

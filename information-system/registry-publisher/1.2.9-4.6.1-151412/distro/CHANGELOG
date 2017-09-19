@@ -1,0 +1,7 @@
+v 1.2.5 (10-09-2014)
+		* update test class code, update removeById method
+v 1.2.4 (30-06-2014)
+		* added method removeByID in AdvancedPublisher class
+v 1.2.3 (03-04-2014)
+		* added filtering on scope promotion for some kind of resources: genericResource, GcoreEndpoint and Software
+		* update remove operation

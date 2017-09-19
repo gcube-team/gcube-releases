@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="RuleWidgetJUnit">
+	<!-- Inherit our applications main module. -->
+	<inherits name='org.gcube.portlets.user.td.gwtservice.TDGWTService' />
+
+	<!-- Specify the path to any remote services. -->
+	<servlet path="/TDGWTService"
+		class="org.gcube.portlets.user.td.gwtservice.server.TDGWTServiceImpl" />
+
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+</module>

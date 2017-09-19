@@ -1,0 +1,21 @@
+<project default="undeploy" basedir=".">
+
+
+<property environment="env"/>
+<property file="build.properties"/>
+<property file="${user.home}/build.properties"/>
+<property name="env.GLOBUS_LOCATION" value="../../.."/>
+<property name="deploy.dir" value="${env.GLOBUS_LOCATION}"/>
+
+
+<target name="undeploy">
+  <delete verbose="true" dir="${deploy.dir}/etc/deployer-service-2.4.2-4.6.1-125756"/>
+  <delete verbose="true" file="${deploy.dir}/lib/deployer-service-2.4.2-4.6.1-125756.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/deployer/Deployer.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/deployer/Deployer_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/deployer/Deployer_flattened.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/deployer/Deployer_service.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/deployer/VREManagementTypes.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/deployer/VREManagementTypes.xsd"/>
+</target>
+</project>

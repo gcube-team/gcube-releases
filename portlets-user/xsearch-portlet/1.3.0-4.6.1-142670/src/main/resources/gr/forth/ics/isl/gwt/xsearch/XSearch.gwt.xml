@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 1.6.2//EN" "http://google-web-toolkit.googlecode.com/svn/tags/1.6.2/distro-source/core/src/gwt-module.dtd">
+<module rename-to='XSearch'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User'/>
+  <inherits name='com.google.gwt.json.JSON'/> 
+  
+  <!-- if you want to use XML DOM support, add --> 
+  <!-- <inherits name='com.google.gwt.xml.XML'/>--> 
+  
+
+  <!-- Inherit the default GWT style sheet.  You can change       -->
+  <!-- the theme of your GWT application by uncommenting          -->
+  <!-- any one of the following lines.                            -->
+  <!-- <inherits name='com.google.gwt.user.theme.standard.Standard'/>-->
+  <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+  <!--  <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->     
+  
+  <!-- Other module inherits                                      -->
+     
+  <!-- inherits gCube Widgets Library  	               -->
+  <inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory'/>
+  <inherits name="com.google.gwt.xml.XML" />
+
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='gr.forth.ics.isl.gwt.xsearch.client.XSearch'/>
+  <source path="client"/>
+  <source path="configuration"/>
+</module>

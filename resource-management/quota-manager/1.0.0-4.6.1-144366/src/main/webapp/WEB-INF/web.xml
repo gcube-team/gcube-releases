@@ -1,0 +1,9 @@
+<web-app>
+	<servlet>
+    	<servlet-name>org.gcube.resource.management.quota.manager.service.QuotaService</servlet-name>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>org.gcube.resource.management.quota.manager.service.QuotaService</servlet-name>
+        <url-pattern>/gcube/service/*</url-pattern>
+    </servlet-mapping>   
+</web-app>
