@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel styleName="openOptionsPanel" ui:field="myPanel">
+		<table style="width: 700px; text-align: center;">
+			<tr>
+				<td>
+					<g:HTML ui:field="editVME" styleName="openOption optionOpenTemplate">Edit VME</g:HTML>
+				</td>
+				<td>
+					<g:HTML ui:field="createVME" styleName="openOption optionOpenReport">Create VME</g:HTML>
+				</td>
+				<td>
+					<g:HTML ui:field="deleteVME" styleName="openOption optionDeleteVME">Delete VME</g:HTML>
+				</td>
+			</tr>		
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

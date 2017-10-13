@@ -1,0 +1,174 @@
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+184  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+358  [main] FATAL org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: gHN could not complete initialisation
+java.io.FileNotFoundException: null/etc/globus_wsrf_core/server-config.wsdd (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+	at java.io.FileInputStream.<init>(FileInputStream.java:79)
+	at org.gcube.common.core.contexts.GHNClientContext.loadServerWsddDocument(GHNClientContext.java:95)
+	at org.gcube.common.core.contexts.GHNClientContext.initialise(GHNClientContext.java:40)
+	at org.gcube.common.core.contexts.GHNContext.<clinit>(GHNContext.java:262)
+	at org.gcube.common.core.contexts.GCUBERemotePortTypeContext.<init>(GCUBERemotePortTypeContext.java:90)
+	at org.gcube.common.core.contexts.GCUBERemotePortTypeContext.getProxy(GCUBERemotePortTypeContext.java:277)
+	at org.gcube.common.core.contexts.GCUBERemotePortTypeContext.getProxy(GCUBERemotePortTypeContext.java:254)
+	at org.gcube.common.clients.gcore.plugins.PluginAdapter.resolve(PluginAdapter.java:75)
+	at org.gcube.common.clients.gcore.plugins.PluginAdapter.resolve(PluginAdapter.java:24)
+	at org.gcube.common.clients.delegates.DirectDelegate.make(DirectDelegate.java:46)
+	at org.gcube.common.clients.delegates.AsyncProxyDelegate.make(AsyncProxyDelegate.java:56)
+	at org.gcube.data.analysis.statisticalmanager.proxies.StatisticalManagerDefaultFactory.getAlgorithms(StatisticalManagerDefaultFactory.java:69)
+	at org.gcube.data.analysis.statisticalmanager.test.ComputationFactoryTest.allServiceCapabilities(ComputationFactoryTest.java:48)
+	at org.gcube.data.analysis.statisticalmanager.test.ComputationFactoryTest.main(ComputationFactoryTest.java:30)
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+156  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+581  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+198  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+650  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+157  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+641  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+154  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+543  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+155  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+304  [main] FATAL org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: gHN could not complete initialisation
+java.io.FileNotFoundException: null/etc/globus_wsrf_core/server-config.wsdd (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+	at java.io.FileInputStream.<init>(FileInputStream.java:79)
+	at org.gcube.common.core.contexts.GHNClientContext.loadServerWsddDocument(GHNClientContext.java:95)
+	at org.gcube.common.core.contexts.GHNClientContext.initialise(GHNClientContext.java:40)
+	at org.gcube.common.core.contexts.GHNContext.<clinit>(GHNContext.java:262)
+	at org.gcube.common.core.contexts.GCUBERemotePortTypeContext.<init>(GCUBERemotePortTypeContext.java:90)
+	at org.gcube.common.core.contexts.GCUBERemotePortTypeContext.getProxy(GCUBERemotePortTypeContext.java:277)
+	at org.gcube.common.core.contexts.GCUBERemotePortTypeContext.getProxy(GCUBERemotePortTypeContext.java:254)
+	at org.gcube.common.clients.gcore.plugins.PluginAdapter.resolve(PluginAdapter.java:75)
+	at org.gcube.common.clients.gcore.plugins.PluginAdapter.resolve(PluginAdapter.java:24)
+	at org.gcube.common.clients.delegates.DirectDelegate.make(DirectDelegate.java:46)
+	at org.gcube.common.clients.delegates.AsyncProxyDelegate.make(AsyncProxyDelegate.java:56)
+	at org.gcube.data.analysis.statisticalmanager.proxies.StatisticalManagerDefaultDataSpace.getTables(StatisticalManagerDefaultDataSpace.java:170)
+	at org.gcube.data.analysis.statisticalmanager.proxies.StatisticalManagerDefaultDataSpace.getTables(StatisticalManagerDefaultDataSpace.java:181)
+	at org.gcube.data.analysis.statisticalmanager.test.DataSpaceTest.main(DataSpaceTest.java:37)
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+142  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+297  [main] FATAL org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: gHN could not complete initialisation
+java.io.FileNotFoundException: null/etc/globus_wsrf_core/server-config.wsdd (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+	at java.io.FileInputStream.<init>(FileInputStream.java:79)
+	at org.gcube.common.core.contexts.GHNClientContext.loadServerWsddDocument(GHNClientContext.java:95)
+	at org.gcube.common.core.contexts.GHNClientContext.initialise(GHNClientContext.java:40)
+	at org.gcube.common.core.contexts.GHNContext.<clinit>(GHNContext.java:262)
+	at org.gcube.common.core.contexts.GCUBERemotePortTypeContext.<init>(GCUBERemotePortTypeContext.java:90)
+	at org.gcube.common.core.contexts.GCUBERemotePortTypeContext.getProxy(GCUBERemotePortTypeContext.java:277)
+	at org.gcube.common.core.contexts.GCUBERemotePortTypeContext.getProxy(GCUBERemotePortTypeContext.java:254)
+	at org.gcube.common.clients.gcore.plugins.PluginAdapter.resolve(PluginAdapter.java:75)
+	at org.gcube.common.clients.gcore.plugins.PluginAdapter.resolve(PluginAdapter.java:24)
+	at org.gcube.common.clients.delegates.DirectDelegate.make(DirectDelegate.java:46)
+	at org.gcube.common.clients.delegates.AsyncProxyDelegate.make(AsyncProxyDelegate.java:56)
+	at org.gcube.data.analysis.statisticalmanager.proxies.StatisticalManagerDefaultDataSpace.getTables(StatisticalManagerDefaultDataSpace.java:170)
+	at org.gcube.data.analysis.statisticalmanager.proxies.StatisticalManagerDefaultDataSpace.getTables(StatisticalManagerDefaultDataSpace.java:181)
+	at org.gcube.data.analysis.statisticalmanager.test.DataSpaceTest.main(DataSpaceTest.java:37)
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+154  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+539  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+439  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+912  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+347  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+681  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+358  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+666  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+1    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+376  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+805  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+336  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+643  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+327  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+623  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+340  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+641  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+323  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+623  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+327  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+617  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+337  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+629  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+151  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+541  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+174  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+571  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+164  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+552  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+158  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+565  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+149  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+534  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+1    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+237  [main] FATAL org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: gHN could not complete initialisation
+java.io.FileNotFoundException: null/etc/globus_wsrf_core/server-config.wsdd (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+	at java.io.FileInputStream.<init>(FileInputStream.java:79)
+	at org.gcube.common.core.contexts.GHNClientContext.loadServerWsddDocument(GHNClientContext.java:95)
+	at org.gcube.common.core.contexts.GHNClientContext.initialise(GHNClientContext.java:40)
+	at org.gcube.common.core.contexts.GHNContext.<clinit>(GHNContext.java:262)
+	at org.gcube.common.clients.gcore.queries.DefaultISFacade.execute(DefaultISFacade.java:24)
+	at org.gcube.common.clients.gcore.queries.StatelessQuery.fire(StatelessQuery.java:45)
+	at org.gcube.common.clients.queries.AbstractQuery.fire(AbstractQuery.java:62)
+	at org.gcube.common.clients.delegates.DiscoveryDelegate.make(DiscoveryDelegate.java:111)
+	at org.gcube.data.spd.client.proxies.DefaultOccurrences.getByKeys(DefaultOccurrences.java:58)
+	at org.gcube.data.analysis.statisticalmanager.test.DataSpaceImporterTest.main(DataSpaceImporterTest.java:56)
+0    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+457  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+777  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+1524 [main] INFO  org.gcube.common.resources.kxml.runninginstance.KGCUBERunningInstance  - RunningInstance: Added scope(s) [/gcube, /gcube/devsec]
+0    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+449  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+763  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+1353 [main] INFO  org.gcube.common.resources.kxml.runninginstance.KGCUBERunningInstance  - RunningInstance: Added scope(s) [/gcube, /gcube/devsec]
+0    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+494  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+821  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+1429 [main] INFO  org.gcube.common.resources.kxml.runninginstance.KGCUBERunningInstance  - RunningInstance: Added scope(s) [/gcube, /gcube/devsec]
+1    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+155  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+561  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+151  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+542  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+1    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+172  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+565  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+151  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+558  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+157  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+560  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+155  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+525  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+155  [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+539  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+385  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+679  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]
+0    [main] INFO  org.gcube.common.core.contexts.GHNContext  - [0.0s] GHNContext: INITIALISING GHN
+359  [main] WARN  org.apache.axis.utils.JavaUtils  - Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+651  [main] INFO  org.gcube.common.core.contexts.GHNClientContext  - [0.0s] GHNClientContext: Added scope(s) [/gcube/devsec, /gcube]

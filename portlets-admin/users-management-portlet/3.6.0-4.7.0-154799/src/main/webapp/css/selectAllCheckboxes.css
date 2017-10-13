@@ -1,0 +1,68 @@
+div#usersManagementPortletContainer table#CurrentUsersTable thead > tr th:first-of-type,
+  div#usersManagementPortletContainer table#usersRequestsTable thead > tr th:first-of-type,
+   div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable thead > tr th:first-of-type {
+     position:relative;
+ }
+ div#usersManagementPortletContainer table#CurrentUsersTable thead > tr th:first-of-type div {
+     position: absolute;
+     bottom: 2px;
+     left: 7px;
+     background: #eeeeee;
+     background-color: #eeeeee;
+     width: 21px;
+     height: 24px;
+     padding: 3px 0px 0px 6px;
+}
+div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable thead > tr th:first-of-type {
+  text-align: center;
+  cursor: auto;
+}
+div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable thead > tr th:first-of-type div {
+    position: absolute;
+    bottom: 2px;
+    left: 7px;
+    background: #eeeeee;
+    background-color: #eeeeee;
+    width: 24px;
+    height: 27px;
+    padding-left: 3px;
+}
+div#usersManagementPortletContainer table#usersRequestsTable thead > tr th:first-of-type{
+  padding-left: 2px;
+}
+div#usersManagementPortletContainer table#usersRequestsTable thead > tr th:first-of-type div {
+    position: absolute;
+    bottom: 4px;
+    left: 7px;
+    background: #eeeeee;
+    background-color: #eeeeee;
+    width: 20px;
+    height: 23px;
+    padding: 2px 0px 0px 5px;
+}
+div#usersManagementPortletContainer table#CurrentUsersTable thead > tr th:first-of-type.none div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable thead > tr th:first-of-type.none div,
+  div#usersManagementPortletContainer table#usersRequestsTable thead > tr th:first-of-type.none div {
+ 	background-color: rgb(42, 170, 230);
+    background: rgb(42, 170, 230);
+}
+div#usersManagementPortletContainer table#CurrentUsersTable thead > tr th:first-of-type:not(.none):hover div,
+ div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable thead > tr th:first-of-type:not(.none):hover div,
+  div#usersManagementPortletContainer table#usersRequestsTable thead > tr th:first-of-type:not(.none):hover div {
+ 	background-color: rgb(42, 170, 210);
+    background: rgb(42, 170, 210);
+ }
+ div#usersManagementPortletContainer table#CurrentUsersTable thead > tr th:first-of-type:not(.none):hover div i,
+  div#usersManagementPortletContainerSiteTeamsEditMode table#GroupTeamsTable thead > tr th:first-of-type:not(.none):hover div i,
+     div#usersManagementPortletContainer table#usersRequestsTable thead > tr th:first-of-type:not(.none):hover div i {
+ 	color: rgb(42, 170, 210);
+ }
+div#usersManagementPortletContainer th i.icon-ok,
+ div#usersManagementPortletContainerSiteTeamsEditMode th i.icon-ok {
+    color: #eeeeee;
+    font-size: 1em;
+}
+div#usersManagementPortletContainer th i.icon-ok.whiteFont,
+ div#usersManagementPortletContainerSiteTeamsEditMode th i.icon-ok.whiteFont {
+    color: #fff;
+}

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="Deployer"
+    targetNamespace="http://gcube-system.org/namespaces/vremanagement/deployer"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:tns="http://gcube-system.org/namespaces/vremanagement/deployer"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+    xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+     xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:vretypes="http://gcube-system.org/common/vremanagement/types"
+    xmlns:wsrlw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"    
+    xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+    xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"  location="../gcube/common/core/providers/GCUBEProvider.wsdl"/>
+	<import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+	<import namespace="http://gcube-system.org/common/vremanagement/types" location="VREManagementTypes.wsdl"/> 
+
+
+<!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+<types>
+	<xsd:schema targetNamespace="http://gcube-system.org/namespaces/vremanagement/deployer"
+    xmlns:tns="http://gcube-system.org/namespaces/vremanagement/deployer"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   
+   	<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+   	<xsd:import namespace="http://gcube-system.org/common/vremanagement/types" schemaLocation="VREManagementTypes.xsd"/>
+	    	
+   	<xsd:element name="VOID" type="coretypes:VOID" />
+		
+	<xsd:element name="deployParameters">
+            <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="package" type="vretypes:PackageInfo" minOccurs="1" maxOccurs="unbounded" nillable="false"/>
+                        <xsd:element name="targetScope" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+                        <xsd:element name="callbackID" type="xsd:string" nillable="true"/>
+                        <xsd:element ref="wsa:EndpointReference" nillable="true" />                                                
+                     </xsd:sequence>
+             </xsd:complexType>
+     </xsd:element>
+     <xsd:element name="updateParameters">
+             <xsd:complexType>
+                     <xsd:sequence>
+                        <xsd:element name="undeployPackage" type="vretypes:PackageInfo" minOccurs="1" maxOccurs="unbounded"/>
+                        <!-- added deploy package field from previous version-->
+                        <xsd:element name="deployPackage" type="vretypes:PackageInfo" minOccurs="1" maxOccurs="unbounded"/>
+                        <!-- added target scope field from previous version-->   
+                        <xsd:element name="targetScope" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>                     
+                        <xsd:element name="callbackID" type="xsd:string" nillable="true"/>
+                        <xsd:element name="cleanState" type="xsd:boolean" default="false"/>
+                        <xsd:element name="updateOnlyBinaryFiles" type="xsd:boolean" default="false"/>
+                        <xsd:element ref="wsa:EndpointReference" nillable="true" />                                                
+             </xsd:sequence>
+          </xsd:complexType>
+     </xsd:element>
+	
+	 <xsd:element name="undeployParameters">
+          <xsd:complexType>
+             <xsd:sequence>
+                         <xsd:element name="package" type="vretypes:PackageInfo" minOccurs="0" maxOccurs="unbounded" nillable="false"/>
+                         <xsd:element name="targetScope" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+                         <xsd:element name="cleanState" type="xsd:boolean" default="true"/>
+                         <xsd:element name="callbackID" type="xsd:string" nillable="true"/>
+                         <xsd:element ref="wsa:EndpointReference" nillable="true" />                         
+             </xsd:sequence>
+          </xsd:complexType>
+     </xsd:element>
+    
+     <xsd:element name="booleanResponse" type="xsd:boolean"/>
+    
+     <xsd:element name="patchParameters">
+          <xsd:complexType>
+             <xsd:sequence>
+                    <xsd:element name="package" type="vretypes:PackageInfo"/>
+                    <xsd:element name="patchURI" type="xsd:anyURI"/>
+                    <xsd:element name="callbackID" type="xsd:string"/>
+                    <xsd:element ref="wsa:EndpointReference"/>
+                    <xsd:element name="restart" type="xsd:boolean"/>
+             </xsd:sequence>
+           </xsd:complexType>
+      </xsd:element>
+     
+      <xsd:complexType name="DeployedPackage">	
+		<xsd:sequence>
+				<xsd:element name="ID" type="xsd:string" nillable="false"/> 
+		  		<xsd:element name="ServiceClass" type="xsd:string" nillable="false"/> 
+		  		<xsd:element name="ServiceName" type="xsd:string" nillable="false"/>
+		  		<xsd:element name="ServiceVersion" type="xsd:string" nillable="false"/>
+		  		<xsd:element name="PackageName" type="xsd:string" nillable="false"/>		  		
+		  		<xsd:element name="PackageVersion" type="xsd:string" nillable="false"/> 
+		  		<xsd:element name="DeploymentTime" type="xsd:dateTime" nillable="true"/>
+		 </xsd:sequence>
+  	  </xsd:complexType>
+
+	  <xsd:element name="DeployedPackages" type="tns:DeployedPackage"/>
+	
+	  <xsd:element name="NumberOfDeployedPackages" type="xsd:int" />
+	  
+	  <xsd:element name="LastDeployment" type="xsd:string" />
+
+	  <!--  RESOURCE PROPERTIES -->
+	  <xsd:element name="DeployerResourceProperties">
+         <xsd:complexType>
+               <xsd:sequence>                          
+                      <xsd:element ref="tns:DeployedPackages" minOccurs="0" maxOccurs="unbounded"/>
+                      <xsd:element ref="tns:LastDeployment" minOccurs="0" maxOccurs="1"/>
+               </xsd:sequence>
+         </xsd:complexType>             
+	  </xsd:element>
+  </xsd:schema>
+</types>
+
+ <!--============================================================
+
+                       M E S S A G E S
+
+  ============================================================-->
+
+	<message name="DeployInputMessage">
+        <part name="parameters" element="tns:deployParameters"/>
+    </message>
+    <message name="UpdateInputMessage">
+        <part name="parameters" element="tns:updateParameters"/>
+    </message>
+    <message name="UndeployInputMessage">
+        <part name="parameters" element="tns:undeployParameters"/>
+    </message>    
+	<message name="PatchInputMessage">
+         <part name="parameters" element="tns:patchParameters"/>
+    </message>
+	<message name="VoidMessage">
+		<part name="request" element="tns:VOID"/>
+	</message>
+<!--============================================================
+
+                       P O R T T Y P E
+                      
+  ============================================================-->
+<portType name="DeployerPortType" 
+    wsdlpp:extends="provider:GCUBEProvider"
+    wsrp:ResourceProperties="tns:DeployerResourceProperties">
+
+	<operation name="Deploy">
+        <input message="tns:DeployInputMessage"/>
+        <output message="tns:VoidMessage"/>
+        <fault name="fault" message="corefaults:GCUBEFaultMessage"/>        
+    </operation>
+    
+    <operation name="Undeploy">
+        <input message="tns:UndeployInputMessage"/>        
+        <output message="tns:VoidMessage"/>
+        <fault name="fault" message="corefaults:GCUBEFaultMessage"/>        
+    </operation>
+
+	<operation name="Patch">
+        <input message="tns:PatchInputMessage"/>
+        <output message="tns:VoidMessage"/>
+        <fault name="fault" message="corefaults:GCUBEFaultMessage"/>
+    </operation>
+    
+	<operation name="Update">
+        <input message="tns:UpdateInputMessage"/>
+        <output message="tns:VoidMessage"/>
+        <fault name="fault" message="corefaults:GCUBEFaultMessage"/>
+    </operation>        	
+
+</portType>
+
+</definitions>
+    

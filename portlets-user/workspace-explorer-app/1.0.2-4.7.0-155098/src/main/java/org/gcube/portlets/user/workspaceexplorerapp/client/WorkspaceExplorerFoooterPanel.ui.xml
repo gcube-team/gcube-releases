@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:m="urn:import:gwt.material.design.client.ui">
+	<ui:style>
+	.we_footer {
+		height: 50px important!
+	}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<m:MaterialFooter styleName="{style.we_footer}" ui:field="we_footer_bar">
+		</m:MaterialFooter>
+	</g:HTMLPanel>
+</ui:UiBinder>

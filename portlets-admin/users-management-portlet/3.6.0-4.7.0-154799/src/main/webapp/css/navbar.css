@@ -1,0 +1,142 @@
+div#usersManagementPortletContainer ul#myTab {
+	background: #1273c7;
+	background-color: #1273c7;
+	border-radius : 7px;
+}
+div#usersManagementPortletContainer ul#myTab li  a{
+	color : white;
+}
+div#usersManagementPortletContainer ul#myTab li  a:hover{
+	color : #1273c7;
+	background: white;
+	background-color: white;
+}
+div#usersManagementPortletContainer ul#myTab li.active a{
+	color : white;
+	background: rgb(42, 170, 230);
+	background-color: rgb(42, 170, 230);
+}
+div#usersManagementPortletContainer ul#myTab li.active a{
+	color : white;
+	background: rgb(42, 170, 230);
+	background-color: rgb(42, 170, 230);
+}
+div#usersManagementPortletContainer ul#myTab li.active {
+}
+div#usersManagementPortletContainer div.searchDiv,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.searchDiv {
+	background: #0271be;
+	background-color: #0271be;
+	cursor:pointer;
+	padding: 7px 10px 3px 10px;
+	border-radius:50%;
+	color: white;
+	display:inline-block;
+	float:right;
+	height: 25px;
+}
+div#usersManagementPortletContainer #CurrentUsersTable_filter label,
+div#usersManagementPortletContainer  #usersRequestsTable_filter label,
+ div#usersManagementPortletContainerSiteTeamsEditMode  #GroupTeamsTable_filter label {
+	display : inline-block;
+}
+div#usersManagementPortletContainer div.dataTables_filter label > input,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_filter label > input {
+	margin-bottom: 0px !important;
+}
+div#usersManagementPortletContainer .hideMe input,
+ div#usersManagementPortletContainerSiteTeamsEditMode .hideMe input,
+ .hideMe input {
+	display:none;
+}
+div#usersManagementPortletContainerSiteTeamsEditMode div#GroupTeamsTableUsers_filter > label {
+	display: inline;
+}
+div#usersManagementPortletContainer ul#myTab {
+	background: #1273c7;
+	background-color: #1273c7;
+	border-radius : 7px;
+}
+div#usersManagementPortletContainer ul#myTab li  a{
+	color : white;
+}
+div#usersManagementPortletContainer ul#myTab li  a:hover{
+	color : #1273c7;
+	background: white;
+	background-color: white;
+}
+div#usersManagementPortletContainer ul#myTab li.active a{
+	color : white;
+	background: rgb(42, 170, 230);
+	background-color: rgb(42, 170, 230);
+}
+div#usersManagementPortletContainer ul#myTab li.active a{
+	color : white;
+	background: rgb(42, 170, 230);
+	background-color: rgb(42, 170, 230);
+}
+div#usersManagementPortletContainer ul#myTab li.active {
+}
+div#usersManagementPortletContainer div.searchDiv,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.searchDiv,
+ div.searchDiv {
+	background: #0271be;
+	background-color: #0271be;
+	cursor:pointer;
+	padding: 5px 10px 3px 10px;
+	border-radius:50%;
+	color: white;
+	display:inline-block;
+	float:right;
+	height: 25px;
+	position: absolute;
+	right: 0;
+}
+div#usersManagementPortletContainer div.searchDiv:not(.active):hover,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.searchDiv:not(.active):hover {
+ 	background: #009AE5;
+ 	background-color: #009AE5;
+ }
+div#usersManagementPortletContainer div.searchDiv.active,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.searchDiv.active,
+ div.searchDiv.active {
+ 	background: #019ad3;
+ 	background-color: #019ad3;
+ }
+div#usersManagementPortletContainer #CurrentUsersTable_filter label,
+div#usersManagementPortletContainer  #usersRequestsTable_filter label,
+ div#usersManagementPortletContainerSiteTeamsEditMode  #GroupTeamsTable_filter label,
+ div#rejectedUsersRequestsManagementTab #rejectedUsersRequestsTable_filter label {
+	display : inline-block;
+	/* position: relative; */
+}
+div#usersManagementPortletContainer div.dataTables_filter label > input,
+ div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_filter label > input,
+  #rejectedUsersRequestsTable_filter label > input {
+	margin-bottom: 0px !important;
+	margin-right: 21px;
+}
+
+div#usersManagementPortletContainer .hideMe input,
+ div#usersManagementPortletContainerSiteTeamsEditMode .hideMe input,
+	#rejectedUsersRequestsManagementTab .hideMe input {
+	display:none;
+}
+div#usersManagementPortletContainerSiteTeamsEditMode div#GroupTeamsTableUsers_filter > label {
+	display: inline;
+}
+
+#CurrentUsersTable_filter input, #usersRequestsTable_filter input, #GroupTeamsTable_filter input, #GroupTeamsTableUsers_filter input,
+#rejectedUsersRequestsTable_filter input {
+	border-radius: 1em 0 0 1em;
+}
+
+#CurrentUsersTable_filter input:focus,
+ #usersRequestsTable_filter input:focus,
+  #GroupTeamsTable_filter input:focus,
+ #GroupTeamsTableUsers_filter input:focus {
+	webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(127, 127, 127, 0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(127, 127, 127, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(127, 127, 127, 0.6);
+	border-color: rgba(2, 113, 190, 0.5);
+}

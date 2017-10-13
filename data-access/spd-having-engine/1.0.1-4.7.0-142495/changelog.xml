@@ -1,0 +1,5 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.dataaccess.having-engine.1-0-0" date="2013-04-19"> 
+		<Change>First release</Change>
+	</Changeset> 
+</ReleaseNotes>

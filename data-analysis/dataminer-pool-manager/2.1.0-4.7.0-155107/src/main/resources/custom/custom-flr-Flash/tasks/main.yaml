@@ -1,0 +1,4 @@
+# tasks file for r
+---
+- name: Install custom algorithm <name>
+  command: Rscript --slave --no-save --no-restore-history -e "require(devtools); require(methods); install_github('<name>');"

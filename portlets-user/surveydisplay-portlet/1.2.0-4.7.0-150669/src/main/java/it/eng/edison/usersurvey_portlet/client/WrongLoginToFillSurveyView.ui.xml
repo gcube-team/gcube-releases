@@ -1,0 +1,11 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<b:Heading ui:field="wrongLoginToFill" size="4">You are not authorised to fill this survey.</b:Heading>
+		<b:Heading ui:field="wrongLoginToFill2" size="4">If you received this link to compile the survey, please make sure you log into the system by using the same email address used to send this link.</b:Heading>
+	</g:HTMLPanel>
+</ui:UiBinder> 

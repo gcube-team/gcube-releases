@@ -1,0 +1,99 @@
+/**
+ * 
+ */
+package org.gcube.accounting.analytics.persistence.couchbase;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+import org.gcube.common.authorization.client.Constants;
+import org.gcube.common.authorization.client.exceptions.ObjectNotFound;
+import org.gcube.common.authorization.library.AuthorizationEntry;
+import org.gcube.common.authorization.library.provider.SecurityTokenProvider;
+import org.gcube.common.scope.api.ScopeProvider;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+/**
+ * @author Luca Frosini (ISTI - CNR)
+ *
+ */
+public class ScopedTest {
+	
+	
+	
+	
+	private static final Logger logger = LoggerFactory.getLogger(ScopedTest.class);
+	
+	protected static final String PROPERTIES_FILENAME = "token.properties"; 
+	
+	private static final String GCUBE_DEVNEXT_VARNAME = "GCUBE_DEVNEXT";
+	public static final String GCUBE_DEVNEXT;
+	
+	private static final String GCUBE_DEVNEXT_NEXTNEXT_VARNAME = "GCUBE_DEVNEXT_NEXTNEXT";
+	public static final String GCUBE_DEVNEXT_NEXTNEXT;
+	
+	public static final String GCUBE_DEVSEC_VARNAME = "GCUBE_DEVSEC";
+	public static final String GCUBE_DEVSEC;
+	
+	public static final String GCUBE_DEVSEC_DEVVRE_VARNAME = "GCUBE_DEVSEC_DEVVRE";
+	public static final String GCUBE_DEVSEC_DEVVRE;
+	
+	public static final String SA_VARNAME = "SA";
+	public static final String SA;
+	
+	
+	public static final String DEFAULT_TEST_SCOPE;
+	public static final String ALTERNATIVE_TEST_SCOPE;
+	
+	static {
+		Properties properties = new Properties();
+		InputStream input = ScopedTest.class.getClassLoader().getResourceAsStream(PROPERTIES_FILENAME);
+
+		try {
+			// load the properties file
+			properties.load(input);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+			
+		GCUBE_DEVNEXT = properties.getProperty(GCUBE_DEVNEXT_VARNAME);
+		GCUBE_DEVNEXT_NEXTNEXT = properties.getProperty(GCUBE_DEVNEXT_NEXTNEXT_VARNAME);
+		
+		GCUBE_DEVSEC = properties.getProperty(GCUBE_DEVSEC_VARNAME);
+		GCUBE_DEVSEC_DEVVRE = properties.getProperty(GCUBE_DEVSEC_DEVVRE_VARNAME);
+		
+		SA = properties.getProperty(SA_VARNAME);
+		
+		DEFAULT_TEST_SCOPE = SA;
+		ALTERNATIVE_TEST_SCOPE = GCUBE_DEVSEC;
+	}
+	
+	public static String getCurrentScope(String token) throws ObjectNotFound, Exception{
+		AuthorizationEntry authorizationEntry = Constants.authorizationService().get(token);
+		String context = authorizationEntry.getContext();
+		logger.info("Context of token {} is {}", token, context);
+		return context;
+	}
+	
+	
+	public static void setContext(String token) throws ObjectNotFound, Exception{
+		SecurityTokenProvider.instance.set(token);
+		ScopeProvider.instance.set(getCurrentScope(token));
+	}
+	
+	@BeforeClass
+	public static void beforeClass() throws Exception{
+		setContext(DEFAULT_TEST_SCOPE);
+	}
+	
+	@AfterClass
+	public static void afterClass() throws Exception{
+		SecurityTokenProvider.instance.reset();
+		ScopeProvider.instance.reset();
+	}
+	
+}

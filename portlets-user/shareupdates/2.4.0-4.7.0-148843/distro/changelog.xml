@@ -1,0 +1,144 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.shareupdates.2-4-0"
+		date="2017-05-03">
+		<Change>Ported to Java8</Change>
+		<Change>Fix for bug #7630</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.2-3-1"
+		date="2017-04-12">
+		<Change>Fixes an issue where the sharing of posts in any VRE would not
+			generate any notification in some cases, Incident #7553</Change>
+		<Change>Fix for Bug #8063, Share Updates links are truncated in some
+			cases</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.2-3-0"
+		date="2017-02-20">
+		<Change>Updated method for using ftp server</Change>
+		<Change>Minor fix when VREs' teams are notified</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.2-1-0"
+		date="2016-09-29">
+		<Change>updated opengraph checkURL for getting images in case of HTTP
+			redirect permanently is encountered
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.2-0-0"
+		date="2016-06-29">
+		<Change>Updated to Liferay 6.2.5</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.1-9-2"
+		date="2016-02-29">
+		<Change>Minor bug fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.1-9-0"
+		date="2016-01-22">
+		<Change>Multi-attachment upload is now supported</Change>
+		<Change>Drag and drop mechanism added for attachments</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.1-8-2"
+		date="2015-12-21">
+		<Change>Restyled to optimize vertical space</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.1-8-0"
+		date="2015-07-06">
+		<Change>made notification to members option configurable as default,
+			see Feature #121
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.1-7-0"
+		date="2015-05-27">
+		<Change>Integrated gwt-bootstrap and revised css</Change>
+		<Change>ported to GWT 2.7.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.1-6-1"
+		date="2014-12-13">
+		<Change>Added Client scope handler, to set the scope from the client
+			and help preventing the browser back button cache problem
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.1-6-0"
+		date="2014-11-03">
+		<Change>Added possibility to define topics in a post using hashtags
+		</Change>
+		<Change>Added save attachments in VRE Group folder</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.1-5-1"
+		date="2014-07-03">
+		<Change>Fixed commons-validator dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.1-5-0"
+		date="2014-06-06">
+		<Change>Adapted pom to the new portal bundle gcore free</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.1-4-0"
+		date="2014-05-22">
+		<Change>Fixed bug when posting in single vre</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.1-3-0"
+		date="2014-05-09">
+		<Change>Added possibility to alert the users of a VRE when sharing an
+			update
+		</Change>
+		<Change>Refined the way to guess content and images when parsing HTML
+		</Change>
+		<Change>Improved images recognition when parsing html pages having no
+			image indication from openGraph
+		</Change>
+		<Change>Added user agent property to http requests to avoid web
+			servers 'complaining' HTTP 403 errors
+		</Change>
+		<Change>Replaced all the line breaks and all the double spaces with
+			the html version to preserve new lines in posts
+		</Change>
+		<Change>Fixed bug when changing user avatar and minor restyle</Change>
+		<Change>Several improvements in url checkings</Change>
+		<Change>resolved problem with AdBlock plugin </Change>
+		<Change>Fixed mention user dialog y-position when textbox is higher
+			than usual due to new lines
+		</Change>
+		<Change>Mention users list now returns only the list of the available
+			users in the current organization
+		</Change>
+		<Change>Fixed posts when multiple tabs are open, now the status is
+			kept on the client
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.1-1-3"
+		date="2014-02-10">
+		<Change>added thumbnail generation and upload on FTP server</Change>
+		<Change>added upload a copy on my workspace file when sharing a file
+		</Change>
+		<Change>implemented the file preview with icons or preview depending
+			on the extension of the file
+		</Change>
+		<Change>integrated file uplod progress bar widget for sharing files
+		</Change>
+		<Change>fixed bug allowing users to post while generating file/url
+			previews
+		</Change>
+		<Change>fixed bug allowing users to mention theirselves</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.1-0-0"
+		date="2013-10-21">
+		<Change>Ported to GWT 251</Change>
+		<Change>Ported to Feather Weight Stack</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+		<Change>Fixed image previes retrieval when image is in the same folder
+			of the linked page
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.0-5-0"
+		date="2013-07-18">
+		<Change>Mention people in tags correctly referred to user profiles
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.0-3-0"
+		date="2013-04-19">
+		<Change>Added possibility to mention people in tags</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.shareupdates.0-1-0"
+		date="2013-01-13">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

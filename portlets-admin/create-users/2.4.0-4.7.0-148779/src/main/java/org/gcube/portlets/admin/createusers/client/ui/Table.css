@@ -1,0 +1,65 @@
+.cellTableHeader {
+/* 	padding: 0px; */
+/* 	color: #545454; */
+/* 	text-align: center !important; */
+/* 	font-size: 13px; */
+/* 	background-image: none; */
+/* 	background-color: #cfcfcf; */
+/* 	height: 25px; */
+	vertical-align: bottom!important;
+	font-weight: bold;
+/* 	text-shadow: 0 1px 1px rgba(255, 255, 255, .7); */
+/* 	border: 2px solid #999999; */
+}
+
+.cellTableFirstColumnHeader {
+}
+
+.cellTableLastColumnHeader {
+	
+}
+
+.cellTableCell {
+	padding: 4px;
+/* 	text-align: center !important; */
+	vertical-align: middle !important;
+	overflow: hidden;
+	font-size: 12px;
+/* 	border: 1px dotted #999999; */
+}
+
+.cellTableEvenRow {
+	
+}
+
+.cellTableOddRow {
+	
+}
+
+.cellTableSelectedRow {
+	background: #628cd5;
+}
+
+.cellTableSelectedRowCell {
+	
+}
+
+.cellTableHoveredRow {
+	
+}
+
+.cellTableHoveredRowCell {
+	
+}
+
+.cellTableKeyboardSelectedRow {
+	background: #c9c9c1;
+}
+
+.cellTableKeyboardSelectedRowCell {
+	border: none;
+}
+
+.cellTableKeyboardSelectedCell {
+	border: none;
+}

@@ -1,0 +1,6 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component=" org.gcube.portal.mailing.email-templates-library.1-0-0"	date="2017-05-11">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

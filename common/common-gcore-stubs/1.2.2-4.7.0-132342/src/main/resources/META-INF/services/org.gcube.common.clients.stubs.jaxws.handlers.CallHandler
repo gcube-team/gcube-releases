@@ -1,0 +1,5 @@
+org.gcube.common.clients.stubs.jaxws.handlers.ScopeHandler
+org.gcube.common.clients.stubs.jaxws.handlers.AuthorizationHandler
+org.gcube.common.clients.stubs.jaxws.handlers.TargetServiceHandler
+org.gcube.common.clients.stubs.jaxws.handlers.ClientInfoHandler
+org.gcube.common.clients.stubs.jaxws.handlers.LegacyWSAddressingHandler

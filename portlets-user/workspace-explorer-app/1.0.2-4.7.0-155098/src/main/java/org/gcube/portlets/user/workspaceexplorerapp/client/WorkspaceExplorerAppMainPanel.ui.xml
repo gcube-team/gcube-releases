@@ -1,0 +1,75 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:m="urn:import:gwt.material.design.client.ui">
+	<ui:style>
+	.adminMainContent {
+		overflow: auto;
+	}
+	
+	/*.label {
+		margin-left: 210px;
+		font-family: sans-serif;
+		font-size: 16px;
+		text-align: left;
+		font-weight: bold;
+	}*/
+	
+	.nav-right {
+		/*padding-left: 200px;*/
+/* 		font-size: 16px;*/
+		/*text-align: right;*/
+		/*width: 200px;*/
+	}
+	
+		
+	.title-left {
+		/*font-family: sans-serif;*/
+		font-size: 14px;
+		text-align: left;
+		font-weight: bold;
+	}
+	
+	.navigation_explorer {
+		padding-bottom: 50px;
+		padding-left: 5px;
+		padding-top: 10px;
+	}
+	
+	.navigation_explorer :HOVER {
+		cursor: pointer !important;
+	}
+	
+	.navigation_bar {
+		height: 100px;
+	}
+	
+	header, main, footer {
+		padding-left: 200px;
+	}
+	</ui:style>
+
+	<g:HTMLPanel styleName="navigation_link">
+		<m:MaterialNavBar backgroundColor="blue" activates="mysidebar"
+			ui:field="we_nav_bar">
+			<m:MaterialNavBrand  styleName="{style.title-left}" href="#" float="LEFT" title="D4Science Workspace Explorer">Workspace Explorer</m:MaterialNavBrand>
+			<m:MaterialNavSection styleName="{style.nav-right}" float="RIGHT" ui:field="we_nav_right">
+			</m:MaterialNavSection>
+		</m:MaterialNavBar>
+		 <!-- My Dropdown -->
+		 <g:HTMLPanel ui:field="we_html_base_panel">
+		 </g:HTMLPanel>
+		<m:MaterialSideNav width="200" m:id="mysidebar"
+			type="OPEN" closeOnClick="false">
+			<g:Image styleName="{style.navigation_explorer}" url="img/d4science_workspace_logo_180.png"
+				ui:field="d4science_workspace_logo_180" title="D4Science Workspace Folder Explorer"
+				altText="D4Science Workspace Folder Explorer" />
+			<m:MaterialLink iconType="OPEN_IN_NEW" iconPosition="LEFT"
+				textColor="blue" text="Open" ui:field="show_we" />
+			<m:MaterialLink iconType="INBOX" iconPosition="LEFT"
+				textColor="blue" text="Download" ui:field="download_we" />
+		</m:MaterialSideNav>
+		<m:MaterialContainer>
+			<g:HTMLPanel ui:field="explorer_main_container"></g:HTMLPanel>
+		</m:MaterialContainer>
+	</g:HTMLPanel>
+</ui:UiBinder>

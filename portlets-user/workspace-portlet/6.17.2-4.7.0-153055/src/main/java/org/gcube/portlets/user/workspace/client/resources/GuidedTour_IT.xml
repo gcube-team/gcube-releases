@@ -1,0 +1,174 @@
+
+<!-- this is your main configuration XML (example name GuidedTour.xml), the 
+	source tag have to link this file: -->
+<guidedtour width="780" height="450" usemask="false">
+	<title>Workspace</title>
+	<guide>http://gcube.wiki.gcube-system.org/gcube/index.php/Workspace
+	</guide>
+	<themecolor>BLUE</themecolor>
+	<steps>
+		<step showTitle="true" v-alignment="ALIGN_TOP">
+			<title>Workspace</title>
+			<bodies>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 40px;">
+							<b>Workspace</b>
+							è una area di memorizzazione e condivisione fornita gratuitamente come servizio.							
+						</div>
+						<div style="padding-bottom: 40px;">La puoi usare per memorizzare i tuoi file e cartelle e per condividerle con altri utenti.</div>
+						<div style="padding-bottom: 40px;">
+							Come puoi vedere, assomiglia molto al tuo <b>file manager</b> del sistema operativo, ci sono però delle cose che dovresti conoscere 
+							per utilizzare a pieno il Workspace.						
+						</div>
+						<div style="padding-bottom: 10px;">
+							<b>Scopri</b>
+							le caratteristiche del Workspace, clicca su next.
+						</div>
+					</div>
+					]]>
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/1.png" />
+			</images>
+		</step>
+		<step showTitle="true" v-alignment="ALIGN_TOP">
+			<title>Info generali</title>
+			<bodies>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 10px;">
+							Per favore, considera che:								
+						</div>
+						<div style="padding-top: 5px;">	
+							<ul style="list-style-type: circle; padding-left: 10px;">
+								<li>Il tasto destro può essere utilizzato su ogni oggetto per accedere ad azione specifiche relative al file o cartella in cliccata;</li>	
+								<li>Si possono effettuare operazioni sia sull'albero che sulla vista alla sua destra;</li>	
+								<li>La vista alla sua destra mostra il contenuto della cartella selezionata nell'albero.</li>
+							</ul>	
+						</div>						
+					</div>
+					]]>
+				</body>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 40px;">
+							<b>Nota bene:</b> i pulsanti presenti nella barra superiore (vedi immagine) sono riferiti al file o cartella selezionata al di sotto della barra.							
+						</div>										
+					</div>
+					]]>
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/8.png" />
+				<image url="images/tour/7.png" />
+			</images>
+		</step>
+		<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>File Sharing</title>
+			<bodies>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 40px;">
+							Puoi <b>Condividere</b>
+							le tue cartelle e file con qualsiasi utente del sistema.							
+						</div>
+						<div style="padding-bottom: 40px;">
+							<b>Tasto destro su una cartella</b>
+							seleziona share e scegli gli utenti con cui vuoi condividere la cartella.
+						</div>
+					</div>
+					]]>
+				</body>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 10px;">
+							<b>I Permessi sulle cartelle condivise</b>
+							sono molto importanti! Ci sono 3 tipi di permessi:
+						</div>
+						<div style="padding-top: 5px;">	
+							<ul style="list-style-type: circle; padding-left: 10px;">
+								<li><b>Read Only:</b> gli utenti possono solo leggere i files;</li>	
+								<li><b>Write Owner:</b> gli tuenti possono modificare solo i loro files;</li>	
+								<li><b>Write Any:</b> gli utenti possono modificare qualsiasi file.</li>
+							</ul>	
+						</div>			
+						<div style="padding-top: 10px;">	
+							<b>Nota bene:</b> i permessi sono applicati a cascata su ogni file e sotto cartella della cartella condivisa. 
+							Il proprietario della cartella può operare come meglio crede.
+						</div>																		
+					</div>
+					]]>
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/2.png" />
+				<image url="images/tour/3.png" />
+			</images>
+		</step>
+		<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Cartella speciale</title>
+			<bodies>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 40px;">
+							<div style="padding-bottom: 10px;">	
+								La cartella <b>sulla tua destra</b>
+								è una cartella speciale creata automaticamente dal Sistema.
+							</div>
+							<div style="padding-bottom: 40px;">
+								Contiene una cartella per ogni canale a cui appartieni. Per favore considera che:
+							</div>	
+							<div style="padding-top: 5px;">	
+								<ul style="list-style-type: circle; padding-left: 10px;">
+									<li>Gli utenti di una cartella di canale sono coloro appartenenti al canale. (i.e. Staff è condivisa con tutti gli utenti dell'istituto).</li>	
+									<li>Ogni azione su queste folder speciali (upload/delete/read) è notificata agli altri utenti.</li>	
+									<li>Ogni azione su queste folder speciali è tracciata.</li>
+								</ul>	
+							</div>				
+							<div style="padding-top: 30px; padding-bottom: 40px;">	
+								<b>Nota bene:</b> i permessi su queste folder di canale sono applicati dagli amministratori del canale in questione.
+							</div>	
+						</div>																	
+					</div>
+					]]>
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/4.png" />
+			</images>
+		</step>
+		<step showTitle="false" v-alignment="ALIGN_MIDDLE">
+			<title>Collegamenti</title>
+			<bodies>
+				<body><![CDATA[
+					<div style="line-height: 19px; padding: 10px; font-size: 14px; ">
+						<div style="padding-bottom: 40px;">
+							Ogni volta che hai bisogno di <b>allegare</b>
+							un file od una cartella del tuo workspace puoi usare questa caratteristica molto utile:
+						</div>
+						<div style="padding-bottom: 40px;">
+							<ul>
+								<li><b>Get Link:</b> crea uno short URL (e.g. http://goo.gl/TK8toC) che puoi incollare nelle tue email per far puntare gli utenti (appartenenti alla cartella condivisa)
+								direttamente a quella folder/file specifico;</li>				
+							</ul>	
+						</div>		
+						<div style="padding-bottom: 40px;">
+							<ul>
+								<li><b>Public Link:</b> crea uno short URL per far scaricare ad <b>ogni utente</b> (avente lo URL) il file. Non funziona con le cartelle chiaramente.</li>
+							</ul>	
+						</div>	
+						<div style="padding-bottom: 40px;">
+							Il Tour è finito, ricorda di cliccare "Don't show this again" per farsì che questa guida non appaia nel futuro.
+						</div>																																	
+					</div>
+					]]>
+				</body>
+			</bodies>
+			<images>
+				<image url="images/tour/6.png" />
+			</images>
+		</step>
+	</steps>
+</guidedtour>

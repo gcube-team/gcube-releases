@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="NamespacesCatalogueCategories.xsd"/>
+	<xs:element name="metadataformat">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="metadatafield" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element type="xs:string" name="fieldName" />
+							<xs:element type="xs:boolean" name="mandatory"
+								minOccurs="0" maxOccurs="1" />
+							<xs:element name="dataType">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="String" />
+										<xs:enumeration value="Time" />
+										<xs:enumeration value="Time_Interval" />
+										<xs:enumeration value="Times_ListOf" />
+										<xs:enumeration value="Text" />
+										<xs:enumeration value="Boolean" />
+										<xs:enumeration value="Number" />
+										<xs:enumeration value="GeoJSON" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element type="xs:string" name="defaultValue"
+								minOccurs="0" maxOccurs="1" />
+							<xs:element type="xs:string" name="note" minOccurs="0"
+								maxOccurs="1" />
+							<xs:element name="vocabulary" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="vocabularyField"
+											minOccurs="1" maxOccurs="unbounded" />
+									</xs:sequence>
+									<xs:attribute type="xs:boolean" name="isMultiSelection" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="validator" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element type="xs:string" name="regularExpression" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="tagging" type="TaggingType"
+								minOccurs="0" maxOccurs="1">
+							</xs:element>
+							<xs:element name="grouping" type="GroupingType"
+								minOccurs="0" maxOccurs="1">
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="categoryref" use="optional" type="xs:string" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute type="NotEmpty" use="required" name="metadatatype" />
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="TaggingGroupingValue">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="onFieldName" />
+			<xs:enumeration value="onValue" />
+			<xs:enumeration value="onFieldName_onValue" />
+			<xs:enumeration value="onValue_onFieldName" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TaggingType">
+		<xs:simpleContent>
+			<xs:extension base="TaggingGroupingValue">
+				<xs:attribute type="xs:boolean" name="create" />
+				<xs:attribute type="NotEmpty" name="separator" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="GroupingType">
+		<xs:simpleContent id="TaggingGroupingValue">
+			<xs:extension base="TaggingGroupingValue">
+				<xs:attribute type="xs:boolean" name="create" />
+				<xs:attribute type="xs:boolean" name="propagateUp" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="NotEmpty">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

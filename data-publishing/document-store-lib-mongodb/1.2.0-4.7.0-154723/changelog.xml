@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-publishing.document-store-lib-mongodb.1-2-0" date="2017-10-13">
+		<Change>Implemented isConnectionActive() added in PersistenceBackend</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.document-store-lib-mongodb.1-1-1" date="2017-03-16">
+		<Change>Implemented the new api to close connection (if any) to persistence introduced by document-store-lib.1-5-0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.document-store-lib-mongodb.1-0-1" date="2016-04-08">
+		<Change>Fixed distro directory</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.document-store-lib-mongodb.1-0-0" date="2016-02-08">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

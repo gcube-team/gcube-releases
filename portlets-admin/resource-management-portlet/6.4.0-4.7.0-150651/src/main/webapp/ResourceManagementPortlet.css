@@ -1,0 +1,335 @@
+/*  Comment import to style regular, uncomment if deploying on openbio or d4science.org */
+/*@import url(openbio.css);*/
+@import url(coherence.css);
+
+/* Fix the scrollbar background style*/
+.x-progress-text div {
+	background-color: transparent !important;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.iosItem {
+	color: #444;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	display: block;
+	margin-left: 10px;
+	margin-top: 10px;
+	padding: 5px;
+	width: 120px;
+	height: 100px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.wizardTextBox {
+	background-color: white;
+	border-width: 1px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	letter-spacing: normal;
+	line-height: 20px !important;;
+	height: 35px !important;
+	width: 295px;
+	font-size: 18px !important;
+}
+
+.portlet {
+	padding: 0;
+	margin: 0;
+}
+
+.x-menubar {
+	padding: 5px;
+}
+
+.portlet-wrapper {
+	padding: 0;
+	margin: 0;
+}
+
+.lfr-grid .lfr-column {
+	padding: 0;
+	margin: 0;
+}
+
+/**
+ * to fix bug in duallist
+ */
+.x-form-list input {
+	left: -5000px;
+}
+
+/** Add css rules here for your application. */
+.taskbar-pattern {
+	background-image: url(images/pattern.gif);
+	background-repeat: repeat;
+	border: 2px solid #A9BFD3;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.taskbar-button {
+	background: transparent;
+}
+
+.taskbar-button:hover,.taskbar-button:focus {
+	border: 0px;
+	-moz-transition: -moz-transform .15s linear;
+	-o-transition: -o-transform .15s linear;
+	-webkit-transition: -webkit-transform .15s linear;
+	-webkit-transform: scale(1.10);
+	-moz-transform: scale(1.10);
+	-o-transform: scale(1.10);
+	position: relative;
+	z-index: 5;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.x-hide-panel-header {
+	display: none !important;
+}
+
+.x-grid-invalid-row {
+	border: 1px solid;
+	background: repeat-x left top;
+	color: lime;
+}
+
+/*
+ * Used as initial background for the central panel
+ */
+.x-panel-cube-background {
+	color: #000;
+	border: 0px;
+	/*    background-image:url(images/icons/bigcube.gif); */
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.left-panel-tree-background {
+	color: #000;
+	border: 0px;
+	background-image: url(images/d4infra.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/* HERE THE ICONS */
+.detach-icon {
+	background-image: url(images/icons/detach.png) !important;
+}
+
+.profile-folder-icon {
+	background-image: url(images/icons/folder.png) !important;
+}
+
+.profile-icon {
+	background-image: url(images/icons/profile.gif) !important;
+}
+
+.shutdown-icon {
+	background-image: url(images/icons/shutdown.png) !important;
+}
+
+.sweeper-icon {
+	background-image: url(images/icons/sweeper2.png) !important;
+}
+
+.new-icon {
+	background-image: url(images/icons/new.png) !important;
+}
+
+.install-icon {
+	background-image: url(images/icons/install.png) !important;
+}
+
+.deploy-icon {
+	background-image: url(images/icons/deploy.png) !important;
+}
+
+.add-software-icon {
+	background-image: url(images/icons/cog_add.png) !important;
+}
+
+.is-icon {
+	background-image: url(images/icons/is.png) !important;
+}
+
+.getreport-icon {
+	background-image: url(images/icons/report.png) !important;
+}
+
+.link-icon {
+	background-image: url(images/icons/link.png) !important;
+}
+
+.restart-icon {
+	background-image: url(images/icons/restart.png) !important;
+}
+
+.clean-restart-icon {
+	background-image: url(images/icons/clean-restart.png) !important;
+}
+/*
+.profile-big-icon { 
+	background-image:url(images/icons/profile-big.gif) !important; 
+}*/
+.report-big-icon {
+	background-image: url(images/icons/report-big.png) !important;
+}
+
+.refresh-icon {
+	background-image: url(images/icons/refresh.png) !important;
+}
+
+.close-icon {
+	background-image: url(images/icons/close.png) !important;
+}
+
+.closeall-icon {
+	background-image: url(images/icons/closeall.png) !important;
+}
+
+.upgrade-icon {
+	background-image: url(images/icons/upgrade.png) !important;
+}
+
+.delete-icon {
+	background-image: url(images/icons/delete.png) !important;
+}
+
+.force-delete-icon {
+	background-image: url(images/icons/forcedelete.png) !important;
+}
+
+.grid-icon {
+	background-image: url(images/icons/grid.png) !important;
+	top: -2px;
+}
+
+.validate-icon {
+	background-image: url(images/icons/validate.gif) !important;
+	top: -2px;
+}
+
+.console-error-icon {
+	background-image: url(images/icons/error.png) !important;
+}
+
+.console-log-icon {
+	background-image: url(images/icons/log.png) !important;
+}
+
+.clear-icon {
+	background-image: url(images/icons/trash.png) !important;
+}
+
+.console-icon {
+	background-image: url(images/icons/console.png) !important;
+}
+
+.about-icon {
+	background-image: url(images/icons/about.png) !important;
+}
+
+.defaultleaf-icon {
+	background-image: url(images/icons/grid.png) !important;
+}
+
+.resources-icon {
+	background-image: url(images/icons/world.png) !important;
+}
+
+
+ /* RESOURCES */
+
+.collection-icon {
+	background-image: url(images/resource-icons/violet.png) !important;
+}
+
+.runninginstance-icon {
+	background-image: url(images/resource-icons/blue.png) !important;
+}
+
+.genericresource-icon {
+	background-image: url(images/resource-icons/green.png) !important;
+}
+
+.ghn-icon {
+	background-image: url(images/resource-icons/ramarro.png) !important;
+}
+.runtimeresource-icon {
+	background-image: url(images/resource-icons/yellow.png) !important;
+}
+.service-icon {
+	background-image: url(images/resource-icons/orange.png) !important;
+}
+.wsresources-icon {
+	background-image: url(images/resource-icons/red.png) !important;
+}
+ /* END RESOURCES */
+
+.pluginCM-icon {
+	background-image: url(images/icons/pluginCM.png) !important;
+}
+
+.pluginTM-icon {
+	background-image: url(images/tree_diag.png) !important;
+}
+
+.pluginVM-icon {
+	background-image: url(images/icons/eye.png) !important;
+}
+
+.metadatacollection-icon {
+	background-image: url(images/icons/table_multiple.png) !important;
+}
+
+
+
+.empty-icon {
+	background-image: url(images/icons/error.png) !important;
+}
+
+.addtoscope-icon {
+	background-image: url(images/icons/brick_add.png) !important;
+}
+
+.removefromscope-icon {
+	background-image: url(images/icons/brick_delete.png) !important;
+}
+
+.edit-icon {
+	background-image: url(images/icons/wand.png) !important;
+}
+
+.sendButton {
+	display: block;
+	font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+	width: 400px;
+}
+
+.dialogVPanel {
+	margin: 5px;
+}
+
+.serverResponseLabelError {
+	color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+	margin: 15px 6px 6px;
+}

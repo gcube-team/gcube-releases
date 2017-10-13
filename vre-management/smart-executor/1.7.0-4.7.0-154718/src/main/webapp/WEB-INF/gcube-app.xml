@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<application mode='online'>
+		<group>VREManagement</group>
+		<name>SmartExecutor</name>
+		<version>1.7.0-4.7.0-154718</version>
+		<description>Smart Executor Service</description>
+		<local-persistence location='target' />
+</application>
+

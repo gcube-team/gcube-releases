@@ -1,0 +1,18 @@
+a.topiclink, a.topiclink:active, a.topiclink:visited {
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+		sans-serif;
+	font-size: 15px;
+	cursor: pointer;
+	cursor: hand;
+	text-decoration: none;
+	color: #0078b2 !important;
+}
+
+a.topiclink:hover {
+	opacity: 0.8;
+	text-decoration: underline;
+}
+
+.hashtag-label {
+	padding: 0 5px 1px;
+}

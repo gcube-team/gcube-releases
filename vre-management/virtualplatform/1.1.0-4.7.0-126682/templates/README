@@ -1,0 +1,41 @@
+The gCube System - ${project.name}
+------------------------------------------------------------
+
+This work is partially funded by the European Commission in the
+context of the D4Science project (www.d4science.eu), under the 1st call of FP7 IST priority.
+
+Authors
+-------
+
+* Manuele Simi (manuele.simi@isti.cnr.it), CNR Pisa, 
+  Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo".
+
+Version and Release Date
+------------------------
+
+v. ${project.version}, ${release.date}
+
+Description
+-----------
+
+The Virtual Platform is a model to be extended for transparently interfacing a potentially unlimited number of hosting environments. 
+This library has been designed and implement to allow to manage the lifecycle of execution units running on a different platform than gCore 
+
+Download information
+--------------------
+
+Source code is available from SVN:
+${scm.url}
+
+Binaries can be downloaded from:
+http://software.d4science.research-infrastructures.eu/
+
+Documentation 
+-------------
+Documentation is available on-line from the Projects Documentation Wiki:
+https://gcube.wiki.gcube-system.org/gcube/index.php/Tomcat_Virtual_Platform
+
+Licensing
+---------
+
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.

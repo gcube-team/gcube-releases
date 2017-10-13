@@ -1,0 +1,289 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.home-library-jcr.1-0-0"
+		date="2013-09-27">
+		<Change>porting to new common.home-library</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.1-0-1"
+		date="2013-12-13">
+		<Change>bug fixing</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.1-1-0"
+		date="2014-02-07">
+		<Change>Moved to java 7</Change>
+		<Change>Added ACLs</Change>
+		<Change>Added groups, users and privileges manager</Change>
+		<Change>Added trash folder</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.1-2-0"
+		date="2014-04-04">
+		<Change>Added locks in: unshare, move, remove and share operation.
+		</Change>
+		<Change>Removed clones in unshare and remove operations.</Change>
+		<Change>Added a default preview used when the original one is not
+			available.
+		</Change>
+		<Change>Moved from the "home-library" user to the real username to
+			call the StorageManager library (for accounting).
+		</Change>
+		<Change>Reduced calls to StorageManager library in upload operation,
+			using tmp files
+		</Change>
+		<Change>Removed clones when a shared folder is removed from the
+			workspace
+		</Change>
+		<Change>Added a private copy of an ex-shared folder for owner and
+			administrators
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.1-2-1"
+		date="2014-05-22">
+		<Change>Added search by properties for gCube items.</Change>
+		<Change>Added id to trash items</Change>
+		<Change>Fixed bug updating a shared file</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.1-3-0"
+		date="2014-06-06">
+		<Change>Added searchFullText method to Workspace</Change>
+		<Change>Better performance</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.1-4-0"
+		date="2014-06-30">
+		<Change>Added progress number to filename when a file with the same
+			name already exists
+		</Change>
+		<Change>Fixed bug in Message Facility</Change>
+		<Change>Added getAdministratos() in WorkspaceSharedFolder to retrieve
+			administrators of shared folders
+		</Change>
+		<Change>Added setAdmin() in WorkspaceSharedFolder to set
+			administrators
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.1-5-0"
+		date="2014-09-10">
+		<Change>Fixex bug in Trash Folder: the Trash grid did not show
+			original path when items are shared, the field was empty. #917
+		</Change>
+		<Change>Improved Trash facility: if the user restores a file whose
+			parent does not exist anymore, such file is restored on the workspace
+			root.
+		</Change>
+		<Change>Fixed bug in Share Facility: edit/remove of files in shared
+			folders from Admin did not work. The problem was due to a permissions
+			conflict. #875
+		</Change>
+		<Change>Fixed the issue when users override files: the mimetype was
+			not correct. This bug led to a wrong icon association to file. #894
+		</Change>
+		<Change>Changed Workspace.moveItem() method to return the new item,
+			instead of null.
+		</Change>
+		<Change>Fixed bug in Copy and Paste facility: the operation was not
+			properly notified on the target node.
+		</Change>
+		<Change>Moved URI resolver from workspace to HL library. Now
+			'getPublicLink' method can be applied to every WorkspaceItem and if
+			such facility is not available, an InternalErrorException is thrown.
+			#2744
+		</Change>
+		<Change>Fixed character escape problem in getCollectionName() method.
+		</Change>
+		<Change>Fixed wrong cast to ReportTemplate zipping a folder.</Change>
+		<Change>Modified getItemByPath: it can be used with full remote path
+			and share folders.
+		</Change>
+		<Change>Added unescape saving remote Path to storage.</Change>
+		<Change>Fixed getPath() method: it did not return the correct path for
+			trashed items.
+		</Change>
+		<Change>Added method getPrivilege() to WorkspaceSharedFolder to
+			retrieve the privilege set on a shared folder.
+		</Change>
+		<Change>Added method setAdmins() to WorkspaceSharedFolder to set new
+			administrators and remove the old ones.
+		</Change>
+		<Change>Renamed setAdmin() in addAdmin() in WorkspaceSharedFolder.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.1-6-0"
+		date="2014-10-29">
+		<Change>Improved getUniqueName copying ang moving files
+		</Change>
+		<Change>Added WorkspaceItem.isTrashed() method</Change>
+		<Change>Added unescape saving remothePath to storage</Change>
+		<Change>Fixed getPath() method in trashed items
+		</Change>
+		<Change>Added possibility to change permission in subfolders</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.1-6-1"
+		date="2014-12-02">
+		<Change>Fixed Uri Resolver method</Change>
+		<Change>Added feature to move a shared folder in a private folder
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.1-7-0"
+		date="2015-02-13">
+		<Change>Fixed bug in WorkspaceItem: title and description were missing
+		</Change>
+		<Change>Fixed bug retrieving last items
+		</Change>
+		<Change>getACL() methods moved to Abstract Folder
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.1-7-1"
+		date="2015-05-15">
+		<Change>Fixed bug creating a new VRE folder</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.2-0-0"
+		date="2015-07-01">
+		<Change>Using http connections instead of rmi connections</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.2-1-0"
+		date="2015-10-12">
+		<Change>WorkspaceMessageManager#sendMessageToPortalLogins method now
+			returns the messageId and not Void (#894)
+		</Change>
+		<Change>Workspace#searchByName limited to a specific folder (#739)
+		</Change>
+		<Change>Fixed Bug #519: Cannot delete shared folder (even if I'm
+			owner)
+		</Change>
+		<Change>Added Feature #725: Enhancement to HL history</Change>
+	</Changeset>
+
+	<Changeset component="org.gcube.common.home-library-jcr.2-2-0"
+		date="2016-01-20">
+		<Change>Bug #453: Home Library: copying a read-only file to a shared
+			folder;
+		</Change>
+		<Change>Feature #2020: Zip the contents of a folder without including
+			the folder itself;
+		</Change>
+		<Change>Bug #2021:Bug removing multiple files;</Change>
+		<Change>Feature #1786: HomeLIbrary: Enhance Messages performance
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.2-2-1"
+		date="2016-01-20">
+		<Change>Bug #2446: HL: renaming a file with an already existing name;
+		</Change>
+		<Change>Bug #2453: HL: Storage Exception not correctly propagated;
+		</Change>
+		<Change>Bug #2457: HL: wrong path for subfolders of shared folders;
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.2-3-0"
+		date="2016-04-20">
+		<Change>Bug #2650: HL: bug setting properties on workspaceItem;
+		</Change>
+		<Change>Bug #2718: HL: HL: cannot delete multiple gCubeItems;
+		</Change>
+		<Change>Bug #2529: HomeLibrary: wrong mimetype in uploaded file;
+		</Change>
+		<Change>Bug #3150: Bug removing an admin from a VRE folder;
+		</Change>
+		<Change>Bug #3195: HL: Move operation does not update parent id
+			immediately;
+		</Change>
+		<Change>Bug #2697: HL: moving a private folder containing shared
+			folders;
+		</Change>
+		<Change>Bug #3425: Uploading a big file, size is not correctly
+			calculated;
+		</Change>
+		<Change>Task #2660: Workspace does not delete folders with subfolders;
+		</Change>
+		<Change>Feature #2765: HL: add multiple properties to WorkspaceItem
+			constructor;
+		</Change>
+		<Change>Feature #2505: Home Library Enhancement: getting zip file for
+			list of WorkspaceItem;
+		</Change>
+		<Change>Feature #2646: HL: Remove portalLogin in UserManager methods;
+		</Change>
+		<Change>Feature #2458: HL: add mime type to MimeTypeUtil ;
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.2-4-0"
+		date="2016-06-23">
+		<Change>Bug #4139: Cannot obtain public URL for shared folders;
+		</Change>
+		<Change>Feature #4219: Use storage ID to download files from storage;
+		</Change>
+		<Change>Feature #4186: HL: Add time to live to cache;</Change>
+		<Change>Feature #4216: Set a folder as System Folder;</Change>
+		<Change>Feature #4186: HL: Add time to live to cache;</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.2-5-0"
+		date="2016-09-30">
+		<Change>Feature #3782: Adde guest user;
+		</Change>
+		<Change>Feature #5093: Show public folders in a special folders;
+		</Change>
+		<Change>Feature #5092: Add public access to history;</Change>
+		<Change>Feature #4186: Added support to catalogue;</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.2-6-0"
+		date="2016-11-23">
+		<Change>Feature #5406: HomeLibrary: add support for conversation
+			attachments;
+		</Change>
+		<Change>Task #5623: HL Rest API: add a method to download a folder in
+			zip format;
+		</Change>
+		<Change>Task #5716: HL Rest API: add a method to upload a zip file;
+		</Change>
+		<Change>Task #5723: HL Rest API: add a method to get the public URL of
+			a file;
+		</Change>
+		<Change>Task #5831: HL Rest API: add MySpecialFolder (VRE Folders) to
+			list servlet;
+		</Change>
+		<Change>Task #6041: Home Library: add a "catalogue" area for VRE
+			folder
+		</Change>
+		<Change>Feature #6074: HL: add Insufficient Privileges Exception to
+			setPublic method
+		</Change>
+		<Change>Bug #6075: HL: check if user has the rights to access all
+			Public Folders
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.2.7.0"
+		date="2017-02-13">
+		<Change>Task #5156: Home Library should support versioning;
+		</Change>
+		<Change>Task #7007: Add features to HL versioning;
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.2.8.0"
+		date="2017-04-30">
+		<Change>Incident #7670: Workspace File Download takes 10 seconds to
+			download first time, then 1 second each time;
+		</Change>
+		<Change>Incident #7559: Workspace: java.lang.NullPointerException
+			while downloading folder;
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.2.9.0"
+		date="2017-04-30">
+		<Change>RemoveUserFromGroup method is now asynchronous;
+		</Change>
+		<Change>Reposity check for dev and preprod;
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.2.10.0"
+		date="2017-07-05">
+		<Change>Incident #8903: Cannot move shared folder into private folder;
+		</Change>
+		<Change>Feature #9140: Add pagination to HL;
+		</Change>
+		<Change>Task #9569: HL: Problem with locks;
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.home-library-jcr.2.11.0"
+		date="2017-09-27">
+		<Change>Messages: Return null if an error occurs;
+		</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='TabularDataTemplate'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.resources.Resources' />
+
+
+	<!-- We need the JUnit module in the main module, -->
+	<!-- otherwise eclipse complains (Google plugin bug?) -->
+	<inherits name='com.google.gwt.junit.JUnit' />
+
+	<inherits name="com.extjs.gxt.ui.GXT" />
+
+	<!-- Inherit the default GWT style sheet. You can change -->
+	<!-- the theme of your GWT application by uncommenting -->
+	<!-- any one of the following lines. -->
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+
+	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
+
+	<!-- Other module inherits -->
+
+	<!-- <inherits name="org.hibernate.validator.HibernateValidator" /> -->
+	<!-- <replace-with -->
+	<!-- class="com.google.gwt.sample.validation.client.SampleValidatorFactory"> -->
+	<!-- <when-type-is class="javax.validation.ValidatorFactory" /> -->
+	<!-- </replace-with> -->
+
+	<!-- Specify the app entry point class. -->
+	<!-- <entry-point class='org.gcube.portlets.user.tdtemplate.client.TabularDataTemplate' /> -->
+
+	<!-- TD GWT-SERVICE INHERITS -->
+	<inherits name='org.gcube.portlets.user.td.columnwidget.ColumnWidget' />
+	<inherits name='org.gcube.portlets.user.td.expressionwidget.ExpressionWidget' />
+	<inherits name='org.gcube.portlets.user.td.widgetcommonevent.WidgetCommonEvent' />
+	<inherits name='org.gcube.portlets.user.td.gwtservice.TDGWTService' />
+  	<inherits name="org.gcube.portlets.user.tdwx.TabularDataWidgetX" />
+  	<!-- END TD GWT-SERVICE INHERITS -->
+  	
+  	<inherits name="org.gcube.portlets.user.tdtemplateoperation.TdTemplateOperation"></inherits>
+
+	<!-- Specify the application specific style sheet. -->
+	<stylesheet src='public-tdtemplate.css' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

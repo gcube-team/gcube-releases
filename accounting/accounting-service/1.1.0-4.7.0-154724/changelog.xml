@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.accounting.accounting-service.1-1-0" date="2017-10-12">
+		<Change>Complete Refactor of Service #9032</Change>
+		<Change>Always posting a List of Record even when we have to post a single one #9034</Change>
+		<Change>Record List is unmarshalled as JSON using jackson #9036 #9033</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-service.1-0-0" date="2017-06-07">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

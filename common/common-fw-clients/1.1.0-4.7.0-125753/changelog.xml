@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="commmon-fw-clients-1.0.0" date="2013-11-01">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="common-fw-clients-1.1.0-4.7.0-125753" date="2013-10-10">
+		<Change>internal refactoring</Change>
+	</Changeset>
+</ReleaseNotes>

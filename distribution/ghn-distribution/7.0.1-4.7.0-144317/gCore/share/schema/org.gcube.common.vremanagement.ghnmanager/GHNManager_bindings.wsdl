@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="GHNManager" targetNamespace="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager/bindings" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:porttype="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:import namespace="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager" location="GHNManager_flattened.wsdl"/>
+  <wsdl:binding name="GHNManagerPortTypeSOAPBinding" type="porttype:GHNManagerPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addScope">
+      <soap:operation soapAction="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager/GHNManagerPortType/addScopeRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GCUBEUnrecoverableFault">
+        <soap:fault name="GCUBEUnrecoverableFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeScope">
+      <soap:operation soapAction="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager/GHNManagerPortType/removeScopeRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GCUBEUnrecoverableFault">
+        <soap:fault name="GCUBEUnrecoverableFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="addRIToScope">
+      <soap:operation soapAction="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager/GHNManagerPortType/addRIToScopeRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GCUBEUnrecoverableFault">
+        <soap:fault name="GCUBEUnrecoverableFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removeRIFromScope">
+      <soap:operation soapAction="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager/GHNManagerPortType/removeRIFromScopeRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GCUBEUnrecoverableFault">
+        <soap:fault name="GCUBEUnrecoverableFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="activateRI">
+      <soap:operation soapAction="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager/GHNManagerPortType/activateRIRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GCUBEUnrecoverableFault">
+        <soap:fault name="GCUBEUnrecoverableFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deactivateRI">
+      <soap:operation soapAction="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager/GHNManagerPortType/deactivateRIRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GCUBEUnrecoverableFault">
+        <soap:fault name="GCUBEUnrecoverableFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="shutdown">
+      <soap:operation soapAction="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager/GHNManagerPortType/shutdownRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="GCUBEUnrecoverableFault">
+        <soap:fault name="GCUBEUnrecoverableFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

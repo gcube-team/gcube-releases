@@ -1,0 +1,44 @@
+.aui .techno-economic-analysis-portlet #tea-notification{
+    margin: 0px auto;
+	width:25%;
+    position: relative;
+    display:block;
+}
+
+.aui .techno-economic-analysis-portlet .noty_theme__relax.noty_type__warning {
+	background-color: #fff9e6;
+    border: 1px solid #ffdf95;
+    height: 40px;
+}
+
+.techno-economic-analysis-portlet #tea-notification ul li {
+	box-shadow: none !important;
+	border: 0 !important;
+}
+
+.aui .techno-economic-analysis-portlet .noty_body {
+	font-size: 14px;
+	text-align: center;
+	padding: 0px;
+}
+
+.noty_message {
+	padding: 5px;
+}
+
+.aui .techno-economic-analysis-portlet #tea-notification>ul>li {
+	max-height: 56px;
+}
+
+.aui .techno-economic-analysis-portlet #tea-notification .noty_close_button {
+	display: none;
+}
+
+.ui-tooltip.error{
+	color : #b50303;
+	border: 1px solid #b50303;
+}
+
+.ui-tooltip.error label{
+	color : #b50303;
+}

@@ -1,0 +1,382 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<description>Service run by each distributed node of Geoanalytics.</description>
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+	
+	<groupId>gr.cite.gos</groupId>
+	<artifactId>GeospatialOperationService</artifactId>
+	<version>0.6.0-4.7.0-154598</version>
+	<packaging>war</packaging>
+
+
+	<properties>
+		<!-- <spring.version>4.0.3.RELEASE</spring.version> -->
+		<!-- <jersey.version>2.8</jersey.version> -->
+<!-- 		<gr.cite.gaap.servicelayer-commons.version>[0.0.0-SNAPSHOT, 1.0.0-SNAPSHOT)</gr.cite.gaap.servicelayer-commons.version> -->
+		<gr.cite.clustermanager.version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</gr.cite.clustermanager.version>
+		<org.springframework.version>4.3.8.RELEASE</org.springframework.version>
+		<com.sun.jersey.version>1.19.1</com.sun.jersey.version>
+		<org.apache.tomcat.tomcat-jdbc.version>7.0.35</org.apache.tomcat.tomcat-jdbc.version>
+		<hibernate.version>5.2.9.Final</hibernate.version>
+		<commons-codec.version>1.9</commons-codec.version>
+		<org.junit.version>4.11</org.junit.version>
+		<log4j.version>1.2.17</log4j.version>
+		<slf4j.version>1.7.12</slf4j.version>
+		<jetty.version>9.0.7.v20131107</jetty.version> <!-- Adapt this to a version found on http://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-maven-plugin/ -->
+		<logback.version>1.1.1</logback.version>
+		<jcloverslf4j.version>1.7.6</jcloverslf4j.version>
+		<gr.cite.gaap.datatransfer-objects.version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</gr.cite.gaap.datatransfer-objects.version>
+		<gr.cite.geoanalytics.dataaccess-model.version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-model.version>
+		<gr.cite.geoanalytics.dataaccess-model-dao.version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-model-dao.version>
+		<gr.cite.geoanalytics.dataaccess-geoserverbridge-gsmanager.version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-geoserverbridge-gsmanager.version>	
+	</properties>
+
+	<repositories>
+
+
+	</repositories>
+
+	<dependencies>
+		<!-- Jersey-Spring http://mvnrepository.com/artifact/org.glassfish.jersey.ext/jersey-spring3/2.4.1 -->
+		<!-- <dependency> <groupId>org.glassfish.jersey.ext</groupId> <artifactId>jersey-spring3</artifactId> 
+			<version>${jersey.version}</version> <exclusions> <exclusion> <groupId>org.springframework</groupId> 
+			<artifactId>spring-core</artifactId> </exclusion> <exclusion> <groupId>org.springframework</groupId> 
+			<artifactId>spring-web</artifactId> </exclusion> <exclusion> <groupId>org.springframework</groupId> 
+			<artifactId>spring-beans</artifactId> </exclusion> </exclusions> </dependency> -->
+
+		<!-- http://mvnrepository.com/artifact/org.springframework/spring-aop -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		
+
+		<dependency>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>jersey-spring</artifactId>
+			<version>${com.sun.jersey.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-web</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-beans</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+				<exclusion>
+					<artifactId>spring-aop</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+<!-- 		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-multipart</artifactId>
+			<version>${jersey.version}</version>
+		</dependency> -->
+
+		<!-- GeoserverSpecific -->
+
+		<!-- <dependency> <groupId>gr.cite.geoanalytics</groupId> <artifactId>dataaccess-geoserverbridgeprovider-gsmanager</artifactId> 
+			<version>0.9.1-SNAPSHOT</version> <scope>runtime</scope> </dependency> <dependency> 
+			<groupId>gr.cite.geoanalytics</groupId> <artifactId>dataaccess-geoserverbridge</artifactId> 
+			<version>0.9.1-SNAPSHOT</version> </dependency> -->
+
+		<!-- zookeeper curator -->
+
+		<dependency>
+			<groupId>gr.cite</groupId>
+			<artifactId>clustermanager</artifactId>
+			<version>${gr.cite.clustermanager.version}</version>
+		</dependency>
+
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.apache.curator</groupId> -->
+<!-- 			<artifactId>curator-framework</artifactId> -->
+<!-- 			<version>2.10.0</version> -->
+<!-- 		</dependency> -->
+
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.apache.curator</groupId> -->
+<!-- 			<artifactId>curator-recipes</artifactId> -->
+<!-- 			<version>2.10.0</version> -->
+<!-- 		</dependency> -->
+
+		<!-- Spring 3 dependencies -->
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-core</artifactId> 
+			<version>${spring.version}</version> <scope>runtime</scope> </dependency> 
+			<dependency> <groupId>org.springframework</groupId> <artifactId>spring-context</artifactId> 
+			<version>${spring.version}</version> <exclusions> <exclusion> <groupId>commons-logging</groupId> 
+			<artifactId>commons-logging</artifactId> </exclusion> </exclusions> </dependency> -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>spring-aop</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-jdbc</artifactId> 
+			<version>${spring.version}</version> </dependency> <dependency> <groupId>org.springframework</groupId> 
+			<artifactId>spring-tx</artifactId> <version>${spring.version}</version> </dependency> 
+			<dependency> <groupId>org.springframework</groupId> <artifactId>spring-orm</artifactId> 
+			<version>${spring.version}</version> </dependency> -->
+
+		<!-- MySQL JDBC connector -->
+		<!-- <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> 
+			<version>5.1.27</version> <scope>provided</scope> </dependency> -->
+
+		<!-- tomcat jdbc -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jdbc</artifactId>
+			<version>${org.apache.tomcat.tomcat-jdbc.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- ******* JPA/Hibernate ******** -->
+		<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-core</artifactId> 
+			<version>${hibernate.version}</version> </dependency> <dependency> <groupId>org.hibernate.javax.persistence</groupId> 
+			<artifactId>hibernate-jpa-2.0-api</artifactId> <version>1.0.1.Final</version> 
+			</dependency> <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-entitymanager</artifactId> 
+			<version>${hibernate.version}</version> </dependency> -->
+
+		<!-- testing -->
+		<!-- Jersey-client -->
+		<!-- <dependency> <groupId>org.glassfish.jersey.core</groupId> <artifactId>jersey-client</artifactId> 
+			<version>${jersey.version}</version> </dependency> <dependency> <groupId>commons-dbcp</groupId> 
+			<artifactId>commons-dbcp</artifactId> <version>1.4</version> <scope>test</scope> 
+			</dependency> <dependency> <groupId>commons-beanutils</groupId> <artifactId>commons-beanutils</artifactId> 
+			<version>1.9.1</version> </dependency> <dependency> <groupId>org.springframework</groupId> 
+			<artifactId>spring-test</artifactId> <version>${spring.version}</version> 
+			<scope>test</scope> </dependency> -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${org.junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- PostGreSql base libs dependencies -->
+		<dependency>
+		    <groupId>org.postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		    <version>9.4.1212</version>
+		</dependency>
+
+		<!-- LogBack dependencies -->
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${commons-codec.version}</version>
+		</dependency>
+
+
+		<!-- servicelayer-commons SHOULD BE REMOVED in the future -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>gr.cite.gaap</groupId> -->
+<!-- 			<artifactId>servicelayer-commons</artifactId> -->
+<!-- 			<version>${gr.cite.gaap.servicelayer-commons.version}</version> -->
+<!-- 			<exclusions> -->
+<!-- 				<exclusion> -->
+<!-- 					<artifactId>spring-aop</artifactId> -->
+<!-- 					<groupId>org.springframework</groupId> -->
+<!-- 				</exclusion> -->
+<!-- 			</exclusions> -->
+<!-- 		</dependency> -->
+		
+		
+		
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>dataaccess-model</artifactId>
+			<version>${gr.cite.geoanalytics.dataaccess-model.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>dataaccess-model-dao</artifactId>
+			<version>${gr.cite.geoanalytics.dataaccess-model-dao.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>dataaccess-geoserverbridgeprovider-gsmanager</artifactId>
+			<version>${gr.cite.geoanalytics.dataaccess-geoserverbridge-gsmanager.version}</version>
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>gr.cite.gaap</groupId>
+			<artifactId>datatransfer-objects</artifactId>
+			<version>${gr.cite.gaap.datatransfer-objects.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.opengis</groupId>
+					<artifactId>geoapi</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+	    	<groupId>com.google.code.gson</groupId>
+	    	<artifactId>gson</artifactId>
+	    	<version>2.8.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.8.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.8.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.8.4</version>
+		</dependency>
+
+		<!-- Jersey dependencies -->
+		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-core</artifactId>
+		    <version>${com.sun.jersey.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${com.sun.jersey.version}</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-json</artifactId>
+		    <version>${com.sun.jersey.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>jersey-multipart</artifactId>
+			<version>${com.sun.jersey.version}</version>
+		</dependency>		
+<!-- 		<dependency> -->
+<!--     <groupId>javax.ws.rs</groupId> -->
+<!--     <artifactId>javax.ws.rs-api</artifactId> -->
+<!--     <version>2.0.1</version> -->
+<!--     <scope>provided</scope> -->
+<!-- </dependency> -->
+		
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<url>${maven.plugin.target.url}</url>
+					<server>Tomcat1</server>
+					<path>/operationservice</path>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
+				<executions>
+					<execution>
+						<id>analyze</id>
+						<goals>
+							<goal>analyze-only</goal>
+						</goals>
+						<configuration>
+							<failOnWarning>false</failOnWarning>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+		
+		<finalName>${project.artifactId}</finalName>
+		
+	</build>
+</project>

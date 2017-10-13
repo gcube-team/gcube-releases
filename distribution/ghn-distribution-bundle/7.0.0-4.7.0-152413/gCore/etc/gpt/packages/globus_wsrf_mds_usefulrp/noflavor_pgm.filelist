@@ -1,0 +1,9 @@
+lib/wsrf_mds_usefulrp.jar
+etc/globus_wsrf_mds_usefulrp/glue-cluster-test.xml
+etc/globus_wsrf_mds_usefulrp/glue-batch-test.xml
+etc/globus_wsrf_mds_usefulrp/glue-cluster-test.sh
+etc/globus_wsrf_mds_usefulrp/glue-batch-test.sh
+etc/globus_wsrf_mds_usefulrp/gluerp.xml
+etc/globus_wsrf_mds_usefulrp/ganglia_to_glue.xslt
+etc/gpt/packages/globus_wsrf_mds_usefulrp/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_mds_usefulrp/pkg_data_noflavor_pgm.gpt

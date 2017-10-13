@@ -1,0 +1,55 @@
+body {
+	border: 5px solid white;
+}
+
+@media only screen and (min-width: 800px) {
+	.aui .row-fluid .span3 {
+		width: 19% !important;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.modal-custom {
+		width: 75% !important;
+		margin-left: -38% !important;
+	}
+	.modal-body-custom {
+		height: 500px !important;
+	}
+	.modal-header-custom>.close {
+		font-size: 40px;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+	.modal-custom {
+		width: 85% !important;
+		margin-left: -42% !important;
+	}
+	.modal-body-custom {
+		height: 450px !important;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+	.modal-body-custom {
+		height: 350px !important;
+	}
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+	.modal-body-custom {
+		height: 300px !important;
+	}
+}
+
+.modal-custom {
+	min-width: 300px !important;
+	top: 3% !important;
+}
+
+.modal-body-custom {
+	max-height: 50% !important;
+}
+
+

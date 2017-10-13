@@ -1,0 +1,58 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:m="urn:import:org.gcube.portlets.widgets.ckandatapublisherwidget.client.ui.TwinColumnSelection">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<b:FluidContainer ui:field="mainContainerResourcesSelection">
+			<!-- <b:FluidRow> -->
+			<!-- <b:Column offset="6" size="1"> -->
+			<!-- <b:Popover ui:field="popoverResourceSelection" html="true"> -->
+			<!-- <b:Button ui:field="resourceInfoButton" type="LINK" icon="INFO_SIGN" -->
+			<!-- size="LARGE"></b:Button> -->
+			<!-- </b:Popover> -->
+			<!-- </b:Column> -->
+			<!-- </b:FluidRow> -->
+			<b:FluidRow>
+				<b:Column size="11">
+					<b:Breadcrumbs ui:field="breadcrumbs" divider=">"
+						title="Current path">
+					</b:Breadcrumbs>
+				</b:Column>
+			</b:FluidRow>
+			<b:FluidRow>
+				<b:Column size="3" ui:field="leftColumn">
+					<!-- <b:Button enabled="true" type="LINK" ui:field="goRootButton">Root 
+						level</b:Button> -->
+					<!-- <b:Button enabled="true" type="LINK" ui:field="goUpButton">Go up</b:Button> -->
+					<g:VerticalPanel ui:field="leftContainer" width="100%">
+					</g:VerticalPanel>
+				</b:Column>
+				<b:Column size="1" ui:field="centralPanel">
+					<g:VerticalPanel ui:field="buttonsPanel">
+						<b:Button ui:field="allToRightButton" name="toRight"
+							enabled="false" title="Add selected files" text=">>" />
+						<b:Button ui:field="toRightButton" name="toRight"
+							enabled="false" title="Add selected file" text=">" />
+						<b:Button ui:field="toLeftButton" name="toLeft" enabled="false"
+							title="Remove selected file" text="&lt;" />
+						<b:Button ui:field="allToLeftButton" name="toRight"
+							enabled="false" title="Remove selected files" text="&lt;&lt;" />
+					</g:VerticalPanel>
+				</b:Column>
+				<b:Column size="3" ui:field="rightColumn">
+					<g:VerticalPanel ui:field="rightContainer" width="100%"></g:VerticalPanel>
+				</b:Column>
+				<b:Column size="3" ui:field="detailColumn">
+					<g:SimplePanel ui:field="detailContainer" width="100%"></g:SimplePanel>
+				</b:Column>
+				<!-- <b:Column size="2"> -->
+				<!-- <m:ResourceInfoForm ui:field="resourceInfoForm"></m:ResourceInfoForm> -->
+				<!-- </b:Column> -->
+			</b:FluidRow>
+		</b:FluidContainer>
+		<!-- <b:Button ui:field="getResources">Get Resources</b:Button> -->
+	</g:HTMLPanel>
+</ui:UiBinder> 

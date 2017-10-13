@@ -1,0 +1,21 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.socialnetworking.social-util-library.1-2-0"
+		date="2017-04-13">
+		<Change>Added method to remove html tags from a text (useful for #247)
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.socialnetworking.social-util-library.1-1-0"
+		date="2017-04-13">
+		<Change>Bug #8063, Share Updates links are truncated in some cases
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.socialnetworking.social-util-library.1-0-1"
+		date="2016-10-01">
+		<Change>Hashtag regular expression updated (See ticket #4937)</Change>
+		<Change>Url regular expression updated</Change>
+	</Changeset>
+	<Changeset component="org.gcube.socialnetworking.social-util-library.1-0-0"
+		date="2016-06-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

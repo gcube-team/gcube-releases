@@ -1,0 +1,10 @@
+/* FIX FOR Portal Theme */
+/* OpenLayer Form fix */
+
+@-o-viewport {
+	width: device-width;
+	scale: 1.0;
+	maximum-scale: 1.0;
+}
+
+

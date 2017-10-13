@@ -1,0 +1,28 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="org.gcube.common.GeoServerInterface.1-10-5" date="2016-04-21">
+		<Change>Update</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.GeoServerInterface.1-9-2" date="2012-10-24">
+		<Change>Update</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.GeoServerInterface.1-9-1" date="2012-09-03">
+		<Change>Update</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.GeoServerInterface.1-9-0" date="2012-07-24">
+		<Change>Managing timeout to the http method calls</Change>
+		<Change>Layers discovery enhancement</Change>
+		<Change>Management of layers put exception</Change>
+		<Change>Adding advanced logging (log4j)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.GeoServerInterface.1-8-0" date="2012-05-04">
+		<Change>Geonetwork CWS record improving</Change>
+		<Change>CSW Filtering on Workspace</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.GeoServerInterface.1-6-0" date="2012-01-31">
+		<Change>GeoServer with geonewtwork interaction</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.GeoServerInterface.1-4-0" date="2011-25-08">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

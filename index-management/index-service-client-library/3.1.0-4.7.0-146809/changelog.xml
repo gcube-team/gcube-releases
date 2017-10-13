@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.index.index-service-client-library.1-0-0" date="2014-03-13">
+		<Change>Initial release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.index-service-client-library.1-1-0" date="2014-06-03">
+		<Change>Implemented frequent terms and deactivate service methods</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.index-service-client-library.1-1-1" date="2014-06-30">
+		<Change>All exception thrown on service call are transform to indexclient exception</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.index-service-client-library.1-2-0" date="2014-08-28">
+		<Change>Added deleteDocuments method</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.content-management.storage.rest.1-0-0"
+		date="2017-02-09">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portal.tour-manager.1-0-0"
+		date="2016-04-25">
+		<Change>First version</Change>
+	</Changeset>
+</ReleaseNotes>

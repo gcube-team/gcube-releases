@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<ViewContext version="1.1.0"
+				id=""
+				xmlns="http://www.opengeospatial.net/context"
+				xmlns:xlink="http://www.w3.org/1999/xlink"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:schemaLocation="http://www.opengeospatial.net/context context.xsd">
+	<General>
+		<Window width="701" height="279" />
+		<DisplayProjection>EPSG:4326</DisplayProjection>
+		<MaxExtent SRS="EPSG:4326" minx="-180.000000" miny="-90.000000" maxx="180.000000" maxy="90.000000"/>
+		<MinExtent SRS="EPSG:4326" minx="-180.000000" miny="-90.000000" maxx="180.000000" maxy="90.000000"/>
+		<NumZoomLevels>12</NumZoomLevels>
+		<ZoomTo>1</ZoomTo>
+		<Lon_center>0.0</Lon_center>
+		<Lat_center>0.0</Lat_center>
+		<Units>degrees</Units>
+		<Title></Title>
+		<Name></Name>
+		<MaxResolution>0.0</MaxResolution>
+		<KeywordList>
+			<Keyword></Keyword>
+		</KeywordList>
+		<Abstract></Abstract>
+		<LogoURL width="130" height="74" format="image/gif">
+			<OnlineResource href=""/>
+		</LogoURL>
+		<ContactInformation>
+			<ContactPersonPrimary>
+				<ContactPerson>DTEAM</ContactPerson>
+				<ContactOrganization>ISTI CNR</ContactOrganization>
+			</ContactPersonPrimary>
+			<ContactPosition>Systems Scientist</ContactPosition>
+			<ContactAddress>
+				<AddressType>postal</AddressType>
+				<Address>via G. Moruzzi 1</Address>
+				<City>Pisa</City>
+				<StateOrProvince>Pisa</StateOrProvince>
+				<PostCode>56124</PostCode>
+				<Country>Italy</Country>
+			</ContactAddress>
+			<ContactVoiceTelephone></ContactVoiceTelephone>
+			<ContactFacsimileTelephone></ContactFacsimileTelephone>
+			<ContactElectronicMailAddress>dteam@isti.cnr.it</ContactElectronicMailAddress>
+		</ContactInformation>
+	</General>
+	<LayerList>
+		<Layer name="TrueMarble.16km.2700x1350" style="raster" />
+	</LayerList>
+</ViewContext>

@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+        <parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+
+	<groupId>org.gcube.portlet.user</groupId>
+	<artifactId>PublicWebappPortlet</artifactId>
+	<packaging>war</packaging>
+	<name>Public webapp Portlet</name>
+	<description>Generic portlet to facilitate integration of public web-apps while facilitating inheritance of VRE security token by the embedded web-app</description>
+	<version>1.0.0-4.7.0-144194</version>
+	
+	<developers>
+		<developer>
+			<id>eblondel</id>
+			<name>Emmanuel Blondel</name>
+			<email>emmanuel.blondel@fao.org</email>
+			<organization>Food and Agriculture Organization of the United Nations - Fisheries and Aquaculture Department</organization>
+			<organizationUrl>http://www.fao.org/fi</organizationUrl>
+			<roles>
+				<role>Main Developer</role>
+			</roles>
+		</developer>
+	</developers>
+	
+	<properties>
+                <distroDirectory>${project.basedir}/distro</distroDirectory>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<liferay.version>6.2.5</liferay.version>
+	</properties>
+
+	<!--repositories>
+			<repository>
+				<id>liferay-releases</id>
+				<url>https://repository.liferay.com/nexus/content/repositories/liferay-releases-ce/</url>
+			</repository>
+	</repositories-->
+
+	<dependencyManagement>
+		<dependencies>
+			
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-portal-bom</artifactId>
+				<version>3.3.0-4.7.0-144184</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+                    <!-- the version is declared in the maven-portal-bom -->
+		    <scope>provided</scope>
+		</dependency>
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.7</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+                        <!-- the version is declared in the maven-portal-bom -->
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-scope-maps</artifactId>
+                        <!-- the version is declared in the maven-portal-bom -->
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.portal</groupId>
+			<artifactId>custom-portal-handler</artifactId>
+                        <!-- the version is declared in the maven-portal-bom -->
+                        <scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>aslcore</artifactId>
+                        <!-- the version is declared in the maven-portal-bom -->
+			<!--version>[4.0.0-SNAPSHOT, 5.2.0-SNAPSHOT)</version-->
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.dvos</groupId>
+			<artifactId>usermanagement-core</artifactId>
+			<scope>provided</scope>
+                        <!-- the version is declared in the maven-portal-bom -->
+			<!--version>2.3.0-SNAPSHOT</version-->
+		</dependency>
+		<!-- Liferay -->
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+				<artifactId>portal-service</artifactId>
+				<version>${liferay.version}</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+				<artifactId>util-java</artifactId>
+				<version>${liferay.version}</version>
+				<scope>provided</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+			    <artifactId>httpclient</artifactId>
+			    <version>4.5.2</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<!-- Output classes directly into the webapp, so that IDEs and "mvn process-classes" 
+			update them in DevMode -->
+		<outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory>
+
+		<plugins>
+
+			<!-- Copy static web files before executing gwt:run -->
+			<!-- Duplicated, war packaging is declared in line 6  -->
+			<!-- plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>exploded</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<webappDirectory>${webappDirectory}</webappDirectory>
+				</configuration>
+			</plugin-->
+			<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-assembly-plugin</artifactId>
+	<configuration>
+		<descriptors>
+			<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+		</descriptors>
+	</configuration>
+	<executions>
+		<execution>
+			<id>servicearchive</id>
+			<phase>install</phase>
+			<goals>
+				<goal>single</goal>
+			</goals>
+		</execution>
+	</executions>
+</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+</project>

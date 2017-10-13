@@ -1,0 +1,44 @@
+.helpFontSize {
+	font-size: 14px;
+}
+
+.token-frame {
+	width: 98%;
+}
+
+.token-info-button {
+	text-align: right !important;
+	float: right !important;
+	padding-right: 0px !important;
+}
+
+.token-textbox-area {
+	margin: 0px !important;
+}
+
+.input-text {
+	width: 96% ! important;
+}
+
+.float-right-button {
+	float: right;
+}
+
+.alert-area-style {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.hero-style-custom {
+	padding: 10px !important;
+	width: 95% !important;
+	margin-bottom: 20px !important;
+	font-size: 15px !important;
+	font-weight: 200 !important;
+	line-height: 30px !important;
+	color: inherit !important;
+	background-color: #eeeeee !important;
+	-webkit-border-radius: 6px !important;
+	-moz-border-radius: 6px !important;
+	border-radius: 6px !important;
+}

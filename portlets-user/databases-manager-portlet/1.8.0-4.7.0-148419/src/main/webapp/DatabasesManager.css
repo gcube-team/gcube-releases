@@ -1,0 +1,80 @@
+/* FIX FOR Portal Theme */
+.aui body {
+	color: #000;
+	font-weight: normal !important;
+}
+
+.aui input[type="text"], .aui select, .aui textarea, .aui .uneditable-input
+	{
+	margin-bottom: 1px !important;
+	padding: 0px !important;
+}
+
+.aui input[type="radio"], .aui input[type="checkbox"] {
+	margin: 0px !important;
+	width: 10px !important;
+}
+
+.aui input, .aui textarea, .aui .uneditable-input {
+	width: 100% !important;
+}
+
+.aui p {
+	margin: 0px !important;
+}
+
+.aui img {
+	vertical-align: baseline !important;
+}
+
+.aui fieldset {
+	padding: 9px !important;
+	/* margin: 0; */
+	border: 1px solid rgb(181, 184, 200) !important;
+}
+
+.aui legend {
+	margin-bottom: 0px !important;
+	width: auto !important;
+	border-bottom: none !important;
+}
+
+.aui ul, .aui ol {
+    margin: 0px !important;
+}
+
+
+/** Add css rules here for your application. */
+
+
+/** Example rules used by the template application (remove for your app) */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #777777;
+  margin: 40px 0px 70px;
+  text-align: center;
+}
+
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+  width: 400px;
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}

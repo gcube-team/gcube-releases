@@ -1,0 +1,12 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<g:FlowPanel ui:field="navigation">
+		<b:NavWidget ui:field="home">
+		</b:NavWidget>
+		<b:NavWidget ui:field="vre_folder">
+		</b:NavWidget>
+		<b:NavWidget ui:field="new_folder" text="New Folder">
+		</b:NavWidget>
+	</g:FlowPanel>
+</ui:UiBinder> 

@@ -1,0 +1,8 @@
+lib/globus_wsrf_servicegroup.jar
+lib/globus_wsrf_servicegroup_stubs.jar
+etc/gpt/./packages/globus_wsrf_servicegroup/undeploy.xml
+etc/globus_wsrf_servicegroup/server-config.wsdd
+etc/globus_wsrf_servicegroup/jndi-config.xml
+bin/mds-servicegroup-add
+etc/gpt/packages/globus_wsrf_servicegroup/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_servicegroup/pkg_data_noflavor_pgm.gpt

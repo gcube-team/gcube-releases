@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<portlet-app>
+	<portlet>
+		<description>GCube-Ckan Data Catalog Portlet</description>
+		<portlet-name>GCubeCkanDataCatalogPortlet</portlet-name>
+		<display-name>Infrastructure Data Catalogue</display-name>
+		<portlet-class>org.gcube.portlets.gcubeckan.gcubeckandatacatalog.portlet.GCubeCkanDataCatalogPortlet
+		</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Infrastructure Data Catalogue</title>
+			<short-title>Infrastructure Data Catalogue</short-title>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>portletSetupShowBorders</name>
+				<value>false</value>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

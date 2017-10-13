@@ -1,0 +1,18 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.workspace-explorer-app.1-0-2"
+		date="2017-10-10">
+		<Change>Removed markAsRead method. It is performed by HL</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-explorer-app.1-0-1"
+		date="2017-07-03">
+		<Change>[Task #9104] removed log4j.properties file</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-explorer-app.1-0-0-1"
+		date="2016-11-10">
+		<Change>Incident #5722: fixed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-explorer-app.1-0-0"
+		date="2016-09-13">
+		<Change>first release</Change>
+	</Changeset>
+</ReleaseNotes>

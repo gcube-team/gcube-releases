@@ -1,0 +1,5 @@
+#* This text, as part of a multi-line comment, is not visible
+
+#set ($css_class = "${css_class} dockbar-split")
+
+*#
