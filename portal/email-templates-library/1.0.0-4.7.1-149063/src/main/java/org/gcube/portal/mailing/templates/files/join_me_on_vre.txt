@@ -1,0 +1,10 @@
+{{GATEWAY_NAME}}
+----------------------------------
+Hi {{INVITED_USER_NAME}},
+{{INVITING_USER_FULLNAME}} has invited you to {{SELECTED_VRE_NAME}}, you can find a brief description below:
+
+{{SELECTED_VRE_DESCRIPTION}}
+
+To accept the invite just follow this link: {{ACCEPT_INVITE_URL}}
+
+Please note: if you do not have an account yet, sign up first: {{CREATE_ACCOUNT_URL}}

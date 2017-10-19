@@ -1,0 +1,25 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.tabular-data-unionwizard-widget.1-5-0" date="2015-10-15">
+		<Change>Fixed profile.xml</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-unionwizard-widget.1-4-0" date="2015-07-03">
+		<Change>Updated dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-unionwizard-widget.1-3-0" date="2015-04-30">
+		<Change>Updated dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-unionwizard-widget.1-2-0" date="2015-02-16">
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+		<Change>Fixed Creation Date in TabResourcesSelectionPanel [issue #3149]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-unionwizard-widget.1-1-0"
+		date="2014-10-31">
+		<Change>Added flows</Change>
+		<Change>Fixed Final and Lock error</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-unionwizard-widget.1-0-0"
+		date="2014-09-12">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,66 @@
+.x-menubar {
+	background-color: #d0def0;
+	background-image: none !important;
+}
+
+.x-panel-body-noheader {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.x-border-layout-ct {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.x-toolbar {
+	border-color: #226599;
+	background-color: #d0def0;
+}
+
+.x-panel-header {
+	background-color: #d0def0;
+	background-image: none !important;
+}
+
+.x-toolbar .xtb-sep {
+	background-image: none !important;
+	background-color: transparent;
+	margin: -2px;
+}
+
+.x-accordion-hd {
+	background-position: 0 0px;
+}
+
+.x-status-text {
+	color: #226599;
+	font-weight: bold !important;
+}
+
+.x-status-text-panel {
+	border-color: transparent;
+}
+
+.x-component {
+	color: #226599;
+}
+
+.x-btn button {
+	color: #226599;
+}
+
+.ext-el-mask-msg {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-width: 2px;
+	background-color: #FFF;
+	background-image: none;
+}
+
+.ext-el-mask-msg div {
+	border-color: transparent;
+	background-color: transparent;
+}

@@ -1,0 +1,145 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.gcube.data.analysis.tabulardata</groupId>
+	<artifactId>service-client-api</artifactId>
+	<version>2.6.1-4.7.1-144700</version>
+
+	<name>Tabular Data Client API</name>
+	<description>Tabular Data Service Client API</description>
+
+	<scm>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-analysis/tabulardata/service-client-api</url>
+	</scm>
+
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<properties>
+		<release.date>2013-10-23</release.date>
+		<templatesDirectory>templates</templatesDirectory>
+		<distroDirectory>distro</distroDirectory>
+		<configDirectory>config</configDirectory>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>tabular-query-parameters</artifactId>
+			<version>3.1.0-4.7.1-130679</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>tabular-data-commons</artifactId>
+			<version>3.0.0-4.7.1-144781</version>
+		</dependency>
+		
+		<!-- Test deps -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${configDirectory}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${templatesDirectory}</directory>
+									<includes>
+										<include>profile.xml</include>
+									</includes>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-distro-resources</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${distroDirectory}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${templatesDirectory}</directory>
+									<excludes>
+										<exclude>profile.xml</exclude>
+										<exclude>descriptor.xml</exclude>
+									</excludes>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${distroDirectory}</directory>
+							<includes>
+								<include>**</include>
+							</includes>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+						<fileset>
+							<directory>${configDirectory}</directory>
+							<includes>
+								<include>**</include>
+							</includes>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<descriptors>
+						<descriptor>${templatesDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+
+</project>

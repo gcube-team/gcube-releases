@@ -1,0 +1,12 @@
+{{GATEWAY_NAME}}
+----------------------------------
+Hi {{USER_NAME}},
+{{MANAGER_USER_FULLNAME}} has just created a new account for you to access <a href="{{VRE_URL}}">{{SELECTED_VRE_NAME}}</a> VRE.
+
+You can Sign in now using you the following credentials
+Email: {{USER_EMAIL}}
+Temporary password: training1
+
+Go to {{VRE_URL}} to sign in.
+
+Please note: you will be asked to reset the temporary password above at your first succesful login attempt to {{GATEWAY_NAME}}: {{GATEWAY_URL}}</p>

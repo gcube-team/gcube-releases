@@ -1,0 +1,13 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.survey-manager.1-1-0"
+		date="2017-06-27">
+		<Change>fixed Bug #8951 : Survey Manager portlet: If multiple Sections are present only one is shown</Change>
+		<Change>Removed ASL Session</Change>
+		<Change>Feature #9100, add button for managers to create automatically the survey page for users to take the survey</Change>
+		<Change>Restyled interface to increase usability</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.survey-manager.1-0-0"
+		date="2017-05-19">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

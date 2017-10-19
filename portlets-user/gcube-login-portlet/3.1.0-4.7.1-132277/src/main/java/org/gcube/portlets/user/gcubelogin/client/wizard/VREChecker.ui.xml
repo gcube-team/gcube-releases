@@ -1,0 +1,53 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:VerticalPanel>
+		<g:cell>
+			<g:HTMLPanel>
+				<div id="breadcrumb">
+					<ul>
+						<li>
+							<span>Infrastructure selection</span>
+						</li>
+						<li class="selected">
+							<span>VREs checkup</span>
+						</li>
+						<li class="final">
+							<span>Finalize</span>
+						</li>
+					</ul>
+				</div>
+			</g:HTMLPanel>
+		</g:cell>
+		<g:cell>
+			<g:HTMLPanel styleName="wizardPanel">
+				<div class="wizardTitle">
+					Virtual Research Environments lookup
+				</div>
+				<g:HTML ui:field="searchHtml" styleName="wizardText">
+					We will now search
+					for existing Virtual Research
+					Environments (VREs) on your
+					infrastructure
+				</g:HTML>
+				<div>
+					<g:Button ui:field="searchButton">Start
+						searching
+						for VREs</g:Button>
+				</div>
+				<div class="wizardText">
+					<g:HTML ui:field="reportHtml" styleName="wizardText"></g:HTML>
+				</div>
+				<div>
+					<g:Button visible="false" ui:field="goButton"> Next step </g:Button>
+				</div>
+
+			</g:HTMLPanel>
+		</g:cell>
+	</g:VerticalPanel>
+</ui:UiBinder> 

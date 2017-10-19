@@ -1,0 +1,189 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def cellPadding value('theme.grid.cellPadding');
+
+@def cellFamily value('theme.grid.cellText.family');
+@def cellWeight value('theme.grid.cellText.weight');
+@def cellSize value('theme.grid.cellText.size');
+@def cellColor value('theme.grid.cellText.color');
+
+@def cellLineHeight value('theme.grid.cellLineHeight');
+
+@def cellVBorderColor value('theme.grid.cellVBorderColor');
+@def cellHBorderColor value('theme.grid.cellHBorderColor');
+@def cellBorderWidth value('theme.grid.cellBorderWidth', 'px');
+@def cellBackgroundColor value('theme.grid.cellBackgroundColor');
+@def cellAltBackgroundColor value('theme.grid.cellAltBackgroundColor');
+
+@def cellOverVBorderColor value('theme.grid.cellOverVBorderColor');
+@def cellOverVBorderStyle value('theme.grid.cellOverVBorderStyle');
+
+@def cellOverHBorderColor value('theme.grid.cellOverHBorderColor');
+@def cellOverHBorderStyle value('theme.grid.cellOverHBorderStyle');
+
+@def cellOverBackgroundColor value('theme.grid.cellOverBackgroundColor');
+
+@def cellSelectedVBorderColor value('theme.grid.cellSelectedVBorderColor');
+@def cellSelectedVBorderStyle value('theme.grid.cellSelectedVBorderStyle');
+
+@def cellSelectedHBorderColor value('theme.grid.cellSelectedHBorderColor');
+@def cellSelectedHBorderStyle value('theme.grid.cellSelectedHBorderStyle');
+
+@def cellSelectedBackgroundColor value('theme.grid.cellSelectedBackgroundColor');
+
+@def footerTextFamily value('theme.grid.footer.text.family');
+@def footerTextWeight value('theme.grid.footer.text.weight');
+@def footerTextSize value('theme.grid.footer.text.size');
+@def footerTextColor value('theme.grid.footer.text.color');
+
+@def footerBackgroundColor value('theme.grid.footer.backgroundColor');
+@def footerBorderWidth value('theme.grid.footer.cellBorder.toString');
+@def footerBorderColor value('theme.grid.footer.cellBorder.color');
+@def footerBorderStyle value('theme.grid.footer.cellBorder.style');
+
+@eval dirty com.sencha.gxt.core.client.util.ImageHelper.createModuleBasedUrl("base/images/grid/dirty.gif");
+@eval invalidLine com.sencha.gxt.core.client.util.ImageHelper.createModuleBasedUrl("base/images/grid/invalid_line.gif");
+
+@external x-treegrid x-treegrid-column;
+
+.grid {
+  position: relative;
+  overflow: hidden;
+  outline: 0 none;
+}
+
+.scroller {
+  overflow: auto;
+  zoom: 1;
+  position: relative;
+  background-color: white;
+}
+
+.body {
+}
+.rowHighlight {
+}
+
+.dataTable {
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.headerRow {}
+
+.row {
+  cursor: default;
+  padding: 0 1px;
+  vertical-align: top;
+}
+
+.cell {
+  background-color: cellBackgroundColor;
+  border-color: cellBackgroundColor cellVBorderColor cellHBorderColor;
+  border-style: solid;
+  border-width: cellBorderWidth 0;
+  border-right-style: none;
+  font-family: cellFamily;
+  font-size: cellSize;
+  color: cellColor;
+  font-weight: cellWeight;
+  overflow: hidden;
+}
+
+.rowAlt .cell {
+  background-color: cellAltBackgroundColor;
+  border-top-color: cellAltBackgroundColor;
+}
+
+.rowWrap {
+  border-color: cellBackgroundColor cellVBorderColor cellHBorderColor;
+  border-style: solid;
+  border-right-style: none;
+  border-width: cellBorderWidth 0;
+  overflow: hidden;
+}
+.rowAlt .rowWrap {
+  border-top-color: cellAltBackgroundColor;
+}
+
+.rowWrap .cell, .rowWrap .cellInner {
+  border-style: none;
+}
+
+.rowOver .cell, .rowOver .rowWrap {
+  background-color: cellOverBackgroundColor;
+  border-style: solid cellOverVBorderStyle cellOverHBorderStyle;
+  border-color: cellOverBackgroundColor cellOverVBorderColor cellOverHBorderColor;
+}
+
+.grid-rowSelected .cell, .grid-rowSelected .rowWrap, .row .grid-cellSelected {
+  background-color: cellSelectedBackgroundColor !important;
+  border-style: solid cellSelectedVBorderStyle cellSelectedHBorderStyle;
+  border-color: cellSelectedBackgroundColor cellSelectedVBorderColor cellSelectedHBorderColor;
+}
+
+.columnLines .cell {
+  border-right: cellBorderWidth solid cellVBorderColor;
+}
+
+.rowDirty {
+
+}
+
+.cellDirty {
+  background: transparent no-repeat 0 0;
+  background-image: dirty;
+}
+
+.cellInner {
+  overflow: hidden;
+  padding: cellPadding;
+  line-height: cellLineHeight;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.noPadding/*.cellInner*/ {
+  padding: 0;
+  height: 100%;
+}
+
+.empty {
+  padding: 10px;
+  color: gray;
+  font: normal 11px tahoma, arial, helvetica, sans-serif;
+}
+
+.rowBody {
+  font: 11px/13px tahoma,arial,verdana,sans-serif;
+  padding: 4px;
+}
+
+.footer {
+  background: footerBackgroundColor none repeat scroll 0 0;
+  border-width: footerBorderWidth;
+  border-style: footerBorderStyle;
+  border-color: footerBorderColor;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer .cell {
+  background: none;
+  font-family: footerTextFamily;
+  font-size: footerTextSize;
+  font-weight: footerTextWeight;
+  color: footerTextColor;
+}
+
+.x-treegrid .x-treegrid-column .cellInner {
+  padding: 0 !important;
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+  <Changeset component="org.gcube.dataanalysis.oscar-importer-se-plugin.1.0.0" date="2017-10-19">
+    <Change>First Release</Change>  
+  </Changeset>
+</ReleaseNotes>

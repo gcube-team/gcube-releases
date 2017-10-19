@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<description>The front end view of Techno Economic Analysis. Provides an interactive UI for performing analysis and saving results</description>
+	
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+	
+	<groupId>gr.cite.bluebridge.analytics</groupId>
+	<artifactId>techno-economic-analysis-portlet</artifactId>
+	<packaging>war</packaging>
+	<name>Techno Economic Analysis Portlet</name>
+	<version>2.4.0-4.7.1-154556</version>
+
+	<scm>
+		<connection>scm:svn:https://svn.cite.gr/code-bluebridge/techno-economic-analysis-portlet</connection>
+		<developerConnection>scm:svn:https://svn.cite.gr/code-bluebridge/techno-economic-analysis-portlet</developerConnection>
+		<url>https://svn.cite.gr/code-bluebridge/techno-economic-analysis-portlet</url>
+	</scm>
+  
+	<properties>
+		<jersey.version>2.24.1</jersey.version>
+		<logback.version>1.1.7</logback.version>
+		<jcloverslf4j.version>1.7.21</jcloverslf4j.version>
+		<org.springframework.version>4.3.4.RELEASE</org.springframework.version>
+		<liferay.version>6.2.5</liferay.version>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+	</properties>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-portal-bom</artifactId>
+				<version>3.3.0-4.7.1-144184</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+ 
+	<dependencies>	
+ 	 	  <dependency>
+		   <groupId>org.gcube.common.portal</groupId>
+		   <artifactId>portal-manager</artifactId>
+		   <scope>provided</scope>
+		  </dependency>
+		  
+		  <dependency>
+		   <groupId>org.gcube.dvos</groupId>
+		   <artifactId>usermanagement-core</artifactId>
+		   <scope>provided</scope>
+		  </dependency> 
+		  
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>ic-client</artifactId>
+			<scope>provided</scope>
+		</dependency>		
+		
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library-jcr</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		 
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+		  <groupId>org.gcube.core</groupId>
+		  <artifactId>common-encryption</artifactId>
+		  <scope>provided</scope>		  
+		</dependency>
+		
+	 	<!-- Logging -->
+		
+	    <dependency>
+	    	<groupId>ch.qos.logback</groupId>
+	    	<artifactId>logback-classic</artifactId>
+	    	<version>${logback.version}</version>
+	    </dependency>
+	    
+	    <dependency>                                    
+	    	<groupId>org.slf4j</groupId>                
+	    	<artifactId>jcl-over-slf4j</artifactId>     
+	    	<version>${jcloverslf4j.version}</version>  
+	    </dependency>	
+	    
+	    <!-- Spring -->
+	    
+		<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-core</artifactId>
+    		<version>${org.springframework.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-beans</artifactId>
+		    <version>${org.springframework.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context</artifactId>
+		    <version>${org.springframework.version}</version>
+		    <exclusions>
+	    	   <exclusion>
+	    		  <groupId>commons-logging</groupId>
+	    		  <artifactId>commons-logging</artifactId>
+	    	   </exclusion>
+    		</exclusions>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context-support</artifactId>
+		    <version>${org.springframework.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-webmvc</artifactId>
+		    <version>${org.springframework.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-webmvc-portlet</artifactId>
+		    <version>${org.springframework.version}</version>
+		</dependency>
+		
+		<!-- jackson -->
+				
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.6.3</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.6.3</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		
+		<!--  Jersey Http Client -->
+		
+		<dependency>
+		    <groupId>org.glassfish.jersey.containers</groupId>
+		    <artifactId>jersey-container-servlet</artifactId>
+		    <version>${jersey.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.glassfish.jersey.core</groupId>
+		    <artifactId>jersey-client</artifactId>
+		    <version>${jersey.version}</version>
+		</dependency>	
+		
+		<dependency>
+		    <groupId>org.glassfish.jersey.media</groupId>
+		    <artifactId>jersey-media-json-jackson</artifactId>
+		    <version>${jersey.version}</version>
+		</dependency>	
+	    
+		<!-- Liferay -->		
+		
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>portal-service</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>util-bridges</artifactId>
+			<version>${liferay.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>util-taglib</artifactId>
+			<version>${liferay.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>util-java</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.4</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	
+	<build>
+		<plugins>
+<!-- 			<plugin> -->
+<!-- 				<groupId>com.liferay.maven.plugins</groupId> -->
+<!-- 				<artifactId>liferay-maven-plugin</artifactId> -->
+<!-- 				<version>${liferay.maven.plugin.version}</version> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<phase>generate-sources</phase> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 				<configuration> -->
+<!-- 					<autoDeployDir>${liferay.auto.deploy.dir}</autoDeployDir> -->
+<!-- 					<appServerDeployDir>${liferay.app.server.deploy.dir}</appServerDeployDir> -->
+<!-- 					<appServerLibGlobalDir>${liferay.app.server.lib.global.dir}</appServerLibGlobalDir> -->
+<!-- 					<appServerPortalDir>${liferay.app.server.portal.dir}</appServerPortalDir> -->
+<!-- 					<liferayVersion>${liferay.version}</liferayVersion> -->
+<!-- 					<pluginType>portlet</pluginType> -->
+<!-- 				</configuration> -->
+<!-- 			</plugin> -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,16 @@
+<module>
+
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- inherits gCube Widgets Library -->
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+	<inherits name="com.google.gwt.resources.Resources" />
+	
+	<stylesheet src='tree-style.css' />
+	
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

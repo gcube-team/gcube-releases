@@ -1,0 +1,32 @@
+<ReleaseNotes>
+	 <Changeset component="org.gcube.data-analysis.tabular-model.3.4.0" date="2017-07-07">
+		<Change>Support for SDMX Resource type added</Change> 
+		<change>Support for java8 added</change>
+	</Changeset> 
+	 <Changeset component="org.gcube.data-analysis.tabular-model.3.3.3" date="2015-10-06">
+		<Change>TableDescriptorMetadata removed as inheritable (solves the bug on ExportCodelist to existing one)</Change> 
+		<change>issue #1121 solved</change>
+	</Changeset> 
+    <Changeset component="org.gcube.data-analysis.tabular-model.3.3.2" date="2015-6-30">
+		<Change>Added more expressions</Change> 
+	</Changeset> 
+    <Changeset component="org.gcube.data-analysis.tabular-model.3.3.1" date="2013-10-21">
+		<Change>Added formats for data types</Change> 
+		<Change>Method getChildrenByType added</Change>		
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.tabular-model.3.0.0" date="2013-10-21">
+		<Change>Made several changes in order for the library to be translatable into javascript by gwt</Change> 
+		<Change>Removed usage of guava classes</Change>
+		<Change>Modified ColumnLocalId in order to use strings instead of UUID</Change>
+		<Change>Removed usage of Java Locale</Change>
+		<Change>Modified metadata to be immutable</Change>
+		<Change>Locale classes now perform strict check on locale code with standard ISO639-1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.tabular-model.2.0.0" date="2013-10-21"> 
+		<Change>Major modifications to model</Change>
+		<Change>Added support for expressions</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.tabular-model.1.0.0" date="2013-07-16"> 
+		<Change>First version</Change>
+	</Changeset>
+</ReleaseNotes>

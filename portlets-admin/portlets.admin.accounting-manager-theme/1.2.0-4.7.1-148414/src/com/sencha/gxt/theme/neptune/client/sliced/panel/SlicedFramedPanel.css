@@ -1,0 +1,40 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def backgroundColor value('theme.panel.backgroundColor');
+
+.panel {
+  border-style: solid;
+  border-width: 0;
+  outline: 0 none;
+}
+
+.noHeader {
+  border-top-width: 1px;
+}
+
+.header {
+  position: relative;
+}
+
+@if user.agent ie6 {
+  .header {
+    zoom: 1;
+  }
+}
+
+.body {
+  border-width: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: backgroundColor;
+}
+
+.footer {
+  position: relative;
+}
+.bodyWrap {}

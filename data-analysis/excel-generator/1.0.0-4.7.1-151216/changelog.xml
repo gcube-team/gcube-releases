@@ -1,0 +1,5 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data.analysis.excel-generator.1.0.0-4.7.1-151216" date="2017-06-01"> 
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

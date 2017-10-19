@@ -1,0 +1,26 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.GeoanalyticsHome.1-0-0" date="2016-09-29">
+		<Change>First release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.GeoanalyticsHome.1-1-0" date="2016-11-25">
+		<Change>Groups creation and management</Change>
+		<Change>Projects sharing among individuals or groups</Change>
+		<Change>UI improvements</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.GeoanalyticsHome.1-2-0" date="2017-03-03">
+		<Change>UI improvements</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.GeoanalyticsHome.1-3-0" date="2017-04-21">
+		<Change>UI improvements</Change>
+		<Change>Map bugs fixed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.GeoanalyticsHome.1-4-0" date="2017-05-24">
+		<Change>Plugins logic</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.GeoanalyticsHome.1-5-0" date="2017-07-12">
+		<Change>Attributes logic</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.GeoanalyticsHome.1-6-0" date="2017-09-26">
+		<Change>Plugin function execution logic</Change>
+	</Changeset>
+</ReleaseNotes>

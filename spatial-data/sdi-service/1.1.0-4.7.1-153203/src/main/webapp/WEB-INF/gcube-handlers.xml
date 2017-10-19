@@ -1,0 +1,5 @@
+<handlers>	
+       <lifecycle>
+           <sdi-lifecycle />
+       </lifecycle>       
+</handlers>

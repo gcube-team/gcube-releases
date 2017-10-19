@@ -1,0 +1,30 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="org.gcube.common.portal.notifications-common-library.1-4-0"
+		date="2017-02-01">
+		<Change>UserManager/GroupManager implementations need to be provided
+			as input of several constructors
+		</Change>
+		<Change>Added thread to schedule job notifications</Change>
+		<Change>Post notifications thread now accepts Set instead of List for
+			mentioned vre groups and
+			hashtags to avoid duplicates
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.portal.notifications-common-library.1-2-1"
+		date="2016-02-29">
+		<Change>Added support to discussion into email's body</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.portal.notifications-common-library.1-2-0"
+		date="2015-12-21">
+		<Change>Added shared method for posting notifications</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.portal.notifications-common-library.1-1-0"
+		date="2015-10-13">
+		<Change>Added shared method for messaging notifications</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.portal.notifications-common-library.1-0-0"
+		date="2015-06-30">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

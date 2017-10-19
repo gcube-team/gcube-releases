@@ -1,0 +1,24 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.admin.fhn_manager_portlet.1-0-0"
+		date="2016-04-21">
+		<Change>First release</Change>
+	</Changeset>	
+	<Changeset component="org.gcube.portlets.admin.fhn_manager_portlet.1-1-0"
+		date="2016-04-21">
+		<Change>Liferay 6.2 integration</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.fhn_manager_portlet.1-1-1"
+		date="2016-10-06">
+		<Change>Explicit provided dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.fhn_manager_portlet.1-1-2"
+		date="2016-10-06">
+		<Change>Fixed client integration</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.fhn_manager_portlet.1-2-0"
+		date="2017-02-13">
+		<Change>Created Cache</Change>
+		<Change>Improved model</Change>
+		<Change>Async grid loading</Change>
+	</Changeset>
+</ReleaseNotes>

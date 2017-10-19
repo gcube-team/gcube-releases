@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="common-scope-maps-1.0.7-4.7.1-150560" date="2017-02-13">
+		<Change>added openAIRE servicemap</Change>
+	</Changeset>
+	<Changeset component="common-scope-maps-1.0.7-4.7.1-150560" date="2013-01-11">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="common-scope-maps-1.0.7-4.7.1-150560" date="2014-06-06">
+		<Change>added maps for Social ISTI</Change>
+	</Changeset>
+</ReleaseNotes>

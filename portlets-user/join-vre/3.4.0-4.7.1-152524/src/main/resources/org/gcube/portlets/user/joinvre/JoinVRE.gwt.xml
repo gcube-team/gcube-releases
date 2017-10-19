@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='explore'>
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name="com.google.gwt.logging.Logging" />
+
+	<inherits name='com.google.gwt.activity.Activity' />
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+	<inherits name='org.gcube.portal.databook.GCubeSocialNetworking' />
+	<set-property name="user.agent" value="gecko1_8" />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='org.gcube.portlets.user.joinvre.client.JoinVRE' />
+
+	<set-property name="gwt.logging.enabled" value="TRUE" />
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+	<add-linker name="xsiframe" />
+</module>

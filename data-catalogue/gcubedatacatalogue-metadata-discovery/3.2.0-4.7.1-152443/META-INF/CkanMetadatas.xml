@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadataformat>
+    <metadatafield>
+        <fieldName>Name</fieldName>
+        <mandatory>true</mandatory>
+        <dataType>Time</dataType>
+        <defaulValue>default value</defaulValue>
+        <note>shown as suggestions in the insert/update metadata form of CKAN</note>
+        <vocabulary isMultiSelection="true">
+            <vocabularyField>field1</vocabularyField>
+            <vocabularyField>field2</vocabularyField>
+            <vocabularyField>field3</vocabularyField>
+        </vocabulary>
+        <validator>
+            <regularExpression>a regular expression for validating values</regularExpression>
+        </validator>
+    </metadatafield>
+    <metadatafield>
+        <fieldName>Accessibility</fieldName>
+        <mandatory>true</mandatory>
+        <dataType>String</dataType>
+        <defaulValue>virtual/public</defaulValue>
+        <note>shown as suggestions in the insert metadata form of CKAN</note>
+        <vocabulary isMultiSelection="false">
+            <vocabularyField>virtual/public</vocabularyField>
+            <vocabularyField>virtual/private</vocabularyField>
+            <vocabularyField>transactional</vocabularyField>
+        </vocabulary>
+        <validator>
+            <regularExpression>a regular expression for validating values</regularExpression>
+        </validator>
+    </metadatafield>
+</metadataformat>

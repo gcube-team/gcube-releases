@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>WorkspacePortlet.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>workspacesharing</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspacesharingwidget.server.WorkspaceSharingServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- <servlet> -->
+	<!-- <servlet-name>UploadService</servlet-name> -->
+	<!-- <servlet-class>org.gcube.portlets.user.workspace.server.UploadServlet</servlet-class> -->
+	<!-- </servlet> -->
+
+	<!-- <servlet> -->
+	<!-- <servlet-name>LocalUploadService</servlet-name> -->
+	<!-- <servlet-class>org.gcube.portlets.user.workspace.server.LocalUploadServlet</servlet-class> -->
+	<!-- </servlet> -->
+
+	<servlet>
+		<servlet-name>DownloadService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.workspace.server.DownloadServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>DownloadFolderServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.workspace.server.DownloadFolderServlet</servlet-class>
+	</servlet>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>WorkspaceService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.workspace.server.GWTWorkspaceServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- mailWisdgetServlet servlet -->
+	<servlet>
+		<servlet-name>mailWisdgetServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsmail.server.WsMailServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>checkServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.sessionchecker.server.SessionCheckerServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ImageService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.workspace.server.ImageServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsexplorer.server.WorkspaceExplorerServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- Servlets UploadServletStream -->
+	<servlet>
+		<servlet-name>workspaceUploadServletStream</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspaceuploader.server.WorkspaceUploadServletStream</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>workspaceUploaderService</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspaceuploader.server.WorkspaceUploaderServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>workspaceUploaderWsUtil</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspaceuploader.server.WorkspaceUploaderWsUtil</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
+	</servlet>
+
+	<!-- Quick Tour -->
+	<!-- <servlet> -->
+	<!-- <servlet-name>quicktourServlet</servlet-name> -->
+	<!-- <servlet-class>org.gcube.portlets.widgets.guidedtour.server.TourServiceImpl</servlet-class> -->
+	<!-- </servlet> -->
+
+	<servlet>
+		<servlet-name>ckanpublisherservices</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.ckandatapublisherwidget.server.CKANPublisherServicesImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>imageservices</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.imagepreviewerwidget.server.ImageOrientationServicesImpl</servlet-class>
+	</servlet>
+ 
+	<!-- ###################### MAPPING ###################### -->
+	
+	<servlet-mapping>
+		<servlet-name>imageservices</servlet-name>
+		<url-pattern>/workspace/imageservices</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>ckanpublisherservices</servlet-name>
+		<url-pattern>/workspace/ckanservices</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workspaceUploaderWsUtil</servlet-name>
+		<url-pattern>/workspace/workspaceUploaderWsUtil</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<url-pattern>/workspace/WorkspaceExplorerService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workspaceUploadServletStream</servlet-name>
+		<url-pattern>/workspace/workspaceUploadServletStream</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workspaceUploaderService</servlet-name>
+		<url-pattern>/workspace/workspaceUploaderService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>WorkspaceService</servlet-name>
+		<url-pattern>/workspace/WorkspaceService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ImageService</servlet-name>
+		<url-pattern>/workspace/ImageService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>checkServlet</servlet-name>
+		<url-pattern>/workspace/checksession</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>mailWisdgetServlet</servlet-name>
+		<url-pattern>/workspace/mailWisdgetServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- <servlet-mapping> -->
+	<!-- <servlet-name>LocalUploadService</servlet-name> -->
+	<!-- <url-pattern>/workspace/LocalUploadService</url-pattern> -->
+	<!-- </servlet-mapping> -->
+
+	<servlet-mapping>
+		<servlet-name>DownloadService</servlet-name>
+		<url-pattern>/workspace/DownloadService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DownloadFolderServlet</servlet-name>
+		<url-pattern>/workspace/DownloadFolderServlet</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- <servlet-mapping> -->
+	<!-- <servlet-name>UploadService</servlet-name> -->
+	<!-- <url-pattern>/workspace/UploadService</url-pattern> -->
+	<!-- </servlet-mapping> -->
+
+	<servlet-mapping>
+		<servlet-name>workspacesharing</servlet-name>
+		<url-pattern>/workspace/workspacesharing</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/org.gcube.portlets.user.workspace.WorkspacePortletJUnit/junithost/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/workspace/junithost/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DownloadService</servlet-name>
+		<url-pattern>/org.gcube.portlets.user.workspace.WorkspacePortletJUnit/DownloadService</url-pattern>
+	</servlet-mapping>
+
+	<!-- <servlet-mapping> -->
+	<!-- <servlet-name>WorkspaceService</servlet-name> -->
+	<!-- <url-pattern>/org.gcube.portlets.user.workspace.WorkspacePortletJUnit/WorkspaceService</url-pattern> -->
+	<!-- </servlet-mapping> -->
+
+	<servlet-mapping>
+		<servlet-name>ImageService</servlet-name>
+		<url-pattern>/org.gcube.portlets.user.workspace.WorkspacePortletJUnit/ImageService</url-pattern>
+	</servlet-mapping>
+
+	<!-- <servlet-mapping> -->
+	<!-- <servlet-name>UploadService</servlet-name> -->
+	<!-- <url-pattern>/org.gcube.portlets.user.workspace.WorkspacePortletJUnit/UploadService</url-pattern> -->
+	<!-- </servlet-mapping> -->
+
+
+	<!-- <servlet-mapping> -->
+	<!-- <servlet-name>quicktourServlet</servlet-name> -->
+	<!-- <url-pattern>/workspace/quicktourServlet</url-pattern> -->
+	<!-- </servlet-mapping> -->
+</web-app>

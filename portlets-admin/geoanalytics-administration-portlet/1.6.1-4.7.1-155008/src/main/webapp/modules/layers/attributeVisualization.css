@@ -1,0 +1,17 @@
+#edit-layer-visualization-modal {
+	margin-left : 0;
+	left : 20%;
+	width : 60%;
+}
+#geoadmin-layers-attributes .geoadmin-attribute-order {
+	width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#geoadmin-layers-attributes .visibilityCheckboxContainer .fa.fa-eye-slash{
+	color :red;
+}
+#layer-attributes-datatable tr.notVisible td {
+	text-decoration: line-through;
+	color: #595959;
+}

@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.token-generator-admin.1-1-0"
+		date="2016-12-01">
+		<Change>Removed asl core</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.token-generator-admin.1-0-0"
+		date="2016-09-28">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

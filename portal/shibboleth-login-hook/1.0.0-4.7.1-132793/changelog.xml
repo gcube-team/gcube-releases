@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.shibboleth.1-0-0" date="2016-08-30">
+		<Change>First release of shibboleth login hook</Change>
+	</Changeset>
+</ReleaseNotes>

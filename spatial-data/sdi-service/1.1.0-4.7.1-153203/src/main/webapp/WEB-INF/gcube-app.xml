@@ -1,0 +1,8 @@
+<application mode='online'>
+		<name>sdi-service</name>
+		<group>SDI</group>
+		<version>1.1.0-SNAPSHOT</version>
+		<description>REST Interface towards SDI facilities</description>		
+		<local-persistence location='target' />
+</application>
+

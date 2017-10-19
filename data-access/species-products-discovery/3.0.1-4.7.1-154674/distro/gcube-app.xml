@@ -1,0 +1,11 @@
+<application mode='online'>
+		<name>SpeciesProductsDiscovery</name>
+		<group>DataAccess</group>
+		<version>${version}</version>
+		<description>SpeciesProductsDiscovery service</description>
+		<local-persistence location='target' />
+		
+		<exclude>/gcube/service/resultset/*</exclude>
+
+</application>
+

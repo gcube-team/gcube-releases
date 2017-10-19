@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.geoanalytics.environmental.data.provider-1.0.0" date="2017-06-15">
+		<Change>Initial release</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.geoanalytics.environmental.data.provider-1.1.0" date="2017-09-126">
+		<Change>Added caching of geotiff coverages</Change>
+	</Changeset>
+</ReleaseNotes>
+

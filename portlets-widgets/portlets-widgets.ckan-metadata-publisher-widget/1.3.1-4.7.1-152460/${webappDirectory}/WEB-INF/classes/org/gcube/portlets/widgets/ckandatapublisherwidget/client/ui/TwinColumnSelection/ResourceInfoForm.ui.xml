@@ -1,0 +1,88 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.legend-style {
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 0px;
+		font-size: 14px;
+	}
+	
+	.panel-style {
+		padding: 5px;
+		border: 1px solid #bbb;
+		border-radius: 5px;
+		height: 400px;
+		width: 95%;
+	}
+	
+	.labels-style {
+		color: #999;
+	}
+	
+	.controls-style {
+		margin-left: 10px !important;
+	}
+	
+	.control-group {
+		margin-bottom: 0px !important;
+	}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.panel-style}">
+		<b:Form type="VERTICAL" width="100%">
+			<!-- <b:Fieldset styleName="{style.fieldset-border-style}"> -->
+			<b:Legend styleName="{style.legend-style}">
+				<b>Resource Information</b>
+				<b:Button ui:field="closeButton" type="LINK" title="Close details"></b:Button>
+			</b:Legend>
+			<b:ControlGroup ui:field="controlName" styleName="{style.control-group}">
+				<b:ControlLabel for="name" styleName="{style.labels-style}"
+					title="The name the resource will have on the catalogue">
+					<b>Name:</b>
+				</b:ControlLabel>
+				<b:Controls styleName="{style.controls-style}">
+					<b:TextBox placeholder="Resource name" b:id="name"
+						enabled="true" title="The name the resource will have on the catalogue"
+						ui:field="resourceName" />
+				</b:Controls>
+			</b:ControlGroup>
+			<b:ControlGroup styleName="{style.control-group}">
+				<b:ControlLabel for="path" title="Resource path"
+					styleName="{style.labels-style}">
+					<b>Path:</b>
+				</b:ControlLabel>
+				<b:Controls styleName="{style.controls-style}">
+					<b:TextBox placeholder="Resource path" b:id="path"
+						readOnly="true" title="Resource path" ui:field="resourcePath" />
+				</b:Controls>
+			</b:ControlGroup>
+			<b:ControlGroup styleName="{style.control-group}">
+				<b:ControlLabel for="description" styleName="{style.labels-style}"
+					title="The description the resource will have on the catalogue">
+					<b>Description:</b>
+				</b:ControlLabel>
+				<b:Controls styleName="{style.controls-style}">
+					<b:TextArea placeholder="Resource description" b:id="description"
+						title="The description the resource will have on the catalogue"
+						ui:field="resourceDescription"></b:TextArea>
+				</b:Controls>
+			</b:ControlGroup>
+			<b:ControlGroup styleName="{style.control-group}">
+				<b:ControlLabel for="format" styleName="{style.labels-style}"
+					title="The MIME type">
+					<b>Format:</b>
+				</b:ControlLabel>
+				<b:Controls styleName="{style.controls-style}">
+					<b:TextBox placeholder="Resource format" b:id="format"
+						title="The MIME type" ui:field="resourceFormat" readOnly="true" />
+				</b:Controls>
+			</b:ControlGroup>
+			<g:HorizontalPanel width="100%" ui:field="commandPanel">
+				<!-- <b:Button ui:field="cancelButton">Cancel</b:Button> -->
+				<b:Button ui:field="updateResourceButton" type="PRIMARY">Update</b:Button>
+			</g:HorizontalPanel>
+			<!-- </b:Fieldset> -->
+		</b:Form>
+	</g:HTMLPanel>
+</ui:UiBinder> 

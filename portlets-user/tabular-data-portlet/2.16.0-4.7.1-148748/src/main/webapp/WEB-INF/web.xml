@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+
+	<!-- Servlets -->
+	<!-- JUnit -->
+	<servlet>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
+	</servlet>
+
+	<!-- Scope Helper -->
+	<servlet>
+		<servlet-name>scopeService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.gcubewidgets.server.ScopeServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- Base Service -->
+	<servlet>
+		<servlet-name>tdservlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.mainboxwidget.server.TabularDataServiceImpl</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!-- Base Service <servlet> <servlet-name>tdservlet</servlet-name> <servlet-class>org.gcube.portlets.user.td.server.TabularDataServiceImpl</servlet-class> 
+		<load-on-startup>1</load-on-startup> </servlet> -->
+
+	<!-- TDWidget -->
+	<servlet>
+		<servlet-name>tdwxService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdwx.server.TabularDataXServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>tdwxServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdwx.server.TabularDataXServlet</servlet-class>
+	</servlet>
+
+	<!-- TD GWTService -->
+	<servlet>
+		<servlet-name>TDGWTService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.TDGWTServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- Retrieve Chart File Servlet -->
+	<servlet>
+		<servlet-name>RetrieveChartFileServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.RetrieveChartFileServlet</servlet-class>
+	</servlet>
+
+	<!-- Retrieve File and Discover Mime Type Servlet -->
+	<servlet>
+		<servlet-name>RetrieveFileAndDiscoverMimeTypeServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.RetrieveFileAndDiscoverMimeTypeServlet</servlet-class>
+	</servlet>
+
+	<!-- TD RStudio Servlet -->
+	<servlet>
+		<servlet-name>TDRStudioServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.TDRStudioServlet</servlet-class>
+	</servlet>
+
+
+	<!-- TD Expression -->
+	<servlet>
+		<servlet-name>ExpressionService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.expressionwidget.server.ExpressionServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>CExpressionMapServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.expressionwidget.server.CExpressionMapServlet</servlet-class>
+	</servlet>
+
+	<!-- Share -->
+	<servlet>
+		<servlet-name>workspacesharing</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspacesharingwidget.server.WorkspaceSharingServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- TD Tasks Widget Service -->
+	<servlet>
+		<servlet-name>tabularDataTasksWidgetService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.taskswidget.server.TdTasksWidgetServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- Template Service -->
+	<servlet>
+		<servlet-name>tdTemplateServiceImpl</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdtemplate.server.TdTemplateServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>templateColumnOperationService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdtemplateoperation.server.TemplateColumnOperationServiceImpl</servlet-class>
+	</servlet>
+
+
+	<!-- TD Column Operation -->
+	<servlet>
+		<servlet-name>TdColumnOperationServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdcolumnoperation.server.TdColumnOperationServiceImpl</servlet-class>
+	</servlet>
+
+
+
+	<!-- CSV IMPORT WIZARD -->
+	<servlet>
+		<servlet-name>CSVImportFileServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.CSVImportFileServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>LocalUploadServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.LocalUploadServlet</servlet-class>
+	</servlet>
+
+	<!-- Codelist Mapping Import File Servlet -->
+	<servlet>
+		<servlet-name>CodelistMappingUploadServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.CodelistMappingUploadServlet</servlet-class>
+	</servlet>
+
+
+
+
+	<!-- Workspace Explorer -->
+	<servlet>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsexplorer.server.WorkspaceExplorerServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>workspaceUploaderService</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspaceuploader.server.WorkspaceUploaderServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>workspaceUploadServletStream</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspaceuploader.server.WorkspaceUploadServletStream</servlet-class>
+	</servlet>
+
+	<!-- CSV Import Wizard Workspace -->
+	<!-- <servlet> <servlet-name>CSVImportServiceWorkspace</servlet-name> <servlet-class>org.gcube.portlets.user.csvimportwizardgxt3.ws.server.ImportWizardWSServiceImpl</servlet-class> 
+		</servlet> <servlet> <servlet-name>downloadServlet</servlet-name> <servlet-class>org.gcube.portlets.user.workspace.server.DownloadServlet</servlet-class> 
+		</servlet> <servlet> <servlet-name>gWTWorkspaceServiceImpl</servlet-name> 
+		<servlet-class>org.gcube.portlets.user.workspace.server.GWTWorkspaceServiceImpl</servlet-class> 
+		</servlet> <servlet> <servlet-name>imageServlet</servlet-name> <servlet-class>org.gcube.portlets.user.workspace.server.ImageServlet</servlet-class> 
+		</servlet> <servlet> <servlet-name>uploadServlet</servlet-name> <servlet-class>org.gcube.portlets.user.workspace.server.UploadServlet</servlet-class> 
+		</servlet> -->
+
+
+
+	<!-- Check Session Expired -->
+	<servlet>
+		<servlet-name>checkServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.sessionchecker.server.SessionCheckerServiceImpl</servlet-class>
+	</servlet>
+
+
+	<!-- DataMiner -->
+	<servlet>
+		<servlet-name>DataMinerManagerServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.dataminermanagerwidget.server.DataMinerManagerServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>DownloadFolderServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.dataminermanagerwidget.server.DownloadFolderServlet</servlet-class>
+	</servlet>
+
+	<!-- TabularData Widget -->
+	<servlet>
+		<servlet-name>tdwService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdw.server.TabularDataServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>tdwServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdw.server.TabularDataServlet</servlet-class>
+	</servlet>
+
+
+	<!-- TD Logs -->
+	<servlet>
+		<servlet-name>TDLogsServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.TDLogsServlet</servlet-class>
+	</servlet>
+
+
+
+
+
+	<!-- Servlets Mapping -->
+	<!-- JUnit -->
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/tabulardataportlet/junithost/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>scopeService</servlet-name>
+		<url-pattern>/tabulardataportlet/scopeService</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Base Service -->
+	<servlet-mapping>
+		<servlet-name>tdservlet</servlet-name>
+		<url-pattern>/tabulardataportlet/tds</url-pattern>
+	</servlet-mapping>
+
+	<!-- TDWidget -->
+	<servlet-mapping>
+		<servlet-name>tdwxService</servlet-name>
+		<url-pattern>/tabulardataportlet/tdwx</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>tdwxServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/tdwxdata</url-pattern>
+	</servlet-mapping>
+
+	<!-- TD GWTService -->
+	<servlet-mapping>
+		<servlet-name>TDGWTService</servlet-name>
+		<url-pattern>/tabulardataportlet/TDGWTService</url-pattern>
+	</servlet-mapping>
+
+	<!-- Retrieve Chart File Servlet -->
+	<servlet-mapping>
+		<servlet-name>RetrieveChartFileServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/RetrieveChartFileServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Retrieve File And Discover Mime Type Servlet -->
+	<servlet-mapping>
+		<servlet-name>RetrieveFileAndDiscoverMimeTypeServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/RetrieveFileAndDiscoverMimeTypeServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- TD RStudio -->
+	<servlet-mapping>
+		<servlet-name>TDRStudioServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/TDRStudioServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- TD Expression -->
+	<servlet-mapping>
+		<servlet-name>ExpressionService</servlet-name>
+		<url-pattern>/tabulardataportlet/ExpressionService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CExpressionMapServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/CExpressionMap</url-pattern>
+	</servlet-mapping>
+
+	<!-- Share -->
+	<servlet-mapping>
+		<servlet-name>workspacesharing</servlet-name>
+		<url-pattern>/tabulardataportlet/workspacesharing</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- TD Tasks Widget Service -->
+	<servlet-mapping>
+		<servlet-name>tabularDataTasksWidgetService</servlet-name>
+		<url-pattern>/tabulardataportlet/tabularDataTasksService</url-pattern>
+	</servlet-mapping>
+
+	<!-- Template Servlet -->
+	<servlet-mapping>
+		<servlet-name>tdTemplateServiceImpl</servlet-name>
+		<url-pattern>/tabulardataportlet/tdtemplate</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>templateColumnOperationService</servlet-name>
+		<url-pattern>/tabulardataportlet/templateColumnOperationService</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- TD Column Operation -->
+	<servlet-mapping>
+		<servlet-name>TdColumnOperationServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/TdColumnOperationServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- CSV IMPORT WIZARD -->
+	<servlet-mapping>
+		<servlet-name>CSVImportFileServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/CSVImportFileServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>LocalUploadServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/LocalUploadServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Codelist Mapping Import File Servlet -->
+	<servlet-mapping>
+		<servlet-name>CodelistMappingUploadServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/CodelistMappingUploadServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Workspace Explorer -->
+	<servlet-mapping>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<url-pattern>/tabulardataportlet/WorkspaceExplorerService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workspaceUploaderService</servlet-name>
+		<url-pattern>/tabulardataportlet/workspaceUploaderService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>workspaceUploadServletStream</servlet-name>
+		<url-pattern>/tabulardataportlet/workspaceUploadServletStream</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- CSV Import Wizard Workspace -->
+	<!-- <servlet-mapping> <servlet-name>CSVImportServiceWorkspace</servlet-name> 
+		<url-pattern>/tabulardataportlet/CSVImportServiceWorkspace</url-pattern> 
+		</servlet-mapping> <servlet-mapping> <servlet-name>downloadServlet</servlet-name> 
+		<url-pattern>/tabulardataportlet/DownloadService</url-pattern> </servlet-mapping> 
+		<servlet-mapping> <servlet-name>gWTWorkspaceServiceImpl</servlet-name> <url-pattern>/tabulardataportlet/WorkspaceService</url-pattern> 
+		</servlet-mapping> <servlet-mapping> <servlet-name>imageServlet</servlet-name> 
+		<url-pattern>/tabulardataportlet/ImageService</url-pattern> </servlet-mapping> 
+		<servlet-mapping> <servlet-name>uploadServlet</servlet-name> <url-pattern>/tabulardataportlet/UploadService</url-pattern> 
+		</servlet-mapping> -->
+
+
+	<servlet-mapping>
+		<servlet-name>checkServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/checksession</url-pattern>
+	</servlet-mapping>
+
+	<!-- DataMiner -->
+	<servlet-mapping>
+		<servlet-name>DataMinerManagerServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/dataminermanagerwidget</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>DownloadFolderServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/DownloadFolderServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- TabularData Widget -->
+	<servlet-mapping>
+		<servlet-name>tdwService</servlet-name>
+		<url-pattern>/tabulardataportlet/tdw</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>tdwServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/tdwdata</url-pattern>
+	</servlet-mapping>
+
+
+
+	<!-- TD logs -->
+	<servlet-mapping>
+		<servlet-name>TDLogsServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/TDLogsServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>tabulardataportlet.html</welcome-file>
+	</welcome-file-list>
+</web-app>

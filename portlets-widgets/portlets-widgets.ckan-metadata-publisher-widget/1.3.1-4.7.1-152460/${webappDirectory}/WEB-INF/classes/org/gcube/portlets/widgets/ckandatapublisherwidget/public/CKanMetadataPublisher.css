@@ -1,0 +1,48 @@
+.tag-style {
+	color: #3a87ad;
+	background-color: #d9edf7;
+	border: 2px solid;
+	border-color: #bce8f1;
+	padding: 5px;
+	display: inline;
+	margin: 2px;
+	overflow: hidden;
+	height: auto !important;
+	font-size: 11px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	float: left;
+	font-size: 15px;
+}
+
+.tag-style-x {
+	color: #a6b3cf !important;
+	margin-left: 5px !important;
+	font-weight: bold !important;
+	cursor: pointer !important;
+}
+
+/** override some bootstrap css **/
+.form-controls-custom {
+	margin-left: 20% !important;
+}
+
+.form-control-label-custom {
+	width: 16% !important;
+}
+
+/** for the popup panels **/
+.metadata-popup-panel {
+	max-width: 30%;
+}
+
+/** for namespaces **/
+.page-header>h1 {
+	font-size: 24px !important;
+}
+
+/** for namespaces **/
+.page-header>h1>small {
+	font-size: 18px !important;
+}

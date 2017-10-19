@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>LATEST</version>
+	</parent>
+	<groupId>org.gcube.portlets.user</groupId>
+	<artifactId>ws-thredds</artifactId>
+	<version>0.0.1-4.7.1-154764</version>
+	<name>ws-thredds</name>
+	<description>prototype of WS integration with data-transfer for Thredds pubblication</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.spatial.data</groupId>
+			<artifactId>sdi-library</artifactId>
+			<version>1.0.0-4.7.1-152542</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.gcube.data.transfer</groupId>
+			<artifactId>data-transfer-library</artifactId>
+			<version>1.2.0-4.7.1-149241</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library-jcr</artifactId>
+			<version>2.11.0-4.7.1-155066</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library</artifactId>
+			<version>2.9.1-4.7.1-152651</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.4</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		
+	</dependencies>
+
+</project>

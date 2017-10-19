@@ -1,0 +1,15 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.portlets.widgets.sessionchecher.0-4-0"
+		date="2015-10-15">
+			<Change>Fixed typoe in html >(reload this page)</Change>
+			<Change>Further Check if in portal when getting ASL null, see Bug #708</Change>
+	</Changeset>
+<Changeset component="org.gcube.portlets.widgets.sessionchecher.0-3-0"
+		date="2014-10-06">
+			<Change>added possibility to set mapParameters in href when reloading the page</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.sessionchecher.0-1-0"
+		date="2014-04-03">
+			<Change>First Release</Change>
+	</Changeset>	
+</ReleaseNotes>

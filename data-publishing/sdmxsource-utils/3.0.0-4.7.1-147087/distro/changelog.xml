@@ -1,0 +1,11 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data.publishing.sdmxsource-utils.3.0.0" date="2017-03-20"> 
+		<Change>Updated pom to latest official release of sdmxsource libs (1.5.6.6)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data.publishing.sdmxsource-utils.2.0.0" date="2013-09-19"> 
+		<Change>Updated pom to latest official release of sdmxsource libs (1.0)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data.publishing.sdmxsource-utils.1.0.0" date="2013-05-31"> 
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

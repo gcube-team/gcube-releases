@@ -1,0 +1,53 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:b2="urn:import:com.github.gwtbootstrap.datepicker.client.ui"
+	xmlns:e="urn:import:org.gcube.portlets.user.gcubewidgets.client.elements">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel ui:field="verticalPanel">
+			<b:WellForm ui:field="wellFormManage">
+				<b:Heading ui:field="modifySurveyHeading" size="3">Modify
+					Survey Page</b:Heading>
+				<b:Paragraph ui:field="cantModifySurvey" />
+				<b:Controls ui:field="AddSave">
+					<div class='separate'>
+						<b:Button icon="ARROW_LEFT" visible="true"
+							ui:field="backToHomeSurveyButton">Back to Home</b:Button>
+						<b:Button icon="SAVE" visible="true" ui:field="saveQuestionSurveyButton">Save Survey</b:Button>
+						<b:Button icon="PENCIL" visible="true"
+							ui:field="modifyQuestionSurveyButton">Save Changes</b:Button>
+					</div>
+
+					<div class='separate'>
+						<b:CheckBox ui:field="checkBoxAnonymous">Anonymous Survey</b:CheckBox>
+					</div>
+
+					<div class='separate'>
+						<b:ControlLabel>Expired Date</b:ControlLabel>
+						<b2:DateBoxAppended ui:field="dateExpiredSurvey"
+							format="dd/mm/yyyy" autoClose="true" icon="CALENDAR" />
+					</div>
+					
+				</b:Controls>
+			</b:WellForm>
+
+			<b:WellForm ui:field="wellFormManageBottom">
+				<b:Heading ui:field="modifySurveyHeadingBottom" size="4">Modify
+					Survey</b:Heading>
+				<b:Heading ui:field="createSurveyHeadingBottom" size="4">Create
+					Survey</b:Heading>
+				<b:Controls ui:field="AddSaveBottom">
+					<b:Button icon="PLUS" visible="true"
+						ui:field="addQuestionSurveyButtonBottom">Add Question</b:Button>
+					<b:Button icon="SAVE" visible="true"
+						ui:field="saveQuestionSurveyButtonBottom">Save Survey</b:Button>
+					<b:Button icon="PENCIL" visible="true"
+						ui:field="modifyQuestionSurveyButtonBottom">Save Changes</b:Button>
+				</b:Controls>
+			</b:WellForm>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

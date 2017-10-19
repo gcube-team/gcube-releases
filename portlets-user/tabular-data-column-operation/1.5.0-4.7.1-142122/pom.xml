@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.gcube.portlets.user.tdcolumnoperation</groupId>
+	<artifactId>tabular-data-column-operation</artifactId>
+	<packaging>jar</packaging>
+	<version>1.5.0-4.7.1-142122</version>
+
+	<name>tabular-data-column-operation</name>
+	<description>Tabular Data Column Operation allows the users to perform the split and merge operations on tabular data columns</description>
+
+	<scm>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/portlets/user/tabular-data-column-widget</url>
+	</scm>
+
+	<developers>
+		<developer>
+			<name>Francesco Mangiacrapa</name>
+			<email>francesco.mangiacrapa@isti.cnr.it</email>
+			<organization>CNR Pisa, Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo"</organization>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<properties>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+		<release.date>2015-07-03</release.date>
+		<wikiurl>https://gcube.wiki.gcube-system.org/gcube/index.php/Tabular_Data_Manager</wikiurl>
+		<templatesDirectory>templates</templatesDirectory>
+		<distroDirectory>distro</distroDirectory>
+<!-- 		<configDirectory>config</configDirectory> -->
+
+		<!-- Convenience property to set the GWT version -->
+		<!-- <gwtVersion>2.5.1</gwtVersion> <gwtLogVersion>3.2.1</gwtLogVersion> 
+			<gxtVersion>3.0.1</gxtVersion> -->
+
+		<!-- Next -->
+		<gwtVersion>2.6.1</gwtVersion>
+		<gwtLogVersion>3.3.2</gwtLogVersion>
+		<gxtVersion>3.1.1</gxtVersion>
+
+		<!-- To make this work on gwt-run you need to set up global env vars. on 
+			MacOSX edit this file /etc/launchd.conf and put "setenv GLOBUS_LOCATION /Users/massi/portal/Portal-Bundle/gCore" 
+			on Linux? -->
+		<GLOBUS_LOCATION>${env.GLOBUS_LOCATION}</GLOBUS_LOCATION>
+		<!-- GWT needs at least java 1.5 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+
+
+	<profiles>
+		<profile>
+			<id>localRun</id>
+			<dependencies>
+				<dependency>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+					<scope>compile</scope>
+				</dependency>
+				<dependency>
+					<groupId>ch.qos.logback</groupId>
+					<artifactId>logback-classic</artifactId>
+					<version>1.0.1</version>
+					<scope>runtime</scope>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-servlet</artifactId>
+			<version>${gwtVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>${gwtVersion}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sencha.gxt</groupId>
+			<artifactId>gxt</artifactId>
+			<version>${gxtVersion}</version>
+		</dependency>
+
+
+
+		<!-- tabular-data-widget-common-event -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-widget-common-event</artifactId>
+			<version>1.11.0-4.7.1-148727</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- tabular-data-gwt-service -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-gwt-service</artifactId>
+			<version>2.18.0-4.7.1-152964</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- tabular-data-expression-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-expression-widget</artifactId>
+			<version>1.10.0-4.7.1-148656</version>
+		</dependency>
+
+
+		<!-- tabular-data-monitor-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-monitor-widget</artifactId>
+			<version>1.5.0-4.7.1-151295</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- tabular-data-column-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-column-widget</artifactId>
+			<version>1.10.0-4.7.1-142633</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- CLIENT LOGGER -->
+		<dependency>
+			<groupId>com.allen-sauer.gwt.log</groupId>
+			<artifactId>gwt-log</artifactId>
+			<version>${gwtLogVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- FOR DEBUG COMMENT THIS IN RELEASE -->
+		<!-- dependency for debug mode <dependency> <groupId>org.gcube.portlets.user</groupId> 
+			<artifactId>tabular-data-widgetx-tdx-source</artifactId> <version>[1.0.0-SNAPSHOT, 
+			2.0.0-SNAPSHOT)</version> <scope>provided</scope> </dependency> <dependency> 
+			<groupId>org.gcube.common</groupId> <artifactId>home-library-jcr</artifactId> 
+			<version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version> <scope>provided</scope> 
+			</dependency> <dependency> <groupId>org.gcube.common</groupId> <artifactId>home-library</artifactId> 
+			<version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version> <scope>provided</scope> 
+			</dependency> -->
+		<!-- END COMMENT THIS IN RELEASE -->
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-scope-maps</artifactId>
+			<version>1.0.7-4.7.1-150560</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.portal</groupId>
+			<artifactId>custom-portal-handler</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>service-client-impl</artifactId>
+			<version>2.6.1-4.7.1-144782</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Service Dependencies -->
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>tabular-model</artifactId>
+			<version>3.4.0-4.7.1-152975</version>
+			<scope>compile</scope>
+		</dependency>
+
+
+		<!-- ************* REMOVE THIS ****************** -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.gcube.portlets.user</groupId> -->
+		<!-- <artifactId>tabular-data-widgetx-tdx-source</artifactId> -->
+		<!-- <version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version> -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.gcube.common</groupId> -->
+		<!-- <artifactId>home-library-jcr</artifactId> -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.gcube.common</groupId> -->
+		<!-- <artifactId>home-library</artifactId> -->
+		<!-- <scope>provided</scope> -->
+		<!-- </dependency> -->
+		<!-- ************* END REMOVE THIS ****************** -->
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<!-- <scope>compile</scope> -->
+		</dependency>
+
+		<!-- JUNIT -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<!-- Generate compiled stuff in the folder used for developing mode -->
+		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.16</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+				<!-- TODO check if needed -->
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.surefire</groupId>
+						<artifactId>surefire-junit47</artifactId>
+						<version>2.16</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+			<!-- GWT Maven Plugin -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>${gwtVersion}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>resources</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<runTarget>ColumnWidget.html</runTarget>
+					<hostedWebapp>${webappDirectory}</hostedWebapp>
+					<module>org.gcube.portlets.user.tdcolumnoperation.TdColumnOperation</module>
+				</configuration>
+			</plugin>
+
+			<!-- Maven -->
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>copy-distro-resources</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${distroDirectory}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${templatesDirectory}</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${distroDirectory}</directory>
+							<includes>
+								<include>**</include>
+							</includes>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${templatesDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.codehaus.mojo
+										</groupId>
+										<artifactId>
+											gwt-maven-plugin
+										</artifactId>
+										<versionRange>
+											[2.5.1,)
+										</versionRange>
+										<goals>
+											<goal>resources</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-portal-bom</artifactId>
+				<version>3.3.0-4.7.1-144184</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

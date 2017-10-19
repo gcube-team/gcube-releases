@@ -1,0 +1,50 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.bold {
+		font-weight: bold;
+	}
+	</ui:style>
+	<g:HTMLPanel visible="false">
+		<h1 style="text-align:center;">Summary</h1>
+
+		<g:HTMLPanel>
+			<h2>VRE description</h2>
+
+			<p>
+				<g:InlineLabel styleName="{style.bold}">VRE Name:</g:InlineLabel>
+				<g:InlineLabel ui:field="vreNameSummary"></g:InlineLabel>
+			</p>
+			<p>
+				<g:InlineLabel styleName="{style.bold}">VRE Designer:</g:InlineLabel>
+				<g:InlineLabel ui:field="vreDesignerSummary"></g:InlineLabel>
+			</p>
+			<p>
+				<g:InlineLabel styleName="{style.bold}">VRE Manager:</g:InlineLabel>
+				<g:InlineLabel ui:field="vreManagerSummary"></g:InlineLabel>
+			</p>
+
+			<p>
+				<g:InlineLabel styleName="{style.bold}">From:</g:InlineLabel>
+				<g:InlineLabel ui:field="vreFromSummary">
+				</g:InlineLabel>
+				<g:InlineLabel styleName="{style.bold}"> To:</g:InlineLabel>
+				<g:InlineLabel ui:field="vreToSummary">
+				</g:InlineLabel>
+			</p>
+			<p>
+				<g:InlineLabel styleName="{style.bold}">Description:</g:InlineLabel>
+				<g:InlineLabel ui:field="vreDescriptionSummary"></g:InlineLabel>
+			</p>
+
+		</g:HTMLPanel>
+
+		<g:HTMLPanel>
+			<h2>VRE chosen functionalities</h2>
+			<g:VerticalPanel ui:field="functionalities">
+			</g:VerticalPanel>
+		</g:HTMLPanel>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

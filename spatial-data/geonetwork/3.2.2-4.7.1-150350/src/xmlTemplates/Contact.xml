@@ -1,0 +1,24 @@
+<contact>
+    <CI_ResponsibleParty>
+      <individualName>
+        <gco:CharacterString>Miles Macmillan-Lawler</gco:CharacterString>
+      </individualName>
+      <organisationName>
+        <gco:CharacterString>GRID-Arendal</gco:CharacterString>
+      </organisationName>
+      <contactInfo>
+        <CI_Contact>
+          <address>
+            <CI_Address>
+              <electronicMailAddress>
+                <gco:CharacterString>Miles.Macmillan-Lawler@grida.no</gco:CharacterString>
+              </electronicMailAddress>
+            </CI_Address>
+          </address>
+        </CI_Contact>
+      </contactInfo>
+      <role>
+        <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="custodian" codeSpace="ISOTC211/19115">custodian</CI_RoleCode>
+      </role>
+    </CI_ResponsibleParty>
+  </contact>

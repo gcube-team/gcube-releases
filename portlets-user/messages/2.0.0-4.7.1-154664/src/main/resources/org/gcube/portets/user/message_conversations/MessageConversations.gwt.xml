@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='MessageConversations'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Inherit the default GWT style sheet. You can change -->
+	<!-- the theme of your GWT application by uncommenting -->
+	<!-- any one of the following lines. -->
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
+	<inherits name='org.gcube.portlets.widgets.wsexplorer.WorkspaceExplorer' />
+	<!-- Other module inherits -->
+	<!-- GWT Material -->
+	<inherits name="gwt.material.design.GwtMaterialWithJQueryDebug" />
+
+	<!--Inherit the GCubeClientContext widget code -->
+	<inherits name='org.gcube.portal.clientcontext.GCubeClientContext' />
+	<inherits name="gwt.material.design.addins.GwtMaterialAddins" />
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portets.user.message_conversations.client.MessageConversations' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

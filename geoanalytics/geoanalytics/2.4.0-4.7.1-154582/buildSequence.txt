@@ -1,0 +1,13 @@
+clustermanager
+utilities
+geoanalytics-dataaccess-model
+geoanalytics-common
+geoanalytics-dataaccess-model-dao
+geoanalytics-datataccess-geoserverbridge
+geoanalytics-dataaccess-geoserverbridge-gsmanager
+datatransfer-objects
+servicelayer-commons
+GeospatialOperationService
+geoanalytics-import
+viewbuilders
+geoanalytics

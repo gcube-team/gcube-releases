@@ -1,0 +1,40 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-access.obis-spd-plugin.1-8-3" date="2017-02-01">
+		<Change>moved to obis web service instead of direct connection to the db</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.obis-spd-plugin.1-8-2" date="2013-11-28">
+		<Change>Added more basis of record</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.obis-spd-plugin.1-8-1" date="2013-11-28">
+		<Change> Added field SNAutorship and Dataset to occurrence points</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.obis-spd-plugin.1-7-0" date="2013-07-18">
+		<Change> Sync with spd-model-library changes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.obis-spd-plugin.1-6-0" date="2013-04-30">
+		<Change> #1533: Obis</Change>
+		<Change> Sync with service changes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.obis-spd-plugin.1-5-0" date="2013-03-05">
+		<Change> #547: Obis plugin occurrence point retrieving failure</Change>
+	</Changeset>	
+	<Changeset component="org.gcube.data-access.obis-spd-plugin.1-4-0" date="2013-01-17">
+		<Change>#1090: Obis plugin have to be synchronized with SPD service changes</Change>
+		<Change>Added RR decription</Change>
+	</Changeset>		
+	<Changeset component="org.gcube.data-access.obis-spd-plugin.1-3-0" date="2012-11-30">
+		<Change>Enabled plugin cache provided by the plugin framework</Change> 
+		<Change>Fixed wrong PS initialization in Plugin Session</Change>
+		<Change>Synchronized changes with spd service</Change>
+		<Change>fixed #496: Too many connections from Obis plugin to Postgres</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.obis-spd-plugin.1-2-0" date="2012-10-18"> 
+		<Change>Synchronized changes with spd service</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.obis-spd-plugin.1-1-0" date="2012-09-07"> 
+		<Change>Synchronized changes with spd service</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.obis-spd-plugin.1-0-0" date="2012-05-04"> 
+		<Change>obis plugin for species product discovery release</Change>
+	</Changeset> 
+</ReleaseNotes>

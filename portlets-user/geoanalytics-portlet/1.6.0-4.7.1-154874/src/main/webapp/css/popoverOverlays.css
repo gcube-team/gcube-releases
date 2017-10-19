@@ -1,0 +1,116 @@
+div#DecisionSupportSystem div.ol-overlay-container {
+	width: 140px;
+	/* height: 290px; */
+	margin-bottom: 21px;
+	display: inline;
+	margin-bottom: 15px;
+}
+div#DecisionSupportSystem div#overlayForSingleClickingOnMapContainer{
+    /* width: 100%; */
+    padding-bottom: 0px;
+    display: inline-block;
+    /* border-radius: 7px; */
+}
+div#DecisionSupportSystem div#overlayForSingleClickingOnMap {
+    background-color: transparent;
+    background-color: transparent;
+    top: -62px;
+    left: -34px;
+    /* display: block; */
+    /* padding-bottom: 15px; */
+}
+div#DecisionSupportSystem div#popoverTitleContainer{
+	/* padding: 20px 20px 0px 20px; */
+	background: #fff;
+	background-color: #fff;
+	border-radius: 7px;
+	width: 270px;
+}
+div#DecisionSupportSystem div#popoverMapPin {
+	background-image: url("../img/pin-to-map.png");
+	background-size: 22px 22px;
+	background-repeat: no-repeat;
+	margin: 0px;
+	width: 28px;
+	float: right;
+}
+div#DecisionSupportSystem div#closePopover{
+	background-image: url("../img/x-close.png");
+	background-size: 15px 15px;
+	background-repeat: no-repeat;
+	float: right;
+}
+div#DecisionSupportSystem	div#closePopover:hover{
+	color: rgb(2,113,190);
+	cursor: pointer;
+}
+div#DecisionSupportSystem div#popoverBodyContainingInfo {
+	padding: inline;
+}
+div#DecisionSupportSystem div.popoverInfoRowLabel {
+	text-align: left;
+	padding-left: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+div#DecisionSupportSystem div.popoverInfoRowData {
+	text-align: left;
+	font-weight: bold;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+div#DecisionSupportSystem div#coordsOnPopoverTitle {
+	font-weight: bold;
+}
+div#DecisionSupportSystem div.viewAllContainer {
+	text-align: center;
+	pointer: cursor;
+	padding-bottom: 15px;
+}
+div#DecisionSupportSystem button#popoverInfoViewAll {
+	padding: 5px 15px;
+	background:rgb(2,113,190);
+	background-color:rgb(2,113,190);
+	border: none;
+	border-radius: 7px;
+	color: rgb(255,255,255);
+	margin-right: .3em;
+	float: right;
+}
+div#DecisionSupportSystem button#popoverInfoViewAll:hover {
+	background: #4CB5D2;
+    background-color: #4CB5D2;	
+}
+div#DecisionSupportSystem a#popoverInfoViewAll {
+	color: gray;
+	cursor: pointer;
+	text-decoration: underline;
+}
+div#DecisionSupportSystem div#overlayForSingleClickingOnMapContainer:after {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid rgb(255,255,255);
+    /* bottom: -20px; */
+    content: '';
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    color: #fff;
+    pointer-events: none;
+}
+div#DecisionSupportSystem div#popoverUpperSection {
+	border-top-right-radius: 7px;
+	border-top-left-radius: 7px;
+	color: rgb(255,255,255);
+	padding: 10px 2px 10px 10px;
+	background: rgb(1,154,211);
+	background-color: rgb(1,154,211);
+}
+div#DecisionSupportSystem div.popoverInfoRow {/* padding: 0px 10px; */}
+div#DecisionSupportSystem div.popoverInfoRow:first-of-type div.popoverInfoRowLabel,
+	div#DecisionSupportSystem div.popoverInfoRow:first-of-type div.popoverInfoRowData {
+	padding-top: 15px;
+	padding-bottom: 10px;
+}

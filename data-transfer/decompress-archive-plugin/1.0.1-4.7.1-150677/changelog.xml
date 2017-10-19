@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="decompress-archive-plugin-1.0.0" date="2016-10-21">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="decompress-archive-plugin-1.0.1" date="2016-05-21">
+		<Change>Model change fix</Change>
+	</Changeset>
+</ReleaseNotes>
