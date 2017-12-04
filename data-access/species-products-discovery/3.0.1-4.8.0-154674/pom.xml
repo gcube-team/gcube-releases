@@ -1,0 +1,286 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.gcube.data.spd</groupId>
+	<artifactId>species-products-discovery</artifactId>
+	<version>3.0.1-4.8.0-154674</version>
+	<packaging>war</packaging>
+	<name>species product discovery</name>
+	
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-smartgears-bom</artifactId>
+				<version>2.0.1-4.8.0-148595</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.glassfish.jersey</groupId>
+				<artifactId>jersey-bom</artifactId>
+				<version>2.23.2</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<properties>
+		<webappDirectory>${project.basedir}/src/main/webapp/WEB-INF</webappDirectory>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-smartgears</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-smartgears-app</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.resources</groupId>
+			<artifactId>registry-publisher</artifactId>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- GEO -->
+
+		<dependency>
+			<groupId>org.gcube.spatial.data</groupId>
+			<artifactId>gis-interface</artifactId>
+			<version>2.4.1-4.8.0-150732</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>ehcache</artifactId>
+					<groupId>net.sf.ehcache</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-core</artifactId>
+			<version>2.6.1-4.8.0-142241</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-wrapper</artifactId>
+			<version>2.4.1-4.8.0-142243</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>csv4j</artifactId>
+			<version>1.2.0-4.8.0-130659</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>spql-parser</artifactId>
+			<version>2.2.1-4.8.0-141647</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.9.5</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<!-- if your container implements Servlet API older than 3.0, use "jersey-container-servlet-core" -->
+			<artifactId>jersey-container-servlet</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.websocket</groupId>
+			<artifactId>javax.websocket-api</artifactId>
+			<version>1.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache-core</artifactId>
+			<version>2.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources</groupId>
+			<artifactId>common-gcore-resources</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>ic-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>having-engine</artifactId>
+			<version>1.0.1-4.8.0-142495</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>spd-plugin-framework</artifactId>
+			<version>3.1.0-4.8.0-144690</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>spd-model</artifactId>
+			<version>3.2.0-4.8.0-144270</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>gbif-spd-plugin</artifactId>
+			<version>1.9.0-4.8.0-142049</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>obis-spd-plugin</artifactId>
+			<version>1.8.3-4.8.0-141985</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>worms-spd-plugin</artifactId>
+			<version>1.8.0-4.8.0-142132</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>wordss-spd-plugin</artifactId>
+			<version>1.4.0-4.8.0-142002</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>brazilian-flora-spd-plugin</artifactId>
+			<version>1.8.0-4.8.0-142401</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.spd</groupId>
+			<artifactId>catalogue-of-life-spd-plugin</artifactId>
+			<version>1.8.0-4.8.0-142404</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>8.4-702.jdbc4</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${artifactId}</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<phase>process-resources</phase>
+						<configuration>
+							<outputDirectory>${webappDirectory}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+<!-- 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<warName>species-products-discovery</warName>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>  -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	
+</project>

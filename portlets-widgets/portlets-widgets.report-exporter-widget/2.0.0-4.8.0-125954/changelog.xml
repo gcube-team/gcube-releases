@@ -1,0 +1,7 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.portlets.widgets.exporter.Report.1-1-0" date="2013-10-21">
+<Change>Ported to Feather Weight Stack</Change>
+<Change>Removed GCF Dependency</Change>
+<Change>Logging with sl4j Enabled</Change>
+</Changeset>
+</ReleaseNotes>

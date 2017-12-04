@@ -1,0 +1,28 @@
+21:01:08,645 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.2.15) for API "JDO" using JRE "1.7"
+21:01:08,919 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/gbuilder/workspace.org.gcube.4-8-0-gcore/org.gcube.data-transfer.scheduler-db/target/classes/org/gcube/datatransfer/scheduler/db/model/TransferObject.class" with enhanced definition
+21:01:08,919 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (PersistenceCapable) : org.gcube.datatransfer.scheduler.db.model.TransferObject
+21:01:08,927 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/gbuilder/workspace.org.gcube.4-8-0-gcore/org.gcube.data-transfer.scheduler-db/target/classes/org/gcube/datatransfer/scheduler/db/model/ManuallyScheduled.class" with enhanced definition
+21:01:08,927 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (PersistenceCapable) : org.gcube.datatransfer.scheduler.db.model.ManuallyScheduled
+21:01:08,933 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/gbuilder/workspace.org.gcube.4-8-0-gcore/org.gcube.data-transfer.scheduler-db/target/classes/org/gcube/datatransfer/scheduler/db/model/AccessInterface.class" with enhanced definition
+21:01:08,934 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (PersistenceCapable) : org.gcube.datatransfer.scheduler.db.model.AccessInterface
+21:01:08,940 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/gbuilder/workspace.org.gcube.4-8-0-gcore/org.gcube.data-transfer.scheduler-db/target/classes/org/gcube/datatransfer/scheduler/db/model/DataStorageQuota.class" with enhanced definition
+21:01:08,941 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (PersistenceCapable) : org.gcube.datatransfer.scheduler.db.model.DataStorageQuota
+21:01:08,962 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/gbuilder/workspace.org.gcube.4-8-0-gcore/org.gcube.data-transfer.scheduler-db/target/classes/org/gcube/datatransfer/scheduler/db/model/Transfer.class" with enhanced definition
+21:01:08,962 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (PersistenceCapable) : org.gcube.datatransfer.scheduler.db.model.Transfer
+21:01:08,990 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/gbuilder/workspace.org.gcube.4-8-0-gcore/org.gcube.data-transfer.scheduler-db/target/classes/org/gcube/datatransfer/scheduler/db/model/TypeOfSchedule.class" with enhanced definition
+21:01:08,991 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (PersistenceCapable) : org.gcube.datatransfer.scheduler.db.model.TypeOfSchedule
+21:01:09,002 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/gbuilder/workspace.org.gcube.4-8-0-gcore/org.gcube.data-transfer.scheduler-db/target/classes/org/gcube/datatransfer/scheduler/db/model/PeriodicallyScheduled.class" with enhanced definition
+21:01:09,002 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (PersistenceCapable) : org.gcube.datatransfer.scheduler.db.model.PeriodicallyScheduled
+21:01:09,014 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/gbuilder/workspace.org.gcube.4-8-0-gcore/org.gcube.data-transfer.scheduler-db/target/classes/org/gcube/datatransfer/scheduler/db/model/Agent.class" with enhanced definition
+21:01:09,015 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (PersistenceCapable) : org.gcube.datatransfer.scheduler.db.model.Agent
+21:01:09,031 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/gbuilder/workspace.org.gcube.4-8-0-gcore/org.gcube.data-transfer.scheduler-db/target/classes/org/gcube/datatransfer/scheduler/db/model/DataSource.class" with enhanced definition
+21:01:09,031 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (PersistenceCapable) : org.gcube.datatransfer.scheduler.db.model.DataSource
+21:01:09,043 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/gbuilder/workspace.org.gcube.4-8-0-gcore/org.gcube.data-transfer.scheduler-db/target/classes/org/gcube/datatransfer/scheduler/db/model/DataStorage.class" with enhanced definition
+21:01:09,044 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (PersistenceCapable) : org.gcube.datatransfer.scheduler.db.model.DataStorage
+21:01:09,051 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/gbuilder/workspace.org.gcube.4-8-0-gcore/org.gcube.data-transfer.scheduler-db/target/classes/org/gcube/datatransfer/scheduler/db/model/AgentStatistics.class" with enhanced definition
+21:01:09,052 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (PersistenceCapable) : org.gcube.datatransfer.scheduler.db.model.AgentStatistics
+21:01:09,063 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/gbuilder/workspace.org.gcube.4-8-0-gcore/org.gcube.data-transfer.scheduler-db/target/classes/org/gcube/datatransfer/scheduler/db/model/TransferOutcome.class" with enhanced definition
+21:01:09,063 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (PersistenceCapable) : org.gcube.datatransfer.scheduler.db.model.TransferOutcome
+21:01:09,071 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/gbuilder/workspace.org.gcube.4-8-0-gcore/org.gcube.data-transfer.scheduler-db/target/classes/org/gcube/datatransfer/scheduler/db/model/TransferTreeOutcome.class" with enhanced definition
+21:01:09,071 (main) INFO  [DataNucleus.Enhancer] - ENHANCED (PersistenceCapable) : org.gcube.datatransfer.scheduler.db.model.TransferTreeOutcome
+21:01:09,072 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 13 classes. Timings : input=209 ms, enhance=212 ms, total=421 ms. Consult the log for full details

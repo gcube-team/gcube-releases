@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+
+.ribbon {
+	line-height: 13px;
+	font-size: 11px;	
+}
+#mainPanelLayout_AuthPortlet {
+	background-color: #d9e2e8;
+	border-radius: 4px;
+}
+
+.tab-content {
+	overflow: hidden;
+	border-right: 1px solid;
+	border-left: 1px solid #888;
+	/* padding-top: 10px; */
+	padding: 10px 5px 5px 5px;
+	border-bottom: 1px solid #888;
+	border-radius: 4px;
+}
+

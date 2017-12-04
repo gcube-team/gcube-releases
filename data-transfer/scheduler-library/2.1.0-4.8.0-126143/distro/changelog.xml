@@ -1,0 +1,19 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-transfer.scheduler-library.1-0-0" date="2012-09-05" >
+			<Change>First release of the component</Change>
+	</Changeset>
+		<Changeset component="org.gcube.data-transfer.scheduler-library.1.1.0"  date="2013-11-01">>
+			<Change>Moved to the new FWS stack</Change>
+			<Change>Implemented Support for transfers to DataStorages</Change>
+			<Change>Implemented Management interface methods to get Agent statistics</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.scheduler-library.1.2.0"  date="2013-04-17">>
+			<Change>More operation in Management for contacting is interface</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.scheduler-library.2-0-0"  date="2013-07-09">>
+			<Change>Added operations for Async Tree transfers</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.scheduler-library.2-1-0"  date="2013-10-22">>
+			<Change>fixed pom deps</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,19 @@
+<Resource>
+       
+   <Profile>
+        
+      <SecondaryType>SDMX</SecondaryType>
+        
+      <Name>TableAssociations</Name>
+        
+      <Description>Test Resource</Description>
+        
+      <Body>
+     	<associations> 
+     
+	  	</associations>
+      </Body>
+    
+   </Profile>
+
+</Resource>

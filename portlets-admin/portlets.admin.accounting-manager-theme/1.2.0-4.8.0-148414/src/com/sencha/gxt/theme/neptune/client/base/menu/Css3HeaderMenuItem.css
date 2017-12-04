@@ -1,0 +1,36 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def borderWidth value('theme.menu.header.border.toString');
+@def borderStyle value('theme.menu.header.border.style');
+@def borderColor value('theme.menu.header.border.color');
+
+@def backgroundColor value('theme.menu.header.backgroundColor');
+
+@def textFamily value('theme.menu.header.itemText.family');
+@def textSize value('theme.menu.header.itemText.size');
+@def textColor value('theme.menu.header.itemText.color');
+@def textWeight value('theme.menu.header.itemText.weight');
+
+@def padding value('theme.menu.header.itemPadding.toString');
+
+
+.menuText {
+  border-color: borderColor;
+  border-style: borderStyle;
+  border-width: borderWidth;
+
+  background-color: backgroundColor;
+
+  font-family: textFamily;
+  font-size: textSize;
+  font-weight: textWeight;
+  color: textColor;
+
+  display: block;
+  padding: padding;
+}

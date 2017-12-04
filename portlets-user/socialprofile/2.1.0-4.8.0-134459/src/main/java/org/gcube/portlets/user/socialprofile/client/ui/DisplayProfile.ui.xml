@@ -1,0 +1,75 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<g:HTMLPanel ui:field="mainPanel">
+	<b:Alert visible="false" animation="true" ui:field="ownerSeeingProfileAsVreMemberAlert"></b:Alert>
+		<table class="">
+			<tr>
+				<td width="110px;" align="middle">
+					<a>
+						<g:Image styleName="user-photo"
+							url="" ui:field="avatarImage"/>
+					</a>
+				</td>
+
+				<td valign="top">
+					<div class="user-details">
+						<table>
+							<tr>
+								<td>
+								</td>
+								<td colspan="2">
+									<g:HTML styleName="full-name" ui:field="userFullName"></g:HTML>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<g:HTML height="15px" width="15px" ui:field="editHeadline"></g:HTML>
+								</td>
+								<td>
+									<g:HTML styleName="headline" ui:field="headlineLabel"></g:HTML>
+									<g:TextBox styleName="headline" ui:field="headlineBox"
+										visible="false"></g:TextBox>
+									<div>
+										<g:Button ui:field="saveHead" visible="false">Save</g:Button>
+										<g:Button ui:field="cancelHead" visible="false">Cancel</g:Button>
+									</div>
+								</td>
+								<td>
+									<g:Image height="16px" width="16px" visible="false"
+										ui:field="savingHeadline"></g:Image>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<g:HTML height="15px" width="15px" ui:field="editIsti"></g:HTML>
+								</td>
+								<td>
+									<g:HTML styleName="institution" ui:field="institutionLabel"></g:HTML>
+									<g:TextBox styleName="institution" ui:field="institutionBox"
+										visible="false"></g:TextBox>
+									<div>
+										<g:Button ui:field="saveIsti" visible="false">Save</g:Button>
+										<g:Button ui:field="cancelIsti" visible="false">Cancel</g:Button>
+									</div>
+								</td>
+								<td>
+									<g:Image height="16px" width="16px" visible="false"
+										ui:field="savingIsti"></g:Image>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="user-details">
+						<g:Button ui:field="messageButton" visible="false">Private
+							Message</g:Button>
+						<g:Button ui:field="importButton" visible="false">Import from
+							LinkedIn</g:Button>
+						<g:Button ui:field="editButton" visible="false">Edit Profile
+							Manually</g:Button>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

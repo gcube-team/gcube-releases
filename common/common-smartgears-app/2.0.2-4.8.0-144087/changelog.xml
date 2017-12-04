@@ -1,0 +1,11 @@
+<ReleaseNotes>
+<Changeset component="common-smartgears-app-2.0.2-4.8.0-144087" date="2017-02-22">
+		<Change>Chaching for proxing of AppManager objects added</Change>
+	</Changeset>
+	<Changeset component="org.gcube.core.common-smartgears-app.2-0-0" date="2015-01-10">
+		<Change>Added support for initialization using security token</Change>
+	</Changeset>
+	<Changeset component="org.gcube.core.common-smartgears-app.1-0-0" date="2013-10-24">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

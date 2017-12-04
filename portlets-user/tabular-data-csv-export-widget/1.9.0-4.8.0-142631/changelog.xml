@@ -1,0 +1,46 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.tabular-data-csv-export-widget.1-9-0"
+		date="2015-10-15">
+		<Change>Updated to new PortalContext [ticket #6548]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-csv-export-widget.1-8-0"
+		date="2015-10-15">
+		<Change>Added support to WorkspaceExplorer [ticket #428]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-csv-export-widget.1-7-0"
+		date="2015-07-03">
+		<Change>Fixed Layout</Change>
+		<Change>Updated dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-csv-export-widget.1-6-0"
+		date="2015-04-30">
+		<Change>Updated dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-csv-export-widget.1-5-0"
+		date="2015-02-16">
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-csv-export-widget.1-4-0"
+		date="2014-10-31">
+		<Change>Added View ColumnExport</Change>
+		<Change>Fixed Final and Lock error</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-csv-export-widget.1-3-0"
+		date="2014-09-12">
+		<Change>Updated monitor</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-csv-export-widget.1-2-0"
+		date="2014-06-05">
+		<Change>Updated Export</Change>
+		<Change>Updated Pom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-csv-export-widget.1-1-0"
+		date="2014-04-04">
+		<Change>Fixed Export On Workspace</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-csv-export-widget.1-0-0"
+		date="2014-02-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

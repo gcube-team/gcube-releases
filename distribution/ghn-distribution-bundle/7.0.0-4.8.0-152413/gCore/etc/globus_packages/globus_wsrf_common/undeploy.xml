@@ -1,0 +1,86 @@
+<project default="undeploy" basedir=".">
+
+
+<property environment="env"/>
+<property file="build.properties"/>
+<property file="${user.home}/build.properties"/>
+<property name="env.GLOBUS_LOCATION" value="../../.."/>
+<property name="deploy.dir" value="${env.GLOBUS_LOCATION}"/>
+
+
+<target name="undeploy">
+  <delete verbose="true" dir="${deploy.dir}/etc/globus_wsrf_common"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/LICENSE-DOM.html"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/LICENSE-SAX.html"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/RSA.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/addressing-1.0.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/addressing-1.0.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/axis-url.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/axis.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/axis.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/bootstrap.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/bouncycastle.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/cog-axis.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/cog-jglobus.contrib.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/cog-jglobus.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/cog-tomcat.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/cog-url.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/commonj.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/commonj.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/commons-beanutils.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/commons-beanutils.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/commons-cli-2.0.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/commons-cli-2.0.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/commons-collections-3.0.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/commons-collections-3.0.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/commons-digester.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/commons-digester.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/commons-discovery.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/commons-discovery.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/commons-logging.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/commons-logging.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/concurrent.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/concurrent.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/cryptix-asn1.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/cryptix.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/cryptix.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/cryptix32.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/jaxrpc.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/jaxrpc.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/jce-jdk13-125.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/jgss.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/log4j-1.2.8.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/log4j-1.2.8.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/naming-common.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/naming-factory.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/naming-java.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/naming-resources.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/naming.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/opensaml.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/opensaml.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/puretls.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/puretls.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/resolver.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/resolver.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/saaj.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/saaj.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/servlet.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/servlet.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/sun-u.c.license.pdf.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/wsdl4j.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/wsdl4j.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/wsrf_common.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/wsrf_provider_jce.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/wss4j.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/wss4j.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/xalan.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/xalan.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/xerces.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/xercesImpl.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/xml-apis.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/xml-apis.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/licenses/xmlsec.LICENSE"/>
+  <delete verbose="true" file="${deploy.dir}/lib/xmlsec.jar"/>
+  <delete verbose="true" dir="${deploy.dir}/share/globus_wsrf_common"/>
+</target>
+</project>

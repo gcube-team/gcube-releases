@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Resource>
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>${description}</Description>
+		<Class>${serviceClass}</Class>
+		<Name>${artifactId}</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Main>
+				<Description>${description}</Description>
+				<Name>${artifactId}</Name>
+				<Version>${version}</Version>
+				<MavenCoordinates>
+					<groupId>${groupId}</groupId>
+					<artifactId>${artifactId}</artifactId>
+					<version>${version}</version>
+				</MavenCoordinates>
+				<Files>
+					<File>${build.finalName}.${project.packaging}</File>
+				</Files>
+			</Main>
+		</Packages>
+	</Profile>
+</Resource>

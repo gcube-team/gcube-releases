@@ -1,0 +1,48 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.tabular-data-open-widget.2-9-0" date="2015-10-15">
+		<Change>Fixed button visibility</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-open-widget.2-8-0" date="2015-07-03">
+		<Change>Added Information Dialog</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-open-widget.2-7-0" date="2015-04-30">
+		<Change>Updated dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-open-widget.2-6-0" date="2015-02-16">
+		<Change>Added lock informations</Change>
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+		<Change>Fixed Creation Date in TabResourcesSelectionPanel [issue #3149]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-open-widget.2-5-0"
+		date="2014-10-31">
+		<Change>Fixed Final and Lock errors</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-open-widget.2-4-0"
+		date="2014-09-12">
+		<Change>Updated grid column</Change>
+		<Change>Updated wizard icon</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-open-widget.2-3-0"
+		date="2014-06-05">
+		<Change>Added Owner</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-open-widget.2-2-0"
+		date="2014-06-05">
+		<Change>Updated Open</Change>
+		<Change>Updated Pom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-open-widget.2-1-0"
+		date="2014-04-04">
+		<Change>Made faster recovery of the tabular resources</Change>
+		<Change>Added tabular resources type on selection panel</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-open-widget.2-0-0"
+		date="2014-02-01">
+		<Change>Updated to service client library</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-open-widget.1-0-0"
+		date="2013-10-18">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

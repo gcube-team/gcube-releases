@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="GCubeCkanDataCatalog">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.gcubeckan.gcubeckandatacatalog.GCubeCkanDataCatalog' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/GCubeCkanDataCatalog/greet" class="org.gcube.portlets.gcubeckan.gcubeckandatacatalog.server.GreetingServiceImpl" />
+
+</module>

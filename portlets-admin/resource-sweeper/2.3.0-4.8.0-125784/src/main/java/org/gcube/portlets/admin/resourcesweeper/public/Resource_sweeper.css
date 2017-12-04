@@ -1,0 +1,12 @@
+.sweeper-dialog-icon {
+	background-image: url(sweep-imgs/sweeper2.png) !important;
+}
+.dead-ghn-icon {
+	background-image: url(sweep-imgs/death.png) !important;
+}
+.expired-ghn-icon {
+	background-image: url(sweep-imgs/expired.png) !important;
+}
+.orphan-runninginstance-icon {
+	background-image: url(sweep-imgs/orphan.png) !important;
+}

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Portions of this file Copyright 1999-2005 University of Chicago
+Portions of this file Copyright 1999-2005 The University of Southern California.
+
+This file or a portion of this file is licensed under the
+terms of the Globus Toolkit Public License, found at
+http://www.globus.org/toolkit/download/license.html.
+If you redistribute this file, with or without
+modifications, you must include this notice in the file.
+-->
+<!--
+    MDS Aggregator Object Types
+-->
+
+<xsd:schema 
+    xmlns:asgt="http://mds.globus.org/aggregator/types"
+    xmlns:metrics="http://mds.globus.org/metrics/2004/09"
+    xmlns:wssg=
+      "http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ServiceGroup-1.2-draft-01.xsd"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"          
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"  
+    xmlns:wsnt="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.xsd"         
+    targetNamespace="http://mds.globus.org/aggregator/types"
+    xmlns:tns="http://mds.globus.org/aggregator/types"  
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+    <xsd:import
+        namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" 
+        schemaLocation="../../ws/addressing/WS-Addressing.xsd"  />
+         
+    <xsd:import 
+        namespace=
+        "http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+        schemaLocation="../../wsrf/properties/WS-ResourceProperties.xsd" />
+        
+   <xsd:import namespace=
+      "http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ServiceGroup-1.2-draft-01.xsd"
+        schemaLocation="../../wsrf/servicegroup/WS-ServiceGroup.xsd"/>
+
+   <xsd:import namespace=
+      "http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.xsd"
+        schemaLocation="../../wsrf/notification/WS-BaseN.xsd"/>
+
+   <xsd:import namespace="http://mds.globus.org/metrics/2004/09" 
+               schemaLocation="../usefulrp/metrics.xsd" />
+
+        
+   <!-- 
+       Generic aggregation holder types. 
+   -->
+  <xsd:complexType name="AggregatorConfig">
+    <xsd:annotation><xsd:documentation>
+        This type encapsulates multiple arbitrary aggregator configuration data
+    </xsd:documentation></xsd:annotation>
+    <xsd:sequence>
+       <xsd:any namespace="##any" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="AggregatorData">
+    <xsd:annotation><xsd:documentation>
+        This type encapsulates multiple arbitrary aggregated content data.
+    </xsd:documentation></xsd:annotation>
+    <xsd:sequence>
+       <xsd:any namespace="##any" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <!-- since GT 4.0.0 -->
+  <xsd:complexType name="AggregatorError">
+    <xsd:annotation><xsd:documentation>
+        This type encapsulates multiple arbitrary aggregated error data.
+    </xsd:documentation></xsd:annotation>
+    <xsd:sequence>
+       <xsd:any namespace="##any" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="AggregatorContent">
+    <xsd:annotation><xsd:documentation>
+        This type encapsulates the Aggregator's ServiceGroup content element, 
+        which is composed of three xsd:any arrays, the first storing the aggregator 
+        configuration, the second storing the aggregated data, and the third, optional
+        element (set by the server only) representing any errors that might have 
+        occurred during aggregation.  
+    </xsd:documentation></xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="AggregatorConfig"
+                   type="tns:AggregatorConfig" 
+                   minOccurs="1" maxOccurs="1"/>    
+      <xsd:element name="AggregatorData"
+                   type="tns:AggregatorData"
+                   minOccurs="1" maxOccurs="1"/>
+      <!-- since GT 4.0.0 -->                   
+      <xsd:element name="AggregatorError"
+                   type="tns:AggregatorError"
+                   minOccurs="0" maxOccurs="1"/>                              
+    </xsd:sequence>
+  </xsd:complexType>                    
+   
+   <!-- 
+        Parameter types for aggregation using polled queries
+   -->
+  <xsd:complexType name="AggregatorPollType">
+    <xsd:sequence>
+      <xsd:element name="PollIntervalMillis"
+                   type="xsd:int"
+                   minOccurs="1" maxOccurs="1"/>              
+    </xsd:sequence>
+  </xsd:complexType> 
+  
+  <xsd:complexType name="GetResourcePropertyPollType">
+     <xsd:complexContent>
+      <xsd:extension base="tns:AggregatorPollType">
+        <xsd:sequence>
+        <xsd:element name="ResourcePropertyName"
+                   type="xsd:QName" 
+                   minOccurs="1" maxOccurs="1"/>             
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>  
+  </xsd:complexType>
+
+  <xsd:complexType name="GetMultipleResourcePropertiesPollType">
+    <xsd:complexContent>
+      <xsd:extension base="tns:AggregatorPollType">
+        <xsd:sequence>
+        <xsd:element name="ResourcePropertyNames"
+                   type="xsd:QName" 
+                   minOccurs="1" maxOccurs="unbounded"/>             
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>  
+  </xsd:complexType>
+        
+  <xsd:complexType name="QueryResourcePropertiesPollType">
+    <xsd:complexContent>
+      <xsd:extension base="tns:AggregatorPollType">
+        <xsd:sequence>
+        <xsd:element name="QueryExpression"
+                   type="wsrp:QueryExpressionType" 
+                   minOccurs="1" maxOccurs="1"/>            
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>  
+  </xsd:complexType>    
+
+   <xsd:complexType name="ExecutionPollType">
+     <xsd:complexContent>
+      <xsd:extension base="tns:AggregatorPollType">
+        <xsd:sequence>
+        <xsd:element name="ProbeName"
+                   type="xsd:QName" 
+                   minOccurs="1" maxOccurs="1"/>             
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>  
+  </xsd:complexType>
+
+ 
+   <!-- 
+        Parameter types for aggregation using subscription
+   -->
+ <xsd:complexType name="AggregatorSubscriptionType">
+    <xsd:sequence>
+      <xsd:element name="TopicExpression" 
+                   type="wsnt:TopicExpressionType" 
+                   minOccurs="1" maxOccurs="1" />
+       <xsd:element name="Precondition" 
+                   type="wsrp:QueryExpressionType"
+                   minOccurs="0" maxOccurs="1" />
+      <xsd:element name="Selector"
+                   type="wsrp:QueryExpressionType"
+                   minOccurs="0" maxOccurs="1" />
+      <xsd:element name="SubscriptionPolicy" 
+                   type="xsd:anyType" 
+                   minOccurs="0" maxOccurs="1" />
+      <xsd:element name="InitialTerminationTime" 
+                   type="xsd:dateTime"
+                   minOccurs="0" maxOccurs="1" />         
+    </xsd:sequence>
+  </xsd:complexType>   
+
+
+  <!-- schema defs for port type -->
+
+       <xsd:complexType name="PairedKeyType">
+          <xsd:sequence>
+            <xsd:element name="GroupKey"
+                         type="xsd:string"
+                         minOccurs="1" maxOccurs="1" />
+            <xsd:element name="EntryKey"
+                         type="xsd:string"
+                         minOccurs="1" maxOccurs="1"/>
+          </xsd:sequence>
+        </xsd:complexType>
+
+       <xsd:element name="RegistrationCount" type="metrics:accumulator" />
+
+ 
+
+
+</xsd:schema>
+
+
+
+

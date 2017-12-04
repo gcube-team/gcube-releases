@@ -1,0 +1,89 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def trackBackground value('theme.field.slider.trackBackgroundColor');
+@def trackHeight value('theme.field.slider.trackHeight', 'px');
+@def trackBorderColor value('theme.field.slider.trackBorder.color');
+@def trackBorderStyle value('theme.field.slider.trackBorder.style');
+@def trackBorderWidth value('theme.field.slider.trackBorder.toString');
+@def trackRadius value('theme.field.slider.trackRadius', 'px');
+
+@def thumbWidth value('theme.field.slider.thumbWidth', 'px');
+@def thumbHeight value('theme.field.slider.thumbHeight', 'px');
+@def thumbRadius value('theme.field.slider.thumbRadius', 'px');
+@def thumbBackgroundColor value('theme.field.slider.thumbBackgroundColor');
+@def thumbBorderColor value('theme.field.slider.thumbBorder.color');
+@def thumbBorderStyle value('theme.field.slider.thumbBorder.style');
+@def thumbBorderWidth value('theme.field.slider.thumbBorder.toString');
+
+
+.slider {
+  outline: 0 none;
+}
+.track {
+  background: trackBackground;
+  border-radius: trackRadius;
+
+  border-style: trackBorderStyle;
+  border-color: trackBorderColor;
+  border-width: trackBorderWidth;
+
+  width: 200px;
+  height: trackHeight;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  /*margin-bottom: 20px;*/
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.thumb {
+  background: thumbBackgroundColor;
+
+  border-style: thumbBorderStyle;
+  border-color: thumbBorderColor;
+  border-width: thumbBorderWidth;
+  border-radius: thumbRadius;
+  cursor: pointer;
+  height: thumbHeight;
+  /* margin-left: calc(thumbWidth / -2); -- set by appearance */
+  position: absolute;
+  width: thumbWidth;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.thumbCenter {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: thumbBorderColor;
+  border-radius: thumbRadius;
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  left: 25%;
+  top: 25%;
+  z-index: 3;
+}
+
+.over .thumb {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.drag .thumb {
+  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+

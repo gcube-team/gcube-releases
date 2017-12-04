@@ -1,0 +1,22 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.portlets.widgets.statistical-manager-algorithms.1-3-0"
+		date="2017-02-15">
+		<Change>Removed AccessLogger</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets.widgets.statistical-manager-algorithms.1-2-5"
+		date="2015-11-20">
+		<Change>Integrated Statistical Manager Client Library 2.0</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets.widgets.statistical-manager-algorithms.1-2-4"
+		date="2015-09-28">
+		<Change>Fixed modal</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets.widgets.statistical-manager-algorithms.1-0-0"
+		date="2013-12-12">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,72 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.content-management.storage-manager-core.2-6-1" date="2017-02-01">
+			<Change>fix: bug #5598</Change>
+	</Changeset>
+<Changeset component="org.gcube.content-management.storage-manager-core.2-6-0" date="2016-11-03">
+			<Change>Added method for retrieving the relative remote path by id</Change>		
+	</Changeset>
+<Changeset component="org.gcube.content-management.storage-manager-core.2-5-0" date="2016-09-04">
+			<Change>fix: bug #5625</Change>
+			<Change>added suffix to url for object stored on VolatileArea</Change>
+			
+	</Changeset>
+	<Changeset component="org.gcube.content-management.storage-manager-core.2-4-1" date="2016-03-01">
+			<Change>fix: http url with encode resolution</Change>
+			<Change>fix-pom: downgrade commons-io to version 1.4</Change>
+			<Change>change: mongo authentication mechanism from CR to negotiation</Change>		
+	</Changeset>
+	<Changeset component="org.gcube.content-management.storage-manager-core.2-4-0" date="2016-01-17">
+			<Change>clean code</Change>	
+			<Change>added getHttpUrl method</Change>		
+	</Changeset>
+	<Changeset component="org.gcube.content-management.storage-manager-core.2-3-0" date="2015-10-21">
+			<Change>code refactoring: new class MongoIO</Change>
+			<Change>move operation alternative version: using fs.files collection</Change>
+			<Change>add mimeType manager</Change>
+			<Change>add retry mechanism when retrieving remote objects</Change>
+			<Change>upgrade mongo-java-driver library to version 3.0.0</Change>		
+	</Changeset>
+	<Changeset component="org.gcube.content-management.storage-manager-core.2-2-1" date="2015-07-01">
+			<Change>enable smp uri without payload</Change>
+	</Changeset>
+	<Changeset component="org.gcube.content-management.storage-manager-core.2.2.0" date="2015-04-21">
+			<Change>change smp protocol</Change>
+			<Change>id as remote identifier for RFile methods</Change>
+		</Changeset>
+	<Changeset component="org.gcube.content-management.storage-manager-core.2.1.2" date="2014-04-01">
+			<Change>added methods for folder and user storage calculation</Change>
+		</Changeset>
+	<Changeset component="org.gcube.content-management.storage-manager-core.2.1.1" date="2014-04-01">
+			<Change>removed dependency from slf4j-noop</Change>
+		</Changeset>
+	<Changeset component="org.gcube.content-management.storage-manager-core.2.1.0" date="2014-04-01">
+			<Change>added metadata for every remote file in agreement with storage-manager-trigger module</Change>
+		</Changeset>
+	<Changeset component="org.gcube.content-management.storage-manager-core.2.0.4" date="2013-10-24">
+			<Change>Integration with new gCube release 2.17.0 version system</Change>
+			<Change>added operations on folder</Change>
+		</Changeset>
+	<Changeset component="org.gcube.content-management.storage-manager-core.2.0.3" date="2013-10-24">
+			<Change>Integration with new gCube release 2.17.0 version system</Change>
+			<Change>added mongoOption for reinforce nwtwork failover  #245 openBio</Change>
+		</Changeset>
+		<Changeset component="storage-manager-core-2.6.1-4.8.0-142241" date="2013-05-29">
+			<Change>Integration with new gCube release 2.15.0 version system</Change>
+			<Change>bugfix incident on pending connections #606</Change>
+		</Changeset>
+		<Changeset component="storage-manager-core-2.6.1-4.8.0-142241" date="2013-04-19">
+			<Change>Integration with new gCube release 2.14.0 version system</Change>
+			<Change>FWS integration</Change>
+			<Change>added move, copy and link operations</Change>
+		</Changeset>
+		<Changeset component="storage-manager-core-2.6.1-4.8.0-142241" date="2013-01-15">
+			<Change>Integration with new gCube release 2.12.0 version system</Change>
+		</Changeset>
+		<Changeset component="storage-manager-core-2.6.1-4.8.0-142241" date="2012-10-11">
+			<Change>Added VOLATILE area</Change>
+		</Changeset>
+		<Changeset component="storage-manager-core-2.6.1-4.8.0-142241" date="2012-05-04">
+			<Change>First Release</Change>
+		</Changeset>
+</ReleaseNotes>
+

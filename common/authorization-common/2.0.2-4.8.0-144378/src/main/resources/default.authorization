@@ -1,0 +1,1 @@
+<authorization-endpoint priority="10" infrastructure="d4science.research-infrastructures.eu"><host>authorization.d4science.org</host><secure>false</secure><port>80</port></authorization-endpoint>

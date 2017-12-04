@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.accounting.accounting-aggregator-se-plugin.1.1.0" date="2017-12-01">
+		<Change>Renamed the aggregation modes #9023</Change>
+		<Change>Separated Aggregation from Recovery #9420</Change>
+		<Change>Supporting multiple concurrent launch #9421</Change>
+		<Change>Added parameters to avoid to write on buckets during backup or compaction time #9422</Change>
+		<Change>Storing Aggregation/Recovery evolution on a management bucket in CouchBase #9423</Change>
+		<Change>Aggregation get last aggregation day from management bucket #9424</Change>
+		<Change>Recovery restart aggregation which didn't terminate getting the informations from management bucket #9425</Change>
+		<Change>Added support to read original records from a bucket and to publish aggregated in a different one #9556</Change>
+		<Change>Added possibility to specify a range for aggregation and recovery</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-aggregator-se-plugin.1.0.1" date="2017-03-16">
+		<Change>Enhached logging</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-aggregator-se-plugin.1.0.0" date="2016-11-07">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

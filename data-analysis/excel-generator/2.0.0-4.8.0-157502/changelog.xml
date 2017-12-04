@@ -1,0 +1,8 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data.analysis.excel-generator.2.0.0-4.8.0-157502" date="2017-10-23"> 
+		<Change>Support for SDMX Complete excel</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data.analysis.excel-generator.2.0.0-4.8.0-157502" date="2017-06-01"> 
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

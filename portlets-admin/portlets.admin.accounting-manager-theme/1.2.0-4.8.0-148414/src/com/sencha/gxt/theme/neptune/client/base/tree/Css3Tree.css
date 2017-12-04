@@ -1,0 +1,98 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def fontFamily value('theme.tree.text.family');
+@def fontSize value('theme.tree.text.size');
+@def fontWeight value('theme.tree.text.weight');
+@def fontColor value('theme.tree.text.color');
+@def lineHeight value('theme.tree.lineHeight');
+
+@def iconMargin value('theme.tree.iconMargin.toString');
+@def itemHeight value('theme.tree.itemHeight');
+
+@def nodePadding value('theme.tree.nodePadding.toString');
+
+@def dragOverBackgroundColor value('theme.tree.dragOverBackgroundColor');
+@def dropBackgroundColor  value('theme.tree.dropBackgroundColor');
+@def overBackgroundColor   value('theme.tree.overBackgroundColor');
+@def selectedBackgroundColor  value('theme.tree.selectedBackgroundColor');
+
+.tree {
+  cursor: default;
+  -moz-outline: none;
+  -moz-user-focus: none;
+  outline: 0 none;
+  position: relative;
+}
+
+.tree {
+  padding-bottom: 1px;
+}
+
+@if gxt.user.agent ie9 {
+  .tree {
+    min-height: 1%; /* EXTGWT-2764 */
+  }
+}
+
+.node {
+  cursor: default;
+}
+
+.element {
+  white-space: nowrap;
+  height: itemHeight;
+}
+
+.joint {
+  vertical-align: top;
+  margin: iconMargin;
+}
+
+.check {}
+
+.icon {
+  vertical-align: top;
+  margin: iconMargin;
+}
+
+.container {
+  display: none;
+}
+
+.text {
+  white-space: nowrap;
+  text-decoration: none;
+  padding: nodePadding;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0px;
+  font-style: normal;
+  font-size: fontSize;
+  font-weight: fontWeight;
+  font-family: fontFamily;
+  color: fontColor;
+}
+
+.dragOver {
+  background-image: none !important;
+  background-color: dragOverBackgroundColor !important;
+}
+
+
+.over {
+  background-color: overBackgroundColor;
+}
+
+.drop {
+  background-color: dropBackgroundColor;
+}
+
+.selected {
+  background-color: selectedBackgroundColor !important;
+}
+

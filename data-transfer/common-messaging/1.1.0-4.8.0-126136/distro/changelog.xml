@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-transfer.common-messaging.1-0-0" date="2013-05-09">
+			<Change>First release of the component</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.common-messaging.1-1-0" date="2013-07-09">
+			<Change>Added support for tree transfers</Change>
+			<Change>removed unused topic connection</Change>
+	</Changeset>
+</ReleaseNotes>

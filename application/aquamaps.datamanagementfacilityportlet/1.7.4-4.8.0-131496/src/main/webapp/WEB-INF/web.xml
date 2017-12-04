@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	
+	<display-name>DataManagementFacility</display-name>
+
+	<description>
+		Provides AquaMaps Data Management Facility
+    </description>
+
+	<!-- Servlet declarations -->
+
+
+	<servlet>
+		<servlet-name>DataManagementFacilityService</servlet-name>
+		<servlet-class>org.gcube.application.datamanagementfacilityportlet.servlet.DataManagementFacilityServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>SubmittedReportServlet</servlet-name>
+		<servlet-class>org.gcube.application.datamanagementfacilityportlet.servlet.SubmittedReportServlet</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>ResourceServlet</servlet-name>
+		<servlet-class>org.gcube.application.datamanagementfacilityportlet.servlet.ResourceServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ResourceLoadServlet</servlet-name>
+		<servlet-class>org.gcube.application.datamanagementfacilityportlet.servlet.ResourceLoadServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ResourceMapServlet</servlet-name>
+		<servlet-class>org.gcube.application.datamanagementfacilityportlet.servlet.ResourceMapServlet</servlet-class>
+	</servlet>
+
+ <servlet>
+		<servlet-name>checkServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.sessionchecker.server.SessionCheckerServiceImpl</servlet-class>
+	</servlet>
+ 
+	
+
+<servlet>
+		<servlet-name>DirectQueryServlet</servlet-name>
+		<servlet-class>org.gcube.application.datamanagementfacilityportlet.servlet.DirectQueryServlet</servlet-class>
+	</servlet>
+
+     <servlet>
+		<servlet-name>AnalysisServlet</servlet-name>
+		<servlet-class>org.gcube.application.datamanagementfacilityportlet.servlet.AnalysisServlet</servlet-class>
+	</servlet>
+    
+    <servlet> 
+     	<servlet-name>LocalUploadServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.csvimportwizard.server.local.LocalUploadServlet</servlet-class>
+    </servlet>
+      <servlet> 
+     	<servlet-name>CSVImportService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.csvimportwizard.server.CSVImportServiceImpl</servlet-class>
+    </servlet>
+ <servlet> 
+     	<servlet-name>CSVServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.csvimportwizard.server.CSVServlet</servlet-class>
+    </servlet>
+    
+    
+    <!-- Servlets for CSV Import Wizard Workspace-->
+	<servlet>
+		<servlet-name>CSVImportServiceWorkspace</servlet-name>
+		<servlet-class>org.gcube.portlets.user.csvimportwizard.ws.server.ImportWizardWSServiceImpl</servlet-class>
+	</servlet>
+ 
+	
+    
+
+
+<!--  NEWS -->
+
+<servlet>
+    <servlet-name>appnewsServlet</servlet-name>
+    <servlet-class>org.gcube.portlets.widgets.applicationnews.server.ApplicationServiceImpl</servlet-class>
+  </servlet>
+
+
+<servlet>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsexplorer.server.WorkspaceExplorerServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- Servlet mappings -->
+	
+
+	<servlet-mapping>
+		<servlet-name>DataManagementFacilityService</servlet-name>
+		<url-pattern>/datamanagementfacility/DataManagementFacilityService</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>SubmittedReportServlet</servlet-name>
+		<url-pattern>/datamanagementfacility/SubmittedReportServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ResourceServlet</servlet-name>
+		<url-pattern>/datamanagementfacility/ResourceServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ResourceLoadServlet</servlet-name>
+		<url-pattern>/datamanagementfacility/ResourceLoadServlet/*</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet-mapping>
+		<servlet-name>ResourceMapServlet</servlet-name>
+		<url-pattern>/datamanagementfacility/ResourceMapServlet/*</url-pattern>
+	</servlet-mapping>
+	
+	
+       
+
+  <servlet-mapping>
+       <servlet-name>DirectQueryServlet</servlet-name>
+       <url-pattern>/datamanagementfacility/DirectQueryServlet</url-pattern>
+    </servlet-mapping>
+
+	<servlet-mapping>
+       <servlet-name>AnalysisServlet</servlet-name>
+       <url-pattern>/datamanagementfacility/AnalysisServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+       <servlet-name>LocalUploadServlet</servlet-name>
+       <url-pattern>/datamanagementfacility/LocalUploadServlet</url-pattern>
+    </servlet-mapping>
+    
+   
+   <servlet-mapping>
+       <servlet-name>CSVImportService</servlet-name>
+       <url-pattern>/datamanagementfacility/CSVImportService</url-pattern>
+    </servlet-mapping>
+   <servlet-mapping>
+       <servlet-name>CSVServlet</servlet-name>
+       <url-pattern>/datamanagementfacility/CSVServlet</url-pattern>
+    </servlet-mapping>
+   
+   
+   <servlet-mapping>
+		<servlet-name>CSVImportServiceWorkspace</servlet-name>
+		<url-pattern>/datamanagementfacility/CSVImportServiceWorkspace</url-pattern>
+	</servlet-mapping>
+   
+   
+   <servlet-mapping>
+    <servlet-name>appnewsServlet</servlet-name>
+    <url-pattern>/datamanagementfacility/appnews</url-pattern>
+  </servlet-mapping>
+   
+   
+   <servlet-mapping>
+		<servlet-name>checkServlet</servlet-name>
+		<url-pattern>/datamanagementfacility/checksession</url-pattern>
+	</servlet-mapping>
+	
+	
+ 
+	<servlet-mapping>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<url-pattern>/datamanagementfacility/WorkspaceExplorerService</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

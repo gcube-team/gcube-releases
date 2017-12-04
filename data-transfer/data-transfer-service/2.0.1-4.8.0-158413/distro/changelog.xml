@@ -1,0 +1,13 @@
+<ReleaseNotes>
+	<Changeset component="data-transfer-service-1.0.0" date="2016-02-22">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="data-transfer-service-1.1.0" date="2016-09-09">
+		<Change>Added Destination</Change>
+		<Change>Added Plugin</Change>
+	</Changeset>
+	<Changeset component="data-transfer-service-1.2.0" date="2016-10-29">
+		<Change>Improved plugin management</Change>
+		<Change>Endorsed decompress-plugin</Change>		
+	</Changeset>
+</ReleaseNotes>

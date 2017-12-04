@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>VREModeler Service</Description>
+		<Class>VREManagement</Class>
+		<Name>VREModeler</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Main>
+				<Description>Allows user to create new VRE</Description>
+				<Name>VREModeler-service</Name>
+				<Version>${project.version}</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.resourcemanagement</groupId>
+					<artifactId>vremodeler-service</artifactId>
+					<version>${project.version}</version>
+				</MavenCoordinates>
+				<Dependencies>
+					<Dependency>
+						<Service>
+							<Class>VREManagement</Class>
+							<Name>VREModeler</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>VREModeler-stubs</Package>
+						<Version>${project.version}</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+				</Dependencies>
+				<GARArchive>vremodeler-service-${project.version}.gar</GARArchive>
+				<PortType>
+					<Name>gcube/vremanagement/vremodeler/ModelerFactoryService</Name>
+					<WSDL></WSDL>
+				</PortType>
+			</Main>
+			<Software>
+				<Description>Allows user to create new VRE</Description>
+				<Name>VREModeler-stubs</Name>
+				<Version>${project.version}</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.resourcemanagement</groupId>
+					<artifactId>vremodeler-stubs</artifactId>
+					<version>${project.version}</version>
+				</MavenCoordinates>
+				<Files><File>vremodeler-stubs-${project.version}.jar</File></Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

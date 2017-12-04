@@ -1,0 +1,15 @@
+<application mode="online">
+ 
+	<name>dataminer-pool-manager</name>
+	<group>DataAnalysis</group>
+	<version>0.0.1</version>
+ 
+        <!--<description>Lorem ipsum dolor sit amet...</description>-->
+ 
+        <!--<persistence location="/some/custom/location</persistence" />-->
+
+        <!-- <exclude>*</exclude>  -->
+
+	<exclude>/api/swagger.*</exclude>
+
+</application>

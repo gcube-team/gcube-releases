@@ -1,0 +1,106 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.wodgets.workspace-light-tree.2-13-1" date="2014-05-13">
+		<Change>Fix for #841 Light Tree Visualization Error</Change>
+		<Change>Fix for #835 Workspace Light Tree does not show VRE Folders</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.wodgets.workspace-light-tree.2-13-0" date="2013-10-21">
+		<Change>Refactored from portletsUser</Change>
+		<Change>
+			Ported to GWT 2.5.1
+		</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.2-10-0"
+		date="2013-03-05">
+		<Change>New css narrows height, support for folders non selectable
+			added
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.2-9-1"
+		date="2013-03-05">
+		<Change>Fixed issue #1415: Workspace Light Tree Shared Folders are not
+			Visible
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.2-9-0"
+		date="2013-01-17">
+		<Change>Mavenized component</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.2-8-0"
+		date="2012-11-30">
+		<Change>added new item type external resource link</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.2-7-0"
+		date="2012-09-21">
+		<Change>Fixed dialog resize problem after a longer title is set
+		</Change>
+		<Change>Added complex item sorting</Change>
+		<Change>Improved loading errors management</Change>
+		<Change>Added filter option based on mime type</Change>
+		<Change>ScrollPanel Bug on setWidth fixed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.2-6-0"
+		date="2012-05-04">
+		<Change>#276 Sync with Home Library changes</Change>
+		<Change>#276 Made tree loading async</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.2-5-0"
+		date="2011-07-01">
+		<Change>#1556: WorkflowTemplate and WorkflowReport required in
+			Workspace Light Tree
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.2-4-0"
+		date="2011-05-06">
+		<Change>Removed deprecated code</Change>
+		<Change>Added support to gwt 2.2.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.2-3-0"
+		date="2011-02-07">
+		<Change>Sync with HomeLibrary changes</Change>
+		<Change>fixed bug on popup panel and root selection enabled</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.2-2-0"
+		date="2010-11-09">
+		<Change>Removed listeners, added handlers</Change>
+		<Change>fixed #66: ICIS / TS / Save</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.2-1-0"
+		date="2010-09-03">
+		<Change>Removed deprecated code</Change>
+		<Change>Updated bundle resources</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.2-0-0"
+		date="2010-07-16">
+		<Change>Ported to GWT 2.0</Change>
+		<Change>Updated project structure to WebPortlet</Change>
+		<Change>Update to LifeRay portal</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.1-5-0"
+		date="2010-01-29">
+		<Change>gcube release 1.7.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.1-4-0"
+		date="2009-11-30">
+		<Change>gcube release 1.6.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.1-3-0"
+		date="2009-11-16">
+		<Change>gcube release 1.5.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.1-2-0"
+		date="2009-10-16">
+		<Change>gcube release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.1-1-0"
+		date="2009-07-14">
+		<Change>gcube release 1.2.0</Change>
+		<Change>added purging empty folder option in lighttree (default true)
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-portlet-lighttree.1-0-0"
+		date="2009-05-12">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

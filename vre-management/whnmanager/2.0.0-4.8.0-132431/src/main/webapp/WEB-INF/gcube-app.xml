@@ -1,0 +1,8 @@
+<application mode='online'>
+		<name>WhnManager</name>
+		<group>VREManagement</group>
+		<version>2.0.0-4.8.0-132431</version>
+		<description>Web Hosting Node Service</description>
+		<local-persistence location='target' />
+</application>
+

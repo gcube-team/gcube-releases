@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true"
+	monitoring="autodetect" dynamicConfig="true">
+
+	<diskStore path="/home/gcube/tomcat/tmp" />
+
+	<cache name="profile_readers" maxEntriesLocalHeap="10" eternal="false"
+		timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="none" />
+	</cache>
+
+	<cache name="profile_users" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="1000" diskSpoolBufferSizeMB="20" eternal="false"
+		timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+
+</ehcache>

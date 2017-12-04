@@ -1,0 +1,37 @@
+The gCube System - gHN Client Distribution
+------------------------------------------------------------
+
+This work is partially funded by the European Commission in the
+context of the iMarine project (http://www.i-marine.eu), under the 2nd call of FP7 IST priority.
+
+Authors
+-------
+
+* Fabio Simeoni (fabio.simeoni@fao.org), FAO of the United Nations, Rome, Italy
+
+
+Version and Release Date
+------------------------
+${version}
+
+Description
+-----------
+${description}
+
+Download information
+--------------------
+
+Source code is available from SVN:
+${scm.url}
+
+Binaries can be downloaded from:
+
+
+Documentation 
+-------------
+
+
+Licensing
+---------
+
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.

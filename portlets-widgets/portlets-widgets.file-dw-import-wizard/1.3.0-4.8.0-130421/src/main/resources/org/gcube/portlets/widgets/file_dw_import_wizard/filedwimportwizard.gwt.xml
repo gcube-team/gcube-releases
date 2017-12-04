@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='filedwimportwizard'>
+	<inherits name='com.google.gwt.user.User' />
+
+<!-- 	<inherits name="com.google.gwt.logging.Logging" /> -->
+<!-- 	<set-property name="gwt.logging.logLevel" value="SEVERE" /> -->
+	<inherits name='com.google.gwt.junit.JUnit' />
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-TRACE" />
+	<!-- <inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' 
+		/> -->
+
+	<!-- <inherits name='org.gcube.portlets.widgets.lighttree.WorkspacePortletLightTree' 
+		/> -->
+	<inherits name='org.gwtopenmaps.openlayers.OpenLayers' />
+	<inherits name="com.extjs.gxt.ui.GXT" />
+	<inherits name='com.sencha.gxt.ui.GXT' />
+	<!-- Other module inherits -->
+	<inherits name='org.gcube.portlets.widgets.wsexplorer.WorkspaceExplorer' />
+	
+	<!-- Specify the app entry point class. -->
+	<!-- <entry-point
+		class='org.gcube.portlets.widgets.file_dw_import_wizard.client.filedwimportwizard' /> -->
+	<stylesheet src='filedwimportwizard.css' />
+	<stylesheet src='ExtGWT/css/gxt-all.css' />
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

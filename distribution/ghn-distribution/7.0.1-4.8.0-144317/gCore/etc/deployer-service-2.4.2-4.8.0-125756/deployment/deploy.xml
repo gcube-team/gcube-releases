@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!-- gCube packages' base deployment file -->
+<project name="D4Sdeployment">
+    <description>
+        Build file to deploy gCube packages. It is used programmatically by the Deployer Service.
+    </description>
+    
+	
+    <property environment="env"/>  
+    <property name="deploy.dir" location="${env.GLOBUS_LOCATION}"/>            
+	<property name="tmp.dir" value="${package.file}"/>
+	<property name="garetc.id" value="garetc" />
+	
+	<fileset dir="${etc.dir}" id="garetc" />
+
+	<!-- include JAVA WS Core build scripts-->
+    <property name="build.packages" location="${deploy.dir}/share/globus_wsrf_common/build-packages.xml"/>
+            
+    <target name="init">
+    	<echo message="package source dir = ${package.source.dir}"/>
+    	<echo message="package = ${package.name}"/>
+    	<echo message="package file = ${package.file}"/>
+    	<echo message="gar name = ${gar.name}"/>
+    	<echo message="creating the package's directories..."/>
+        <mkdir dir="${base.deploy.dir}"/>    	
+        <copy overwrite="true" file="${package.source.dir}/${package.file}" toDir="${base.deploy.dir}"/>         
+    </target>
+		
+	<target name="addScript">
+		<echo message="script = ${script.file}"/>		
+		<echo message="target dir = ${target.dir}"/>
+		<echo message="service id = ${service.id}"/>
+    	<echo message="package = ${package.name}"/> 	
+	  	<echo message="creating the target directory..."/>
+		<mkdir dir="${target.dir}/${service.id}/${package.name}"/>    	
+		<copy file="${script.file}" toDir="${target.dir}/${service.id}/${package.name}"/>
+    </target>    
+	
+	<target name="removeScript">
+		<echo message="script = ${script.file}"/>		
+		<echo message="target dir = ${target.dir}"/>
+		<echo message="service id = ${service.id}"/>
+    	<echo message="package = ${package.name}"/> 		  	
+		<delete file="${target.dir}/${service.id}/${package.name}/${script.file}"/>
+    </target> 
+	
+	<target name="removeAllScripts">
+		<echo message="target dir = ${target.dir}"/>
+		<echo message="service id = ${service.id}"/>
+		<echo message="package = ${package.name}"/> 	
+		<deltree dir="${target.dir}/${service.id}/${package.name}"/>
+	</target>
+	
+    <target name="uncompressPackage" depends="init">
+    	<echo message="uncompressing the package..."/>
+    	 <!-- uncompress the tar.gz file -->
+		<gunzip src="${base.deploy.dir}/${package.file}"/>
+    	<mkdir dir="${base.deploy.dir}/${service.id}"/>
+		 <!-- uncompress the tar file -->
+		<untar  dest="${base.deploy.dir}/${service.id}" overwrite="true" >	
+			<fileset dir="${base.deploy.dir}">
+	    	    <include name="**/*.tar"/>
+	    	</fileset>
+    	</untar>
+    </target>
+    
+	<target name="deleteTempFiles">
+		<delete dir="${package.source.dir}"/>	
+		<mkdir dir="${package.source.dir}"/>
+		 <delete>
+		    <fileset dir="${base.deploy.dir}" includes="**/*.tar"/>
+		 	<fileset dir="${base.deploy.dir}" includes="**/*.tar.gz"/>
+		 	<fileset dir="${base.deploy.dir}" includes="**/*.tgz"/>
+		 </delete>
+	</target>
+	
+    <target name="deployWSRFService" depends="init">
+    	<echo message="deploying a WSRFService package..."/>
+    	<ant antfile="${build.packages}" target="deployGar">
+    		<property name="gar.name" value="${base.deploy.dir}/${service.id}/${package.name}/${gar.name}"/> 
+            <!-- <property name="gar.id" value="${package.name}"/> -->
+    		<!-- <property name="gar.filename" value="org_diligentproject_keeperservice_hnm"/>-->    		
+    		<reference refid="${garetc.id}" />
+        </ant>    	
+    </target>
+    
+    <target name="undeployWSRFService">
+    	<echo message="undeploying a WSRFService package..."/>
+	    <ant antfile="${build.packages}" target="undeployGar">
+    	    <property name="gar.id" value="${gar.name}"/>
+        </ant>
+    </target>
+    
+    <target name="deployLibrary" depends="init">
+    	<echo message="deploying a Library package..."/>
+    	<copy overwrite="true" file="${base.deploy.dir}/${service.id}/${package.name}/${jar.name}" toDir="${deploy.dir}/lib"/>       	
+    </target>
+	
+    <target name="installExternalPackage" depends="init">
+    	<echo message="installing external package..."/>
+    	<mkdir dir="${base.deploy.dir}/${service.id}"/>
+    	<copy overwrite="true" file="${base.deploy.dir}/${package.file}" toDir="${base.deploy.dir}/${service.id}/${package.name}"/>       	
+    </target>
+	
+	 <target name="deployRemoteLibrary" depends="init">
+	    	<echo message="deploying a Remote Library package..."/>
+	    	<copy overwrite="true" file="${jar.name}" toDir="${deploy.dir}/lib"/>       	
+    </target>
+	
+	<target name="uncompressRemoteLibrary" depends="init">
+	    	<echo message="uncompressing the library..."/>
+			<mkdir dir="${base.deploy.dir}/${package.name}"/>
+			<mkdir dir="${base.deploy.dir}/tmp"/>
+	    	 <!-- uncompress the tar.gz file -->
+			<gunzip src="${library.file}" dest="${base.deploy.dir}/tmp"/>
+			 <!-- uncompress the tar file -->
+			<untar  dest="${base.deploy.dir}/${package.name}">	
+				<fileset dir="${base.deploy.dir}/tmp">
+		    	    <include name="**/*.tar"/>
+		    	</fileset>
+	    	</untar>
+			<delete dir="${base.deploy.dir}/tmp"/>
+    </target>
+    
+    <target name="runScript">
+        <echo message="executing an external script..."/>
+        <chmod file="${base.script.dir}/${exec.name}" perm="ugo+rx"/>
+        <exec dir="${base.script.dir}" executable="${base.script.dir}/${exec.name}" failonerror="true"  output="out.txt">
+                  <arg line=""/>
+        </exec>
+    </target>
+
+	<target name="deleteFolder">
+		<delete dir="${folder}"/>
+	</target>
+	
+	<target name="createFolder">
+			<mkdir dir="${folder}"/>
+	</target>
+		
+	<target name="setExecPermOnFile">
+		<chmod file="${exec.name}" perm="ugo+rx"/>
+	</target>
+	
+</project>

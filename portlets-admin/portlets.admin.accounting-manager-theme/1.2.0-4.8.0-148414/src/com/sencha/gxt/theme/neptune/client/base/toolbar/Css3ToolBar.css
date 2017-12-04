@@ -1,0 +1,31 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def gradient value('theme.toolbar.gradient');
+@def borderColor value('theme.toolbar.border.color');
+@def borderWidth value('theme.toolbar.border.toString');
+@def borderStyle value('theme.toolbar.border.style');
+
+@def padding value('theme.toolbar.padding.toString');
+
+.toolBar {
+  padding: padding;
+  border-style: borderStyle;
+  border-color: borderColor;
+  border-width: borderWidth;
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+  zoom: 1;
+  overflow: hidden;
+
+  background: -webkit-linear-gradient(top, gradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, gradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, gradient); /* IE10+ */
+  background: linear-gradient(to bottom, gradient); /* W3C */
+}

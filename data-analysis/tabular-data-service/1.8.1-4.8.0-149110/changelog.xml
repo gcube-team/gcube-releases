@@ -1,0 +1,24 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-analisys.tabular-data-service.1-0-0" date="2013-10-25"> 
+		<Change>first release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analisys.tabular-data-service.1-7-2" date="2015-6-30"> 
+		<Change>added implementation for Rule management</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analisys.tabular-data-service.1-7-3" date="2015-7-29"> 
+		<Change>bug fixing for authorization on rules</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analisys.tabular-data-service.1-7-4" date="2015-10-06"> 
+		<Change>Bug on collateral table fixed</Change>
+		<Change>Templates are returned ordered by creation date</Change>
+		<Change>Rules are returned ordered by creation date</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analisys.tabular-data-service.1-8-1" date="2016-02-29"> 
+		<Change>internal authorization removed</Change>
+		<Change>moved to smartgears 2.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analisys.tabular-data-service.1-8-1" date="2017-05-26"> 
+		<Change>removed comet-operation dependency</Change>
+		<Change>force dependency to xstream.1.4.9</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,307 @@
+/**
+ * 
+ */
+package org.gcube.documentstore.records;
+
+import java.io.Serializable;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Modifier;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.gcube.documentstore.exception.InvalidValueException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.fasterxml.jackson.databind.JsonNode;
+
+/**
+ * @author Luca Frosini (ISTI - CNR)
+ */
+public class RecordUtility {
+	
+	private static Logger logger = LoggerFactory.getLogger(RecordUtility.class);
+	
+	protected static Set<Package> recordPackages;
+	protected static Map<String, Class<? extends Record>> recordClassesFound;
+	protected static Map<String, Class<? extends AggregatedRecord<?,?>>> aggregatedRecordClassesFound;
+	protected static Map<Class<? extends Record>, Class<? extends AggregatedRecord<?,?>>> recordAggregationMapping;
+	
+	private RecordUtility(){}
+		
+	@SuppressWarnings("unchecked")
+	public static void addRecordPackage(Package packageObject) {
+		if(recordPackages.contains(packageObject)){
+			logger.trace("Package ({}) already scanned", packageObject.getName());
+			return;
+		}
+		
+		recordPackages.add(packageObject);
+		
+		try {
+			List<Class<?>> classes = ReflectionUtility.getClassesForPackage(packageObject);
+			
+			for(Class<?> clz : classes){
+				logger.trace("found a class:{}",clz.getSimpleName());
+				
+				
+				if(Record.class.isAssignableFrom(clz)){
+					addRecordClass((Class<? extends Record>) clz);
+					//DISCOVERY a subtype for jackson
+					DSMapper.registerSubtypes((Class<? extends Record>)clz);
+				}
+				if(AggregatedRecord.class.isAssignableFrom(clz)){
+					logger.trace("addAggregatedRecordClass ({}) ", clz.getName());
+					addAggregatedRecordClass((Class<? extends AggregatedRecord<?,?>>) clz);
+					
+					DSMapper.registerSubtypes((Class<? extends AggregatedRecord<?,?>>)clz);
+				}
+			}
+		} catch (ClassNotFoundException e) {
+			logger.error("Error discovering classes inside package {}", packageObject.getName(), e);
+		}
+	}
+	
+	protected static void addRecordClass(Class<? extends Record> cls){
+		if(Modifier.isAbstract(cls.getModifiers())){
+			return;
+		}
+		
+		String discoveredRecordType;
+		try {
+			Record record = cls.newInstance();
+			if(record instanceof AggregatedRecord){
+				return;
+			}
+			discoveredRecordType = record.getRecordType();			
+			if(!recordClassesFound.containsKey(discoveredRecordType)){
+				//logger.trace("Not containsKey discoveredRecordType:{}, cls:{}",discoveredRecordType.toString(),cls.toString());
+				recordClassesFound.put(discoveredRecordType, cls);
+			}
+			
+		} catch (InstantiationException | IllegalAccessException e) {
+			logger.error("Unable to instantiate found {} class ({})", 
+					Record.class.getSimpleName(), cls.getSimpleName(), e);
+			return;
+		}
+	}
+	
+	protected static void addAggregatedRecordClass(Class<? extends AggregatedRecord<?,?>> cls){
+		if(Modifier.isAbstract(cls.getModifiers())){			
+			return;
+		}
+		
+		String discoveredRecordType;
+		try {
+			AggregatedRecord<?,?> instance = cls.newInstance();
+			//logger.trace("-------------instance:{}",instance.toString());
+			discoveredRecordType = instance.getRecordType();
+			//logger.trace("-------------discoveredRecordType:{}",discoveredRecordType.toString());
+			if(!aggregatedRecordClassesFound.containsKey(discoveredRecordType)){
+				logger.trace("discoveredRecordType not found:"+discoveredRecordType+" with cls:"+cls.getName());
+				aggregatedRecordClassesFound.put(discoveredRecordType, cls);
+				
+				Class<? extends Record> recordClass = instance.getAggregable();
+				recordAggregationMapping.put(recordClass, cls);
+			}
+			
+		} catch (InstantiationException | IllegalAccessException e) {
+			logger.error("Unable to instantiate found {} class ({})", 
+					AggregatedRecord.class.getSimpleName(), cls.getSimpleName(), e);
+			return;
+		}
+	}
+	
+	/**
+	 * @return the recordClassesFound
+	 */
+	public static Map<String, Class<? extends Record>> getRecordClassesFound() {
+		return recordClassesFound;
+	}
+
+	/**
+	 * @return the aggregatedRecordClassesFound
+	 */
+	public static Map<String, Class<? extends AggregatedRecord<?,?>>> getAggregatedRecordClassesFound() {
+		return aggregatedRecordClassesFound;
+	}
+	
+	static {
+		recordPackages = new HashSet<>();
+		
+		recordClassesFound = new HashMap<>();
+		aggregatedRecordClassesFound = new HashMap<>();
+		
+		recordAggregationMapping = new HashMap<>();
+	
+	}
+
+	public static Class<? extends AggregatedRecord<?,?>> getAggregatedRecordClass(String recordType) throws ClassNotFoundException {
+	
+		if(getAggregatedRecordClassesFound().containsKey(recordType)){
+			//logger.trace("record type {},getAggregatedRecordClassesFound {}",recordType,getAggregatedRecordClassesFound(),getAggregatedRecordClassesFound().get(recordType));
+			return getAggregatedRecordClassesFound().get(recordType);
+		}
+		logger.error("Unable to find {} class for {}.", 
+				AggregatedRecord.class.getSimpleName(), recordType);
+		
+		
+		
+		logger.debug("getAggregatedRecordClass getAggregatedRecordClassesFound:"+getAggregatedRecordClassesFound());
+		
+		throw new ClassNotFoundException();
+	}
+	
+	public static Class<? extends Record> getRecordClass(String recordType) throws ClassNotFoundException {
+		if(recordClassesFound.containsKey(recordType)){
+			return recordClassesFound.get(recordType);
+		}
+		logger.error("Unable to find {} class for {}.", 
+				Record.class.getSimpleName(), recordType);
+		throw new ClassNotFoundException();
+	}
+	
+	protected static Class<? extends Record> getClass(String recordType, boolean aggregated) throws ClassNotFoundException {
+		if(aggregated){
+			return RecordUtility.getAggregatedRecordClass(recordType);
+		}
+		return getRecordClass(recordType);
+	}
+	
+	/* 
+	 * IT DOES NOT WORK
+	 * @SuppressWarnings("unchecked")
+	 * public static Map<String,Serializable> getMapFromString(String serializedMap) throws IOException, ClassNotFoundException {
+	 * 	ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(serializedMap.getBytes());
+	 * 	ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream);
+	 * 	return ((Map<String,Serializable>) objectInputStream.readObject());
+	 * }
+	 */
+	
+	private final static String LINE_FREFIX = "{";
+	private final static String LINE_SUFFIX = "}";
+	private final static String KEY_VALUE_PAIR_SEPARATOR = ",";
+	private final static String KEY_VALUE_LINKER = "=";
+	
+	
+	protected static Map<String, ? extends Serializable> getMapFromString(String serializedMap){
+		/* Checking line sanity */
+    	if(!serializedMap.startsWith(LINE_FREFIX) && !serializedMap.endsWith(LINE_SUFFIX)){
+    		return null;
+    	}
+    	
+    	/* Cleaning prefix and suffix to parse line */
+    	serializedMap = serializedMap.replace(LINE_FREFIX, "");
+    	serializedMap = serializedMap.replace(LINE_SUFFIX, "");
+    	
+    	Map<String, Serializable> map = new HashMap<String,Serializable>();
+    	
+        String[] pairs = serializedMap.split(KEY_VALUE_PAIR_SEPARATOR);
+        for (int i=0;i<pairs.length;i++) {
+            String pair = pairs[i];
+            pair.trim();
+            
+            String[] keyValue = pair.split(KEY_VALUE_LINKER);
+            String key = keyValue[0].trim();
+            Serializable value = keyValue[1].trim();
+            map.put(key, value);
+            
+        }
+        
+        return map;
+	}
+	
+	protected static final String INVALID = "invalid";
+	
+	private static final String USAGE_RECORD_TYPE = "usageRecordType";
+	
+	/**
+	 * Create a Record from a Map serialized using toString()
+	 * @param serializedMapOrValidJSON the String representation of Map
+	 * @return the Record
+	 * @throws Exception if deserialization fails
+	 */
+	@SuppressWarnings("unchecked")
+	public static <R extends Record> R getRecord(String jsonString) throws Exception {
+		
+		try {
+			JsonNode jsonNode = DSMapper.asJsonNode(jsonString);
+			// Patch for old records using usageRecordType instead of recordType
+			if(jsonNode.has(USAGE_RECORD_TYPE)){
+				jsonString = jsonString.replace(USAGE_RECORD_TYPE, Record.RECORD_TYPE);
+			}
+			logger.trace("Going to unmarshall {} using jackson", jsonString);
+			return (R) DSMapper.unmarshal(Record.class, jsonString);
+		}catch (Exception ex) {
+			//old method
+			logger.trace("Going to unmarshall {} as serialized Map", jsonString);
+			Map<String,? extends Serializable> map = getMapFromString(jsonString);			
+			if (map!=null){
+				Record record = getRecord(map);
+				try {
+					record.validate();
+				}catch(InvalidValueException e){
+					record.setResourceProperty(INVALID, true);
+					logger.error("Recovered record is not valid. Anyway, it will be persisted", e);
+				}
+				return (R) record;
+			} else {
+				return null;
+			}
+		}
+		
+	}
+
+	/**
+	 * Create a Record from a Map
+	 * @param recordMap the Map
+	 * @return the Record
+	 * @throws Exception if deserialization fails
+	 */
+	@SuppressWarnings("unchecked")
+	public static Record getRecord(Map<String, ? extends Serializable> recordMap) throws Exception {
+		
+		String className = (String) recordMap.get(Record.RECORD_TYPE);
+		
+		/*  
+		 * Patch to support accounting records accounted on fallback
+		 * with usageRecordType instead recordType property.
+		 * 
+		 * TODO Remove when all old fallback files has been elaborated
+		 */ 
+		if(className == null){
+			className = (String) recordMap.get("usageRecordType");
+			((Map<String, Serializable>) recordMap).put(Record.RECORD_TYPE, className);
+		}
+		/*END of Patch */
+		
+		boolean aggregated = false; 
+		try {		
+			aggregated = (Boolean) recordMap.get(AggregatedRecord.AGGREGATED);
+		}catch(Exception e){
+			try{
+				aggregated = Boolean.parseBoolean((String)recordMap.get(AggregatedRecord.AGGREGATED)); 
+			} catch(Exception e1){}
+		}
+		
+		Class<? extends Record> clz = getClass(className, aggregated);
+		//logger.debug("Trying to instantiate {}", clz);
+		
+		Class<?>[] usageRecordArgTypes = { Map.class };
+		Constructor<? extends Record> usageRecordConstructor = clz.getDeclaredConstructor(usageRecordArgTypes);
+		Object[] usageRecordArguments = {recordMap};
+		
+		Record record = usageRecordConstructor.newInstance(usageRecordArguments);
+		
+		//logger.debug("Created {} : {}", Record.class.getSimpleName(), record);
+		
+		return record;
+	}
+	
+
+			
+			
+}

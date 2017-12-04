@@ -1,0 +1,2 @@
+serviceClass: org.gcube.portlets.widgets.wsmail.client.WsMailService
+path: A8CC61C087E789BAEB6C2F9938720C8F.gwt.rpc

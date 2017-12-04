@@ -1,0 +1,9 @@
+<application mode='online'>
+		<name>storage</name>
+		<group>content-management</group>
+		<version>0.0.1-SNAPSHOT</version>
+		<description>storage rest</description>
+		<local-persistence location='target' />
+		<exclude>/gcube/service/disconnect/*</exclude>
+</application>
+

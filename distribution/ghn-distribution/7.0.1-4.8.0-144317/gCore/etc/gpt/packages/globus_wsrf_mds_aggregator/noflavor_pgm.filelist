@@ -1,0 +1,11 @@
+etc/globus_wsrf_mds_aggregator/aggregator-exec-test.sh
+etc/globus_wsrf_mds_aggregator/example-ping-exec
+etc/globus_wsrf_mds_aggregator/server-config.wsdd
+etc/globus_wsrf_mds_aggregator/client-server-config.wsdd
+etc/globus_wsrf_mds_aggregator/example-aggregator-registration.xml
+etc/gpt/./packages/globus_wsrf_mds_aggregator/undeploy.xml
+lib/globus_wsrf_mds_aggregator.jar
+lib/globus_wsrf_mds_aggregator_stubs.jar
+libexec/aggrexec/aggregator-exec-test.sh
+etc/gpt/packages/globus_wsrf_mds_aggregator/noflavor_pgm.filelist
+etc/gpt/packages/globus_wsrf_mds_aggregator/pkg_data_noflavor_pgm.gpt

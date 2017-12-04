@@ -1,0 +1,63 @@
+<!--
+Portions of this file Copyright 1999-2005 University of Chicago
+Portions of this file Copyright 1999-2005 The University of Southern California.
+
+This file or a portion of this file is licensed under the
+terms of the Globus Toolkit Public License, found at
+http://www.globus.org/toolkit/download/license.html.
+If you redistribute this file, with or without
+modifications, you must include this notice in the file.
+-->
+<schema targetNamespace="http://mds.globus.org/2004/10/gluerp-config"
+        xmlns:cfg="http://mds.globus.org/2004/10/gluerp-config"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        attributeFormDefault="qualified"
+        elementFormDefault="qualified"
+        xml:lang="en" >
+
+
+<complexType name="GLUERPConfiguration">
+  <annotation><documentation>
+    Contains configuration information for the GLUE Resource Property,
+    mapping schedulers and queues to cluster monitoring providers.
+  </documentation></annotation>
+  <sequence>
+    <element name="defaultProvider" type="xsd:string">
+  <annotation><documentation>
+    Contains configuration information for the GLUE Resource Property,
+      The cluster provider that will be used in the absence of 
+      scheduler specific configuration below.
+  </documentation></annotation>
+    </element>
+    <element name="scheduler" type="cfg:perSchedulerMapping" 
+             minOccurs="0" maxOccurs="unbounded" >
+  <annotation><documentation>
+      Per-scheduler overrides of the default cluster provider.
+  </documentation></annotation>
+    </element>
+  </sequence>
+</complexType>
+
+<complexType name="perSchedulerMapping">
+  <annotation><documentation>
+    Maps from a scheduler to a cluster provider
+  </documentation></annotation>
+  <element name="name" type="xsd:string" />
+  <element name="provider" type="xsd:string" />
+  <element name="queue" type="cfg:perQueueMapping" 
+             minOccurs="0" maxOccurs="unbounded" />
+</complexType>
+
+<complexType name="perQueueMapping">
+  <annotation><documentation>
+    Maps from a specific queue to a cluster provider
+  </documentation></annotation>
+  <element name="name" type="xsd:string" />
+  <element name="provider" type="xsd:string" />
+</complexType>
+
+
+
+</schema>
+
