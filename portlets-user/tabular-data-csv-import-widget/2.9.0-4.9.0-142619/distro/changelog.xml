@@ -1,0 +1,61 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-csv-import-widget.2-9-0"
+		date="2017-02-15">
+		<Change>Updated to PortalContext [ticket #6548]</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-csv-import-widget.2-8-0"
+		date="2015-10-15">
+		<Change>Updated support to WorkspaceExplorer [ticket #428]</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-csv-import-widget.2-7-0"
+		date="2015-07-03">
+		<Change>Updated Licenses</Change>
+		<Change>Updated dependencies</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-csv-import-widget.2-6-0"
+		date="2015-02-16">
+		<Change>Updated dependency</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-csv-import-widget.2-5-0"
+		date="2015-02-16">
+		<Change>Added more feedback on csv import [issue #3218]</Change>
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-csv-import-widget.2-4-0"
+		date="2014-10-31">
+		<Change>Fixed Final and Lock error</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-csv-import-widget.2-3-0"
+		date="2014-09-12">
+		<Change>Updated monitor</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-csv-import-widget.2-2-0"
+		date="2014-06-05">
+		<Change>Updated Import</Change>
+		<Change>Updated Pom</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-csv-import-widget.2-1-0"
+		date="2014-04-04">
+		<Change>Added exclude and include column</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-csv-import-widget.2-0-0"
+		date="2014-02-01">
+		<Change>Updated interacting with workspace</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-user.tabular-data-csv-import-widget.2-6-0.1-0-0"
+		date="2013-10-18">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

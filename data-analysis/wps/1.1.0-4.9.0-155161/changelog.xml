@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-analysis.wps.1-1-0"
+		date="2017-09-24">
+		<Change>Dynamic adding, removing and updating of algorithms added</Change>
+		<Change>Moved to SocialNetworkingService 2.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.wps.1-0-0"
+		date="2017-09-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,28 @@
+/************ Page Table ************/
+@external data-row, tool-panel, top-panel;
+
+
+/** Top Panel **/ 
+ #pTable .top-panel { 
+  background-color: white; 
+  color: black; 
+ }
+ /** Tool Panel icons **/ 
+ #pTable .top-panel .tool-panel i { 
+  color: #e91e63; 
+ }
+ /** Hovering rows **/ 
+ #pTable table tbody tr.data-row:hover { 
+  background: rgba(33, 150, 243, 0.27); 
+  color: #3f3f3f; 
+ }
+ /** Columns **/ 
+ #pTable table tbody td:nth-child(3) { 
+  background: #2196f3 !important; 
+  color: #fff; 
+  border-bottom: 2px solid #1976d2; 
+ }
+ /** Table Headers **/ 
+ #pTable table thead tr th { 
+  color: #1976d2; 
+ }

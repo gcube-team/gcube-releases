@@ -1,0 +1,5 @@
+<ReleaseNotes>
+		<Changeset component="${build.finalName}" date="2015-11-04">
+			<Change>First Release</Change>
+		</Changeset>
+</ReleaseNotes>

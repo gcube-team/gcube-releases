@@ -1,0 +1,10 @@
+{{GATEWAY_NAME}}
+----------------------------------
+Dear {{GATEWAY_NAME}} user,
+
+Wednesday, November 29th from 2:00pm to 4:00pm CET some services including Workspace and Social and Data Miner applications may be temporarily unavailable for a short time.
+We appreciate your patience and understanding. 
+
+We will make every effort to minimize any downtime associated with this maintenance.								
+
+If you wish to know the progress follow D4Science on Twitter at https://twitter.com/d4science

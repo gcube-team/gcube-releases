@@ -2,6 +2,7 @@
 	'use strict';
 	
 	var dom = window.dom;
+	var notificator = window.notificator;
 	
 	$('#analysisForm').validate({
 		rules: {
@@ -49,12 +50,12 @@
 			$(element).siblings(".label-tooltip").addClass("fa-info-circle");
 			$(element).siblings(".label-tooltip").removeClass("fa-times-circle-o");
 			
-			dom.enableDefaultToolTip($(element).attr("id"));
+			dom.enableDefaultTooltip($(element).attr("id"));
 
 			label.remove();
 		},
 		errorPlacement: function(error, element) {			
-			dom.createToolTip($(element).siblings(".label-tooltip"), error, "i");				
+			notificator.createTooltip($(element).siblings(".label-tooltip"), error, "i", "error");				
 		}	
 	});	
 	
@@ -63,29 +64,24 @@
 		dom.performButton.prop('disabled', !valid);		
 	}	
 	
-	$('#tea_production_model').on('change', function () {	
-		$(this).valid();
+	var validateAll = function(teaInputField){
+		$(teaInputField).valid();
 		
 		validateAnalysisForm();
 		
 		dom.resetButton.show();
 		
 		if(window.currentAnalysis != null){
-			window.noty.closeAllNoty();
-			window.dom.moveWorkspaceButtonsToDefault();
-		}
+			notificator.closeAllNoty();
+			dom.moveWorkspaceButtonsToSides();
+		}		
+	}
+	
+	$('#tea_production_model').on('change', function () {	
+		validateAll(this);
 	});
 	
  	$('.tea_input_percent, .tea_input_currency').on('input', function () {	
-		$(this).valid();
-		
-		validateAnalysisForm();
-		
-		dom.resetButton.show();
-		
-		if(window.currentAnalysis != null){
-			window.noty.closeAllNoty();
-			window.dom.moveWorkspaceButtonsToDefault();
-		}
+		validateAll(this);
 	}); 	
 })();	

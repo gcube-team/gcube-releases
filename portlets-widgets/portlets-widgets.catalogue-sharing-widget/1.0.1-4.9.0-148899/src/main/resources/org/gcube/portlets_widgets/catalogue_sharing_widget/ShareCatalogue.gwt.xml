@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='ShareCatalogue'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Other module inherits -->
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+
+	<!-- Responsive design -->
+	<set-property name="bootstrap.responsiveDesign" value="true" />
+	<inherits name='org.gcube.datacatalogue.ckanutillibrary.CkanUtilLibrary' />
+
+	<!-- Other module inherits -->
+
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets_widgets.catalogue_sharing_widget.client.ShareCatalogue' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

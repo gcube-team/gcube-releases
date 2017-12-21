@@ -1,0 +1,9 @@
+div#DecisionSupportSystem  span.morecontent > span:first-of-type {
+    display: none;
+}
+div#DecisionSupportSystem a.morelink{
+    text-decoration: none;
+}
+a.morelink.less + span {
+    display: none;
+}

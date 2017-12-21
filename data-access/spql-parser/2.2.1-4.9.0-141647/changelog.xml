@@ -1,0 +1,18 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.dataaccess.spql-parser.1-0-0" date="2012-09-07"> 
+		<Change>First release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.dataaccess.spql-parser.2-0-0" date="2013-04-18"> 
+		<Change>SpQL2 release</Change>
+	</Changeset> 
+	<Changeset component="org.gcube.dataaccess.spql-parser.2-1-0" date="2013-07-18"> 
+		<Change>added UNFOLD support for SPqL2</Change>
+	</Changeset> 
+	<Changeset component="org.gcube.dataaccess.spql-parser.2-2-0" date="2013-09-13"> 
+		<Change>fixed ticket 682 [http://support.d4science.research-infrastructures.eu/ticket/682]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.dataaccess.spql-parser.2-2-1" date="2017-01-19"> 
+		<Change>moved to antlr4</Change>
+		<Change>fixed an issue with BBox [https://support.d4science.org/issues/6333]</Change>
+	</Changeset>
+</ReleaseNotes>

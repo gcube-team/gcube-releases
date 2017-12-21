@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="T-Reader" targetNamespace="http://gcube-system.org/namespaces/data/tm" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor" xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" xmlns:gtwsdl0="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://gcube-system.org/namespaces/data/tm" xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd" xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults">
+  <import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+  <import namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" location="../wsrf/notification/WS-BaseN.wsdl"/>
+  <import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" location="../gcube/common/core/providers/GCUBEProvider.wsdl"/>
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl" location="../wsrf/lifetime/WS-ResourceLifetime.wsdl"/>
+  <import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" location="../wsrf/properties/WS-ResourceProperties.wsdl"/>
+  <types>
+    <xsd:schema targetNamespace="http://gcube-system.org/namespaces/data/tm" xmlns:rpns0="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.xsd" xmlns:rpns1="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.xsd" xmlns:tns="http://gcube-system.org/namespaces/data/tm" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.xsd" schemaLocation="../wsrf/lifetime/WS-ResourceLifetime.xsd"/>
+
+<xsd:import namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.xsd" schemaLocation="../wsrf/notification/WS-BaseN.xsd"/>
+
+<xsd:import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" schemaLocation="../gcube/common/core/providers/GCUBEProvider.xsd"/>
+
+
+			<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" schemaLocation="../ws/addressing/WS-Addressing.xsd"/>
+
+			<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types"/>
+
+
+			<xsd:element name="GetByID" nillable="false" type="tns:getByIDParams"/>
+			<xsd:element name="GetByIDResponse" type="tns:anyHolder"/>
+
+			<xsd:element name="GetByIDs" nillable="false" type="tns:getByIDsParams"/>
+			<xsd:element name="GetByIDsResponse" type="tns:RSLocator"/>
+
+
+			<xsd:element name="Get" nillable="false" type="tns:getParams"/>
+			<xsd:element name="GetResponse" type="tns:RSLocator"/>
+
+			<xsd:element name="GetNode" nillable="false" type="tns:path"/>
+			<xsd:element name="GetNodeResponse" type="tns:anyHolder"/>
+
+			<xsd:element name="GetNodes" nillable="false" type="tns:RSLocator"/> <!-- of paths -->
+			<xsd:element name="GetNodesResponse" type="tns:RSLocator"/>
+
+			<xsd:complexType name="getByIDParams">
+				<xsd:sequence>
+					<xsd:element name="rootID" nillable="false" type="xsd:string"/>
+					<xsd:element minOccurs="0" name="pattern" nillable="true" type="tns:anyHolder"/>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="getByIDsParams">
+				<xsd:sequence>
+					<xsd:element name="locator" nillable="false" type="tns:RSLocator"/>
+					<xsd:element minOccurs="0" name="pattern" nillable="true" type="tns:anyHolder"/>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="getParams">
+				<xsd:sequence>
+					<xsd:element minOccurs="0" name="pattern" nillable="true" type="tns:anyHolder"/>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="path">
+				<xsd:sequence>
+					<xsd:element maxOccurs="unbounded" minOccurs="1" name="id" nillable="false" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="RSLocator">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd:string">
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+
+			<xsd:complexType name="anyHolder">
+				<xsd:sequence>
+					<xsd:any maxOccurs="1" namespace="##any" processContents="skip"/>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:element name="UnsupportedOperationFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault"/>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="UnsupportedRequestFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault"/>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="UnknownTreeFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault"/>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="UnknownPathFault">
+				<xsd:complexType name="UnknownPathFault">
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault"/>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+		<xsd:element name="TReaderPortTypeGTWSDLResourceProperties">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:ServiceID"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:ServiceName"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:VO"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="rpns0:FixedTopicSet"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:RI"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:ServiceClass"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="1" ref="rpns0:Topic"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="provider:GHN"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="rpns1:TerminationTime"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="1" ref="provider:Scope"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="1" ref="rpns0:TopicExpressionDialects"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="rpns1:CurrentTime"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="GetByIDsRequest">
+    <part name="request" element="tns:GetByIDs"/>
+  </message>
+  <message name="GetNodeResponse">
+    <part name="response" element="tns:GetNodeResponse"/>
+  </message>
+  <message name="UnknownTreeFaultMessage">
+    <part name="fault" element="tns:UnknownTreeFault"/>
+  </message>
+  <message name="GetByIDResponse">
+    <part name="response" element="tns:GetByIDResponse"/>
+  </message>
+  <message name="GetByIDRequest">
+    <part name="request" element="tns:GetByID"/>
+  </message>
+  <message name="UnknownPathFaultMessage">
+    <part name="fault" element="tns:UnknownPathFault"/>
+  </message>
+  <message name="GetByIDsResponse">
+    <part name="response" element="tns:GetByIDsResponse"/>
+  </message>
+  <message name="GetNodesRequest">
+    <part name="request" element="tns:GetNodes"/>
+  </message>
+  <message name="UnsupportedRequestFaultMessage">
+    <part name="fault" element="tns:UnsupportedRequestFault"/>
+  </message>
+  <message name="GetNodesResponse">
+    <part name="response" element="tns:GetNodesResponse"/>
+  </message>
+  <message name="UnsupportedOperationFaultMessage">
+    <part name="fault" element="tns:UnsupportedOperationFault"/>
+  </message>
+  <message name="GetRequest">
+    <part name="request" element="tns:Get"/>
+  </message>
+  <message name="GetNodeRequest">
+    <part name="request" element="tns:GetNode"/>
+  </message>
+  <message name="GetResponse">
+    <part name="response" element="tns:GetResponse"/>
+  </message>
+  <portType name="TReaderPortType" wsrp:ResourceProperties="TReaderPortTypeGTWSDLResourceProperties">
+    <operation name="getByID">
+      <input message="tns:GetByIDRequest"/>
+      <output message="tns:GetByIDResponse"/>
+      <fault name="unknowntreefault" message="tns:UnknownTreeFaultMessage"/>
+      <fault name="gcubefault" message="corefaults:GCUBEFaultMessage"/>
+      <fault name="unsupportedrequestfault" message="tns:UnsupportedRequestFaultMessage"/>
+      <fault name="unsupportedoperationfault" message="tns:UnsupportedOperationFaultMessage"/>
+    </operation>
+    <operation name="getByIDs">
+      <input message="tns:GetByIDsRequest"/>
+      <output message="tns:GetByIDsResponse"/>
+      <fault name="gcubefault" message="corefaults:GCUBEFaultMessage"/>
+      <fault name="unsupportedrequestfault" message="tns:UnsupportedRequestFaultMessage"/>
+      <fault name="unsupportedoperationfault" message="tns:UnsupportedOperationFaultMessage"/>
+    </operation>
+    <operation name="get">
+      <input message="tns:GetRequest"/>
+      <output message="tns:GetResponse"/>
+      <fault name="gcubefault" message="corefaults:GCUBEFaultMessage"/>
+      <fault name="unsupportedrequestfault" message="tns:UnsupportedRequestFaultMessage"/>
+      <fault name="unsupportedoperationfault" message="tns:UnsupportedOperationFaultMessage"/>
+    </operation>
+    <operation name="getNode">
+      <input message="tns:GetNodeRequest"/>
+      <output message="tns:GetNodeResponse"/>
+      <fault name="gcubefault" message="corefaults:GCUBEFaultMessage"/>
+      <fault name="unsupportedrequestfault" message="tns:UnsupportedRequestFaultMessage"/>
+      <fault name="unknownpathfault" message="tns:UnknownPathFaultMessage"/>
+      <fault name="unsupportedoperationfault" message="tns:UnsupportedOperationFaultMessage"/>
+    </operation>
+    <operation name="getNodes">
+      <input message="tns:GetNodesRequest"/>
+      <output message="tns:GetNodesResponse"/>
+      <fault name="gcubefault" message="corefaults:GCUBEFaultMessage"/>
+      <fault name="unsupportedrequestfault" message="tns:UnsupportedRequestFaultMessage"/>
+      <fault name="unsupportedoperationfault" message="tns:UnsupportedOperationFaultMessage"/>
+    </operation>
+    <operation name="GetResourceProperty">
+      <input name="GetResourcePropertyRequest" message="wsrpw:GetResourcePropertyRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourceProperty"/>
+      <output name="GetResourcePropertyResponse" message="wsrpw:GetResourcePropertyResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourcePropertyResponse"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+    </operation>
+    <operation name="Subscribe">
+      <input message="wsntw:SubscribeRequest" wsa:Action="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification/Subscribe"/>
+      <output message="wsntw:SubscribeResponse" wsa:Action="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification/SubscribeResponse"/>
+      <fault name="TopicNotSupportedFault" message="wsntw:TopicNotSupportedFault"/>
+      <fault name="SubscribeCreationFailedFault" message="wsntw:SubscribeCreationFailedFault"/>
+      <fault name="InvalidTopicExpressionFault" message="wsntw:InvalidTopicExpressionFault"/>
+      <fault name="ResourceUnknownFault" message="wsntw:ResourceUnknownFault"/>
+      <fault name="TopicPathDialectUnknownFault" message="wsntw:TopicPathDialectUnknownFault"/>
+    </operation>
+    <operation name="GetCurrentMessage">
+      <input message="wsntw:GetCurrentMessageRequest" wsa:Action="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification/GetCurrentMessage"/>
+      <output message="wsntw:GetCurrentMessageResponse" wsa:Action="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification/GetCurrentMessageResponse"/>
+      <fault name="TopicNotSupportedFault" message="wsntw:TopicNotSupportedFault"/>
+      <fault name="InvalidTopicExpressionFault" message="wsntw:InvalidTopicExpressionFault"/>
+      <fault name="ResourceUnknownFault" message="wsntw:ResourceUnknownFault"/>
+      <fault name="NoCurrentMessageOnTopicFault" message="wsntw:NoCurrentMessageOnTopicFault"/>
+    </operation>
+    <operation name="GetMultipleResourceProperties">
+      <input name="GetMultipleResourcePropertiesRequest" message="wsrpw:GetMultipleResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetMultipleResourceProperties"/>
+      <output name="GetMultipleResourcePropertiesResponse" message="wsrpw:GetMultipleResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetMultipleResourcePropertiesResponse"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+    </operation>
+    <operation name="Destroy">
+      <input message="gtwsdl0:DestroyRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/Destroy"/>
+      <output message="gtwsdl0:DestroyResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/DestroyResponse"/>
+      <fault name="ResourceUnknownFault" message="gtwsdl0:ResourceUnknownFault"/>
+      <fault name="ResourceNotDestroyedFault" message="gtwsdl0:ResourceNotDestroyedFault"/>
+    </operation>
+    <operation name="QueryResourceProperties">
+      <input name="QueryResourcePropertiesRequest" message="wsrpw:QueryResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/QueryResourceProperties"/>
+      <output name="QueryResourcePropertiesResponse" message="wsrpw:QueryResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/QueryResourcePropertiesResponse"/>
+      <fault name="UnknownQueryExpressionDialectFault" message="wsrpw:UnknownQueryExpressionDialectFault"/>
+      <fault name="QueryEvaluationErrorFault" message="wsrpw:QueryEvaluationErrorFault"/>
+      <fault name="InvalidQueryExpressionFault" message="wsrpw:InvalidQueryExpressionFault"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+    </operation>
+    <operation name="SetResourceProperties">
+      <input name="SetResourcePropertiesRequest" message="wsrpw:SetResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/SetResourceProperties"/>
+      <output name="SetResourcePropertiesResponse" message="wsrpw:SetResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/SetResourcePropertiesResponse"/>
+      <fault name="InvalidSetResourcePropertiesRequestContentFault" message="wsrpw:InvalidSetResourcePropertiesRequestContentFault"/>
+      <fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+      <fault name="SetResourcePropertyRequestFailedFault" message="wsrpw:SetResourcePropertyRequestFailedFault"/>
+      <fault name="UnableToModifyResourcePropertyFault" message="wsrpw:UnableToModifyResourcePropertyFault"/>
+    </operation>
+    <operation name="SetTerminationTime">
+      <input message="gtwsdl0:SetTerminationTimeRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/SetTerminationTime"/>
+      <output message="gtwsdl0:SetTerminationTimeResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime/SetTerminationTimeResponse"/>
+      <fault name="ResourceUnknownFault" message="gtwsdl0:ResourceUnknownFault"/>
+      <fault name="UnableToSetTerminationTimeFault" message="gtwsdl0:UnableToSetTerminationTimeFault"/>
+      <fault name="TerminationTimeChangeRejectedFault" message="gtwsdl0:TerminationTimeChangeRejectedFault"/>
+    </operation>
+  </portType>
+</definitions>

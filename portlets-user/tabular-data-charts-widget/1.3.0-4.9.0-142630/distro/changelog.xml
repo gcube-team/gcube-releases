@@ -1,0 +1,19 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.tabular-data-charts-widget.1-3-0"
+		date="2017-02-15">
+		<Change>Updated to new PortalContext [ticket #6548]</Change>
+		<Change>Removed AccessLogger</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-charts-widget.1-2-0"
+		date="2015-07-03">
+		<Change>Updated support to storage id for resources [ticket #180]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-charts-widget.1-1-0"
+		date="2015-04-30">
+		<Change>Update chart to new dimension</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-charts-widget.1-0-0"
+		date="2015-02-16">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

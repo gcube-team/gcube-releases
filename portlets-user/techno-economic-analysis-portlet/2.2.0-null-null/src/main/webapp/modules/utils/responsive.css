@@ -88,7 +88,7 @@
 	} 
 	
 	.techno-economic-analysis-portlet #tea_production_model{
-		width: calc(17px + 15.5vw);
+		width: calc(14px + 15.5vw);
 	} 
 	
 	.techno-economic-analysis-portlet .tea_input_percent{
@@ -121,7 +121,7 @@
 	} 
 	
 	.techno-economic-analysis-portlet #tea_production_model{
-		width: calc(17px + 10vw);
+		width: calc(14px + 10vw);
 	} 
 	
 	.techno-economic-analysis-portlet .tea_input_percent{
@@ -154,7 +154,7 @@
 	} 
 	
 	.techno-economic-analysis-portlet #tea_production_model{
-		width: calc(17px + 9vw);
+		width: calc(14px + 9vw);
 	} 
 	
 	.techno-economic-analysis-portlet .tea_input_percent{

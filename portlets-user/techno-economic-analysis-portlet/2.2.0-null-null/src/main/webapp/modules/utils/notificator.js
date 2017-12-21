@@ -1,17 +1,51 @@
-(function () {
+(function() {
 	'use strict';
-	
+
 	Noty.setMaxVisible(1);
-	
-	var notificator = {		
-		showNoty : function(notificationDom, text, type, timeout, template){	
+
+	var notificator = {
+		timeoutEvent : null,
+	    showText : function(target, text, type, timeout) {
 			this.closeAllNoty();
+			
+			this.timeoutEvent != null && clearTimeout(this.timeoutEvent);
+			
+		    try {
+			    var jsonText = JSON.parse(text);
+			    text = jsonText;
+		    } catch (e) {
+		    	
+		    }
+
+		    switch (type) {
+			    case "success":
+				    target.css("color", "#4F8A10");
+				    break;
+			    case "error":
+				    target.css("color", "red");
+				    break;
+			    default:
+				    target.css("color", "blue");
+		    }
+
+		    target.css("text-align", "center");
+		    target.html(text != null ? text : "");
+		    target.css('visibility', 'visible');
+		    
+		    if(type === "success"){
+		    	this.timeoutEvent = setTimeout(function(){
+				    target.html("");
+			    }, 6000);
+		    }
+	    },
+		showNoty : function(target, text, type, timeout){	
+			this.clearNotification(target);
 			
 			if(timeout == null){
 				timeout = (type === "success") ? 3000 : false;
 			}
 			
-			notificationDom.removeClass().addClass(type);		 			
+			target.removeClass().addClass(type);		 			
 			
 			if(text != null && text.length > 0){
 		    	try {
@@ -24,7 +58,7 @@
 				new Noty({
 				    text: text,
 				    type: type,
-				    container : "#" + notificationDom.attr("id"),
+				    container : "#" + target.attr("id"),
 				    theme: 'relax',
 				    progressBar: false,
 				    closeWith: ["button"],		// button is hidden using css
@@ -36,107 +70,75 @@
 			        }
 				}).show();	
 			}			
+		},
+		errorHandlingText : function (target, jqXHR, exception) {	
+			var text = this.errorHandling(jqXHR, exception);
+	    	this.showText(target, text, "error");
+		},
+		errorHandlingNoty : function (target, jqXHR, exception) {	
+			var text = this.errorHandling(jqXHR, exception);
+			this.showNoty(target, text, "error");
 		},	
-		setDom : function (notificationDom, bodyDom, type){
-			this.showNoty(notificationDom, bodyDom, type);
-			//notificationDom.find(".noty_body").html(bodyDom);
-		},
-		errorHandlingNoty : function (notificationDom, jqXHR, exception) {				 
-			var msg = '';
-		    if(jqXHR.responseText == null || jqXHR.responseText.length == 0){
+		errorHandling : function (jqXHR, exception) {				 
+			var text = '';
+			
+		    if(jqXHR.responseText == null || 
+		    			jqXHR.responseText.length == 0  || 
+		    			jqXHR.responseText.indexOf("tomcat") > -1 || 
+		    			jqXHR.responseText.indexOf("Tomcat") > -1){
 		    	if (jqXHR.status == 400) {
-			        msg = 'Server understood the request, but request content was invalid.';
+			        text = 'Server understood the request, but request content was invalid.';
 			    } else if (jqXHR.status == 401) {
-			        msg = 'Unauthorized access.';
+			        text = 'Unauthorized access.';
 			    } else if (jqXHR.status == 403) {
-			        msg = 'Forbidden resource can\'t be accessed.';
+			        text = 'Forbidden resource can\'t be accessed.';
 			    } else if (jqXHR.status == 404) {
-			        msg = 'Resource not found.';
+			        text = 'Resource not found.';
 			    } else if (jqXHR.status == 500) {
-			        msg = 'Internal Server Error.';		          
+			        text = 'Internal server error.';		          
 			    } else if (jqXHR.status == 503) {
-			    	msg = 'Service unavailable.';	
-			    } else if (exception === 'parsererror') {
-			        msg = 'Requested parameters failed to be parsed as a valid JSON';
+			    	text = 'Service is currently unavailable';	
 			    } else if (exception === 'timeout') {
-			        msg = 'Request took longer than expected. Maybe server is offline.';
-			    } else if (exception === 'abort') {
-			        msg = 'Ajax request aborted.';
+			        text = 'Server did not respond in time';
 			    } else {
-			        msg = 'Uncaught Error.';
-			    }      
-		    }else{
-		    	msg = jqXHR.responseText;
-		    }   
-
-	    	this.showNoty(notificationDom, msg, "error");
-		},
-		errorHandlingText : function (notificationDom, jqXHR, exception) {				 
-			var msg = '';
-		    if(jqXHR.responseText == null || jqXHR.responseText.length == 0){
-		    	if (jqXHR.status == 400) {
-			        msg = 'Server understood the request, but request content was invalid.';
-			    } else if (jqXHR.status == 401) {
-			        msg = 'Unauthorized access.';
-			    } else if (jqXHR.status == 403) {
-			        msg = 'Forbidden resource can\'t be accessed.';
-			    } else if (jqXHR.status == 404) {
-			        msg = 'Resource not found.';
-			    } else if (jqXHR.status == 500) {
-			        msg = 'Internal Server Error.';		          
-			    } else if (jqXHR.status == 503) {
-			    	msg = 'Service unavailable.';	
-			    } else if (exception === 'parsererror') {
-			        msg = 'Requested parameters failed to be parsed as a valid JSON';
-			    } else if (exception === 'timeout') {
-			        msg = 'Request took longer than expected. Maybe server is offline.';
-			    } else if (exception === 'abort') {
-			        msg = 'Ajax request aborted.';
-			    } else {
-			        msg = 'Uncaught Error.';
+			        text = 'Failed to contact server. Maybe server is offline';
 			    }        
-		    }else{
-		    	msg = jqXHR.responseText;
-		    }   
+		    }else{		    	
+		    	text = jqXHR.responseText;
+		    }  
+		    
+		    try {
+			    var jsonText = JSON.parse(text);
+			    text = jsonText;
+		    } catch (e) {
+		    	
+		    }
+		    
+		    return text;
+		},
+	    closeAllNoty : function() {
+		    Noty.closeAll();
+	    },
+		createTooltip : function (target, content, items, tooltipClass){
+			this.destroyTooltip(target);		// destroying existing tooltip to create the new one (if exists)			
 
-	    	this.showText(notificationDom, msg, "error");
+		    target.tooltip({
+		        items : items,
+		        content : content,
+		        tooltipClass: tooltipClass || ""
+		    }).data("hasTooltip", true);			
 		},
-		showText : function(notificationDom, text, type){
-	    	try {
-		        var jsonText = JSON.parse(text);
-		        text = jsonText;
-		    } catch (e) {
-		    	
-		    }
-		    notificationDom.hide();
-		    if(type === "success"){
-		    	notificationDom.html("<p style='color:#4F8A10' align='center'>" + text + "</p>");
-		    }else{
-		    	notificationDom.html("<p style='color:red' align='center'>" + text + "</p>");
-		    }
-			notificationDom.slideDown();
+		destroyTooltip : function (target){
+			if(target.data("hasTooltip")){
+				target.removeData("hasTooltip");
+				target.tooltip("destroy");
+			}			
 		},
-		createTooltip : function(notificationDom){
-			notificationDom.tooltip();
-		},
-		setTooltip : function(notificationDom, text, type){
-	    	try {
-		        var jsonText = JSON.parse(text);
-		        text = jsonText;
-		    } catch (e) {
-		    	
-		    }
-			notificationDom.prop('title', text);
-			if(type === "success"){
-				notificationDom.removeClass().addClass("tooltip-success");
-			}else{
-				notificationDom.removeClass().addClass("tooltip-error");			
-			}
-		},
-		closeAllNoty : function() {
-			Noty.closeAll();			
+		clearNotification : function(target){
+			target.html("");
+			this.closeAllNoty();			
 		}
-	}	
-	
-	window.noty = notificator;	
+	}
+
+	window.notificator = notificator;
 })();

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infrastructures>
+
+	<infrastructure>
+		<name>d4science</name>
+		<vos>
+			<vo>
+				<name>d4science</name>
+				<src>ServiceMap_d4science.research-infrastructures.eu.xml</src>
+				<scope>/d4science.research-infrastructures.eu</scope>
+			</vo>
+			<vo>
+				<name>d4science/FARM</name>
+				<src>ServiceMap_FARM.xml</src>
+				<scope>/d4science.research-infrastructures.eu/FARM</scope>
+			</vo>
+			<vo>
+				<name>d4science/Ecosystem</name>
+				<src>ServiceMap_Ecosystem.xml</src>
+				<scope>/d4science.research-infrastructures.eu/Ecosystem</scope>
+			</vo>
+			<vo>
+				<name>d4science/INSPIRE</name>
+				<src>ServiceMap_INSPIRE.xml</src>
+				<scope>/d4science.research-infrastructures.eu/INSPIRE</scope>
+			</vo>
+			<vo>
+				<name>d4science/Arts-Humanities</name>
+				<src>ServiceMap_Arts-Humanities.xml</src>
+				<scope>/d4science.research-infrastructures.eu/Arts-Humanities</scope>
+			</vo>
+		</vos>
+	</infrastructure>
+
+	<infrastructure>
+		<name>gcube</name>
+		<vos>
+			<vo>
+				<name>gcube</name>
+				<src>ServiceMap_gcube.xml</src>
+				<scope>/gcube</scope>
+			</vo>
+			<vo>
+				<name>gcube/devsec</name>
+				<src>ServiceMap_devsec.xml</src>
+				<scope>/gcube/devsec</scope>
+			</vo>
+			<vo>
+				<name>gcube/devNext</name>
+				<src>ServiceMap_devNext.xml</src>
+				<scope>/gcube/devNext</scope>
+			</vo>
+		</vos>
+	</infrastructure>
+
+</infrastructures>

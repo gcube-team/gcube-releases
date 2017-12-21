@@ -2,8 +2,8 @@
 	'use strict';
 	
 	var dom = window.dom;
-	var dialogs = window.dialogs;
-	var noty = window.noty;
+	var dialogs;
+	var notificator = window.notificator;
 	
 	var workspace = {
 		config : null,
@@ -27,41 +27,44 @@
 					    	currentUrl = node.id === "#" ? getWorkspaceUrl : getFoldersUrl;					    	
 					    	return currentUrl;
 					    },
-						dataType : "json",
-						data : function (node) {
-							currentFolderText = node.text;
-					    	return { folderId : node.id };
-					    },
-					    beforeSend : function(){
-					    	if(currentUrl === getWorkspaceUrl){
-					    		$(".jstree-icon.jstree-ocl").css("display", "inline");
-					    	}
-					    	workspace.disableWorkspace();					    	
-					    },
-					    complete : function(){					    	
-					    	workspace.enableWorkspace();
-					    },
-					    success : function(data){
-					    	if(currentUrl === getWorkspaceUrl){
-					    		$(".jstree-icon.jstree-ocl").css("display", "inline-block");
-					    	}
-					    },
-					    error: function (jqXHR, exception){
-					    	if(currentUrl === getWorkspaceUrl){
-						    	$(".jstree-anchor").empty();
-						    	$(".jstree-anchor").html('<i class="jstree-icon jstree-themeicon-hidden"></i>Failed to load Workspace. Please try again later</a>');
-					    	}else{
-					    		noty.showText(workspace.notificator,"Failed to open folder \"" + currentFolderText + "\"" ,"error");	
-					    	}
-					    },
-					    timeout: 20000
+                		dataType : "json",
+		                data : function(node) {
+			                currentFolderText = node.text;
+			                return {
+				                folderId : node.id
+			                };
+		                },
+		                beforeSend : function() {
+			                if (currentUrl === getWorkspaceUrl) {
+				                $(".jstree-icon.jstree-ocl").css("display", "inline");
+			                }
+			                workspace.disableWorkspace();
+		                },
+		                complete : function() {
+			                workspace.enableWorkspace();
+		                },
+		                success : function(data) {
+			                if (currentUrl === getWorkspaceUrl) {
+				                $(".jstree-icon.jstree-ocl").css("display", "inline-block");
+				                dialogs.showAnalysisFilesOnly.show();
+			                }
+		                },
+		                error : function(jqXHR, exception) {
+			                if (currentUrl === getWorkspaceUrl) {
+				                $(".jstree-anchor").empty();
+				                $(".jstree-anchor").html('<i class="jstree-icon jstree-themeicon-hidden"></i>Failed to load Workspace. Please try again later</a>');
+			                } else {
+				                notificator.showText(workspace.notification, "Failed to open folder \"" + currentFolderText + "\"", "error");
+			                }
+		                },
+		                timeout : 40000
 					}
 				},
 				types : {
-					folder : {
+					"folder" : {
 						icon : "folder-icon"
 					},
-					default : {
+					"default" : {
 						icon : " empty-file-icon"
 					},
 					"application/pdf" : {
@@ -124,7 +127,9 @@
 					
 					$(".remove-file").show();
 					$(".rename-file").show();
+					
 					$(".info").show();
+					
 					if(workspace.selectedNode.type === "folder" || workspace.selectedNode.type === "VRE/Folder"){
 						$('.create-folder').show();
 						$('.refresh').show();
@@ -168,16 +173,23 @@
 					$(".tea-context-menu").hide();
 				}
 			});
+			
+			$('#tea-workspace').on('open_node.jstree', function (event, data) { 
+				workspace.toggleNonAnalysisNodes();
+			});
 		},
-		init : function(config) {		
+		init : function(config) {			
+			window.dialogs.init(this);
+			dialogs = window.dialogs;
+			
 			this.config = config;
 			this.createWorkspace();	
 			this.action = null;
 			
 			$(".save-analysis").click(function() {	
-				if(window.currentAnalysis != null){
+				if(window.currentAnalysis != null) {
 					dialogs.openWorkspaceDialog("Save");
-				}else{
+				} else {
 					$("#tea-message-dialog").dialog({
 						  resizable: false,
 						  draggable: true,
@@ -254,7 +266,7 @@
 				workspace.tree.open_node(destinationFolderId, function () {
 					workspace.tree.select_node(data.id)
 			    });			
-				noty.showText(workspace.notificator, "Folder \"" + folderName + "\" has been created successfully!", "success");
+				notificator.showText(workspace.notification, "Folder \"" + folderName + "\" has been created successfully!", "success");
 			};	
 			
 			var onErrorCallback = function (jqXHR, exception) {
@@ -281,7 +293,7 @@
 			var onSuccessCallback = function (data){
 				workspace.tree.delete_node(data);
 				workspace.selectedNode = null;
-				noty.showText(workspace.notificator,"File \"" + fileName + "\" has been removed successfully!", "success");
+				notificator.showText(workspace.notification,"File \"" + fileName + "\" has been removed successfully!", "success");
 			};			
 			
 			var onErrorCallback = function (jqXHR, exception) {
@@ -312,7 +324,7 @@
 			var onSuccessCallback = function (data){
 				dialogs.closeDialog(dialog);
 				workspace.tree.rename_node(fileId, fileNewName);
-				noty.showText(workspace.notificator,"File \"" + fileName + "\" has been renamed successfully to \"" + fileNewName + "\"", "success");
+				notificator.showText(workspace.notification,"File \"" + fileName + "\" has been renamed successfully to \"" + fileNewName + "\"", "success");
 			};
 			
 			var onErrorCallback = function (jqXHR, exception) {
@@ -346,7 +358,7 @@
 				workspace.tree.open_node(destinationFolderId, function () {
 					workspace.tree.select_node(data.id)
 			    });	
-				noty.showText(workspace.notificator,"Analysis \"" + analysisName + "\" has been saved successfully!" ,"success");				
+				notificator.showText(workspace.notification,"Analysis \"" + analysisName + "\" has been saved successfully!" ,"success");				
 			};
 			
 			var onErrorCallback = function (jqXHR, exception) {
@@ -365,7 +377,6 @@
 		},		
 		loadAnalysis : function(analysisId){
 			var resourceUrl = this.config.loadAnalysisUrl;
-			var analysisName = workspace.tree.get_node(analysisId).text;			
 			
 			var data = {
 				analysisId : analysisId
@@ -383,21 +394,21 @@
 		    	workspace.enableWorkspace();
 			};
 			
-			var onSuccessCallback = function (data){				
+			var onSuccessCallback = function (analysis){				
 				dom.resetValidationHints();
 				
-				window.analytics.showParameters(data.parameters);
-			    window.analytics.showResult(data);				    
-			    window.currentAnalysis = data;				    
-			    
-			    var bodyDom = dom.moveWorkspaceButtonsToNoty(analysisName, data.date);
-				noty.setDom(window.notificator, bodyDom, "warning", false);
+				window.analytics.showParameters(analysis.parameters);
+			    window.analytics.showResult(analysis);				    
+			    window.currentAnalysis = analysis;				    
+
+			    var bodyDom = dom.moveWorkspaceButtonsToNoty(analysis.name, analysis.date);
+				notificator.showNoty(dom.notification, bodyDom, "warning");
 
 				$('.techno-economic-analysis-portlet #tea-info-container').hide();
 			};
 			
 			var onErrorCallback = function (jqXHR, exception) {
-				noty.errorHandlingNoty(window.notificator, jqXHR, exception);
+				notificator.errorHandlingText(dom.notification, jqXHR, exception);
 			};			
 			
 			window.ajax.get(data, resourceUrl, onSuccessCallback, onErrorCallback, beforeSendCallback, completeCallback);
@@ -430,14 +441,39 @@
 		},
 		disableWorkspace : function(){
 	    	workspace.loading = true;	
-	    	dialogs.workspaceDialog.closest(".ui-dialog").find("button").prop("disabled", true);			
+	    	dialogs.workspaceDialog.closest(".ui-dialog").find("button").prop("disabled", true);	
+	    	notificator.clearNotification(dom.notification);
 		},
 		enableWorkspace : function(){
 	    	dialogs.workspaceDialog.closest(".ui-dialog").find("button").prop("disabled", false);
 	    	workspace.loading = false;			
+		},
+		showAllNodes : function (){
+			workspace.tree.show_all();
+		},
+		hideNodes : function (nodes){
+			nodes.each(function(){
+				workspace.tree.hide_node(this);
+			});
+		},
+		hideNonAnalysisNodes : function(){
+			workspace.hideNodes(workspace.getNonAnalysisNodes());			
+		},
+		getNonAnalysisNodes : function(){
+			return $("i.jstree-themeicon-custom")
+				.not(".chart-icon")
+				.not(".folder-icon")
+				.not(".fa-users")				
+				.closest("li");
+		},
+		toggleNonAnalysisNodes : function(){
+			if($("#tea-workspace-show-analysis-files-only:checked").length > 0){
+    			workspace.hideNonAnalysisNodes();		
+			} else {	
+    			workspace.showAllNodes();
+			}
 		}
 	};	
-
+	
 	window.workspace = workspace;
-	dialogs.init();
 })();

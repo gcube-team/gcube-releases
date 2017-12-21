@@ -31,7 +31,7 @@
 <script src='<%=request.getContextPath()%>/modules/utils/notificator.js'></script>
 <script src='<%=request.getContextPath()%>/modules/utils/ajax.js'></script>
 
-									<!-- Analysis -->
+								<!-- Analysis -->
 
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/modules/analysis/analysis.css" />
 
@@ -39,7 +39,7 @@
 <script defer="defer" src='<%=request.getContextPath()%>/modules/analysis/validation.js'></script>	
 <script defer="defer" src="<%=request.getContextPath()%>/modules/analysis/analysis.js"></script>
 
-									<!-- Workspace -->
+								<!-- Workspace -->
 
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/modules/workspace/workspace.css" />
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/modules/workspace/context-menu.css" />
@@ -48,18 +48,18 @@
 <script defer="defer" src="<%=request.getContextPath()%>/modules/workspace/dialogs.js"></script>
 <script defer="defer" src="<%=request.getContextPath()%>/modules/workspace/workspace.js"></script>
 
-									<!-- Views -->
+								<!-- Views -->
 									
 <jsp:include page="../modules/workspace/dialogs.jsp" />
 <jsp:include page="../modules/analysis/analysis.jsp" />
 
-									<!-- Portlet Resource Methods -->	
+							<!-- Portlet Resource Methods -->	
 									
 <portlet:defineObjects />
 
-<portlet:resourceURL id="PerformAnalysis" var="PerformAnalysis"/>
+<portlet:resourceURL id="performAnalysis" var="performAnalysisUrl"/>
 <portlet:resourceURL id="SimulFishGrowthDataAPI" var="SimulFishGrowthDataAPI"/>
-<portlet:resourceURL id="SimulFishGrowthDataModel" var="SimulFishGrowthDataModel"/>
+<portlet:resourceURL id="getProductionModels" var="getProductionModelsUrl"/>
 <portlet:resourceURL id="getWorkspace" var="getWorkspace"/>
 <portlet:resourceURL id="getFolders" var="getFolders"/>
 <portlet:resourceURL id="saveAnalysis" var="saveAnalysis"/>
@@ -72,23 +72,21 @@
 
 <script defer="defer" type="text/javascript">
 	(function() {
-	    $(document).ready(function () {
-	    	window.notificator = $("#tea-noty-container");
-	    	
+	    $(document).ready(function () {	    	
 	    	window.dom.init();
-	    	
+
 	    	window.analytics.init({
 	    		'ContextPath': '<%=request.getContextPath()%>/',
 	    		'ResourceURL': '<portlet:resourceURL id="{url}?{params}" />',
 	    		'NameSpaceNative': 'portlet:namespace',
-	    		'PerformAnalysisUrl': '<%= PerformAnalysis %>'
+	    		'performAnalysisUrl': '<%= performAnalysisUrl %>'
 	    	});
 	    	
 	    	window.models.init({
 	    		'ContextPath': '<%=request.getContextPath()%>/',
 	    		'ResourceURL': '<portlet:resourceURL id="{url}?{params}" />',
 	    		'NameSpaceNative': 'portlet:namespace',
-			    'SimulFishGrowthDataModelUrl'	:	'<%= SimulFishGrowthDataModel %>',
+			    'getProductionModelsUrl'	:	'<%= getProductionModelsUrl %>',
 			    'modelsDOM' : $("#tea_production_model")
 	    	});	 
 	    	

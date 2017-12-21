@@ -1,0 +1,19 @@
+<ReleaseNotes>
+<Changeset component="dataminer-pool-manager.1-0-0" date="${buildDate}">
+  <Change>First Release</Change>
+</Changeset>
+<Changeset component="dataminer-pool-manager.2-0-0" date="${buildDate}">
+  <Change>Second Release</Change>
+</Changeset>
+<Changeset component="dataminer-pool-manager.2-1-0" date="${buildDate}">
+  <Change>New configuration file added</Change>
+</Changeset>
+<Changeset component="dataminer-pool-manager.2-2-0" date="${buildDate}">
+  <Change>Improvements and bugs fixed/SVN-UTF8 compliant/Installation in Production ghost added</Change>
+  <Change>Dynamic per-VRE configuration throght the information system</Change>
+</Changeset>
+<Changeset component="dataminer-pool-manager.2-3-0" date="${buildDate}">
+  <Change>Log information also if the verification of SVN dependencies fails</Change>
+</Changeset>
+</ReleaseNotes>
+

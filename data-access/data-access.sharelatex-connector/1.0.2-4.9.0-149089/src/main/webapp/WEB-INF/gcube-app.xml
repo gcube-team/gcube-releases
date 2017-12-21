@@ -1,0 +1,12 @@
+<application mode='online'>
+		<name>ShareLatex</name>
+		<group>DataAccess</group>
+		<version>1.0.2-4.9.0-149089</version>
+		<description>ShareLatex connector webapp</description>
+		<!--  <servlets>
+			<servlet name="org.gcube.data.analysis.rconnector.RConnector" entryPointName="connector"/>
+		</servlets> -->
+		<exclude handlers='request-validation'>/gcube/service/disconnect</exclude>
+		<local-persistence location='target' />
+</application>
+

@@ -1,0 +1,108 @@
+.aui .modal.fade {
+	border-radius: 1.1em;
+}
+.aui .layersModal.modal.fade .modal-header {
+	color:white;
+	background-color: white;
+}
+.aui .modal.fade .modal-header {
+	border-bottom: 0px;
+	background: #0271BE;
+	background-color: #0271BE;
+	color: #fff;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+}
+.aui .modal.fade .close {
+	color: #fff;
+    opacity: 0.9;
+    font-size: 1.2em;
+}
+.aui .modal.fade .close:hover {
+    color: #aaeeff !important;
+}
+.aui .modal.fade  .modal-body {
+	background: #fff;
+	background-color: #fff;
+	/* max-height: 470px; */
+}
+
+.aui .modal.fade .modal-footer {
+	display: block;
+	width: 100%;
+	padding: 1em 0;
+}
+
+/*** Edit layer modal ***/
+#editLayerModal {
+	width: 25%;
+	left: 0;
+	margin-left: 37.5%;
+}
+#editLayerModal .modal-body {
+	font-size: 0.8em;
+	/* max-height: none; */
+}
+#editLayerModal .layerModalTitle {
+	margin: 0;
+	color: #fff;
+}
+#editLayerModal .layerToEditName {
+	color: #fff;
+}
+#editLayerModal .blueLineBottom{
+	background: #0271BE;
+	background-color: #0271BE;
+	padding:0.3em 0.3em 0 0.3em;
+	border-top-right-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+}
+#editLayerModal .modal-header {
+	padding: 0.5em;
+}
+#editedLayerDescription {
+	border-radius:0.5em;
+}
+#editLayerModal .ediLayerPropertiesContainer:not(last-of-type) {
+	margin-bottom: 1em;
+}
+#editLayerModal .editLayerLabels {
+	color : #777;
+}
+#editLayerModal .progressContainer {
+	width:220px;
+	text-align: center;
+}
+#editLayerModal .ieowjMessage{
+	color: #777;
+	opacity: 0.7;
+	
+}
+#editLayerModal .progress {
+	border-radius: .5em;
+	margin-top : .5em;
+}
+
+#editLayerModal #editLayerModalDeleteLayer {
+	float: left;
+    margin-left: 1em;
+}
+/* #tagsContainer {
+	max-width: 220px;
+} */
+.layersTagsInputTagsContainer{
+	max-width:220px;
+}
+#tagsContainer .bootstrap-tagsinput {
+	float:right;
+	width: 206px;
+}
+#RenderLayerInMapModal {
+	width: 80%;
+	left: 0;
+	margin-left: 10%;
+	height: 65%;
+}
+#RenderLayerInMapModal .modal-body {
+	max-height: none;
+}

@@ -1,0 +1,48 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def borderRadius value('theme.buttonGroup.borderRadius','px');
+@def borderColor value('theme.buttonGroup.border.color');
+@def borderStyle value('theme.buttonGroup.border.style');
+@def borderWidth value('theme.buttonGroup.border.toString');
+
+@def fontSize value('theme.buttonGroup.font.size');
+@def fontFamily value('theme.buttonGroup.font.family');
+@def fontWeight value('theme.buttonGroup.font.weight');
+@def fontColor value('theme.buttonGroup.font.color');
+@def headerGradient value('theme.buttonGroup.headerGradient');
+@def headerPadding value('theme.buttonGroup.headerPadding.toString');
+
+@def bodyPadding value('theme.buttonGroup.bodyPadding.toString');
+@def bodyBackgroundColor value('theme.buttonGroup.bodyBackgroundColor');
+
+.group {
+  border-radius: borderRadius;
+  border-width: borderWidth;
+  border-style: borderStyle;
+  border-color: borderColor;
+}
+
+.header {
+  font-size: fontSize;
+  color: fontColor;
+  font-weight: fontWeight;
+  font-family: fontFamily;
+  line-height: 16px;
+  padding: headerPadding;
+  text-align: center;
+  
+  background: -webkit-linear-gradient(top, headerGradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, headerGradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, headerGradient); /* IE10+ */
+  background: linear-gradient(to bottom, headerGradient); /* W3C */
+}
+
+.body {
+  background-color: bodyBackgroundColor;
+  padding: bodyPadding;
+}

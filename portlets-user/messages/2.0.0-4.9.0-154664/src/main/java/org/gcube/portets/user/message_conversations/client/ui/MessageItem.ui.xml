@@ -1,0 +1,37 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:m="urn:import:gwt.material.design.client.ui">
+
+	<m:MaterialCollectionItem type="AVATAR"
+		ui:field="item" paddingLeft="55" paddingTop="5" paddingBottom="0"
+		lineHeight="18">
+		<m:MaterialImage ui:field="avatarImage" type="CIRCLE"
+			top="5" left="5" />
+		<m:MaterialLabel ui:field="senderNameLabel"
+			paddingLeft="0" fontSize="1.5em" textColor="BLACK" />
+		<m:MaterialLabel ui:field="subjectLabel" paddingLeft="0"
+			textColor="BLACK" />
+		<m:MaterialLabel ui:field="previewLabel" paddingLeft="0"
+			paddingRight="10" textColor="GREY" />
+		<m:MaterialCollectionSecondary top="0"
+			textAlign="RIGHT" right="2">
+			<m:MaterialLabel ui:field="timeLabel" textColor="GREY"
+				fontSize=".8em" />
+			<m:MaterialIcon iconType="KEYBOARD_ARROW_DOWN"
+				iconSize="SMALL" visibility="HIDDEN" ui:field="messageActionIcon"
+				iconColor="GREY_DARKEN_1" marginTop="5" />
+			<m:MaterialIcon iconType="ATTACHMENT" iconColor="GREY"
+				marginLeft="10" ui:field="attachmentsIcon" visibility="HIDDEN"
+				iconSize="TINY" title="This message has attachments" />
+
+		</m:MaterialCollectionSecondary>
+		<m:MaterialDropDown ui:field="dd" activator=""
+			constrainWidth="false" gutter="-100" hover="true" belowOrigin="true">
+			<m:MaterialLink textColor="BLUE_DARKEN_1" ui:field="setUnreadButton"
+				text="Mark as unread" />
+			<m:MaterialLink textColor="BLUE_DARKEN_1" ui:field="deleteButton"
+				text="Delete Message" />			
+		</m:MaterialDropDown>
+	</m:MaterialCollectionItem>
+
+</ui:UiBinder> 

@@ -1,0 +1,112 @@
+/** Add css rules here for your application. */
+/* @import url(d4scienceOrg.css); */
+.sendButton {
+	display: block;
+	font-size: 16pt;
+}
+
+.dialogVPanel {
+	margin: 5px;
+}
+
+.serverResponseLabelError {
+	color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+	margin: 15px 6px 6px;
+}
+
+#geoExplorer-body.geoExplorer-body {
+	background-image: url(imagesgeoexplorerpt/background.png);
+	background-repeat: repeat-x;
+	margin: 0;
+}
+
+#geoExplorer-header {
+	background-image: url(imagesgeoexplorerpt/header.png);
+	width: 1056px;
+	height: 110px;
+	margin: 0 auto;
+}
+
+#geoExplorer-content-container {
+	width: 1056px;
+	margin: 0 auto;
+	background-image: url(imagesgeoexplorerpt/content.png);
+	background-color: #cbd8de;
+	background-repeat: repeat-y;
+}
+
+/* #geoExplorer-content.geoExplorer-content { */
+/* 	padding: 2px 22px 0px 18px; */
+/* 	background-image: url(images/contentTop.png); */
+/* 	background-repeat: no-repeat; */
+/* } */
+/* #geoExplorer-content.geoExplorerPortlet-content { */
+/* 	margin: 4px 4px 4px 4px; */
+/* 	width: 100%; */
+/* } */
+#geoExplorer-footer {
+	background-image: url(imagesgeoexplorerpt/footer.png);
+	width: 1056px;
+	height: 66px;
+	margin: 0 auto;
+}
+
+.resizeBar {
+/* 	background-image: url(imagesgeoexplorerpt/resizeBar.png); */
+	height: 5px;
+}
+
+.margin10 {
+	margin: 10px;
+}
+
+.noBorder {
+	border: none !important;
+}
+
+.marginTop10 {
+	margin-top: 10px;
+}
+
+.formActionsWmsDialog {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.control-group.error .control-label, .control-group.error .help-block,
+	.control-group.error .help-inline {
+	color: #b94a48
+}
+
+.control-group.error .checkbox, .control-group.error .radio,
+	.control-group.error input, .control-group.error select, .control-group.error textarea
+	{
+	color: #b94a48
+}
+
+.control-group.error input, .control-group.error select, .control-group.error textarea
+	{
+	/* 	border-color: #b94a48; */
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+}
+
+.control-group.error input:focus, .control-group.error select:focus,
+	.control-group.error textarea:focus {
+	/* 	border-color: #953b39; */
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px
+		#d59392;
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392
+}
+
+.control-group.error .input-prepend .add-on, .control-group.error .input-append .add-on
+	{
+	color: #b94a48;
+	background-color: #f2dede;
+}

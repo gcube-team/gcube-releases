@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="T-Writer"
+	targetNamespace="http://gcube-system.org/namespaces/data/tm" xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:tns="http://gcube-system.org/namespaces/data/tm" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+	xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+	xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+	xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types">
+
+	<import
+		namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		location="../gcube/common/core/providers/GCUBEProvider.wsdl" />
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+		location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+		location="../wsrf/notification/WS-BaseN.wsdl" />
+
+
+	<wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+
+
+	<types>
+		<xsd:schema targetNamespace="http://gcube-system.org/namespaces/data/tm"
+			xmlns:tns="http://gcube-system.org/namespaces/data/tm" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+			<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+				schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+
+			<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" />
+
+			<xsd:element name="Add" type="tns:anyHolder" />
+			<xsd:element name="AddResponse" type="tns:anyHolder" />
+
+			<xsd:element name="AddRS" type="tns:RSLocator" />
+			<xsd:element name="AddRSResponse" type="tns:RSLocator" /> <!-- of AddOutcome -->
+
+			<xsd:element name="Update" type="tns:anyHolder" />
+			<xsd:element name="UpdateResponse" type="tns:anyHolder" />
+
+			<xsd:element name="UpdateRS" type="tns:RSLocator" />
+			<xsd:element name="UpdateRSResponse" type="tns:RSLocator" /> <!-- of UpdateFailures -->
+
+			<xsd:complexType name="anyHolder">
+				<xsd:sequence>
+					<xsd:any processContents="skip" namespace="##any"
+						maxOccurs="1" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="RSLocator">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd:string">
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+
+			<xsd:element name="UnsupportedOperationFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="UnsupportedRequestFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="UnknownTreeFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="InvalidTreeFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+		</xsd:schema>
+	</types>
+
+	<message name="AddRequest">
+		<part name="request" element="tns:Add" />
+	</message>
+	<message name="AddResponse">
+		<part name="response" element="tns:AddResponse" />
+	</message>
+
+	<message name="AddRSRequest">
+		<part name="request" element="tns:AddRS" />
+	</message>
+	<message name="AddRSResponse">
+		<part name="response" element="tns:AddRSResponse" />
+	</message>
+
+	<message name="UpdateRequest">
+		<part name="request" element="tns:Update" />
+	</message>
+	<message name="UpdateResponse">
+		<part name="response" element="tns:UpdateResponse" />
+	</message>
+
+	<message name="UpdateRSRequest">
+		<part name="request" element="tns:UpdateRS" />
+	</message>
+	<message name="UpdateRSResponse">
+		<part name="response" element="tns:UpdateRSResponse" />
+	</message>
+
+	<message name="UnsupportedOperationFaultMessage">
+		<part name="fault" element="tns:UnsupportedOperationFault" />
+	</message>
+
+	<message name="UnsupportedRequestFaultMessage">
+		<part name="fault" element="tns:UnsupportedRequestFault" />
+	</message>
+
+	<message name="UnknownTreeFaultMessage">
+		<part name="fault" element="tns:UnknownTreeFault" />
+	</message>
+	<message name="InvalidTreeFaultMessage">
+		<part name="fault" element="tns:InvalidTreeFault" />
+	</message>
+
+	<portType name="TWriterPortType"
+		wsdlpp:extends="wsntw:NotificationProducer provider:GCUBEProvider provider:GCUBENotificationProvider">
+
+		<operation name="add">
+			<input message="tns:AddRequest" />
+			<output message="tns:AddResponse" />
+			<fault name="unsupportedoperationfault" message="tns:UnsupportedOperationFaultMessage" />
+			<fault name="unsupportedrequestfault" message="tns:UnsupportedRequestFaultMessage" />
+			<fault name="invalidtreefault" message="tns:InvalidTreeFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="addRS">
+			<input message="tns:AddRSRequest" />
+			<output message="tns:AddRSResponse" />
+			<fault name="unsupportedoperationfault" message="tns:UnsupportedOperationFaultMessage" />
+			<fault name="unsupportedrequestfault" message="tns:UnsupportedRequestFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="update">
+			<input message="tns:UpdateRequest" />
+			<output message="tns:UpdateResponse" />
+			<fault name="unsupportedoperationfault" message="tns:UnsupportedOperationFaultMessage" />
+			<fault name="unsupportedrequestfault" message="tns:UnsupportedRequestFaultMessage" />
+			<fault name="unknowntreefault" message="tns:UnknownTreeFaultMessage" />
+			<fault name="invalidtreefault" message="tns:InvalidTreeFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="updateRS">
+			<input message="tns:UpdateRSRequest" />
+			<output message="tns:UpdateRSResponse" />
+			<fault name="unsupportedoperationfault" message="tns:UnsupportedOperationFaultMessage" />
+			<fault name="unsupportedrequestfault" message="tns:UnsupportedRequestFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+	</portType>
+
+
+</definitions>

@@ -28,7 +28,7 @@
 						errorCallback(jqXHR, exception);
 					}	
 				},
-				timeout: 20000
+				timeout: 60000
 			});
 		},
 		get : function(data, url, successCallback, errorCallback, beforeSendCallback, completeCallback){
@@ -58,7 +58,7 @@
 						errorCallback(jqXHR, exception);
 					}	
 				},
-				timeout: 20000
+				timeout: 60000
 			});
 		}
 	}

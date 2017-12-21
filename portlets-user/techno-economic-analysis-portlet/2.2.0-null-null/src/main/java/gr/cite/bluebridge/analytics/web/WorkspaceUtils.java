@@ -19,11 +19,12 @@ import gr.cite.bluebridge.workspace.exceptions.CustomException;
 public class WorkspaceUtils {
 	
 	private static Logger logger = LoggerFactory.getLogger(WorkspaceUtils.class);
-		
+	private static final ObjectMapper mapper = new ObjectMapper();
+	
 	public static boolean isValidAnalysis(String economics) {
 
 		try {
-			new ObjectMapper().readValue(economics, Economics.class);
+			mapper.readValue(economics, Economics.class);
 		} catch (IOException e) {
 			logger.debug("Unparsable Analysis", e);
 			return false;

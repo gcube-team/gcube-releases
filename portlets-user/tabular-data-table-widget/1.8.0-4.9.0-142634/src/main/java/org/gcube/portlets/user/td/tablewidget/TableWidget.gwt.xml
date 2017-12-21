@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='TableWidget'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User' />
+  <!-- <inherits name="com.google.gwt.i18n.I18N" /> -->
+  
+  <!-- We need the JUnit module in the main module,               -->
+  <!-- otherwise eclipse complains (Google plugin bug?)           -->
+  <inherits name='com.google.gwt.junit.JUnit' />
+
+  <!-- Inherit the default GWT style sheet.  You can change       -->
+  <!-- the theme of your GWT application by uncommenting          -->
+  <!-- any one of the following lines.                            -->
+  <!-- <inherits name='com.google.gwt.user.theme.standard.Standard' /> -->
+  <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+  <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
+
+  <!-- Other module inherits                                      -->
+  <inherits name='com.sencha.gxt.ui.GXT' />
+  <inherits name="com.allen_sauer.gwt.log.gwt-log-TRACE" />
+  <inherits name='org.gcube.portlets.user.td.gwtservice.TDGWTService' />
+  <inherits
+		name='org.gcube.portlets.user.td.expressionwidget.ExpressionWidget' />
+  <inherits name='org.gcube.portlets.user.td.columnwidget.ColumnWidget' />
+  <inherits name='org.gcube.portlets.user.td.monitorwidget.MonitorWidgetTD' />
+  
+  <!-- Specify the app entry point class.                         -->
+  <!--  <entry-point class='org.gcube.portlets.user.td.tablewidget.client.TableWidgetEntry' /> -->
+  
+   <!-- 
+	<set-configuration-property name="locale.cookie"
+		value="TDLangCookie" />
+	<set-configuration-property name="locale.queryparam"
+		value="TDLang" />
+	<set-configuration-property name="locale.usemeta"
+		value="Y" />
+	<set-configuration-property name="locale.useragent"
+		value="Y" />
+
+	<set-configuration-property name="locale.searchorder"
+		value="cookie,queryparam,meta,useragent" />
+
+	<extend-property name="locale" values="en" />
+	<extend-property name="locale" values="it" />
+	<extend-property name="locale" values="es" />
+	<set-property name="locale" value="en, it, es" />
+	<set-property-fallback name="locale" value="en" />
+	 -->	
+	 
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client' />
+  <source path='shared' />
+
+	
+</module>

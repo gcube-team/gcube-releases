@@ -2,6 +2,10 @@ body {
 	overflow-x:hidden;
 }
 
+.aui hr {
+    margin: 15px 0;
+}
+
 .techno-economic-analysis-portlet #analysisForm{
 	padding-top:20px;
 }
@@ -118,11 +122,11 @@ body {
     margin-right: auto;
 }
 
-.techno-economic-analysis-portlet #tea_is_off_shore_aqua_farm {
+.aui .tea-checkbox , .aui .techno-economic-analysis-portlet .tea-checkbox{
 	display: none;
 }
 
-.techno-economic-analysis-portlet #tea_is_off_shore_aqua_farm+label:before {
+.aui .tea-checkbox+label:before {
 	border: 2px solid #ccc;
 	content: "\00a0";
 	display: inline-block;
@@ -134,7 +138,7 @@ body {
 	border-radius: 5px;
 }
 
-.techno-economic-analysis-portlet #tea_is_off_shore_aqua_farm:checked+label:before {
+.aui .tea-checkbox:checked+label:before {
 	background: #fff;
 	color: #666;
 	content: "";
@@ -143,7 +147,7 @@ body {
 	text-align: center;
 }
 
-.techno-economic-analysis-portlet #tea_is_off_shore_aqua_farm:checked+label:after {
+.aui .tea-checkbox:checked+label:after {
 	font-weight: bold;
 }
 
@@ -385,4 +389,10 @@ body {
 
 .aui .form-horizontal .controls {
     margin-bottom: 10px;
+}
+
+.aui #tea-results-container-header {
+	display: block;
+	width: 100%;
+	height: 50px;
 }

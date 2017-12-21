@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-widgets.catalogue-sharing-widget.1-0-1"
+		date="2017-05-10">
+		<Change>Minor fix</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.catalogue-sharing-widget.1-0-0"
+		date="2017-05-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,37 @@
+<web-app>
+	<context-param>
+		<param-name>internalLoginUrl</param-name>
+		<param-value>http://localhost:5000/login</param-value>
+	</context-param>
+	<context-param>
+		<param-name>hostName</param-name>
+		<param-value>sharelatex-d-d4s.d4science.org</param-value>
+	</context-param>
+	<context-param>
+		<param-name>mongoHost</param-name>
+		<param-value>localhost</param-value>
+	</context-param>
+	<context-param>
+		<param-name>mongoPort</param-name>
+		<param-value>27017</param-value>
+	</context-param>
+		<context-param>
+		<param-name>mongoDatabaseName</param-name>
+		<param-value>sharelatex</param-value>
+	</context-param>
+<!--  	<context-param>
+		<param-name>mongoLogin</param-name>
+		<param-value></param-value>
+	</context-param>
+	<context-param>
+		<param-name>mongoPwd</param-name>
+		<param-value></param-value>
+	</context-param> -->
+	<servlet>
+		<servlet-name>org.gcube.data.access.sharelatex.connector.Connector</servlet-name>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>org.gcube.data.access.sharelatex.connector.Connector</servlet-name>
+		<url-pattern>/gcube/service/*</url-pattern>
+	</servlet-mapping>
+</web-app>

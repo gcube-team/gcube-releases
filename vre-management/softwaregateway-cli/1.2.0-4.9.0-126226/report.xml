@@ -1,0 +1,13 @@
+<Packages>
+	<Package>
+		<groupID>org.gcube.contentmanagement</groupID>
+		<artifactID>storage-manager-core</artifactID>
+		<version>1.0.0</version>
+		<ID>a10d5b10-2aae-11e3-abd0-b9a1f503bc2e</ID>
+		<URL>http://maven.research-infrastructures.eu/nexus/service/local/artifact/maven/redirect?r=gcube-releases&g=org.gcube.contentmanagement&a=storage-manager-core&v=1.0.0&e=jar</URL>
+		<javadoc>http://maven.research-infrastructures.eu/nexus/service/local/artifact/maven/redirect?r=gcube-releases&g=org.gcube.contentmanagement&a=storage-manager-core&v=1.0.0&e=jar&c=javadoc</javadoc>
+		<Status>SUCCESS</Status>
+		<Operation>NEW</Operation>
+		<Timestamp>1380641527910</Timestamp>
+	</Package>
+</Packages>

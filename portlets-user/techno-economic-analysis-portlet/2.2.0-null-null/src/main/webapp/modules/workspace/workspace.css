@@ -12,6 +12,7 @@
     border-radius: 4px;
     margin-bottom: 16px;
     width: 92%;
+    outline:none;
 }
 
 /* hides icons of root folders */

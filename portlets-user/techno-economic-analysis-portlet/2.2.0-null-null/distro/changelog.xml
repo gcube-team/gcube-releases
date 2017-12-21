@@ -30,5 +30,9 @@
 		<Change>Added tooltips for information and validation of parameter fields.</Change> 		
 		<Change>Added minor UI improvements.</Change>			
 	</Changeset>
+	
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-portlet.2-4-0" date="2017-09-26">
+		<Change>Refactored code and improved error messages.</Change>	
+	</Changeset>
 
 </ReleaseNotes>

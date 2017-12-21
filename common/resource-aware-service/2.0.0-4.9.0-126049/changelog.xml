@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.rest.resource-aware-service.1-0-0" date="2014-03-13">
+		<Change>Initial release</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.common.rest.resource-aware-service.2-0-0" date="2014-06-04">
+		<Change>Made ResourceAwareService class abstract so that scope, resourceClass and resourceNamePref
+		are accessed by abstract methods</Change>
+	</Changeset>
+</ReleaseNotes>

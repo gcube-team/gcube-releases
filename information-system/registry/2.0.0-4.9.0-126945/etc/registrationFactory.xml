@@ -1,0 +1,38 @@
+<ServiceGroupRegistrationParameters
+   xmlns:sgc="http://mds.globus.org/servicegroup/client"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+   xmlns:agg="http://mds.globus.org/aggregator/types"
+   xmlns="http://mds.globus.org/servicegroup/client">
+
+   <RefreshIntervalSecs>60</RefreshIntervalSecs>
+
+   <Content xsi:type="agg:AggregatorContent"
+      xmlns:agg="http://mds.globus.org/aggregator/types">
+
+      <agg:AggregatorConfig>
+      <agg:GetMultipleResourcePropertiesPollType 	xmlns:registry="http://gcube-system.org/namespaces/informationsystem/registry">																				
+  	   <agg:PollIntervalMillis>60000</agg:PollIntervalMillis>
+  	   <!-- resource property list from here-->  	   
+			   <agg:ResourcePropertyNames>registry:RunningInstance</agg:ResourcePropertyNames>
+			   <agg:ResourcePropertyNames>registry:ExternalRunningInstance</agg:ResourcePropertyNames>
+			   <agg:ResourcePropertyNames>registry:Service</agg:ResourcePropertyNames>
+			   <agg:ResourcePropertyNames>registry:Collection</agg:ResourcePropertyNames>
+			   <agg:ResourcePropertyNames>registry:CS</agg:ResourcePropertyNames>
+			   <agg:ResourcePropertyNames>registry:CSInstance</agg:ResourcePropertyNames>
+			   <agg:ResourcePropertyNames>registry:GHN</agg:ResourcePropertyNames>
+			   <agg:ResourcePropertyNames>registry:gLiteCE</agg:ResourcePropertyNames>
+			   <agg:ResourcePropertyNames>registry:gLiteSE</agg:ResourcePropertyNames>
+			   <agg:ResourcePropertyNames>registry:gLiteSite</agg:ResourcePropertyNames>
+			   <agg:ResourcePropertyNames>registry:gLiteService</agg:ResourcePropertyNames>
+		   	   <agg:ResourcePropertyNames>registry:VRE</agg:ResourcePropertyNames>
+		 	   <agg:ResourcePropertyNames>registry:MetadataCollection</agg:ResourcePropertyNames>
+		   	   <agg:ResourcePropertyNames>registry:GenericResource</agg:ResourcePropertyNames>   	   	
+       </agg:GetMultipleResourcePropertiesPollType>
+ 	 </agg:AggregatorConfig>
+
+      <agg:AggregatorData/>
+   </Content>
+
+</ServiceGroupRegistrationParameters>

@@ -1,0 +1,27 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlet.user.toptopics.2-0-2"
+		date="2016-12-01">
+		<Change>Minor fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.toptopics.2-0-1"
+		date="2016-10-01">
+		<Change>Minor fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.toptopics.2-0-0"
+		date="2016-05-01">
+		<Change>Moved to Liferay 6.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.toptopics.1-1-0"
+		date="2015-08-28">
+		<Change>Minor Restyle</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.toptopics.1-0-1"
+		date="2014-12-13">
+		<Change>Added Client scope handler, to set the scope from the client
+			and help preventing the browser back button cache problem</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlet.user.toptopics.1-0-0"
+		date="2014-10-10">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

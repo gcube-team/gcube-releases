@@ -1,0 +1,13 @@
+<ReleaseNotes>
+<Changeset component="fhn-manager-client.1-0-0" date="2017-12-21">
+  <Change>First Release</Change>
+</Changeset>
+<Changeset component="fhn-manager-client.1-1-0" date="2017-12-21">
+  <Change>Second Release</Change>
+  <Change>Integration with gCube IS added</Change>
+</Changeset>
+<Changeset component="fhn-manager-client.1-2-0" date="2017-12-21">
+  <Change>Third release</Change>
+  <Change>Integration with Occopus Added</Change>
+</Changeset>
+</ReleaseNotes>

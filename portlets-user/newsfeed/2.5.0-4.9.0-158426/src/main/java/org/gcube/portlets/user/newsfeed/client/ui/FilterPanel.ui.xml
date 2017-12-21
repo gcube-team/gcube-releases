@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="feed-filters">
+			<ul>
+				<li>
+					<g:HTML ui:field="allUpdatesLink"></g:HTML>
+				</li>
+<!-- 				<li> -->
+<!-- 					<g:HTML ui:field="connectionsLink"></g:HTML> -->
+<!-- 				</li> -->
+				<li>
+					<g:HTML ui:field="favoritesLink"></g:HTML>
+				</li>
+				<li class="final">
+					<g:HTML ui:field="onlyme"></g:HTML>
+				</li>
+			</ul>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

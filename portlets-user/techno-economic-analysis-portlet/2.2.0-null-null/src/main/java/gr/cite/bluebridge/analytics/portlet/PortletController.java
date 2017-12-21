@@ -1,15 +1,17 @@
 package gr.cite.bluebridge.analytics.portlet;
 
+import static javax.servlet.http.HttpServletResponse.SC_INTERNAL_SERVER_ERROR;
+import static javax.servlet.http.HttpServletResponse.SC_NOT_FOUND;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
-
 import javax.portlet.ResourceRequest;
 import javax.portlet.ResourceResponse;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.core.Response;
 
 import org.gcube.common.portal.PortalContext;
@@ -24,9 +26,11 @@ import org.springframework.web.portlet.bind.annotation.ResourceMapping;
 
 import com.liferay.portal.util.PortalUtil;
 
-import gr.cite.bluebridge.analytics.web.*;
-import gr.cite.bluebridge.endpoint.*;
-import gr.cite.bluebridge.endpoint.exceptions.*;
+import gr.cite.bluebridge.analytics.web.PortletUtils;
+import gr.cite.bluebridge.analytics.web.SingletonHttpClient;
+import gr.cite.bluebridge.endpoint.EndpointManager;
+import gr.cite.bluebridge.endpoint.ServiceProfile;
+import gr.cite.bluebridge.endpoint.exceptions.ServiceDiscoveryException;
 
 @Controller
 @RequestMapping("VIEW")
@@ -45,7 +49,7 @@ public class PortletController {
 		return "index";
 	}
 
-	@ResourceMapping(value = "PerformAnalysis")
+	@ResourceMapping(value = "performAnalysis")
 	public void performAnalysis(ResourceRequest request, ResourceResponse response, @RequestParam("parameters") Object parameters) {
 		PortalContext pContext = PortalContext.getConfiguration();
 		HttpServletRequest httpServletRequest = PortalUtil.getHttpServletRequest(request);
@@ -73,7 +77,7 @@ public class PortletController {
 					clientResponse = singletonHttpClient.doPost(resource, headers, parameters);
 					status = clientResponse.getStatus();
 				} catch (Exception e) {
-					endpointManager.removeServiceEndpoint(scope, simulFishGrowthDataAPI, endpoint);
+					endpointManager.removeServiceEndpoint(scope, technoEconomicAnalysis, endpoint);
 					logger.warn("Cannot reach endpoint : " + status, e);
 				}
 
@@ -85,21 +89,21 @@ public class PortletController {
 			String result = clientResponse.readEntity(String.class);
 
 			if (status == 404 && result.contains("Tomcat")) {
-				throw new Exception("Techno Economic Analysis service  discovered but Not Found");
+				throw new Exception("Techno Economic Analysis service discovered but Not Found");
 			}
-
+					
 			PortletUtils.returnResponse(response, status, result);
 		} catch (ServiceDiscoveryException e) {
-			PortletUtils.returnResponseAsJson(response, HttpServletResponse.SC_NOT_FOUND, "Analysis failed! Portlet Internal Error");
+			PortletUtils.returnResponseAsJson(response, SC_NOT_FOUND, "Could not begin analysis. Service is not up");
 			logger.error("Analysis failed! Techno Economic Analysis Service could not be discovered", e);
 		} catch (Exception e) {
-			PortletUtils.returnResponseAsJson(response, HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Analysis failed! Portlet Internal Error");
+			PortletUtils.returnResponseAsJson(response, SC_INTERNAL_SERVER_ERROR, "Could not complete analysis.");
 			logger.error("Analysis failed due to server internal error", e);
 		}
 	}
 
-	@ResourceMapping(value = "SimulFishGrowthDataModel")
-	public void SimulFishGrowthDataModel(ResourceRequest request, ResourceResponse response) {
+	@ResourceMapping(value = "getProductionModels")
+	public void getProductionModels(ResourceRequest request, ResourceResponse response) {
 		PortalContext pContext = PortalContext.getConfiguration();
 		HttpServletRequest httpServletRequest = PortalUtil.getHttpServletRequest(request);
 		String scope = pContext.getCurrentScope(httpServletRequest);
@@ -141,14 +145,11 @@ public class PortletController {
 			if (status == 404 && result.contains("Tomcat")) {
 				throw new Exception("SimulFishGrowthData discovered but Not Found");
 			}
-
+ 
 			PortletUtils.returnResponse(response, status, result);
-		} catch (ServiceDiscoveryException e) {
-			PortletUtils.returnResponseAsJson(response, HttpServletResponse.SC_NOT_FOUND, "Could not load Models. Portlet Internal Error");
-			logger.error("Could not load Models. SimulFishGrowthData Endpoint could not be discovered", e);
 		} catch (Exception e) {
-			PortletUtils.returnResponseAsJson(response, HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Could not load Models. Portlet Internal Error");
-			logger.error("Could not load Models. Portlet Internal Error", e);
+			PortletUtils.returnResponseAsJson(response, SC_INTERNAL_SERVER_ERROR, "Could not load Models. Models service is unreachable");
+			logger.error("Could not load Models. Models service is unreachable", e);
 		}
 	}
 }

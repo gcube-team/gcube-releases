@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Resource>
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>Service Accounting Manger</Description>
+		<Class>DataPublishing</Class>
+		<Name>accounting-service</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Name>accounting-service</Name>
+				<Version>1.1.0-4.9.0-154724</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.accounting</groupId>
+					<artifactId>accounting-service</artifactId>
+					<version>1.1.0-4.9.0-154724</version>
+				</MavenCoordinates>
+				<Files>
+					<File>accounting-service-1.1.0-4.9.0-154724.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>
+

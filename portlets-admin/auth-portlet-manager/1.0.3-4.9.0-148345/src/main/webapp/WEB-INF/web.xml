@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <servlet>
+    <servlet-name>jUnitHostImpl</servlet-name>
+    <servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>authService</servlet-name>
+    <servlet-class>org.gcube.portlets.admin.authportletmanager.server.AuthServiceImpl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jUnitHostImpl</servlet-name>
+    <url-pattern>/authman/junithost/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>authService</servlet-name>
+    <url-pattern>/authman/authm</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>widgettourServlet</servlet-name>
+    <servlet-class>org.gcube.portlets.widgets.widgettour.server.TourManagerServicesImpl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>widgettourServlet</servlet-name>
+    <url-pattern>/authman/tourmanagerservice</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>AuthPortletManager.html</welcome-file>
+  </welcome-file-list>
+</web-app>

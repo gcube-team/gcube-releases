@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='widgettour'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Other module inherits -->
+	<inherits name='com.ait.toolkit.intro.Intro' />
+	<inherits name='com.ait.toolkit.hopscotch.HopScotch' />
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+
+	<!-- inherits gCube Widgets Library -->
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='org.gcube.portlets.widgets.widgettour.client.WidgetTour' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+	<!-- Specify the application specific style sheet. -->
+	<stylesheet src='WidgetTour.css' />
+	
+</module>

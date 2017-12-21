@@ -1,0 +1,175 @@
+/*************************************** Checkbox styling *********************************/
+input[type="checkbox"] {
+   
+	visibility: hidden;
+}
+
+input[type="checkbox"] + label {
+	margin-left: -15px;
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:16px;
+    height:16px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background-color: transparent;
+    cursor:pointer;
+}
+
+input[type="checkbox"].chkbox-small + label span {
+   width: 10px;
+   height: 10px;
+}
+
+input[type="checkbox"].chkbox-large + label span {
+    width: 20px;
+   height: 20px;
+}
+
+input[type="checkbox"].chkbox-x-large + label span {
+   width:  40px;
+   height: 40px;
+}
+
+input[type="checkbox"].chkbox-bg-white + label span {
+	background-color: #ffffff;
+}
+
+input[type="checkbox"].chkbox-bg-white:checked + label span {
+	background-color: #ffffff;
+}
+
+input[type="checkbox"].chkbox-bg-grey +label span {
+	background-color: #eaeaea;
+}
+
+input[type="checkbox"].chkbox-bg-grey:checked +label span {
+	background-color: #eaeaea;
+}
+
+ input[type="checkbox"].shadowed + label span {
+    -webkit-box-shadow: 2px 2px 2px #888888;
+	-moz-box-shadow: 2px 2px 2px #888888;
+	box-shadow: 2px 2px 2px #888888;
+} 
+/*************************************** Radio styling *********************************/
+input[type="radio"] {
+   
+	visibility: hidden;
+}
+
+input[type="radio"] + label {
+	margin-left: -15px;
+}
+
+input[type="radio"] + label span {
+    display:inline-block;
+    width:17px;
+    height:17px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type="radio"].shadowed + label span {
+    -webkit-box-shadow: 2px 2px 2px #888888;
+	-moz-box-shadow: 2px 2px 2px #888888;
+	box-shadow: 2px 2px 2px #888888;
+}
+
+input[type="radio"].chkbox-small + label span {
+   width: 10px;
+   height: 10px;
+}
+
+input[type="radio"].chkbox-small:checked + label span {
+   width: 10px;
+   height: 10px;
+}
+
+input[type="radio"].chkbox-large + label span {
+    width: 20px;
+   height: 20px;
+}
+
+input[type="radio"].chkbox-x-large + label span {
+   width:  40px;
+   height: 40px;
+}
+
+/*************************************** Orange theme - Checkbox *********************************/
+input[type="checkbox"].chkbox-small:checked + label span {
+	background-image:url('../img/orange/tick(10x10).png');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+  	background-size: cover; 
+}
+
+input[type="checkbox"].chkbox-large:checked + label span {
+	background-image:url('../img/orange/tick(20x20).png');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+  	background-size: cover; 
+}
+
+input[type="checkbox"]:checked + label span {
+    background-image: url('../img/orange/tick(20x20).png');
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+  	background-size: cover; 
+}
+
+
+/***************************************** Orange theme - Radio ***********************************/
+input[type="radio"] + label span {
+	background:url(../img/orange/radio_unselected.png) left top no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+  	background-size: cover; 
+}
+
+input[type="radio"]:disabled + label span {
+	background:url(../img/orange/radio_unselected_dis.png) left top no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+  	background-size: cover; 
+}
+	
+input[type="radio"]:checked + label span {
+    background:url(../img/orange/radio_selected.png) left top no-repeat;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+  	background-size: cover; 
+}
+
+input[type="radio"].chkbox-small + label span {
+	background:url(../img/orange/radio_unselected(10).png) left top no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+  	background-size: cover; 
+}
+
+input[type="radio"].chkbox-small:disabled + label span {
+	background:url(../img/orange/radio_unselected(10)_dis.png) left top no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+  	background-size: cover; 
+}
+
+input[type="radio"].chkbox-small:checked + label span {
+	background:url(../img/orange/radio_selected(10).png) left top no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+  	background-size: cover; 
+}

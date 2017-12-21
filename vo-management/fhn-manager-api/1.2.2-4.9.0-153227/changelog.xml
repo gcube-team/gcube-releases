@@ -1,0 +1,21 @@
+<ReleaseNotes>
+<Changeset component="fhn-manager-api.1-0-0" date="2017-12-20">
+  <Change>First Release</Change>
+</Changeset>
+<Changeset component="fhn-manager-api.1-1-0" date="2017-12-20">
+  <Change>Second Release</Change>
+  <Change>Minor changes on Node definition</Change>
+</Changeset>
+<Changeset component="fhn-manager-api.1-2-0" date="2017-12-20">
+  <Change>Third Release</Change>
+  <Change>Added infrastructure model</Change>
+</Changeset>
+<Changeset component="fhn-manager-api.1-2-1" date="2017-12-20">
+  <Change>Fourth Release</Change>
+  <Change>Added Caching model for resourceTemplates</Change>
+</Changeset>
+<Changeset component="fhn-manager-api.1-2-2" date="2017-12-20">
+  <Change>Fifth Release</Change>
+  <Change>Minor Changes</Change>
+</Changeset>
+</ReleaseNotes>

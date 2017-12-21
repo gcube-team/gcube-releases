@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="ic-client-1.0.0" date="2013-01-11">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="ic-client-1.0.0" date="2013-06-05">
+		<Change>fixed defect #1825</Change>
+	</Changeset>
+	<Changeset component="ic-client-1.0.3-4.9.0-142503" date="2016-12-13">
+		<Change>fixed defect #1825</Change>
+	</Changeset>
+</ReleaseNotes>

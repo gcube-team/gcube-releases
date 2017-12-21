@@ -1,8 +1,11 @@
 (function() {
 	
 	'use strict';
-
+	
+	var notificator = window.notificator;
+	
 	var dom = {	
+		notification 		: $("#tea-notification"),
 		analysisForm		: $("#analysisForm"),
 		models 				: $('#tea_production_model'),
 		fishSpecies			: $("#tea-fish-species"),
@@ -25,7 +28,7 @@
 		resetButton 		: $("#tea-reset-button"),
 		saveButton 			: $(".save-analysis"),
 		loadButton 			: $(".load-analysis"),
-		toolTips			: {},
+		tooltips			: {},
 	
 		resetAnalysis : function() {
 			dom.models.val('Choose a Model');
@@ -47,7 +50,7 @@
 			$(".techno-economic-analysis-portlet .save-analysis").hide();
 			$(".techno-economic-analysis-portlet #tea-info-container").show();
 
-			window.noty.closeAllNoty();
+	    	notificator.clearNotification(dom.notification);
 			window.currentAnalysis = null;	
 			
 			dom.models.one("change", function(){
@@ -62,18 +65,21 @@
 				dom.resetValidationHints();
 			});
 		},
+		
 		resetValidationHints : function () {			
 			dom.analysisForm.validate().resetForm();
 			$(".control-group.error").find(".label-tooltip").removeClass("fa-info-circle");			
 			$(".control-group.error").find(".label-tooltip").removeClass("fa-times-circle-o");
 			$(".control-group.error").find(".label-tooltip").addClass("fa-info-circle");
 			$(".control-group.error").removeClass('error');
-			this.enableAllDefaultToolTips();
+			this.enableAllDefaultTooltips();
 		},
+		
 		init : function(){
 			this.uiBindings();
-			this.initToolTips();
+			this.initTooltips();
 		},
+		
 		uiBindings : function(){
 			dom.resetButton.on('click', function() {
 				dom.resetAnalysis();
@@ -91,53 +97,45 @@
 			
 			$("form").submit(function() { return false; });		// disable refresh when pressing enter
 		},
-		initToolTips : function () {			
-			this.toolTips = {
-				"tea_production_model" 		: "The pre-built fish production model for the species to be cultivated",	
-				"tea-fish-species" 			: "The fish species represented by the production model",
-				"tea_fish_selling_price" 	: "The selling price per kg of the mature fish per generation",
-				"tea_tax_rate" 				: "The rate that applies to the yearly profits of the aqua farm",
-				"tea_discount_rate" 		: "The base year inflation rate that is used for the estimation of the project's key components' prices over the 10 year period",
-				"tea_inflation_rate" 		: "The inflation rate which will be applied on prices for the next 10 years.",
-				"tea_fish_feed_price" 		: "The feed price cost per kg representing the buy price of the feed for the cultivation of the targeted species",
-				"tea_fish_fry_price" 		: "The fry price cost per kg representing the buy price of the fry for the cultivation of the targeted species",
-				"tea_maturity_time" 		: "The necessary months for each generation of fish to reach a mature state. After that period, the fish are ready to be sold"
-			}
-			this.enableAllDefaultToolTips();
-		},
-		createToolTip : function (helpIcon, content, items){
-			if(helpIcon.data("hasToolTip")){
-				helpIcon.removeData("hasToolTip");
-				helpIcon.tooltip("destroy");
-			}
+		
+		initTooltips : function () {			
+			this.tooltips = {
+				"#tea_production_model" 	: "The pre-built fish production model for the species to be cultivated",	
+				"#tea-fish-species" 		: "The fish species represented by the production model",
+				"#tea_fish_selling_price" 	: "The selling price per kg of the mature fish per generation",
+				"#tea_tax_rate" 			: "The rate that applies to the yearly profits of the aqua farm",
+				"#tea_discount_rate" 		: "The base year inflation rate that is used for the estimation of the project's key components' prices over the 10 year period",
+				"#tea_inflation_rate" 		: "The inflation rate which will be applied on prices for the next 10 years.",
+				"#tea_fish_feed_price" 		: "The feed price cost per kg representing the buy price of the feed for the cultivation of the targeted species",
+				"#tea_fish_fry_price" 		: "The fry price cost per kg representing the buy price of the fry for the cultivation of the targeted species",
+				"#tea_maturity_time" 		: "The necessary months for each generation of fish to reach a mature state. After that period, the fish are ready to be sold"
+			};
 			
-			helpIcon.tooltip({
-				items : items,
-			    content : content,
-		    }).data("hasToolTip", true);			
-		},	
-		enableDefaultToolTip : function(toolTipId) {
-			var helpIcon = $("#" + toolTipId).siblings(".label-tooltip");
-			var content = dom.toolTips[toolTipId];			
-			this.createToolTip(helpIcon, content, "i");
+			this.enableAllDefaultTooltips();
 		},
-		enableAllDefaultToolTips : function() {
-			$(".tea_input_percent, .tea_input_currency, #tea_production_model").each(function () {
-				var id = $(this).attr("id");
-				dom.enableDefaultToolTip(id);				
-			});
+		
+		enableDefaultTooltip : function(tooltipId) {
+			if(!tooltipId.startsWith("#")){
+				tooltipId = "#" + tooltipId;
+			}
+			var helpIcon = $(tooltipId).siblings(".label-tooltip");
+			var content = dom.tooltips[tooltipId];			
+			notificator.createTooltip(helpIcon, content, "i");
 		},
-		destroyAllDefaultToolTips : function () {
-			$(".tea_input_percent, .tea_input_currency, #tea_production_model").each(function () {
-				var id = $(this).attr("id");
-				$("#" + id).siblings(".label-tooltip").tooltip("destroy");				
-			});			
+		
+		enableAllDefaultTooltips : function() {
+			for (var tooltipId in this.tooltips) {
+			    if (this.tooltips.hasOwnProperty(tooltipId)) {
+					dom.enableDefaultTooltip(tooltipId);				
+			    }
+			}
 		},
+		
 		moveWorkspaceButtonsToNoty(name, date){				
 		    var table = "<table class='row-fluid'> " +		    			
 			    			"<tr>" +
 			    				"<td class='span4' style='text-align:center;'>  " +
-			    					  "<span class='font-16 blue-text'> " +
+			    					  "<span class='font-14 blue-text'> " +
 					    					name +
 					    			  "</span> " +
 					    			  "<br>" +
@@ -153,20 +151,29 @@
 			this.loadButton.show();			
 			this.loadButton.removeClass("center").addClass("right");
 			this.loadButton.insertAfter(".btn.save-analysis");
-   
+			
 		    return table;
 		},
-		moveWorkspaceButtonsToDefault(){						
+		
+		moveWorkspaceButtonsToDefault(){		
+			this.saveButton.hide();
+
 			this.loadButton.show();		    		   
 			this.loadButton.addClass("center").removeClass("right");		    
-			this.loadButton.appendTo("#tea-info-container");
-		    
+			this.loadButton.appendTo("#tea-info-container");			
+		},
+		
+		moveWorkspaceButtonsToSides(){
 			this.saveButton.show();
 			this.saveButton.css('position','absolute');
 			this.saveButton.css('display','inline-block');
 			this.saveButton.css('float','none');
-			this.saveButton.insertBefore( "#tea-noty-container" );
+			this.saveButton.insertBefore( "#tea-notification" );
 			this.saveButton.html("<i class='fa fa-fw fa-floppy-o' aria-hidden='true'></i>Save in Workspace");	
+			
+			this.loadButton.show();		
+			this.loadButton.removeClass("center").addClass("right");		    
+			this.loadButton.appendTo("#tea-results-container-header");	
 		}
 	};
 	

@@ -1,0 +1,19 @@
+<project default="undeploy" basedir=".">
+
+
+<property environment="env"/>
+<property file="build.properties"/>
+<property file="${user.home}/build.properties"/>
+<property name="env.GLOBUS_LOCATION" value="../../.."/>
+<property name="deploy.dir" value="${env.GLOBUS_LOCATION}"/>
+
+
+<target name="undeploy">
+  <delete verbose="true" dir="${deploy.dir}/etc/ghnmanager-service-1.5.0-4.9.0-126926"/>
+  <delete verbose="true" file="${deploy.dir}/lib/org.gcube.common.vremanagement.ghnmanager.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/org.gcube.common.vremanagement.ghnmanager/GHNManager.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/org.gcube.common.vremanagement.ghnmanager/GHNManager_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/org.gcube.common.vremanagement.ghnmanager/GHNManager_flattened.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/org.gcube.common.vremanagement.ghnmanager/GHNManager_service.wsdl"/>
+</target>
+</project>

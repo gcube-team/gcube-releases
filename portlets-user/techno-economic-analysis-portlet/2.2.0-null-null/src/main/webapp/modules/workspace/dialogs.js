@@ -12,79 +12,106 @@
 		saveDialog 		: $("#tea-save-dialog"),
 		infoDialog 		: $("#tea-info-dialog"),	
 		contextMenu		: $(".tea-context-menu"),
-		init : function (){
-			workspace = window.workspace;
+		init : function (defaultWorkspace){
+			workspace = defaultWorkspace;
+			this.createWorkspaceDialog();
+		},
+		createWorkspaceDialog : function(){			
+			workspace.actionText = $("<p id='action-text'></p>");
+			workspace.notification = $("<div id='tea-workspace-notifier' style='overflow-x:auto'></div>");
+			
+			dialogs.workspaceDialog.dialog({
+				resizable: false,
+				draggable: true,
+				height: 400,
+				width: 700, 
+				modal: true,
+				autoOpen: false ,
+				dialogClass: 'tea-workspace-dialog-title',
+				open: function(event, ui, action) {		
+					if(workspace.action === "Load"){
+						workspace.actionText.text("Select an Analysis to Load");
+					} else {
+						workspace.actionText.text("Select a Save location");
+					}
+					
+					dialogs.workspaceDialog.closest(".ui-dialog").find(".tea-action-button").html(workspace.action);
+					dialogs.workspaceDialog.closest(".ui-dialog").find(".tea-action-button").hide();
+					workspace.notification.html('');
+				},
+				close: function(){
+					workspace.selectedNode = null;						  
+					workspace.tree.deselect_all();
+					dialogs.contextMenu.hide();
+				},
+				buttons: [
+					{
+						text:"Cancel",
+						class: "tea-cancel-button pull-right",
+						click: function() {	
+							$(this).dialog("close");
+						}
+					},
+					{
+						text: "Action" ,
+						class: "tea-action-button pull-right",
+						click: function() {	
+							if(workspace.action === "Save"){
+								dialogs.openSaveAnalysisDialog();
+							} else if(workspace.action === "Load"){
+								workspace.loadAnalysis(workspace.selectedNode.id);
+								//workspace.testLoadAnalysis();
+							} else if(workspace.action === "Open"){
+								workspace.tree.open_node(workspace.selectedNode, false);
+							}								  
+						}
+					}
+				  ]
+			}).dialogExtend({
+				minimizable : true,
+				minimize : function(evt, dlg){
+					$('.ui-widget-overlay').addClass('overlay-hidden');
+				},
+				restore : function(evt, dlg){ 
+					$('.ui-widget-overlay').removeClass('overlay-hidden');
+				}
+			});
+
+			var div = $("<div></div>");
+			div.append(workspace.actionText);
+			div.append(workspace.notification);
+			div.insertBefore("#tea-workspace-dialog");
+			
+			this.createShowAnalysisFilesOnly();	
 		},
 		openWorkspaceDialog: function(action){
-			workspace.action = action;
+			workspace.action = action;		
 			
 			if (dialogs.workspaceDialog.hasClass('ui-dialog-content')) {		
 				dialogs.workspaceDialog.dialog("open");
-			} else{
-				workspace.actionText = $("<p id='actionText'></p>");
-				workspace.notificator = $("<div id='tea-workspace-notifier' style='overflow-x:auto'></div>");
-				
-				dialogs.workspaceDialog.dialog({
-					resizable: false,
-					draggable: true,
-					height: 400,
-					width: 700, 
-					modal: true,
-					dialogClass: 'tea-workspace-dialog-title',
-					open: function(event, ui, action) {		
-						if(workspace.action === "Load"){
-							workspace.actionText.text("Select an Analysis to Load");
-						} else {
-							workspace.actionText.text("Select a Save location");
-						}
-						
-						dialogs.workspaceDialog.closest(".ui-dialog").find(".tea-action-button").html(workspace.action);
-						dialogs.workspaceDialog.closest(".ui-dialog").find(".tea-action-button").hide();
-						workspace.notificator.html('');
-					},
-					close: function(){
-						workspace.selectedNode = null;						  
-						workspace.tree.deselect_all();
-						dialogs.contextMenu.hide();
-					},
-					buttons: [
-						{
-							text: "Action" ,
-							class: "tea-action-button",
-							click: function() {	
-								if(workspace.action === "Save"){
-									dialogs.openSaveAnalysisDialog();
-								} else if(workspace.action === "Load"){
-									workspace.loadAnalysis(workspace.selectedNode.id);
-								} else if(workspace.action === "Open"){
-									workspace.tree.open_node(workspace.selectedNode, false);
-								}								  
-							}
-						},
-						{
-							text:"Cancel",
-							class: "tea-cancel-button",
-							click: function() {	
-								$(this).dialog("close");
-							}
-						}
-
-					  ]
-				}).dialogExtend({
-					minimizable : true,
-					minimize : function(evt, dlg){
-						$('.ui-widget-overlay').addClass('overlay-hidden');
-					},
-					restore : function(evt, dlg){ 
-						$('.ui-widget-overlay').removeClass('overlay-hidden');
-					}
-				});
-
-				var div = $("<div></div>");
-				div.append(workspace.actionText);
-				div.append(workspace.notificator);
-				div.insertBefore("#tea-workspace-dialog");
-			}
+			}				
+		},
+		createShowAnalysisFilesOnly: function() {
+		    var checkbox = $("<input type='checkbox' class='tea-checkbox' id='tea-workspace-show-analysis-files-only' checked='checked'>");
+		    var checkboxText = $("<span id='tea-workspace-show-analysis-files-only-text'>  Show analysis files only</span>");
+		    var labelOfCheckbox = $("<label for='tea-workspace-show-analysis-files-only'></label>");
+		    
+		    var container = $("<div id='tea-workspace-show-analysis-files-only-container'>");
+		    container.append(checkbox).append(labelOfCheckbox);
+		    container.css("display", "inline-block");
+		    container.css("float", "left");
+		    container.appendTo($("#tea-workspace-dialog").closest(".tea-workspace-dialog-title").find(".ui-dialog-buttonset"));
+		    
+		    checkboxText.insertAfter(labelOfCheckbox);
+		    
+		    this.initUiBindingsOfShowAnalysisFilesOnly(checkbox);
+		    this.showAnalysisFilesOnly = container;
+		    this.showAnalysisFilesOnly.hide();
+	    },
+	    initUiBindingsOfShowAnalysisFilesOnly : function(checkbox) {    	
+	    	checkbox.change(function() {
+				workspace.toggleNonAnalysisNodes();
+	    	});
 		},
 		openSaveAnalysisDialog: function(){				
 			if (dialogs.saveDialog.hasClass('ui-dialog-content')) {		
@@ -100,19 +127,18 @@
 				  dialogClass: 'tea-dialog-title',
 				  open: function(event, ui, action) {	
 					  dialogs.resetDialog($(this));
-//					  dialogs.createDialog.closest(".ui-dialog").find(".tea-action-button").focus();
 				  },
 				  buttons: [
 					  {
 						  text:"Cancel",
-						  "class": "tea-cancel-button",
+						  "class": "tea-cancel-button pull-right",
 						  click: function() {	
 							  $(this).dialog("close");
 						  }
 					  },
 					  {
 						  text: "Save" ,
-						  "class": "tea-action-button",
+						  "class": "tea-action-button pull-left",
 						  click: function() {	
 							  workspace.saveAnalysis(window.currentAnalysis, dom.analysisName.val(), dom.analysisDescription.val(), workspace.selectedNode.id);								  
 						  }
@@ -135,19 +161,18 @@
 				  dialogClass: 'tea-dialog-title',
 				  open: function(event, ui) {
 					  dialogs.resetDialog($(this));
-//					  dialogs.createDialog.closest(".ui-dialog").find(".tea-action-button").focus();
 				  },
 				  buttons: [
 					{
 						text:"Cancel",
-						"class": "tea-cancel-button",
+						"class": "tea-cancel-button pull-right",
 						click: function() {	
 							$(this).dialog("close");
 						}
 					},
 					{
 						text: "Create",
-						"class": "tea-action-button",
+						"class": "tea-action-button pull-left",
 						click: function() {	
 							workspace.createFolder(dom.folderName.val(), dom.folderDescription.val(), workspace.selectedNode.id);
 						}
@@ -175,14 +200,14 @@
 				  buttons: [
 					{
 						text:"Cancel",
-						"class": "tea-cancel-button",
+						"class": "tea-cancel-button pull-right",
 						click: function() {	
 							$(this).dialog("close");
 						}
 					},
 					{
 						text:"Remove",
-						"class": "tea-remove-button",
+						"class": "tea-remove-button pull-left",
 						click: function() {	
 							workspace.removeFile(workspace.selectedNode.id);
 						}
@@ -216,14 +241,14 @@
 				  buttons: [
 					{
 						text:"Cancel",
-						"class": "tea-cancel-button",
+						"class": "tea-cancel-button pull-right",
 						click: function() {	
 							$(this).dialog("close");
 						}
 					},
 					{
 						text:"Rename",
-						"class": "tea-action-button",
+						"class": "tea-action-button pull-left",
 						click: function() {									
 							workspace.renameFile(workspace.selectedNode.id, dom.fileNewName.val());								
 						}
@@ -270,7 +295,7 @@
 				dialogClass: 'tea-dialog-title',
 				buttons: [{
 					text:"Close",
-					"class": "tea-action-button",
+					"class": "tea-action-button pull-left",
 					click: function() {	
 						$(this).dialog("close");
 					}
@@ -282,7 +307,7 @@
 				dialogs.showHints(dialog, JSON.parse(jqXHR.responseText));
 			} else {
 				dialogs.closeDialog(dialog);
-				window.noty.errorHandlingText(workspace.notificator, jqXHR, exception);
+				window.notificator.errorHandlingText(workspace.notification, jqXHR, exception);
 			}
 		},
 		showHints : function(dialog, text){

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="test version " xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../gcf/src/main/resources/org/gcube/common/resources/kxml/schemas/runninginstance.xsd">
+	<ID>ID</ID>
+	<Type>RunningInstance</Type>
+	<Scopes>
+		<Scope>Scope</Scope>
+		<Scope>/gcube/devsec</Scope>
+		<Scope>/gcube</Scope>
+	</Scopes>
+	<Profile xsi:type="ProfileType">
+		<Description>Description</Description>
+		<Version>Version</Version>
+		<GHN UniqueID="80c23170-bb9f-11e1-8c1a-9f84e3238b6c" />
+		<Service UniqueID="85bc6ad0-2e52-11e2-a340-a5082a0868b4" />
+		<ServiceName>ServiceName</ServiceName>
+		<ServiceClass>ServiceClass</ServiceClass>
+		<RunningInstanceSecurity>
+			<RunningInstanceInterface EntryName="test entryname">
+				<RunningInstanceIdentity>
+					<subject>subject</subject>
+					<CASubject>CASubject</CASubject>
+				</RunningInstanceIdentity>
+			</RunningInstanceInterface>
+		</RunningInstanceSecurity>
+		<Platform>
+			<Name>Name</Name>
+			<Version>0</Version>
+			<MinorVersion>0</MinorVersion>
+			<RevisionVersion>0</RevisionVersion>
+			<BuildVersion>0</BuildVersion>
+		</Platform>
+		<DeploymentData>
+			<InstanceName>InstanceName</InstanceName>
+			<LocalPath>LocalPath</LocalPath>
+			<ActivationTime value="2001-12-31T12:00:00" />
+			<TerminationTime value="2001-12-31T12:00:00" />
+			<Status>Status</Status>
+			<MessageState>MessageState</MessageState>
+			<AvailablePlugins>
+				<Plugin>
+					<Service>
+						<Class>Class</Class>
+						<Name>Name</Name>
+						<Version>Version</Version>
+					</Service>
+					<Package>Package</Package>
+					<Version>Version</Version>
+				</Plugin>
+			</AvailablePlugins>
+		</DeploymentData>
+		<RIEquivalenceFunctions>
+			<Function>
+				<Name>Name</Name>
+				<ActualParameters>
+					<Param>
+						<Name>Name</Name>
+						<Value>Value</Value>
+					</Param>
+				</ActualParameters>
+			</Function>
+		</RIEquivalenceFunctions>
+		<AccessPoint>
+			<RunningInstanceInterfaces>
+				<Endpoint EntryName="test endpoint">http://tempuri.org</Endpoint>
+			</RunningInstanceInterfaces>
+		</AccessPoint>
+		<SpecificData>
+			<test>this is a test</test>
+			<anotherfield>some other text</anotherfield>
+		</SpecificData>
+		<Accounting>
+			<ScopedAccounting scope="/gcube/devsec">
+				<TotalINCalls>14</TotalINCalls>
+				<AverageINCalls average="0.0" interval="10800" />
+				<AverageINCalls average="0.0" interval="18000" />
+				<AverageINCalls average="0.0" interval="3600" />
+				<AverageInvocationTime average="0.11370370370370371"
+				interval="10800" />
+				<AverageInvocationTime average="0.08308333333333333"
+				interval="18000" />
+				<AverageInvocationTime average="0.06455555555555556"
+					interval="3600" />
+				<TopCallerGHN avgDailyCalls="14.0" avgHourlyCalls="3.0"
+					totalCalls="14">
+					<GHNName>146.48.87.217</GHNName>
+				</TopCallerGHN>
+			</ScopedAccounting>
+			<ScopedAccounting scope="/gcube">
+				<TotalINCalls>0</TotalINCalls>
+				<AverageINCalls average="0.0" interval="10800" />
+				<AverageINCalls average="0.0" interval="18000" />
+				<AverageINCalls average="0.0" interval="3600" />
+				<AverageInvocationTime average="0.0" interval="10800" />
+				<AverageInvocationTime average="0.0" interval="18000" />
+				<AverageInvocationTime average="0.0" interval="3600" />
+				<TopCallerGHN avgDailyCalls="0.0" avgHourlyCalls="0.0"
+					totalCalls="0">
+					<GHNName>N/A</GHNName>
+				</TopCallerGHN>
+			</ScopedAccounting>
+		</Accounting>
+	</Profile>
+</Resource>

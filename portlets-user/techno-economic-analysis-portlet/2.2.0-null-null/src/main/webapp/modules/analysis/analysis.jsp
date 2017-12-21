@@ -31,8 +31,8 @@
 			<div class="control-group custom-row">
 				<label class="control-label"> Aqua farm is off shore</label>
 				<div class="controls">					
-					<input type="checkbox" id="tea_is_off_shore_aqua_farm" checked="checked" >
-					<label for="tea_is_off_shore_aqua_farm" style="display: inline-block;"></label>		
+					<input type="checkbox" class="tea-checkbox" id="tea_is_off_shore_aqua_farm" checked="checked" >
+					<label for="tea_is_off_shore_aqua_farm"></label>		
 				</div>  
 			</div>			
 		</div>		
@@ -116,10 +116,10 @@
 		<div id="tea-results-container">
 		
 			<hr>
-			<div id="tea-results-container-header" style="display: inline-block; width: 100%;"> 
+			<div id="tea-results-container-header"> 
 			  	<button class="btn save-analysis"><i class="fa fa-fw fa-floppy-o" aria-hidden="true"></i>Save in Workspace</button>
 				
-				<div id="tea-noty-container"></div>		
+				<div id="tea-notification"></div>		
 			</div>
 			
 			<ul class="nav nav-tabs">

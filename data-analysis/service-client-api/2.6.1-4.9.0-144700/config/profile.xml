@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>Tabular Data Service Client API</Description>
+		<Class>DataAnalysis</Class>
+		<Name>service-client-api</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>Tabular Data Service Client API</Description>
+				<Name>service-client-api</Name>
+				<Version>2.6.1-4.9.0-144700</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.data.analysis.tabulardata</groupId>
+					<artifactId>service-client-api</artifactId>
+					<version>2.6.1-4.9.0-144700</version>
+				</MavenCoordinates>
+				<Type>library</Type>
+				<Files>
+					<File>service-client-api-2.6.1-4.9.0-144700.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>
+
+

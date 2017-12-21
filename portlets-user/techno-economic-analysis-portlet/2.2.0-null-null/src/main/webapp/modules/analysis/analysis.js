@@ -1,6 +1,9 @@
 (function() {
 	'use strict';
-
+	
+	var dom = window.dom;
+	var notificator = window.notificator;
+	
 	var models = {
 		config : null,
 		init : function(config) {		
@@ -9,15 +12,24 @@
 			this.modelsDOM = config.modelsDOM;
 		},
 		getModels : function(){
-			var resourceUrl = this.config.SimulFishGrowthDataModelUrl;
+			var resourceUrl = this.config.getProductionModelsUrl;
 			
 			var onSuccessCallback = function (data){				
 				for(var i=0; i<data.length; i++){
 					models.addModel(data[i]);
 				}				
 			};
-			var onErrorCallback = function (jqXHR, exception) {
-				window.noty.errorHandlingNoty(window.notificator, jqXHR, exception);
+			
+			var onErrorCallback = function (jqXHR, exception) {				
+				models.modelsDOM.closest('.control-group').removeClass('success').addClass('error');
+				
+				var modelsTooltip = models.modelsDOM.siblings(".label-tooltip");
+				modelsTooltip.removeClass("fa-info-circle");
+				modelsTooltip.addClass("fa-times-circle-o");
+				
+				var msg = notificator.errorHandling(jqXHR, exception);
+				
+				notificator.createTooltip(modelsTooltip, msg, "i", "error");
 			};
 			
 			window.ajax.get(null, resourceUrl, onSuccessCallback, onErrorCallback);
@@ -64,12 +76,12 @@
 					fryPrice 			: $('#tea_fish_fry_price').val(),
 					discountRate		: $('#tea_discount_rate').val(),
 					maturity			: $('#tea_maturity_time').val(),
-					inflationRate		: JSON.stringify(inflationRate),
+					inflationRate		: inflationRate,
 					sellingPrice 		: $('#tea_fish_selling_price').val(),
 					isOffShoreAquaFarm 	: $('#tea_is_off_shore_aqua_farm').is(':checked')
 				}						
 				
-				self.callWS(self.config.PerformAnalysisUrl, 
+				self.callWS(self.config.performAnalysisUrl, 
 				{
 					'parameters' : JSON.stringify(parameters)
 				},  
@@ -89,16 +101,16 @@
 			
 			window.models.modelsDOM.val(data.modelName);
 			
-			var inflationRate = JSON.parse(data.inflationRate);
 			var nextYear = new Date().getFullYear() + 1;
-			
+			var inflationRate = data.inflationRate[nextYear];
+
 			$('#tea-fish-species').val(data.fishSpecies);
 			$('#tea_tax_rate').val(data.taxRate),
 			$('#tea_fish_feed_price').val(data.feedPrice),
 			$('#tea_fish_fry_price').val(data.fryPrice),
 			$('#tea_discount_rate').val(data.discountRate),
 			$('#tea_maturity_time').val(data.maturity),
-			$('#tea_inflation_rate').val(inflationRate[nextYear]),
+			$('#tea_inflation_rate').val(inflationRate),
 			$('#tea_fish_selling_price').val(data.sellingPrice),
 			$('#tea_is_off_shore_aqua_farm').prop('checked', data.isOffShoreAquaFarm);
 		},
@@ -383,7 +395,7 @@
 		onCalculationEnd: function() {
 			$('.techno-economic-analysis-portlet .tab-content').show();
 			$('.techno-economic-analysis-portlet #tea-results-container ul > li').addClass("techno-economic-analysis-portlet-success");	
-			$('.techno-economic-analysis-portlet #tea-results-container ul > li > a').prop( "disabled", false );
+			$('.techno-economic-analysis-portlet #tea-results-container ul > li > a').prop("disabled", false);
 			$('.techno-economic-analysis-portlet .tea_loader').hide();		
 		},
 		
@@ -393,7 +405,7 @@
 					onSuccess(data);
 				}
 				window.currentAnalysis = data;
-				window.noty.showNoty(window.notificator, "Analysis has been successful!", "success");
+				notificator.showText(dom.notification, "Analysis has been successful!", "success");
 				
 				dom.saveButton.show();
 				dom.loadButton.removeClass("center").addClass("right");
@@ -401,7 +413,7 @@
 			};
 			
 			var onErrorCallback = function (jqXHR, exception) {
-				window.noty.errorHandlingNoty(window.notificator, jqXHR, exception);
+				notificator.errorHandlingText(dom.notification, jqXHR, exception);
 				$('.techno-economic-analysis-portlet .tea_loader').hide();	
 				$('.techno-economic-analysis-portlet #tea-info-container').show();
 			};
@@ -409,12 +421,15 @@
 			var beforeSendCallback = function(){
 				dom.resetButton.hide();
 				dom.saveButton.hide();
-			}
+				dom.loadButton.hide();
+				notificator.clearNotification(dom.notification);
+			};
 			
 			var completeCallback = function(){
 				dom.resetButton.show();
 				dom.loadButton.show();			
-			}
+				dom.saveButton.show();			
+			};
 			
 			window.ajax.post(data, resourceUrl, onSuccessCallback, onErrorCallback, beforeSendCallback, completeCallback);
 		}

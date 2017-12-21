@@ -1,5 +1,8 @@
 package gr.cite.bluebridge.workspace;
 
+import static javax.servlet.http.HttpServletResponse.SC_INTERNAL_SERVER_ERROR;
+import static javax.servlet.http.HttpServletResponse.SC_OK;
+
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -10,6 +13,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
 import javax.portlet.ResourceRequest;
 import javax.portlet.ResourceResponse;
 import javax.servlet.http.HttpServletRequest;
@@ -35,6 +39,7 @@ import com.liferay.portal.util.PortalUtil;
 import gr.cite.bluebridge.analytics.web.PortletUtils;
 import gr.cite.bluebridge.analytics.web.WorkspaceUtils;
 import gr.cite.bluebridge.workspace.exceptions.CustomException;
+
 
 @Controller
 @RequestMapping("VIEW")
@@ -75,9 +80,9 @@ public class WorkspaceController {
 			nodes.add(vreNode);
 			nodes.add(rootNode);
 
-			PortletUtils.returnResponseAsJson(response, 200, nodes);
+			PortletUtils.returnResponseAsJson(response, SC_OK, nodes);
 		} catch (Exception e) {
-			PortletUtils.returnResponseAsJson(response, 500, "Could not load Workspace");
+			PortletUtils.returnResponseAsJson(response, SC_INTERNAL_SERVER_ERROR, "Could not load Workspace");
 			logger.error("Could not load Workspace", e);
 		}
 	}
@@ -139,9 +144,9 @@ public class WorkspaceController {
 				}
 			}
 
-			PortletUtils.returnResponseAsJson(response, 200, nodes);
+			PortletUtils.returnResponseAsJson(response, SC_OK, nodes);
 		} catch (Exception e) {
-			PortletUtils.returnResponseAsJson(response, 500, "Could not load folders");
+			PortletUtils.returnResponseAsJson(response, SC_INTERNAL_SERVER_ERROR, "Could not load folders");
 			logger.error("Could not load folders", e);
 		}
 	}
@@ -170,14 +175,14 @@ public class WorkspaceController {
 			node.put("type", "folder");
 			node.put("children", false);
 
-			PortletUtils.returnResponseAsJson(response, 200, node);
+			PortletUtils.returnResponseAsJson(response, SC_OK, node);
 
 			logger.info("Created folder " + folderName + " successfully!");
 		} catch (CustomException e) {
 			logger.error(e.getMessage(), e);
 			PortletUtils.returnResponseAsJson(response, e.getStatusCode(), e.getMessage());
 		} catch (Exception e) {
-			PortletUtils.returnResponseAsJson(response, 500, "Could not create folder " + folderName);
+			PortletUtils.returnResponseAsJson(response, SC_INTERNAL_SERVER_ERROR, "Could not create folder " + folderName);
 			logger.error("Could not create folder " + folderName, e);
 		}
 	}
@@ -187,11 +192,11 @@ public class WorkspaceController {
 		try {
 			Workspace ws = HomeLibrary.getHomeManagerFactory().getHomeManager().getHome().getWorkspace();
 			ws.removeItem(fileId);
-			PortletUtils.returnResponseAsJson(response, 200, fileId);
+			PortletUtils.returnResponseAsJson(response, SC_OK, fileId);
 
 			logger.info("Removed " + fileId + " successfully!");
 		} catch (Exception e) {
-			PortletUtils.returnResponseAsJson(response, 500, "Could not remove file");
+			PortletUtils.returnResponseAsJson(response, SC_INTERNAL_SERVER_ERROR, "Could not remove file");
 			logger.error("Could not remove file", e);
 		}
 	}
@@ -209,13 +214,13 @@ public class WorkspaceController {
 			WorkspaceUtils.fileExists(ws, fileNewName, parent.getId());
 			item.rename(fileNewName);
 
-			PortletUtils.returnResponseAsJson(response, 200, fileId);
+			PortletUtils.returnResponseAsJson(response, SC_OK, fileId);
 		} catch (CustomException e) {
 			logger.error(e.getMessage(), e);
 			PortletUtils.returnResponseAsJson(response, e.getStatusCode(), e.getMessage());
 		} catch (Exception e) {
 			logger.error("Could not rename file", e);
-			PortletUtils.returnResponseAsJson(response, 500, "Could not rename file");
+			PortletUtils.returnResponseAsJson(response, SC_INTERNAL_SERVER_ERROR, "Could not rename file");
 		}
 	}
 
@@ -250,7 +255,7 @@ public class WorkspaceController {
 			node.put("type", "analysis");
 			node.put("children", false);
 
-			PortletUtils.returnResponseAsJson(response, 200, node);
+			PortletUtils.returnResponseAsJson(response, SC_OK, node);
 
 			logger.info("Created analysis " + analysisName + " successfully!");
 		} catch (CustomException e) {
@@ -258,7 +263,7 @@ public class WorkspaceController {
 			PortletUtils.returnResponseAsJson(response, e.getStatusCode(), e.getMessage());
 		} catch (Exception e) {
 			logger.error("Could not save analysis " + analysisName, e);
-			PortletUtils.returnResponseAsJson(response, 500, "Could not save analysis " + analysisName);
+			PortletUtils.returnResponseAsJson(response, SC_INTERNAL_SERVER_ERROR, "Could not save analysis " + analysisName);
 		}
 	}
 
@@ -269,18 +274,19 @@ public class WorkspaceController {
 		try {
 			Workspace ws = HomeLibrary.getHomeManagerFactory().getHomeManager().getHome().getWorkspace();
 			ExternalFile economicsFile = (ExternalFile) ws.getItem(analysisId);
+			String analysisName = economicsFile.getName();
 			String economics = WorkspaceUtils.streamToString(economicsFile.getData());
-
+			
 			String date = new SimpleDateFormat("dd.MM.yy - hh.mm a").format(economicsFile.getCreationTime().getTime());
 			int index = economics.lastIndexOf("}");
-			economics = economics.substring(0, index) + ", \"date\" : \"" + date + "\" }";
+			economics = economics.substring(0, index) + ", \"name\" : \"" + analysisName + "\", \"date\" : \"" + date + "\" }";
 
-			PortletUtils.returnResponse(response, 200, economics);
+			PortletUtils.returnResponse(response, SC_OK, economics);
 
 			logger.info("Loaded analysis " + analysisId + " successfully!");
 		} catch (Exception e) {
 			logger.error("Could not retrieve analysis from Workspace ", e);
-			PortletUtils.returnResponseAsJson(response, 500, "Could not retrieve analysis from Workspace");
+			PortletUtils.returnResponseAsJson(response, SC_INTERNAL_SERVER_ERROR, "Could not retrieve analysis from Workspace");
 		}
 	}
 
@@ -302,12 +308,12 @@ public class WorkspaceController {
 			node.put("Last Updated", formatter.format(item.getLastModificationTime().getTime()));
 			node.put("Description", item.getDescription());
 
-			PortletUtils.returnResponseAsJson(response, 200, node);
+			PortletUtils.returnResponseAsJson(response, SC_OK, node);
 
 			logger.info("Info for " + fileId + " fetched successfully!");
 		} catch (Exception e) {
 			logger.error("Could not retrieve info ", e);
-			PortletUtils.returnResponseAsJson(response, 500, "Could not retrieve info");
+			PortletUtils.returnResponseAsJson(response, SC_INTERNAL_SERVER_ERROR, "Could not retrieve info");
 		}
 	}
 }

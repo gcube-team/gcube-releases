@@ -1,0 +1,9 @@
+<application mode="online">
+ 
+	<group>Search</group>
+	<name>SimulFishGrowthData</name>
+	<version>0.0.2-SNAPSHOT</version>
+ 
+    <description>Access Simulation Fish Growth Data using a RESTfull Json API</description>
+ 
+</application>

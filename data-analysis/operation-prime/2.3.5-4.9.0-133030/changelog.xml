@@ -1,0 +1,19 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-analysis.operation-prime.2-0-0" date="2013-02-18"> 
+		<Change>first release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-prime.2-2-0" date="2014-10-29"> 
+		<Change>changed all operations for time management</Change>
+	</Changeset>	
+	<Changeset component="org.gcube.data-analysis.operation-prime.2-2-1" date="2014-12-01"> 
+		<Change>Added ChangeColumnPosition operation</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-prime.2-3-4" date="2015-05-21"> 
+		<Change>Integration Fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-prime.2-3-5" date="2016-08-29"> 
+		<Change>Automatic cast on changeColumnTodimension (#4882)</Change>
+	</Changeset>
+
+
+</ReleaseNotes>

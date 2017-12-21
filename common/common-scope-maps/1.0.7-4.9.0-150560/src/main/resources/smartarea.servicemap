@@ -1,0 +1,5 @@
+<service-map scope='/d4science.research-infrastructures.eu/SmartArea' version="${project.version}">
+	<services>
+		<service name='XQueryAccessService' endpoint='http://collector-sa-d4s.smart-applications.area.pi.cnr.it:8080/wsrf/services/gcube/informationsystem/collector/XQueryAccess' />
+	</services>
+</service-map>

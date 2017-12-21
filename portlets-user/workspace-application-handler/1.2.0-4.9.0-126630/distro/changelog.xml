@@ -1,0 +1,17 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.workspace-application-handler"
+		date="2015-06-04">
+		<Change>#Ticket 210. Updated to support HL 2.0
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-application-handler"
+		date="2013-10-21">
+		<Change>#Ticket 2223. This project was enhancements to gwt 2.5.1
+		</Change>
+		<Change>GCF dependency was removed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.workspace-application-handler"
+		date="2013-03-05">
+		<Change>first release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,13 @@
+#! /bin/sh
+
+#container's options
+export START_OPTIONS="-XrunpiAgent:server=enabled -Xms1000M -Xmx1000M"
+
+#clean up the services' state if needed
+[ -f "$GLOBUS_LOCATION/config/GHNProfile.xml" ] ||  rm -rf ~/.gcore
+
+cd $GLOBUS_LOCATION
+echo "gCore is running and logging into logs/container.log..."
+$GLOBUS_LOCATION/bin/gcore-start-container-daemon "$@" &
+ 
+
