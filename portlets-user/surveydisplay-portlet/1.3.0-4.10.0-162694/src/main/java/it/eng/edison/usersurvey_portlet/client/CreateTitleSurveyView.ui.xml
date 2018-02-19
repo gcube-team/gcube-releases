@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+
+		<!-- Title Survey -->
+		<g:HorizontalPanel>
+			<b:WellForm ui:field="titleSurvey">
+				<b:Heading size="4">Title</b:Heading>
+				<b:TextBox ui:field="titleSurveyTextBox" placeholder="questionnaire title..." />
+			</b:WellForm>
+		</g:HorizontalPanel>
+		
+	</g:HTMLPanel>
+</ui:UiBinder> 

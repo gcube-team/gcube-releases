@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://gcube-system.org/common/vremanagement/types"
+	xmlns:tns="http://gcube-system.org/common/vremanagement/types"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xs:complexType name="DeployInfoStatus">
+               <xs:sequence  minOccurs="1" maxOccurs="1">                         
+	               <xs:element name="ghnID" type="xs:string"/>
+                   <xs:element name="packageInfo" type="tns:PackageInfoStatus"/>                       
+                </xs:sequence>                   
+     </xs:complexType>  
+	
+	 <xs:complexType name="DeployInfo">
+               <xs:sequence  minOccurs="1" maxOccurs="1">                         
+	               <xs:element name="ghnID" type="xs:string"/>
+                   <xs:element name="packageInfo" type="tns:PackageInfo"/>                       
+                </xs:sequence>                   
+     </xs:complexType>  
+	
+	<xs:complexType name="Pair">
+		<xs:sequence  minOccurs="1" maxOccurs="1">   	
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="value" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>  
+
+	 <xs:complexType name="PackageInfo">
+               <xs:sequence  minOccurs="1" maxOccurs="1">                         
+	               <xs:element name="serviceName" type="xs:string"/>
+	               <xs:element name="serviceClass" type="xs:string"/>
+	               <xs:element name="serviceVersion" type="xs:string"/>
+                   <xs:element name="name" type="xs:string"/>
+                   <xs:element name="version" type="xs:string"/>                   
+               	<xs:element name="Options"  type="tns:Pair" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>                   
+     </xs:complexType>  
+	 
+	 <xs:complexType name="PackageInfoStatus">
+		<xs:sequence>
+	 			<xs:element name="package" type="tns:PackageInfo" />
+	 			<xs:element name="status" type="xs:string"/>
+	 			<xs:element name="message" type="xs:string"/>
+	 	</xs:sequence>
+	 </xs:complexType>
+	 
+	 <xs:complexType name="ServiceInfoStatus">
+               <xs:sequence  minOccurs="1" maxOccurs="1">                         
+                   <xs:element name="serviceName" type="xs:string"/>
+                   <xs:element name="serviceClass" type="xs:string"/>
+                   <xs:element name="ghnName" type="xs:string"/> 
+                   <xs:element name="status" type="xs:string"/>                       
+                </xs:sequence>                   
+     </xs:complexType>  
+	
+	 
+	  <xs:complexType name="deployMessage">
+			<xs:sequence>
+					<xs:element name="serviceName" type="xs:string"/>
+                   <xs:element name="serviceClass" type="xs:string"/>
+					<xs:element name="ghnID" type="xs:string" />
+					<xs:element name="Scope" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+
+	
+	<xs:complexType name="feedbackMessage">
+	 	<xs:sequence>
+	 		<xs:element name="callbackID" type="xs:string" />
+	 		<xs:element name="log" type="xs:string" />
+	 		<xs:element name="type" type="xs:string" />
+	 		<xs:element name="runningInstanceIDsList" type="xs:string"  minOccurs="0" maxOccurs="unbounded"/>
+	 		<xs:element name="packageInfoStatus" type="tns:PackageInfoStatus" minOccurs="0" maxOccurs="unbounded"/>
+	 	</xs:sequence>
+	 </xs:complexType>
+	 
+	
+
+</xs:schema>

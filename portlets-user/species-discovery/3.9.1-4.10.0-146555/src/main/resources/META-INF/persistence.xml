@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="SPD_PERSISTENCE_FACTORY" transaction-type="RESOURCE_LOCAL">
+		<class>org.gcube.portlets.user.speciesdiscovery.shared.CommonName</class>
+		<class>org.gcube.portlets.user.speciesdiscovery.shared.Taxon</class>
+		<class>org.gcube.portlets.user.speciesdiscovery.shared.ResultRow</class>
+		<class>org.gcube.portlets.user.speciesdiscovery.shared.ItemParameter</class>
+		<class>org.gcube.portlets.user.speciesdiscovery.shared.Occurrence</class>
+		<class>org.gcube.portlets.user.speciesdiscovery.shared.TaxonomyRow</class>
+		<class>org.gcube.portlets.user.speciesdiscovery.shared.OccurrencesJob</class>
+		<class>org.gcube.portlets.user.speciesdiscovery.shared.TaxonomyJob</class>
+		<class>org.gcube.portlets.user.speciesdiscovery.shared.GisLayerJob</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+			<property name="eclipselink.ddl-generation" value="create-tables" />
+			<property name="eclipselink.ddl-generation.output-mode"
+				value="database" />
+		</properties>	
+	</persistence-unit>
+</persistence> 

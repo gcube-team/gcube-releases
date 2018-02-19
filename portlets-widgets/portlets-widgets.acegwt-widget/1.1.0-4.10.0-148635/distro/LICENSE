@@ -1,0 +1,12 @@
+${gcube.license}
+
+============
+
+AceGWT Licence
+
+Part of this work has been derived by AceGWT.AceGWT integrates the Ajax.org Code Editor (ACE) into the Google Web Toolkit (GWT) .
+AceGWT is distributed under the MIT license: http://www.opensource.org/licenses/mit-license.php
+You can download original AceGWT source code from https://github.com/daveho/AceGWT
+You can find the Ajax.org Code Editor (ACE) licence at https://github.com/ajaxorg/ace/blob/master/LICENSE).
+More infromation on Ajax.org Code Editor (ACE) can be found at https://ace.c9.io/ 
+Ajax.org Code Editor (ACE) source code can be found at https://github.com/ajaxorg/ace

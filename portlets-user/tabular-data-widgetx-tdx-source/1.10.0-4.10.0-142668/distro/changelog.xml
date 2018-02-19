@@ -1,0 +1,40 @@
+<ReleaseNotes>
+	<Changeset component="${groupId}.${artifactId}.1-10-0" date="2017-02-15">
+		<Change>Updated to new PortalContext [ticket #6548]</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-9-0" date="2016-12-01">
+		<Change>Added fix for support new portal theme</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-8-0" date="2015-07-03">
+		<Change>Added different colors for columns of different type [issue #251]</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-7-0" date="2015-04-30">
+		<Change>Updated in line filter to suppurt soundex, text begin and text
+			end</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-6-0" date="2015-01-31">
+		<Change>Added column ordering</Change>
+		<Change>Updated in line filter</Change>
+		<Change>Updated numeric type to double</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-5-0" date="2014-10-31">
+		<Change>Updated pom dependencies</Change>
+		<Change>Updated Geometry type support</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-4-0" date="2014-09-12">
+		<Change>Updated grid behavior</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-3-0" date="2014-07-04">
+		<Change>Updated grid, now shows single view column</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-2-0" date="2014-06-05">
+		<Change>Added Inline Filter</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-1-0" date="2014-04-04">
+		<Change>Added ColumnDefinitionBuilder</Change>
+		<Change>Fixed QueryOrder</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-0-0" date="2014-02-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

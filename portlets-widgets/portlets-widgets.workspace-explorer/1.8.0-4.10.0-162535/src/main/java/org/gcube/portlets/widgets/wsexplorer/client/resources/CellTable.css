@@ -1,0 +1,110 @@
+@def selectionBorderWidth 1px ; .cellTableWidget {
+	
+}
+
+.cellTableFirstColumn {
+	
+}
+
+.cellTableLastColumn {
+	
+}
+
+.cellTableFooter {
+	
+}
+
+.cellTableHeader {
+}
+
+.cellTableCell {
+	
+}
+
+.cellTableFirstColumnFooter {
+	
+}
+
+.cellTableFirstColumnHeader {
+	
+}
+
+.cellTableLastColumnFooter {
+	
+}
+
+.cellTableLastColumnHeader {
+	
+}
+
+.cellTableSortableHeader {
+	
+}
+
+.cellTableSortableHeader:hover {
+	
+}
+
+.cellTableSortedHeaderAscending {
+	
+}
+
+.cellTableSortedHeaderDescending {
+	
+}
+
+.cellTableEvenRow {
+	
+}
+
+.cellTableEvenRowCell {
+	
+}
+
+.cellTableOddRow {
+	
+}
+
+.cellTableOddRowCell {
+	
+}
+
+.cellTableHoveredRow {
+	background: #D9EDF7 !important;
+	cursor: pointer;
+}
+
+.cellTableHoveredRowCell {
+	background: #D9EDF7 !important;
+	cursor: pointer;
+}
+
+.cellTableKeyboardSelectedRow, .cellTableKeyboardSelectedRow td, .cellTableKeyboardSelectedRow th {
+	background: #3A87AD !important;
+}
+
+.cellTableSelectedRow, .cellTableSelectedRow td, .cellTableSelectedRow th
+	{
+	/*   background: #D9EDF7 !important; */
+	/*   color: white !important; */
+	/*   height: auto; */
+	/*   overflow: auto; */
+	
+}
+
+.cellTableSelectedRowCell, .cellTableSelectedRow td.cellTableSelectedRowCell {
+	background: #3A87AD !important;
+}
+
+.cellTableKeyboardSelectedRowCell, .cellTableKeyboardSelectedRow td.cellTableKeyboardSelectedRowCell{
+	background: #3A87AD !important;
+}
+
+.cellTableKeyboardSelectedCell, .cellTableKeyboardSelectedRow td.cellTableKeyboardSelectedCell{
+	background: #3A87AD !important;
+	color: white !important;
+}
+
+.cellTableLoading {
+	margin: 30px;
+}

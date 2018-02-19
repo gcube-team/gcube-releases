@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="${groupId}.${artifactId}.1-1-0" date="2017-06-12">
+		<Change>Support Java 8 compatibility [ticket #8541]</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-0-0" date="2016-03-16">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

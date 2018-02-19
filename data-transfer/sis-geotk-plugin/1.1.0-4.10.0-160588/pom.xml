@@ -1,0 +1,144 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>LATEST</version>
+	</parent>
+	<groupId>org.gcube.data.transfer</groupId>
+	<artifactId>sis-geotk-plugin</artifactId>
+	<version>1.1.0-4.10.0-160588</version>
+	<name>Sis/GeoToolkit plugin</name>
+	<description>Apache Sis/Geotk plugin for data-transfer-service</description>
+
+	<properties>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+		<svnBaseUrl>http://svn.research-infrastructures.eu/d4science/gcube/trunk/data-transfer/${project.artifactId}</svnBaseUrl>
+		<sis.version>0.7</sis.version>
+		<sis.utils.modules>${sis.version}</sis.utils.modules>
+	</properties>
+
+
+	<scm>
+		<connection>scm:svn:${svnBaseUrl}/${project.artifactId}</connection>
+		<developerConnection>scm:svn:${svnBaseUrl}/${project.artifactId}</developerConnection>
+		<url>${svnBaseUrl}/${project.artifactId}</url>
+	</scm>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.data.transfer</groupId>
+				<artifactId>data-transfer-bom</artifactId>
+				<version>1.0.0-4.10.0-153160</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.data.transfer</groupId>
+			<artifactId>data-transfer-plugin-framework</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.5</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.resources</groupId>
+			<artifactId>registry-publisher</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-encryption</artifactId>
+		</dependency>
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.gcube.spatial.data</groupId> -->
+		<!-- <artifactId>geonetwork</artifactId> -->
+		<!-- <version>[3.0.0-SNAPSHOT,4.0.0-SNAPSHOT)</version> -->
+		<!-- </dependency> -->
+
+		<dependency>
+			<groupId>org.gcube.spatial.data</groupId>
+			<artifactId>sdi-library</artifactId>
+			<version>1.0.1-4.10.0-160567</version>
+		</dependency>
+
+		<!-- SMARTGEARS -->
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-smartgears</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- SIS -->
+		<dependency>
+			<groupId>org.apache.sis.core</groupId>
+			<artifactId>sis-referencing</artifactId>
+			<version>${sis.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.sis.storage</groupId>
+			<artifactId>sis-storage</artifactId>
+			<version>${sis.utils.modules}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.sis.storage</groupId>
+			<artifactId>sis-netcdf</artifactId>
+			<version>${sis.utils.modules}</version>
+		</dependency>
+
+		<!-- TEST -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.4</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.transfer</groupId>
+			<artifactId>data-transfer-library</artifactId>
+			<version>1.2.1-4.10.0-160030</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>make-uberjar</id>
+						<phase>package</phase>
+					</execution>
+					<execution>
+						<id>make-servicearchive</id>
+						<phase>package</phase>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+
+</project>

@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-model.2-4-0"  date="2017-06-28">
+		<Change>Initial release</Change>
+	</Changeset>
+	
+	<Changeset component="gr.cite.bluebridge.analytics.techno-economic-analysis-model.2-5-0"  date="2017-09-26">
+		<Change>Minor model change</Change>
+	</Changeset>
+</ReleaseNotes>
+

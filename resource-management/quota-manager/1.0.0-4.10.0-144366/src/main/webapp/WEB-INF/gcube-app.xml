@@ -1,0 +1,8 @@
+<application mode='online'>
+		<name>QuotaManager</name>
+		<group>InformationSystem</group>
+		<version>1.0.0-4.10.0-144366</version>
+		<description>quota mananger webapp</description>
+		<local-persistence location='target' />
+</application>
+

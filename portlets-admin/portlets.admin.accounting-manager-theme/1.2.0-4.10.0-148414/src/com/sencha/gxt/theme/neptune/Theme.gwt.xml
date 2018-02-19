@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Sencha GXT 3.1.1 - Sencha for GWT
+    Copyright(c) 2007-2014, Sencha, Inc.
+    licensing@sencha.com
+
+    http://www.sencha.com/products/gxt/license/
+
+-->
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.5.0//EN"
+    "http://google-web-toolkit.googlecode.com/svn/tags/2.5.0/distro-source/core/src/gwt-module.dtd">
+<module>
+  <inherits name="com.sencha.gxt.themebuilder.base.ThemeBase" />
+
+  <extend-property name="gxt.theme" values="neptune" />
+  <set-property name="gxt.theme" value="neptune" />
+
+  <!-- Constants decl - generated instance used to build theme -->
+  <replace-with class="com.sencha.gxt.theme.neptune.client.ThemeDetailsImpl">
+    <when-type-is class="com.sencha.gxt.theme.neptune.client.ThemeDetails"/>
+  </replace-with>
+
+
+  <!-- Shared appearances that are both for css3 and sliced -->
+  <!-- Contains constants and reusable css classes -->
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.Css3ThemeAppearance">
+    <when-type-is class="com.sencha.gxt.core.client.resources.ThemeStyles.ThemeAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <!-- Buttons -->
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.button.Css3ButtonCellAppearance">
+    <when-type-is class="com.sencha.gxt.cell.core.client.ButtonCell.ButtonCellAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.button.SlicedButtonCellAppearance">
+    <when-type-is class="com.sencha.gxt.cell.core.client.ButtonCell.ButtonCellAppearance" />
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.button.Css3ButtonGroupAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.button.ButtonGroup.ButtonGroupAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <!-- Tool icons, currently generated at compile time for css3 and sliced alike -->
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.tools.Css3Tools">
+    <when-type-is class="com.sencha.gxt.widget.core.client.button.Tools"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <!-- PagingToolbar appearance only deals with icons, generated at compile time -->
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.toolbar.Css3PagingToolBarAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.toolbar.PagingToolBar.PagingToolBarAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+
+  <!-- BorderLayoutContainer presently has no styles that need css3 to achieve -->
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.container.Css3BorderLayoutAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.container.Css3AccordionLayoutAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.container.AccordionLayoutContainer.AccordionLayoutAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.container.SlicedAccordionLayoutAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.container.AccordionLayoutContainer.AccordionLayoutAppearance"/>
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <!-- CollapsePanel presently has no styles that need css3 to achieve -->
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.widget.Css3CollapsePanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.CollapsePanel.CollapsePanelAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.container.Css3HBoxLayoutContainerAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.container.HBoxLayoutContainer.HBoxLayoutContainerAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <!-- SplitBar presently has no styles that need css3 to achieve -->
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.widget.Css3SplitBarAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.SplitBar.SplitBarAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <!-- FieldSet doesn't use any features that really need css3 -->
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.fieldset.Css3FieldSetAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.form.FieldSet.FieldSetAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <!-- StatusBox -->
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.status.Css3StatusAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.Status.StatusAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.status.Css3BoxStatusAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.Status.BoxStatusAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <!-- Appearances that are defined for either css3 or sliced -->
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.tabs.Css3TabPanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.TabPanel.TabPanelAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.tabs.SlicedTabPanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.TabPanel.TabPanelAppearance"/>
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.tabs.Css3PlainTabPanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.PlainTabPanel.PlainTabPanelAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.tabs.SlicedPlainTabPanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.PlainTabPanel.PlainTabPanelAppearance"/>
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.tabs.Css3PlainTabPanelBottomAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.PlainTabPanel.PlainTabPanelBottomAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.tabs.SlicedPlainTabPanelBottomAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.PlainTabPanel.PlainTabPanelBottomAppearance"/>
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.tabs.Css3TabPanelBottomAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.TabPanel.TabPanelBottomAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.tabs.SlicedTabPanelBottomAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.TabPanel.TabPanelBottomAppearance"/>
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.toolbar.Css3ToolBarAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.toolbar.ToolBar.ToolBarAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.toolbar.SlicedToolBarAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.toolbar.ToolBar.ToolBarAppearance"/>
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.toolbar.Css3SeparatorToolItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.toolbar.SeparatorToolItem.SeparatorToolItemAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.toolbar.SlicedSeparatorToolItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.toolbar.SeparatorToolItem.SeparatorToolItemAppearance"/>
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.toolbar.Css3LabelToolItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.toolbar.LabelToolItem.LabelToolItemAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.panel.Css3ContentPanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.ContentPanel.ContentPanelAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.panel.SlicedContentPanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.ContentPanel.ContentPanelAppearance"/>
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.panel.Css3FramedPanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.FramedPanel.FramedPanelAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.panel.SlicedFramedPanelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.FramedPanel.FramedPanelAppearance"/>
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.info.Css3InfoAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.info.Info.InfoAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.info.SlicedInfoAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.info.Info.InfoAppearance" />
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.info.Css3DefaultInfoConfigAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.info.DefaultInfoConfig.DefaultInfoConfigAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.window.Css3WindowAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.Window.WindowAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.window.SlicedWindowAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.Window.WindowAppearance"/>
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.tips.Css3TipAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.tips.Tip.TipAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.tips.SlicedTipAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.tips.Tip.TipAppearance"/>
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune"/>
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.field.Css3DualListFieldAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.form.DualListField.DualListFieldAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.field.SlicedDualListFieldAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.form.DualListField.DualListFieldAppearance" />
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.field.Css3ErrorTipAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.form.error.SideErrorHandler.SideErrorTooltipAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.field.SlicedErrorTipAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.form.error.SideErrorHandler.SideErrorTooltipAppearance"/>
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune"/>
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.field.Css3TextFieldAppearance">
+    <when-type-is class="com.sencha.gxt.cell.core.client.form.TextInputCell.TextFieldAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.field.Css3TextAreaAppearance">
+    <when-type-is class="com.sencha.gxt.cell.core.client.form.TextAreaInputCell.TextAreaAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.field.Css3TriggerFieldAppearance">
+    <when-type-is class="com.sencha.gxt.cell.core.client.form.TriggerFieldCell.TriggerFieldAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.field.Css3TwinTriggerFieldAppearance">
+    <when-type-is class="com.sencha.gxt.cell.core.client.form.TwinTriggerFieldCell.TwinTriggerFieldAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.field.Css3DateCellAppearance">
+    <when-type-is class="com.sencha.gxt.cell.core.client.form.DateCell.DateCellAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.field.Css3SpinnerFieldAppearance">
+    <when-type-is class="com.sencha.gxt.cell.core.client.form.SpinnerFieldCell.SpinnerFieldAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.field.Css3StoreFilterFieldAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.form.StoreFilterField.StoreFilterFieldAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.field.Css3SideErrorResourcesAdapter">
+    <when-type-is class="com.sencha.gxt.widget.core.client.form.error.SideErrorHandler.SideErrorResources" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.grid.Css3ColumnHeaderAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.grid.ColumnHeader.ColumnHeaderAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.grid.SlicedColumnHeaderAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.grid.ColumnHeader.ColumnHeaderAppearance" />
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.grid.Css3GridAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.grid.GridView.GridAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <!--  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.grid.SlicedGridAppearance">
+      <when-type-is class="com.sencha.gxt.widget.core.client.grid.GridView.GridAppearance" />
+      <when-property-is name="gxt.css3.enabled" value="false"/>
+      <when-property-is name="gxt.theme" value="neptune" />
+    </replace-with>-->
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.grid.Css3CheckBoxColumnAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.grid.CheckBoxSelectionModel.CheckBoxColumnAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <!--  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.grid.SlicedCheckBoxColumnAppearance">
+      <when-type-is class="com.sencha.gxt.widget.core.client.grid.CheckBoxSelectionModel.CheckBoxColumnAppearance" />
+      <when-property-is name="gxt.css3.enabled" value="false"/>
+      <when-property-is name="gxt.theme" value="neptune" />
+    </replace-with>-->
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.grid.Css3RowNumbererAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.grid.RowNumberer.RowNumbererAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <!--  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.grid.SlicedRowNumbererAppearance">
+      <when-type-is class="com.sencha.gxt.widget.core.client.grid.RowNumberer.RowNumbererAppearance" />
+      <when-property-is name="gxt.css3.enabled" value="false"/>
+      <when-property-is name="gxt.theme" value="neptune" />
+    </replace-with>-->
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.grid.Css3RowExpanderAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.grid.RowExpander.RowExpanderAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.grid.Css3RowEditorAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.grid.editing.GridRowEditing.RowEditorAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.grid.Css3GroupingViewAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.grid.GroupingView.GroupingViewAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.grid.Css3GroupSummaryViewAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.grid.GroupSummaryView.GroupSummaryViewAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.slider.Css3HorizontalSliderAppearance">
+    <any>
+      <when-type-is class="com.sencha.gxt.cell.core.client.SliderCell.SliderAppearance" />
+      <when-type-is class="com.sencha.gxt.cell.core.client.SliderCell.HorizontalSliderAppearance" />
+    </any>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.field.SlicedHorizontalSliderAppearance">
+    <any>
+      <when-type-is class="com.sencha.gxt.cell.core.client.SliderCell.SliderAppearance" />
+      <when-type-is class="com.sencha.gxt.cell.core.client.SliderCell.HorizontalSliderAppearance" />
+    </any>
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.slider.Css3VerticalSliderAppearance">
+    <when-type-is class="com.sencha.gxt.cell.core.client.SliderCell.VerticalSliderAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.field.SlicedVerticalSliderAppearance">
+    <when-type-is class="com.sencha.gxt.cell.core.client.SliderCell.VerticalSliderAppearance" />
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.menu.Css3MenuAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.Menu.MenuAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.menu.SlicedMenuAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.Menu.MenuAppearance" />
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.menu.Css3MenuItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.MenuItem.MenuItemAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.menu.SlicedMenuItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.MenuItem.MenuItemAppearance" />
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.menu.Css3CheckMenuItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.CheckMenuItem.CheckMenuItemAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.menu.SlicedCheckMenuItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.CheckMenuItem.CheckMenuItemAppearance" />
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.menu.Css3MenuBarItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.MenuBarItem.MenuBarItemAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.menu.SlicedMenuBarItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.MenuBarItem.MenuBarItemAppearance" />
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.menu.Css3MenuBarAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.MenuBar.MenuBarAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.menu.SlicedMenuBarAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.MenuBar.MenuBarAppearance" />
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.menu.Css3SeparatorMenuItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.SeparatorMenuItem.SeparatorMenuItemAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.menu.Css3HeaderMenuItemAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.menu.HeaderMenuItem.HeaderMenuItemAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.listview.Css3ListViewAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.ListView.ListViewAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.listview.SlicedListViewAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.ListView.ListViewAppearance" />
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.mask.Css3MaskAppearance">
+    <when-type-is class="com.sencha.gxt.core.client.dom.Mask.MaskAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.mask.SlicedMaskAppearance">
+    <when-type-is class="com.sencha.gxt.core.client.dom.Mask.MaskAppearance" />
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.tree.Css3TreeAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.tree.Tree.TreeAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.progressbar.Css3ProgressBarAppearance">
+    <when-type-is class="com.sencha.gxt.cell.core.client.ProgressBarCell.ProgressBarAppearance" />
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+  <replace-with class="com.sencha.gxt.theme.neptune.client.sliced.progressbar.SlicedProgressBarAppearance">
+    <when-type-is class="com.sencha.gxt.cell.core.client.ProgressBarCell.ProgressBarAppearance" />
+    <when-property-is name="gxt.css3.enabled" value="false"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.widget.Css3DatePickerAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.DatePicker.DatePickerAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.field.Css3FieldLabelAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.form.FieldLabel.FieldLabelAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.statusproxy.Css3StatusProxyAppearance">
+    <when-type-is class="com.sencha.gxt.dnd.core.client.StatusProxy.StatusProxyAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.colorpalette.Css3ColorPaletteAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.ColorPaletteCell.ColorPaletteAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+  <replace-with class="com.sencha.gxt.theme.neptune.client.base.container.Css3MessageBoxAppearance">
+    <when-type-is class="com.sencha.gxt.widget.core.client.box.MessageBox.MessageBoxAppearance"/>
+    <when-property-is name="gxt.theme" value="neptune" />
+  </replace-with>
+
+
+
+</module>

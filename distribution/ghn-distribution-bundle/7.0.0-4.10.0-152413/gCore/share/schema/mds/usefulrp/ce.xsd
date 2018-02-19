@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Portions of this file Copyright 1999-2005 University of Chicago
+Portions of this file Copyright 1999-2005 The University of Southern California.
+
+This file or a portion of this file is licensed under the
+terms of the Globus Toolkit Public License, found at
+http://www.globus.org/toolkit/download/license.html.
+If you redistribute this file, with or without
+modifications, you must include this notice in the file.
+-->
+
+<!-- $Id: ce.xsd,v 1.8 2005/04/18 04:49:04 mdarcy Exp $ -->
+
+<schema targetNamespace="http://mds.globus.org/glue/ce/1.1"
+             xmlns:ce="http://mds.globus.org/glue/ce/1.1"
+             attributeFormDefault="qualified"
+             elementFormDefault="qualified"
+             xmlns="http://www.w3.org/2001/XMLSchema"
+             xml:lang="en" >
+
+  <annotation><documentation>
+  This document is a translation of the CE component of the GLUE schema
+  into XML.
+
+  Converted by benc@isi.edu of the Globus Alliance.
+
+  Method of attack:
+
+    Each class in the CE UML diagram is converted to an XSD type. If
+    the UML class is called "Foo", then the XSD type is called
+    "FooType".
+
+    The UML schema splits nicely into two trees, one rooted at
+    ComputingElement, the other rooted at Cluster. These trees are
+    formed in the XSD by placing child elements within parent elements
+    in the same was in the XSD as in the UML diagram.
+
+    Elements that represent a class have the same name as that class.
+    So, if the UML class is called "Foo", then an element that
+    represents that would also be called "Foo".
+    
+    There are some exceptions to this rule.
+
+  Every element is permitted arbitrary extension by means of 
+  any elements and any attributes.
+
+  A producer of GLUE information MAY add additional information into the
+  hierarchy, as long as it is in a different namespace.
+
+  A consumer of GLUE information MUST ignore additional information that
+  it does not understand. It MUST NOT fail on the presence of 
+  unrecognised properties in unknown namespaces.
+
+  TODO: need to be more explicit about units.
+
+  TODO: need an explicit binding between ComputingElements and Clusters
+
+  </documentation></annotation>
+
+
+<element name="GLUECE" type="ce:GLUECERPType" />
+
+<element name="GLUECESummary" type="ce:GLUECERPType" />
+
+<element name="Cluster" type="ce:ClusterType" />
+
+
+<attributeGroup name="IdentifiableEntity">
+  <annotation><documentation>
+    Named identifiable entities should have this attribute group.
+    TODO: Some tooling doesn't like AttributeGroups, so maybe this should
+    group should be replaced with individual attributes cut-and-pasted onto
+    each element instead?
+  </documentation></annotation>
+  <attribute name="Name" type="string"/>
+  <attribute name="UniqueID" type="string"/>
+  <attribute name="InformationServiceURL" type="anyURI"/>
+</attributeGroup>
+
+<!-- ========== WS-ResourceProperties types -->
+
+<complexType name="GLUECERPType">
+  <annotation><documentation>
+     A type suitable for use for a WS-Resource Property, containing
+     some ComputingElements and some Clusters, bound to each other.
+     TODO the binding is still to be done.
+  </documentation></annotation>
+  <sequence>
+
+    <!-- <element name="Cluster" type="ce:ClusterType" minOccurs="0" maxOccurs="unbounded" /> -->
+    <element ref="ce:Cluster" minOccurs="0" maxOccurs="unbounded" /> 
+    <element name="ComputingElement" type="ce:ComputingElementType" minOccurs="0" maxOccurs="unbounded" />
+    <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+  </sequence>
+</complexType>
+
+
+<!-- ========== ComputingElement bits ========== -->
+
+<complexType name="ComputingElementType">
+  <annotation><documentation>
+    Contains information about a ComputeElement.
+  </documentation></annotation>
+  <sequence>
+    <element name="Info" type="ce:InfoType" minOccurs="0" maxOccurs="1" />
+    <element name="State" type="ce:StateType" minOccurs="0" maxOccurs="1" />
+    <element name="Policy" type="ce:PolicyType" minOccurs="0" maxOccurs="1" />
+    <element name="Job" type="ce:JobType" minOccurs="0" maxOccurs="unbounded" />
+    <element name="AccessControlBase" type="ce:AccessControlBaseType" minOccurs="0" maxOccurs="1" />
+    <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+  </sequence>
+
+  <attributeGroup ref="ce:IdentifiableEntity" />
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<complexType name="InfoType">
+  <sequence>
+    <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+  </sequence>
+  <attribute name="LRMSType" type="string"/>
+  <attribute name="LRMSVersion" type="string"/>
+  <attribute name="GRAMVersion" type="string"/>
+  <attribute name="HostName" type="string"/>
+  <attribute name="GatekeeperPort" type="string"/>
+  <attribute name="TotalCPUs" type="string"/>
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<complexType name="StateType">
+  <sequence>
+    <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+  </sequence>
+
+  <attribute name="Status" type="string">
+    <annotation><documentation>
+      TODO: This should actually be a restriction of some kind:
+      Queueing, Production, Closed, Draining
+    </documentation></annotation>
+  </attribute>
+ 
+  <attribute name="TotalJobs" type="int"/>
+
+  <attribute name="RunningJobs" type="int"/>
+
+  <attribute name="WaitingJobs" type="int"/>
+
+  <attribute name="WorstResponseTime" type="int">
+    <annotation><documentation>in seconds</documentation></annotation>
+  </attribute>
+
+  <attribute name="EstimatedResponseTime" type="int">
+    <annotation><documentation>in seconds</documentation></annotation>
+  </attribute>
+
+  <attribute name="FreeCPUs" type="int"/>
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<complexType name="PolicyType">
+  <sequence>
+    <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+  </sequence>
+
+  <attribute name="MaxWallClockTime" type="int">
+    <annotation><documentation>in minutes</documentation></annotation>
+  </attribute>
+
+  <attribute name="MaxCPUTime" type="int">
+    <annotation><documentation>in minutes</documentation></annotation>
+  </attribute>
+
+  <attribute name="MaxTotalJobs" type="int"/>
+  <attribute name="MaxRunningJobs" type="int"/>
+  <attribute name="Priority" type="int"/>
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<complexType name="JobType">
+  <sequence>
+    <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+  </sequence>
+  <attribute name="GlobalID" type="string"/>
+  <attribute name="LocalID" type="string"/>
+  <attribute name="LocalOwner" type="string"/>
+  <attribute name="GlobalOwner" type="string"/>
+  <attribute name="Status" type="string">
+    <annotation><documentation>
+      This can be one of SUBMITTED, WAITING, READY, SCHEDULED, RUNNING,
+      ABORTED, DONE, CLEARED, CHECKPOINTED
+    </documentation></annotation>
+  </attribute>
+  <attribute name="SchedulerSpecific" type="string"/>
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<complexType name="AccessControlBaseType" >
+  <sequence>
+    <element name="Rule" type="string" minOccurs="0" maxOccurs="unbounded" />
+    <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+  </sequence>
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<!-- ========== Cluster definitions ========== -->
+
+<complexType name="ClusterType">
+  <annotation><documentation>
+    Contains information about a Cluster. This consists of a name,
+    unique ID, and one or more subclusters.
+  </documentation></annotation>
+  <sequence>
+    <element name="SubCluster" type="ce:SubClusterType" minOccurs="0" maxOccurs="unbounded"/>
+    <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+  </sequence>
+  <attributeGroup ref="ce:IdentifiableEntity" />
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<complexType name="SubClusterOrHostType">
+  <annotation><documentation>
+     A subcluster contains at least one host, as well as having properties
+     associated with it that represent the state of every host within the
+     subcluster.
+
+     TODO: need some specification of uniqueness. It is reasonable for
+     fairly simple type such as architecture to say that it MAY NOT appear
+     on both a Host and its containing SubCluster, but for filesystems
+     (for example) it might be desirable to put some filesystems on the
+     SubCluster (eg. nfs or pvfs) and some on the 
+     Hosts (eg. /scratch)
+  </documentation></annotation>
+<sequence>
+    <element name="Benchmark" type="ce:BenchmarkType" minOccurs="0" />
+    <element name="Processor" type="ce:ProcessorType" minOccurs="0" />
+    <element name="MainMemory" type="ce:MainMemoryType" minOccurs="0" />
+    <element name="OperatingSystem" type="ce:OperatingSystemType" minOccurs="0" />
+    <element name="StorageDevice" type="ce:StorageDeviceType" maxOccurs="unbounded" minOccurs="0" />
+    <element name="Architecture" type="ce:ArchitectureType" minOccurs="0" />
+    <element name="ApplicationSoftware" type="ce:ApplicationSoftwareType" minOccurs="0" />
+    <element name="FileSystem" type="ce:FileSystemType" maxOccurs="unbounded" minOccurs="0"/>
+    <element name="NetworkAdapter" type="ce:NetworkAdapterType" maxOccurs="unbounded" minOccurs="0"/>
+    <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+</sequence>
+  <attributeGroup ref="ce:IdentifiableEntity" />
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+<complexType name="SubClusterType">
+  <annotation><documentation>
+  </documentation></annotation>
+  <complexContent>
+    <extension base="ce:SubClusterOrHostType">
+      <sequence>
+          <element name="Host" type="ce:HostType" minOccurs="0" maxOccurs="unbounded"/>
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+<complexType name="HostType">
+  <annotation><documentation>
+    A host may have any of the properties of a subcluster.
+
+    TODO: really a Host shouldn't be allowed another Host below it? Can I
+    specify a restriction in here to limit the number of subordinate Hosts
+    to 0, or some trick like that?
+  </documentation></annotation>
+  <complexContent>
+    <extension base="ce:SubClusterOrHostType">
+      <sequence>
+        <element name="ProcessorLoad" type="ce:LoadType" minOccurs="0" />
+        <element name="SMPLoad" type="ce:LoadType" minOccurs="0" />
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+
+
+<complexType name="LoadType">
+  <annotation><documentation>
+    Represents the unix-style CPU load-average multiplied by 100.
+  </documentation></annotation>
+    <sequence>
+      <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="Last1Min" type="int"/>
+    <attribute name="Last5Min" type="int"/>
+    <attribute name="Last15Min" type="int"/>
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<complexType name="BenchmarkType">
+    <sequence>
+      <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="SI00" type="float"/>
+    <attribute name="SF00" type="float"/>
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<complexType name="ProcessorType">
+    <sequence>
+      <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="Vendor" type="string"/>
+    <attribute name="Model" type="string"/>
+    <attribute name="Version" type="string"/>
+    <attribute name="ClockSpeed" type="int"/>
+    <attribute name="InstructionSet" type="string"/>
+    <attribute name="OtherProcessorDescription" type="string"/>
+    <attribute name="CacheL1" type="int">
+      <annotation><documentation>in kb</documentation></annotation>
+    </attribute>
+ 
+    <attribute name="CacheL1I" type="int">
+      <annotation><documentation>in kb</documentation></annotation>
+    </attribute>
+ 
+    <attribute name="CacheL1D" type="int">
+      <annotation><documentation>in kb</documentation></annotation>
+    </attribute>
+ 
+    <attribute name="CacheL2" type="int">
+      <annotation><documentation>in kb</documentation></annotation>
+    </attribute>
+ 
+    <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<complexType name="MainMemoryType">
+    <sequence>
+      <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="RAMSize" type="long"> <!-- is long big enough here? -->
+      <annotation><documentation>in MB</documentation></annotation>
+    </attribute>
+
+    <attribute name="RAMAvailable" type="long"> 
+      <annotation><documentation>in MB</documentation></annotation>
+    </attribute>
+
+    <attribute name="VirtualSize" type="long"> 
+      <annotation><documentation>in MB</documentation></annotation>
+    </attribute>
+
+    <attribute name="VirtualAvailable" type="long">
+      <annotation><documentation>in MB</documentation></annotation>
+    </attribute>
+
+    <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<complexType name="OperatingSystemType">
+    <sequence>
+      <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="Name" type="string"/>
+    <attribute name="Release" type="string"/>
+    <attribute name="Version" type="string"/>
+    <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<complexType name="StorageDeviceType">
+    <sequence>
+      <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="Name" type="string"/>
+    <attribute name="Type" type="string"/>
+    <attribute name="TransferRate" type="int"/>
+    <attribute name="Size" type="int"/>
+    <attribute name="AvailableSpace" type="int"/> 
+  <anyAttribute namespace="##other"/>
+<!-- are these ints big enough? -->
+</complexType>
+
+
+<complexType name="NetworkAdapterType">
+    <sequence>
+      <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="Name" type="string"/>
+    <attribute name="IPAddress" type="string"/> <!-- restrict syntax here? can it be IPv6? -->
+    <attribute name="MTU" type="int">
+      <annotation><documentation>in bytes</documentation></annotation>
+    </attribute>
+    <attribute name="OutboundIP" type="boolean"/>
+    <attribute name="InboundIP" type="boolean"/>
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<complexType name="ArchitectureType">
+    <sequence>
+      <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="PlatformType" type="string"/>
+    <attribute name="SMPSize" type="int"/>
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<!-- this deviates a little from the usual method of rendering the UML
+diagram into XSD. Each RuntimeEnvironment is made an element to provide
+somewhere to put any elements.
+-->
+<complexType name="ApplicationSoftwareType">
+<sequence>
+    <element name="RunTimeEnvironment" type="ce:RunTimeEnvironmentType" minOccurs="0" maxOccurs="unbounded"/>
+    <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+</sequence>
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+
+<complexType name="RunTimeEnvironmentType">
+   <sequence>
+       <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+   </sequence>
+   <attribute name="Name" type="string" />
+</complexType>
+
+
+<!-- TODO: other filesystem types need implementing. -->
+<complexType name="FileSystemType">
+    <sequence>
+      <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+  <attribute name="Name" type="string" />
+  <attribute name="Root" type="string" />
+  <attribute name="Size" type="long">
+    <annotation><documentation>in MB</documentation></annotation>
+  </attribute>
+
+  <attribute name="AvailableSpace" type="long">
+    <annotation><documentation>in MB</documentation></annotation>
+  </attribute>
+
+  <attribute name="ReadOnly" type="boolean" />
+  <attribute name="Type" type="string" />
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+<complexType name="RemoteFileSystemType">
+ <complexContent>
+     <extension base="ce:FileSystemType" />
+ </complexContent> 
+</complexType>
+
+<complexType name="LocalFileSystemType">
+ <complexContent>
+     <extension base="ce:FileSystemType">
+         <sequence>
+             <element name="export" type="ce:DirectoryType" minOccurs="0" maxOccurs="unbounded"/>
+	 </sequence>
+     </extension>
+ </complexContent> 
+</complexType>
+
+
+<complexType name="FileType">
+    <sequence>
+      <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+  <attribute name="Name" type="string" />
+  <attribute name="Size" type="int" />
+  <attribute name="CreationDate" type="dateTime" />
+  <attribute name="LastModified" type="dateTime" />
+  <attribute name="LastAccessed" type="dateTime" />
+  <attribute name="Latency" type="duration">
+    <annotation><documentation>
+        In UML version, this is an int number of seconds
+    </documentation></annotation>
+  </attribute>
+  <attribute name="LifeTime" type="dateTime" />
+  <attribute name="Owner" type="string" />
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+<complexType name="DirectoryType">
+ <complexContent>
+     <extension base="ce:FileType">
+         <sequence>
+	     <element name="File" type="ce:FileType" minOccurs="0" maxOccurs="unbounded">
+                 <annotation><documentation>
+                     From the UML diagram: Directory contains file
+                 </documentation></annotation>
+	     </element>
+	     <element name="mount" minOccurs="0" maxOccurs="unbounded">
+                 <annotation><documentation>
+                     The FileSystemName attribute should refer to the name
+		     of a FileSystem object. From the UML diagram: mount. 
+                 </documentation></annotation>
+                 <complexType>
+		     <attribute name="FileSystemName" type="string" />
+		 </complexType>
+	     </element>
+
+	 </sequence>
+     </extension>
+ </complexContent> 
+</complexType>
+
+</schema>
+
+

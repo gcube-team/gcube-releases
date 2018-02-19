@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.application.aquamapsspeciesview.aquamapsspeciesview' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/aquamapsspeciesview/greet" class="org.gcube.application.aquamapsspeciesview.server.GreetingServiceImpl" />
+
+</module>

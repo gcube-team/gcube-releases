@@ -1,0 +1,36 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.tagsPanelStyle {
+		display: inline-block;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<b:ControlGroup ui:field="tagsInsertGroup">
+			<b:ControlLabel for="tags" title="Item tag">
+				<font color="red">*</font>
+				Tag:
+			</b:ControlLabel>
+			<b:Controls ui:field="controlAsTextBox">
+				<b:TextBox width="90%" placeholder="Write a tag here (push ENTER to attach it to the Item)"
+					b:id="tags" ui:field="tagsEnterTextBox" maxLength="100"/>
+				<b:ListBox width="91%" title="HOLD CTRL or CMD for multiple selection"
+					b:id="tags" ui:field="tagsEnterListBox" multipleSelect="true"/>
+				<span style="float:right; width:5%; color: #aaaaaa;">
+					<b:Popover ui:field="popoverTags" html="true" animation="true"
+						placement="LEFT">
+						<g:FocusPanel ui:field="focusPanelTags">
+							<b:Icon type="INFO_SIGN" size="TWO_TIMES" ui:field="infoIconTags" />
+						</g:FocusPanel>
+					</b:Popover>
+				</span>
+			</b:Controls>
+		</b:ControlGroup>
+		<b:ControlGroup>
+			<b:Controls>
+				<g:FlowPanel ui:field="tagsPanel" styleName="{style.tagsPanelStyle}"></g:FlowPanel>
+			</b:Controls>
+		</b:ControlGroup>
+	</g:HTMLPanel>
+</ui:UiBinder> 

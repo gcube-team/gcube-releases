@@ -1,0 +1,8 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.common.csv4j.1-2-0" date="2013-10-28">  
+		<Change>Minor changes</Change>
+	</Changeset> 
+	<Changeset component="org.gcube.data-access.csv4j-custom.1-1-0" date="2012-05-04"> 
+		<Change>csv4j custom maven release</Change>
+	</Changeset> 
+</ReleaseNotes>

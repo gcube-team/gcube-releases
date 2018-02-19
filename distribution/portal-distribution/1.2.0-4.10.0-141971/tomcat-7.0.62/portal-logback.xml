@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration  -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user             -->
+<!--                                                                -->
+<!-- For professional support please see                            -->
+<!--    http://www.qos.ch/shop/products/professionalSupport         -->
+<!--                                                                -->
+<configuration>
+  <appender name="CA" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>[PORTAL] %-4r [%t] %-5p %c - %m%n</pattern>
+    </encoder>
+  </appender>
+  <appender name="GCUBE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{ISO8601} %-5p %c{2} [%t,%M:%L]</pattern>
+    </encoder>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>DEBUG</level>
+    </filter>
+  </appender>
+  <logger name="org.gcube" level="TRACE">
+    <appender-ref ref="GCUBE"/>
+  </logger>
+  <logger name="org.gcube.portlets.user.homelibrary" level="INFO CA"/>
+  <logger name="org.gcube.common.core.utils.events" level="INFO">
+    <appender-ref ref="CA"/>
+  </logger>
+  <logger name="org.gcube.common.scope.impl" level="INFO">
+    <appender-ref ref="CA"/>
+  </logger>
+  <logger name="org.gcube.smartgears.handlers" level="INFO">
+    <appender-ref ref="CA"/>
+  </logger>
+  <logger name="org.gcube.informationsystem.publisher" level="INFO">
+    <appender-ref ref="CA"/>
+  </logger> 
+   <logger name="com.couchbase.client" level="ERROR">
+    <appender-ref ref="CA"/>
+  </logger>
+  <logger name="org.apache.jasper.compiler.TldLocationsCache.level" level="ERROR">
+    <appender-ref ref="CA"/>
+  </logger>
+  <logger name="org.gcube.common.resources.kxml" level="ERROR">
+    <appender-ref ref="CA"/>
+  </logger>
+  <root level="INFO">
+    <appender-ref ref="CA"/>
+  </root>
+</configuration>

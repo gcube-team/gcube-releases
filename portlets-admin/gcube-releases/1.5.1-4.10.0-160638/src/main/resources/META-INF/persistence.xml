@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="PERSISTENCE_GCUBE_RELEASES"
+		transaction-type="RESOURCE_LOCAL">
+		<class>org.gcube.portlets.admin.gcubereleases.shared.AccountingPackage</class>
+		<class>org.gcube.portlets.admin.gcubereleases.shared.JavadocHtmlUri</class>
+		<class>org.gcube.portlets.admin.gcubereleases.shared.Package</class>
+		<class>org.gcube.portlets.admin.gcubereleases.shared.Release</class>
+		<class>org.gcube.portlets.admin.gcubereleases.shared.ReleaseFile</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<!-- <property name="eclipselink.logging.level" value="ALL" /> -->
+			<property name="eclipselink.ddl-generation.output-mode" value="database" />
+<!-- 			<property name="eclipselink.ddl-generation" value="create-tables" /> -->
+			<property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
+		</properties>
+	</persistence-unit>
+</persistence> 

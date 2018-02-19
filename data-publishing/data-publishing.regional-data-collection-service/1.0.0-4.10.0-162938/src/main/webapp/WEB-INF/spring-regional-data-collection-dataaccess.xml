@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- DAOs -->
+	<bean id="annotationDao" class="gr.cite.regional.data.collection.dataaccess.daos.AnnotationDaoImpl"/>
+	<bean id="cdtDao" class="gr.cite.regional.data.collection.dataaccess.daos.CdtDaoImpl"/>
+	<bean id="dataCollectionDao" class="gr.cite.regional.data.collection.dataaccess.daos.DataCollectionDaoImpl"/>
+	<bean id="dataModelDao" class="gr.cite.regional.data.collection.dataaccess.daos.DataModelDaoImpl"/>
+	<bean id="dataSubmissionDao" class="gr.cite.regional.data.collection.dataaccess.daos.DataSubmissionDaoImpl"/>
+	<bean id="domainDao" class="gr.cite.regional.data.collection.dataaccess.daos.DomainDaoImpl"/>
+	<bean id="userReferenceDao" class="gr.cite.regional.data.collection.dataaccess.daos.UserReferenceDaoImpl"/>
+	<bean id="constraintDao" class="gr.cite.regional.data.collection.dataaccess.daos.ConstraintDaoImpl"/>
+
+	<!-- Services -->
+	<bean id="cdtService" class="gr.cite.regional.data.collection.dataaccess.services.CdtServiceImpl" />
+	<bean id="dataCollectionService" class="gr.cite.regional.data.collection.dataaccess.services.DataCollectionServiceImpl" />
+	<bean id="dataModelService" class="gr.cite.regional.data.collection.dataaccess.services.DataModelServiceImpl" />
+	<bean id="dataSubmissionService" class="gr.cite.regional.data.collection.dataaccess.services.DataSubmissionServiceImpl" />
+	<bean id="domainService" class="gr.cite.regional.data.collection.dataaccess.services.DomainServiceImpl" />
+	<bean id="userReferenceService" class="gr.cite.regional.data.collection.dataaccess.services.UserReferenceServiceImpl" />
+	<bean id="constraintsService" class="gr.cite.regional.data.collection.dataaccess.services.ConstraintsServiceImpl" />
+
+	<!-- Entity manager -->
+	<bean id="emf" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="gr.cite.regional.data.collection"/>
+		<property name="jpaProperties">
+			<props>
+				<prop key="javax.persistence.jdbc.driver">${gr.cite.regional.data.collection.dataaccess.persistence.jdbc.driver}</prop>
+				<prop key="javax.persistence.jdbc.url">${gr.cite.regional.data.collection.dataaccess.persistence.jdbc.url}</prop>
+				<prop key="hibernate.connection.username">${gr.cite.regional.data.collection.dataaccess.hibernate.connection.username}</prop>
+				<prop key="hibernate.connection.password">${gr.cite.regional.data.collection.dataaccess.hibernate.connection.password}</prop>
+				<prop key="hibernate.show_sql">${gr.cite.regional.data.collection.dataaccess.hibernate.show_sql}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${gr.cite.regional.data.collection.dataaccess.hibernate.hbm2dll}</prop>
+				<prop key="hibernate.dialect">${gr.cite.regional.data.collection.dataaccess.hibernate.dialect}</prop>
+
+				<!--<prop key="hibernate.implicit_naming_strategy">gr.cite.regional.data.collection.dataaccess.daos.CdtImplicitNamingStrategy</prop>-->
+				<!--<prop key="hibernate.physical_naming_strategy">gr.cite.regional.data.collection.dataaccess.daos.CdtPhysicalNamingStrategy</prop>-->
+
+				<prop key="hibernate.jdbc.batch_size">${gr.cite.regional.data.collection.dataaccess.hibernate.jdbc.batch_size}</prop>
+				<prop key="hibernate.order_inserts">${gr.cite.regional.data.collection.dataaccess.hibernate.order_inserts}</prop>
+				<prop key="hibernate.order_updates">${gr.cite.regional.data.collection.dataaccess.hibernate.order_updates}</prop>
+				<prop key="hibernate.jdbc.batch_versioned_data">${gr.cite.regional.data.collection.dataaccess.hibernate.batch_versioned_data}</prop>
+
+				<prop key="hibernate.connection.provider_class">${gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.provider_class}</prop>
+				<prop key="hibernate.c3p0.min_size">${gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.min_size}</prop>
+				<prop key="hibernate.c3p0.max_size">${gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.max_size}</prop>
+				<prop key="hibernate.c3p0.timeout">${gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.timeout}</prop>
+				<prop key="hibernate.c3p0.max_statements">${gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.max_statements}</prop>
+
+				<prop key="hibernate.c3p0.acquire_retry_attempts">${gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.acquire_retry_attempts}</prop>
+				<prop key="hibernate.c3p0.acquire_retry_delay">${gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.acquire_retry_delay}</prop>
+				<prop key="hibernate.c3p0.idle_test_period">${gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.idle_test_period}</prop>
+				<prop key="hibernate.c3p0.break_after_acquire_failure">${gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.break_after_acquire_failure}</prop>
+				<prop key="hibernate.c3p0.idle_connection_test_period">${gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.idle_connection_test_period}</prop>
+				<prop key="hibernate.c3p0.test_connection_on_checkin">${gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.test_connection_on_checkin}</prop>
+				<prop key="hibernate.c3p0.test_connection_on_checkout">${gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.test_connection_on_checkout}</prop>
+				<prop key="hibernate.c3p0.preferred_test_query">${gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.preferred_test_query}</prop>
+				<!--<property name="current_session_context_class" value="thread" />-->
+
+				<!--<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>-->
+			</props>
+		</property>
+	</bean>
+	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
+	<bean id="jpaDialect" class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="emf"/>
+		<property name="jpaDialect" ref="jpaDialect"/>
+	</bean>
+
+	<!--<context:component-scan base-package="gr.cite.regional.data.collection.dataaccess.daos"/>-->
+	<context:component-scan base-package="gr.cite.regional.data.collection.dataaccess.entities"/>
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+</beans>

@@ -1,0 +1,21 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-analysis.operation-csv.1-0-0" date="2013-10-24"> 
+		<Change>first release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-csv.1-1-2" date="2014-03-4"> 
+		<Change>solved a bug on export (file cut)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-csv.1-2-0" date="2014-10-28"> 
+		<Change>added empty table import operation</Change>
+		<Change>added export Json operation</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-csv.1-3-1" date="2015-05-21"> 
+		<Change>Integration fixes</Change>		
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-csv.1-3-3" date="2015-06-30"> 
+		<Change>Added use of storage id for import and export</Change>		
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-csv.1-3-4" date="2017-03-28"> 
+		<Change>Fixed url handling</Change>		
+	</Changeset>
+</ReleaseNotes>

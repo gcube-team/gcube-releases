@@ -1,0 +1,100 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:m="urn:import:gwt.material.design.client.ui"
+	xmlns:ma="urn:import:gwt.material.design.addins.client"
+	xmlns:mc="urn:import:org.gcube.portets.user.message_conversations.client.autocomplete">
+
+	<ui:style>
+	.animation {
+		transition: 0.4s all;
+		-webkit-transition: 0.4s all;
+		-moz-transition: 0.4s all;
+	}
+	
+	.borderRight {
+		border-right: 1px solid #ccc;
+	}
+	
+	.topBar {
+		height: 60px;
+		overflow-y: hidden !important; /* needed in windows */
+		border-bottom: 1px solid #999;
+	}
+	
+	.marginTop {
+		margin-top: 0px;
+	}
+	
+	.overflowXHidden {
+		overflow-x: hidden !important; /* needed in windows */
+	}
+	
+	.modalTitle {
+		font-size: 2em;
+	}
+	
+	.alignCenter {
+		text-align: center;
+		padding: 50px;
+	}
+	</ui:style>
+	<g:HTMLPanel ui:field="htmlPanel">
+		<!-- TOP BAR -->
+		<m:MaterialHeader ui:field="header">
+			<m:MaterialNavBar ui:field="navBar" layoutPosition="FIXED"
+				addStyleNames="{style.topBar}" height="60" backgroundColor="WHITE">
+				<m:MaterialNavSection float="LEFT" showOn="SHOW_ON_MED_DOWN">
+					<m:MaterialLink iconType="MENU" iconColor="LIGHT_BLUE_DARKEN_2"
+						paddingLeft="25" waves="DEFAULT" ui:field="menu" hideOn="HIDE_ON_MED_DOWN" />
+					<m:MaterialLink iconType="INBOX" textColor="LIGHT_BLUE_DARKEN_2"
+						ui:field="switcher" waves="DEFAULT" paddingLeft="25">
+						<m:MaterialBadge text="22 unread" backgroundColor="LIGHT_BLUE_DARKEN_2"
+							textColor="WHITE" circle="false" ui:field="badge" visible="false"
+							hideOn="HIDE_ON_MED_DOWN" />
+					</m:MaterialLink>
+					<m:MaterialLink ui:field="newMessage" text="New"
+						showOn="SHOW_ON_MED_DOWN" iconType="MESSAGE" textColor="LIGHT_BLUE_DARKEN_2"
+						waves="LIGHT" />
+				</m:MaterialNavSection>
+			</m:MaterialNavBar>
+		</m:MaterialHeader>
+
+
+
+		<!-- SIDE PANEL -->
+		<m:MaterialRow ui:field="rightPanel" overflow="AUTO"
+			depth="995" grid="l3 m3 s12" padding="0" backgroundColor="WHITE"
+			height="100%" layoutPosition="FIXED" top="60" left="0" width="350px"
+			addStyleNames="{style.animation} {style.borderRight}">
+			<m:MaterialProgress type="INDETERMINATE" ui:field="messagesLoader"
+				color="BLUE" />
+			<m:MaterialCollection ui:field="messagesCollection"
+				addStyleNames="{style.marginTop}" visible="false">
+			</m:MaterialCollection>
+		</m:MaterialRow>
+
+		<!-- MAIN WINDOW -->
+		<m:MaterialContainer fontSize="0.8em">
+			<m:MaterialRow layoutPosition="RELATIVE" grid="l8 s12 m12"
+				top="65">
+				<m:MaterialProgress type="INDETERMINATE"
+					ui:field="messageLoader" color="TEAL" />
+				<g:ScrollPanel height="600px" ui:field="scrollerPanel"
+					addStyleNames="{style.overflowXHidden}"></g:ScrollPanel>
+			</m:MaterialRow>
+		</m:MaterialContainer>
+
+		<!-- FAB -->
+		<m:MaterialFAB ui:field="FAB">
+			<m:MaterialButton type="FLOATING" backgroundColor="RED"
+				iconType="REPLY" size="LARGE" />
+			<m:MaterialFABList>
+				<m:MaterialAnchorButton type="FLOATING"
+					waves="LIGHT" backgroundColor="BLUE" ui:field="forward" iconType="FORWARD" />
+				<m:MaterialAnchorButton type="FLOATING"
+					waves="LIGHT" backgroundColor="AMBER" ui:field="replyAll" iconType="REPLY_ALL" />
+				<m:MaterialAnchorButton type="FLOATING"
+					waves="LIGHT" backgroundColor="TEAL" ui:field="reply" iconType="REPLY" />
+			</m:MaterialFABList>
+		</m:MaterialFAB>
+	</g:HTMLPanel>
+</ui:UiBinder>

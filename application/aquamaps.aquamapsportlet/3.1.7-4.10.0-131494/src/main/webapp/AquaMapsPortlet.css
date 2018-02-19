@@ -1,0 +1,72 @@
+/** Add css rules here for your application. */
+@import url('aquamapsportlet/old-dialog.css');
+
+.job-completed-icon {
+background-image:url(img/cog.png) !important;
+}
+
+.job-error-icon {
+background-image:url(img/cog_error.png) !important;
+}
+
+.job-generating-icon {
+background-image:url(img/cog_go.png) !important;
+}
+
+.job-pending-icon {
+background-image:url(img/cog_add.png) !important;
+}
+
+.job-publishing-icon {
+background-image:url(img/cog_link.png) !important;
+}
+
+.job-simulating-icon {
+background-image:url(img/cog_edit.png) !important;
+}
+
+.aquamaps-completed-icon {
+background-image:url(img/picture.png) !important;
+}
+
+.aquamaps-error-icon {
+background-image:url(img/picture_error.png) !important;
+}
+
+.aquamaps-generating-icon {
+background-image:url(img/picture_go.png) !important;
+}
+
+.aquamaps-pending-icon {
+background-image:url(img/picture_add.png) !important;
+}
+
+.aquamaps-publishing-icon {
+background-image:url(img/picture_link.png) !important;
+}
+
+.aquamaps-simulating-icon {
+background-image:url(img/picture_edit.png) !important;
+}
+
+.aquamaps-jobTreeMenu-refresh {
+background-image:url(img/arrow_refresh.png) !important;
+}
+
+.aquamaps-jobTreeMenu-save {
+background-image:url(img/disk.png) !important;
+}
+
+.aquamaps-jobTreeMenu-delete {
+background-image:url(img/delete.png) !important;
+}
+
+/** Example rules used by the template application (remove for your app) */
+.pc-template-btn {
+  display: block;
+  font-size: 16pt
+}
+
+#pc-template-img {
+  margin-top: 20px;
+}

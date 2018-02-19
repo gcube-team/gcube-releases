@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="GHNManager" targetNamespace="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager/service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:binding="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager/bindings" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:import namespace="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager/bindings" location="GHNManager_bindings.wsdl"/>
+  <wsdl:service name="GHNManagerService">
+    <wsdl:port name="GHNManagerPortTypePort" binding="binding:GHNManagerPortTypeSOAPBinding">
+      <soap:address location="http://localhost:8080/wsrf/services/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- SDMX -->
+	<context:spring-configured />
+	<context:component-scan base-package="org.sdmxsource" />
+	<context:component-scan base-package="gr.cite.regional.data.collection.model.utils" />
+	<bean id="readableDataLocationFactory" class="org.sdmxsource.util.factory.SdmxSourceReadableDataLocationFactory" />
+	<bean id="structureParsingManager" class="org.sdmxsource.sdmx.structureparser.manager.parsing.impl.StructureParsingManagerImpl" />
+
+	<bean id="dsdTransformation" name="dsdTransformation" class="gr.cite.regional.data.collection.dataaccess.dsd.DsdProcessing">
+		<constructor-arg ref="readableDataLocationFactory" />
+		<constructor-arg ref="structureParsingManager" />
+	</bean>
+
+	<bean id="modelMapper" class="org.modelmapper.ModelMapper" />
+	<bean id="entityDtoMapper" class="gr.cite.regional.data.collection.application.core.EntityDtoMapper">
+		<constructor-arg ref="modelMapper" />
+	</bean>
+	<bean id="hostname" class="java.lang.String">
+		<constructor-arg value="${gr.cite.regional.data.collection.application.hostname}" />
+	</bean>
+
+	<!-- Controllers -->
+	<!--<bean id="baseController" class="gr.cite.regional.data.collection.application.controllers.BaseController" />-->
+	<!--<bean id="dataCollectionController" class="gr.cite.regional.data.collection.application.controllers.DataCollectionController">
+		&lt;!&ndash;<constructor-arg ref="dataCollectionService" />&ndash;&gt;
+	</bean>-->
+	<!--<bean id="domainController" class="gr.cite.regional.data.collection.application.controllers.DomainController">
+		&lt;!&ndash;<constructor-arg ref="domainService" />&ndash;&gt;
+	</bean>-->
+
+	<context:component-scan base-package="gr.cite.regional.data.collection.application.controllers" />
+	<!--<context:component-scan base-package="gr.cite.regional.data.collection.manager" />-->
+
+</beans>

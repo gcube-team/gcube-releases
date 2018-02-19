@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+
+	<service name="gcube/common/searchservice/rs">
+		<environment  name="configDir" value="etc/resultsetservice-3.1.0-4.10.0-126939"  type="java.lang.String" override="false" />
+		<environment name="profile" value="etc/resultsetservice-3.1.0-4.10.0-126939/profile.xml"
+			type="java.lang.String" override="false" />
+	</service>
+
+	<service name="gcube/common/searchservice/ResultSet">
+		<environment  name="configDir" value="etc/resultsetservice-3.1.0-4.10.0-126939"  type="java.lang.String" override="false" />
+		<environment 
+            name="RPDName"
+            value="StatefulResourceProperties"
+            type="java.lang.String"
+            override="false"/>	
+		<environment name="streamPort" value="3000"
+			type="java.lang.Integer" />
+		<environment name="SSLsupport" value="enabled"
+			type="java.lang.String" />
+		<resource name="home"
+			type="org.gcube.common.searchservice.resultsetservice.ResultSetResourceHome">
+			<resourceParams>
+				<parameter>
+					<name>resourceClass</name>
+					<value>
+						org.gcube.common.searchservice.resultsetservice.ResultSetResource
+					</value>
+				</parameter>
+				<parameter>
+					<name>factory</name>
+					<value>org.globus.wsrf.jndi.BeanFactory</value>
+				</parameter>
+			</resourceParams>
+		</resource>
+	</service>
+</jndiConfig>
+

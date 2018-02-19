@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="sis-geotk-plugin-1.0.0" date="2017-05-22">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="sis-geotk-plugin-1.0.1" date="2017-10-12">
+		<Change>Bug fix</Change>
+	</Changeset>		
+	<Changeset component="sis-geotk-plugin-1.1.0" date="2017-12-02">
+		<Change>RegisterCatalogPlugin</Change>
+	</Changeset>	
+</ReleaseNotes>

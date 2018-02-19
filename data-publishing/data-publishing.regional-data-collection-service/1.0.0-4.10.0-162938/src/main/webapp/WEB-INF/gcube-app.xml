@@ -1,0 +1,11 @@
+<application mode="online">
+
+	<group>RegionalDataCollection</group>
+	<name>regional-data-collection-main-service</name>
+	<version>1.0.0</version>
+
+	<description>Regional data collection main web service</description>
+
+	<exclude>/resources/</exclude>
+
+</application>

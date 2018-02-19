@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="common-smartgears-utils-1.0.3" date="2017-03-24">
+		<Change>refactoring for new state serialization model</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-utils-1.0.2" date="2017-02-22">
+		<Change>Distro layout updated</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-utils-1.0.0" date="2015-05-18">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

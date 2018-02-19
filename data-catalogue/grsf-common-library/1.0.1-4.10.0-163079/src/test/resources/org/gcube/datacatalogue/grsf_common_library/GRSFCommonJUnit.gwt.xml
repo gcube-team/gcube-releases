@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="GRSFCommon">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.datacatalogue.grsf_common_library.GRSFCommon' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/GRSFCommon/greet" class="org.gcube.datacatalogue.grsf_common_library.server.GreetingServiceImpl" />
+
+</module>

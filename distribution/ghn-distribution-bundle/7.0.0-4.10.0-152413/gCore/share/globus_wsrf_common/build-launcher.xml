@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<!-- 
+  Portions of this file Copyright 1999-2005 University of Chicago
+  Portions of this file Copyright 1999-2005 The University of Southern California.
+  
+  This file or a portion of this file is licensed under the
+  terms of the Globus Toolkit Public License, found at
+  http://www.globus.org/toolkit/download/license.html.
+  If you redistribute this file, with or without
+  modifications, you must include this notice in the file.
+-->
+
+<!-- ===================================================================
+
+   Build File for Building Globus WSRF command-line tools.
+
+Notes:
+   This is a build file for use with the Jakarta Ant build tool.
+
+Prerequisites:
+
+   jakarta-ant from http://jakarta.apache.org
+
+
+Build Instructions:
+   To build, run
+
+     java org.apache.tools.ant.Main <target>
+
+   on the directory where this file is located with the target you want.
+
+Most useful targets:
+
+
+Copyright:
+Copyright (c) 1999 University of Chicago and The University of
+Southern California. All Rights Reserved.
+
+==================================================================== -->
+
+<project basedir="." default="generateLauncher">
+
+    <description>
+        This build script may be used to create platform specific
+        launchers for Java commandline tools and ant tasks.
+        
+        The targets in this script honor the following properties:
+        
+        * launcher.name - The name of the resulting launcher script
+        * class.name - The name of the class that implements either 
+          the Java command line tool or starts a ant task (you 
+          should extend from org.globus.ant.AntTaskLauncher). 
+        * default.jvm.options - JVM options (in the form of
+          -Dproperty=value) to add for Java commandline tools.
+        * default.cmd.line - Command line options to be passed to the
+          program being invoked
+        * overwrite.launcher - Overwrite existing launchers. The 
+          default is true.
+        
+    </description>
+
+    <!-- Give user a chance to override without editing this file
+    (and without typing -D each time it compiles it) -->
+
+    <property file="build.properties"/>
+    <property file="${user.home}/build.properties"/>
+    <property file="wsrf.properties"/>
+
+    <property name="env.GLOBUS_LOCATION" value="."/>
+    <property name="deploy.dir" location="."/>
+    <property name="abs.deploy.dir" location="${deploy.dir}"/>
+
+    <property name="templates"
+              location="${abs.deploy.dir}/etc/globus_wsrf_common/templates"/>
+    <property name="default.jvm.options" value=""/>
+    <property name="default.cmd.line" value=""/>
+
+    <property name="windowsOnly" value="false"/>
+    <property name="overwrite.launcher" value="true"/>
+
+    <!--  Generate launcher scripts for a Java tool.
+    Parameters:  deploy.dir
+    launcher-name, class.name
+    [overwrite.launcher, 
+    default.jvm.options, default.cmd.line]
+    -->
+    <target 
+        name="generateLauncher" 
+        description="Generate a launcher script for a Java commandline tool.">
+        <property name="launcher.template.name" value="launcher-template"/>
+        <antcall target="generateLauncherSub"/>
+    </target>
+
+    <!--  Generate launcher scripts for a Ant task.
+    Parameters:  deploy.dir
+    launcher-name, class.name
+    [overwrite.launcher, 
+    default.jvm.options, default.cmd.line]
+    -->
+    <target 
+        name="generateAntLauncher"
+        description="Generate a launcher script for a Ant task.">
+        <property name="launcher.template.name" value="ant-launcher-template"/>
+        <antcall target="generateLauncherSub"/>
+    </target>
+
+    <target name="generateLauncherSub">
+        <filterset id="script.filter.set">
+            <filter token="globus.location" value="${abs.deploy.dir}"/>
+            <filter token="class" value="${class.name}"/>
+            <filter token="default.jvm.options" 
+                value="${default.jvm.options}"/>
+            <filter token="default.cmd.line" value="${default.cmd.line}"/>
+        </filterset>
+        <property name="tools.dest" location="${abs.deploy.dir}/bin"/>
+        <mkdir dir="${tools.dest}"/>
+        <chmod dir="${tools.dest}" perm="755"/>
+        <antcall target="generateUnix" inheritRefs="true"/>
+        <antcall target="generateWindows" inheritRefs="true"/>
+    </target>
+
+    <target name="testUnix">
+        <condition property="generate.unix">
+          <or>
+            <istrue value="${all.scripts}"/>
+            <and>
+                <os family="unix"/>
+                <isfalse value="${windowsOnly}"/>
+            </and>
+          </or>
+        </condition>
+    </target>
+
+    <target name="testWindows">
+        <condition property="generate.windows">
+            <or>
+                <os family="windows"/>
+                <istrue value="${all.scripts}"/>
+            </or>
+        </condition>
+    </target>
+
+    <target name="generateUnix" if="generate.unix" depends="testUnix">
+        <echo message="Creating Unix launcher script ${launcher-name}"/>
+        <filterset refid="script.filter.set"/>
+        <!-- Unix script-->
+        <property name="scripts.dest.unix"
+            location="${abs.deploy.dir}/${scripts.dest}/unix"/>
+        <filter token="script"
+            value="${scripts.dest.unix}/${cp.script}"/>
+        <copy file="${templates}/unix/${launcher.template.name}"
+            tofile="${tools.dest}/${launcher-name}"
+            filtering="true"
+            overwrite="${overwrite.launcher}">
+            <filterset refid="script.filter.set"/>
+        </copy>
+        <fixcrlf srcdir="${tools.dest}/" eol="lf"
+            includes="${launcher-name}"/>
+        <chmod file="${tools.dest}/${launcher-name}" perm="755"/>
+    </target>
+
+    <target name="generateWindows" if="generate.windows" depends="testWindows">
+        <echo message="Creating Windows launcher script ${launcher-name}"/>
+        <!-- Windows script-->
+        <property name="scripts.dest.win"
+            location="${abs.deploy.dir}/${scripts.dest}/windows"/>
+        <filter token="script"
+            value="${scripts.dest.win}\${cp.script}"/>
+        <copy file="${templates}/windows/${launcher.template.name}"
+            tofile="${tools.dest}/${launcher-name}.bat"
+            filtering="true" 
+            overwrite="${overwrite.launcher}">
+            <filterset refid="script.filter.set"/>
+        </copy>
+        <fixcrlf srcdir="${tools.dest}/" eol="crlf"
+            includes="${launcher-name}.bat"/>
+    </target>
+    
+</project>

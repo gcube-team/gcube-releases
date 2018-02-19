@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.information-system-model.1-7-0" date="2018-02-19">
+		<Change>Added possibility to marshal list and array of ISManageable objects #10796</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-model.1-6-0" date="2017-12-20">
+		<Change>Changed pom.xml to use new make-servicearchive directive #10158</Change>
+		<Change>Added modifiedBy property in Header #9999</Change>
+		<Change>Changed the way to marshall and unmarshall Context with parent and children #10216</Change>
+		<Change>Improved IS Entity/Relation scanning to support multiple inheritance #5706</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-model.1-5-0" date="2017-07-25">
+		<Change>Refactored getTypeByClass() method</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-model.1-4-0" date="2017-06-07">
+		<Change>Defined a custom pattern for DateTimeFormat to support timezone.</Change>
+		<Change>Added convenient methods to get desired facets or relations specifing class type</Change>
+		<Change>Change the way to serialize Source resource which was ignored before. Now only the header of the Soruce resource is included which is enough to identify it. This enable the possibility to create a Relation togheter with the target entity</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-model.1-3-0" date="2017-03-16">
+		<Change>Added deserialization support for unknown types with polymorphism support</Change>
+		<Change>Improved support for json serilization and deserialization</Change>
+		<Change>Added Propagation Constraint Concept</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-model.1-2-0" date="2016-12-16">
+		<Change>Added regex support in schema definition</Change>
+		<Change>Improved support for json serilization and deserialization</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-model.1-1-0" date="2016-11-03">
+		<Change>Reorganized package and renamed relations to be compliant with welle known practice</Change>
+		<Change>Added Utility for json serilization and deserialization</Change>
+		<Change>Added Jackson annotation to support json serilization and deserialization</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-model.1-0-0" date="2016-07-27">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

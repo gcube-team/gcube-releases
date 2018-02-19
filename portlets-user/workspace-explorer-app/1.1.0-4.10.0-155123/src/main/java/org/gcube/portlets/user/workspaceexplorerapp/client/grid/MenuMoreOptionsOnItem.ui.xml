@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:m="urn:import:gwt.material.design.client.ui">
+	<ui:style>
+	.onHoverUnderline :HOVER{
+		text-decoration: underline;
+	}
+	</ui:style>
+	<m:MaterialRow>
+		<m:MaterialColumn>
+			<m:MaterialRow>
+			<m:MaterialLink text="Open" ui:field="open" styleName="{style.onHoverUnderline}"/>
+			</m:MaterialRow>
+			<m:MaterialRow>
+			<m:MaterialLink text="Download" ui:field="download" styleName="{style.onHoverUnderline}"/>
+		</m:MaterialRow>
+		</m:MaterialColumn>
+	</m:MaterialRow>
+</ui:UiBinder> 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.resource-registry-client.1-5-0" date="2018-02-19">
+		<Change>Removed API which need to pass the java class to specify the type #10318</Change>
+		<Change>Added APis having a string as input containing serialization of entity or relation instead of the class instances #9877</Change>
+		<Change>Changed pom.xml to use new make-servicearchive directive #10165</Change>
+		<Change>Added API to read Context definition #10246</Change>
+		<Change>Added API to get all Context definition #10610</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-client.1-4-0" date="2017-07-25">
+		<Change>Added HAProxy discovery support #8757</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-client.1-3-0" date="2017-06-07">
+		<Change>Removed common-generic-clients, common-gcube-calls and common-fw-clients from dependencies</Change>
+		<Change>The client is not implement as gcube-proxy anymore. It is now a generic http-client (using HTTPCall class provided in API) autoquery the deprecated IS to get resource-registry instance.</Change>
+		<Change>Added exists() method which uses HEAD HTTP method to get existence from Resource Registry</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-client.1-2-0" date="2017-03-16">
+		<Change>Added API to support Entity-Relation navigation</Change>
+		<Change>Added API to get the list of ER types and their own schema</Change>
+		<Change>Added ResourceRegistryException json deserialization</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-client.1-1-0" date="2016-12-16">
+		<Change>Improved code quality</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-client.1-0-0" date="2016-11-03">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

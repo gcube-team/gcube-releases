@@ -1,0 +1,23 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.gcube-url-shortener.1-2-0" date="2017-06-14">
+		<Change>[Support #8940] src/it/simple-it/pom.xm</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.gcube-url-shortener.1-1-1" date="2016-12-19">
+		<Change>removed lo4j dependency from pom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.gcube-url-shortener.1-1-0" date="2016-09-27">
+		<Change>removed jump of scope during read of Runtime
+			HTTP-URL-Shortener
+		</Change>
+		<Change>removed constructor with the parameter scope</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.gcube-url-shortener.1-0-2" date="2016-06-30">
+		<Change>removed maven portal bom dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.gcube-url-shortener.1-0-1" date="2016-04-26">
+		<Change>maven-bom replaced by portal-bom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.gcube-url-shortener.1-0-0" date="2014-10-13">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

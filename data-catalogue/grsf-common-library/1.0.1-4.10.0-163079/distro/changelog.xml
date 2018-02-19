@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-catalogue.grsf-common-library.1-0-1" date="2017-12-23">
+		<Change>Minor fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-common-library.1-0-0" date="2017-11-05">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

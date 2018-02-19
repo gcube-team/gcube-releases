@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.search.resultsetgarbagecollector.3-2-0" date="2014-02-13">
+		<Change>turned into maven</Change>
+	</Changeset>
+</ReleaseNotes>

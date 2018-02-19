@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.data.analysis.tabulardata</groupId>
+		<artifactId>cube-manager-parent</artifactId>
+		<version>3.5.3-4.10.0-130370</version>
+	</parent>
+	<artifactId>cube-manager-data</artifactId>
+	<name>Cube Manager Data</name>
+	<description>Cube Manager module that handles management of TD tables on a PostgreSQL DB backend.</description>
+
+	<scm>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-analysis/tabulardata/cube-manager-parent/cube-manager-data/</url>
+	</scm>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>database-resource</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jdbc</artifactId>
+			<version>7.0.41</version>
+		</dependency>
+
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.1-901.jdbc4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-dbutils</groupId>
+			<artifactId>commons-dbutils</artifactId>
+			<version>1.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>tabular-model-postgresql</artifactId>
+			<version>[3.0.0-SNAPSHOT,4.0.0-SNAPSHOT)</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>cube-manager-api</artifactId>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

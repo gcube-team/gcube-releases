@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WPSConfiguration xmlns="http://n52.org/wps">
+  <Datahandlers>
+    <ParserList>
+      <Parser name="WCPSQueryParser" className="org.n52.wps.io.datahandler.parser.WCPSQueryParser" active="true">
+        <Format mimetype="text/plain" schema="http://schemas.opengis.net/wcps/1.0/wcpsAll.xsd"/>
+      </Parser>
+      <Parser name="WKTParser" className="org.n52.wps.io.datahandler.parser.WKTParser" active="true">
+        <Format mimetype="application/wkt"/>
+      </Parser>
+      <Parser name="GenericXMLDataParser" className="org.n52.wps.io.datahandler.parser.GenericXMLDataParser" active="true">
+        <Format mimetype="text/xml; subtype=gml/2.1.2" schema="http://schemas.opengis.net/gml/2.1.2/feature.xsd"/>
+        <Format mimetype="text/xml"/>
+      </Parser>
+      <Parser name="GenericFileParser" className="org.n52.wps.io.datahandler.parser.GenericFileParser" active="true">
+	 <Format mimetype="text/xml"/>
+	 <Format mimetype="text/csv"/>
+	 <Format mimetype="text/plain"/>
+      </Parser>
+	<Parser name="D4ScienceFileParser" className="org.gcube.dataanalysis.wps.statisticalmanager.synchserver.bindings.D4ScienceFileParser" active="true">
+		<Format mimetype="text/xml"/>       
+		<Format mimetype="application/d4science"/>
+      </Parser>
+      <Parser name="GisLinkParser" className="org.gcube.dataanalysis.wps.statisticalmanager.synchserver.bindings.GisLinkParser" active="true">
+        <Format mimetype="application/geotiff"/>
+        <Format mimetype="application/wcs"/>
+        <Format mimetype="application/asc"/>
+        <Format mimetype="text/plain"/>
+        <Format mimetype="application/wfs"/>
+        <Format mimetype="application/opendap"/>
+      </Parser>
+    </ParserList>
+    <GeneratorList>
+      <Generator name="WKTGenerator" className="org.n52.wps.io.datahandler.generator.WKTGenerator" active="true">
+        <Format mimetype="application/wkt"/>
+      </Generator>
+      <Generator name="GenericXMLDataGenerator" className="org.n52.wps.io.datahandler.generator.GenericXMLDataGenerator" active="true">
+        <Format mimetype="text/xml; subtype=gml/2.1.2" schema="http://schemas.opengis.net/gml/2.1.2/feature.xsd"/>
+      </Generator>
+      <Generator name="GenericFileGenerator" className="org.n52.wps.io.datahandler.generator.GenericFileGenerator" active="true">
+        <Format mimetype="text/plain"/>
+      </Generator>
+      <Generator name="PngFileGenerator" className="org.gcube.dataanalysis.wps.statisticalmanager.synchserver.bindings.PngFileGenerator" active="true">
+        <Format mimetype="image/png"/>
+      </Generator>
+      <Generator name="GifFileGenerator" className="org.gcube.dataanalysis.wps.statisticalmanager.synchserver.bindings.GifFileGenerator" active="true">
+        <Format mimetype="image/gif"/>
+      </Generator>
+      <Generator name="D4ScienceFileGenerator" className="org.gcube.dataanalysis.wps.statisticalmanager.synchserver.bindings.D4ScienceFileGenerator" active="true">
+        <Format mimetype="application/d4science"/>
+      </Generator>
+      <Generator name="CsvFileGenerator" className="org.gcube.dataanalysis.wps.statisticalmanager.synchserver.bindings.CsvFileGenerator" active="true">
+        <Format mimetype="text/csv"/>
+      </Generator>
+      <Generator name="GisLinkGenerator" className="org.gcube.dataanalysis.wps.statisticalmanager.synchserver.bindings.GisLinkGenerator" active="true">
+        <Format mimetype="application/wms"/>
+      </Generator>
+    </GeneratorList>
+  </Datahandlers>
+    <AlgorithmRepositoryList>
+    <Repository name="GcubeAlgorithmRepository" className="org.gcube.data.analysis.wps.repository.GcubeAlgorithmRepository" active="true"/>
+  </AlgorithmRepositoryList>
+   <RemoteRepositoryList/>
+	<Server protocol="http" hostname="localhost" hostport="8080" includeDataInputsInResponse="false" computationTimeoutMilliSeconds="259200000" cacheCapabilites="false" webappPath="wps" repoReloadInterval="0.0" minPoolSize="10" maxPoolSize="20" keepAliveSeconds="1000" maxQueuedTasks="100">
+   <Database/>
+  </Server>
+</WPSConfiguration>

@@ -1,0 +1,177 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.news-feed.2-5-0"
+		date="2017-11-13">
+		<Change>fixes for Incident #10262: Cannot see who liked posts on VREs of Parthenos</Change>
+		<Change>Feature #10242: add comment taking up to 3 seconds sometime to be delivered in the UI now shows a loader</Change>
+		<Change>Ported to GWT 2.8.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.news-feed.2-3-0"
+		date="2017-02-20">
+		<Change>fixes for changes to the underneath
+			common-notification-library</Change>
+		<Change>Minor css fix </Change>
+		<Change>Refactored to the new version of elastic search client's
+			compliancy
+		</Change>
+		<Change>Feature #7212, do not apologies if no posts are present and
+			try to engage the user to post something.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.news-feed.2-2-0"
+		date="2016-12-02">
+		<Change>removed asl session</Change>
+		<Change>Increased general performance and bugfixes</Change>
+		<Change>fetching of users list to mention in comments loaded on demand
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.news-feed.2-1-0"
+		date="2016-10-29">
+		<Change>Support to show feeds related to user's statistics added
+		</Change>
+		<Change>Fixed time for comments/posts: the year is present only if the
+			comment/post
+			was made before the current one
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.news-feed.2-0-0"
+		date="2016-06-29">
+		<Change>Updated for Liferay 6.2.5</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.news-feed.1-13-1"
+		date="2016-02-29">
+		<Change>Full-text search supported</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.news-feed.1-13-0"
+		date="2016-01-22">
+		<Change>Multi-attachment supported</Change>
+		<Change>Image preview available</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-12-0"
+		date="2015-11-12">
+		<Change>Fix for Bug #246, editing changes comment "metadata" namely
+			data
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-11-0"
+		date="2015-10-12">
+		<Change>Integrated workspace explorer widget and replace light tree
+		</Change>
+		<Change>Fix for Bug #195, Post dates lack the year
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-10-0"
+		date="2015-07-15">
+		<Change>Revised the way we shorten posts' text when this is very long,
+			better heuristic used
+		</Change>
+		<Change>Fixed bug #320, Users tagging does not work if @ is in the
+			middle of already typed text, works for hashtags too
+		</Change>
+		<Change>Revised mail notification message formatting, user text is now
+			more clear and visible
+		</Change>
+		<Change>Revised the way we provide back links for posts, removed
+			assumption that News Feed is always present the default community
+			page, good for single VRE portals support
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-9-0"
+		date="2015-04-27">
+		<Change>Integrated gwt-bootstrap and revised css</Change>
+		<Change>Ported to GWT 2.7.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-8-2"
+		date="2014-12-13">
+		<Change>added ClientScopeHandler to help prevent the back button cache
+			problem in Chrome and Firefox
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-8-1"
+		date="2014-11-18">
+		<Change>fixed see more problem with commercial ands (amps;) not being
+			converted
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-8-0"
+		date="2014-10-20">
+		<Change>Added support for hashtags</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-7-1"
+		date="2014-06-04">
+		<Change>Fixed bug that was allowing to like posts even if the user had
+			the session expired.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-7-0"
+		date="2014-06-04">
+		<Change>
+			Fixed bug loosing session when messaging user from the news
+			feed
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-6-4"
+		date="2014-05-07">
+		<Change>Implemented the automatic scroll back in time for feeds (in
+			VRE scope)
+		</Change>
+		<Change>Added possibility to unlike alread liked posts</Change>
+		<Change>Added possibility to mention users in comments</Change>
+		<Change>Added default comment inputbox at the bottom of feed comments,
+			if any
+		</Change>
+		<Change>Added avatar replacement if user has no avatar</Change>
+		<Change>Fixed double notifications for post owner who commented his
+			post
+		</Change>
+		<Change>Fixed double notifications for post owner who liked his post
+		</Change>
+		<Change>Fixed user referral problem when post was deleted </Change>
+		<Change>Added session checking popup</Change>
+		<Change>Fixed paste problem on replies</Change>
+		<Change>Preserve new lines in comments implemented</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-5-0"
+		date="2014-02-13">
+		<Change>Moved to Java7</Change>
+		<Change>Added configuration file for VRE Labels</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-4-0"
+		date="2013-10-21">
+		<Change>Moved to GWT 2.5.1</Change>
+		<Change>Ported to Feather Weight Stack</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-2-0"
+		date="2013-07-08">
+		<Change>Fix for support Ticket #708</Change>
+		<Change>Fix for support Ticket #636</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-1-0"
+		date="2013-07-08">
+		<Change>Open single feed separately enhancement implemeented #1818
+		</Change>
+		<Change>links redirects correctly to user profiles</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.1-0-0"
+		date="2013-04-19">
+		<Change>Mavenized</Change>
+		<Change>Smart Refresh Support Added #1539</Change>
+		<Change>Show HTTP URL in replies as HTML anchor links #1542</Change>
+		<Change>Replies on App Feed exception fixed #580 prod. support
+		</Change>
+		<Change>Add Tag people in News Feed Portlet #1535</Change>
+		<Change>Notify people involved in post thread #1576</Change>
+		<Change>Scope Dependent News Feed #1561</Change>
+		<Change>Open single feed in new Window Support #1599</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.0-2-0"
+		date="2013-03-11">
+		<Change>User who favorite a post gets notified is someone comments on
+			that post
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.newsfeed.0-1-0"
+		date="2012-10-31">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

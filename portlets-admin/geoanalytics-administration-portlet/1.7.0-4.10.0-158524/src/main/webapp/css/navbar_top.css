@@ -1,0 +1,244 @@
+.adminContainer .navbarTop .nav-tabs {
+	border-bottom: 3px solid #4cb5d2;
+}
+.navbarTop .nav.nav-tabs {
+	margin:0px !important;
+}
+
+.adminContainer .navbarTop {
+	margin-top: -23px;
+}
+
+.adminContainer .navbarTop .nav {
+	margin-bottom: 24px;
+}
+
+.adminContainer .navbarTop .nav-tabs > li {
+	margin-right: 2px;
+    min-width: 15%;
+    max-width: 15%;
+}
+
+.adminContainer .navbarTop .nav-tabs > li > a {
+	padding-top: 8px;
+    padding-bottom: 8px;
+    line-height: 20px;
+    
+    border: 1px solid #4cb5d2;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+	border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-color: transparent;
+    
+    background: #0271be;    
+    color: white;
+    
+	cursor: default;
+	height: 30px;
+}
+
+.adminContainer .navbarTop .nav-tabs > li > a:hover {
+	background: #4cb5d2;
+	color: white;
+}
+
+.adminContainer .navbarTop .nav-tabs > li:not(.active) > a:hover {
+	cursor:pointer;
+}
+
+.adminContainer .navbarTop .nav-tabs > li.active > a {
+	background: #019ad3;
+	color: white;
+	outline: 0;
+}
+
+.adminContainer .navbarTop .nav-tabs > li a {
+	height: 30px;
+}
+
+.adminContainer .navbarTop .nav-tabs > li a span.title {
+    margin: auto;
+}
+
+.adminContainer .navbarTop .nav-tabs > li a span.description {
+    font-size: x-small;
+	float: left;
+	margin-left: 0px;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+}
+
+.tab-pane {
+	min-height: 200px;	
+}
+
+.tab-content {
+/* 	margin-top: 6px; */
+}
+
+.adminContainer .navbarTop input[type="color"], 
+.adminContainer .navbarTop input[type="date"], 
+.adminContainer .navbarTop input[type="datetime"], 
+.adminContainer .navbarTop input[type="datetime-local"], 
+.adminContainer .navbarTop input[type="email"], 
+.adminContainer .navbarTop input[type="month"], 
+.adminContainer .navbarTop input[type="number"], 
+.adminContainer .navbarTop input[type="password"], 
+.adminContainer .navbarTop input[type="search"], 
+.adminContainer .navbarTop input[type="tel"], 
+.adminContainer .navbarTop input[type="text"], 
+.adminContainer .navbarTop input[type="time"], 
+.adminContainer .navbarTop input[type="url"], 
+.adminContainer .navbarTop input[type="week"], 
+.adminContainer .navbarTop select, 
+.adminContainer .navbarTop textarea, 
+.adminContainer .navbarTop .uneditable-input {
+	color: rgb(2, 113, 190);
+}
+	
+.adminContainer .navbarTop input[type="text"] {
+    border-radius: 4px;
+    height: 21px;
+    color: #8D8D8D;
+    font-weight: 200;
+    margin-bottom: 7px;
+}
+	
+.adminContainer .navbarTop input[type="text"]:focus {
+    box-shadow: none;
+}
+	
+.adminContainer .navbarTop .tab-content .btn-group {
+    background-color: #019ad3;
+    color: white;
+    border-radius: 3px;
+    max-width: 107px;
+}
+	
+.adminContainer .navbarTop .tab-content .btn-group .dropdown-menu {
+	background-color: #019ad3;
+	color: white;
+}
+
+.adminContainer .navbarTop .tab-content .btn-group .btn.dropdown-toggle, 
+.adminContainer .navbarTop .tab-content .btn-group.open .btn.dropdown-toggle {
+	background-color: #019ad3;
+    color: white;
+    border-radius: 3px;
+}	
+
+.adminContainer .navbarTop .tab-content .btn-group .btn {
+	background-image: none;
+	border: #019ad3;
+}
+		
+.adminContainer .navbarTop .tab-content .btn-group .dropdown-menu li:hover {
+	background-color: #54a2d3;
+    cursor: pointer;
+}	
+	
+.adminContainer .row-fluid [class*="span"] {
+	margin-left: 0px;
+}
+
+.adminContainer .navbarTop .tab-pane .span6 input[type="text"] {
+	margin-bottom: 0px;
+}		
+	
+.adminContainer .navbarTop .tab-pane .span6 input[type="text"] {
+
+}
+	
+.makeMeOrange {
+	color: #f89406;
+	margin: 5px;
+	float:right;
+}
+
+.adminContainer .navbarTop #selectVersion, 
+.adminContainer .navbarTop #selectFormatType {
+	margin-right: 6px;
+}
+
+.adminContainer .navbarTop #listFormatTypes,
+.adminContainer .navbarTop #listVersion {
+	width: 80px;
+}
+
+.adminContainer .navbarTop .tab-content #selectFormatTypeWfs .btn-group,
+.adminContainer .navbarTop .tab-content #selectVersionWfs .btn-group {
+	background-color: white;
+    color: #DDD;
+    border-radius: 3px;
+    border: 1px solid #DDD;
+}
+
+.adminContainer .navbarTop .tab-content #selectFormatTypeWfs .btn-group .btn,
+.adminContainer .navbarTop .tab-content #selectVersionWfs .btn-group .btn  {
+    background-image: none;
+    border: #019ad3;
+}
+	
+.adminContainer .navbarTop .tab-content #selectFormatTypeWfs .btn-group .btn .caret,
+.adminContainer .navbarTop .tab-content #selectVersionWfs .btn-group .btn  .caret {
+	color: #DDD;
+	border-top: 4px solid black;
+}
+	
+.adminContainer .navbarTop .tab-content #selectFormatTypeWfs .btn-group .btn.dropdown-toggle, 
+.adminContainer .navbarTop .tab-content #selectVersionWfs .btn-group .btn.dropdown-toggle {
+	background-color: white;
+	color: black;
+	border-radius: 3px;
+}
+	
+.adminContainer .navbarTop .tab-content #selectFormatTypeWfs .btn-group .dropdown-menu,
+.adminContainer .navbarTop .tab-content #selectVersionWfs .btn-group .dropdown-menu {
+	background-color: white;
+	color: black;
+}
+	
+.adminContainer .navbarTop .tab-content .btn-group .dropdown-menu li:hover,
+.adminContainer .navbarTop .tab-content #selectFormatTypeWfs .btn-group .dropdown-menu li:hover,
+.adminContainer .navbarTop .tab-content #selectVersionWfs .btn-group .dropdown-menu li:hover {
+    background-color: #54a2d3;
+    cursor: pointer;
+}
+
+.adminContainer .navbarTop .layers {
+	margin-top: 10px !important;
+}
+
+.adminContainer .navbarTop .layers hr {
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+	
+.adminContainer .navbarTop .tab-content .btn-group {
+	max-width: 107px;
+	display: inline-block;
+}
+	
+.adminContainer #importOptions .dropDownSelection {	
+	float:left;
+}
+
+.layersModal .modal-header,
+	.layersModal .modal-footer {
+	border: none;
+}
+
+
+/*************Modals*************/
+.modal-header .layerModalTitle {
+	color: #0271be;
+	margin: 0.5em 0 0.3em 0;
+}
+.modal-header .layerModalSubTitle {
+	color: #777;
+	font-size: 0.9em;
+}

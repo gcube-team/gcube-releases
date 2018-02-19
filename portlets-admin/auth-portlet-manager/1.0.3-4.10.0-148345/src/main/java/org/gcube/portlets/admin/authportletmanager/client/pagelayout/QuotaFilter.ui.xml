@@ -1,0 +1,125 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.txt_search {
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px !important;
+		margin-bottom: 0 !important;
+	}
+	
+	.btn_search {
+		border-radius: 0px 8px 8px 0 !important;
+		-webkit-border-radius: 0px 8px 8px 0 !important;;
+		-moz-border-radius: 0px 8px 8px 0 !important;
+		margin-right: 30px !important;
+	}
+	
+	.btn_search_start {
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px !important;
+	}
+	
+	.btn_search_start:before {
+		color: #333333;
+		content: "\f036";
+		display: inline-block;
+		font-family: "fontawesome";
+	}
+	
+	.btn_search_contains {
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px !important;
+	}
+	
+	.btn_search_contains:before {
+		color: #333333;
+		content: "\f039";
+		display: inline-block;
+		font-family: "fontawesome";
+	}
+	
+	.filter_bar {
+		height: 30px;
+		padding: 2px;
+		background-color: #fff;
+		border-radius: 4px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<b:WellForm type="SEARCH" ui:field="form_search">
+			<b:ControlGroup>
+				<b:Controls>
+					<b:Tooltip text='Delete Quote'>
+						<b:Button type="DANGER" addStyleNames="btn btn_delete"
+							ui:field="b_delete_quota" />
+					</b:Tooltip>
+					<b:Tooltip text='' b:id="idAddQuote">
+						<b:Button type="SUCCESS" addStyleNames="btn btn_add"
+							ui:field="b_add_quota" />
+					</b:Tooltip>
+					<b:InputAddOn prependIcon="SEARCH" ui:field="i_search"  b:id="idSearchQuote">
+
+						<b:Popover trigger="FOCUS" placement="TOP"
+							text="use @ for search caller 
+				$ for time 
+    			* for type"
+							heading="Tag for search">
+
+							<b:TextBox addStyleNames="{style.txt_search}"
+								placeholder="click for search" b:id="t_search" ui:field="t_search" />
+						</b:Popover>
+						<b:ButtonGroup toggle="radio" ui:field="b_search_type">
+							<b:Tooltip text='Search Starts With'>
+								<b:Button addStyleNames="btn {style.btn_search_start}"
+									ui:field="b_search_start" active="true" />
+							</b:Tooltip>
+							<b:Tooltip text='Search Container'>
+								<b:Button addStyleNames="btn {style.btn_search_contains}"
+									ui:field="b_search_contains" />
+							</b:Tooltip>
+
+						</b:ButtonGroup>
+
+
+						<b:Button addStyleNames='{style.btn_search}' ui:field="b_search">Search</b:Button>
+					</b:InputAddOn>
+
+
+					<b:ButtonGroup toggle="radio" b:id="idGroupQuote">
+						<b:Tooltip text='Select All Caller'>
+							<b:Button addStyleNames="btn btn_group_none" ui:field="b_group_none"
+								active="true" />
+						</b:Tooltip>
+						<b:Tooltip text='Select User Caller'>
+							<b:Button addStyleNames="btn btn_group_user" ui:field="b_group_user" />
+						</b:Tooltip>
+						<b:Tooltip text='Select Role Caller'>
+							<b:Button addStyleNames="btn btn_group_role" ui:field="b_group_role" />
+						</b:Tooltip>
+					</b:ButtonGroup>
+					<b:Tooltip text='Refresh List Quota'>
+						<b:Button addStyleNames="btn btn_refresh" ui:field="b_refresh" />
+					</b:Tooltip>
+
+				</b:Controls>
+			</b:ControlGroup>
+
+
+
+
+			<g:FlowPanel addStyleNames="{style.filter_bar}" ui:field="string_search">
+
+			</g:FlowPanel>
+
+
+
+
+		</b:WellForm>
+
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,12 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="org.gcube.portlets-user.transect-generator.1-0-1"
+		date="2016-04-28">
+		<Change>Removed dependcy from org.gcube.common.tschartdatamodel</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.transect-generator.1-0-0"
+		date="2015-05-27">
+		<Change>First Release</Change>
+		<Change>#65 Mavenize Transect Generator</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,38 @@
+gr.cite.regional.data.collection.application.hostname=https://dl016.madgik.di.uoa.gr:8443/regional-data-collection-service
+
+##########################Persistence/Access##########################################
+gr.cite.regional.data.collection.dataaccess.persistence.jdbc.driver=org.postgresql.Driver
+
+### insert DB URL. e.g. jdbc:postgresql://develdb1.madgik.di.uoa.gr:5432/wecafc
+gr.cite.regional.data.collection.dataaccess.persistence.jdbc.url=*****DB URL*****
+
+### insert DB credentials
+gr.cite.regional.data.collection.dataaccess.hibernate.connection.username=*****DB username*****
+gr.cite.regional.data.collection.dataaccess.hibernate.connection.password=*****DB password*****
+
+##########################Persistence/Hibernate#######################################
+gr.cite.regional.data.collection.dataaccess.hibernate.show_sql=true
+gr.cite.regional.data.collection.dataaccess.hibernate.hbm2dll=validate
+gr.cite.regional.data.collection.dataaccess.hibernate.dialect=org.hibernate.dialect.PostgreSQL82Dialect
+
+########################Persistence/Hibernate/Batch###################################
+gr.cite.regional.data.collection.dataaccess.hibernate.jdbc.batch_size = 30
+gr.cite.regional.data.collection.dataaccess.hibernate.order_inserts = true
+gr.cite.regional.data.collection.dataaccess.hibernate.order_updates = true
+gr.cite.regional.data.collection.dataaccess.hibernate.batch_versioned_data = true
+
+########################Persistence/Hibernate/Connection pool##########################
+gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.provider_class = org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider
+gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.min_size = 5
+gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.max_size = 100
+gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.timeout = 0
+gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.max_statements = 50
+
+gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.acquire_retry_attempts = 30
+gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.acquire_retry_delay = 1000
+gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.idle_test_period = 3000
+gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.break_after_acquire_failure = false
+gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.idle_connection_test_period = 3600
+gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.test_connection_on_checkin = true
+gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.test_connection_on_checkout = false
+gr.cite.regional.data.collection.dataaccess.hibernate.connectionpool.c3p0.preferred_test_query = select 1

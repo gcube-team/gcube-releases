@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://develdb1.madgik.di.uoa.gr:5432/wecafc</property>
+		<property name="hibernate.connection.username">wecafc</property>
+		<property name="hibernate.connection.password">w3c4fcBB</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.connection.release_mode">auto</property>
+		<property name="current_session_context_class">thread</property>
+		<property name="hibernate.connection.autoReconnect">true</property>
+
+
+		<mapping class="gr.cite.regional.data.collection.dataaccess.entities.Annotation" />
+		<mapping class="gr.cite.regional.data.collection.dataaccess.entities.CDT_37" />
+		<mapping class="gr.cite.regional.data.collection.dataaccess.entities.DataCollection" />
+		<mapping class="gr.cite.regional.data.collection.dataaccess.entities.DataModel" />
+		<mapping class="gr.cite.regional.data.collection.dataaccess.entities.DataSubmission" />
+		<mapping class="gr.cite.regional.data.collection.dataaccess.entities.Domain" />
+		<mapping class="gr.cite.regional.data.collection.dataaccess.entities.UserReference" />
+
+	</session-factory>
+
+</hibernate-configuration>

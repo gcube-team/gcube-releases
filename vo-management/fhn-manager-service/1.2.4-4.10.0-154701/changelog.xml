@@ -1,0 +1,29 @@
+<ReleaseNotes>
+<Changeset component="fhn-manager-service.1-0-0" date="2018-02-19">
+  <Change>First Release</Change>
+</Changeset>
+<Changeset component="fhn-manager-service.1-1-0" date="2018-02-19">
+  <Change>Second Release</Change>
+  <Change>Integration with gCube IS added</Change>
+</Changeset>
+<Changeset component="fhn-manager-service.1-2-0" date="2018-02-19">
+  <Change>Third Release</Change>
+  <Change>Integration with gCube Occopus added</Change>
+</Changeset>
+<Changeset component="fhn-manager-service.1-2-1" date="2018-02-19">
+  <Change>Third Release</Change>
+  <Change>Minor changes</Change>
+</Changeset>
+<Changeset component="fhn-manager-service.1-2-2" date="2018-02-19">
+  <Change>Fourth Release</Change>
+  <Change>Minor changes and bugs fixed</Change>
+</Changeset>
+<Changeset component="fhn-manager-service.1-2-3" date="2018-02-19">
+  <Change>Fifth Release</Change>
+  <Change>Minor changes and bugs fixed</Change>
+</Changeset>
+<Changeset component="fhn-manager-service.1-2-4" date="2018-02-19">
+  <Change>Sixth Release</Change>
+  <Change>Minor changes and bugs fixed</Change>
+</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,32 @@
+<ReleaseNotes>
+	<Changeset component="tree-manager-service-1.0.0" date="2012-04-26">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="tree-manager-service-2.0.0" date="2012-09-05">
+		<Change>Simpler signatures in methods that return streams (failures
+			are now not modelled in return type)</Change>
+		<Change>Improved error management</Change>
+		<Change>Adoption of streams and independence from gRS (but for
+			configuration of ports)</Change>
+		<Change>new test suites based on in-container mocking with no
+			dependencies on sample-plugin left</Change>
+	</Changeset>
+	<Changeset component="tree-manager-service-3.0.0" date="2013-01-11">
+		<Change>Aligned with gCF 1.6.0+ and eliminated dependencies on legacy scope handling mechanisms</Change>
+		<Change>Removed dependencies from client library</Change>
+		<Change>Internally refactored to align with changes in dependencies</Change>
+	</Changeset>
+	<Changeset component="tree-manager-service-3.0.1" date="2013-05-28">
+		<Change>Fix: TBinder now discovers plugins on load</Change>
+		<Change>Fix:Source change events correctly notified and observed</Change>
+		<Change>Fix:Resource Property changes now correctly published</Change>
+	</Changeset>
+	<Changeset component="tree-manager-service-3.0.2" date="2014-02-01">
+		<Change>Fix: Scope now explicitly set on published DataSource</Change>
+		<Change>Fix: increased read/write timeouts to 3 mins from 30 secs</Change>
+	</Changeset>
+	<Changeset component="tree-manager-3.0.3-4.10.0-125718" date="2014-10-30">
+		<Change>internal maintenance</Change>
+		<Change>increased read/write timeouts form 3 mins to 5 mins</Change>
+	</Changeset>
+</ReleaseNotes>

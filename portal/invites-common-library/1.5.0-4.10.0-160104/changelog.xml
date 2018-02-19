@@ -1,0 +1,23 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="org.gcube.common.portal.invites-common-library.1-5-0"
+		date="2017-11-29">
+		<Change>Invite method revised to avoid double step in case of user registration</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.portal.invites-common-library.1-4-0"
+		date="2017-05-12">
+		<Change>Invite emails are now sent via Email Templates Library</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.portal.invites-common-library.1-3-0"
+		date="2016-11-27">
+		<Change>removed ASL Session, ported to gCube Client Context</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.portal.invites-common-library.1-2-0"
+		date="2016-07-30">
+		<Change>Update for Liferay 6.2.5</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.portal.invites-common-library.1-0-0"
+		date="2015-06-30">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

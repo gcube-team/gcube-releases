@@ -1,0 +1,15 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+
+	<b:WellForm type="INLINE" ui:field="form_create_folder">
+		<b:FluidRow ui:field="validator_field"></b:FluidRow>
+		<b:FluidRow ui:field="form_fields">
+			<b:ControlLabel ui:field="control_label">New Folder</b:ControlLabel>
+			<b:TextBox placeholder="Type Folder name..." b:id="input_folder_name"
+				ui:field="input_folder_name" styleName="gwt-TextBox-personal"></b:TextBox>
+			<b:Button ui:field="submit_create_folder">Create</b:Button>
+			<b:Button ui:field="close_dialog">Close</b:Button>
+		</b:FluidRow>
+	</b:WellForm>
+</ui:UiBinder> 

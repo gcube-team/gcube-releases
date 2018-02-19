@@ -1,0 +1,7 @@
+<ServiceMap>
+	<Service name ="ISICAllQueryPT" endpoint ="http://grid1.4dsoft.hu:8080/wsrf/services/gcube/informationsystem/collector/XQueryAccess"/>
+        <Service name ="ISICAllRegistrationPT" endpoint ="http://grid1.4dsoft.hu:8080/wsrf/services/gcube/informationsystem/collector/Sink"/>
+	<Service name ="ISICAllCollectionPT" endpoint ="http://grid1.4dsoft.hu:8080/wsrf/services/gcube/informationsystem/collector/wsdaix/XMLCollectionAccess"/>
+	<Service name ="ISICAllStoragePT" endpoint ="http://grid1.4dsoft.hu:8080/wsrf/services/gcube/informationsystem/collector/XMLStorageAccess"/>
+</ServiceMap>
+
