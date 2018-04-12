@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:e="urn:import:org.gcube.portlets.user.gcubewidgets.client.elements"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel>
+		<e:Span styleName="switch-button-label on" ui:field="labelOff">OFF</e:Span>
+		<g:FocusPanel ui:field="switchContainer" styleName="switch-button-background">
+			<e:Div ui:field="switcherButton" styleName="switch-button-button"></e:Div>
+		</g:FocusPanel>
+		<e:Span styleName="switch-button-label off" ui:field="labelOn">ON</e:Span>
+		<div style="clear: left;"></div>
+	</g:HTMLPanel>
+</ui:UiBinder>

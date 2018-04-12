@@ -1,0 +1,21 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-analysis.operation-view.1.0.0" date="2014-10-30"> 
+		<Change>First version</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-view.1.0.1" date="2014-12-09"> 
+		<Change>Map Generation : Fixed style for points </Change>
+		<Change>Map Generation : Fixed field labels</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-view.1.2.0" date="2015-04-23"> 
+		<Change>TopChartGeneration: added thumbnail creation</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-view.1.2.1" date="2014-12-09"> 
+		<Change>TopChartGeneration: fixed thumbnail creation</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-view.1.2.2" date="2016-06-19"> 
+		<Change>Gis Integration fix</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-view.1.2.3" date="2016-10-01"> 
+		<Change>Gis Integration fix</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,54 @@
+/* Switch Button */
+
+.switch-button-label {
+    float: left;
+
+    font-size: 10pt;
+    cursor: pointer;
+}}
+
+.switch-button-label.off {
+    color: #adadad;
+}
+
+.switch-button-label.on {
+    color: #0088CC;
+}
+
+.switch-button-background {
+    float: left;
+    position: relative;
+
+    background: #ccc;
+    border: 1px solid #aaa;
+
+    margin: 1px 4px;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    cursor: pointer;
+    
+    width: 25px; 
+    height: 11px;
+    
+    outline-style: none; /* this avoid the tabindex property to sorround this element with a (maybe dotted) rectangle*/
+}
+
+.switch-button-button {
+    position: absolute;
+
+    width: 12px;
+    height: 11px;
+     
+    left: 12px;
+    top : -1px;
+
+    background: #FAFAFA;
+    border: 1px solid #aaa;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}

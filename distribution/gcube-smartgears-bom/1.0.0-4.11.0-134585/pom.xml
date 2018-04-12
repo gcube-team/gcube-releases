@@ -1,0 +1,127 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>org.gcube.distribution</groupId>
+	<artifactId>gcube-smartgears-bom</artifactId>
+	<version>1.0.0-4.11.0-134585</version>
+	<packaging>pom</packaging>
+	<name>Maven BOM for the Smartgears FW</name>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>gcube-bom</artifactId>
+				<version>LATEST</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<!-- Declaring dependencies needed by a smartgears webapp -->
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-smartgears</artifactId>
+				<version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-smartgears-app</artifactId>
+				<version>[2.0.0-SNAPSHOT,3.0.0-SNAPSHOT)</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-events</artifactId>
+				<version>[1.0.0-SNAPSHOT,  2.0.0-SNAPSHOT)</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-configuration-scanner</artifactId>
+				<version>[1.0.0-SNAPSHOT,  2.0.0-SNAPSHOT)</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-validator</artifactId>
+				<version>[1.0.0-SNAPSHOT,2.0.0-SNAPSHOT)</version>
+				<scope>provided</scope>
+			</dependency>
+			
+			<!-- Setting scope to provided to dependencies already declared in gcube bom -->
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-encryption</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.resources</groupId>
+				<artifactId>common-gcore-resources</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.resources</groupId>
+				<artifactId>registry-publisher</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-gcore-stubs</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-scope</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.core</groupId>
+				<artifactId>common-scope-maps</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.resources.discovery</groupId>
+				<artifactId>ic-client</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.resources.discovery</groupId>
+				<artifactId>discovery-client</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.common</groupId>
+				<artifactId>authorization-client</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.common</groupId>
+				<artifactId>common-authorization</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.data.publishing</groupId>
+				<artifactId>document-store-lib</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.accounting</groupId>
+				<artifactId>accounting-lib</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			
+		</dependencies>
+	</dependencyManagement>
+	
+</project>

@@ -1,0 +1,30 @@
+#geoadmin-create-plugin-go-to-pluginLibrary-JAR {
+	padding: .2em 1em;
+    background: #0271be;
+    background-color: #0271be;
+    color: #fff;
+    border-radius: 5px;
+}
+#geoadmin-create-plugin-go-to-pluginLibrary-JAR:hover {
+	background: #4cb5d2;
+    border: none;
+    color: white;
+	background-color: #4cb5d2;
+}
+#geoadmin-create-plugin-pluginLibrary-JAR,
+#geoadmin-edit-plugin-pluginLibrary-JAR {
+	position: fixed;
+	left: 99999em;
+}
+.geoadmin-plugins-modals {
+	display:none;
+}
+.geoadmin-plugins-modals.modal .geoadmin-plugin-form input,
+.geoadmin-plugins-modals.modal .geoadmin-plugin-form textarea {
+	color: #0271be;
+}
+#pluginFileName {
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

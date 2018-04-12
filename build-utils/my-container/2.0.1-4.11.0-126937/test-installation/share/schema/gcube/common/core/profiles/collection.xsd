@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+		XML Schema for GCUBE Content Collection Version 1.2 Last modified: 13/02/2008	Contact: http://www.gcube-system.org
+			</xs:documentation>
+	</xs:annotation>
+	
+	<xs:redefine schemaLocation="CommonTypeDefinitions.xsd">
+		<xs:complexType name="ProfileType">
+			<xs:complexContent>
+				<xs:restriction base="ProfileType">
+				<xs:sequence>
+				<xs:element name="Description" type="xs:string" minOccurs="0"/>
+				<xs:element name="Name" type="xs:string"/>
+				<xs:element name="IsVirtual" type="BooleanValueType">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">
+							A virtual collection is a collection with a membership condition that identifies its members at run time
+						</xs:documentation>
+					</xs:annotation>				
+				</xs:element>				
+				<xs:element name="IsUserCollection" type="BooleanValueType"> 
+					<xs:annotation>
+						<xs:documentation xml:lang="en">
+							Non user collections include GCUBE internal data (e.g. service states, persistent indexes, etc.). They are not displayed in the end-user Portals as for search purposes
+						</xs:documentation>
+					</xs:annotation>				
+				</xs:element>
+				<xs:element name="CreationTime" type="xs:dateTime"/>
+				<xs:element name="Creator" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">
+							Distinguished Name of the creator, if the Collection has been created in a secure context (otherwise, it is, of course, impossible to detect)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="NumberOfMembers" type="xs:nonNegativeInteger"/>
+				<xs:element name="LastUpdateTime" type="xs:dateTime">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">
+							At creation time, it's the same as for the CreationTime
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="PreviousUpdateTime" type="xs:dateTime" minOccurs="0">
+						<xs:annotation>
+						<xs:documentation xml:lang="en">
+							When a Collection is updated, the LastUpdateTime is shifted here
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="LastModifier" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">
+							Distinguished Name of the last identity that have modified the Collection, if the Collection has been created in a secure context (otherwise, it is, of course, impossible to detect)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>								
+				<xs:element ref="IsMemberOf"/>
+				<xs:element ref="SchemaURIs" minOccurs="0"/>
+			</xs:sequence>
+ 			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:redefine>
+
+	<xs:element name="IsMemberOf">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ID" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SchemaURIs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="URI" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>

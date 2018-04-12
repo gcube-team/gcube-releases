@@ -1,0 +1,15 @@
+<ReleaseNotes>
+	<Changeset component="common-scope-1.0.0" date="2012-1-27">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="common-scope-1.1.0" date="2013-01-11">
+		<Change>Scope can now be propagated in Callable and Runnable tasks via ScopedTasks</Change>
+		<Change>Scopes can now be manipulated through ScopeBean objects</Change>
+		<Change>Scope maps are now versioned and newer versions take precedence at startup</Change>
+		<Change>Scope maps can now be successfully looked up in VRE scopes (bug fix)</Change>
+	</Changeset>
+		<Changeset component="common-scope-1.2.0" date="2013-01-27">
+		<Change>Replaced Google's reflections with common-configuration-scanner</Change>
+		<Change>Lowered log level on scope settings to DEBUG</Change>
+	</Changeset>
+</ReleaseNotes>

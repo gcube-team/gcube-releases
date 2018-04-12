@@ -1,0 +1,23 @@
+<ReleaseNotes>
+	<Changeset component="trees-1.0.0" date="2012-04-26">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="trees-1.1.0" date="2012-09-03">
+		<Change>Aligned with latest streams versions</Change>
+	</Changeset>
+	<Changeset component="trees-1.2.0" date="2012-10-18">
+		<Change>Trees have HTTP URIs and tree URIs can be parsed by TreeURIBeans</Change>
+	</Changeset>
+	<Changeset component="trees-1.3.0" date="2012-11-30">
+		<Change>Null values in leafs serialise as empty elements with 'nil' attribute</Change>
+	</Changeset>
+	<Changeset component="trees-1.3.0" date="2012-01-11">
+		<Change>Source identifiers now serialises as 'sourceID'</Change>
+		<Change>QName factory method in Nodes now handles namespace prefixes correctly (bug fix)</Change>
+		<Change>Bindings facilities are deprecated and replaced with XMLBindings</Change>
+		<Change>Bindings to XML can now be customised in terms of root name and namespace prefixes</Change>
+	</Changeset>
+		<Changeset component="1.4.0" date="2013-27-06">
+		<Change>XML parsers tolerate space in between tags</Change>
+	</Changeset>
+</ReleaseNotes>

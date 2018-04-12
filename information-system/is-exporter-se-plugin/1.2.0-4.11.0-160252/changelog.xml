@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.is-exporter-se-plugin.1-2-0" date="2018-04-12">
+		<Change>Creating uber-jar instead of jar-with-dependencies and using new make-servicearchive directive #10159</Change>
+		<Change>Using new APIs signature #10318</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-exporter-se-plugin.1-1-0" date="2017-07-25">
+		<Change>Removed List and Set usage as workaround fo OrientDB bug #9021</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-exporter-se-plugin.1-0-0" date="2017-06-07">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

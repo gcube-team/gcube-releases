@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.distribution.portal-distribution.1-2-0"
+		date="2017-01-31">
+		<Change>Added portal auth token property in gcube-data properties file</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.portal-distribution.1-0-0"
+		date="2016-03-05">
+		<Change>First Version</Change>
+	</Changeset>
+</ReleaseNotes>

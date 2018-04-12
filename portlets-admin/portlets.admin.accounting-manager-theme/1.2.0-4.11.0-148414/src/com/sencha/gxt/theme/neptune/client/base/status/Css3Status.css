@@ -1,0 +1,37 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def textColor value('theme.status.text.color');
+@def textSize value('theme.status.text.size');
+@def textFamily value('theme.status.text.family');
+@def textWeight value('theme.status.text.weight');
+
+@def lineHeight value('theme.status.lineHeight');
+
+@def padding value('theme.status.padding.toString');
+
+.status {
+  height: 21px;
+  line-height: lineHeight;
+  cursor: default;
+  padding: padding;
+}
+
+.status .statusText {
+  line-height: lineHeight;
+  font-size: textSize;
+  font-family: textFamily;
+  font-weight: textWeight;
+  color: textColor;
+}
+
+.status .statusIcon {
+  display: none;
+  width: 18px;
+  float: left;
+  padding-top: 2px;
+}

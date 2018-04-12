@@ -1,0 +1,98 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-11-1"
+		date="2018-01-24">
+		<Change>Task #11028: masked password
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-11-0"
+		date="2017-06-28">
+		<Change>Moved to Java 8
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-10-0"
+		date="2016-09-27">
+		<Change>[Feature #5164] Upgraded to GWT 2.7
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-9-0"
+		date="2016-06-13">
+		<Change>Added scope provider reset
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-8-1"
+		date="2016-01-04">
+		<Change>Removed portal-framework dependency from Etics
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-8-0"
+		date="2015-09-25">
+		<Change>Fixed an issue on refresh cache
+		</Change>
+		<Change>Updated logs
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-7-3"
+		date="2015-07-02">
+		<Change>Updated logs
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-7-0"
+		date="2014-07-15">
+		<Change>Completed activity on
+			https://issue.imarine.research-infrastructures.eu/ticket/2969
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-6-0"
+		date="2014-06-04">
+		<Change>Updated to support new portal bom configurations
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-5-0"
+		date="2013-10-21">
+		<Change>#Ticket 2223. This project was enhancements to gwt 2.5.1
+		</Change>
+		<Change>Removed GCF dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-4-0"
+		date="2013-09-16">
+		<Change>New class to read default and base layers from Generic
+			Resource
+		</Change>
+		<Change>The secondary type used for query Generic Resource is read
+			from Property File
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-3-0"
+		date="2013-07-09">
+		<Change>The logger was changed at GCUBElog</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-2-0"
+		date="2013-05-29">
+		<Change>#Set scope of service params as full path (scope to string)
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-0-0"
+		date="2013-05-13">
+		<Change>#Link at new geoexplorer widget</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.2-0-0"
+		date="2013-03-05">
+		<Change>#1365 This component was mavenized</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.1-2-1"
+		date="2012-09-03">
+		<Change>Update</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.1-2-0"
+		date="2012-07-24">
+		<Change>Update</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.1-1-0"
+		date="2012-05-04">
+		<Change>Update</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.gcube-geoexplorer.1-0-0"
+		date="2012-04-05">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

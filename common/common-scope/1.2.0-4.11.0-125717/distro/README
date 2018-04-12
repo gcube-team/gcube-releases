@@ -1,0 +1,67 @@
+The gCube System - ${name}
+--------------------------------------------------
+ 
+${description}
+ 
+ 
+${gcube.description}
+ 
+${gcube.funding}
+ 
+ 
+Version
+--------------------------------------------------
+ 
+${version} (${buildDate})
+ 
+Please see the file named "changelog.xml" in this directory for the release notes.
+ 
+ 
+Authors
+--------------------------------------------------
+ 
+* Fabio Simeoni (fabio.simeoni@fao.org), FAO of the UN, Italy
+
+ 
+ 
+Maintainers
+-----------
+ 
+* Lucio Lelii (lucio.lelii@isti.cnr.it), CNR, Italy
+ 
+ 
+Download information
+--------------------------------------------------
+ 
+Source code is available from SVN: 
+    ${scm.url}
+ 
+Binaries can be downloaded from the gCube website: 
+   ${gcube.website}
+ 
+ 
+Installation
+--------------------------------------------------
+ 
+Installation documentation is available on-line in the gCube Wiki:
+    ${gcube.wikiRoot}/Integration_and_Interoperability_Facilities_Framework:_Client_Libraries_Framework
+ 
+ 
+Documentation 
+--------------------------------------------------
+ 
+Documentation is available on-line in the gCube Wiki:
+    ${gcube.wikiRoot}/Integration_and_Interoperability_Facilities_Framework:_Client_Libraries_Framework
+ 
+ 
+Support 
+--------------------------------------------------
+ 
+Bugs and support requests can be reported in the gCube issue tracking tool:
+    ${gcube.issueTracking}
+ 
+ 
+Licensing
+--------------------------------------------------
+ 
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping
+	package="org.gcube_system.namespaces.data.analysis.statisticalmanager.types">
+
+	<class name="SMAbstractResource">
+
+		<id name="abstractResourceId">
+		</id>
+
+		<many-to-one name="resource" column="resourceId" unique="true" cascade="delete" lazy="false"/> 
+
+	</class>
+
+</hibernate-mapping>

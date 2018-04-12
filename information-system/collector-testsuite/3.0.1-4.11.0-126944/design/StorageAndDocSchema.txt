@@ -1,0 +1,172 @@
+
+1) DB COLLECTIONS organization:
+
+
+/db (root collection)
+|
+|-Properties
+|
+|-Profiles
+	|
+	|-RunningInstance
+	|-GHN
+	|-Service
+	|-ExternalRunningInstance
+	|-CS
+	|-CSInstance
+	|-Collection
+	|-MetadataCollection
+	|-GenericResource
+
+ 
+2) DOCUMENT STRUCTURE 
+
+
+<Document>
+	<ID>internal document identifier</ID>
+	<Source>EPR of the RI</Source>
+	<EntryKey>info di gestione</EntryKey>
+	<GroupKey>info di gestione</GroupKey>
+	<TerminationTime>expire date from the epoc</TerminationTime>
+    <TerminationTimeHuman>human readable version</TerminationTimeHuman>
+    <LastUpdateMs>last update time from the peco</LastUpdateMs>
+    <LastUpdateHuman>human readable version</LastUpdateHuman>
+	<Data>
+ 		(the list of ws-resourceproperties
+ 			or
+ 		the profile)
+ 		 +
+ 		 gCube Provider properties
+	</Data>
+</Document>
+
+Example:
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+  <ID>247246288042653</ID>
+  <Source>http://node6.d.d4science.research-infrastructures.eu:8080/wsrf/services/gcube/informationsystem/registry/RegistryFactory</Source>
+  <SourceKey>RegistryResource</SourceKey>
+  <CompleteSourceKey>
+    <ns1:ResourceKey xmlns:ns1="http://gcube-system.org/namespaces/informationsystem/registry">RegistryResource</ns1:ResourceKey>
+  </CompleteSourceKey>
+  <EntryKey>8042653</EntryKey>
+  <GroupKey>24724628</GroupKey>
+  <TerminationTime>1250529645842</TerminationTime>
+  <TerminationTimeHuman>Mon Aug 17 18:20:45 GMT+01:00 2009</TerminationTimeHuman>
+  <LastUpdateMs>1250529525976</LastUpdateMs>
+  <LastUpdateHuman>Mon Aug 17 18:18:45 GMT+01:00 2009</LastUpdateHuman>
+  <Data>
+    <ns1:RunningInstance xmlns:ns1="http://gcube-system.org/namespaces/informationsystem/registry">
+      <uniqueID>537ff150-8b4d-11de-a789-cac4f8c904e3</uniqueID>
+      <operationType>create</operationType>
+      <changeTime>2009-08-17T16:45:10.945Z</changeTime>
+    </ns1:RunningInstance>
+    <ns2:ExternalRunningInstance xmlns:ns2="http://gcube-system.org/namespaces/informationsystem/registry">
+      <uniqueID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <operationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <changeTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    </ns2:ExternalRunningInstance>
+    <ns3:Service xmlns:ns3="http://gcube-system.org/namespaces/informationsystem/registry">
+      <uniqueID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <operationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <changeTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    </ns3:Service>
+    <ns4:Collection xmlns:ns4="http://gcube-system.org/namespaces/informationsystem/registry">
+      <uniqueID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <operationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <changeTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    </ns4:Collection>
+    <ns5:CS xmlns:ns5="http://gcube-system.org/namespaces/informationsystem/registry">
+      <uniqueID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <operationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <changeTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    </ns5:CS>
+    <ns6:CSInstance xmlns:ns6="http://gcube-system.org/namespaces/informationsystem/registry">
+      <uniqueID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <operationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <changeTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    </ns6:CSInstance>
+    <ns7:GHN xmlns:ns7="http://gcube-system.org/namespaces/informationsystem/registry">
+      <uniqueID>1ab13550-8aad-11de-a0b8-daa6294f6796</uniqueID>
+      <operationType>update</operationType>
+      <changeTime>2009-08-17T17:18:35.079Z</changeTime>
+    </ns7:GHN>
+    <ns8:gLiteCE xmlns:ns8="http://gcube-system.org/namespaces/informationsystem/registry">
+      <uniqueID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <operationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <changeTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    </ns8:gLiteCE>
+    <ns9:gLiteSE xmlns:ns9="http://gcube-system.org/namespaces/informationsystem/registry">
+      <uniqueID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <operationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <changeTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    </ns9:gLiteSE>
+    <ns10:gLiteSite xmlns:ns10="http://gcube-system.org/namespaces/informationsystem/registry">
+      <uniqueID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <operationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <changeTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    </ns10:gLiteSite>
+    <ns11:gLiteService xmlns:ns11="http://gcube-system.org/namespaces/informationsystem/registry">
+      <uniqueID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <operationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <changeTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    </ns11:gLiteService>
+    <ns12:VRE xmlns:ns12="http://gcube-system.org/namespaces/informationsystem/registry">
+      <uniqueID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <operationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <changeTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    </ns12:VRE>
+    <ns13:MetadataCollection xmlns:ns13="http://gcube-system.org/namespaces/informationsystem/registry">
+      <uniqueID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <operationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <changeTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    </ns13:MetadataCollection>
+    <ns14:GenericResource xmlns:ns14="http://gcube-system.org/namespaces/informationsystem/registry">
+      <uniqueID xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <operationType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <changeTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+    </ns14:GenericResource>
+    <ns15:TerminationTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns15="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.xsd" xsi:nil="true"/>
+    <ns16:CurrentTime xmlns:ns16="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.xsd">2009-08-17T17:18:46.068Z</ns16:CurrentTime>
+    <ns17:GHN xmlns:ns17="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider">1ab13550-8aad-11de-a0b8-daa6294f6796</ns17:GHN>
+    <ns18:RI xmlns:ns18="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider">1d1eb2e0-8aad-11de-a0ba-daa6294f6796</ns18:RI>
+    <ns19:ServiceClass xmlns:ns19="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider">InformationSystem</ns19:ServiceClass>
+    <ns20:Scope xmlns:ns20="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider">/CNRPrivate</ns20:Scope>
+    <ns21:ServiceID xmlns:ns21="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider">1d1d5350-8aad-11de-a0ba-daa6294f6796</ns21:ServiceID>
+    <ns22:ServiceName xmlns:ns22="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider">IS-Registry</ns22:ServiceName>
+  </Data>
+</Document>
+
+3) QUERIES:
+
+
+the resultset has the following structure:
+
+<Resultset>
+	<Record>
+	...
+	</Record>
+	<Record>
+	...
+        </Record>
+	<Record>
+       	...	
+	</Record>
+<Resultset>
+
+XQuery samples:
+
+for $name in //Document/Data/[ServiceName &= 'ISRegistry']
+return
+        <result>
+                .....
+        </result>
+
+
+for $name in collection("/db/Properties")//Document/Data/[ServiceName &= 'ISRegistry']
+return
+        <result>
+                .....
+        </result>
+
+

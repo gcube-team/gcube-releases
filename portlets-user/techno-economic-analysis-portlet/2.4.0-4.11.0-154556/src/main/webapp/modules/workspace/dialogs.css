@@ -1,0 +1,239 @@
+.ui-dialog .ui-dialog-title {
+	text-align: center;
+  	width: 100%;
+}
+
+.ui-widget-header{	
+	border: none;
+}
+
+.ui-dialog{
+	padding:0;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+#folderDescription, #analysisDescription{
+	resize:none;
+}
+
+.aui .tea-dialog{
+	display:none;
+}
+
+.aui .tea-dialog label{
+	display:inline-block;
+}
+
+.aui .tea-dialog-title .ui-widget-header{
+	background: rgb(2, 113, 190);
+	color:white;
+}
+
+.aui .tea-workspace-dialog-title .ui-widget-header{	
+	color: rgb(2, 113, 190);
+	background: white;
+	font-weight: 100;
+}
+
+.aui .tea-workspace-dialog-title .ui-dialog-title{
+	text-align: left;
+	margin-left: 10px;
+}
+
+.aui .tea-remove-dialog-title .ui-widget-header{
+	background: #b94a48;
+	color:white;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    margin: -10px 5px 0 0;
+}
+    
+#tea-remove-dialog{
+    text-align: center;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+	margin: 10px;	
+}
+
+/* dialog cancel button */
+
+.tea-cancel-button, .tea-action-button, .tea-dialog-button {
+    color: white;
+    text-shadow: none;
+    background: rgb(2, 113, 190);
+	outline:0;
+	display:inline-block;
+	padding: 5px 15px 5px 15px;
+	border:none;
+	width: 120px;
+}
+
+.tea-cancel-button:focus, .tea-action-button:focus, .tea-dialog-button:focus {
+    background: #019ad3;
+    border: none;
+    color: white;
+    outline:0;
+}
+
+.tea-cancel-button:hover, .tea-action-button:hover, .tea-dialog-button:hover{
+    background: #4cb5d2;   
+    border: none;
+    color: white;
+}
+
+/* remove dialog - cancel button */
+
+#tea-remove-dialog ~ .ui-dialog-buttonpane .tea-cancel-button {
+    color: black;
+    text-shadow: none;
+    background: white;
+    text-decoration:underline;
+	outline:0;
+	display:inline-block;
+	padding: 5px 15px 5px 15px;
+	border:none;
+	width: 120px;
+}
+
+#tea-remove-dialog ~ .ui-dialog-buttonpane .tea-cancel-button:focus {
+    background: white;
+    border: none;
+    color: black;
+    outline:0;
+}
+
+#tea-remove-dialog ~ .ui-dialog-buttonpane  .tea-cancel-button:hover{
+    background: white;   
+    border: none;
+    color: blue;
+}
+
+.tea-action-button:disabled, .tea-cancel-button:disabled{
+	background: #b3d9ff;      
+    border: none;
+}
+
+.tea-remove-button {
+    color: black;
+    text-shadow: none;
+	outline:0;
+	display:inline-block;
+	padding: 5px 15px 5px 15px;
+	background: #ff9999;     
+    border: none;
+    color: white;
+    width:120px;
+}
+
+.tea-remove-button:focus, .tea-remove-button:hover{
+    border: none;
+    background: #b94a48;
+	color: white;
+}
+
+.tea-remove-button:disabled{
+	background: #ff9999;       
+    border: none;
+}
+
+.tea-cancel-button:focus {
+     outline:none; 
+}
+
+.tea-portlet-theme-color{
+	background:rgb(2, 113, 190);
+	color:white;
+}
+
+#remove-file-text{
+	background: url(../../img/warning.png) no-repeat;
+	background-size: 20px;
+}
+
+.fa-users{
+	color : rgb(2, 113, 190);
+}
+
+.aui p {
+    margin: 10px 0 5px;
+}
+
+#tea-workspace-dialog{
+	border: 1px solid #ccc;
+    margin: 10px 25px 25px 25px;
+}
+
+#tea-workspace-dialog.disabled{
+	background: #E8F3F8;
+}
+
+.ui-widget-content.disabled,
+.ui-dialog-buttonpane.disabled{
+	background:  rgb(234,234,234);
+}
+
+#tea-workspace-dialog-title .ui-dialog-buttonpane{
+	border:none;
+}
+
+.ui-dialog .ui-dialog-titlebar-close,
+.ui-dialog-titlebar-minimize,
+.ui-dialog-titlebar-restore{
+	margin-right:3px !important;
+}
+
+#action-text{
+	font-size:12px;
+	color:gray;
+	margin:0px 0px 0px 24px;
+}
+
+#tea-workspace-notifier > p{
+	margin:0px;
+}
+
+.ui-dialog-buttonset{
+	width:100%;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+    text-align: center;
+    border-width: 1px 0 0 0;
+    background-image: none;
+    margin-top: 1em;
+    margin-bottom: 0;
+    padding:0;
+	width: 100%;
+}
+
+#tea-workspace-show-analysis-files-only+label {
+	display: inline-block;
+	margin: 10px;
+}
+
+.aui #tea-workspace-show-analysis-files-only+label:before {
+	width: 20px;
+	height: 20px;
+}
+
+.aui #tea-workspace-show-analysis-files-only:checked+label:before {
+	background-size: 14px 16px;
+}
+
+.aui #tea-workspace-show-analysis-files-only-text {
+	width: 150px;
+	margin-top: 10px;
+	display: inline-block;
+	text-align: left;
+	-webkit-user-select: none; /* webkit (safari, chrome) browsers */
+	-moz-user-select: none; /* mozilla browsers */
+	-khtml-user-select: none; /* webkit (konqueror) browsers */
+	-ms-user-select: none; /* IE10+ */
+	user-select: none;
+}

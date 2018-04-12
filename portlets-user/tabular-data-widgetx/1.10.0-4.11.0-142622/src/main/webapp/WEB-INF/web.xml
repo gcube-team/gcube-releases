@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+
+	<!-- TDWidget -->
+	<servlet>
+		<servlet-name>tdwxService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdwx.server.TabularDataXServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>tdwxServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.tdwx.server.TabularDataXServlet</servlet-class>
+	</servlet>
+	
+
+
+	<!-- TDWidget -->
+	<servlet-mapping>
+		<servlet-name>tdwxService</servlet-name>
+		<url-pattern>/tabulardataportlet/tdwx</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>tdwxServlet</servlet-name>
+		<url-pattern>/tabulardataportlet/tdwxdata</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>TabularDataWidgetX.html</welcome-file>
+	</welcome-file-list>
+</web-app>

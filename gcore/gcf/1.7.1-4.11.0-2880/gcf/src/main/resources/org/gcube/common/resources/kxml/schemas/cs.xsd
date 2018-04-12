@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:default="http://schemas.xmlsoap.org/wsdl/" xmlns:default1="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+	     	XML Schema for gCube CSs Version 1.2 Last modified: 13/02/2008 Contact: http://www.gcube-system.org
+		</xs:documentation>
+	</xs:annotation>
+	
+	
+	<xs:redefine schemaLocation="CommonTypeDefinitions.xsd">
+		<xs:complexType name="ProfileType">
+			<xs:complexContent>
+				<xs:restriction base="ProfileType">
+						<xs:sequence>
+							<xs:element name="Base64" type="xs:boolean" minOccurs="0"/>
+							<xs:element name="Description" type="xs:string" minOccurs="0"/>
+							<xs:element name="WSDL" type="FreeTextType"/>
+							<xs:element ref="BPEL"/>
+							<xs:element ref="Osiris"/>
+							<xs:element name="Creator" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation xml:lang="en">
+										Distinguished Name of the creator, if the CS has been registered in a secure context (otherwise, it is, of course, impossible to detect)
+									</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="CreationTime" type="xs:dateTime"/>
+							<xs:element name="ProcessName" type="xs:string" minOccurs="0"/>
+						</xs:sequence>	
+					</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:redefine>
+	
+	<xs:element name="BPEL" type="FreeTextType"/>
+	<xs:element name="Osiris" type="FreeTextType"/>
+	
+</xs:schema>

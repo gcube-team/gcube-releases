@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<portlet-app>
+	<portlet>
+		<portlet-name>GeoExplorer</portlet-name>
+		<display-name>GeoExplorer</display-name>
+		<portlet-class>org.gcube.portlets.user.geoexplorerportlet.portlet.GeoExplorer</portlet-class>
+		<init-param>
+			<name>view-jsp</name>
+			<value>/view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Geo Explorer</title>
+			<short-title>Geo</short-title>
+			<keywords>Geo Explorer</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>portletSetupShowBorders</name>
+				<value>false</value>
+			</preference>
+		</portlet-preferences>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+</portlet-app>

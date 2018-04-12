@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:m="urn:import:gwt.material.design.client.ui">
+	<m:MaterialDropDown activator="dp-4" constrainWidth="true"
+		gutter="5" backgroundColor="WHITE" separator="true" ui:field="menu"
+		belowOrigin="true">
+		<m:MaterialLink textColor="BLUE" iconType="FOLDER_SHARED"
+			ui:field="saveWSButton" iconPosition="LEFT" text="Save in Workspace"
+			separator="true" />
+		<m:MaterialLink textColor="BLUE" iconType="FILE_DOWNLOAD"
+			ui:field="downloadButton" iconPosition="LEFT" text="Download"/>
+	</m:MaterialDropDown>
+</ui:UiBinder> 

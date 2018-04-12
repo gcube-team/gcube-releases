@@ -1,0 +1,75 @@
+<!--
+Portions of this file Copyright 1999-2005 University of Chicago
+Portions of this file Copyright 1999-2005 The University of Southern California.
+
+This file or a portion of this file is licensed under the
+terms of the Globus Toolkit Public License, found at
+http://www.globus.org/toolkit/download/license.html.
+If you redistribute this file, with or without
+modifications, you must include this notice in the file.
+-->
+<schema targetNamespace="http://mds.globus.org/metrics/2004/09"
+        xmlns:metric="http://mds.globus.org/metrics/2004/09"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        attributeFormDefault="qualified"
+        elementFormDefault="qualified"
+        xml:lang="en" >
+
+
+<complexType name="accumulator">
+  <annotation><documentation>
+    Accumulator-style measurement (for example, event count or byte count) 
+    that it is useful to know both total and rate information for.
+  </documentation></annotation>
+  <sequence>
+    <element name="startTime" type="xsd:dateTime">
+      <annotation><documentation>
+        The time at which measurements were started (for example, when the
+        hosting container started)
+      </documentation></annotation>
+    </element>
+    <element name="lastChange" type="xsd:dateTime">
+      <annotation><documentation>
+        The time at which a value was last accumulated. If a zero-value
+        is accumulated, this does not count as a change for the 
+        purposes of this field, even though in implementation, it
+        may result in a recalculation of the exponential weights.
+      </documentation></annotation>
+    </element>
+ 
+    <element name="total" type="xsd:long">
+      <annotation><documentation>
+        The total of this accumulator.
+      </documentation></annotation>
+    </element>
+    <element name="expRate" type="metric:exponentialRate" 
+      minOccurs="0"
+      maxOccurs="unbounded" >
+      <annotation><documentation>
+        Exponentially decaying averages of the rate.
+      </documentation></annotation>
+    </element>
+  </sequence>
+</complexType>
+
+<complexType name="exponentialRate">
+  <annotation><documentation>
+    Represents an exponentially decaying average with metadata.
+  </documentation></annotation>
+  <sequence>
+    <element name="rate" type="xsd:double">
+      <annotation><documentation>
+        The exponentially-weighted weight, measured in units/second.
+      </documentation></annotation>
+    </element>
+    <element name="decay" type="xsd:long">
+      <annotation><documentation>
+        The decay constant, measured in seconds.
+      </documentation></annotation>
+    </element>
+  </sequence>
+</complexType>
+
+</schema>
+

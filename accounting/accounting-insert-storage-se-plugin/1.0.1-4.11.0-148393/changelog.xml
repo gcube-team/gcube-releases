@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.accounting.accounting-insert-storage-se-plugin.1.0.0" date="2018-04-11">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

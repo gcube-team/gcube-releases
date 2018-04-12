@@ -436,6 +436,12 @@ public class FullTextNode implements Serializable {
 	
 	
 	public Map<String, Long> getAllCollectionDocCounts(){
+		
+		ClusterAdminClient adminClient = this.indexClient.admin().cluster();
+		ClusterHealthResponse clusterHealth = adminClient.prepareHealth().get(); 
+		
+		final int nodesNum = (clusterHealth.getNumberOfDataNodes() == 0) ? 1 : clusterHealth.getNumberOfDataNodes();
+		
 		IndicesStatsResponse response =this.indexClient.admin().indices()
 				.prepareStats().clear()
 //				.setStore(true)
@@ -443,7 +449,7 @@ public class FullTextNode implements Serializable {
 				.execute().actionGet();
 		return response.getIndices().entrySet()
 				.parallelStream()
-				.collect(Collectors.toMap(entry -> entry.getKey(), entry -> entry.getValue().getTotal().getDocs().getCount()));
+				.collect(Collectors.toMap(entry -> entry.getKey(), entry -> entry.getValue().getTotal().getDocs().getCount()/nodesNum));
 	}
 	
 	

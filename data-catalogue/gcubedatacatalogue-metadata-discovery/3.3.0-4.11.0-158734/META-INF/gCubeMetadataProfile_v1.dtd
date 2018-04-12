@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<!ENTITY % Boolean "(true|false)">-->
+
+<!ELEMENT metadataformat (metadatafield+)>
+<!ELEMENT metadatafield (fieldName, mandatory, isBoolean?, defaulValue?, note?, vocabulary?, validator?)>
+<!ELEMENT fieldName (#PCDATA)>
+<!ELEMENT mandatory (#PCDATA)>
+<!ELEMENT isBoolean (#PCDATA)>  <!-- MUST BE (true|false) -->
+<!ELEMENT defaulValue (#PCDATA)> 
+<!ELEMENT note (#PCDATA)> 
+<!ELEMENT vocabulary (vocabularyField+)> 
+<!ELEMENT vocabularyField (#PCDATA)> 
+<!ELEMENT validator (regularExpression)> 
+<!ELEMENT regularExpression (#PCDATA)> 

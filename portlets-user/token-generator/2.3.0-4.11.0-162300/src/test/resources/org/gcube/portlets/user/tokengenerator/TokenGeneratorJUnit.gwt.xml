@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="TokenGenerator">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.user.tokengenerator.TokenGenerator' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/TokenGenerator/greet" class="org.gcube.portlets.user.tokengenerator.server.TokenServiceImpl" />
+
+</module>

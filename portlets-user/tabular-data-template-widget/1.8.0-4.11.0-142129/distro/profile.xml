@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>Tabular Data Template allows the users to create several template type. 
+	A table template can be applied to: CODELIST, DATASET, GENERIC</Description>
+		<Class>PortletsUser</Class>
+		<Name>tabular-data-template</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>Tabular Data Template allows the users to create several template type. 
+	A table template can be applied to: CODELIST, DATASET, GENERIC</Description>
+				<Name>tabular-data-template</Name>
+				<Version>1.8.0-4.11.0-142129</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.portlets.user.tdtemplate</groupId>
+					<artifactId>tabular-data-template</artifactId>
+					<version>1.8.0-4.11.0-142129</version>
+				</MavenCoordinates>
+				<Type>library</Type>
+				<Files>
+					<File>tabular-data-template-1.8.0-4.11.0-142129.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>
+
+

@@ -1,0 +1,17 @@
+<ReleaseNotes>
+	<Changeset component="tree-manager-library-1.0.0" date="2012-04-26">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="tree-manager-library-2.0.0" date="2012-09-3">
+		<Change>Full rewrite against CL framework to align with CL model
+		</Change>
+	</Changeset>
+	<Changeset component="tree-manager-library-2.0.1" date="2012-10-18">
+		<Change>Binders can be queried by name (bug fix)</Change>
+	</Changeset>
+	<Changeset component="tree-manager-library-3.0.0" date="2013-11-01">
+		<Change>Refactored to use Featherweight Stack underneath</Change>
+		<Change>Refactored as pure client library</Change>
+		<Change>Refactored to align with latest changes in dependencies</Change>
+	</Changeset>
+</ReleaseNotes>

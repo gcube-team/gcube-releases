@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource version="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../schema/node.xsd">
+	<ID>ID</ID>
+	<Type>GHN</Type>
+	<Scopes>
+		<Scope>Scope</Scope>
+	</Scopes>
+	<Profile xsi:type="ProfileType">
+		<Infrastructure>Infrastructure</Infrastructure>
+		<GHNDescription>
+			<Name>Name</Name>
+			<ActivationTime>2001-12-31T12:00:00</ActivationTime>
+			<Status>Status</Status>
+			<StatusMessage>StatusMessage</StatusMessage>
+			<Type>Dynamic</Type>
+			<AvailablePlatforms>
+				<Platform>
+					<Name>Name</Name>
+					<Version>0</Version>
+					<MinorVersion>0</MinorVersion>
+					<RevisionVersion>0</RevisionVersion>
+					<BuildVersion>0</BuildVersion>
+				</Platform>
+			</AvailablePlatforms>
+			<SecurityEnabled value="true" />
+			<SecurityData>
+				<CA>CA</CA>
+				<CredentialsDistinguishedName>CredentialsDistinguishedName
+				</CredentialsDistinguishedName>
+				<CredentialsExpireOn>2001-12-31T12:00:00</CredentialsExpireOn>
+			</SecurityData>
+			<Architecture PlatformType="test platform" SMPSize="0"
+				SMTSize="0" />
+			<OperatingSystem Name="testOSName" Release="release"
+				Version="1.0" />
+			<Processor Bogomips="0.00000000000000000000000012312313"
+				CacheL1="0" CacheL1D="0" CacheL1I="0" CacheL2="0"
+				ClockSpeedMhz="0.00000000000000000000000000000000000000000000000000000000000000000000000012313"
+				Family="testFamily" Model="testModel" ModelName="modelName" Vendor="testVendor" />
+			<NetworkAdapter IPAddress="192.168.0.1" InboundIP="192.168.0.2"
+				MTU="0" Name="NameTest" OutboundIP="10.1.108.2" />
+			<Benchmark SF00="0" SI00="0" />
+			<RunTimeEnv>
+				<Variable>
+					<Key>Key</Key>
+					<Value>Value</Value>
+				</Variable>
+				<Variable>
+					<Key>Key1</Key>
+					<Value>Value1</Value>
+				</Variable>
+				<Variable>
+					<Key>Key2</Key>
+					<Value>Value2</Value>
+				</Variable>
+			</RunTimeEnv>
+			<StorageDevice Name="testName" Size="0" TransferRate="0"
+				Type="testType" />
+			<StorageDevice Name="testName1" Size="0" TransferRate="0"
+				Type="testType1" />
+			<StoragePartition Name="testName" ReadRate="0" Size="1"
+				WriteRate="0" />
+			<StoragePartition Name="testName1" ReadRate="0"
+				Size="2" WriteRate="0" />
+			<StoragePartition Name="testName2" ReadRate="0"
+				Size="3" WriteRate="0" />
+			<LocalFileSystem Name="testName" ReadOnly="true"
+				Root="testRoot" Size="0" Type="testType" />
+			<RemoteFileSystem Name="testMame" ReadOnly="true"
+				Root="testRoot" Size="0" Type="testType" />
+			<StorageDevice2StoragePartition
+				StorageDeviceName="testStorage" StoragePartitionName="testStoragePartName" />
+			<StorageDevice2StoragePartition
+				StorageDeviceName="testStorage1" StoragePartitionName="testStoragePartName1" />
+			<StorageDevice2StoragePartition
+				StorageDeviceName="testStorage2" StoragePartitionName="testStoragePartName2" />
+			<StorageDevice2StoragePartition
+				StorageDeviceName="testStorage3" StoragePartitionName="testStoragePartName3" />
+			<StoragePartition2FileSystem
+				FileSystemName="testfsName0" StoragePartitionName="testpn0" />
+			<StoragePartition2FileSystem
+				FileSystemName="testfsName1" StoragePartitionName="testpn1" />
+			<StoragePartition2FileSystem
+				FileSystemName="testfsName2" StoragePartitionName="testpn2" />
+			<Uptime>Uptime</Uptime>
+			<Load Last15Min="0.0" Last1Min="0.0" Last5Min="0.0" />
+			<HistoricalLoad Last1Day="0.0" Last1H="0.0" Last1Week="0.0" />
+			<MainMemory RAMAvailable="0" RAMSize="0" VirtualAvailable="0"
+				VirtualSize="0" />
+			<LocalAvailableSpace>0</LocalAvailableSpace>
+			<LastUpdate>2001-12-31T12:00:00</LastUpdate>
+		</GHNDescription>
+		<Site>
+			<Location>Location</Location>
+			<Country>IT</Country>
+			<Latitude>Latitude</Latitude>
+			<Longitude>Longitude</Longitude>
+			<Domain>Domain</Domain>
+		</Site>
+ 		<DeployedPackages>
+			<Package>
+				<PackageName>ResultSetService</PackageName>
+				<PackageVersion>3.1.0</PackageVersion>
+				<ServiceName>ResultSetService</ServiceName>
+				<ServiceClass>Search</ServiceClass>
+				<ServiceVersion>1.0.0</ServiceVersion>
+			</Package>
+			<Package>
+				<PackageName>ResultSetLibrary</PackageName>
+				<PackageVersion>[3.1.0,4.0.0)</PackageVersion>
+				<ServiceName>ResultSetLibrary</ServiceName>
+				<ServiceClass>Search</ServiceClass>
+				<ServiceVersion>1.0.0</ServiceVersion>
+			</Package>
+			<Package>
+				<PackageName>ResultSetService-stubs</PackageName>
+				<PackageVersion>[3.1.0,4.0.0)</PackageVersion>
+				<ServiceName>ResultSetService</ServiceName>
+				<ServiceClass>Search</ServiceClass>
+				<ServiceVersion>1.0.0</ServiceVersion>
+			</Package>
+			<Package>
+				<PackageName>ResultSetGarbageCollector</PackageName>
+				<PackageVersion>[3.1.0,4.0.0)</PackageVersion>
+				<ServiceName>ResultSetGarbageCollector</ServiceName>
+				<ServiceClass>Search</ServiceClass>
+				<ServiceVersion>1.0.0</ServiceVersion>
+			</Package>
+			<Package>
+				<PackageName>IS-Registry-stubs</PackageName>
+				<PackageVersion>2.1.0</PackageVersion>
+				<ServiceName>IS-Registry</ServiceName>
+				<ServiceClass>InformationSystem</ServiceClass>
+				<ServiceVersion>1.0.0</ServiceVersion>
+			</Package>
+			<Package>
+				<PackageName>GHNManager-stubs</PackageName>
+				<PackageVersion>1.5.0</PackageVersion>
+				<ServiceName>GHNManager</ServiceName>
+				<ServiceClass>VREManagement</ServiceClass>
+				<ServiceVersion>1.0.0</ServiceVersion>
+			</Package>
+			<Package>
+				<PackageName>GHNManager-service</PackageName>
+				<PackageVersion>1.5.0</PackageVersion>
+				<ServiceName>GHNManager</ServiceName>
+				<ServiceClass>VREManagement</ServiceClass>
+				<ServiceVersion>1.0.0</ServiceVersion>
+			</Package>
+			<Package>
+				<PackageName>Deployer-service</PackageName>
+				<PackageVersion>2.3.0-SNAPSHOT</PackageVersion>
+				<ServiceName>Deployer</ServiceName>
+				<ServiceClass>VREManagement</ServiceClass>
+				<ServiceVersion>1.00.00</ServiceVersion>
+			</Package>
+		</DeployedPackages>
+	</Profile>
+</Resource>

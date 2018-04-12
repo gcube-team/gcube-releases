@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Resource>
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>Smart Executor Service</Description>
+		<Class>VREManagement</Class>
+		<Name>smart-executor</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Main>
+				<Description>Smart Executor Service</Description>
+				<Name>smart-executor</Name>
+				<Version>1.9.0-4.11.0-162176</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.vremanagement</groupId>
+					<artifactId>smart-executor</artifactId>
+					<version>1.9.0-4.11.0-162176</version>
+				</MavenCoordinates>
+				<Files>
+					<File>smart-executor-1.9.0-4.11.0-162176.war</File>
+				</Files>
+			</Main>
+		</Packages>
+	</Profile>
+</Resource>

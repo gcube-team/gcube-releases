@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portal.threadlocal-vars-cleaner.2-1-0" date="18">
+		<Change>Added automatic injection of context and token of any AJAX calls</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.threadlocal-vars-cleaner.2-0-0" date="2016-06-23">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.linkedin.1-0-0" date="2016-03-30">
+		<Change>First release of the linkedin authentication hook</Change>
+	</Changeset>
+	<Changeset component="gr.cite.linkedin.1-3-0" date="2018-03-13">
+		<Change>Bug #11432, D4Science Gateway user registration: confirmation email is sent upon new user registration via Google or LinkedIn SSO</Change>
+	</Changeset>	
+</ReleaseNotes>

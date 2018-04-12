@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<deployment name="defaultServerConfig" xmlns="http://xml.apache.org/axis/wsdd/"
+	xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+	xmlns:wsnt="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.xsd"
+	xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+
+	<globalConfiguration>
+
+		<parameter name="logicalHost" value="localhost" />
+		<parameter name="publishHostName" value="true" />
+		<parameter name="containerThreads" value="2" />
+		<parameter name="containerThreadsMax" value="100" />
+
+		<parameter name="sendXsiTypes" value="true" />
+
+		<!-- OPERATION PROVIDERS -->
+
+		<parameter name="GCUBEProvider"
+			value="org.gcube.common.core.porttypes.GCUBEProvider" />
+		<parameter name="GCUBENotificationProvider"
+			value="org.gcube.common.core.porttypes.GCUBENotificationProvider" />
+		<parameter name="SubscribeProvider"
+            value="org.globus.wsrf.impl.notification.SubscribeProvider" />
+        <parameter name="GetCurrentMessageProvider"
+            value="org.globus.wsrf.impl.notification.GetCurrentMessageProvider"/>
+		
+		<requestFlow>
+			<handler type="java:org.globus.wsrf.handlers.AddressingHandler" />
+			<handler type="java:org.globus.wsrf.handlers.URLMapper" />
+			<handler type="java:org.gcube.common.handlers.GCUBEHandler" />
+			<handler type="java:org.globus.wsrf.handlers.FaultHandler" />
+		</requestFlow>
+
+		<responseFlow>
+			<handler type="java:org.globus.wsrf.handlers.WSDLHandler" />
+			<handler type="java:org.globus.wsrf.handlers.AddressingHandler" />
+			<handler type="java:org.globus.wsrf.handlers.MessageLoggingHandler" />
+			<handler type="java:org.gcube.common.handlers.GCUBEHandler" />
+		</responseFlow>
+
+	</globalConfiguration>
+
+	<handler name="RPCDispatcher" type="java:org.apache.axis.providers.java.RPCProvider" />
+	<handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper" />
+	<handler name="MsgDispatcher" type="java:org.apache.axis.providers.java.MsgProvider" />
+	<handler name="LocalRequester"
+		type="java:org.globus.axis.transport.local.LocalRequester" />
+	<handler name="LocalResponder"
+		type="java:org.apache.axis.transport.local.LocalResponder" />
+	<handler name="logger" type="java:org.apache.axis.handlers.LogHandler" />
+	<handler name="Authenticate"
+		type="java:org.apache.axis.handlers.SimpleAuthenticationHandler" />
+	<handler name="AuthenticationServiceHandler"
+		type="java:org.globus.wsrf.impl.security.authentication.secureconv.service.AuthenticationServiceHandler" />
+
+
+	<service name="NotificationConsumerService" provider="Handler"
+		style="document" use="literal">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider" />
+		<parameter name="className"
+			value="org.globus.wsrf.impl.notification.NotificationConsumerProvider" />
+		<wsdlFile>share/schema/core/notification/notification_consumer_service.wsdl
+		</wsdlFile>
+		<typeMapping deserializer="org.apache.axis.encoding.ser.ElementDeserializerFactory"
+			encodingStyle="" qname="xsd:anyType" type="java:java.lang.Object"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+		<typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+			encodingStyle="" name="ResourcePropertyValueChangeNotificationElementType"
+			qname="ns1:ResourcePropertyValueChangeNotificationElementType"
+			serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+			type="java:org.globus.wsrf.core.notification.ResourcePropertyValueChangeNotificationElementType"
+			xmlns:ns1="http://wsrf.globus.org/core/notification" />
+	</service>
+
+
+
+	<transport name="http">
+		<parameter name="qs:list"
+			value="org.apache.axis.transport.http.QSListHandler" />
+		<parameter name="qs:method"
+			value="org.apache.axis.transport.http.QSMethodHandler" />
+		<parameter name="qs:wsdl"
+			value="org.apache.axis.transport.http.QSWSDLHandler" />
+		<requestFlow>
+			<handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler" />
+		</requestFlow>
+	</transport>
+
+	<transport name="local">
+		<requestFlow>
+			<handler type="LocalRequester" />
+		</requestFlow>
+		<responseFlow>
+			<handler type="LocalResponder" />
+		</responseFlow>
+	</transport>
+
+	<transport name="SimpleHTTP">
+		<requestFlow />
+	</transport>
+
+	<typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+		encodingStyle="" name="DeleteType" qname="wsrp:DeleteType"
+		serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:org.oasis.wsrf.properties.DeleteType" />
+
+	<typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+		encodingStyle="" name="InsertType" qname="wsrp:InsertType"
+		serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:org.oasis.wsrf.properties.InsertType" />
+
+	<typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+		encodingStyle="" name="UpdateType" qname="wsrp:UpdateType"
+		serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:org.oasis.wsrf.properties.UpdateType" />
+
+	<typeMapping
+		deserializer="org.globus.wsrf.encoding.TopicExpressionDeserializerFactory"
+		encodingStyle="" name="TopicExpressionType" qname="wsnt:TopicExpressionType"
+		serializer="org.globus.wsrf.encoding.TopicExpressionSerializerFactory"
+		type="java:org.oasis.wsn.TopicExpressionType" />
+
+	<typeMapping deserializer="org.globus.wsrf.encoding.AnyListDeserializerFactory"
+		encodingStyle="" name=">SetResourceProperties" qname="wsrp:>SetResourceProperties"
+		serializer="org.globus.wsrf.encoding.AnyListSerializerFactory"
+		type="java:org.oasis.wsrf.properties.SetResourceProperties_Element" />
+
+	<typeMapping
+		deserializer="org.globus.wsrf.encoding.QueryExpressionDeserializerFactory"
+		encodingStyle="" name="QueryExpressionType" qname="wsrp:QueryExpressionType"
+		serializer="org.globus.wsrf.encoding.QueryExpressionSerializerFactory"
+		type="java:org.oasis.wsrf.properties.QueryExpressionType" />
+
+	<!-- WS-Addressing Bits -->
+
+	<typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+		encodingStyle="" qname="wsa:EndpointReferenceType"
+		serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+		type="java:org.apache.axis.message.addressing.EndpointReferenceType" />
+
+	<typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+		encodingStyle="" qname="wsa:ReferencePropertiesType"
+		serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+		type="java:org.apache.axis.message.addressing.ReferencePropertiesType" />
+
+	<typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory"
+		encodingStyle="" qname="wsa:AttributedURI"
+		serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory"
+		type="java:org.apache.axis.message.addressing.AttributedURI" />
+
+	<typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory"
+		encodingStyle="" qname="wsa:AttributedQName"
+		serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory"
+		type="java:org.apache.axis.message.addressing.AttributedQName" />
+
+	<typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory"
+		encodingStyle="" qname="wsa:ServiceNameType"
+		serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory"
+		type="java:org.apache.axis.message.addressing.ServiceNameType" />
+
+	<!-- WS Trust and WS Secure Conversation -->
+	<typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+		encodingStyle="" qname="ns1:SecurityContextTokenType"
+		serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:org.globus.ws.sc.SecurityContextTokenType"
+		xmlns:ns1="http://schemas.xmlsoap.org/ws/2004/04/sc" />
+
+	<typeMapping deserializer="org.apache.axis.encoding.ser.SimpleDeserializerFactory"
+		encodingStyle="" qname="ns1:BinaryExchangeType"
+		serializer="org.apache.axis.encoding.ser.SimpleSerializerFactory"
+		type="java:org.globus.ws.trust.BinaryExchangeType" xmlns:ns1="http://schemas.xmlsoap.org/ws/2004/04/trust" />
+
+	<!-- GCUBE Faults -->
+
+	<typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+		encodingStyle="" qname="ns1:GCUBEUnrecoverableFault"
+		serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:org.gcube.common.core.faults.GCUBEUnrecoverableFault"
+		xmlns:ns1="http://gcube-system.org/namespaces/common/core/faults" />
+	<typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+		encodingStyle="" qname="ns1:GCUBERetrySameFault"
+		serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:org.gcube.common.core.faults.GCUBERetrySameFault"
+		xmlns:ns1="http://gcube-system.org/namespaces/common/core/faults" />
+	<typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+		encodingStyle="" qname="ns1:GCUBERetryEquivalentFault"
+		serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+		type="java:org.gcube.common.core.faults.GCUBERetryEquivalentFault"
+		xmlns:ns1="http://gcube-system.org/namespaces/common/core/faults" />
+
+
+</deployment>

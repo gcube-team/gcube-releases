@@ -1,0 +1,301 @@
+<identificationInfo>
+		<MD_DataIdentification>
+			<citation>
+				<CI_Citation>
+					<title>
+						<gco:CharacterString>Trough geomorphic feature layer</gco:CharacterString>
+					</title>
+					<date>
+						<CI_Date>
+							<date>
+								<gco:Date>2013-06-05</gco:Date>
+							</date>
+							<dateType>
+								<CI_DateTypeCode
+									codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"
+									codeListValue="creation" codeSpace="ISOTC211/19115">creation</CI_DateTypeCode>
+							</dateType>
+						</CI_Date>
+					</date>
+					<date>
+						<CI_Date>
+							<date>
+								<gco:Date>2014-02-14</gco:Date>
+							</date>
+							<dateType>
+								<CI_DateTypeCode
+									codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"
+									codeListValue="publication" codeSpace="ISOTC211/19115">publication
+								</CI_DateTypeCode>
+							</dateType>
+						</CI_Date>
+					</date>
+					<edition>
+						<gco:CharacterString>Version 1</gco:CharacterString>
+					</edition>
+					<identifier>
+						<MD_Identifier>
+							<code>
+								<gco:CharacterString>0d40e056-b491-4459-a691-1bb4924ef521</gco:CharacterString>
+							</code>
+						</MD_Identifier>
+					</identifier>
+					<citedResponsibleParty>
+						<CI_ResponsibleParty>
+							<individualName>
+								<gco:CharacterString>Miles Macmillan-Lawler
+								</gco:CharacterString>
+							</individualName>
+							<organisationName>
+								<gco:CharacterString>GRID-Arendal</gco:CharacterString>
+							</organisationName>
+							<contactInfo>
+								<CI_Contact>
+									<address>
+										<CI_Address>
+											<electronicMailAddress>
+												<gco:CharacterString>Miles.Macmillan-Lawler@grida.no
+												</gco:CharacterString>
+											</electronicMailAddress>
+										</CI_Address>
+									</address>
+								</CI_Contact>
+							</contactInfo>
+							<role>
+								<CI_RoleCode
+									codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
+									codeListValue="custodian" codeSpace="ISOTC211/19115">custodian</CI_RoleCode>
+							</role>
+						</CI_ResponsibleParty>
+					</citedResponsibleParty>
+					<presentationForm>
+						<CI_PresentationFormCode
+							codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_PresentationFormCode"
+							codeListValue="mapDigital" codeSpace="ISOTC211/19115">mapDigital
+						</CI_PresentationFormCode>
+					</presentationForm>
+				</CI_Citation>
+			</citation>
+			<abstract>
+				<gco:CharacterString>The trough geomorphic feature layer represents
+					the spatial extent of the troughs of the worlds oceans based on
+					interpretation of the SRTM30 plus v7 global bathymetry model. The
+					layer is one of the 25 layers that make up the global seafloor
+					geomorphic features map (Harris et.al. 2014). The IHO (IHO, 2008)
+					definition of a trough is “a long depression of the sea floor
+					characteristically flat bottomed and steep sided and normally
+					shallower than a trench”. In this study we found that troughs are
+					also commonly open at one end (i.e. not defined by closed
+					bathymetric contours) and their broad, flat floors may exhibit a
+					continuous gradient along a thalweg. Troughs may originate from
+					glacial erosion processes or have formed through tectonic
+					processes. In this study, glacial troughs incised into the shelf
+					are a separate category; here we include all troughs not of a
+					glacial origin, typically superimposed on the slope and/or abyssal
+					base layers. Trenches that have been infilled with sediment may
+					evolve into troughs, as appears to have occurred in troughs
+					adjacent to North and South America, for example. Slumping on the
+					sides of some troughs has formed a bridge across the trough,
+					thereby dividing it into two separate sections (see “bridges”
+					below). In this study all troughs were digitised by hand based on
+					the interpretation of 100 m bathymetric contours.
+				</gco:CharacterString>
+			</abstract>
+			<purpose>
+				<gco:CharacterString>The trough geomorphic feature layer represents
+					the spatial extent of the troughs of the worlds oceans based on
+					interpretation of the SRTM30 plus v7 global bathymetry model. The
+					layer is one of the 25 layers that make up the global seafloor
+					geomorphic features map (Harris et.al. 2014). The global seafloor
+					geomorphic features map is intended to support ocean management
+					including feature inventories, spatial planning and biodiversity
+					conservation.</gco:CharacterString>
+			</purpose>
+			<credit>
+				<gco:CharacterString>The global seafloor geomorphic features map has
+					been produced through a collaboration between Geoscience Australia,
+					GRID-Arendal and Conservation International.
+					Reference: Harris et. al. (2014) Geomorphology of the oceans.Marine Geology
+					(in Press)
+				</gco:CharacterString>
+			</credit>
+			<pointOfContact>
+				<CI_ResponsibleParty>
+					<individualName>
+						<gco:CharacterString>Miles Macmillan-Lawler</gco:CharacterString>
+					</individualName>
+					<organisationName>
+						<gco:CharacterString>GRID-Arendal</gco:CharacterString>
+					</organisationName>
+					<contactInfo>
+						<CI_Contact>
+							<address>
+								<CI_Address>
+									<electronicMailAddress>
+										<gco:CharacterString>Miles.Macmillan-Lawler@grida.no
+										</gco:CharacterString>
+									</electronicMailAddress>
+								</CI_Address>
+							</address>
+						</CI_Contact>
+					</contactInfo>
+					<role>
+						<CI_RoleCode
+							codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
+							codeListValue="custodian" codeSpace="ISOTC211/19115">custodian</CI_RoleCode>
+					</role>
+				</CI_ResponsibleParty>
+			</pointOfContact>
+			<resourceMaintenance>
+				<MD_MaintenanceInformation>
+					<maintenanceAndUpdateFrequency>
+						<MD_MaintenanceFrequencyCode
+							codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode"
+							codeListValue="irregular" codeSpace="ISOTC211/19115">irregular
+						</MD_MaintenanceFrequencyCode>
+					</maintenanceAndUpdateFrequency>
+				</MD_MaintenanceInformation>
+			</resourceMaintenance>
+			<descriptiveKeywords>
+				<MD_Keywords>
+					<keyword>
+						<gco:CharacterString>Geology</gco:CharacterString>
+					</keyword>
+					<type>
+						<MD_KeywordTypeCode
+							codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_KeywordTypeCode"
+							codeListValue="theme" codeSpace="eng" />
+					</type>
+					<thesaurusName>
+						<CI_Citation>
+							<title>
+								<gco:CharacterString>GEMET - INSPIRE themes, version 1.0
+								</gco:CharacterString>
+							</title>
+							<date>
+								<CI_Date>
+									<date>
+										<gco:Date>2008-06-01</gco:Date>
+									</date>
+									<dateType>
+										<CI_DateTypeCode
+											codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode"
+											codeListValue="publication" codeSpace="eng" />
+									</dateType>
+								</CI_Date>
+							</date>
+						</CI_Citation>
+					</thesaurusName>
+				</MD_Keywords>
+			</descriptiveKeywords>
+			<descriptiveKeywords>
+				<MD_Keywords>
+					<keyword>
+						<gco:CharacterString>global</gco:CharacterString>
+					</keyword>
+					<type>
+						<MD_KeywordTypeCode
+							codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+							codeListValue="place" codeSpace="ISOTC211/19115">place</MD_KeywordTypeCode>
+					</type>
+				</MD_Keywords>
+			</descriptiveKeywords>
+			<descriptiveKeywords>
+				<MD_Keywords>
+					<keyword>
+						<gco:CharacterString>seafloor, geomorphic features, habitats
+						</gco:CharacterString>
+					</keyword>
+					<type>
+						<MD_KeywordTypeCode
+							codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode"
+							codeListValue="theme" codeSpace="ISOTC211/19115">theme</MD_KeywordTypeCode>
+					</type>
+				</MD_Keywords>
+			</descriptiveKeywords>
+			<descriptiveKeywords>
+				<MD_Keywords>
+					<keyword>
+						<gco:CharacterString>Downloadable Data</gco:CharacterString>
+					</keyword>
+					<thesaurusName uuidref="723f6998-058e-11dc-8314-0800200c9a66" />
+				</MD_Keywords>
+			</descriptiveKeywords>
+			<resourceConstraints>
+				<MD_Constraints>
+					<useLimitation>
+						<gco:CharacterString>The global seafloor geomorphic feature map is
+							available for download from bluehabitats.org
+						</gco:CharacterString>
+					</useLimitation>
+				</MD_Constraints>
+			</resourceConstraints>
+			<resourceConstraints>
+				<MD_LegalConstraints>
+					<accessConstraints>
+						<MD_RestrictionCode
+							codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode"
+							codeListValue="otherRestrictions">
+							otherRestrictions
+						</MD_RestrictionCode>
+					</accessConstraints>
+					<otherConstraints>
+						<gco:CharacterString>no limitations</gco:CharacterString>
+					</otherConstraints>
+				</MD_LegalConstraints>
+			</resourceConstraints>
+			<spatialRepresentationType>
+				<MD_SpatialRepresentationTypeCode
+					codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_SpatialRepresentationTypeCode"
+					codeListValue="vector" codeSpace="ISOTC211/19115">vector
+				</MD_SpatialRepresentationTypeCode>
+			</spatialRepresentationType>
+			<language>
+				<LanguageCode
+					codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php"
+					codeListValue="eng" codeSpace="ISO639-2">eng</LanguageCode>
+			</language>
+			<characterSet>
+				<MD_CharacterSetCode
+					codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode"
+					codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</MD_CharacterSetCode>
+			</characterSet>
+			<topicCategory>
+				<MD_TopicCategoryCode>oceans</MD_TopicCategoryCode>
+			</topicCategory>
+			<environmentDescription>
+				<gco:CharacterString>Microsoft Windows 7 Version 6.1 (Build 7601)
+					Service Pack 1; ESRI ArcGIS 10.0.4.4000</gco:CharacterString>
+			</environmentDescription>
+			<extent>
+				<EX_Extent>
+					<description>
+						<gco:CharacterString>Global Coverage</gco:CharacterString>
+					</description>
+				</EX_Extent>
+			</extent>
+			<extent>
+				<EX_Extent>
+					<geographicElement>
+						<EX_GeographicBoundingBox>
+							<extentTypeCode>
+								<gco:Boolean>true</gco:Boolean>
+							</extentTypeCode>
+							<westBoundLongitude>
+								<gco:Decimal>-180</gco:Decimal>
+							</westBoundLongitude>
+							<eastBoundLongitude>
+								<gco:Decimal>180</gco:Decimal>
+							</eastBoundLongitude>
+							<southBoundLatitude>
+								<gco:Decimal>-71.905139</gco:Decimal>
+							</southBoundLatitude>
+							<northBoundLatitude>
+								<gco:Decimal>89.049382</gco:Decimal>
+							</northBoundLatitude>
+						</EX_GeographicBoundingBox>
+					</geographicElement>
+				</EX_Extent>
+			</extent>
+		</MD_DataIdentification>
+	</identificationInfo>

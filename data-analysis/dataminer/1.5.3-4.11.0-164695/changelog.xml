@@ -1,0 +1,15 @@
+<ReleaseNotes>
+    <Changeset component="org.gcube.dataanalysis.dataminer.1-5-2" date="2017-12-13">
+		<Change>added the right extension on output file</Change>
+		<Change>lock file created on execution</Change>
+	</Changeset>
+	<Changeset component="org.gcube.dataanalysis.dataminer.1-5-1" date="2017-09-14">
+		<Change>added accounting on algorithm execution</Change>
+	</Changeset>
+	<Changeset component="org.gcube.dataanalysis.dataminer.1-5-0" date="2017-07-31">
+		<Change>service interface classes moved to wps project</Change>
+	</Changeset>
+	<Changeset component="org.gcube.dataanalysis.dataminer.1-1-0" date="2016-10-03">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

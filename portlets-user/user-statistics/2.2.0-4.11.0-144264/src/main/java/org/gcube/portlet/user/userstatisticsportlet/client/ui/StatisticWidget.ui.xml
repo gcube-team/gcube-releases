@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.statistic-container {
+		vertical-align: top;
+		display: inline-block;
+		height: 60px;
+		width: auto;
+		margin-right: 2%;
+		margin-top: 3px;
+		margin-bottom: 10px;
+	}
+	
+	.statistic-header {
+		font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+			sans-serif;
+		font-size: 12px;
+		color: #8899A6;
+		letter-spacing: 0.02em;
+		overflow: hidden;
+		text-transform: uppercase;
+		margin-top: 15px;
+		margin-bottom: 2px;
+		text-align: center;
+		vertical-align: text-top;
+		cursor: pointer;
+	}
+	
+	.container-values-style {
+		text-align: center;
+	}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.statistic-container}"
+		ui:field="container">
+		<b:Popover ui:field="popover">
+			<g:Label styleName="{style.statistic-header}" ui:field="header" />
+		</b:Popover>
+		<g:FlowPanel ui:field="containerValues" styleName="{style.container-values-style}">
+			<!-- Content goes here -->
+		</g:FlowPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

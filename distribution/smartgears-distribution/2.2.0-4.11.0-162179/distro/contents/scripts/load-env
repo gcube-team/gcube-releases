@@ -1,0 +1,7 @@
+if [ -z "$GHN_HOME" ]; then 
+	echo -e "\nERROR:please specify the GHN_HOME env var." >&2
+	echo -e "\naborting.\n"
+	exit 1
+fi
+
+export CLASSPATH=$CLASSPATH:"$GHN_HOME/lib/*"

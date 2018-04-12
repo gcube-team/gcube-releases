@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='accountingman'>
+
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name="com.google.gwt.http.HTTP" />
+	<!-- <inherits name="com.google.gwt.i18n.I18N" /> -->
+
+	<!-- <inherits name='com.extjs.gxt.ui.GXT' /> -->
+	<inherits name='com.sencha.gxt.ui.GXT' />
+
+	<!-- Add this for using GXT charts -->
+	<inherits name='com.sencha.gxt.chart.Chart' />
+
+
+
+	<!-- GXT Theme -->
+	<!-- <inherits name='com.sencha.gxt.theme.blue.Blue' /> -->
+	<!-- <inherits name='com.sencha.gxt.theme.gray.Gray' /> -->
+	<!-- Be sure to include Neptunes gxt-theme-neptune.jar in the classpath -->
+	<inherits name='com.sencha.gxt.theme.neptune.Theme' />
+
+	<!-- <inherits name="com.google.gwt.logging.Logging" /> -->
+	<inherits name="com.allen_sauer.gwt.log.gwt-log-TRACE" />
+
+	<inherits name="com.google.gwt.resources.Resources" />
+
+	<!--<inherits name="org.moxieapps.gwt.highcharts.Highcharts"/> -->
+	<inherits name='com.github.highcharts4gwt.highcharts' />
+
+
+	<!--Inherit the GCubeClientContext widget code -->
+	<inherits name='org.gcube.portal.clientcontext.GCubeClientContext' />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.admin.accountingmanager.client.AccountingManager' />
+
+	<!-- <set-configuration-property name="locale.cookie" value="AMLangCookie" 
+		/> <set-configuration-property name="locale.queryparam" value="AMLang" /> 
+		<set-configuration-property name="locale.usemeta" value="Y" /> <set-configuration-property 
+		name="locale.useragent" value="Y" /> <set-configuration-property name="locale.searchorder" 
+		value="cookie,queryparam,meta,useragent" /> <extend-property name="locale" 
+		values="en" /> <extend-property name="locale" values="it" /> <extend-property 
+		name="locale" values="es" /> <set-property name="locale" value="en, it, es" 
+		/> <set-property-fallback name="locale" value="en" /> -->
+
+	<!-- <set-property name="log_DivLogger" value="ENABLED" /> <set-property 
+		name="log_ConsoleLogger" value="ENABLED" /> <set-property name="log_GWTLogger" 
+		value="ENABLED" /> <set-property name="log_SystemLogger" value="ENABLED" 
+		/> -->
+
+
+	<set-property name="log_DivLogger" value="DISABLED" />
+	<set-property name="log_ConsoleLogger" value="DISABLED" />
+	<set-property name="log_GWTLogger" value="DISABLED" />
+	<set-property name="log_SystemLogger" value="DISABLED" />
+
+
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

@@ -1,0 +1,39 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.data-catalogue.gcubedatacatalogue-metadata-discovery.3-3-0"
+		date="2017-11-21">
+		<Change>[Task #10383]: gCube Metadata Profile: add field repeatability definition to the model</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.data-catalogue.gcubedatacatalogue-metadata-discovery.3-2-0"
+		date="2017-04-26">
+		<Change>Namespaces are retrieved per scope</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.data-catalogue.gcubedatacatalogue-metadata-discovery.3-1-0"
+		date="2017-04-26">
+		<Change>[Task #8267] Medatada Discovery Library: definition of
+			namespaces and metadata fields must be separated
+		</Change>
+		<Change>[Task #8571] Added "propagateUp" property to grouping field
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.data-catalogue.gcubedatacatalogue-metadata-discovery.3-0-0"
+		date="2017-03-21">
+		<Change>[Task #7616] Porting library to Metadata Profile model v3.0
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.data-catalogue.gcubedatacatalogue-metadata-discovery.2-0-0"
+		date="2016-10-03">
+		<Change>Updated Metadata Profile model to version 2.0
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.data-catalogue.gcubedatacatalogue-metadata-discovery.1-0-0"
+		date="2016-07-04">
+		<Change>First version
+		</Change>
+	</Changeset>
+</ReleaseNotes>

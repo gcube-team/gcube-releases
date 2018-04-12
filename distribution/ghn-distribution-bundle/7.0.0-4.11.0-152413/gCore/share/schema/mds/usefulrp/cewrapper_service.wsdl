@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="cewrapper" targetNamespace="null/service" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:binding="null/bindings" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="null/bindings" location="cewrapper_bindings.wsdl"/>
+  <wsdl:service name="cewrapperService">
+  </wsdl:service>
+</wsdl:definitions>

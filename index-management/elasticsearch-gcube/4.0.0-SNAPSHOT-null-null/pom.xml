@@ -9,7 +9,7 @@
 
 	<groupId>org.gcube.index</groupId>
 	<artifactId>elasticsearch-gcube</artifactId>
-	<version>4.1.0-4.8.0-146808</version> <!-- was 2.3.0 -->
+	<version>4.1.1-4.11.0-162607</version> <!-- was 2.3.0 -->
 
 	<name>ElasticSearch gCube</name>
 
@@ -61,7 +61,7 @@
 		<dependency>
 			<groupId>org.gcube.index</groupId>
 			<artifactId>index-service-commons</artifactId>
-			<version>4.2.0-4.8.0-150774</version>
+			<version>4.2.0-4.11.0-150774</version>
 		</dependency>
 
 	</dependencies>

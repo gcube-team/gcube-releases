@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:p1="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID>21f5b4f0-997f-11dd-b66d-82c61f8d0a26</ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>Manage the local node by publishing its profile and dynamically adding/removing scopes</Description>
+		<Class>VREManagement</Class>
+		<Name>GHNManager</Name>
+		<Version>1.0.0</Version>
+		<Dependencies>
+			<Dependency>			
+					<Class>InformationSystem</Class>
+					<Name>IS-Collector</Name>
+					<Version>1.00.00</Version>
+			</Dependency>													
+		</Dependencies>
+		<Packages>
+			<Main>
+				<Description>Provide an interface to perform remote management of the local gHN</Description>
+				<Name>GHNManager-service</Name>
+				<Version>1.5.0</Version>
+				<Mandatory level="GHN"/>
+				<Shareable level="VO"/>				
+				<Dependencies>
+					<Dependency>
+						<Service>
+							<Class>VREManagement</Class>
+							<Name>GHNManager</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>GHNManager-stubs</Package>
+						<Version>1.5.0</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+				</Dependencies>
+				<GARArchive>org.gcube.common.vremanagement.ghnmanager.gar</GARArchive>
+				<PortType>
+						<Name>gcube/common/vremanagement/GHNManager</Name>
+						<Security/>			
+						<WSDL/>
+				</PortType>					
+			</Main>
+			<Software>
+				<Description>Stubs for GHNManager: it provides facilities to interact with a GHNManager instance</Description>
+				<Name>GHNManager-stubs</Name>
+				<Version>1.5.0</Version>
+				<MultiVersion value="true"/>
+				<Mandatory level="GHN"/>
+				<Shareable level="VO"/>				
+				<SpecificData>text</SpecificData>
+				<Type>library</Type>
+				<Files>
+					<File>org.gcube.common.vremanagement.ghnmanager.stubs.jar</File>
+				</Files>
+			</Software>
+			<Software>
+				<Description>Test-suite for GHNManager: it provides sample usages of interaction with a GHNManager instance</Description>
+				<Name>GHNManager-test-suite</Name>
+				<Version>1.5.0</Version>
+				<MultiVersion value="true"/>				
+				<Shareable level="VO"/>				
+				<Type>application</Type>
+				<Files>
+					<File>lib/org.gcube.common.vremanagement.ghnmanager.testsuite.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

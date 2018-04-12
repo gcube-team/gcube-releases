@@ -1,0 +1,84 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def opacity value('theme.mask.opacity');
+@def backgroundColor value('theme.mask.backgroundColor');
+
+@def boxPadding value('theme.mask.box.padding.toString');
+
+@def boxBorderColor value('theme.mask.box.borderColor');
+@def boxBorderStyle value('theme.mask.box.borderStyle');
+@def boxBorderWidth value('theme.mask.box.borderWidth', 'px');
+
+@def boxBorderRadius value('theme.mask.box.borderRadius', 'px');
+
+@def boxRadiusMinusBorderWidth value('theme.mask.box.radiusMinusBorderWidth', 'px');
+
+@def boxBackgroundColor value('theme.mask.box.backgroundColor');
+
+@def boxTextFamily value('theme.mask.box.text.family');
+@def boxTextWeight value('theme.mask.box.text.weight');
+@def boxTextSize value('theme.mask.box.text.size');
+@def boxTextColor value('theme.mask.box.text.color');
+
+@def boxTextPadding value('theme.mask.box.textPadding.toString');
+
+@def boxLoadingImagePosition value('theme.mask.box.loadingImagePosition');
+
+.mask {
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  opacity: opacity;
+
+  background-color: backgroundColor;
+}
+
+.box {
+  position: absolute;
+
+  border-radius: boxBorderRadius;
+  border-width: boxBorderWidth;
+  border-style: boxBorderStyle;
+  border-color: boxBorderColor;
+
+  padding: boxRadiusMinusBorderWidth;
+
+  overflow: hidden;
+  background-color: boxBackgroundColor;
+}
+
+@sprite .text {
+  gwt-image: 'loading';
+  width: auto;
+  height:auto;
+  background-position: boxLoadingImagePosition;
+
+  margin: boxPadding;
+  padding: boxTextPadding;
+
+  color: boxTextColor;
+  font-family: boxTextFamily;
+  font-weight: boxTextWeight;
+  font-size: boxTextSize;
+}
+
+.positioned {
+  position: relative !important;
+}
+
+.masked {
+  overflow: hidden !important;
+}
+
+.masked select,.masked object,.masked embed {
+  visibility: hidden;
+}

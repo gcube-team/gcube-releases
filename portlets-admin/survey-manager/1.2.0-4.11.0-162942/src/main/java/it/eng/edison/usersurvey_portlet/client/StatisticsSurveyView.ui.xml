@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	
+	</ui:style>
+
+	<g:HTMLPanel>
+
+		<g:HorizontalPanel ui:field="horizontalPanel">
+			<g:VerticalPanel ui:field="verticalPanel">
+				<b:WellForm ui:field="wellFormAnswer">
+					<b:Controls ui:field="AddSave">
+						<b:Button icon="ARROW_LEFT" visible="true"
+							ui:field="backToHomeSurveyButton">Back to Home</b:Button>
+						<b:Button icon="FILE" visible="true"
+							ui:field="exportToCSVButton">Export to CSV</b:Button>
+					</b:Controls>
+				</b:WellForm>
+				<b:Heading ui:field="titleSurveyHeading" size="3" />
+				<b:Paragraph ui:field="descriptionAggregateStatsParagraph" />
+			</g:VerticalPanel>
+			<g:VerticalPanel ui:field="verticalPanelUsers">
+			</g:VerticalPanel>
+		</g:HorizontalPanel>
+
+	</g:HTMLPanel>
+
+</ui:UiBinder> 
