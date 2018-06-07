@@ -1,0 +1,82 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.noBorder {
+		border: 0px;
+		line-height: 20px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	.customInfo {
+		font-family: "Roboto", sans-serif;
+	}
+	
+	.marginBottom {
+		margin-bottom: 10px;
+	}
+	
+	.myHeader {
+		color: #555;
+	}
+	
+	.myHeader H1 {
+		line-height: 30px;
+		font-size: 28;
+	}
+	
+	.myMarginReturn {
+		margin-left: -12px;
+	}
+	</ui:style>
+	<g:HTMLPanel ui:field="form_course_fields" styleName="{style.noBorder}">
+		<b:PageHeader ui:field="page_header" addStyleNames="{style.myHeader}">Your
+			Course</b:PageHeader>
+		<b:Form>
+			<b:Fieldset styleName="{style.customInfo}">
+				<!-- <b:Label>Course Title</b:Label> -->
+				<!-- <g:HTMLPanel ui:field="field_course_title"></g:HTMLPanel> -->
+				<g:HTMLPanel>
+					<b:Label type="WARNING" ui:field="l_course_status"
+						addStyleNames="{style.marginBottom}">Course Status</b:Label>
+					<!-- <g:HTMLPanel styleName="{style.marginBottom}" ui:field="field_course_status"></g:HTMLPanel> -->
+				</g:HTMLPanel>
+				<b:Label type="INFO">About the Course</b:Label>
+				<g:HTMLPanel ui:field="field_course_desciption"
+					styleName="{style.marginBottom}"></g:HTMLPanel>
+
+				<b:Label ui:field="l_participants" type="INFO">Participants</b:Label>
+				<g:HTMLPanel styleName="{style.marginBottom}" ui:field="field_shared_with"></g:HTMLPanel>
+
+<!-- 				<b:Tooltip text="See other informations about the course"> -->
+<!-- 					<b:CollapseTrigger target="#toggleMoreInfo"> -->
+<!-- 						<b:Button addStyleNames="{style.myMarginReturn}" icon="CHEVRON_RIGHT" -->
+<!-- 							type="LINK">Course Details</b:Button> -->
+<!-- 					</b:CollapseTrigger> -->
+<!-- 				</b:Tooltip> -->
+<!-- 				<b:Collapse existTrigger="true" b:id="toggleMoreInfo" defaultOpen="false"> -->
+					<b:FluidRow>
+						<b:Label type="INFO">Commitment</b:Label>
+						<g:HTMLPanel styleName="{style.marginBottom}"
+							ui:field="field_commitment"></g:HTMLPanel>
+
+						<b:Label type="INFO">Language</b:Label>
+						<g:HTMLPanel styleName="{style.marginBottom}"
+							ui:field="field_language"></g:HTMLPanel>
+
+						<b:Label type="INFO">Folder Name</b:Label>
+						<g:HTMLPanel styleName="{style.marginBottom}"
+							ui:field="field_folder_name"></g:HTMLPanel>
+
+						<b:Label type="INFO">Created By</b:Label>
+						<g:HTMLPanel styleName="{style.marginBottom}"
+							ui:field="field_created_by"></g:HTMLPanel>
+
+					</b:FluidRow>
+<!-- 				</b:Collapse> -->
+
+			</b:Fieldset>
+		</b:Form>
+	</g:HTMLPanel>
+</ui:UiBinder> 

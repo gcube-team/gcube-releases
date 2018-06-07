@@ -1,0 +1,17 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-catalogue.catalogue-ws.1-1-1"
+		date="2018-01-11">
+		<Change>Item purge method enhanced</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.catalogue-ws.1-1-0"
+		date="2017-06-20">
+		<Change>Minor fixes while checking user's permissions</Change>
+		<Change>Namespaces are no longer transparently managed</Change>
+		<Change>Fixed 'default' value for metadata</Change>
+		<Change>Improved exception handling</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.catalogue-ws.1-0-0"
+		date="2017-05-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

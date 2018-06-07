@@ -1,0 +1,6 @@
+declare namespace is = 'http://gcube-system.org/namespaces/informationsystem/registry';
+declare namespace gc = 'http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider';
+ for  $entry0ValueAuth in  collection("/db/Profiles/GHN")//Document/Data/is:Profile/Resource/Scopes/Scope 
+ 	let $result :=  $entry0ValueAuth/../.. where  ($entry0ValueAuth/string() eq '/d4science.research-infrastructures.eu/Ecosystem/gMan' or $entry0ValueAuth/string() eq 
+'/d4science.research-infrastructures.eu/Ecosystem')  
+ return $result

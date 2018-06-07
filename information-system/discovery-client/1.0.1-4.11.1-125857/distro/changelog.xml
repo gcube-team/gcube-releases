@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="discovery-client-1.0.0" date="2013-01-11">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="discovery-client-1.0.1" date="2013-04-29">
+		<Change>Fixed bug in QueryBox to prevented correct working of hashcode() and equals() in subclasses.
+				As a result, different queries appeared the same with consequences downstream where queries where used for caching.
+		</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,9 @@
+<Resource>
+    <ID>{$ri//Resource/ID/string()}</ID>
+    <ServiceStatus>{$ri/Profile/DeploymentData/Status/string()}</ServiceStatus>
+    <ActivationTime>{$ri/Profile/DeploymentData/ActivationTime/@value/string()}</ActivationTime>
+    <ghnid>{$ri/Profile/GHN/@UniqueID/string()}</ghnid>
+    <ServiceClass>{$ri/Profile/ServiceClass/string()}</ServiceClass>
+    <ServiceName>{$ri/Profile/ServiceName/string()}</ServiceName>
+    <Actions>APPLY_RI_DELETE</Actions>
+</Resource>

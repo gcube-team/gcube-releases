@@ -1,0 +1,5 @@
+.sideNavPBg {
+  /*
+  gwt-sprite: 'sideNavProfileBackground';
+  background-repeat: repeat; */
+}

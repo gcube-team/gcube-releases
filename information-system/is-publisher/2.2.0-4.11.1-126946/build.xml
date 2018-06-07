@@ -1,0 +1,52 @@
+<project default="deploy" name="org.gcube.common.informationsystem.publisher" basedir=".">
+<property environment="env" />
+
+<property name="globus.location" location="${env.GLOBUS_LOCATION}"/>
+
+
+<target name="clean">
+        <delete dir="./build" />
+</target>
+
+
+<target name="compile" depends="clean">
+	<mkdir dir="./build"/>
+        <javac srcdir="src/main/java" destdir="./build">
+            <include name="org/**/*.java"/>
+            <classpath>
+				<fileset dir="${globus.location}/lib">
+                    <include name="*.jar"/>
+                </fileset>
+
+            </classpath>	    
+        </javac>
+</target>
+<target name="makeJar" depends="compile">
+	<mkdir dir="./lib"/>
+         <jar jarfile="./lib/org.gcube.common.informationsystem.publisher.jar" basedir="./build">
+                <include name="**/*.class"/>
+         </jar>
+
+</target>
+
+
+<target name="deploy" depends="makeJar">
+                <copy todir="${env.GLOBUS_LOCATION}/lib">
+                        <fileset dir="./lib">
+                               <include name="*.jar"/>
+                        </fileset>
+                </copy>
+                <delete file="./lib/*.jar" />
+</target>
+
+<target name="javadoc">
+<mkdir dir="doc/api" />
+
+<javadoc access="public" author="true" classpath="" destdir="doc/api" doctitle="IS-Publisher" nodeprecated="false" nodeprecatedlist="false" 
+noindex="false" 
+nonavbar="false" notree="false" 
+packagenames="org.gcube.common.informationsystem.publisher.impl, org.gcube.common.informationsystem.publisher.impl.interfaces" 
+sourcepath="./src/main/java" splitindex="true" use="true" version="true"/>
+</target>
+
+</project>

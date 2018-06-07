@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.user.databasesmanager.DatabasesManager' />
+
+  <!-- Specify the path to any remote services.                   -->
+<!--   <servlet path="/DatabasesManager/greet" class="org.gcube.portlets.user.databasesmanager.server.GreetingServiceImpl" /> -->
+
+</module>

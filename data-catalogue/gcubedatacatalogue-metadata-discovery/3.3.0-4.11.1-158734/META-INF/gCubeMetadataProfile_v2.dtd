@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<!ENTITY % Boolean "(true|false)">-->
+
+<!ELEMENT metadataformat (metadatafield+)>
+<!ELEMENT metadatafield (fieldName, mandatory, datatype?, defaulValue?, note?, vocabulary?, validator?)>
+<!ELEMENT fieldName (#PCDATA)>
+<!ELEMENT mandatory (#PCDATA)>
+<!ELEMENT datatype (#PCDATA)>  
+<!ELEMENT defaulValue (#PCDATA)> 
+<!ELEMENT note (#PCDATA)> 
+<!ELEMENT vocabulary (vocabularyField+)> 
+<!ATTLIST vocabulary isMultiSelection (true|false) "false">
+<!ELEMENT vocabularyField (#PCDATA)> 
+<!ELEMENT validator (regularExpression)> 
+<!ELEMENT regularExpression (#PCDATA)> 
+
+<!--
+where datatype element is the enum: {String, Date, Text, Boolean, Number}
+<xs:element name="datatype">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="String"/>
+      <xs:enumeration value="Date"/>
+      <xs:enumeration value="Text"/>
+      <xs:enumeration value="Boolean"/>
+      <xs:enumeration value="Number"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element> 
+-->

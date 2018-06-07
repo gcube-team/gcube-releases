@@ -1,0 +1,45 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.myActions {
+		border-top: 1px solid #eee;
+	}
+	
+	.myMargin {
+		margin-left: 10px;
+	}
+	
+	.myDrop {
+		margin-left: 5px;
+	}
+	</ui:style>
+	<g:HTMLPanel addStyleNames="{style.myMargin}">
+		<b:Heading size="4">Course Actions</b:Heading>
+		<g:VerticalPanel addStyleNames="{style.myActions}">
+			<b:DropdownButton text="Change Status" type="LINK"
+				addStyleNames="{style.myDrop}" icon="EXCHANGE">
+				<b:NavLink icon="OK_SIGN" ui:field="activeCourseNavlink"></b:NavLink>
+				<b:NavLink icon="OFF" ui:field="idleCourseNavlink"></b:NavLink>
+			</b:DropdownButton>
+			<b:DropdownButton text="Manage Course" type="LINK"
+				addStyleNames="{style.myDrop}" icon="ALIGN_JUSTIFY">
+				<b:NavLink icon="PENCIL" ui:field="btn_edit_project">Edit Course</b:NavLink>
+				<b:NavLink icon="REMOVE_SIGN" ui:field="btn_delete_project">Delete
+					Course</b:NavLink>
+				<b:NavLink icon="FOLDER_CLOSE" ui:field="create_folder">Create
+					Unit</b:NavLink>
+			</b:DropdownButton>
+
+			<b:DropdownButton text="Invite Participants" type="LINK"
+				addStyleNames="{style.myDrop}" icon="USER">
+				<b:NavLink icon="USER" ui:field="share">Single
+					Members</b:NavLink>
+				<b:NavLink icon="GROUP" ui:field="share_group">All VRE
+					Members</b:NavLink>
+			</b:DropdownButton>
+
+
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

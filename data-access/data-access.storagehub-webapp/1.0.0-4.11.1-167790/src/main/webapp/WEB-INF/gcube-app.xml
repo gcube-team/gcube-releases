@@ -1,0 +1,7 @@
+<application mode='online'>
+		<name>StorageHub</name>
+		<group>DataAccess</group>
+		<version>1.0.0-SNAPSHOT</version>
+		<description>Storage Hub webapp</description>
+		<local-persistence location='target' />
+</application>

@@ -1,0 +1,12 @@
+{{GATEWAY_NAME}}
+----------------------------------
+Dear {{GATEWAY_NAME}} user,
+
+Tomorrow, December 19th from 2:00pm to 6:00pm CET some services including Workspace and Social and Data Miner applications may be temporarily unavailable for a short time.
+We appreciate your patience and understanding. 
+
+Motivation: D4Science infrastructure upgrade to gCube 4.9.0
+
+We will make every effort to minimize any downtime associated with this maintenance.								
+
+If you wish to know the progress follow D4Science on Twitter at https://twitter.com/d4science

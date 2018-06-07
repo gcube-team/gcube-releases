@@ -1,0 +1,44 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.data-miner-manager.1-7-0"
+		date="2018-06-01">
+		<Change>Integrated DataMiner CL for simplify integration with new
+			StorageHub[ticket #11720]</Change>
+		<Change>Added refresh button in operators panel[ticket #11741]</Change>	
+		<Change>Added hyperlink for log that contains http reference[ticket #11529]</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.data-miner-manager.1-6-0"
+		date="2016-11-09">
+		<Change>Added NetCDF files support</Change>
+		<Change>Added [TEXTAREA] string support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.data-miner-manager.1-5-0"
+		date="2016-06-12">
+		<Change>Support Java 8 compatibility [ticket #8471]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.data-miner-manager.1-4-0"
+		date="2016-02-15">
+		<Change>Fixed load balancing [ticket #7576]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.data-miner-manager.1-3-0"
+		date="2016-02-15">
+		<Change>Updated PortalContext [ticket #6278]</Change>
+		<Change>Added encoded parameters in equivalent http request [ticket
+			#7167]
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.data-miner-manager.1-2-0"
+		date="2016-12-01">
+		<Change>Updated Output support</Change>
+		<Change>Added PortalContext</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.data-miner-manager.1-1-0"
+		date="2016-10-01">
+		<Change>Updated to Auth 2.0</Change>
+		<Change>Added Spatial data support [Ticket #4172]</Change>
+		<Change>Added Temporal data support [Ticket #4172]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.data-miner-manager.1-0-0"
+		date="2016-07-01">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,22 @@
+div.bootstrap-tagsinput span.label-info {
+	background: #0271be;
+	background-color: #0271be;
+}
+div.bootstrap-tagsinput span.label-info span:after{
+	content: 'x';
+	padding: 0 2px;
+	margin-left: 2px;
+}
+div.bootstrap-tagsinput span.label-info span:hover:after{
+	background-color: #019ad3;
+	background: #019ad3;
+}
+#CurrentUsersTable_filter div.bootstrap-tagsinput input {
+	display:none;
+}
+#CurrentUsersTable_filter div.bootstrap-tagsinput {
+	display:inline-block;
+	position:absolute;
+	left: 5%;
+	top: 10%;
+}

@@ -1,0 +1,1 @@
+<authorization-endpoint priority="10" infrastructure="gcube"><host>node7.d.d4science.research-infrastructures.eu</host><secure>false</secure><port>9000</port></authorization-endpoint>

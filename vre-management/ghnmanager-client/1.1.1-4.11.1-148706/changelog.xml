@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.vre-management.ghnmanager-client.1-0-0" date="2013-04-19">
+		<Change>ported to maven</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.common.vre-management.ghnmanager-client.1-1-0" date="2013-xx-xx">1
+		<Change>Integration with common-security</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.common.vre-management.ghnmanager-client.1-1-1" date="2017-05-15">1
+		<Change>remove common-security</Change>	
+	</Changeset>
+</ReleaseNotes>

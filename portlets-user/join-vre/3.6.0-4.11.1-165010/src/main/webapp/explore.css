@@ -1,0 +1,81 @@
+body {
+	border: 5px solid white;
+}
+
+div.page-header > h1 {
+	font-size: 2em;
+	line-height: 25px;
+	color: #555;
+}
+
+div.page-header > h1 small{
+	font-size: 17px;
+}
+
+.nav-tabs .dropdown-toggle .caret {
+  border-top: 8px solid black !important;
+  border-right: 8px solid transparent !important;;
+  border-left: 8px solid transparent !important;;
+  border-top-color: #08c !important;;
+}
+
+ul.dropdown-menu > li {
+    font-size: 1.1em !important;
+}
+
+.nav-tabs > li > a  {
+    font-size: 2em !important;
+    padding-left: 10px;
+}
+
+@media only screen and (min-width: 800px) {
+	.aui .row-fluid .span3 {
+		width: 19% !important;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.modal-custom {
+		width: 75% !important;
+		margin-left: -38% !important;
+	}
+	.modal-body-custom {
+		height: 500px !important;
+	}
+	.modal-header-custom>.close {
+		font-size: 40px;
+	}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+	.modal-custom {
+		width: 85% !important;
+		margin-left: -42% !important;
+	}
+	.modal-body-custom {
+		height: 450px !important;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+	.modal-body-custom {
+		height: 350px !important;
+	}
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+	.modal-body-custom {
+		height: 300px !important;
+	}
+}
+
+.modal-custom {
+	min-width: 300px !important;
+	top: 3% !important;
+}
+
+.modal-body-custom {
+	max-height: 50% !important;
+}
+
+

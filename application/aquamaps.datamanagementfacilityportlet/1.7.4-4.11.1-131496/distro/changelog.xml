@@ -1,0 +1,17 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.application.datamanagementfacilityportlet.1-2-0" date="2013-09-27">
+		<Change>Mavenized</Change>
+		<Change>gwt 2.5.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application.datamanagementfacilityportlet.1-7-2" date="2015-09-28">
+		<Change>Integrated Workspace explorer</Change>
+		<Change>Integrated Session checker</Change>
+		<Change>Integrated new AquaMaps cl</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application.datamanagementfacilityportlet.1-7-3" date="2016-06-12">
+		<Change>Liferay 6.2 integration</Change>		
+	</Changeset>
+	<Changeset component="org.gcube.application.datamanagementfacilityportlet.1-7-4" date="2016-09-08">
+		<Change>Integration fixes</Change>		
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-access.ckan-connector.1-0-0"
+		date="2016-03-25">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

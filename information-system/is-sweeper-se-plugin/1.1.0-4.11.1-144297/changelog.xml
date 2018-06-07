@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.informationsystem.is-sweeper-se-plugin.1.1.0" date="2018-06-05">
+		<Change>Cleaned Code</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.informationsystem.is-sweeper-se-plugin.1.0.0" date="2016-04-15">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

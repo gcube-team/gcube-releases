@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hook PUBLIC "-//Liferay//DTD Hook 6.2.0//EN" "http://www.liferay.com/dtd/liferay-hook_6_2_0.dtd">
+
+<hook>
+
+	<!-- The specified contains new configuration and/or overrides already existing configuration for the portal -->
+	<portal-properties>portal.properties</portal-properties>
+	
+	<!-- The specified file contains the language -->
+	<language-properties>content/Language.properties</language-properties>
+	
+	<!-- Specify the jsp directory that contains overridden jsps and new jsps -->
+	<custom-jsp-dir>/custom_jsps</custom-jsp-dir>
+	<!--  create a new filter -->
+	<servlet-filter>
+        <servlet-filter-name>shibboleth</servlet-filter-name>
+        <servlet-filter-impl>gr.cite.shibboleth.ShibbolethSamlFilter</servlet-filter-impl>
+    </servlet-filter>
+	<servlet-filter-mapping>
+        <servlet-filter-name>shibboleth</servlet-filter-name>
+        <after-filter>Auto Login Filter</after-filter>
+        <url-pattern>/c/portal/shibboleth_login</url-pattern>
+        <dispatcher>FORWARD</dispatcher>
+        <dispatcher>REQUEST</dispatcher>
+    </servlet-filter-mapping>
+
+</hook>

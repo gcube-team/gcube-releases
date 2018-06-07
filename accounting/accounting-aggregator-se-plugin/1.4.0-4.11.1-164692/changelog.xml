@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.accounting.accounting-aggregator-se-plugin.1.4.0" date="2018-06-04">
+		<Change>Logging every 5% elaborated rows when the total number is greatest than 100000</Change>
+		<Change>Regex Rules are loaded every time the plugin is lauched #11233</Change>
+		<Change>Added possibility to force to rerun an already completed aggregation #11258</Change>
+		<Change>Added possibility to force to restart immediately an interrupetd aggregation #11280</Change>
+		<Change>Added possibility to force to start an aggregation even is too early to do it #11281</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-aggregator-se-plugin.1.3.0" date="2017-02-15">
+		<Change>Fixed duplication of records in case of timeout retry</Change>
+		<Change>Fixed issues when aggregating old StorageUsageRecords</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-aggregator-se-plugin.1.2.0" date="2017-10-09">
+		<Change>Renamed the aggregation modes #9023</Change>
+		<Change>Separated Aggregation from Recovery #9420</Change>
+		<Change>Supporting multiple concurrent launch #9421</Change>
+		<Change>Added parameters to avoid to write on buckets during backup or compaction time #9422</Change>
+		<Change>Storing Aggregation/Recovery evolution on a management bucket in CouchBase #9423</Change>
+		<Change>Aggregation get last aggregation day from management bucket #9424</Change>
+		<Change>Recovery restart aggregation which didn't terminate getting the informations from management bucket #9425</Change>
+		<Change>Added support to read original records from a bucket and to publish aggregated in a different one #9556</Change>
+		<Change>Added possibility to specify a range for aggregation and recovery</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-aggregator-se-plugin.1.1.0" date="2017-05-10">
+		<Change>Refactored</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-aggregator-se-plugin.1.0.1" date="2017-03-16">
+		<Change>Enhached logging</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-aggregator-se-plugin.1.0.0" date="2016-11-07">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

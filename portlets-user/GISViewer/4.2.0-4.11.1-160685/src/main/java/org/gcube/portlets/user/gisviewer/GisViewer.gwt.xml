@@ -1,0 +1,22 @@
+<module>
+
+	<inherits name='com.google.gwt.user.User' />
+<!-- 	<inherits name='com.google.gwt.user.theme.standard.Standard' /> -->
+	<inherits name="com.google.gwt.i18n.I18N" />
+
+	<inherits name='org.gwtopenmaps.openlayers.OpenLayers' />
+
+	<script src="OpenLayers.js"></script>
+	<script src="LineHandler.js"></script>
+	<script
+		src="http://maps.google.com/maps/api/js?gwt=1&amp;v=3&amp;sensor=false"></script>
+
+	<inherits name='com.extjs.gxt.ui.GXT' />
+
+	<stylesheet src='gisViewer.css' />
+
+	<!-- TODO adjust -->
+	<stylesheet src="css/treePanelStyle.css" />
+	<stylesheet src="theme/default/style.css" />
+
+</module>

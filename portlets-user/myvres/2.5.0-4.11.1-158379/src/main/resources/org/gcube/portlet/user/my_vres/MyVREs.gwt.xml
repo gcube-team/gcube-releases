@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='myvres'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<!-- To Comment out -->
+	<!-- <set-property name="user.agent" value="gecko1_8" /> -->
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='org.gcube.portlet.user.my_vres.client.MyVREs' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

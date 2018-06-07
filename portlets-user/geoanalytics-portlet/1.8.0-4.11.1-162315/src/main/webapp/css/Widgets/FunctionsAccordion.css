@@ -1,0 +1,94 @@
+div#DecisionSupportSystem .functionsAccordion {
+	height: 75%;
+	overflow-y: scroll;
+}
+div#DecisionSupportSystem .functionsAccordionTitle{
+	background: rgb(2,113,190);
+	background-color: rgb(2,113,190);
+	overflow: visible;
+	position: relative;
+	padding: 1em;
+	margin: 0px;
+	color: #fff;
+	margin-bottom: 5px;
+	cursor: pointer;
+	border: none;
+	border-radius: 0px;
+}
+div#DecisionSupportSystem .functionsAccordionTitle.ui-state-focus{
+	outline: none;
+    border: none;
+    border-radius: 0px;
+}
+div#DecisionSupportSystem .functionsAccordionTitle.ui-state-active{
+	background: rgb(1,154,211);
+    background-color: rgb(1,154,211);
+    outline: none;
+    border: none;
+    border-radius: 0px;
+}
+div#DecisionSupportSystem .functionsAccordionTitle.ui-state-active:before,
+div#DecisionSupportSystem .functionsAccordionTitle.ui-state-active:after{
+	border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid RGB(1,154,211);
+    bottom: -15px;
+    content: '';
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    color: #fff;
+    pointer-events: none;
+    z-index: 123;
+    outline: none;
+}
+div#DecisionSupportSystem .functionsAccordionTitle:not(.ui-state-active):hover{
+	background: RGB(76, 181,210);
+    background-color: RGB(76, 181,210);
+}
+div#DecisionSupportSystem .functionsAccordionContentPanel {
+	padding: 9px 15px;
+	border: none;
+	position:relative;
+	height: initial !important;
+}
+/************************** select widget **************************/
+.ui-menu.ui-corner-bottom.ui-widget.ui-widget-content {
+	margin: 0px;
+}
+.ui-selectmenu-button {
+	height: 25px;
+	/* width: 160px !important; */
+}
+.ui-selectmenu-button .ui-selectmenu-text {
+	padding-top: 3px;
+}
+.pluginLoadingUISpinner {
+	/* position: absolute; */
+    font-size: .9em;
+}
+.pluginLoadingUISpinner .fa.fa-spinner.fa-spin {
+	margin-left: .2em;
+    font-size: 1.5em;
+}
+.pluginProcessingSpinnerForPluginBody {
+	position: absolute;
+    width: 95%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 999;
+}
+.pluginProcessingSpinnerForPluginBody .fa.fa-spinner.fa-spin {
+	font-size: 5em;
+    margin-left: 40%;
+    margin-top: 40%;
+    color: #0271be;
+}
+.pluginProcessingSpinner{
+	position:absolute;
+	font-size: .9em;
+}
+.pluginProcessingSpinner .fa.fa-spinner.fa-spin {
+	font-size: 1.3em;
+	margin-left: .2em;
+}

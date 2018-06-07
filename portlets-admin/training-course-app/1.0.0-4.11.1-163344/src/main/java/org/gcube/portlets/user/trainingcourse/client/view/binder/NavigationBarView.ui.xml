@@ -1,0 +1,51 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.myNavActions {
+		padding-right: 20px;
+		
+	}
+	</ui:style>
+	<b:ResponsiveNavbar>
+		<b:Brand>Training Course App</b:Brand>
+		<b:Nav>
+			<b:NavLink ui:field="button_create_new" icon="BRIEFCASE">New Course</b:NavLink>
+			<b:Dropdown text="Open Course" icon="FOLDER_OPEN"
+				ui:field="button_open_course" addStyleNames="{style.myNavActions}">
+				<!-- <b:NavLink>Test 1</b:NavLink> -->
+				<!-- <b:NavLink>Test 2</b:NavLink> -->
+			</b:Dropdown>
+
+			<!-- <b:NavForm size="1" /> -->
+			<!-- <b:Nav alignment="RIGHT"> -->
+			<!-- <b:NavLink>Test</b:NavLink> -->
+			<!-- </b:Nav> -->
+
+			<b:Brand>Course Actions</b:Brand>
+			<b:Dropdown text="Change Status"
+				icon="EXCHANGE">
+				<b:NavLink icon="OK_SIGN" ui:field="activeCourseNavlink"></b:NavLink>
+				<b:NavLink icon="OFF" ui:field="idleCourseNavlink"></b:NavLink>
+			</b:Dropdown>
+			<b:Dropdown text="Manage Course"
+				icon="ALIGN_JUSTIFY">
+				<b:NavLink icon="PENCIL" ui:field="btn_edit_project">Edit Course</b:NavLink>
+				<b:NavLink icon="REMOVE_SIGN" ui:field="btn_delete_project">Delete
+					Course</b:NavLink>
+				<b:NavLink icon="FOLDER_CLOSE" ui:field="create_folder">Create
+					Unit</b:NavLink>
+			</b:Dropdown>
+
+			<b:Dropdown text="Invite Participants"
+				icon="USER">
+				<b:NavLink icon="USER" ui:field="share">Single
+					Members</b:NavLink>
+				<b:NavLink icon="GROUP" ui:field="share_group">All VRE
+					Members</b:NavLink>
+			</b:Dropdown>
+		</b:Nav>
+
+	</b:ResponsiveNavbar>
+
+</ui:UiBinder> 

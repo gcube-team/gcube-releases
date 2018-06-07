@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>IDREF1</mes:ID>
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2013-02-07T16:07:10.709Z</mes:Prepared>
+    <mes:Sender id="Unknown"/>
+    <mes:Receiver id="Unknown"/>
+  </mes:Header>
+  <mes:Structures>
+    <str:OrganisationSchemes>
+      <str:AgencyScheme id="AGENCIES" urn="urn:sdmx:org.sdmx.infomodel.base.AgencyScheme=SDMX:AGENCIES(1.0)" agencyID="SDMX" version="1.0">
+        <com:Name xml:lang="en">SDMX Agency Scheme</com:Name>
+        <str:Agency id="SDMX" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=SDMX">
+          <com:Name xml:lang="en">SDMX</com:Name>
+        </str:Agency>
+        <str:Agency id="SDMXSOURCE" urn="urn:sdmx:org.sdmx.infomodel.base.Agency=SDMXSOURCE">
+          <com:Name xml:lang="en">Sdmx Source</com:Name>
+        </str:Agency>
+      </str:AgencyScheme>
+    </str:OrganisationSchemes>
+    <str:Dataflows>
+      <str:Dataflow id="DF_WDI" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=SDMXSOURCE:DF_WDI(1.0)" agencyID="SDMXSOURCE" version="1.0">
+        <com:Name xml:lang="en">World Development Indicators</com:Name>
+        <str:Structure>
+          <Ref id="WDI" version="1.0" agencyID="SDMXSOURCE" package="datastructure" class="DataStructure"/>
+        </str:Structure>
+      </str:Dataflow>
+    </str:Dataflows>
+    <str:Codelists>
+      <str:Codelist id="CL_COUNTRY" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMXSOURCE:CL_COUNTRY(1.0)" agencyID="SDMXSOURCE" version="1.0">
+        <com:Name xml:lang="en">Country</com:Name>
+        <str:Code id="UK" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMXSOURCE:CL_COUNTRY(1.0).UK">
+          <com:Name xml:lang="en">United Kingdom</com:Name>
+        </str:Code>
+        <str:Code id="FR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMXSOURCE:CL_COUNTRY(1.0).FR">
+          <com:Name xml:lang="en">France</com:Name>
+        </str:Code>
+        <str:Code id="DE" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMXSOURCE:CL_COUNTRY(1.0).DE">
+          <com:Name xml:lang="en">Germany</com:Name>
+        </str:Code>
+      </str:Codelist>
+      <str:Codelist id="CL_INDICATOR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMXSOURCE:CL_INDICATOR(1.0)" agencyID="SDMXSOURCE" version="1.0">
+        <com:Name xml:lang="en">World Development Indicators</com:Name>
+        <str:Code id="E" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMXSOURCE:CL_INDICATOR(1.0).E">
+          <com:Name xml:lang="en">Environment</com:Name>
+        </str:Code>
+        <str:Code id="E_A" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMXSOURCE:CL_INDICATOR(1.0).E_A">
+          <com:Name xml:lang="en">Aggriculture land</com:Name>
+          <str:Parent>
+            <Ref id="E"/>
+          </str:Parent>
+        </str:Code>
+        <str:Code id="E_P" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMXSOURCE:CL_INDICATOR(1.0).E_P">
+          <com:Name xml:lang="en">Population</com:Name>
+          <str:Parent>
+            <Ref id="E"/>
+          </str:Parent>
+        </str:Code>
+        <str:Code id="H" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMXSOURCE:CL_INDICATOR(1.0).H">
+          <com:Name xml:lang="en">Health</com:Name>
+        </str:Code>
+        <str:Code id="H_B" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMXSOURCE:CL_INDICATOR(1.0).H_B">
+          <com:Name xml:lang="en">Birth Rate</com:Name>
+          <str:Parent>
+            <Ref id="H"/>
+          </str:Parent>
+        </str:Code>
+        <str:Code id="H_C" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMXSOURCE:CL_INDICATOR(1.0).H_C">
+          <com:Name xml:lang="en">Children (0-14) living with HIV</com:Name>
+          <str:Parent>
+            <Ref id="H"/>
+          </str:Parent>
+        </str:Code>
+      </str:Codelist>
+    </str:Codelists>
+    <str:Concepts>
+      <str:ConceptScheme id="CONCEPTS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=SDMXSOURCE:CONCEPTS(1.0)" agencyID="SDMXSOURCE" version="1.0">
+        <com:Name xml:lang="en">Web Service Concepts</com:Name>
+        <str:Concept id="COUNTRY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMXSOURCE:CONCEPTS(1.0).COUNTRY">
+          <com:Name xml:lang="en">Country</com:Name>
+        </str:Concept>
+        <str:Concept id="INDICATOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMXSOURCE:CONCEPTS(1.0).INDICATOR">
+          <com:Name xml:lang="en">World Development Indicators</com:Name>
+        </str:Concept>
+        <str:Concept id="TIME" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMXSOURCE:CONCEPTS(1.0).TIME">
+          <com:Name xml:lang="en">Time</com:Name>
+        </str:Concept>
+        <str:Concept id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMXSOURCE:CONCEPTS(1.0).OBS_VALUE">
+          <com:Name xml:lang="en">Observation Value</com:Name>
+        </str:Concept>
+      </str:ConceptScheme>
+    </str:Concepts>
+    <str:DataStructures>
+      <str:DataStructure id="WDI" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=SDMXSOURCE:WDI(1.0)" agencyID="SDMXSOURCE" version="1.0">
+        <com:Name xml:lang="en">World Development Indicators</com:Name>
+        <str:DataStructureComponents>
+          <str:DimensionList id="DimensionDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DimensionDescriptor=SDMXSOURCE:WDI(1.0).DimensionDescriptor">
+            <str:Dimension id="COUNTRY" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=SDMXSOURCE:WDI(1.0).COUNTRY" position="1">
+              <str:ConceptIdentity>
+                <Ref id="COUNTRY" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMXSOURCE" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_COUNTRY" version="1.0" agencyID="SDMXSOURCE" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:Dimension id="INDICATOR" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=SDMXSOURCE:WDI(1.0).INDICATOR" position="2">
+              <str:ConceptIdentity>
+                <Ref id="INDICATOR" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMXSOURCE" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:Enumeration>
+                  <Ref id="CL_INDICATOR" version="1.0" agencyID="SDMXSOURCE" package="codelist" class="Codelist"/>
+                </str:Enumeration>
+              </str:LocalRepresentation>
+            </str:Dimension>
+            <str:TimeDimension id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.datastructure.TimeDimension=SDMXSOURCE:WDI(1.0).TIME_PERIOD" position="3">
+              <str:ConceptIdentity>
+                <Ref id="TIME" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMXSOURCE" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+              <str:LocalRepresentation>
+                <str:TextFormat/>
+              </str:LocalRepresentation>
+            </str:TimeDimension>
+          </str:DimensionList>
+          <str:MeasureList id="MeasureDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.MeasureDescriptor=SDMXSOURCE:WDI(1.0).MeasureDescriptor">
+            <str:PrimaryMeasure id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.PrimaryMeasure=SDMXSOURCE:WDI(1.0).OBS_VALUE">
+              <str:ConceptIdentity>
+                <Ref id="OBS_VALUE" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMXSOURCE" package="conceptscheme" class="Concept"/>
+              </str:ConceptIdentity>
+            </str:PrimaryMeasure>
+          </str:MeasureList>
+        </str:DataStructureComponents>
+      </str:DataStructure>
+    </str:DataStructures>
+  </mes:Structures>
+</mes:Structure>

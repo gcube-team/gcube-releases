@@ -1,0 +1,39 @@
+#! /bin/bash
+#
+# Clean up the actual state of a given service
+#
+
+if test "$1" = "" ; then
+		echo
+        echo "Usage: gcore-clean-service-state <servicename>"
+        echo
+        exit
+fi
+
+if [ ! -e $HOME/.gcore/persisted/*/$1 ] ; then
+		echo
+        echo "$1 service is not deployed on this GHN or does not have a serialized state"
+        echo
+        exit
+fi
+
+
+
+echo "Are you sure you want to delete the entire state of the $1 service?"
+read -n1 -p "<C>ontinue, <A>bort, please choose one. "
+echo
+case $REPLY in
+   c | C)      
+   rm -rf $HOME/.gcore/persisted/*/$1/ 2>&1 1>/dev/null
+   echo
+   echo "Service cleaning successful"
+   echo
+   ;;   
+   a | A)
+   echo "Service cleaning aborted"
+   ;;
+   * )
+   echo "You don't know what you want to do... aborting anyway"
+   ;; 
+esac
+

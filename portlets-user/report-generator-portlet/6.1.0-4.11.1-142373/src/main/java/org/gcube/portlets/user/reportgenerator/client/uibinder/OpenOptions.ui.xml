@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel styleName="openOptionsPanel" ui:field="myPanel">
+		<table style="width: 700px; text-align: center;">
+			<tr>
+				<td>
+					<g:HTML ui:field="openTemplate" styleName="openOption optionOpenTemplate">New From Template</g:HTML>
+				</td>
+				<td>
+					<g:HTML ui:field="openReport" styleName="openOption optionOpenReport">Open/Edit Report</g:HTML>
+				</td>
+				<td>
+					<a href="/group/data-e-infrastructure-gateway/workspace" target="_blank" style="text-decoration: none;">
+						<g:HTML ui:field="uploadReport" styleName="openOption optionUpload">Upload from
+							Desktop</g:HTML>
+					</a>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

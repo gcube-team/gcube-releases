@@ -1,0 +1,41 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+
+@def trackHeight value('theme.field.slider.trackHeight', 'px');
+
+/* rotated sides due to orientation */
+@def thumbWidth value('theme.field.slider.thumbHeight', 'px');
+@def thumbHeight value('theme.field.slider.thumbWidth', 'px');
+
+@def trackBorderTop value('theme.field.slider.trackBorder.left', 'px');
+@def trackBorderRight value('theme.field.slider.trackBorder.top', 'px');
+@def trackBorderBottom value('theme.field.slider.trackBorder.right', 'px');
+@def trackBorderLeft value('theme.field.slider.trackBorder.bottom', 'px');
+
+@def thumbBorderTop value('theme.field.slider.thumbBorder.left', 'px');
+@def thumbBorderRight value('theme.field.slider.thumbBorder.top', 'px');
+@def thumbBorderBottom value('theme.field.slider.thumbBorder.right', 'px');
+@def thumbBorderLeft value('theme.field.slider.thumbBorder.bottom', 'px');
+
+.track {
+  width: trackHeight;
+  border-top-width: trackBorderTop;
+  border-right-width: trackBorderRight;
+  border-bottom-width: trackBorderBottom;
+  border-left-width: trackBorderLeft;
+  height: 200px;
+}
+
+.thumb {
+  border-top-width: thumbBorderTop;
+  border-right-width: thumbBorderRight;
+  border-bottom-width: thumbBorderBottom;
+  border-left-width: thumbBorderLeft;
+  height: thumbHeight;
+  width: thumbWidth;
+}

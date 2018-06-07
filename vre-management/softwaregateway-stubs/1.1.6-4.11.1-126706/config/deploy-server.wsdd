@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment name="defaultServerConfig"
+	xmlns="http://xml.apache.org/axis/wsdd/"
+	xmlns:java="http://xml.apache.org/axis/wsdd/providers/java"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+	<!--  -->
+	
+	<service name="gcube/vremanagement/softwaregateway/Access" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.vremanagement.softwaregateway.impl.porttypes.Access"/>
+        <wsdlFile>share/schema/softwaregateway/Access_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+   		<parameter name="providers" value="GCUBEProvider SubscribeProvider GetCurrentMessageProvider"/>
+   		<parameter name="loadOnStartup" value="true"/>
+		<!-- <parameter name="securityDescriptor" value="@config.dir@/security-descriptor-Factory.xml"/> -->
+		
+    </service>
+
+	<service name="gcube/vremanagement/softwaregateway/Registration" provider="Handler" use="literal" style="document">
+        <parameter name="className" value="org.gcube.vremanagement.softwaregateway.impl.porttypes.Registration"/>
+        <wsdlFile>share/schema/softwaregateway/Registration_service.wsdl</wsdlFile>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/> 
+   		<parameter name="providers" value="GCUBEProvider SubscribeProvider GetCurrentMessageProvider"/>
+   		<parameter name="loadOnStartup" value="true"/>
+		
+    </service>
+
+</deployment>

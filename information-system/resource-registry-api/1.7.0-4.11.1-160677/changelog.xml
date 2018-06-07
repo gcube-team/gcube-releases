@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.resource-registry-api.1-7-0" date="2018-06-05">
+		<Change>Added SchemaAlreadyPresentException #10207</Change>
+		<Change>Added Utility to get the Type name from an ER Class or interface #10172</Change>
+		<Change>Changed pom.xml to use new make-servicearchive directive #10162</Change>
+		<Change>Forced UTF-8 HTTP body encoding in HTTPCall class #9966</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-api.1-6-0" date="2017-10-09">
+		<Change>Added an API to retrieve Resource instances filtering them #9772</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-api.1-5-0" date="2017-07-25">
+		<Change>Added HTTPS support #8757</Change>
+		<Change>Added HTTP Redirection support #8757</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-api.1-4-0" date="2017-06-07">
+		<Change>Added ERAvalailableInanotherContext exception and its hierarchy to improve context management of ERs</Change>
+		<Change>Imporved HTTPCall class to support HEAD methods and Exception managements in such a case</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-api.1-3-0" date="2017-03-16">
+		<Change>Added HTTP utilities for clients implementations</Change>
+		<Change>Added ResourceRegistryException json serialization</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-api.1-2-0" date="2016-12-16">
+		<Change>Added API AddToContext</Change>	
+		<Change>Added API to support update Resource (with all facets)</Change>
+		<Change>Reaourganized Exceptions</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-api.1-1-0" date="2016-11-03">
+		<Change>Improved code quality</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-api.1-0-0" date="2016-07-27">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

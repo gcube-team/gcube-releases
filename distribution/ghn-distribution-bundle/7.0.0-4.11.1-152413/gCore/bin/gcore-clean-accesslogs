@@ -1,0 +1,8 @@
+#!/bin/bash
+LOGPATH="$GLOBUS_LOCATION/logs"
+MAXDAYS=7
+LOGFILE="$GLOBUS_LOCATION/logs/del_accesslog.log"
+
+date >> $LOGFILE
+
+find $LOGPATH -name "access.log.*" -type f -mtime +$MAXDAYS -exec rm -v {} >> $LOGFILE \;

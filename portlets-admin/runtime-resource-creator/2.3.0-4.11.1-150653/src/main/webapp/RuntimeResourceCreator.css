@@ -1,0 +1,39 @@
+@import url(d4scienceOrg.css);
+
+.wizardTextBox {
+	background-color: white;
+	border-color: #999;
+	border-width: 1px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	letter-spacing: normal;
+	line-height: 15px;
+	height: 23px !important;
+	width: 295px;
+	font-size: 14px;
+}
+
+.wizardTextBox.password {
+	width: 150px;
+	font-size: 14px;
+}
+
+.wizardTextBox[readonly] {
+	color: #AAA;
+	border-color: #AAA;
+}
+
+.warning-report {
+	font-family: 'Lucida Grande', Verdana, 'Bitstream Vera Sans', Arial,
+		sans-serif;
+	font-size: 1.2em;
+	color: #333;
+	padding: 0.5em;
+	background-color: #FAFAA0;
+	border: 1px solid gray;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	width: auto;
+}

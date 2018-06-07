@@ -1,0 +1,23 @@
+div#blanket.shown *{
+	background-color : #fff !important;
+	background : #fff !important;
+	color : #fff !important;
+	pointer-events: none;
+	cursor: default;
+}
+div#blanket.shown .dataTables_info,
+ div#blanket.shown div.dataTables_length select,
+  div#blanket.shown  ul.nav.nav-tabs > li > a,
+   div#blanket.shown  div.dataTables_paginate.paging_simple_numbers {
+	display : none;
+}
+div#blanket p#preloader.hiddenPreloader,
+ div#blanket p#preloader.hiddenPreloader {
+	display : none;
+}
+div#blanket.shown p#preloader, div#blanket.shown p#preloader {
+	position: fixed;
+    z-index: 1052;
+    top: 30%;
+    left: 45%;
+}

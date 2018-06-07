@@ -1,0 +1,9 @@
+{{GATEWAY_NAME}}
+----------------------------------
+Hi {{USER_NAME}},
+{{MANAGER_USER_FULLNAME}} has invited you to answer a questionnaire ({{SURVEY_NAME}}) in the context of {{SELECTED_VRE_NAME}} VRE.
+ <p class="lead" >Thank you very much for your time and cooperation.</p>
+
+Participate now: {{SURVEY_URL}}
+
+{{SURVEY_ANONYMOUS}}

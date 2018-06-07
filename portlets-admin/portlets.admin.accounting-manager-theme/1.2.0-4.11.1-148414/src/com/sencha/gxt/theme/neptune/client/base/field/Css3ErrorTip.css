@@ -1,0 +1,107 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def radius      value('theme.errortip.borderRadius', 'px');
+@def borderStyle value('theme.errortip.border.style');
+@def borderColor value('theme.errortip.border.color');
+@def borderWidth value('theme.errortip.border.toString');
+
+@def css3Leftover value('theme.errortip.radiusMinusBorderWidth.toString');
+
+@def padding value('theme.errortip.padding.toString');
+@def margin value('theme.errortip.margin.toString');
+
+@def opacity value('theme.errortip.opacity');
+@def backgroundColor value('theme.errortip.backgroundColor');
+
+
+@def headerColor value('theme.errortip.headerText.color');
+@def headerSize value('theme.errortip.headerText.size');
+@def headerWeight value('theme.errortip.headerText.weight');
+@def headerFamily value('theme.errortip.headerText.family');
+@def messageColor value('theme.errortip.messageText.color');
+@def messageSize value('theme.errortip.messageText.size');
+@def messageWeight value('theme.errortip.messageText.weight');
+@def messageFamily value('theme.errortip.messageText.family');
+
+@def headerPadding value('theme.errortip.headerPadding.toString');
+@def messagePadding value('theme.errortip.messagePadding.toString');
+
+
+.tipWrap {
+  border-color: borderColor;
+  border-style: borderStyle;
+  border-width: borderWidth;
+  border-radius: radius;
+  overflow: hidden;
+
+  background-color: backgroundColor;
+
+  opacity: opacity;
+
+  margin: margin;
+  /* applying the radius as padding here, avoiding us needing to do math when working out the sliced padding,
+     which already has the padding from the images */
+  padding: css3Leftover;
+}
+
+.tip {
+  padding: padding;
+}
+
+.tools {
+  float: right;
+}
+
+.heading {
+  color: headerColor;
+  font-size: headerSize;
+  font-weight: headerWeight;
+  font-family: headerFamily;
+}
+
+.headingWrap {
+  padding: headerPadding;
+}
+
+.text {
+  color: messageColor;
+  font-size: messageSize;
+  font-weight: messageWeight;
+  font-family: messageFamily;
+}
+
+@sprite .textWrap {
+  gwt-image: 'errorIcon';
+  width: auto;
+  height: auto;
+  background-position: -1 4px;
+  padding-left: 20px;
+  margin: messagePadding;
+}
+
+.anchor {}
+
+@sprite .anchorBottom {
+  gwt-image: "anchorBottom";
+  position: absolute;
+}
+
+@sprite .anchorRight {
+  gwt-image: "anchorRight";
+  position: absolute;
+}
+
+@sprite .anchorLeft {
+  gwt-image: "anchorLeft";
+  position: absolute;
+}
+
+@sprite .anchorTop {
+  gwt-image: "anchorTop";
+  position: absolute;
+}

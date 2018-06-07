@@ -1,0 +1,11 @@
+<ReleaseNotes>
+ 	<Changeset component="org.gcube.data-transfer.scheduler-is-interface.1-2-0" date="2013-04-17">
+			<Change>Fix - Exclude not common structured IS objs</Change>
+	</Changeset>
+     <Changeset component="org.gcube.data-transfer.scheduler-is-interface.1-1-0" date="2013-01-11">
+			<Change>Included queries for DataStorages</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.scheduler-is-interface.1-0-0" date="2012-09-12">
+			<Change>First release of the component</Change>
+	</Changeset>
+</ReleaseNotes>

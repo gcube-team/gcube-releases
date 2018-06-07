@@ -1,0 +1,41 @@
+#! /bin/sh
+
+if [ -z "$GLOBUS_LOCATION"  ]
+then
+	echo  "Cannot start the GHN, GLOBUS_LOCATION var is not set!"
+	exit 1
+fi
+
+if [ ! -d "$GLOBUS_LOCATION/config"  ]
+then
+	echo  "Cannot start the GHN, GLOBUS_LOCATION var is wrongly set!"
+	exit 1
+fi
+
+#container's options
+export GCORE_START_OPTIONS="$GCORE_START_OPTIONS -Djava.util.logging.config.file=$GLOBUS_LOCATION/logging.jul.properties -Xms1800M -Xmx1800M -Djava.io.tmpdir=$GLOBUS_LOCATION/tmp  -Djava.security.egd=file:///dev/urandom"
+
+mode="-nosec"
+unset newargs
+
+for arg in "$@"
+do
+    if [ "$arg" = "-sec" ]; then
+        unset mode
+    else
+        newargs="$newargs $arg"
+    fi
+done
+
+newargs="$mode $newargs"
+
+[ -e "$GLOBUS_LOCATION/tmp" ] ||  mkdir -p $GLOBUS_LOCATION/tmp
+
+#clean up the services' state if needed
+[ -f "$GLOBUS_LOCATION/config/GHNProfile.xml" ] ||  rm -rf ~/.gcore
+
+cd $GLOBUS_LOCATION
+echo "gCore is running with ($newargs) and logging into logs/container.log..."
+$GLOBUS_LOCATION/bin/gcore-start-container-daemon $newargs &
+ 
+

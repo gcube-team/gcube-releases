@@ -1,0 +1,57 @@
+<Document>
+	<ID>node24.d.d4science.research-infrastructures.eu8080-wsrf-services-gcube-data-speciesproductsdiscovery-manager-manager
+	</ID>
+	<Source>http://node24.d.d4science.research-infrastructures.eu:8080/wsrf/services/gcube/data/speciesproductsdiscovery/manager
+	</Source>
+	<SourceKey>manager</SourceKey>
+	<CompleteSourceKey>
+		<ns1:ResourceKey
+			xmlns:ns1="http://gcube-system.org/namespaces/data/speciesproductsdiscovery">manager</ns1:ResourceKey>
+	</CompleteSourceKey>
+	<EntryKey />
+	<GroupKey />
+	<TerminationTime>1383840644689</TerminationTime>
+	<TerminationTimeHuman>Thu Nov 07 17:10:44 CET 2013
+	</TerminationTimeHuman>
+	<LastUpdateMs>1352304644689</LastUpdateMs>
+	<LastUpdateHuman>Wed Nov 07 17:10:44 CET 2012</LastUpdateHuman>
+	<PublicationMode>push</PublicationMode>
+	<Data>
+		<ns4:GHN
+			xmlns:ns4="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+			xmlns:ns5="http://www.globus.org/foobar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:type="ns5:QueryExpressionDialect">3b1f7270-229e-11e2-97a7-e430d3499dac</ns4:GHN>
+		<ns6:RI
+			xmlns:ns6="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+			xmlns:ns7="http://www.globus.org/foobar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:type="ns7:QueryExpressionDialect">3b68d780-229e-11e2-97a8-e430d3499dac</ns6:RI>
+		<ns8:ServiceClass xmlns:ns9="http://www.globus.org/foobar"
+			xmlns:ns8="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns9:QueryExpressionDialect">DataAccess</ns8:ServiceClass>
+		<ns10:Scope
+			xmlns:ns10="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+			xmlns:ns11="http://www.globus.org/foobar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:type="ns11:QueryExpressionDialect">/gcube/devNext</ns10:Scope>
+		<ns12:Scope
+			xmlns:ns12="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+			xmlns:ns13="http://www.globus.org/foobar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:type="ns13:QueryExpressionDialect">/gcube</ns12:Scope>
+		<ns14:Scope
+			xmlns:ns14="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+			xmlns:ns15="http://www.globus.org/foobar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:type="ns15:QueryExpressionDialect">/gcube/devsec</ns14:Scope>
+		<ns16:Scope
+			xmlns:ns16="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+			xmlns:ns17="http://www.globus.org/foobar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:type="ns17:QueryExpressionDialect">/gcube/devsec/devVRE</ns16:Scope>
+		<ns18:ServiceID
+			xmlns:ns18="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+			xmlns:ns19="http://www.globus.org/foobar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:type="ns19:QueryExpressionDialect">9d6385e0-28f5-11e2-930e-f13bebb24295</ns18:ServiceID>
+		<ns20:ServiceName xmlns:ns21="http://www.globus.org/foobar"
+			xmlns:ns20="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns21:QueryExpressionDialect">SpeciesProductsDiscovery</ns20:ServiceName>
+		<custom1>custom1</custom1>
+		<custom2>custom2</custom2>
+	</Data>
+</Document>

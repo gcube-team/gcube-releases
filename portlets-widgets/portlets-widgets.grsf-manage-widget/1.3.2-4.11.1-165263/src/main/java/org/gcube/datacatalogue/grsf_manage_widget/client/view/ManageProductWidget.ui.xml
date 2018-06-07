@@ -1,0 +1,232 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.loader-image {
+		display: block;
+		margin: auto auto;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<b:Modal ui:field="manageProductModal" title="Manage GRSF Record"
+			backdrop="STATIC" keyboard="true" animation="true" closeVisible="true">
+			<g:VerticalPanel width="100%" ui:field="container">
+
+				<!-- Loader image at the beginning -->
+				<b:Image ui:field="loadingImage" styleName="{style.loader-image}"
+					visible="true"></b:Image>
+
+				<b:Form type="VERTICAL" visible="true" ui:field="formUpdate"
+					width="100%">
+
+					<b:ControlGroup ui:field="productGRSFNameGroup">
+						<b:ControlLabel for="grsfname" title="GRSF Name">
+							<b>GRSF Name:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:TextArea alternateSize="LARGE" placeholder="GRSF Name"
+								enabled="false" visibleLines="2" width="97%"
+								b:id="grsfname" title="GRSF Name" ui:field="GRSFNameTexBox" />
+						</b:Controls>
+					</b:ControlGroup>
+
+					<!-- SHORT NAME IS EDITABLE -->
+					<b:ControlGroup ui:field="productShortNameGroup">
+						<b:ControlLabel for="shortname" title="Short Name">
+							<b>GRSF Short Name:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:TextArea alternateSize="LARGE" placeholder="GRSF Short Name"
+								visibleLines="2" width="97%" b:id="shortname"
+								title="GRSF Short Name" ui:field="shortNameTextBox" />
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="productSemanticIdentifierGroup">
+						<b:ControlLabel for="semanticidentifier" title="GRSF Semantic Identifier">
+							<b>GRSF Semantic Identifier:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:TextArea alternateSize="LARGE" placeholder="GRSF Semantic Identifier"
+								enabled="false" visibleLines="2" width="97%"
+								b:id="semanticidentifier" title="GRSF Semantic Identifier"
+								ui:field="semanticIdentifierTextBox" />
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="productGrsfTypeGroup">
+						<b:ControlLabel for="productGrsfType" title="GRSF type">
+							<b>GRSF Type:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:ListBox b:id="productGrsfType" alternateSize="LARGE"
+								enabled="true" width="97%" title="GRSF Type" ui:field="productGrsfTypeListbox"></b:ListBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="currentStatusGroup">
+						<b:ControlLabel for="currentStatus"
+							title="The current status of this Item">
+							<b>Current Status:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox b:id="currentStatus" alternateSize="LARGE"
+								enabled="false" width="97%"
+								title="The current status of this record" ui:field="currentStatus">
+							</b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="sourcesGroup">
+						<b:ControlLabel title="Sources">
+							<b>Source Record(s):</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<g:VerticalPanel ui:field="panelForSourceItems"
+								width="100%">
+							</g:VerticalPanel>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="similarGRSFRecordGroup">
+						<b:ControlLabel title="Merge this record with other similar records">
+							<b>Merge Records (Notification will be sent):</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<g:VerticalPanel ui:field="panelForSimilarGRSFRecords"
+								width="100%">
+							</g:VerticalPanel>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="suggestFurtherMerges">
+						<b:ControlLabel title="Suggest merges with other records">
+							<b>Suggest Merges (Notification will be sent):</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<g:VerticalPanel ui:field="panelForFurtherMerges"
+								width="100%">
+							</g:VerticalPanel>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="connectToOtherRecordsGroup">
+						<b:ControlLabel title="Connect to other Records">
+							<b>Suggest connections with other records (Traceability Purpose):</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<g:VerticalPanel ui:field="panelForConnectOtherRecords"
+								width="100%">
+							</g:VerticalPanel>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="listBoxStatusGroup">
+						<b:ControlLabel for="listboxStatus" title="The new status of this record">
+							<b>New Status:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:ListBox b:id="listboxStatus" alternateSize="LARGE"
+								width="97%" title="Select a new status" enabled="true" ui:field="listBoxStatus"></b:ListBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="sdgFlagGroup">
+						<b:ControlLabel for="sdgflag" title="SDG Flag">
+							<b>SDG Flag:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:CheckBox b:id="sdgflag" title="SDG Flag" ui:field="sdgFlag"></b:CheckBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="traceabilityFlagGroup">
+						<b:ControlLabel for="traceabilityflag" title="Traceability Flag">
+							<b>Traceability Flag:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:CheckBox b:id="traceabilityflag" title="Traceability Flag"
+								ui:field="traceabilityFlag"></b:CheckBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<g:VerticalPanel ui:field="moreInfoAboutOperation"
+						visible="false" width="100%">
+
+						<!-- <b:ControlGroup ui:field="originalRequest"> -->
+						<!-- <b:ControlLabel for="requestType" title="Request Type"> -->
+						<!-- <b>Request Type was:</b> -->
+						<!-- </b:ControlLabel> -->
+						<!-- <b:Controls> -->
+						<!-- <b:TextArea alternateSize="LARGE" placeholder="Request Type" -->
+						<!-- visibleLines="2" readOnly="true" width="97%" b:id="requestType" -->
+						<!-- title="Request Type" ui:field="requestTypeBox" /> -->
+						<!-- </b:Controls> -->
+						<!-- </b:ControlGroup> -->
+
+						<b:ControlGroup ui:field="originalAuthor">
+							<b:ControlLabel for="requestPerformedBy" title="Request was performed by">
+								<b>Request was originally performed by:</b>
+							</b:ControlLabel>
+							<b:Controls>
+								<b:TextArea alternateSize="LARGE" placeholder="Request author"
+									visibleLines="2" width="97%" b:id="requestPerformedBy" enabled="false"
+									title="Request was performed by" ui:field="requestAuthor" />
+							</b:Controls>
+						</b:ControlGroup>
+
+						<b:ControlGroup ui:field="originalRecordUUID">
+							<b:ControlLabel for="requestPerformedOnRecord"
+								title="Request was performed on Record">
+								<b>Request was performed on Record:</b>
+							</b:ControlLabel>
+							<b:Controls>
+								<b:TextArea alternateSize="LARGE"
+									placeholder="Request performed on record" visibleLines="2"
+									width="97%" b:id="requestPerformedOnRecord" enabled="false"
+									title="Request was performed on Record" ui:field="requestRecordUUID" />
+							</b:Controls>
+						</b:ControlGroup>
+
+						<b:ControlGroup ui:field="originalOperationDate">
+							<b:ControlLabel for="requestTimestamp" title="Request timestamp">
+								<b>Request was performed at:</b>
+							</b:ControlLabel>
+							<b:Controls>
+								<b:TextArea alternateSize="LARGE" placeholder="Request timestamp"
+									visibleLines="2" enabled="false" width="97%" b:id="requestTimestamp"
+									title="Request timestamp" ui:field="requestTimestamp" />
+							</b:Controls>
+						</b:ControlGroup>
+					</g:VerticalPanel>
+
+					<b:ControlGroup ui:field="annotationAreaGroup">
+						<b:ControlLabel for="annotation"
+							title="An annotation message to send along the update">
+							<b>Annotation:</b>
+						</b:ControlLabel>
+						<b:Controls>
+							<b:TextArea b:id="annotation" alternateSize="LARGE"
+								placeholder="Add an annotation message" enabled="true" width="97%"
+								title="An annotation message to send along the update" ui:field="annotationArea"></b:TextArea>
+						</b:Controls>
+					</b:ControlGroup>
+
+				</b:Form>
+
+				<!-- Alert blocks for info/errors -->
+				<b:AlertBlock type="INFO" close="false" animation="true"
+					visible="false" ui:field="infoBlock"></b:AlertBlock>
+
+			</g:VerticalPanel>
+			<b:ModalFooter>
+				<!-- Gear to wait while application tokens are retrieved -->
+				<b:Icon type="GEAR" spin="true" ui:field="loaderIcon"
+					visible="false" />
+				<b:Button ui:field="cancelButton">Cancel</b:Button>
+				<b:Button icon="FILE" type="PRIMARY" ui:field="confirmButton"
+					enabled="false">Confirm</b:Button>
+			</b:ModalFooter>
+		</b:Modal>
+	</g:HTMLPanel>
+</ui:UiBinder> 

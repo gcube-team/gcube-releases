@@ -1,0 +1,3 @@
+org.gcube.common.calls.interceptors.ScopeInterceptor
+org.gcube.common.calls.interceptors.AuthorizationInterceptor
+org.gcube.common.calls.interceptors.CalledMethodInterceptor

@@ -1,0 +1,45 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.token-generator.2-3-0"
+		date="2017-12-26">
+		<Change>Application token panel visible for administrators and managers only</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.token-generator.2-2-0"
+		date="2016-12-01">
+		<Change>Load qualified tokens only upon request</Change>
+		<Change>Removed asl session dependency</Change>
+		<Change>Moved to Liferay logging system</Change>
+		<Change>Application token supported</Change>
+		<Change>Moved to Accordions structure</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.token-generator.2-1-0"
+		date="2016-10-01">
+		<Change>Auth 2.0 is now supported</Change>
+		<Change>Qualified tokens can be created using the Advanced Panel</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.token-generator.2-0-0"
+		date="2016-05-01">
+		<Change>Ported to Liferay 6.2
+		</Change>
+		<Change>Added textbox to show current user's username</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.token-generator.1-1-2"
+		date="2016-02-29">
+		<Change>Minor bug fixes.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.token-generator.1-1-1"
+		date="2016-01-22">
+		<Change>Bug fix: alert the user when the service is not available.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.token-generator.1-1-0"
+		date="2016-01-15">
+		<Change>Added copy-to-clipboard and hide/show mechanisms for hiding
+			the token.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.token-generator.1-0-0"
+		date="2015-09-28">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

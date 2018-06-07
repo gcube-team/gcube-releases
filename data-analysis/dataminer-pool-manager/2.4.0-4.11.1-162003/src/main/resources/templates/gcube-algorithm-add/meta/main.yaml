@@ -1,0 +1,4 @@
+---
+dependencies:
+  <dependencies>
+  - { role: gcube-algorithm-installer }

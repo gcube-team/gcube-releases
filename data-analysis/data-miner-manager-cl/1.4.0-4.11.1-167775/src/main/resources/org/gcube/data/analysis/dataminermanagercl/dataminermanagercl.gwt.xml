@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='dataminermanagercl'>
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name="com.google.gwt.http.HTTP" />
+
+	
+	<!-- 
+	<entry-point
+		class='org.gcube.portlets.widgets.dataminermanagerwidget.client.DataMinerManager' />
+		 -->
+	<!-- <set-property name="log_ConsoleLogger" value="ENABLED" /> <set-property 
+		name="log_DivLogger" value="ENABLED" /> <set-property name="log_GWTLogger" 
+		value="ENABLED" /> <set-property name="log_SystemLogger" value="ENABLED" 
+		/> -->
+
+	<!-- 
+	<set-property name="log_ConsoleLogger" value="DISABLED" />
+	<set-property name="log_DivLogger" value="DISABLED" />
+	<set-property name="log_GWTLogger" value="DISABLED" />
+	<set-property name="log_SystemLogger" value="DISABLED" />
+	 -->
+
+
+
+	<source path='client' />
+	<source path='shared' />
+
+</module>

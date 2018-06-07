@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.widgets.application-news-widget.1-6-1"
+		date="2017-02-27">
+		<Change>Removed useless accesslogger dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.application-news-widget.1-5-0"
+		date="2014-09-16">
+		<Change>Added validator for urls</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.application-news-widget.1-4-0"
+		date="2014-06-04">
+		<Change>Adapted to gCore free portal</Change>
+	</Changeset>
+</ReleaseNotes>

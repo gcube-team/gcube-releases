@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-transfer.data-transfer-bom.1-0-0" date="2018-06-05">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,30 @@
+package org.gcube.application.aquamaps.aquamapsservice.stubs.fw.fields;
+
+public enum SubmittedFields {
+
+	title             ,
+	author            ,
+	jobid             ,
+	selectioncriteria ,
+	status            ,
+	searchid          ,
+	type              ,
+	isaquamap         ,
+	saved             ,
+	sourcehcaf        ,
+	sourcehspec       ,
+	sourcehspen       ,
+	gisenabled  ,
+	gispublishedid,
+//	geoserverreference,
+	starttime,
+	endtime,
+	submissiontime,
+	serializedrequest,	
+	speciescoverage,
+	iscustomized,
+	filesetid,
+	todelete,
+	serializedobject,
+	forceregeneration,
+}

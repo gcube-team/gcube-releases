@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$themeDisplay.getSiteGroupName() - $the_title</title>
+
+	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+
+	<meta property="og:title" content="$the_title - $themeDisplay.getSiteGroupName()" />
+	<meta property="og:type" content="article" />
+	<meta property="og:description" content="$themeDisplay.getLayout().getGroup().getDescription()" />
+	<meta property="og:url" content="$site_default_url" />
+	<meta property="og:image" content="$site_logo" />
+	
+	$theme.include($top_head_include)
+	<script type="text/javascript" src="$javascript_folder/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="$javascript_folder/gcube-context.js"></script>	
+</head>
+
+<body class="$css_class">
+<!-- start customisation -->
+<div class="modal" id="expirationModal" tabindex="-1" role="dialog" style="display: none;">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="label">Your session expired!</h4>
+        </div>
+        <div class="modal-body">
+            <div style="text-align:center; margin-bottom: 50px;">
+            	<i class="icon-time" style="color: #AAA; font-size: 10em;"></i>
+            </div>
+            <div style="font-size: 18px; text-align:center; margin-bottom: 50px;">
+            	Your session expired, please <a href="/c/portal/logout">login</a> again.
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+	injectClientContext();
+</script>
+<!-- end customisation -->
+
+<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+
+$theme.include($body_top_include)
+
+#if($is_signed_in)
+#dockbar()
+	<div class="feedback-container"><a href="http://support.d4science.org" target="_blank"><span>Report an issue</span><a></div>
+#end
+
+<div class="container-fluid" id="wrapper">
+	<header id="banner" role="banner">
+		<div id="heading">
+			<h1 class="site-title">
+				<a class="$logo_css_class" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
+					<img alt="$logo_description" src="$site_logo" class="d4science-logo"/>
+				</a>
+			</h1>
+
+			<h2 class="page-title">
+				<span>$the_title</span>
+			</h2>
+		</div>
+
+		#if ($has_navigation || $is_signed_in)
+			#parse ("$full_templates_path/navigation.vm")
+		#end
+	</header>
+
+	<div id="content">
+		<!-- nav id="breadcrumbs">#breadcrumbs()</nav -->
+
+		#if ($selectable)
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+
+			$portletDisplay.setTitle($the_title)
+
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end
+	</div>
+
+</div>
+
+<footer class="custom-footer">
+	<div class="custom-footer-container">
+	<a target="_blank" href="https://www.d4science.org/contact-us">Contact Us</a> |
+	<a target="_blank" href="/terms-of-use">Terms of Use</a> |
+	<a target="_blank" href="/cookie-policy">Cookies Policy</a> |
+	<a target="_blank" href="https://www.iubenda.com/privacy-policy/441050">Privacy Policy</a>  |  
+	<a target="_blank" href="http://www.liferay.com" title="liferay website">Liferay Portal</a> | 
+	<a target="_blank" href="http://www.d4science.org">D4Science Org Website</a>        
+
+    </div> 
+</footer>
+$theme.include($body_bottom_include)
+
+$theme.include($bottom_include)
+
+</body>
+
+</html>

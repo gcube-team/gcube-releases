@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE layout-templates PUBLIC "-//Liferay//DTD Layout Templates 6.2.0//EN" "http://www.liferay.com/dtd/liferay-layout-templates_6_2_0.dtd">
+
+<layout-templates>
+	<custom>
+		<layout-template id="VREHome-template"
+			name="VREHome-template">
+			<template-path>/VREHome-template.tpl</template-path>
+			<wap-template-path>
+				/VREHome-template.wap.tpl
+			</wap-template-path>
+			<thumbnail-path>/VREHome-template.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="socialhometemplate"
+			name="SocialHome-template">
+			<template-path>/socialhometemplate.tpl</template-path>
+			<wap-template-path>
+				/socialhometemplate.wap.tpl
+			</wap-template-path>
+			<thumbnail-path>/socialhometemplate.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="vremembers" name="VREMembers">
+			<template-path>/vremembers.tpl</template-path>
+			<wap-template-path>/vremembers.wap.tpl</wap-template-path>
+			<thumbnail-path>/vremembers.png</thumbnail-path>
+		</layout-template>
+		<layout-template id="threecolumnssobigdata"
+			name="Three columns sobigdata">
+			<template-path>/threecolumnssobigdata.tpl</template-path>
+			<wap-template-path>
+				/threecolumnssobigdata.wap.tpl
+			</wap-template-path>
+			<thumbnail-path>/threecolumnssobigdata.png</thumbnail-path>
+		</layout-template>
+	</custom>
+</layout-templates>

@@ -1,0 +1,171 @@
+@CHARSET "UTF-8";
+
+.button-link .x-btn-text {
+	cursor: pointer !important;
+	cursor: hand !important;
+	border: none !important;
+	/* Disable the button-style */
+	background-color: transparent !important;
+	background: none !important;
+	background-image: none !important;
+	/* 	padding: 0px !important; */
+	color: #4784C3 !important;
+	/*color: #000 !important;*/
+	font-weight: bold;
+	font-size: 10px;
+	/* 	width: 105px !important; */
+	/*font-family: Serif, "Times New Roman", Georgia;*/ /*color: black;*/
+	/*font-weight: bold;*/
+	/* 	text-decoration: underline !important; */
+}
+
+/* the position of the icon is setted with -5px of margin in horizontal*/
+.button-link .x-btn-image {
+	/* 	background-position: -3px, 0px !important; */
+	/* 	margin-right: 5px !important; */
+	
+}
+
+/* remove images */
+.button-link .x-btn-tl,.button-link.x-btn-tr,.button-link .x-btn-tc,.button-link .x-btn-ml,.button-link .x-btn-mr,.button-link .x-btn-mc,.button-link .x-btn-bl,.button-link .x-btn-br,.button-link .x-btn-bc
+	{
+	background-image: none !important;
+	background: none !important;
+}
+
+.button-link .x-btn-small .x-btn-mr,.button-link .x-btn-small .x-btn-ml,.button-link .x-btn-small .x-btn-mc,.button-link .x-btn-small .x-btn-br,.button-link .x-btn-small .x-btn-bl,.button-link .x-btn-small .x-btn-bc,.button-link .x-btn-small .x-btn-tc,.button-link .x-btn-small .x-btn-tr,.button-link .x-btn-small .x-btn-tl
+	{
+	background-image: none !important;
+	background: none !important;
+}
+/* remove little dots in FF */
+.button-link .x-btn-tl i,.button-link .x-btn-tr i,.button-link .x-btn-tc i,.button-link .x-btn-ml i,.button-link .x-btn-mr i,.button-link .x-btn-mc i,.button-link .x-btn-bl i,.button-link .x-btn-br i,.button-link .x-btn-bc i
+	{
+	font-size: 0px;
+}
+
+.button-hyperlink .x-btn-text {
+	cursor: pointer !important;
+	cursor: hand !important;
+	border: none !important;
+	/* Disable the button-style */
+	background-color: transparent !important;
+	background: none !important;
+	background-image: none !important;
+	text-align: center;
+	color: #4784C3 !important;
+	font-size: 10px;
+	text-decoration: underline !important;
+}
+
+/* remove images */
+.button-hyperlink .x-btn-tl,.button-hyperlink.x-btn-tr,.button-hyperlink .x-btn-tc,.button-hyperlink .x-btn-ml,.button-hyperlink .x-btn-mr,.button-hyperlink .x-btn-mc,.button-hyperlink .x-btn-bl,.button-hyperlink .x-btn-br,.button-hyperlink .x-btn-bc
+	{
+	background-image: none !important;
+	background: none !important;
+}
+
+.button-hyperlink .x-btn-small .x-btn-mr,.button-hyperlink .x-btn-small .x-btn-ml,.button-hyperlink .x-btn-small .x-btn-mc,.button-hyperlink .x-btn-small .x-btn-br,.button-hyperlink .x-btn-small .x-btn-bl,.button-hyperlink .x-btn-small .x-btn-bc,.button-hyperlink .x-btn-small .x-btn-tc,.button-hyperlink .x-btn-small .x-btn-tr,.button-hyperlink .x-btn-small .x-btn-tl
+	{
+	background-image: none !important;
+	background: none !important;
+}
+/* remove little dots in FF */
+.button-hyperlink .x-btn-tl i,.button-hyperlink .x-btn-tr i,.button-hyperlink .x-btn-tc i,.button-hyperlink .x-btn-ml i,.button-hyperlink .x-btn-mr i,.button-hyperlink .x-btn-mc i,.button-hyperlink .x-btn-bl i,.button-hyperlink .x-btn-br i,.button-hyperlink .x-btn-bc i
+	{
+	font-size: 0px;
+}
+
+.form-style-reduce-padding {
+	padding: 5px !important;
+}
+
+.fieldset-style-reduce-padding {
+	margin-bottom: none !important;
+	border-color: #B5B8C8;
+	padding: 5px;
+	display: block;
+	overflow: hidden;
+	/*     font: 11px tahoma,arial,helvetica,sans-serif; */
+}
+
+.fieldset-style-reduce-padding .x-fieldset-header .x-fieldset-header-text
+	{
+	font: bold 11px tahoma, arial, helvetica, sans-serif;
+	padding: 0 0 10px 5px;
+	vertical-align: middle;
+}
+
+table.job-table {
+	font-family: verdana, arial, sans-serif;
+	font-size: 12px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 1px solid #e3e3e3;
+	margin-top: 20px;
+	background-color: #FFF;
+	width: 95%;
+	margin: 5px 0 0 10px;
+	text-align: center;
+}
+
+table.job-table tr {
+	height: 21px;
+}
+
+table.job-table tr:first-child td {
+	background-color: #D3E1F1;
+	border: 1px solid;
+}
+
+table.job-table td {
+	text-align: center;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 1px solid #e3e3e3;
+}
+
+table.tabular-resource-table {
+	font-family: verdana, arial, sans-serif;
+	font-size: 12px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 1px solid #e3e3e3;
+	margin-top: 20px;
+	background-color: #FFF;
+	width: 95%;
+	margin: 5px 0 0 10px;
+}
+
+table.tabular-resource-table colgroup {
+	background-color: #D3E1F1;
+	text-align: center;
+}
+
+table.tabular-resource-table td {
+	text-align: center;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 1px solid #e3e3e3;
+}
+
+.taskpanel {
+	background-color: #FAFAFA !important;
+}
+
+.formatFieldText .x-form-text,textarea.x-form-field {
+	background-image: none !important;
+	background: none !important;
+	font-size: 11px;
+	background-color: #FCFCFC !important;
+}
+
+.moz-rounded-corners {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+ 	border: 1px solid #F0F0F0;
+ 	padding: 10px;
+ 	background-color: #FAFAFA;
+}

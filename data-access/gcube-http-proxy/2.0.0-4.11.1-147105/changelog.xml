@@ -1,0 +1,9 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-access.gcube-http-proxy.2-0-0" date="2017-02-25"> 
+		<Change>IS based domain filters added</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.gcube-http-proxy.1-0-0" date="2017-02-25"> 
+		<Change>First version</Change>
+	</Changeset>
+
+</ReleaseNotes>

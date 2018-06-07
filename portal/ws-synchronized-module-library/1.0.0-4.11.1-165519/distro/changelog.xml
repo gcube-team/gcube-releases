@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portal.ws-synchronized-module-library.1-0-0"
+		date="2018-03-16">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

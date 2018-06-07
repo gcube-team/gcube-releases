@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.datatransfer.vfs-provider-smp.1-0-0">
+		<Change>First release of the component</Change>
+	</Changeset>
+	<Changeset component="org.gcube.datatransfer.vfs-provider-smp.1-1-0"
+		date="2014-03-xx">
+		<Change>removed gCF deps</Change>
+		<Change>added outputstream to storage</Change>
+	</Changeset>
+	<Changeset component="org.gcube.datatransfer.vfs-provider-smp.1-1-1"
+		date="2014-03-xx">
+		<Change>modified SmpFileObject</Change>
+	</Changeset>
+</ReleaseNotes>

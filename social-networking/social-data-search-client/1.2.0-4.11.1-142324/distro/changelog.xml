@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.socialnetworking.social-data-search-client.1-2-0"
+		date="2017-02-01">
+		<Change>Added method to query a single field</Change>
+	</Changeset>
+	<Changeset component="org.gcube.socialnetworking.social-data-search-client.1-1-0"
+		date="2016-10-01">
+		<Change>Minor bug fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.socialnetworking.social-data-search-client.1-0-0"
+		date="2016-02-29">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

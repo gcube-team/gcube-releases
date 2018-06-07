@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="data-transfer-plugin-framework-1.0.0" date="2016-10-21">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="data-transfer-plugin-framework-1.0.1" date="2017-05-23">
+		<Change>ExecutionReport class moved to model</Change>
+	</Changeset>
+	<Changeset component="data-transfer-plugin-framework-1.0.2" date="2017-12-05">
+		<Change>Added getInfo to Factory</Change>
+	</Changeset>
+</ReleaseNotes>
