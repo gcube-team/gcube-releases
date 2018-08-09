@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+
+	<service name="gcube/data/tm">
+		
+			<environment name="configDir" value="@config.dir@" type="java.lang.String" override="false" />
+		 	
+		 	<resource name="localhome" type="org.gcube.data.tm.state.SourceHome">	
+		    <resourceParams>
+				<parameter>
+					<name>factory</name>
+					<value>org.globus.wsrf.jndi.BeanFactory</value>
+				</parameter>
+				<parameter>
+					<name>resourceClass</name>
+					<value>org.gcube.data.tm.state.SourceResource</value>
+				</parameter>
+				<parameter>
+					<name>persistenceDelegateClass</name>
+					<value>org.gcube.data.tm.state.SourcePersistenceDelegate</value>
+				</parameter>
+			</resourceParams>
+		</resource>
+		 	 	
+	</service>
+	
+	<service name="gcube/data/tm/binder">
+	
+		<resource name="publicationProfile" type="org.gcube.common.core.state.GCUBEPublicationProfile">	
+			<resourceParams>
+				<parameter>
+					<name>factory</name>
+					<value>org.globus.wsrf.jndi.BeanFactory</value>
+				</parameter>
+				<parameter>
+					<name>mode</name>
+					<value>push</value>
+				</parameter>
+				<parameter>
+					<name>fileName</name>
+					<value>binderPublication.xml</value>
+				</parameter>
+			</resourceParams>
+		</resource>
+		
+	
+		<resource name="home" type="org.gcube.data.tm.state.TBinderHome">	
+		    <resourceParams>
+				<parameter>
+					<name>factory</name>
+					<value>org.globus.wsrf.jndi.BeanFactory</value>
+				</parameter>
+				<parameter>
+					<name>resourceClass</name>
+					<value>org.gcube.data.tm.state.TBinderResource</value>
+				</parameter>
+				<parameter>
+					<name>persistenceDelegateClass</name>
+					<value>org.gcube.data.tm.state.TBinderPersistenceDelegate</value>
+				</parameter>
+			</resourceParams>
+		</resource>
+		
+	</service>
+	
+	<service name="gcube/data/tm/reader">
+	
+		<resource name="home" type="org.gcube.data.tm.state.TReaderHome">	
+		    <resourceParams>
+				<parameter>
+					<name>factory</name>
+					<value>org.globus.wsrf.jndi.BeanFactory</value>
+				</parameter>
+				<parameter>
+					<name>resourceClass</name>
+					<value>org.gcube.data.tm.state.TReaderResource</value>
+				</parameter>
+				<parameter>
+					<name>persistenceDelegateClass</name>
+					<value>org.gcube.data.tm.state.AccessorPersistenceDelegate</value>
+				</parameter>
+			</resourceParams>
+		</resource>
+		
+		<resourceLink name="localhome" target="java:comp/env/services/gcube/data/tm/localhome"/>
+		
+		<resource name="publicationProfile" type="org.gcube.common.core.state.GCUBEPublicationProfile">	
+			<resourceParams>
+				<parameter>
+					<name>factory</name>
+					<value>org.globus.wsrf.jndi.BeanFactory</value>
+				</parameter>
+				<parameter>
+					<name>mode</name>
+					<value>push</value>
+				</parameter>
+				<parameter>
+					<name>fileName</name>
+					<value>readerPublication.xml</value>
+				</parameter>
+			</resourceParams>
+		</resource>
+		
+	</service>
+	
+	<service name="gcube/data/tm/writer">
+	
+		<resource name="home" type="org.gcube.data.tm.state.TWriterHome">	
+		    <resourceParams>
+				<parameter>
+					<name>factory</name>
+					<value>org.globus.wsrf.jndi.BeanFactory</value>
+				</parameter>
+				<parameter>
+					<name>resourceClass</name>
+					<value>org.gcube.data.tm.state.TWriterResource</value>
+				</parameter>
+				<parameter>
+					<name>persistenceDelegateClass</name>
+					<value>org.gcube.data.tm.state.AccessorPersistenceDelegate</value>
+				</parameter>
+			</resourceParams>
+		</resource>
+		
+		<resourceLink name="localhome" target="java:comp/env/services/gcube/data/tm/localhome"/>	
+		
+		
+		<resource name="publicationProfile" type="org.gcube.common.core.state.GCUBEPublicationProfile">	
+			<resourceParams>
+				<parameter>
+					<name>factory</name>
+					<value>org.globus.wsrf.jndi.BeanFactory</value>
+				</parameter>
+				<parameter>
+					<name>mode</name>
+					<value>push</value>
+				</parameter>
+				<parameter>
+					<name>fileName</name>
+					<value>writerPublication.xml</value>
+				</parameter>
+			</resourceParams>
+		</resource>
+		
+	</service>
+
+</jndiConfig>

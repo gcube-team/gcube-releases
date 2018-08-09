@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<application mode='online'>
+		<name>accounting-service</name>
+		<group>Accounting</group>
+		<version>1.3.0-4.12.0-164691</version>
+		<description>Service Accounting Manger</description>
+		<local-persistence location='target' />
+		<exclude handlers='request-accounting'>/*</exclude>
+</application>
+

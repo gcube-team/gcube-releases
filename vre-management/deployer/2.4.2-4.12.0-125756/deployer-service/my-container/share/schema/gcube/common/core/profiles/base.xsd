@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+		XML Schema for GCUBE Base resource Version 1.2 Last modified: 13/02/2008	Contact: http://www.gcube-system.org
+			</xs:documentation>
+	</xs:annotation>
+	
+	<xs:redefine schemaLocation="CommonTypeDefinitions.xsd">
+		<xs:complexType name="ProfileType">
+		</xs:complexType>
+	</xs:redefine>
+	
+</xs:schema>

@@ -1,0 +1,20 @@
+<ReleaseNotes>
+	<Changeset component="it.eng.edison.surveydisplay_portlet.1-3-0"
+		date="2018-01-26">
+		<Change>Generalised to support quiestionnaires</Change>
+	</Changeset>
+	<Changeset component="it.eng.edison.surveydisplay_portlet.1-2-0"
+		date="2017-06-26">
+		<Change>fixed Bug not all sections are visualised if the type of
+			question is scale</Change>
+	</Changeset>
+	<Changeset component="it.eng.edison.surveydisplay_portlet.1-2-0"
+		date="2017-05-25">
+		<Change>Added loading gif when Survey is loading as it can take up to
+			5 seconds to load</Change>
+	</Changeset>
+	<Changeset component="it.eng.edison.surveydisplay_portlet.1-0-0"
+		date="2016-12-06">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

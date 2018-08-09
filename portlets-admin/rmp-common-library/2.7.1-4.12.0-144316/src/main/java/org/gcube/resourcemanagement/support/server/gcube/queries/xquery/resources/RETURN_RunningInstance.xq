@@ -1,0 +1,11 @@
+<Resource>
+        {$profiles/ID}
+        <Type>{$profiles/Type/text()}</Type>
+        <SubType>{$subtype}</SubType>
+        <Scopes>{$scopes}</Scopes>
+        <ServiceClass>{$profiles/Profile/ServiceClass/text()}</ServiceClass>
+        <ServiceName>{$profiles/Profile/ServiceName/text()}</ServiceName>
+        <Version>{$profiles/Profile/Version/text()}</Version>
+        <Status>{$profiles/Profile/DeploymentData/Status/text()}</Status>
+        <ghn-name>{$ghn-name}</ghn-name>
+</Resource>

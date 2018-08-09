@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<!-- POM file generated with GWT webAppCreator -->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.gcube.portlets.user</groupId>
+	<artifactId>tabular-data-manager</artifactId>
+	<version>2.19.0-4.12.0-169577</version>
+	<packaging>war</packaging>
+
+
+	<name>tabular-data-manager</name>
+	<description>tabular-data-manager manages tabular data</description>
+
+	<scm>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/portlets/user/tabular-data-portlet</url>
+	</scm>
+
+
+	<developers>
+		<developer>
+			<name>Giancarlo Panichi</name>
+			<email>g.panichi@isti.cnr.it</email>
+			<organization>CNR Pisa, Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo"</organization>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+
+	<properties>
+		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+		<distroDirectory>distro</distroDirectory>
+		<configDirectory>config</configDirectory>
+
+		<!-- JAVA -->
+		<maven.compiler.source>1.7</maven.compiler.source>
+
+		<!-- GWT configuration -->
+		<gwtVersion>2.6.1</gwtVersion>
+		<gwtLogVersion>3.3.2</gwtLogVersion>
+		<gxtVersion>3.1.1</gxtVersion>
+		<gxt2Version>2.6.1</gxt2Version>
+
+
+		<KEYS>${env.KEYS}</KEYS>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>localRun</id>
+			<dependencies>
+				<!-- Authorization -->
+				<dependency>
+					<groupId>org.gcube.common</groupId>
+					<artifactId>common-authorization</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+
+				<dependency>
+					<groupId>org.gcube.common</groupId>
+					<artifactId>authorization-client</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+
+
+				<!-- Storage -->
+				<dependency>
+					<groupId>org.gcube.contentmanagement</groupId>
+					<artifactId>storage-manager-core</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+				<dependency>
+					<groupId>org.gcube.contentmanagement</groupId>
+					<artifactId>storage-manager-wrapper</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+
+				<!-- StorageHub -->
+				<dependency>
+					<groupId>org.gcube.common</groupId>
+					<artifactId>storagehub-client-library</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+
+				<!-- Home Library -->
+				<dependency>
+					<groupId>org.gcube.common</groupId>
+					<artifactId>home-library</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+				<dependency>
+					<groupId>org.gcube.common</groupId>
+					<artifactId>home-library-jcr</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+				<dependency>
+					<groupId>org.gcube.common</groupId>
+					<artifactId>home-library-model</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+
+				<dependency>
+					<groupId>xerces</groupId>
+					<artifactId>xercesImpl</artifactId>
+					<version>2.11.0</version>
+				</dependency>
+
+				<!-- Log -->
+				<dependency>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+					<scope>compile</scope>
+				</dependency>
+				<dependency>
+					<groupId>ch.qos.logback</groupId>
+					<artifactId>logback-classic</artifactId>
+					<version>1.0.1</version>
+					<scope>runtime</scope>
+				</dependency>
+
+			</dependencies>
+		</profile>
+	</profiles>
+
+	<dependencies>
+
+		<!-- GWT -->
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>${gwtVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-servlet</artifactId>
+			<version>${gwtVersion}</version>
+		</dependency>
+
+		<!-- GXT 2 -->
+		<dependency>
+			<groupId>com.sencha.gxt</groupId>
+			<artifactId>gxt2.2.5-gwt2.X</artifactId>
+			<version>${gxt2Version}</version>
+		</dependency>
+
+
+		<!-- GXT 3 -->
+		<dependency>
+			<groupId>com.sencha.gxt</groupId>
+			<artifactId>gxt</artifactId>
+			<version>${gxtVersion}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sencha.gxt</groupId>
+			<artifactId>gxt-chart</artifactId>
+			<version>${gxtVersion}</version>
+		</dependency>
+
+
+		<!-- Portlet -->
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+
+		<!-- PORTAL -->
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-scope-maps</artifactId>
+			<!-- <version>[1.0.2-SNAPSHOT,2.0.0-SNAPSHOT)</version> -->
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common.portal</groupId>
+			<artifactId>portal-manager</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.dvos</groupId>
+			<artifactId>usermanagement-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.portal</groupId>
+			<artifactId>client-context-library</artifactId>
+			<version>1.0.0-4.12.0-134944</version>
+			<scope>compile</scope>
+		</dependency>
+
+
+		<!-- Authorization -->
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>common-authorization</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>authorization-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Social -->
+		<dependency>
+			<groupId>org.gcube.portal</groupId>
+			<artifactId>social-networking-library</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>aslsocial</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Storage -->
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-wrapper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- StorageHub -->
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>storagehub-client-library</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+
+		<!-- Home Library -->
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library-jcr</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library-model</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- Session Checker -->
+		<dependency>
+			<groupId>org.gcube.portlets.widgets</groupId>
+			<artifactId>session-checker</artifactId>
+			<version>1.0.1-4.12.0-129562</version>
+		</dependency>
+
+
+		<!-- service-client-impl -->
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>service-client-impl</artifactId>
+			<version>2.6.1-4.12.0-144782</version>
+		</dependency>
+
+		<!-- Apache Common Library -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.juniversalchardet</groupId>
+			<artifactId>juniversalchardet</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+
+		<!-- csv4j -->
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>csv4j</artifactId>
+			<version>1.2.0-4.12.0-130659</version>
+		</dependency>
+
+
+		<!-- workspace-explorer -->
+		<dependency>
+			<groupId>org.gcube.portlets.widgets</groupId>
+			<artifactId>workspace-explorer</artifactId>
+			<version>2.0.0-4.12.0-169624</version>
+		</dependency>
+
+
+		<!-- tabular-data-widget-common-event -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-widget-common-event</artifactId>
+			<version>1.12.0-4.12.0-162147</version>
+		</dependency>
+
+		<!-- tabular-data-gwt-service -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-gwt-service</artifactId>
+			<version>2.21.0-4.12.0-169571</version>
+		</dependency>
+
+		<!-- tabular-data-monitor-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-monitor-widget</artifactId>
+			<version>1.5.0-4.12.0-151295</version>
+		</dependency>
+
+		<!-- tabular-data-wizard-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-wizard-widget</artifactId>
+			<version>1.9.0-4.12.0-126004</version>
+		</dependency>
+
+		<!-- tabular-data-mainbox-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-mainbox-widget</artifactId>
+			<version>1.8.0-4.12.0-169573</version>
+		</dependency>
+
+
+		<!-- TD Expression -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-expression-widget</artifactId>
+			<version>1.10.0-4.12.0-148656</version>
+		</dependency>
+
+		<!-- TDX Source -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-widgetx-tdx-source</artifactId>
+			<version>1.10.0-4.12.0-142668</version>
+		</dependency>
+
+		<!-- tabular-data-resources-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-resources-widget</artifactId>
+			<version>1.8.0-4.12.0-169574</version>
+		</dependency>
+
+
+		<!-- tabular-data-share-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-share-widget</artifactId>
+			<version>1.10.0-4.12.0-142624</version>
+		</dependency>
+
+		<!-- tabular-data-rule-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-rule-widget</artifactId>
+			<version>1.3.0-4.12.0-142636</version>
+		</dependency>
+
+		<!-- tabular-data-csv-import-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-csv-import-widget</artifactId>
+			<version>2.10.0-4.12.0-169570</version>
+		</dependency>
+
+		<!-- tabular-data-sdmx-import-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-sdmx-import-widget</artifactId>
+			<version>2.8.0-4.12.0-142639</version>
+		</dependency>
+
+		<!-- tabular-data-open-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-open-widget</artifactId>
+			<version>2.9.0-4.12.0-125846</version>
+		</dependency>
+
+		<!-- tabular-data-csv-export-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-csv-export-widget</artifactId>
+			<version>1.10.0-4.12.0-169569</version>
+		</dependency>
+
+		<!-- tabular-data-sdmx-export-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-sdmx-export-widget</artifactId>
+			<version>1.11.0-4.12.0-160457</version>
+		</dependency>
+
+		<!-- tabular-data-json-export-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-json-export-widget</artifactId>
+			<version>1.6.0-4.12.0-169572</version>
+		</dependency>
+
+		<!-- tabular-data-excel-export-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-excel-export-widget</artifactId>
+			<version>1.0.0-4.12.0-162149</version>
+		</dependency>
+
+		<!-- tabular-data-codelistmapping-import-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-codelistmapping-import-widget</artifactId>
+			<version>1.9.0-4.12.0-169568</version>
+		</dependency>
+
+		<!-- tabular-data-table-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-table-widget</artifactId>
+			<version>1.8.0-4.12.0-142634</version>
+		</dependency>
+
+		<!--tabular-data-information-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-information-widget</artifactId>
+			<version>2.9.0-4.12.0-125830</version>
+		</dependency>
+
+		<!-- tabular-data-column-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-column-widget</artifactId>
+			<version>1.10.0-4.12.0-142633</version>
+		</dependency>
+
+		<!-- tabular-data-toolbox-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-toolbox-widget</artifactId>
+			<version>1.12.0-4.12.0-142642</version>
+		</dependency>
+
+		<!-- tabular-data-extractcodelist-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-extractcodelist-widget</artifactId>
+			<version>1.7.0-4.12.0-125826</version>
+		</dependency>
+
+		<!-- tabular-data-unionwizard-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-unionwizard-widget</artifactId>
+			<version>1.5.0-4.12.0-125889</version>
+		</dependency>
+
+		<!-- tabular-data-replacebyexternal-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-replacebyexternal-widget</artifactId>
+			<version>1.3.0-4.12.0-131984</version>
+		</dependency>
+
+		<!-- tabular-data-charts-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-charts-widget</artifactId>
+			<version>1.3.0-4.12.0-142630</version>
+		</dependency>
+
+		<!-- tabular-data-map-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-map-widget</artifactId>
+			<version>1.3.0-4.12.0-125837</version>
+		</dependency>
+
+		<!-- tabular-data-statistical-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-statistical-widget</artifactId>
+			<version>1.6.0-4.12.0-169575</version>
+		</dependency>
+
+
+
+		<!--tabular-data-tasks-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-tasks-widget</artifactId>
+			<version>1.5.0-4.12.0-142124</version>
+		</dependency>
+
+		<!-- tabular-data-template -->
+		<dependency>
+			<groupId>org.gcube.portlets.user.tdtemplate</groupId>
+			<artifactId>tabular-data-template</artifactId>
+			<version>1.8.0-4.12.0-142129</version>
+		</dependency>
+
+		<!-- tabular-data-column-operation-widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.user.tdcolumnoperation</groupId>
+			<artifactId>tabular-data-column-operation</artifactId>
+			<version>1.5.0-4.12.0-142122</version>
+		</dependency>
+
+
+
+		<!-- LOGGING -->
+		<dependency>
+			<groupId>com.allen-sauer.gwt.log</groupId>
+			<artifactId>gwt-log</artifactId>
+			<version>${gwtLogVersion}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.1</version>
+			<scope>runtime</scope>
+		</dependency>
+
+
+		<!-- JUnit TEST -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+
+		<!-- Generate compiled stuff in the folder used for developing mode -->
+		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<!-- GWT Maven Plugin -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>${gwtVersion}</version>
+				<executions>
+					<execution>
+						<configuration>
+							<extraJvmArgs>-Xmx1024M -Xss1024k -Dgwt.compiler.localWorkers=1</extraJvmArgs>
+
+						</configuration>
+						<goals>
+							<goal>compile</goal>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<runTarget>tabulardataportlet.html</runTarget>
+					<hostedWebapp>${webappDirectory}</hostedWebapp>
+					<module>org.gcube.portlets.user.td.tabulardataportlet</module>
+					<!-- <style>DETAILED</style> -->
+					<!-- <style>PRETTY</style> -->
+				</configuration>
+			</plugin>
+
+			<!-- Copy static web files before executing gwt:run -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<!--<goals> <goal>exploded</goal> </goals> -->
+					</execution>
+				</executions>
+				<configuration>
+					<webappDirectory>${webappDirectory}</webappDirectory>
+					<warName>${project.build.finalName}</warName>
+
+					<!-- Include static jar into WEB-INF/lib -->
+					<!-- <webResources> <resource> <directory>lib</directory> <includes> 
+						<include>*.jar</include> </includes> <targetPath>WEB-INF/lib</targetPath> 
+						</resource> </webResources> -->
+				</configuration>
+			</plugin>
+
+			<!-- Maven Surefire Plugin for Test -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.16</version>
+				<configuration>
+					<skipTests>false</skipTests>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.surefire</groupId>
+						<artifactId>surefire-junit47</artifactId>
+						<version>2.16</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+
+	</build>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-portal-bom</artifactId>
+				<version>3.4.0-4.12.0-169455</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+</project>

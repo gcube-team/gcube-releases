@@ -1,0 +1,92 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def upIcon literal('url(')value('upBtn.getSafeUri.asString',')');
+@def allRightIcon literal('url(')value('allRightBtn.getSafeUri.asString',')');
+@def rightIcon literal('url(')value('rightBtn.getSafeUri.asString',')');
+@def leftIcon literal('url(')value('leftBtn.getSafeUri.asString',')');
+@def allLeftIcon literal('url(')value('allLeftBtn.getSafeUri.asString',')');
+@def downIcon literal('url(')value('downBtn.getSafeUri.asString',')');
+
+@def width value('upBtn.getWidth', 'px');
+@def height value('upBtn.getHeight', 'px');
+
+
+@def borderRadius value('theme.toolbar.buttonOverride.borderRadius', 'px');
+@def borderColor value('theme.toolbar.buttonOverride.border.color');
+@def borderStyle value('theme.toolbar.buttonOverride.border.style');
+@def borderWidth value('theme.toolbar.buttonOverride.border.toString');
+
+@def gradient value('theme.toolbar.buttonOverride.gradient');
+
+
+
+
+.IconButtonStyle-button.up,
+.IconButtonStyle-button.allRight,
+.IconButtonStyle-button.right,
+.IconButtonStyle-button.left,
+.IconButtonStyle-button.allLeft,
+.IconButtonStyle-button.down
+{
+  border-radius: borderRadius;
+  border-width: borderWidth;
+  border-style: borderStyle;
+  border-color: borderColor;
+
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-position: center center, left top;
+  width: width;
+  height: height;
+}
+
+
+.up {
+  background-image: upIcon, -webkit-linear-gradient(top, gradient); /* Chrome10+,Safari5.1+ */
+  background-image: upIcon, -o-linear-gradient(top, gradient); /* Opera 11.10+ */
+  background-image: upIcon, -ms-linear-gradient(top, gradient); /* IE10+ */
+  background-image: upIcon, linear-gradient(to bottom, gradient); /* W3C */
+}
+
+.allRight {
+  background-image: allRightIcon, -webkit-linear-gradient(top, gradient); /* Chrome10+,Safari5.1+ */
+  background-image: allRightIcon, -o-linear-gradient(top, gradient); /* Opera 11.10+ */
+  background-image: allRightIcon, -ms-linear-gradient(top, gradient); /* IE10+ */
+  background-image: allRightIcon, linear-gradient(to bottom, gradient); /* W3C */
+}
+
+.right {
+  background-image: rightIcon, -webkit-linear-gradient(top, gradient); /* Chrome10+,Safari5.1+ */
+  background-image: rightIcon, -o-linear-gradient(top, gradient); /* Opera 11.10+ */
+  background-image: rightIcon, -ms-linear-gradient(top, gradient); /* IE10+ */
+  background-image: rightIcon, linear-gradient(to bottom, gradient); /* W3C */
+}
+
+.left {
+  background-image: leftIcon, -webkit-linear-gradient(top, gradient); /* Chrome10+,Safari5.1+ */
+  background-image: leftIcon, -o-linear-gradient(top, gradient); /* Opera 11.10+ */
+  background-image: leftIcon, -ms-linear-gradient(top, gradient); /* IE10+ */
+  background-image: leftIcon, linear-gradient(to bottom, gradient); /* W3C */
+}
+
+.allLeft {
+  background-image: allLeftIcon, -webkit-linear-gradient(top, gradient); /* Chrome10+,Safari5.1+ */
+  background-image: allLeftIcon, -o-linear-gradient(top, gradient); /* Opera 11.10+ */
+  background-image: allLeftIcon, -ms-linear-gradient(top, gradient); /* IE10+ */
+  background-image: allLeftIcon, linear-gradient(to bottom, gradient); /* W3C */
+}
+
+.down {
+  background-image: downIcon, -webkit-linear-gradient(top, gradient); /* Chrome10+,Safari5.1+ */
+  background-image: downIcon, -o-linear-gradient(top, gradient); /* Opera 11.10+ */
+  background-image: downIcon, -ms-linear-gradient(top, gradient); /* IE10+ */
+  background-image: downIcon, linear-gradient(to bottom, gradient); /* W3C */
+}
+
+

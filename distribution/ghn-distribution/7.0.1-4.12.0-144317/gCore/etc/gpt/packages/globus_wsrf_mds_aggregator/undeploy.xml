@@ -1,0 +1,23 @@
+<project default="undeploy" basedir=".">
+
+
+<property environment="env"/>
+<property file="build.properties"/>
+<property file="${user.home}/build.properties"/>
+<property name="env.GLOBUS_LOCATION" value="../../.."/>
+<property name="deploy.dir" value="${env.GLOBUS_LOCATION}"/>
+
+
+<target name="undeploy">
+  <delete verbose="true" dir="${deploy.dir}/etc/globus_wsrf_mds_aggregator"/>
+  <delete verbose="true" file="${deploy.dir}/lib/globus_wsrf_mds_aggregator.jar"/>
+  <delete verbose="true" file="${deploy.dir}/lib/globus_wsrf_mds_aggregator_stubs.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/mds/aggregator/AggregatorServiceGroupEntry_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/mds/aggregator/AggregatorServiceGroupEntry_service.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/mds/aggregator/AggregatorServiceGroup_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/mds/aggregator/AggregatorServiceGroup_service.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/mds/aggregator/aggregator-types.xsd"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/mds/aggregator/aggregator_service_group_entry_port_type.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/mds/aggregator/aggregator_service_group_port_type.wsdl"/>
+</target>
+</project>

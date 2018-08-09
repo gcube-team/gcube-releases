@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.dataanalysis.statistical_manager_wps_algorithms.2-2-0"
+		date="2017-02-15">
+		<Change>Fixed dependency</Change>
+	</Changeset>	
+	<Changeset component="org.gcube.dataanalysis.statistical_manager_wps_algorithms.2-1-0"
+		date="2016-12-01">
+		<Change>Migrate to DataMiner</Change>
+	</Changeset>	
+	<Changeset component="org.gcube.dataanalysis.statistical_manager_wps_algorithms.1-0-0"
+		date="2014-06-21">
+		<Change>First Release</Change>
+	</Changeset>	
+</ReleaseNotes>

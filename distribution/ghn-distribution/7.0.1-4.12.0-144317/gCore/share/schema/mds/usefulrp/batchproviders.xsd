@@ -1,0 +1,144 @@
+<!--
+Portions of this file Copyright 1999-2005 University of Chicago
+Portions of this file Copyright 1999-2005 The University of Southern California.
+
+This file or a portion of this file is licensed under the
+terms of the Globus Toolkit Public License, found at
+http://www.globus.org/toolkit/download/license.html.
+If you redistribute this file, with or without
+modifications, you must include this notice in the file.
+-->
+<schema targetNamespace="http://mds.globus.org/batchproviders/2004/09"
+        xmlns:sched="http://mds.globus.org/batchproviders/2004/09"
+        xmlns:ce="http://mds.globus.org/glue/ce/1.1"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        attributeFormDefault="qualified"
+        elementFormDefault="qualified"
+        xml:lang="en" >
+
+<!-- this file provides schemas for the API between the scheduler and queue 
+     information providers and the GLUERP implementation -->
+
+<xsd:import
+     namespace="http://mds.globus.org/glue/ce/1.1"
+     schemaLocation="ce.xsd"  />
+
+<complexType name="SchedulerType">
+  <annotation><documentation>
+    Contains information from schedulers for use by the GLUE RP.
+  </documentation></annotation>
+  <sequence>
+    <element name="Info" type="ce:InfoType" minOccurs="0" maxOccurs="1" />
+    <element name="Queue" type="sched:QueueType" minOccurs="0" maxOccurs="unbounded" />
+    <any namespace="##other" minOccurs="0" maxOccurs="unbounded"/>
+  </sequence>
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+<complexType name="QueueType">
+  <annotation><documentation>
+    Contains information about one queue.
+  </documentation></annotation>
+  <sequence>
+    <element name="totalnodes" type="sched:intUnlimitedUnknownType" />
+    <element name="freenodes" type="sched:intUnlimitedUnknownType" />
+    <element name="totalJobs" type="sched:intUnlimitedUnknownType">
+      <annotation><documentation>cannot be unlimited</documentation></annotation>
+    </element>
+    <element name="runningJobs" type="sched:intUnlimitedUnknownType">
+      <annotation><documentation>cannot be unlimited</documentation></annotation>
+    </element>
+    
+    <element name="maxtime" type="sched:intUnlimitedUnknownType">
+      <annotation><documentation>units: minutes</documentation></annotation>
+    </element>
+
+    <element name="maxCPUtime" type="sched:intUnlimitedUnknownType">
+      <annotation><documentation>units: minutes</documentation></annotation>
+    </element>
+
+    <element name="maxCount" type="sched:intUnlimitedUnknownType">
+      <annotation><documentation>units: processes</documentation></annotation>
+    </element>
+
+    <element name="maxReqNodes" type="sched:intUnlimitedUnknownType" >
+      <annotation><documentation>units: hosts/nodes (could be multi-processor nodes)</documentation></annotation>
+    </element>
+
+    <element name="maxRunningJobs" type="sched:intUnlimitedUnknownType">
+      <annotation><documentation>units: number of jobs</documentation></annotation>
+    </element>
+
+    <element name="maxJobsInQueue" type="sched:intUnlimitedUnknownType">
+      <annotation><documentation>units: number of jobs</documentation></annotation>
+    </element>
+
+
+    <element name="maxTotalMemory" type="sched:intUnlimitedUnknownType">
+      <annotation><documentation>units: megabytes</documentation></annotation>
+    </element>
+
+    <element name="maxSingleMemory" type="sched:intUnlimitedUnknownType">
+      <annotation><documentation>units: megabytes</documentation></annotation>
+    </element>
+
+    <element name="whenActive" type="sched:intUnlimitedUnknownType" />
+
+    <!-- the below two elements could be enumerated types instead? -->
+    <element name="status" type="xsd:string" >
+      <annotation><documentation>Possible values are 'enabled' or 'disabled'</documentation></annotation>
+    </element>
+    <element name="dispatchType" type="xsd:string">
+      <annotation><documentation>stu says: I am not even sure what 
+                                 dispatch type is for.  All the scripts 
+                                 have a hard coded "batch".  maybe this 
+                                 should be removed.
+      </documentation></annotation>
+    </element>
+    <any namespace="##other" minOccurs="0" maxOccurs="unbounded" />
+  </sequence>
+  <attribute name="name" type="xsd:string" />
+  <anyAttribute namespace="##other"/>
+</complexType>
+
+<simpleType name="intUnlimitedUnknownType">
+  <union memberTypes="xsd:int xsd:NMTOKEN" />
+</simpleType>
+
+<!-- 
+<Scheduler>
+    <Queue name="dque">
+       <totalnodes>151</totalnodes>
+       <freenodes>139</freenodes>
+       <maxtime>unlimited</maxtime>
+       <maxCPUtime>unlimited</maxCPUtime>
+       <maxCount>151</maxCount>
+       <maxReqNodes>unlimited</maxReqNodes>
+       <maxRunningJobs>0</maxRunningJobs>
+       <maxJobsInQueue>0</maxJobsInQueue>
+       <maxTotalMemory>unlimited</maxTotalMemory>
+       <maxSingleMemory>unlimited</maxSingleMemory>
+       <whenActive>0</whenActive>
+       <status>enabled</status>
+       <dispatchType>batch</dispatchType>
+    </Queue>
+</Scheduler>
+-->
+
+
+<complexType name="ClusterCollectionType">
+  <annotation><documentation>
+    Internal type for cluster info APIs
+  </documentation></annotation>
+  <sequence>
+      <element minOccurs="0" maxOccurs="unbounded" ref="ce:Cluster"/>
+  </sequence>
+</complexType>
+
+
+
+
+
+</schema>
+

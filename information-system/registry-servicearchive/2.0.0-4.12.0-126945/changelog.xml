@@ -1,0 +1,44 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.registry.2-1-3" date="2012-04-05">
+			<Change>Adding WS-Topic for the new Runtime Resource</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry.2-1-2" date="2011-10-06">
+			<Change>Adding mapping for the new Runtime Resource</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry.2-1-1" date="2011-07-11">
+			<Change>WS-Resources of a to-be-removed RI are deleted synchronously and bulky</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry.2-1-0" date="2011-03-25">
+		<Change>Adding pre/post processing mechanisms for configurable resource manipulation</Change>
+		<Change>Removing the old and unused Registry portType</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.information-system.registry.2-0-0" date="2011-02-07">
+		<Change>Porting on the new XMLCollectionAccess portType exposed by the IS-Collector</Change>
+		<Change>New ResourceRegistration portType</Change>
+		<Change>Stateless service</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry.1-4-0" date="2010-08-30">
+		<Change>Classes of living resources configurable via JNDI</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry.1-3-3" date="2010-05-14">
+		<Change>added the resource profile in the notification message</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry.1-3-2" date="2009-10-20">
+		<Change>porting on gCore v.060</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry.1-3-1" date="2009-10-01">
+		<Change>startRegistration/updateState/AddRemoveScopes operations removed from Factory Service</Change>
+		<Change>cleanup of old notification code in ProfileResource</Change>
+		<Change>cleanup of resource package</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry.1-3-0" date="2009-09-04">
+		<Change>porting on the new IS-IC portType</Change>
+		<Change>some internal refactoring</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.registry.1-2-0" date="2009-05-27">
+		<Change>porting on gCore v.0.5.0</Change>
+		<Change>new Service Map structure</Change>
+		<Change>filters on gCubeResource for banning</Change>
+	</Changeset>
+</ReleaseNotes>

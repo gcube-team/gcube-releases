@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.gcube.portlets.user</groupId>
+	<artifactId>csv-import-wizard</artifactId>
+	<version>1.3.0-4.12.0-130417</version>
+	<name>CSV Import Wizard</name>
+	<description>CSV Import Wizard</description>
+
+
+	<properties>
+		<distroDirectory>distro</distroDirectory>
+		<configDirectory>config</configDirectory>
+		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+		
+			
+		<!-- GWT configuration -->
+		<gwtVersion>2.6.1</gwtVersion>
+		<gwtLogVersion>3.3.2</gwtLogVersion> 
+		<gxtVersion>3.1.1</gxtVersion>
+		<gxt2Version>2.6.1</gxt2Version>
+	
+		<!-- To make this work on gwt-run you need to set up global env vars. on 
+			MacOSX edit this file /etc/launchd.conf and put "setenv GLOBUS_LOCATION /Users/massi/portal/Portal-Bundle/gCore" 
+			on Linux? -->
+		<GLOBUS_LOCATION>${env.GLOBUS_LOCATION}</GLOBUS_LOCATION>
+		<!-- GWT needs at least java 1.5 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>localRun</id>
+			<dependencies>
+				<dependency>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+					<scope>compile</scope>
+				</dependency>
+				<dependency>
+					<groupId>ch.qos.logback</groupId>
+					<artifactId>logback-classic</artifactId>
+					<version>1.0.1</version>
+					<scope>runtime</scope>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
+
+
+	<scm>
+		<connection>scm:svn:https://svn.d4science-ii.research-infrastructures.eu/gcube/trunk/portlets/user/CSVImportWizard</connection>
+		<developerConnection>scm:svn:https://svn.d4science-ii.research-infrastructures.eu/gcube/trunk/portlets/user/CSVImportWizard</developerConnection>
+		<url>https://svn.d4science-ii.research-infrastructures.eu/gcube/trunk/portlets/user/CSVImportWizard</url>
+	</scm>
+
+	<developers>
+		<developer>
+			<name>Federico De Faveri</name>
+			<email>federico.defaveri@isti.cnr.it</email>
+			<organization>CNR Pisa, Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo"</organization>
+		</developer>
+		<developer>
+			<name>Giancarlo Panichi</name>
+			<email>giancarlo.panichi@isti.cnr.it</email>
+			<organization>CNR Pisa, Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo"</organization>
+		</developer>
+	</developers>
+
+
+	<dependencies>
+		<!-- Google Web Toolkit (GWT) -->
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>${gwtVersion}</version>
+		</dependency>
+		
+		<!-- GXT 2 -->
+		<dependency>
+			<groupId>com.sencha.gxt</groupId>
+			<artifactId>gxt2.2.5-gwt2.X</artifactId>
+			<version>${gxt2Version}</version>
+		</dependency>
+		
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>csv4j</artifactId>
+			<version>1.2.0-4.12.0-130659</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.googlecode.juniversalchardet</groupId>
+			<artifactId>juniversalchardet</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+
+		<!-- LOGGING -->
+		<dependency>
+			<groupId>com.allen-sauer.gwt.log</groupId>
+			<artifactId>gwt-log</artifactId>
+			<version>${gwtLogVersion}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+
+
+		<!-- JUnit TEST -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/test/java</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<!-- GWT Maven Plugin -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>${gwtVersion}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<runTarget>TDOpen.html</runTarget>
+					<hostedWebapp>${webappDirectory}</hostedWebapp>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.16</version>
+				<configuration>
+					<skipTests>false</skipTests>
+				</configuration>
+				<!-- TODO check if needed -->
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.surefire</groupId>
+						<artifactId>surefire-junit47</artifactId>
+						<version>2.16</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+			
+
+			<!-- Copy static web files before executing gwt:run -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<!-- <goals> -->
+						<!-- <goal>exploded</goal> -->
+						<!-- </goals> -->
+					</execution>
+				</executions>
+				<configuration>
+					<webappDirectory>${webappDirectory}</webappDirectory>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+		</plugins>
+	</build>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-portal-bom</artifactId>
+				<version>3.4.0-4.12.0-169455</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

@@ -1,0 +1,304 @@
+.absolute_panel {
+	border: 1px solid #99BBE8;
+	background: #f2f7fc;
+	height: 580px;
+	width: 100%;
+}
+	
+.geo-panel-header {
+	background: transparent url(../images/white-top-bottom.gif) repeat-x scroll 0 -1px;
+	border: 1px solid #99BBE8;
+	color: #15428B;
+	font-family: tahoma,arial,verdana,sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 15px;
+	padding: 5px 3px 4px 5px;
+	height: 16px;
+}
+
+.geo-panel-body {
+	background:white;
+}
+
+.geo-panel {
+	border-style:none solid solid;
+	border-width:0 1px 1px;
+	border-color: #99BBE8;
+	background-color: #ffffff;
+	font-family: tahoma,arial,verdana,sans-serif;
+	font-size: 9px;
+	color: #15428B;
+}
+
+.geo-tree {
+	border: 0px;
+}
+
+.geo-toolbar {
+	background: #D0DEF0 url(../images/bg.gif) repeat-x scroll left top;
+	border: 1px solid #99BBE8;
+	color: #15428B;
+	font-family: tahoma,arial,verdana,sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 15px;
+	padding: 3px 3px 2px 3px;
+	width: 100%;
+}
+
+.geo-tools {
+	background-image: url(../images/tool-sprites.gif);
+}
+
+.geo-tool-collapse-south {
+	background-position:0 -195px;
+}
+.geo-tool-expand-south {
+	background-position:0 -210px;
+}
+
+.geo-tool-collapse-west {
+	background-position:0 -180px;
+}
+
+.geo-tool-expand-west {
+	background-position:0 -165px;
+}
+
+.geo-tool-maximize {
+	background-position:0 -30px;
+}
+
+.geo-tool-minimize {
+	background-position:0 -15px;
+}
+
+.geo-tool-close {
+	background-position:0 0;
+}
+
+.geo-tool-close: hover {
+	background-position:-15px 0;
+}
+
+.geo-tool {
+	  border: 0px;
+	  background-color: #efebe7;
+	  height: 15px;
+	  width: 15px;
+	  margin: 0;
+	  text-decoration: none;
+	  font-size: small;
+	  cursor: pointer;
+	  cursor: hand;
+	  float: right;
+}
+
+.geo-window-header {
+	color:#15428B;
+	font-family:tahoma,arial,verdana,sans-serif;
+	font-size:11px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:normal;
+}
+
+.geo-window-header-text {
+}
+
+.layers_ico {
+	background: transparent url(../images/layers_ico.gif) no-repeat;
+}
+
+
+.bt_max_extent {
+	background: transparent url(../images/icon_zoomfull.png) no-repeat;
+	height: 23px;
+	width: 23px;
+	border: 1px outset #ccc;
+  cursor: pointer;
+  cursor: hand;
+	
+}
+
+.bt_zoom_in {
+	background: transparent url(../images/lensPlus.gif) no-repeat;
+	height: 15px;
+	width: 15px;
+}
+
+.bt_zoom_out {
+	background: transparent url(../images/lensMeno.gif) no-repeat;
+	height: 15px;
+	width: 15px;
+}
+
+.bt_pan {
+	background: transparent url(../images/icon_pan.png) no-repeat;
+	height: 15px;
+	width: 15px;
+}
+
+.bt_clickData {
+	background: transparent url(../images/info_icon.gif) no-repeat;
+	height: 15px;
+	width: 15px;
+}
+
+.bt_CQLQuery {
+	background: transparent url(../images/point7.png) no-repeat;
+	height: 20px;
+	width: 20px;
+}
+
+.bt_save {
+	background: transparent url(../images/save.png) no-repeat;
+	height: 20px;
+	width: 20px;
+}
+
+.x_textbox {
+	border: 1px solid #99BBE8;
+	font-size: 11px;
+}
+
+.geo-menu_button {
+	background: transparent;
+	background-color: #efebe7;
+	height: 24px;
+}
+
+.geo-menu:hover{ 
+	background-color: #FFFFEE;
+}
+
+.geo-PopupPanel {
+  border: 3px solid #C3D9FF;
+  padding: 3px;
+  background: white;
+}
+
+.gwt-SliderBar-group {
+  background-color: #efebe7;
+  width: 100%;
+}
+
+.gwt-SliderBar-group_hover {
+  background-color: #FFFFEE;
+}
+
+.gwt-SliderBar-shell {
+  height: 20px;
+  width: 100%;
+}
+
+.gwt-SliderBar-shell .gwt-SliderBar-line {
+  border: 1px solid black;
+  background-color: white;
+  height: 4px;
+  width: 95%;
+  top: 5pt;
+  overflow: hidden;
+}
+.gwt-SliderBar-shell .gwt-SliderBar-knob {
+  top: 2pt;
+  width: 11px;
+  height: 21px;
+  z-index: 1;
+  cursor: pointer;
+}
+.gwt-SliderBar-shell .gwt-SliderBar-tick {
+  top: 8pt;
+  width: 1px;
+  height: 8pt;
+  background: black;
+  overflow: hidden;
+}
+.gwt-SliderBar-shell .gwt-SliderBar-label {
+  top: 2pt;
+  font-size: 8pt;
+  cursor: default;
+}
+
+.gwt-SliderBar-shell-focused {
+	
+}
+.gwt-SliderBar-shell .gwt-SliderBar-line-sliding {
+  background-color: #DDDDDD;
+  cursor: pointer;
+}
+
+.z_index_1100 {
+	z-index: 201100;
+}
+
+.z_index_1150 {
+	z-index: 201150;
+}
+
+.z_index_1200 {
+	z-index: 201200;
+}
+
+.z_index_1250 {
+	z-index: 201200;
+}
+
+.font_color {color: #48698D;}
+.font_color_red {color: #cc3234;}
+.font_color_white {color: white;}
+.font_color_black {color: 000;}
+.bgGreyMedium {background-color: #efebe7;}
+.bgBlank {background-color: #FFFFFF;}
+.bgBlueLight{background-color: #f9fbff}
+.bgBlue{background-color: #edf3fe}
+.p40_left {padding-left: 40px;}
+.p20_left {padding-left: 20px;}
+.p15_left {padding-left: 15px;}
+.p8_left {padding-left: 8px;}
+.p4_left {padding-left: 4px;}
+.p20 {padding: 20px;}
+.p14 {padding: 14px;}
+.p8 {padding: 8px;}
+.p4 {padding: 4px;}
+.cellspacing_8 {border-spacing: 8px;}
+.font_bold {font-weight: bold;}
+.font_normal {font-weight: normal;}
+.font_9 {font-size: 9px;}
+.font_10 {font-size: 10px;}
+.font_11 {font-size: 11px;}
+.font_12 {font-size: 12px;}
+.font_13 {font-size: 13px;}
+.font_14 {font-size: 14px;}
+.font_15 {font-size: 15px;}
+.font_family {font-family: Verdana, Helvetica, Arial, sans-serif;}
+.text_align_left{text-align: left;}
+.text_align_center{text-align: center;}
+.text_align_right{text-align: right;}
+.nowrap_text {white-space: nowrap;}
+.vertical_middle {vertical-align: middle;}
+.vertical_top {vertical-align: top;}
+.margin_top: {margin-top: 10px;}
+.margin_bottom {margin-bottom: 10px;}
+.margin_center {margin-left: auto; margin-right: auto;}
+.margin_left {margin-left: 10px;}
+.margin_right {margin-right: 10px;}
+.pointer{cursor: pointer;}
+.underline{text-decoration: underline;}
+.no_underline{text-decoration: none;}
+.border_bottom{border-bottom: #8cacbb solid 1px;}
+.border_left{border-left: #8cacbb solid 1px;}
+.border_right{border-right: #8cacbb solid 1px;}
+.border_top{border-top: #8cacbb solid 1px;}
+
+.geo-DialogBox .Caption {
+  background: #D0DEF0 url(../images/bg.gif) repeat-x scroll left top;
+  padding: 4px 4px 4px 8px;
+  cursor: default;
+  border-bottom: 1px solid #bbbbbb;
+  border-top: 5px solid #d0e4f6;
+}
+

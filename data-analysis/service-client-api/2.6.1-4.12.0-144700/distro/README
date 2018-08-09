@@ -1,0 +1,39 @@
+The gCube System - Tabular Data Client API
+------------------------------------------------------------
+
+This work has been supported by the following European projects: iMarine (FP7-INFRASTRUCTURES-2011-2)
+
+Authors
+-------
+
+Luigi Fortunati (luigi.fortunati@isti.cnr.it), CNR Pisa, 
+Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo".
+  
+Version and Release Date
+------------------------
+
+v. 2.6.1-4.12.0-144700 (2013-10-23)
+
+Description
+-----------
+
+Tabular Data Service Client API
+  
+Download information
+--------------------
+Source code URL: https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-analysis/tabulardata/service-client-api
+
+
+Documentation 
+-------------
+
+Tabular Data Service Client API
+
+
+Licensing
+---------
+
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.
+
+
+

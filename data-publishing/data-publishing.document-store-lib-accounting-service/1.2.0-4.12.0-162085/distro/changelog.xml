@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-publishing.document-store-lib-accounting-service.1-2-0" date="${buildDate}">
+		<Change>Chenged POST URLs due to change in service which has been made REST compliant #10810</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.document-store-lib-accounting-service.1-1-0" date="2017-10-09">
+		<Change>Added HTTPS support #8758</Change>
+		<Change>Added HTTP Redirection support #8758</Change>
+		<Change>Added HAProxy discovery support #8758</Change>
+		<Change>Restored Fallback capabilities #9016</Change>
+		<Change>Implemented isConnectionActive() added in PersistenceBackend</Change>
+		<Change>Always posting a List of Record even when we have to post a single one #9034</Change>
+		<Change>Record List is marshalled as JSON using jackson #9036</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.document-store-lib-accounting-service.1-0-0" date="2017-06-07">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

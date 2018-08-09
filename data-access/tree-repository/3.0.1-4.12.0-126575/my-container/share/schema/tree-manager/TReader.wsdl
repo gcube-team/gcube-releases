@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="T-Reader"
+	targetNamespace="http://gcube-system.org/namespaces/data/tm" xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:tns="http://gcube-system.org/namespaces/data/tm" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+	xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+	xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+	xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types">
+
+	<import
+		namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		location="../gcube/common/core/providers/GCUBEProvider.wsdl" />
+
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+		location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+
+	<wsdl:import
+		namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+		location="../wsrf/notification/WS-BaseN.wsdl" />
+
+
+	<wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+
+
+
+	<!-- ============================================================ T Y P 
+		E S ============================================================ -->
+	<types>
+		<xsd:schema targetNamespace="http://gcube-system.org/namespaces/data/tm"
+			xmlns:tns="http://gcube-system.org/namespaces/data/tm" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+			<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+				schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+
+			<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" />
+
+
+			<xsd:element name="GetByID" type="tns:getByIDParams"
+				nillable="false" />
+			<xsd:element name="GetByIDResponse" type="tns:anyHolder" />
+
+			<xsd:element name="GetByIDs" type="tns:getByIDsParams"
+				nillable="false" />
+			<xsd:element name="GetByIDsResponse" type="tns:RSLocator" />
+
+
+			<xsd:element name="Get" type="tns:getParams" nillable="false" />
+			<xsd:element name="GetResponse" type="tns:RSLocator" />
+
+			<xsd:element name="GetNode" type="tns:path" nillable="false" />
+			<xsd:element name="GetNodeResponse" type="tns:anyHolder" />
+
+			<xsd:element name="GetNodes" type="tns:RSLocator"
+				nillable="false" /> <!-- of paths -->
+			<xsd:element name="GetNodesResponse" type="tns:RSLocator" />
+
+			<xsd:complexType name="getByIDParams">
+				<xsd:sequence>
+					<xsd:element name="rootID" type="xsd:string" nillable="false" />
+					<xsd:element name="pattern" type="tns:anyHolder"
+						nillable="true" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="getByIDsParams">
+				<xsd:sequence>
+					<xsd:element name="locator" type="tns:RSLocator"
+						nillable="false" />
+					<xsd:element name="pattern" type="tns:anyHolder"
+						nillable="true" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="getParams">
+				<xsd:sequence>
+					<xsd:element name="pattern" type="tns:anyHolder"
+						nillable="true" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="path">
+				<xsd:sequence>
+					<xsd:element name="id" type="xsd:string" nillable="false"
+						minOccurs="1" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="RSLocator">
+				<xsd:complexContent>
+					<xsd:restriction base="xsd:string">
+					</xsd:restriction>
+				</xsd:complexContent>
+			</xsd:complexType>
+
+			<xsd:complexType name="anyHolder">
+				<xsd:sequence>
+					<xsd:any processContents="skip" namespace="##any"
+						maxOccurs="1" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:element name="UnsupportedOperationFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="UnsupportedRequestFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="UnknownTreeFault">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="UnknownPathFault">
+				<xsd:complexType name="UnknownPathFault">
+					<xsd:complexContent>
+						<xsd:extension base="corefaults:GCUBEUnrecoverableFault" />
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+
+		</xsd:schema>
+
+	</types>
+
+	<message name="GetByIDRequest">
+		<part name="request" element="tns:GetByID" />
+	</message>
+	<message name="GetByIDResponse">
+		<part name="response" element="tns:GetByIDResponse" />
+	</message>
+
+	<message name="GetByIDsRequest">
+		<part name="request" element="tns:GetByIDs" />
+	</message>
+	<message name="GetByIDsResponse">
+		<part name="response" element="tns:GetByIDsResponse" />
+	</message>
+
+	<message name="GetRequest">
+		<part name="request" element="tns:Get" />
+	</message>
+	<message name="GetResponse">
+		<part name="response" element="tns:GetResponse" />
+	</message>
+
+	<message name="GetNodeRequest">
+		<part name="request" element="tns:GetNode" />
+	</message>
+	<message name="GetNodeResponse">
+		<part name="response" element="tns:GetNodeResponse" />
+	</message>
+
+	<message name="GetNodesRequest">
+		<part name="request" element="tns:GetNodes" />
+	</message>
+	<message name="GetNodesResponse">
+		<part name="response" element="tns:GetNodesResponse" />
+	</message>
+
+	<message name="UnsupportedOperationFaultMessage">
+		<part name="fault" element="tns:UnsupportedOperationFault" />
+	</message>
+
+	<message name="UnsupportedRequestFaultMessage">
+		<part name="fault" element="tns:UnsupportedRequestFault" />
+	</message>
+
+	<message name="UnknownTreeFaultMessage">
+		<part name="fault" element="tns:UnknownTreeFault" />
+	</message>
+
+	<message name="UnknownPathFaultMessage">
+		<part name="fault" element="tns:UnknownPathFault" />
+	</message>
+
+
+	<portType name="TReaderPortType"
+		wsdlpp:extends="wsntw:NotificationProducer provider:GCUBEProvider  provider:GCUBENotificationProvider">
+
+		<operation name="getByID">
+			<input message="tns:GetByIDRequest" />
+			<output message="tns:GetByIDResponse" />
+			<fault name="unsupportedoperationfault" message="tns:UnsupportedOperationFaultMessage" />
+			<fault name="unsupportedrequestfault" message="tns:UnsupportedRequestFaultMessage" />
+			<fault name="unknowntreefault" message="tns:UnknownTreeFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+
+		<operation name="getByIDs">
+			<input message="tns:GetByIDsRequest" />
+			<output message="tns:GetByIDsResponse" />
+			<fault name="unsupportedoperationfault" message="tns:UnsupportedOperationFaultMessage" />
+			<fault name="unsupportedrequestfault" message="tns:UnsupportedRequestFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+
+		<operation name="get">
+			<input message="tns:GetRequest" />
+			<output message="tns:GetResponse" />
+			<fault name="unsupportedoperationfault" message="tns:UnsupportedOperationFaultMessage" />
+			<fault name="unsupportedrequestfault" message="tns:UnsupportedRequestFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+
+		<operation name="getNode">
+			<input message="tns:GetNodeRequest" />
+			<output message="tns:GetNodeResponse" />
+			<fault name="unsupportedoperationfault" message="tns:UnsupportedOperationFaultMessage" />
+			<fault name="unsupportedrequestfault" message="tns:UnsupportedRequestFaultMessage" />
+			<fault name="unknownpathfault" message="tns:UnknownPathFaultMessage"></fault>
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+
+		<operation name="getNodes">
+			<input message="tns:GetNodesRequest" />
+			<output message="tns:GetNodesResponse" />
+			<fault name="unsupportedoperationfault" message="tns:UnsupportedOperationFaultMessage" />
+			<fault name="unsupportedrequestfault" message="tns:UnsupportedRequestFaultMessage" />
+			<fault name="gcubefault" message="corefaults:GCUBEFaultMessage"></fault>
+		</operation>
+
+
+	</portType>
+
+
+</definitions>

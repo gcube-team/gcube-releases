@@ -1,0 +1,56 @@
+.vre-definition-main-panel {
+	width: 100%;
+}
+
+.vre-definition-elements-common-style {
+	margin-bottom: 10px !important;
+}
+
+.select-deselect-button-style {
+	margin-top: -40px;
+	margin-left: 40px;
+	padding: 0 !important;
+}
+
+.table-style {
+	margin-top: 10px;
+}
+
+.filter-functionalities-box {
+	margin-top: 40px;
+	float: right;
+}
+
+.subfunctionality-textbox {
+	font-size: 24px;
+}
+
+.show-all-resources-button {
+	margin-right: 10px;
+}
+
+.generate-summary-button {
+	float: right;
+}
+
+.summary-buttons-panel {
+	float: right;
+}
+
+.macrofunctionality-name-summary {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.subfunctionality-form {
+	margin-left: 40px !important;
+	margin-right: 40px !important;
+}
+
+.button-margin-right {
+	margin-right: 10px;
+}
+
+.icon-style {
+	color: #08c;
+}

@@ -1,0 +1,26 @@
+#! /bin/bash
+#
+# Clean up the actual state of the GHN
+#
+
+echo "Are you sure you want to delete the entire state of this GHN and of the local hosted services?"
+read -n1 -p "<C>ontinue, <A>bort, please choose one. "
+echo
+case $REPLY in
+   c | C)
+   rm -f $GLOBUS_LOCATION/config/GHNProfile.xml* 2>&1 1>/dev/null
+   rm -f $GLOBUS_LOCATION/etc/*/RIProfile.xml* 2>&1 1>/dev/null
+   rm -rf $HOME/.gcore/ 2>&1 1>/dev/null
+   echo
+   echo "GHN cleaning successful"
+   echo
+   ;;   
+   a | A)
+   echo "GHN cleaning aborted"
+   ;;
+   * )
+   echo "You don't know what you want to do... aborting anyway"
+   ;; 
+esac
+
+

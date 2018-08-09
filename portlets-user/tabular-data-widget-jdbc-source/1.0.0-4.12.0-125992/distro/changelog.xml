@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.tabular-data-widget-jdbc-datasource.1-1-0" date="2013-12-17"> 
+		<Change>Updated to Java 7</Change> 
+	</Changeset> 
+	<Changeset component="org.gcube.portlets-user.tabular-data-widget-jdbc-datasource.1-0-0" date="2013-10-25"> 
+		<Change>First release</Change> 
+		<Change>Solved #1318: Statistical Manager - Tabular Data Widget must use estimation of rows</Change>
+	</Changeset> 
+</ReleaseNotes>

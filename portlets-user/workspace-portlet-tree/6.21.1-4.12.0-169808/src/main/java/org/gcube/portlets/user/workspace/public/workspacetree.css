@@ -1,0 +1,274 @@
+@CHARSET "UTF-8";
+
+.gwt-DialogBoxNew{
+	border: 8px solid #99C0E8;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: none;
+/* 	line-height: 7px; */
+	opacity: 1;
+	z-index: 1500;
+	background-color: #FFFFFF;
+}
+
+.gwt-DialogBoxNew .Caption {
+	background: none repeat scroll 0 0 #99C0E8;
+	border: medium none #D4D4D4;
+	cursor: default;
+	font-family: Arial Unicode MS, Arial, sans-serif !important;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 27px;
+	padding: 2px 0px 0px 0px;
+}
+
+.gwt-DialogBoxNew .dialogContent {
+	
+}
+
+.gwt-DialogBoxNew .dialogMiddleCenter {
+	padding: 3px;
+	background: white;
+}
+
+.gwt-DialogBoxNew .dialogBottomCenter {
+	
+}
+
+.gwt-DialogBoxNew .dialogMiddleLeft {
+	/*   background: url(images/vborder.png) repeat-y -31px 0px; */
+	
+}
+
+.gwt-DialogBoxNew .dialogMiddleRight {
+	/*  background: url(images/vborder.png) repeat-y -32px 0px;*/
+	
+}
+/*
+.gwt-DialogBoxNew .dialogTopLeftInner {
+  width: 10px;
+  height: 8px;
+  zoom: 1;
+  background: none repeat scroll 0 0 #E4E4E4;
+}
+.gwt-DialogBoxNew .dialogTopRightInner {
+  width: 12px;
+  zoom: 1;
+  background: none repeat scroll 0 0 #E4E4E4;
+}
+.gwt-DialogBoxNew .dialogBottomLeftInner {
+  width: 10px;
+  height: 12px;
+  zoom: 1;
+}
+.gwt-DialogBoxNew .dialogBottomRightInner {
+  width: 12px;
+  height: 12px;
+  zoom: 1;
+}*/
+.gwt-DialogBoxNew .dialogTopLeft {
+	/*  background: url(images/circles.png) no-repeat -20px 0px;
+  -background: url(images/circles_ie6.png) no-repeat -20px 0px; */
+	background: none repeat scroll 0 0 #E4E4E4;
+}
+
+.gwt-DialogBoxNew .dialogTopRight {
+	/*   background: url(images/circles.png) no-repeat -28px 0px;
+  -background: url(images/circles_ie6.png) no-repeat -28px 0px; */
+	background: none repeat scroll 0 0 #E4E4E4;
+}
+
+.gwt-DialogBoxNew .dialogBottomLeft {
+	/*   background: url(images/circles.png) no-repeat 0px -36px;
+  -background: url(images/circles_ie6.png) no-repeat 0px -36px; */
+	
+}
+
+.gwt-DialogBoxNew .dialogBottomRight {
+	/*   background: url(images/circles.png) no-repeat -8px -36px;
+  -background: url(images/circles_ie6.png) no-repeat -8px -36px; */
+	
+}
+
+/*Used from suggestbox*/
+ul.multivalue-panel-suggest {
+	list-style-type: none;
+	overflow: hidden;
+	height: auto !important;
+	width: 380px;
+	border: 1px solid #CCC;
+	cursor: text;
+	font-size: 12px;
+	font-family: Verdana;
+	min-height: 1px;
+	z-index: 999;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+ul.multivalue-panel-suggest li input {
+	border: 0;
+	padding: 3px 8px;
+	background-color: white;
+	margin: 2px 0;
+	width: 100px;
+}
+
+li.multivalue-panel-token-ws {
+	overflow: hidden;
+	height: auto !important;
+	height: 1%;
+	margin: 3px;
+	padding: 1px 3px;
+	background-color: #E2E6F0;
+	border: 1px solid #9DACCC;
+	color: #1C2A47;
+	cursor: default;
+	font-size: 11px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	float: left;
+}
+
+li.multivalue-panel-token-ws-notselectable {
+	overflow: hidden;
+	height: auto !important;
+	height: 1%;
+	margin: 3px;
+	padding: 1px 3px;
+	background-color: white;
+	border: 1px solid #9DACCC;
+	color: #1C2A47;
+	cursor: default;
+	font-size: 11px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	float: left;
+}
+
+.notSelectable-ws {
+	background-color: #FFF !important;
+}
+
+li.multivalue-panel-token-ws p {
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+li.multivalue-panel-token-ws span {
+	color: #a6b3cf;
+	margin-left: 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.margin-right-flex {
+	margin-right: 8px;
+}
+
+.margint-top-flex {
+	margin-top: 10px;
+	margin-right: 8px;
+}
+
+.wizardButton {
+	height: 22px !important;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #F2F2F2 url(images/white-grad.png) repeat-x scroll left top;
+	border-color: #BBB;
+	color: #464646;
+	font-size: 12px;
+	border-width: 1px;
+	border-style: solid;
+	cursor: pointer;
+	cursor: hand;
+	margin-right: 5px;
+	margin-right: 3px;
+	padding-bottom: 1px;
+}
+
+.wizardButton[disabled]:hover, .wizardButton[disabled]:active,
+	.wizardButton[disabled] {
+	color: #CCC;
+	border-color: #BBB;
+	cursor: default;
+	opacity: 1.0;
+	background: #F2F2F2 url(images/white-grad.png) repeat-x scroll left top;
+}
+
+.wizardButton:hover {
+	border-color: #222;
+	color: #222;
+	opacity: 0.8;
+}
+
+.wizardButton:active {
+	background: #e3e8f3 url(images/white-grad.png) repeat-x scroll left top;
+}
+
+table.userssuggest {
+	/*background-color: #DFE8F6 !important;*/
+	font-family: verdana, arial, sans-serif;
+	font-size: 12px;
+	/*color:#333333;*/
+	border-width: 0px;
+	background-color: none;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width: 100%;
+	margin-bottom: 20px;
+	/*border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	*/
+}
+
+table.userssuggest td {
+	border-width: 0px;
+	border-style: solid;
+	/*border-color: #999999;*/
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height: 30px;
+	padding: 5px;
+}
+
+table.userssuggest th {
+	font-weight: bold;
+	font-size: 11px;
+	height: 30px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+.editPermissions :hover {
+	cursor: pointer;
+}
+
+.disabledDIV{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/** For the data catalogue modal **/
+.insert-metadata-modal-style {
+	width: 1200px !important;
+	margin-left: -600px !important;
+}
+
+.modal-body-custom {
+	height: 550px !important;
+	max-height: none !important;
+}
+
+.modal-top-custom {
+	top: 2% !important;
+}

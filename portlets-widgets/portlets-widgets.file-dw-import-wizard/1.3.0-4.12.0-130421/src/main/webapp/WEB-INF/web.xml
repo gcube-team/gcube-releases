@@ -1,0 +1,33 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>ImportService</servlet-name>
+    <servlet-class>org.gcube.portlets.widgets.file_dw_import_wizard.server.ImportServiceImpl</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ImportService</servlet-name>
+    <url-pattern>/filedwimportwizard/ImportService</url-pattern>
+  </servlet-mapping>
+
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>filedwimportwizard.html</welcome-file>
+  </welcome-file-list>
+  
+   <servlet-mapping>
+    <servlet-name>FileUploadServlet</servlet-name>
+    <url-pattern>/filedwimportwizard/FileUploadServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>FileUploadServlet</servlet-name>
+    <servlet-class>org.gcube.portlets.widgets.file_dw_import_wizard.server.local.FileUploadServlet</servlet-class>
+  </servlet>
+  
+</web-app>

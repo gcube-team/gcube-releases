@@ -1,0 +1,167 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@external x-toolbar-mark;
+
+  /* normal style */
+@sprite .x-toolbar-mark .content {
+  gwt-image: 'toolBarBackground';
+  height: 100%;
+  width: 100%;
+}
+
+@sprite .x-toolbar-mark .topLeft {
+  gwt-image: 'toolBarTopLeftBorder';
+}
+
+@sprite .x-toolbar-mark .top {
+  gwt-image: 'toolBarTopBorder';
+}
+
+@sprite .x-toolbar-mark .topRight {
+  gwt-image: 'toolBarTopRightBorder';
+}
+
+@sprite .x-toolbar-mark .bottomLeft {
+  gwt-image: 'toolBarBottomLeftBorder';
+}
+
+@sprite .x-toolbar-mark .bottom {
+  gwt-image: 'toolBarBottomBorder';
+}
+
+@sprite .x-toolbar-mark .right {
+  gwt-image: 'toolBarRightBorder';
+}
+
+@sprite .x-toolbar-mark .bottomRight {
+  gwt-image: 'toolBarBottomRightBorder';
+}
+
+@sprite .x-toolbar-mark .left {
+  gwt-image: 'toolBarLeftBorder';
+}
+
+  /* over style */
+
+@sprite .x-toolbar-mark .over .content {
+  gwt-image: 'toolBarBackgroundOverBorder';
+  height: 100%;
+  width: 100%;
+}
+
+@sprite .x-toolbar-mark .over .topLeft {
+  gwt-image: 'toolBarTopLeftOverBorder';
+}
+
+@sprite .x-toolbar-mark .over .top {
+  gwt-image: 'toolBarTopOverBorder';
+}
+
+@sprite .x-toolbar-mark .over .topRight {
+  gwt-image: 'toolBarTopRightOverBorder';
+}
+
+@sprite .x-toolbar-mark .over .bottomLeft {
+  gwt-image: 'toolBarBottomLeftOverBorder';
+}
+
+@sprite .x-toolbar-mark .over .bottom {
+  gwt-image: 'toolBarBottomOverBorder';
+}
+
+@sprite .x-toolbar-mark .over .right {
+  gwt-image: 'toolBarRightOverBorder';
+}
+
+@sprite .x-toolbar-mark .over .bottomRight {
+  gwt-image: 'toolBarBottomRightOverBorder';
+}
+
+@sprite .x-toolbar-mark .over .left {
+  gwt-image: 'toolBarLeftOverBorder';
+}
+
+  /* focus */
+
+@sprite .x-toolbar-mark .focus .content {
+  gwt-image: 'toolBarBackgroundOverBorder';
+  height: 100%;
+  width: 100%;
+}
+
+@sprite .x-toolbar-mark .focus .topLeft {
+  gwt-image: 'toolBarTopLeftOverBorder';
+}
+
+@sprite .x-toolbar-mark .focus .top {
+  gwt-image: 'toolBarTopOverBorder';
+}
+
+@sprite .x-toolbar-mark .focus .topRight {
+  gwt-image: 'toolBarTopRightOverBorder';
+}
+
+@sprite .x-toolbar-mark .focus .bottomLeft {
+  gwt-image: 'toolBarBottomLeftOverBorder';
+}
+
+@sprite .x-toolbar-mark .focus .bottom {
+  gwt-image: 'toolBarBottomOverBorder';
+}
+
+@sprite .x-toolbar-mark .focus .right {
+  gwt-image: 'toolBarRightOverBorder';
+}
+
+@sprite .x-toolbar-mark .focus .bottomRight {
+  gwt-image: 'toolBarBottomRightOverBorder';
+}
+
+@sprite .x-toolbar-mark .focus .left {
+  gwt-image: 'toolBarLeftOverBorder';
+}
+
+  /* pressed style */
+
+@sprite .x-toolbar-mark .pressed .content {
+  gwt-image: 'toolBarBackgroundPressedBorder';
+  height: 100%;
+  width: 100%;
+}
+
+@sprite .x-toolbar-mark .pressed .topLeft {
+  gwt-image: 'toolBarTopLeftPressedBorder';
+}
+
+@sprite .x-toolbar-mark .pressed .top {
+  gwt-image: 'toolBarTopPressedBorder';
+}
+
+@sprite .x-toolbar-mark .pressed .topRight {
+  gwt-image: 'toolBarTopRightPressedBorder';
+}
+
+@sprite .x-toolbar-mark .pressed .bottomLeft {
+  gwt-image: 'toolBarBottomLeftPressedBorder';
+}
+
+@sprite .x-toolbar-mark .pressed .bottom {
+  gwt-image: 'toolBarBottomPressedBorder';
+}
+
+@sprite .x-toolbar-mark .pressed .right {
+  gwt-image: 'toolBarRightPressedBorder';
+}
+
+@sprite .x-toolbar-mark .pressed .bottomRight {
+  gwt-image: 'toolBarBottomRightPressedBorder';
+}
+
+@sprite .x-toolbar-mark .pressed .left {
+  gwt-image: 'toolBarLeftPressedBorder';
+}

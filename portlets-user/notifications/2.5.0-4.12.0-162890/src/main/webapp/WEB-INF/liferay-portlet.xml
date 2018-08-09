@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_2_0.dtd">
+
+<liferay-portlet-app>
+	<portlet>
+		<portlet-name>Notifications</portlet-name>
+		<layout-cacheable>false</layout-cacheable>
+		<instanceable>false</instanceable>
+		<ajaxable>false</ajaxable>
+		<header-portlet-css>/fa/css/font-awesome.min.css</header-portlet-css>
+		<!-- LOCATION CSS HERE -->
+		<header-portlet-css>/Notifications.css</header-portlet-css>
+	</portlet>
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+</liferay-portlet-app>

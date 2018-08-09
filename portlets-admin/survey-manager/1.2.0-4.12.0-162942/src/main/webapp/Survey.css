@@ -1,0 +1,328 @@
+/** Add css rules here for your application. */
+
+.invitesTable {
+	margin: 5px;
+}
+/** Example rules used by the template application (remove for your app) */
+h2 {
+    margin-left: 5% !important;
+    
+    font-family: "lato", sans-serif !important;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+#survey-div {
+	align-content: center !important;
+    margin-left: 5% !important;
+    
+	font-family: "lato",  sans-serif !important;
+	-webkit-text-size-adjust: 100%;
+  	-ms-text-size-adjust: 100%; 
+}
+
+.aui .well {
+    min-height: 20px!important;
+    padding: 19px!important;
+    margin-bottom: 20px!important;
+    background-color: white!important;
+    border: none!important;
+}
+
+#survey-div table{
+	width: 100%;
+}
+
+#survey-div table td{
+	position: relative;
+}
+
+#survey-div textarea{
+	width: 100%;
+	min-height: 150px;
+	background-color: white;
+}
+
+#survey-div input{
+	width: 100%;
+	background-color: white;
+}
+
+#survey-div .textBoxes{
+	width: 100%;
+	background-color: white;
+}
+
+#survey-div label{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#survey-div .btn{
+	margin-right: 10px;
+}
+
+#survey-div .separate{
+	margin-bottom: 15px;
+}
+
+#survey-div span.label{
+	font-size: 22px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#survey-div table p.data{
+	margin: 0;
+	padding: 10px;
+	font-size: 1.2em;
+}
+
+#survey-div .decorate-answer{
+	border: 1px solid #bfbfbf;
+	padding: 10px;
+	overflow-wrap: break-word;
+}
+
+#surveyAdminTitleHeading {
+    margin-left: 5% !important;
+    
+    font-family: "lato", sans-serif !important;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+  width: 400px;
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
+
+
+/* Styles added */
+.SurveyStyling {
+	  
+}
+
+.SurveyStyling td {
+ vertical-align: top !important; 
+}	
+
+.htmlTitleColumnStatistics {
+	font-weight: bold;
+	text-align: center;
+/* 	text-decoration: underline; */
+}
+
+.surveyTextHtmlHomePage {
+	font-weight: bold;
+	text-decoration: underline;
+/* 	text-align: center; */
+}
+
+.dateCreatedTextHtmlHomePage {
+	font-weight: bold;
+	text-decoration: underline;
+/* 	text-align: center; */
+}
+
+.dateExpiredTextHtmlHomePage {
+	font-weight: bold;
+	text-decoration: underline;
+/* 	text-align: center; */
+}
+
+.dateExpiredSurveyParagraphManageSurvey {
+	font-size: 120%;
+	text-align: center;
+}
+
+/* Scale radio button */
+.aui .radio, .aui .checkbox{
+	padding-right: 20px !important;
+}
+
+.usernameParagraphStatistics {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.descriptionAggregateStatsParagraph {
+	font-style: italic;
+}
+
+.flexTableOpenQuestionBoxStatisticsOddRows {
+	padding: .6px 5px .6px 5px;
+
+    text-align: justify;
+    text-justify: inter-word;
+    
+    overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	width: 15em;
+}
+
+.flexTableOpenQuestionBoxStatisticsEvenRows {
+	padding: .6px 5px .6px 5px;
+
+    text-align: justify;
+    text-justify: inter-word;
+    background-color: #f2f2f2;
+    
+    overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	width: 15em;
+}
+
+.flexTableOpenTitleQuestionBoxStatistics {
+	padding: .6px 5px .6px 5px;
+
+    text-align: left;
+    font-weight: bold;
+    overflow-wrap: break-word;
+}
+
+.AnchorListOfVREMembersEvenRows {
+	padding: .6px 5px .6px 5px;
+/*     border: 1px; */
+/*     border-color: black; */
+/*     border-style: dashed; */
+    background-color: #f2f2f2;
+    text-align: center;
+    width: 15em;
+}
+
+.AnchorListOfVREMembersOddRows {
+	padding: .6px 5px .6px 5px;
+
+    text-align: center;
+    width: 15em;
+}
+
+/* CreateSurveyView */
+.removeButtonCreateSurveyView {
+	margin-bottom: 7px !important;
+}
+
+.imgFilenameAndRemoveImgFlexTable td{
+	width: 30px;
+}
+.removeImgButton{
+	color:lightslategray !important;
+	margin-bottom: 7px !important;
+}
+
+.sectionVerticalPanelCreateQuestionView{
+	
+}
+
+.sectionStripe{
+    background-color: #555555;
+    font-weight: bold;
+    font-size: 120%;
+    color: white!important;
+    padding: 5px 10px;
+}
+
+.gridStyleFlexTable td{
+	vertical-align: top !important;
+}
+
+/* ManageSurveyView */
+.questionAndRemoveButton {
+	border-style: solid !important
+}
+
+#survey-div .removeButtonManageSurveyView{
+	position: absolute;
+/*     top: 5px; */
+    top: 30px;
+    right: 15px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    font-size: 21px;
+}
+
+#survey-div .saveQuestionSurveyButtonManageSurveyView{
+	float: right;
+}
+
+#survey-div .surveyButtonRight{
+	float: right;
+}
+
+/* StatisticsSurveyView */
+#survey-div .flowPanelStatisticsSurveyView{
+	min-height: 200px;
+}
+
+/* RetriveQuestionsSurveyView */
+#survey-div .scaleFromSurveyParagraphRetriveQuestion {
+	padding-right: 10px !important;
+}
+
+.imgRetriveQuestionsSurveyView{
+	width: 250px;
+	padding-bottom: 5px;
+}
+
+.sectionTitleStripe{
+    background-color: #555555;
+    font-weight: bold;
+    font-size: 120%;
+    color: white!important;
+    padding: 5px 10px;
+}
+
+.sectionDescriptionStripe{
+	font-style: italic;
+	padding-left: 10px;
+}
+
+.GridFlexTableEvenRows {
+	padding: .6px 5px .6px 5px;
+    background-color: #f2f2f2;
+    width: 15em;
+}
+
+.GridFlexTableOddRows {
+	padding: .6px 5px .6px 5px;
+    width: 15em;
+}
+
+.timeStyleRetriveQuestions {
+	width: 3% !important;
+}

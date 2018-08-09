@@ -1,0 +1,105 @@
+.x-toolbar {
+    border-color: #fff;
+    background-color: #fff !important;
+  	background-image: none !important;
+}
+
+.x-btn-text-icon .x-btn-icon-small-top .x-btn-text {
+    padding-top: 25px !important;
+    font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #666;
+}
+
+.x-tree3-el {
+    height: 25px !important;
+}
+
+.x-tree3-node-text {
+    padding: 3px 0 5px 3px;
+    top: 0 !important;
+}
+
+.x-grid3-row td.x-grid3-cell, .x-grid3-summary-row td.x-grid3-cell {
+    line-height: 30px !important;
+}
+
+.x-grid3-cell-inner, .x-grid3-hd-inner, x-grid3-cell-inner x-grid3-col-Type {
+	font-family: 'Roboto', sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: #666;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.x-menubar {
+	background-color: #fff;
+	background-image: none !important;
+}
+
+.x-panel-body {
+	border: none !important;	
+	border-bottom: 1px solid #d0def0 !important;	
+}
+
+.x-panel-body-noheader {
+	border: none;
+}
+
+.x-border-layout-ct {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.x-toolbar {
+	border-color: #fff;
+	background-color: #fff;
+}
+
+.x-panel-header {
+	background-color: #fff;
+	background-image: none !important;
+}
+
+.x-toolbar .xtb-sep {
+	background-image: none !important;
+	background-color: transparent;
+	margin: -2px;
+}
+
+.x-accordion-hd {
+	background-position: 0 0px;
+}
+
+.x-status-text {
+	color: #226599;
+	font-weight: bold !important;
+}
+
+.x-status-text-panel {
+	border-color: transparent;
+}
+
+.x-component {
+	color: #226599;
+}
+
+.x-btn button {
+	color: #226599;
+}
+
+.ext-el-mask-msg {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-width: 2px;
+	background-color: #FFF;
+	background-image: none;
+}
+
+.ext-el-mask-msg div {
+	border-color: transparent;
+	background-color: transparent;
+}

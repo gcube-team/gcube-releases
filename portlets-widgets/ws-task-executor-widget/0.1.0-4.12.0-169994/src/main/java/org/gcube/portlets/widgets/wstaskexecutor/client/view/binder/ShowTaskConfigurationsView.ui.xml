@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<g:FlexTable ui:field="flex_table_configurations">
+		</g:FlexTable>
+		<b:Button icon="PLUS_SIGN" title="Create New Configuration"
+			ui:field="butt_CreateNewConfiguration" type="LINK">Create New Configuration</b:Button>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>org.gcube.data.analysis</groupId>
+	<artifactId>tabular-data-sdmx-utils</artifactId>
+	<version>1.0.0-4.12.0-161833</version>
+	<name>SDMXSource Utilities</name>
+	<description>Library that contains several utilities that helps  Tabman and SDMX</description>
+
+	<scm>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-analysis/TabmanSDMX</url>
+	</scm>
+ 
+
+	<dependencies>
+
+		<!-- SDMXSource deps -->
+		<dependency>
+			<groupId>org.gcube.data.publishing</groupId>
+			<artifactId>sdmxsource-utils</artifactId>
+			<version>4.0.0-4.12.0-161824</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+
+	</dependencies>
+		<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

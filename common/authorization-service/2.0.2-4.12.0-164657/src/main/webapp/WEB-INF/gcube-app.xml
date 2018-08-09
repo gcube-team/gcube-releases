@@ -1,0 +1,10 @@
+<application mode='online'>
+		<name>AuthorizationService</name>
+		<group>Security</group>
+		<version>1.0.0-SNAPSHOT</version>
+		<description>authorization service</description>
+		<local-persistence location='target' />
+		<exclude>/generate/token/*</exclude>
+		<exclude>/retrieve/*</exclude>
+</application>
+

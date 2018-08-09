@@ -1,0 +1,14 @@
+<ReleaseNotes>	
+	<Changeset component="org.gcube.portal.plugins.VREFolder-hook.6-6-0" date="2018-03-02">
+		<Change>Feature #6094 User export to LDAP on create account and join/leave VRE</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.plugins.VREFolder-hook.6-5-0" date="2017-05-23">
+		<Change>Feature	#8242 Enhance VRE Folder hook to also create Share LaTex user on user add to VRE</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.plugins.VREFolder-hook.6-4-0" date="2017-02-23">
+		<Change>Feature #6680, added hook to keep in sync VRE Managers and Workspace VRE Folder Managers</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.plugins.VREFolder-hook.6-3-0" date="2016-03-16">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

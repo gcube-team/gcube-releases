@@ -1,0 +1,6 @@
+---
+
+- name: Install algorithm <name>
+  shell: /home/gcube/algorithmInstaller/addAlgorithm.sh <name> <category> <class> <vre> <atype> <skipjava> <packageurl> "<description>"
+  args:
+    chdir: /home/gcube/algorithmInstaller

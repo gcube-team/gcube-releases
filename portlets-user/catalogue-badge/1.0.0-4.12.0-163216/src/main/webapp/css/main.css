@@ -1,0 +1,32 @@
+#catalogueDiv {
+	text-align: center;
+	width: 100%;
+}
+
+.input-catalogue {
+	text-align: center;
+	width: 100%;
+}
+
+div.catstats {
+	padding-bottom: 60px;
+}
+
+div.catstats ul {
+	margin: 0;
+	list-style: none;
+}
+
+div.catstats ul li {
+	float: left;
+	width: 25%;
+	display: list-item;
+}
+
+div.catstats ul li a b {
+    font-size: 35px;
+    line-height: 1.1;
+    display: block;
+    font-weight: 300;
+}
+

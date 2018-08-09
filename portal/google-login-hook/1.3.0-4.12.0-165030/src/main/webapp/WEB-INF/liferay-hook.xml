@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hook PUBLIC "-//Liferay//DTD Hook 6.2.0//EN" "http://www.liferay.com/dtd/liferay-hook_6_2_0.dtd">
+
+<hook>
+
+	<!-- The specified contains new configuration and/or overrides already existing configuration for the portal -->
+	<portal-properties>portal.properties</portal-properties>
+	
+	<!-- The specified file contains the language -->
+	<language-properties>content/Language.properties</language-properties>
+	
+	<!-- Specify the jsp directory that contains overridden jsps and new jsps -->
+	<custom-jsp-dir>/custom_jsps</custom-jsp-dir>
+	
+	<!-- Create a new struts action -->
+	<struts-action>
+		<struts-action-path>/portal/google_login</struts-action-path>
+		<struts-action-impl>gr.cite.google.GoogleOAuth</struts-action-impl>
+	</struts-action>
+
+</hook>

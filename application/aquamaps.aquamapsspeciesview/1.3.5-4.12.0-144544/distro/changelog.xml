@@ -1,0 +1,20 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.application.aquamapsspeciesview.1-3-0" date="2013-09-27">
+		<Change>Mavenized</Change>
+		<Change>gwt 2.5.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application.aquamapsspeciesview.1-3-2" date="2015-09-28">
+		<Change>Integrated Workspace explorer</Change>
+		<Change>Integrated Session checker</Change>
+	</Changeset>	
+	<Changeset component="org.gcube.application.aquamapsspeciesview.1-3-3" date="2016-06-21">
+		<Change>Liferay 6.2 integration</Change>		
+	</Changeset>
+	<Changeset component="org.gcube.application.aquamapsspeciesview.1-3-4" date="2016-09-08">
+		<Change>Removed Gis-viewer direct dependency</Change>
+		<Change>Set import species storage owner</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application.aquamapsspeciesview.1-3-5" date="2016-09-08">
+		<Change>Fixed GIS preview #7066</Change>		
+	</Changeset>		
+</ReleaseNotes>

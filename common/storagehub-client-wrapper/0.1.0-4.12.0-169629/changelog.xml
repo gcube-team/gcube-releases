@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.storagehubwrapper.0-1-0"
+		date="2018-06-20">
+		<Change>[Task #12059] first release</Change>
+	</Changeset>
+</ReleaseNotes>

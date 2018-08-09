@@ -1,0 +1,20 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.tabular-data-widget.2-3-0"
+		date="2015-02-16">
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-widget.2-2-0"
+		date="2014-06-05">
+		<Change>Updated pom</Change>
+		<Change>Updated to Java 7</Change>
+		<Change>Added multi-selection control on TabularDataPanel</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-widget.2-1-0"
+		date="2013-10-18">
+		<Change>Removed old stack (gcf)</Change>
+		<Change>Updated GWT to 2.5.1</Change>
+		<Change>Updated ASLCore 4</Change>
+		<Change>Removed apache logger, now using slf4j</Change>
+	</Changeset>
+</ReleaseNotes>

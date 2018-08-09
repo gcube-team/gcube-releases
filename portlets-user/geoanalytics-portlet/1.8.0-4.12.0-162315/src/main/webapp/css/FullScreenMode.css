@@ -1,0 +1,13 @@
+div#DecisionSupportSystem:-webkit-full-screen{
+	height: 100%;
+	width:100%;
+}
+div#DecisionSupportSystem:-webkit-full-screen div#mainScreen{
+	height: 93%;
+}
+div#DecisionSupportSystem:-webkit-full-screen div#mapCon{
+	height:100%;
+}
+div#DecisionSupportSystem:-webkit-full-screen div#mapContainer{
+	height:100%;
+}

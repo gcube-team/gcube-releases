@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xmlns="http://java.sun.com/xml/ns/javaee">
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>trainingCourseAppServlet</servlet-name>
+		<servlet-class>org.gcube.portlets.user.trainingcourse.server.TrainingCourseAppServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- Workspace Explorer -->
+	<servlet>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsexplorer.server.WorkspaceExplorerServiceImpl</servlet-class>
+	</servlet>
+
+	<!-- Workspace Uploader -->
+	<servlet>
+		<servlet-name>workspaceUploaderService</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspaceuploader.server.WorkspaceUploaderServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>workspaceUploadServletStream</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspaceuploader.server.WorkspaceUploadServletStream</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>workspaceUploaderWsUtil</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspaceuploader.server.WorkspaceUploaderWsUtil</servlet-class>
+	</servlet>
+
+	<!-- Workspace Sharing Widget -->
+	<servlet>
+		<servlet-name>workspacesharing</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.workspacesharingwidget.server.WorkspaceSharingServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>workspacesharing</servlet-name>
+		<url-pattern>/TrainingCourse/workspacesharing</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workspaceUploaderService</servlet-name>
+		<url-pattern>/TrainingCourse/workspaceUploaderService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workspaceUploadServletStream</servlet-name>
+		<url-pattern>/TrainingCourse/workspaceUploadServletStream</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workspaceUploaderWsUtil</servlet-name>
+		<url-pattern>/TrainingCourse/workspaceUploaderWsUtil</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>workspaceExplorer </servlet-name>
+		<url-pattern>/TrainingCourse/WorkspaceExplorerService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>trainingCourseAppServlet</servlet-name>
+		<url-pattern>/TrainingCourse/trainingCourseAppService</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>TrainingCourse.html</welcome-file>
+	</welcome-file-list>
+
+
+
+</web-app>

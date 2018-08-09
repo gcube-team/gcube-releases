@@ -1,0 +1,8 @@
+<application mode='online'>
+		<name>TabularData</name>
+		<group>DataAnalysis</group>
+		<version>1.8.2-4.12.0-160583</version>
+		<description>tabular data manager</description>
+		<local-persistence location='target' />
+</application>
+

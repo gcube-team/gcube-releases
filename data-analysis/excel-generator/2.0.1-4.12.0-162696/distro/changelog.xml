@@ -1,0 +1,11 @@
+<ReleaseNotes> 
+	<Changeset component="${groupId}.${artifactId}.${version}" date="2017-12-22"> 
+		<Change>Bug about long names of excel sheets fixed</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.${version}" date="2017-10-23"> 
+		<Change>Support for SDMX Complete excel</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.${version}" date="2017-06-01"> 
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,14 @@
+<ReleaseNotes>
+<Changeset component="fhn-occi-connector.1-0-0" date="2018-08-08">
+  <Change>First Release</Change>
+</Changeset>
+<Changeset component="fhn-occi-connector.1-1-0" date="2018-08-08">
+  <Change>Second release</Change>
+</Changeset>
+<Changeset component="fhn-occi-connector.1-1-1" date="2018-08-08">
+  <Change>Minor changes to Second release</Change>
+</Changeset>
+<Changeset component="fhn-occi-connector.1-1-2" date="2018-08-08">
+  <Change>Made the component java8 compliant</Change>
+</Changeset>
+</ReleaseNotes>

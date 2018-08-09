@@ -1,0 +1,23 @@
+drop view if exists SiteUsageView;
+drop view if exists SimulUsageView;
+drop view if exists SiteFullView;
+drop view if exists ScenarioFullView;
+drop view if exists SimulModelFullView;
+drop view if exists SampleDataFullView;
+
+drop table if exists Status;
+drop table if exists Mortality;
+drop table if exists Sfr;
+drop table if exists Sgr;
+drop table if exists Fcr;
+drop table if exists Site;
+drop table if exists Scenario;
+drop table if exists SimulModel;
+drop table if exists BroodstockQuality;
+drop table if exists CurrentRating;
+drop table if exists FeedQuality;
+drop table if exists OxygenRating;
+drop table if exists Region;
+drop table if exists Species;
+drop table if exists SimilarSite;
+drop table if exists SampleData;

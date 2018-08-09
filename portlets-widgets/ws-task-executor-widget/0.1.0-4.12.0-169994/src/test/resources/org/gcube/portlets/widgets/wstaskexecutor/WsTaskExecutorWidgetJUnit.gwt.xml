@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="WsTaskExecutorWidget">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.widgets.wstaskexecutor.WsTaskExecutorWidget' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/WsTaskExecutorWidget/greet" class="org.gcube.portlets.widgets.wstaskexecutor.server.GreetingServiceImpl" />
+
+</module>

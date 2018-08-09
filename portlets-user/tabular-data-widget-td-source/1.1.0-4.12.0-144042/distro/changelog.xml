@@ -1,0 +1,19 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.tabular-data-widget-td-source.1-1-0"
+		date="2017-02-15">
+		<Change>Fixed to new authorization</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-widget-td-source.1-0-2"
+		date="2015-04-30">
+		<Change>Updated NoSuchTableException package reference</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-widget-td-source.1-0-1"
+		date="2014-02-01">
+		<Change>Updated to Java 7</Change>
+		<Change>Updated service interface data source</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-widget-td-source.1-0-0"
+		date="2013-10-18">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,167 @@
+/** Add css rules here for your application. */
+.ws-task-modal-body div.modal-body {
+	position: relative;
+	max-height: 650px !important;
+	padding: 15px;
+	overflow-y: auto;
+	width: 800px;
+	margin: 0 auto;
+}
+
+.textAreaWidth {
+	width: 500px !important;
+}
+
+.myMarginLeft {
+	margin-left: 180px !important;
+}
+
+.myLittleWidth {
+	width: 40px !important;
+	padding-left: 20px !important;
+}
+
+.myFormWidth {
+	width: 750px !important;
+}
+
+.myLittleMarginLeft {
+	margin-left: 25px !important;
+}
+
+.my-input-width {
+	width: 370px !important;
+}
+
+.my-prepend-width .add-on {
+	width: 50px !important;
+	margin-bottom: 5px !important;
+}
+
+.my-select-width {
+	width: 382px !important;
+}
+
+.my-external-select-width {
+	width: 440px !important;
+}
+
+.my-external-input-width {
+	width: 425px !important;
+}
+
+table.table-fixed {
+	table-layout: fixed;
+	width: 100%;
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+table.table-fixed tr {
+	border-bottom: 1px solid #ccc;
+}
+
+table.table-fixed td {
+	white-space: nowrap;
+	border: 1px solid #ddd;
+	padding: 2px;
+	text-align: center;
+	overflow: hidden;
+}
+
+
+.gwt-DialogBoxNew{
+	border: 8px solid #99C0E8;
+	border-radius: 6px 6px 6px 6px;
+	box-shadow: none;
+/* 	line-height: 7px; */
+	opacity: 1;
+	z-index: 10000;
+	background-color: #FFFFFF;
+	max-height: 700px;
+	max-width: 1000px;
+}
+
+.gwt-DialogBoxNew .Caption {
+	background: none repeat scroll 0 0 #99C0E8;
+	border: medium none #D4D4D4;
+	cursor: default;
+	font-family: Arial Unicode MS, Arial, sans-serif !important;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 27px;
+	padding: 2px 0px 0px 0px;
+}
+
+.gwt-DialogBoxNew .dialogContent {
+	max-height: 650px;
+	overflow: hidden;
+	overflow-y: auto !important;
+}
+
+.gwt-DialogBoxNew .dialogMiddleCenter {
+	padding: 3px;
+	background: white;
+}
+
+.gwt-DialogBoxNew .dialogBottomCenter {
+	
+}
+
+.gwt-DialogBoxNew .dialogMiddleLeft {
+	/*   background: url(images/vborder.png) repeat-y -31px 0px; */
+	
+}
+
+.gwt-DialogBoxNew .dialogMiddleRight {
+	/*  background: url(images/vborder.png) repeat-y -32px 0px;*/
+	
+}
+/*
+.gwt-DialogBoxNew .dialogTopLeftInner {
+  width: 10px;
+  height: 8px;
+  zoom: 1;
+  background: none repeat scroll 0 0 #E4E4E4;
+}
+.gwt-DialogBoxNew .dialogTopRightInner {
+  width: 12px;
+  zoom: 1;
+  background: none repeat scroll 0 0 #E4E4E4;
+}
+.gwt-DialogBoxNew .dialogBottomLeftInner {
+  width: 10px;
+  height: 12px;
+  zoom: 1;
+}
+.gwt-DialogBoxNew .dialogBottomRightInner {
+  width: 12px;
+  height: 12px;
+  zoom: 1;
+}*/
+.gwt-DialogBoxNew .dialogTopLeft {
+	/*  background: url(images/circles.png) no-repeat -20px 0px;
+  -background: url(images/circles_ie6.png) no-repeat -20px 0px; */
+	background: none repeat scroll 0 0 #E4E4E4;
+}
+
+.gwt-DialogBoxNew .dialogTopRight {
+	/*   background: url(images/circles.png) no-repeat -28px 0px;
+  -background: url(images/circles_ie6.png) no-repeat -28px 0px; */
+	background: none repeat scroll 0 0 #E4E4E4;
+}
+
+.gwt-DialogBoxNew .dialogBottomLeft {
+	/*   background: url(images/circles.png) no-repeat 0px -36px;
+  -background: url(images/circles_ie6.png) no-repeat 0px -36px; */
+	
+}
+
+.gwt-DialogBoxNew .dialogBottomRight {
+	/*   background: url(images/circles.png) no-repeat -8px -36px;
+  -background: url(images/circles_ie6.png) no-repeat -8px -36px; */
+	
+}

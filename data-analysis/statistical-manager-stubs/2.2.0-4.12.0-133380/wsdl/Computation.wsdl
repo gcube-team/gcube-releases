@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Computation"
+	targetNamespace="http://gcube-system.org/namespaces/data/analysis/statisticalmanager"
+	xmlns:tns="http://gcube-system.org/namespaces/data/analysis/statisticalmanager"
+	xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+	xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+	xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+	xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+	xmlns:smtypes="http://gcube-system.org/namespaces/data/analysis/statisticalmanager/types">
+
+
+	<import namespace="http://gcube-system.org/namespaces/common/core/faults"
+		location="../gcube/common/core/faults/GCUBEFaults.wsdl" />
+	<import
+		namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		location="../gcube/common/core/providers/GCUBEProvider.wsdl" />
+	<import
+		namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+		location="../wsrf/notification/WS-BaseN.wsdl" />
+
+	<types>
+		<xsd:schema
+			targetNamespace="http://gcube-system.org/namespaces/data/analysis/statisticalmanager">
+			<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types"
+				schemaLocation="../gcube/common/core/types/GCUBETypes.xsd" />
+			<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+				schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+
+			<xsd:import
+				namespace="http://gcube-system.org/namespaces/data/analysis/statisticalmanager/types"
+				schemaLocation="SMTypes.xsd" />
+
+
+			<xsd:element name="computation" type="xsd:string" />
+			<xsd:element name="computationsRPD">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="tns:computation" minOccurs="0"
+							maxOccurs="unbounded" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="ComputationId" type="xsd:string" />
+			<xsd:element name="getOutputOutput" type="smtypes:SMAbstractResource" />
+			
+			<xsd:element name="getComputationInfoInput" type="xsd:string" />
+			<xsd:element name="getComputationInfoOutput" type="smtypes:SMOperationInfo" />
+			
+			<xsd:element name="removeInput" type="xsd:string" />
+			<xsd:element name="removeOutput" type="coretypes:VOID" />
+			
+			<xsd:element name="stopInput" type="xsd:string" />
+			<xsd:element name="stopOutput" type="coretypes:VOID" />
+			
+			<xsd:complexType name="UpdateNotificationTypeWrapper">
+				<xsd:sequence>
+					<xsd:element ref="tns:ComputationId" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+		</xsd:schema>
+	</types>
+
+	<message name="getOutputInputMessage">
+		<part name="requestComputationOutput" element="tns:ComputationId" />
+	</message>
+
+	<message name="getOutputOutputMessage">
+		<part name="responseComputationOutput" element="tns:getOutputOutput" />
+	</message>
+
+	<message name="getComputationInfoInputMessage">
+		<part name="requestComputationInfo" element="tns:getComputationInfoInput" />
+	</message>
+
+	<message name="getComputationInfoOutputMessage">
+		<part name="responseComputationInfo" element="tns:getComputationInfoOutput" />
+	</message>
+	
+	<message name="removeInputMessage">
+		<part name="requestRemoveComputation" element="tns:removeInput" />
+	</message>
+
+	<message name="removeOutputMessage">
+		<part name="responseRemoveComputation" element="tns:removeOutput" />
+	</message>
+	
+	<message name="stopInputMessage">
+		<part name="requestRemoveComputation" element="tns:stopInput" />
+	</message>
+
+	<message name="stopOutputMessage">
+		<part name="responseRemoveComputation" element="tns:stopOutput" />
+	</message>
+
+	<portType name="ComputationPortType" wsdlpp:extends="provider:GCUBEProvider"
+		wsrp:ResourceProperties="tns:computationsRPD">
+
+		<operation name="getComputationInfo">
+			<input message="tns:getComputationInfoInputMessage" />
+			<output message="tns:getComputationInfoOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="getOutput">
+			<input message="tns:getOutputInputMessage" />
+			<output message="tns:getOutputOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+
+		<operation name="remove">
+			<input message="tns:removeInputMessage" />
+			<output message="tns:removeOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+	
+		<operation name="stop">
+			<input message="tns:stopInputMessage" />
+			<output message="tns:stopOutputMessage" />
+			<fault name="fault" message="corefaults:GCUBEFaultMessage" />
+		</operation>
+	
+	</portType>
+
+</definitions>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 5.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_5_2_0.dtd">
+
+<liferay-portlet-app>
+	<portlet>
+		<portlet-name>Loggedin</portlet-name>
+		<layout-cacheable>false</layout-cacheable>
+		<instanceable>false</instanceable>
+		<ajaxable>false</ajaxable> 
+		<!-- LOCATION CSS HERE -->
+        <header-portlet-css>/GCubeLoggedin.css</header-portlet-css>
+	</portlet>
+	<role-mapper>
+		<role-name>administrator</role-name>
+		<role-link>Administrator</role-link>
+	</role-mapper>
+</liferay-portlet-app>

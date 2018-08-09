@@ -1,0 +1,15 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<g:HTMLPanel>
+		<b:ControlGroup>
+			<b:ControlLabel for="labelEntry" ui:field="labelEntry">
+				<!-- Label goes here -->
+			</b:ControlLabel>
+			<b:Controls>
+				<b:TextBox b:id="labelEntry" alternateSize="LARGE"
+					width="97%" readOnly="true" ui:field="entryValue"></b:TextBox>
+			</b:Controls>
+		</b:ControlGroup>
+	</g:HTMLPanel>
+</ui:UiBinder> 

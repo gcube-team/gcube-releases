@@ -1,0 +1,16 @@
+.training-module .well {
+    background-color: #fff;
+}
+
+.training-module .portlet, .training-module .portlet-borderless-container {
+    background-color: #e6ecf0 !important;
+}
+
+.training-module .portlet-topper {
+    background-color: #e6ecf0 !important;
+}
+
+.photo-mini {
+	width: 20px;
+	text-align: center;
+}

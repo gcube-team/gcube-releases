@@ -1,0 +1,39 @@
+<gmd:CI_ResponsibleParty>
+			<gmd:individualName>
+				<gco:CharacterString>${responsibleParty.individualName}</gco:CharacterString>
+			</gmd:individualName>
+			<gmd:organisationName>
+				<gco:CharacterString>${responsibleParty.organization}</gco:CharacterString>
+			</gmd:organisationName>
+			
+			<#if responsibleParty.contact?has_content>
+			<gmd:contactInfo>
+				<gmd:CI_Contact>
+					<gmd:address>
+						<gmd:CI_Address>
+							<gmd:electronicMailAddress>
+								<gco:CharacterString>${responsibleParty.contact.email}</gco:CharacterString>
+							</gmd:electronicMailAddress>
+						</gmd:CI_Address>
+					</gmd:address>
+					<gmd:onlineResource>
+						<gmd:CI_OnlineResource>
+							<gmd:linkage>
+								<gmd:URL>${responsibleParty.contact.site}</gmd:URL>
+							</gmd:linkage>
+							<gmd:protocol>
+								<gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
+							</gmd:protocol>
+							<gmd:name>
+								<gco:CharacterString>${responsibleParty.individualName} site.</gco:CharacterString>
+							</gmd:name>
+						</gmd:CI_OnlineResource>
+					</gmd:onlineResource>
+				</gmd:CI_Contact>
+			</gmd:contactInfo>
+			</#if>
+			<gmd:role>
+				<gmd:CI_RoleCode codeListValue="${responsibleParty.role}"
+					codeList="http://schemas.opengis.net/iso/19139/20070417/resources/Codelist/gmxCodelists.xml#CI_RoleCode"/>
+			</gmd:role>
+		</gmd:CI_ResponsibleParty>

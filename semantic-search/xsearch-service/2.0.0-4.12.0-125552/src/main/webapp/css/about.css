@@ -1,0 +1,174 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: 0 none;
+    border: 0 none;
+    height: 100%;
+    width: 100%;
+}
+
+.browsers {
+    position: fixed;
+    font-size: 10px;
+    color:gray;
+    padding-left:4px;
+    font: normal 12px Verdana, Arial;
+    z-index: 999;
+}
+
+.headerContainer {
+    position:relative;
+    border-bottom: 1px solid #D0D8DE;
+    z-index:999;
+    vertical-align: baseline;
+    height: auto;
+    width: 100%;
+    clear: both;
+    float:left;
+}
+
+.header {
+    width: 850px;
+    height: auto;
+    clear: both;
+    margin: 10px auto;
+    position:relative;
+}
+
+.contentContainer {
+    position:relative;
+    vertical-align: baseline;
+    height: auto;
+    width: 100%;
+    clear: both;
+    float:left;
+    padding-bottom: 100px;
+    border-bottom: 1px solid #D0D8DE;
+}
+
+
+.content {
+    width: 850px;
+    padding-top: 20px;
+    clear: both;
+    margin: 0 auto;
+    position:relative;
+}
+
+
+.logo {
+    position: relative;
+    float: left;
+    height: auto;
+}
+
+.menu {
+    position: relative;
+    float:right;
+}
+
+.nav {
+    margin-top: 0px;
+}
+
+.menuitems {
+    list-style: none outside none;
+}
+
+.menuitem {
+    float:left; 
+    width: auto;
+    margin-left:17px;
+    margin-right:17px;
+    font: normal 15px Verdana, Arial;
+}
+
+.menuitem a {
+    color: #333333;
+}
+
+
+.menuitem a:hover {
+    color: red;
+}
+
+.footer {
+    height:500px;
+    clear: both;
+    float:left;
+}
+
+.infocontent {
+    text-align: justify;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.gotop {
+    float:right;
+    margin-top: -10px;
+}
+
+.gotoptext {
+    font: normal 12px Verdana, Arial;
+    color: red;
+}
+
+.info_title {
+    color: black;
+    font-size: 22px;
+    font-family: Calibri;
+}
+
+.info_text {
+    color: black;
+    font-size: 15px;
+    font-family: Calibri;
+    text-align: justify;
+}
+
+
+.systems {
+    padding-top: 5px;
+    padding-left: 0px;
+    font-size: 13px;
+    font-family: Calibri;
+    color: darkslategrey;
+}
+
+.systems_title {
+    font-size: 15px;
+    font-family: Calibri;
+    color: black;
+}
+
+
+.info {
+    clear:both;
+    width: 720px;
+    padding-top:40px;
+    text-align: justify;
+}
+
+.contact {
+    margin-left: 20px;
+    padding-left: 5px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: #ccc;
+    width: auto;
+}
+.contact:hover {
+    background-color:#f3f3f3;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

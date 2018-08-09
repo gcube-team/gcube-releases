@@ -1,0 +1,347 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<!-- <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" -->
+<!-- xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"> -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>org.gcube.portlets.user</groupId>
+	<artifactId>databases-manager-portlet</artifactId>
+	<packaging>war</packaging>
+	<version>1.8.0-4.12.0-148419</version>
+	<name>DatabasesResourceManagerPortlet</name>
+	<description>Databases Resource Manager Portlet</description>
+	
+
+	<scm>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/portlets/user/databases-manager-portlet</url>
+	</scm>
+
+	<developers>
+		<developer>
+			<name>Giancarlo Panichi</name>
+			<email>g.panichi@isti.cnr.it</email>
+			<organization>CNR Pisa, Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo"</organization>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<properties>
+		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+		<distroDirectory>distro</distroDirectory>
+		<configDirectory>config</configDirectory>
+
+		<!-- Java -->
+		<maven.compiler.source>1.7</maven.compiler.source>
+		
+		<!-- GWT configuration -->
+		<gwtVersion>2.6.1</gwtVersion>
+		<gwtLogVersion>3.3.2</gwtLogVersion>
+		<gxtVersion>3.1.1</gxtVersion>
+		<gxt2Version>2.6.1</gxt2Version>
+
+		<KEYS>${env.KEYS}</KEYS>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<dependencies>
+		<!-- GWT -->
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>${gwtVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-servlet</artifactId>
+			<version>${gwtVersion}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sencha.gxt</groupId>
+			<artifactId>gxt2.2.5-gwt2.X</artifactId>
+			<version>${gxt2Version}</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>javax.validation</groupId> <artifactId>validation-api</artifactId> 
+			<version>1.0.0.GA</version> <scope>test</scope> </dependency> <dependency> 
+			<groupId>javax.validation</groupId> <artifactId>validation-api</artifactId> 
+			<version>1.0.0.GA</version> <classifier>sources</classifier> <scope>test</scope> 
+			</dependency> -->
+
+		<!-- <dependency> <groupId>org.gcube.core</groupId> <artifactId>common-scope</artifactId> 
+			</dependency> -->
+
+
+		<!-- Portlet -->
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- PORTAL -->
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-scope-maps</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common.portal</groupId>
+			<artifactId>portal-manager</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.dvos</groupId>
+			<artifactId>usermanagement-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.portal</groupId>
+			<artifactId>client-context-library</artifactId>
+			<version>1.0.0-4.12.0-134944</version>
+			<scope>compile</scope>
+		</dependency>
+
+
+		<!-- Authorization -->
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>common-authorization</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>authorization-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- GCube Widgets -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>gcube-widgets</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Session Checker -->
+		<dependency>
+			<groupId>org.gcube.portlets.widgets</groupId>
+			<artifactId>session-checker</artifactId>
+			<version>1.0.1-4.12.0-129562</version>
+		</dependency>
+
+		<!-- Storage -->
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-wrapper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- Statistical <dependency> <groupId>org.gcube.data.analysis</groupId> 
+			<artifactId>statistical-manager-cl</artifactId> <version>[2.0.0-SNAPSHOT,3.0.0-SNAPSHOT)</version> 
+			</dependency> <dependency> <groupId>org.gcube.core</groupId> <artifactId>common-fw-clients</artifactId> 
+			</dependency> -->
+
+
+		<!-- data-miner-manager-cl -->
+		<dependency>
+			<groupId>org.gcube.data.analysis</groupId>
+			<artifactId>data-miner-manager-cl</artifactId>
+			<version>1.4.0-4.12.0-167775</version>
+		</dependency>
+
+
+		<!-- Jakarta RegExp -->
+		<dependency>
+			<groupId>jakarta-regexp</groupId>
+			<artifactId>jakarta-regexp</artifactId>
+			<version>1.4</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- <dependency> <groupId>net.sf.ehcache</groupId> <artifactId>ehcache</artifactId> 
+			<version>2.8.0</version> <scope>provided</scope> </dependency> -->
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<version>2.8.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- Uri Resolver Manager -->
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>uri-resolver-manager</artifactId>
+			<version>1.3.1-4.12.0-146953</version>
+		</dependency>
+
+
+		<!-- LOGGING -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!-- JUnit TEST -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-portal-bom</artifactId>
+				<version>3.4.0-4.12.0-169455</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<repositories>
+		<repository>
+			<id>dnet-deps</id>
+			<name>dnet-deps</name>
+			<url>http://maven.research-infrastructures.eu/nexus/content/repositories/dnet-deps//</url>
+		</repository>
+	</repositories>
+
+	<build>
+
+		<!-- Generate compiled stuff in the folder used for developing mode -->
+		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<!-- GWT Maven Plugin -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>${gwtVersion}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<runTarget>DatabasesManager.html</runTarget>
+					<hostedWebapp>${webappDirectory}</hostedWebapp>
+					<module>org.gcube.portlets.user.databasesmanager.DatabasesManager</module>
+					<!-- <compileSourcesArtifacts> <artifact>com.github.highcharts4gwt:highcharts</artifact> 
+						</compileSourcesArtifacts> -->
+				</configuration>
+			</plugin>
+
+			<!-- Copy static web files before executing gwt:run -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<!--<goals> <goal>exploded</goal> </goals> -->
+					</execution>
+				</executions>
+				<configuration>
+					<webappDirectory>${webappDirectory}</webappDirectory>
+					<warName>${project.build.finalName}</warName>
+
+					<!-- Include static jar into WEB-INF/lib -->
+					<!-- <webResources> <resource> <directory>lib</directory> <includes> 
+						<include>*.jar</include> </includes> <targetPath>WEB-INF/lib</targetPath> 
+						</resource> </webResources> -->
+				</configuration>
+			</plugin>
+
+			<!-- Maven Surefire Plugin for Test -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.16</version>
+				<configuration>
+					<skipTests>false</skipTests>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.surefire</groupId>
+						<artifactId>surefire-junit47</artifactId>
+						<version>2.16</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+	</build>
+
+</project>

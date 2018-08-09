@@ -1,0 +1,20 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.survey-manager.1-2-0"
+		date="2018-01-25">
+		<Change>Fix for Bug #10976 Survey Manager: export CSV fails when Survey name contains spaces</Change>
+		<Change>Generalised into questionnaire-manager, added possibility to define the purpose (Survey or Quiz) as configuration</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.survey-manager.1-1-0"
+		date="2017-06-27">
+		<Change>fixed Bug #8951 : Survey Manager portlet: If multiple Sections
+			are present only one is shown</Change>
+		<Change>Removed ASL Session</Change>
+		<Change>Feature #9100, add button for managers to create automatically
+			the survey page for users to take the survey</Change>
+		<Change>Restyled interface to increase usability</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.survey-manager.1-0-0"
+		date="2017-05-19">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

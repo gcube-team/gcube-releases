@@ -1,0 +1,155 @@
+package org.gcube.datacatalogue.catalogue.ws;
+
+import java.util.List;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.MultivaluedMap;
+import javax.ws.rs.core.UriInfo;
+
+import org.gcube.common.authorization.library.provider.AuthorizationProvider;
+import org.gcube.common.authorization.library.utils.Caller;
+import org.gcube.common.scope.api.ScopeProvider;
+import org.gcube.datacatalogue.catalogue.utils.CatalogueUtils;
+import org.gcube.datacatalogue.catalogue.utils.Constants;
+import org.gcube.datacatalogue.catalogue.utils.Delegator;
+import org.gcube.datacatalogue.ckanutillibrary.server.DataCatalogue;
+import org.gcube.datacatalogue.ckanutillibrary.server.utils.CatalogueUtilMethods;
+
+import eu.trentorise.opendata.jackan.model.CkanOrganization;
+
+
+@Path(Constants.ORGANIZATIONS)
+/**
+ * Organizations service endpoint.
+ * @author Costantino Perciante at ISTI-CNR (costantino.perciante@isti.cnr.it)
+ */
+public class Organization {
+
+	@GET
+	@Path(Constants.SHOW_METHOD)
+	@Produces(MediaType.APPLICATION_JSON)
+	public String show(@Context UriInfo uriInfo){
+
+		// see http://docs.ckan.org/en/latest/api/#ckan.logic.action.get.organization_show
+		Caller caller = AuthorizationProvider.instance.get();
+		String context = ScopeProvider.instance.get();
+		boolean isApplication = CatalogueUtils.isApplicationToken(caller);
+
+		if(!isApplication)
+			return Delegator.delegateGet(caller, context, Constants.ORGANIZATION_SHOW, uriInfo, false);
+		else{
+
+			try{
+				DataCatalogue utils = CatalogueUtils.getCatalogue();
+				String organization = CatalogueUtilMethods.getOrganizationNameFromScope(context);
+				String organizationId = null;
+
+				MultivaluedMap<String, String> queryParams = uriInfo.getQueryParameters(false);
+				List<String> ids = queryParams.get("id"); 
+
+				if(ids == null || ids.isEmpty())
+					throw new Exception("'id' field is missing!");
+
+				organizationId = ids.get(0);
+
+				CkanOrganization fetchedOrganization = utils.getOrganizationByName(organizationId);
+
+				if(organization.equalsIgnoreCase(fetchedOrganization.getName())){
+					return Delegator.delegateGet(caller, context, Constants.ORGANIZATION_SHOW, uriInfo, true);
+				}else
+					throw new Exception("You are not authorized to access this organization");
+
+			}catch(Exception e){
+				return CatalogueUtils.createJSONOnFailure(e.toString());
+			}
+
+		}
+
+	}
+
+	@GET
+	@Path(Constants.LIST_METHOD)
+	@Produces(MediaType.APPLICATION_JSON)
+	public String organizationList(@Context UriInfo uriInfo){
+
+		// see http://docs.ckan.org/en/latest/api/#ckan.logic.action.get.organization_list
+		Caller caller = AuthorizationProvider.instance.get();
+		String context = ScopeProvider.instance.get();
+		boolean isApplication = CatalogueUtils.isApplicationToken(caller);
+		return Delegator.delegateGet(caller, context, Constants.ORGANIZATION_LIST, uriInfo, isApplication);
+
+	}
+
+	@POST
+	@Path(Constants.CREATE_METHOD)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public String create(String json, @Context UriInfo uriInfo){
+
+		// see http://docs.ckan.org/en/latest/api/#ckan.logic.action.get.organization_create
+		Caller caller = AuthorizationProvider.instance.get();
+		String context = ScopeProvider.instance.get();
+		return Delegator.delegatePost(caller, context, Constants.ORGANIZATION_CREATE, json, uriInfo, false);
+
+	}
+
+	@DELETE
+	@Path(Constants.DELETE_METHOD)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public String delete(String json, @Context UriInfo uriInfo){
+
+		// see http://docs.ckan.org/en/latest/api/#ckan.logic.action.get.organization_delete
+		Caller caller = AuthorizationProvider.instance.get();
+		String context = ScopeProvider.instance.get();
+		return Delegator.delegatePost(caller, context, Constants.ORGANIZATION_DELETE, json, uriInfo, false);
+
+	}
+
+	@DELETE
+	@Path(Constants.PURGE_METHOD)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public String purge(String json, @Context UriInfo uriInfo){
+
+		// see http://docs.ckan.org/en/latest/api/#ckan.logic.action.get.organization_create
+		Caller caller = AuthorizationProvider.instance.get();
+		String context = ScopeProvider.instance.get();
+		return Delegator.delegatePost(caller, context, Constants.ORGANIZATION_PURGE, json, uriInfo, false);
+
+	}
+
+	@POST
+	@Path(Constants.UPDATE_METHOD)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public String update(String json, @Context UriInfo uriInfo){
+
+		// see http://docs.ckan.org/en/latest/api/#ckan.logic.action.get.organization_update
+		Caller caller = AuthorizationProvider.instance.get();
+		String context = ScopeProvider.instance.get();
+		return Delegator.delegatePost(caller, context, Constants.ORGANIZATION_UPDATE, json, uriInfo, false);
+
+	}
+
+	@POST
+	@Path(Constants.PATCH_METHOD)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public String patch(String json, @Context UriInfo uriInfo){
+
+		// see http://docs.ckan.org/en/latest/api/#ckan.logic.action.get.organization_patch
+		Caller caller = AuthorizationProvider.instance.get();
+		String context = ScopeProvider.instance.get();
+		return Delegator.delegatePost(caller, context, Constants.ORGANIZATION_PATCH, json, uriInfo, false);
+
+	}
+
+}

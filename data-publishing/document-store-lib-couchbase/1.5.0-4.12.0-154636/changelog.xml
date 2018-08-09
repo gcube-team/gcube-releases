@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-publishing.document-store-lib-couchbase.1-5-0" date="2018-08-08">
+		<Change>Added isConnectionActive() in PersistenceBackend</Change>
+		<Change>Discover bucket in relation of dinamically discovered buckets #9612</Change>
+		<Change>Used DSMapper to get Record from JsonNode</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.document-store-lib-couchbase.1-4-0" date="2017-06-07">
+		<Change>Fixed bug on shutdown() method to properly close the connection</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.document-store-lib-couchbase.1-3-1" date="2017-05-02">
+		<Change>Added shutdown() method to correctly close connections to persistence #7345</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.document-store-lib-couchbase.1-3-0" date="2017-03-16">
+		<Change>Optimized number of connections to couchbasew server #6305</Change>
+		<Change>Implemented the new api to close connection (if any) to persistence introduced by document-store-lib.1-5-0</Change>
+	</Changeset>
+    <Changeset component="org.gcube.data-publishing.document-store-lib-couchbase.1-2-0" date="2016-11-07">
+		<Change>Modified cluster connection timing</Change>
+	</Changeset>
+    <Changeset component="org.gcube.data-publishing.document-store-lib-couchbase.1-1-0" date="2016-06-29">
+		<Change>Different Usage Records are saved in different buckets #4482</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.document-store-lib-couchbase.1-0-1" date="2016-04-08">
+		<Change>Fixed distro directory</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.document-store-lib-couchbase.1-0-0" date="2016-02-08">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

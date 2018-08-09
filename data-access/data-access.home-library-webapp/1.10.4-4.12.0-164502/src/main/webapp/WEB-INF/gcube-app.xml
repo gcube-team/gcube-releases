@@ -1,0 +1,11 @@
+<application mode='online'>
+		<name>HomeLibraryWebapp</name>
+		<group>DataAccess</group>
+		<version>1.5.0-SNAPSHOT</version>
+		<description>home library webapp</description>
+		<local-persistence location='target' />
+		<exclude>/admin/*</exclude>
+		<exclude>/repository/*</exclude>
+		<exclude>/server/*</exclude>
+		<exclude>/rmi</exclude>
+</application>

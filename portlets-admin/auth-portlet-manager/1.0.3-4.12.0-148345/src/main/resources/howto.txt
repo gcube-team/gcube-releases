@@ -1,0 +1,6 @@
+You should put the infrastructure decrypt keys here. 
+
+the keys must be in named "<scope name>.gcubekey", e.g. "gcube.gcubekey" or "devsec.gcubekey"
+
+The content of this folder is automatically loaded in the classpath when tomcat starts up.
+

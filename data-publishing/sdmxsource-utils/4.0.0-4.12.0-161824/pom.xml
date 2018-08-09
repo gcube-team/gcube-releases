@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>org.gcube.data.publishing</groupId>
+	<artifactId>sdmxsource-utils</artifactId>
+	<version>4.0.0-4.12.0-161824</version>
+	<name>SDMXSource Utilities</name>
+	<description>Library that contains several utilities that helps with the management of SDMXSource libraries</description>
+
+	<scm>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-publishing/sdmxsource-utils</url>
+	</scm>
+ 
+	<properties>
+		<sdmxsource.version>1.5.6.6</sdmxsource.version>
+	</properties>
+ 
+	<repositories>
+		<repository>
+			<id>sdmxsource</id>
+			<url>http://maven.research-infrastructures.eu/nexus/content/repositories/MTRepo/</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+
+		<!-- SDMXSource deps -->
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxApi</artifactId>
+			<version>${sdmxsource.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxDataParser</artifactId>
+			<version>${sdmxsource.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxStructureParser</artifactId>
+			<version>${sdmxsource.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxStructureRetrieval</artifactId>
+			<version>${sdmxsource.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.sdmxsource</groupId>
+		  <artifactId>SdmxStructureRetrieval</artifactId>
+		  <version>${sdmxsource.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<version>1.0-SP4</version>
+		</dependency>
+	<dependency>
+		<groupId>org.gcube.resources.discovery</groupId>
+		<artifactId>ic-client</artifactId>
+		<version>1.0.4-4.12.0-162683</version>
+	</dependency>
+	<dependency>
+		<groupId>org.gcube.core</groupId>
+		<artifactId>common-encryption</artifactId>
+		<version>1.0.3-4.12.0-142751</version>
+	</dependency>
+	<dependency>
+  		<groupId>org.gcube.resources</groupId>
+  		<artifactId>registry-publisher</artifactId>
+  		<version>1.2.9-4.12.0-151412</version>
+	</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+		<!-- test deps -->
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.weld.se</groupId>
+			<artifactId>weld-se</artifactId>
+			<version>1.1.7.Final</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.jeeunit</groupId>
+			<artifactId>jeeunit-weld-se</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.jeeunit</groupId>
+			<artifactId>jeeunit-cdi</artifactId>
+			<version>1.0.0</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+		<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

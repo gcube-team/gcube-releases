@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='netcdfbasicwidgets'>
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name="com.google.gwt.http.HTTP" />
+	<inherits name="com.google.gwt.resources.Resources" />
+	<inherits name='com.google.gwt.user.theme.clean.Clean' />
+
+
+	<!-- Debug CSS style -->
+	<!-- <set-configuration-property name="CssResource.style"
+		value="pretty" /> -->
+		
+
+	<!-- 
+	 <entry-point class='org.gcube.portlets.widgets.netcdfbasicwidgets.client.NetCDFBasicWidgets' 
+		/>  -->
+
+
+	<!-- <set-property name="gwt.logging.enabled" value="TRUE" /> <set-property 
+		name="gwt.logging.logLevel" value="SEVERE" /> <set-property name="gwt.logging.consoleHandler" 
+		value="ENABLED" /> <set-property name="gwt.logging.simpleRemoteHandler" value="ENABLED" 
+		/> -->
+
+	<!-- <set-property name="log_ConsoleLogger" value="ENABLED" /> <set-property 
+		name="log_DivLogger" value="ENABLED" /> <set-property name="log_GWTLogger" 
+		value="ENABLED" /> <set-property name="log_SystemLogger" value="ENABLED" 
+		/> -->
+
+	<!-- <set-property name="log_ConsoleLogger" value="DISABLED" /> <set-property 
+		name="log_DivLogger" value="DISABLED" /> <set-property name="log_GWTLogger" 
+		value="DISABLED" /> <set-property name="log_SystemLogger" value="DISABLED" 
+		/> -->
+
+	<source path='client' />
+	<source path='shared' />
+
+</module>

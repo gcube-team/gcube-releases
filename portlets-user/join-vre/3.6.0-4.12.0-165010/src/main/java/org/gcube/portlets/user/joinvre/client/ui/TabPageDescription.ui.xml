@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.important {
+		font-size: 18px;
+		font-weight: 200;
+		padding: 0 2px;
+		
+	}
+	</ui:style>
+	<b:Paragraph ui:field="desc" styleName="{style.important}">Some Text for the
+		Hero Unit.</b:Paragraph>
+</ui:UiBinder> 

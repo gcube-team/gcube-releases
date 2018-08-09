@@ -1,0 +1,25 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-transfer.agent-common.1-0-0" date="2012-04-27">
+			<Change>First release of the component</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-common.1-0-1" date="2012-09-05">
+			<Change>Fixed pom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-common.1-1-0" date="2013-01-12">
+			<Change>Included classes coming from Agent Library to be shared with Schedueler</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-common.1-2-0" date="2013-04-17">
+			<Change>moved messaging classes to common-messaging components</Change>
+			<Change>added classes for scheduler service SEI</Change>
+			<Change>FileTransferOutcome objects should contain info on bytes transferred</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-transfer.agent-common.2-0-0" date="2013-07-09">
+			<Change>added SEI to support async tree transfer</Change>
+			<Change>changed TreeTransferOutcome object</Change>
+	</Changeset>
+
+	<Changeset component="org.gcube.data-transfer.agent-common.2-0-1" date="2018-08-09">
+		<Change>removed dependency on gcf</Change>
+		<Change>Utils.newFault() method moved to agent-service</Change>
+	</Changeset>
+</ReleaseNotes>

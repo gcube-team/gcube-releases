@@ -1,0 +1,45 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.tabular-data-sdmx-export-widget.1-11-0" date="2017-12-13">
+		<Change>Enable SDMX export operation for DataSet only for the tables
+			already shared with the whole VRE [ticket #10586]
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-sdmx-export-widget.1-10-0" date="2017-07-01">
+		<Change>Added excel parameter for Template export [ticket #8781]
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-sdmx-export-widget.1-9-0" date="2017-04-01">
+		<Change>Added support for template export in SDMX [issue #8033]
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-sdmx-export-widget.1-8-0" date="2017-02-15">
+		<Change>Updated to support Dataset export [ticket #5870]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-sdmx-export-widget.1-7-0" date="2015-07-03">
+		<Change>Updated Dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-sdmx-export-widget.1-6-0" date="2015-04-30">
+		<Change>Updated Dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-sdmx-export-widget.1-5-0" date="2015-02-16">
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-sdmx-export-widget.1-4-0" date="2014-10-31">
+		<Change>Fixed Final and Lock errors</Change>
+		<Change>Updated tasks in background</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-sdmx-export-widget.1-3-0" date="2014-09-12">
+		<Change>Updated monitor</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-sdmx-export-widget.1-2-0" date="2014-06-05">
+		<Change>Updated Export</Change>
+		<Change>Updated Pom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-sdmx-export-widget.1-1-0" date="2014-04-04">
+		<Change>Internal registry retrieve fixed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.tabular-data-sdmx-export-widget.1-0-0" date="2014-02-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>
