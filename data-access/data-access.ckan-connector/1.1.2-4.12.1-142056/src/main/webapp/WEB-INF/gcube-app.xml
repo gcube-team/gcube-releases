@@ -1,0 +1,8 @@
+<application mode='online'>
+		<name>CkanConnector</name>
+		<group>DataAccess</group>
+		<version>1.1.2-4.12.1-142056</version>
+		<description>ckan connector webapp</description>
+		<local-persistence location='target' />
+</application>
+

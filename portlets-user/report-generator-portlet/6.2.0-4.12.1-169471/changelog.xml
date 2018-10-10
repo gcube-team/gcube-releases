@@ -1,0 +1,103 @@
+<ReleaseNotes>	
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.6-2-0"
+		date="2018-06-26">
+			<Change>Removed obsolete dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.6-1-0"
+		date="2017-01-29">
+			<Change>Removed dependency towards access logger</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.6-0-0"
+		date="2016-06-29">
+			<Change>Ported to Liferay 6.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.5-1-0"
+		date="2015-12-11">
+		<Change>Fix for Incident #1511 - deactivating window.alert deactivates commit facility - Need for internal dialog</Change>
+		<Change>Fix for Incident #1828 - Reports Manager of production contacting the dev RSG Webservice</Change>
+		<Change>Added info alert shpwing to which Reports Store Gateway is connected in case of VME-DB</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.5-0-0"
+		date="2015-09-29">
+		<Change>Replaced the Workspace light tree  with workspace explorer #804</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.4-13-0"
+		date="2015-07-03">
+		<Change>Ported to GWT 2.7.0</Change>
+		<Change>Ported to HL 2.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.4-12-1"
+		date="2014-12-22">
+		<Change>Fixed paste problem on rich text area</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.4-12-0"
+		date="2014-10-27">
+		<Change>Fixed bugs for the VME-DB case</Change>
+		<Change>Minor UX Restyle for buttons</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.4-11-1"
+		date="2014-09-30">
+		<Change>Fixed remove content does not work when radio button are present in the sequence for the VME-DB case</Change>
+		<Change>Minor UX Restyle for fixing glitches</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.4-11-0"
+		date="2014-09-16">
+		<Change>Fixed security layer issue for the VME-DB case</Change>
+		<Change>Fixed bug on just uploaded images from Desktop</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.4-10-0"
+		date="2014-07-01">
+		<Change>Implemented filter per owner view for VMR-DB Scenario</Change>
+		<Change>Added RichText Input fileds for VME-DB Scenario</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.4-9-0"
+		date="2014-06-06">
+		<Change>Security enabled for the VME-DB case</Change>
+		<Change>Removed workspace tree dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.4-8-1"
+		date="2014-04-22">
+		<Change>Added possibility of Deletion of content of the first entry
+		</Change>
+		<Change>Close report on commit when in FAO Vulnerable Marine Ecosystem
+			(VME) Mode
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.4-8-0"
+		date="2014-02-10">
+		<Change>Implemented Support for FAO Vulnerable Marine Ecosystem (VME)
+			Update Scenario
+		</Change>
+		<Change>Implemented Support for FAO Vulnerable Marine Ecosystem (VME)
+			Delete Scenario
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.4-7-0"
+		date="2013-12-19">
+		<Change>Added Support for FAO Vulnerable Marine Ecosystem (VME)
+			Scenario
+		</Change>
+		<Change>Added Report structure view hide / show feature</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.4-5-0"
+		date="2013-10-21">
+		<Change>Ported to GWT 2.5.1</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.4-3-0"
+		date="2013-05-29">
+		<Change>Fix for #1801 enhance usability in workflow mode</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.4-2-0"
+		date="2013-04-19">
+		<Change>Lots of improvements in the UI</Change>
+		<Change>Embedded images in reports</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.report-generator-portlet.3-4-0"
+		date="2012-05-04">
+		<Change>Top menu restyled</Change>
+		<Change>adapted to new Workspace Tree</Change>
+		<Change>adapted to new Home Library</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,17 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.csv-import-wizard-workspace.1-2-2" date="2015-10-15">
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Added Workspace Explorer</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.csv-import-wizard-workspace.1-2-1" date="2014-06-05">
+		<Change>Updated to Java 7</Change>
+		<Change>Fixed Pom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.csv-import-wizard-workspace.1-2-0"
+		date="10/10/2013">
+		<Change>Mavenized</Change>
+		<Change>Porting to GWT 2.5.1</Change>
+		<Change>Updated old libs (home library, workspace light tree)</Change>
+		<Change>Solved deps issues</Change>
+	</Changeset>
+</ReleaseNotes>

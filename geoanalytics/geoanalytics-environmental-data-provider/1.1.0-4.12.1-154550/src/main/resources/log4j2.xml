@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE geoanalytics-temperature-logging>
+
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss} %-5level - (%F:%L)  %msg%n" />
+        </Console>
+        <File name="File" fileName="${sys:catalina.home}/logs/geoanalytics/temperature.log" immediateFlush="false" append="true">
+            <PatternLayout pattern="%d{HH:mm:ss} %-5level - (%F:%L)  %msg%n" />
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="File"/>
+        </Root>
+    </Loggers>
+</Configuration>

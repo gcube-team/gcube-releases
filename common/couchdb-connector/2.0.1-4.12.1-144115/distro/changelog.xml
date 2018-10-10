@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="couchdb-connector-2.0.1" date="2017-02-22">
+		<Change>Distro layout updated</Change>
+	</Changeset>
+	<Changeset component="couchdb-connector-1.0.0" date="2015-05-18">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

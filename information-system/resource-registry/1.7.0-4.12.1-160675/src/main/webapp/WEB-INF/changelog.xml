@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.resource-registry.1-7-0" date="2018-10-10">
+		<Change>Exposed API to read Context definition in Context port type #10241</Change>
+		<Change>Exposed API to read Context definition in Access port type #10245</Change>
+		<Change>Exposed API to get the Type Schema in Access port type #10244</Change>
+		<Change>Added modifiedBy property in Header #9999</Change>
+		<Change>Added reload directive to solve the bug which return the old version after update #10390</Change>
+		<Change>Refactored Context API to use HTTP body containing Serilized version of Context instead of url get parameters #10216</Change>
+		<Change>Removed orientdb internal properties from Context serilization #10219</Change>
+		<Change>Fixed HTTP return content type in case of DELETE Context which caused an error on client even the action success #10224</Change>
+		<Change>Added feature to reopen the connection over orientdb server if closed #10221</Change>
+		<Change>Added API to enumerate all Context in Access port type #10610</Change>
+		<Change>Exposed API to enumerate all Context in Context port-type #10217</Change>
+		<Change>Added support for hierarchical roles in Contexts to support child Context overview #10435</Change>
+		<Change>Using new multiple inheritance support of ISModel to create types when creating new database #5706</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry.1-6-0" date="2017-10-09">
+		<Change>Added an API to retrieve Resource instances filtering them #9772</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry.1-5-0" date="2017-07-25">
+		<Change>Improved logging for REST methods</Change>
+		<Change>REST methods override default ServiceUsageRecord 'calledMethod' field to improve accounting performaces #9020</Change>
+		<Change>Removed List and Set support as workaround fo OrientDB bug #9021</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry.1-4-0" date="2017-06-07">
+		<Change>Removed uneeded dependecies declaration (thinkerpopo frames)</Change>
+		<Change>Added Context UUID cache</Change>
+		<Change>Added Source Resource in relation including only header. This reflect the behaviour set on jackson marshalling.</Change>
+		<Change>Implemented possibility to create a relation and target entity with one call.</Change>
+		<Change>Defined custom pattern (defined in is-model) for DateTimeFormat to support timezone. The value is also changed on DB configuration when the database is created.</Change>
+		<Change>Creating an admin with specific username (get from configuration file) instead of the default one 'admin'</Change>
+		<Change>Deprecated properties are not get configuration file anymore</Change>
+		<Change>Defined Connection Strategy to server as global constant of thew registry</Change>
+		<Change>Refactored some code for ER creation/update</Change>
+		<Change>Extended Exception management to throw ERAvailableInAnotherContext which is useful for clients</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry.1-3-0" date="2017-03-16">
+		<Change>Added API Remove From Context</Change>
+		<Change>Added API to support Entity-Relation navigation</Change>
+		<Change>Added API to get the list of ER types and their own schema</Change>
+		<Change>Added support for Propagation Constraint</Change>
+		<Change>Added ResourceRegistryException serialization</Change>
+		<Change>Full Code Redesign</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry.1-2-0" date="2016-12-16">
+		<Change>Added API AddToContext</Change>
+		<Change>Added support for referentail Integrity Directive</Change>
+		<Change>Added API to support update Resource (with all facets)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry.1-1-0" date="2016-11-03">
+		<Change>Improved code quality</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry.1-0-0" date="2016-07-27">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

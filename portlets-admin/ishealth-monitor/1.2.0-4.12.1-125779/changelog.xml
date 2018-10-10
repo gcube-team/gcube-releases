@@ -1,0 +1,8 @@
+<ReleaseNotes>
+<Changeset component="org.gcube.portlets-admin.ishealth-monitor.1-2-0" date="2015-04-13">
+<Change>Upgrade to GWT 2.7.0 completed</Change>
+</Changeset>
+<Changeset component="org.gcube.portlets-admin.ishealth-monitor.1-0-0" date="2013-01-13">
+<Change>First Release</Change>
+</Changeset>
+</ReleaseNotes>

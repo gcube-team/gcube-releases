@@ -1,0 +1,5 @@
+<service-map scope='/d4science.research-infrastructures.eu/D4Research' version="${project.version}">
+	<services>
+		<service name='XQueryAccessService' endpoint='http://collector-d4research.d4science.org:8080/wsrf/services/gcube/informationsystem/collector/XQueryAccess' />
+	</services>
+</service-map>

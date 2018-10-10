@@ -1,0 +1,14 @@
+<!-- @Author Giancarlo Panichi -->
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+
+	<ui:with field="res"
+		type="org.gcube.portlets.user.accountingdashboard.client.resources.AppResources" />
+
+
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="menu" />
+		<g:HTMLPanel ui:field="main" />
+	</g:HTMLPanel>
+</ui:UiBinder>

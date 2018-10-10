@@ -1,0 +1,153 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>LATEST</version>
+	</parent>
+	<groupId>org.gcube.spatial.data</groupId>
+	<artifactId>sdi-library</artifactId>
+	<version>1.0.1-4.12.1-160567</version>
+	<name>SDI Library</name>
+	<description>Client library to interact with gCube SDI Service</description>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>gcube-bom</artifactId>
+				<version>1.1.0-4.12.1-158270</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<properties>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+		<svnBaseUrl>http://svn.research-infrastructures.eu/d4science/gcube/trunk/spatial-data/${project.artifactId}</svnBaseUrl>
+		<jersey-version>2.14</jersey-version>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-fw-clients</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>authorization-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-generic-clients</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-gcube-calls</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>common-jaxrs-client</artifactId>
+			<version>1.0.1-4.12.1-169677</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.glassfish.jersey.core</groupId>
+					<artifactId>jersey-client</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-generic-clients</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.spatial.data</groupId>
+			<artifactId>sdi-interface</artifactId>
+			<version>1.0.1-4.12.1-152892</version>
+		</dependency>
+
+		<!-- JERSEY -->
+
+		<!-- JERSEY -->
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+<!-- 			<version>2.22.2</version> -->
+<version>${jersey-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-multipart</artifactId>
+<!-- 			<version>2.22.2</version> -->
+<version>${jersey-version}</version>
+		</dependency>
+
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.glassfish.jersey.media</groupId> -->
+<!-- 			<artifactId>jersey-media-moxy</artifactId> -->
+<!-- 			<version>2.22.2</version> -->
+<!-- 		</dependency> -->
+		
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.eclipse.persistence</groupId> -->
+<!-- 			<artifactId>org.eclipse.persistence.moxy</artifactId> -->
+<!-- 			<version>2.6.0</version>			 -->
+<!-- 		</dependency> -->
+
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+			<version>${jersey-version}</version>
+<!-- 			<version>2.22.2</version> -->
+<!-- 				<exclusions> -->
+<!-- 				<exclusion> -->
+<!-- 					<artifactId>jackson-databind</artifactId> -->
+<!-- 					<groupId>com.fasterxml.jackson.core</groupId> -->
+<!-- 				</exclusion> -->
+<!-- 				</exclusions> -->
+		</dependency>
+
+<!-- 		<dependency> -->
+<!-- 			<artifactId>jackson-databind</artifactId> -->
+<!-- 			<groupId>com.fasterxml.jackson.core</groupId> -->
+<!-- 			<version>2.4.2</version> -->
+<!-- 		</dependency> -->
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+
+		<!-- TEST -->
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+
+
+
+
+		<!-- Test log binding -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.13</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+
+</project>

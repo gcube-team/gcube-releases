@@ -1,0 +1,60 @@
+---
+cores: 4
+name: 
+id: http://fedcloud.egi.eu/occi/compute/flavour/1.0#mem_large
+memory: 17179869184
+---
+cores: 16
+name: 
+id: http://schemas.fedcloud.egi.eu/occi/infrastructure/resource_tpl#goliath
+memory: 68719476736
+---
+cores: 2
+name: 
+id: http://fedcloud.egi.eu/occi/compute/flavour/1.0#mem_medium
+memory: 8589934592
+---
+cores: 2
+name: 
+id: http://fedcloud.egi.eu/occi/compute/flavour/1.0#medium
+memory: 2147483648
+---
+cores: 8
+name: 
+id: http://schemas.fedcloud.egi.eu/occi/infrastructure/resource_tpl#extra_large
+memory: 8589934592
+---
+cores: 8
+name: 
+id: http://schemas.fedcloud.egi.eu/occi/infrastructure/resource_tpl#mem_extra_large
+memory: 34359738368
+---
+cores: 32
+name: 
+id: http://schemas.fedcloud.egi.eu/occi/infrastructure/resource_tpl#sym_mammoth
+memory: 34359738368
+---
+cores: 1
+name: 
+id: http://fedcloud.egi.eu/occi/compute/flavour/1.0#mem_small
+memory: 4294967296
+---
+cores: 32
+name: 
+id: http://schemas.fedcloud.egi.eu/occi/infrastructure/resource_tpl#atlas
+memory: 68719476736
+---
+cores: 16
+name: 
+id: http://schemas.fedcloud.egi.eu/occi/infrastructure/resource_tpl#mammoth
+memory: 34359738368
+---
+cores: 1
+name: 
+id: http://fedcloud.egi.eu/occi/compute/flavour/1.0#small
+memory: 1073741824
+---
+cores: 4
+name: 
+id: http://fedcloud.egi.eu/occi/compute/flavour/1.0#large
+memory: 4294967296

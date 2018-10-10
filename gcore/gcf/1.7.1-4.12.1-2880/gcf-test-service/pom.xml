@@ -1,0 +1,180 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>gcf-test-service</artifactId>
+	<name>gCF Test Service Template</name>
+	<packaging>pom</packaging>
+
+	<description>A base POM for all test service modules in the project.</description>
+
+	<parent>
+		<artifactId>gcf-parent</artifactId>
+		<groupId>org.gcube.core</groupId>
+		<version>1.7.1-4.12.1-2880</version>
+		<relativePath>..</relativePath>
+	</parent>
+
+	<properties>
+		<wsdlDirectory>src/main/wsdl</wsdlDirectory>
+		<configDirectory>config</configDirectory>
+		<distroDirectory>distro</distroDirectory>
+	</properties>
+	
+	<dependencies>
+
+		<dependency>
+			<artifactId>gcf</artifactId>
+			<groupId>org.gcube.core</groupId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.2</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+
+	<build>
+
+		<pluginManagement>
+			<plugins>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-resources-plugin</artifactId>
+						<version>2.5</version>
+						<executions>
+							<execution>
+								<id>copy-config</id>
+								<goals>
+									<goal>copy-resources</goal>
+								</goals>
+								<phase>process-resources</phase>
+								<configuration>
+									<outputDirectory>${project.build.outputDirectory}/META-INF</outputDirectory>
+									<resources>
+										<resource>
+											<directory>${configDirectory}</directory>
+										</resource>
+									</resources>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					
+				<!-- Simplifies use of the service-plugin in children poms, pre-binding 
+					the stub-gen goal (to the default generate-sources phase). -->
+
+				<plugin>
+					<groupId>org.gcube.tools</groupId>
+					<artifactId>maven-service-plugin</artifactId>
+					<version>1.0.0</version>
+					<executions>
+						<execution>
+							<id>generate-stubs</id>
+							<goals>
+								<goal>stub-gen</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+
+
+		<plugins>
+
+
+			<!-- m2e integration for stub management -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${basedir}/target/generated-sources/stubs</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- compiles stubs separately and in isolation from service implementation -->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<!-- we compile first the stubs in isolatation. after we compile the 
+					full code. If we inverted the order, the stubs classes would already be compiled 
+					and there is no apparent way to force recompilation. -->
+				<executions>
+					<execution>
+						<id>default-compile</id>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+						<configuration>
+							<includes>
+								<include>**/stubs/**</include>
+							</includes>
+						</configuration>
+					</execution>
+					<execution>
+						<id>full-compile</id>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+			<!-- skip goals of no interest for test services -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3.1</version>
+				<executions>
+					<execution>
+						<id>default-jar</id>
+						<phase>none</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.3.1</version>
+				<executions>
+					<execution>
+						<id>default-install</id>
+						<phase>none</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+	</build>
+</project>

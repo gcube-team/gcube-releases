@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.index.index-service-commons.1-0-0" date="2014-03-13">
+		<Change>Initial release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.index.index-service-commons.1-1-0" date="2014-06-03">
+		<Change>Meta index is recreated on init/load</Change>
+		<Change>Implemented frequent terms and deactivate service methods</Change>
+	</Changeset>
+	
+	<Changeset component="org.gcube.index.index-service-commons.2-0-0" date="2014-08-28">
+		<Change>Added deleteDocuments method</Change>
+		<Change>Changed query from GET to POST</Change>
+	</Changeset>
+</ReleaseNotes>

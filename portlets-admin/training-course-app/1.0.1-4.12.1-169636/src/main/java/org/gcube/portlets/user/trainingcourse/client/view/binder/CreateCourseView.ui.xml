@@ -1,0 +1,69 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.noBorder {
+		border: 0px;
+	}
+	</ui:style>
+	<g:FlowPanel>
+		<g:HTMLPanel ui:field="form_course_fields">
+			<b:Form type="HORIZONTAL">
+				<b:Fieldset styleName="{style.noBorder}">
+					<b:ControlGroup ui:field="cg_course_title">
+						<b:ControlLabel for="cl_course_title">Course Title</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox placeholder="Type the Course Title..." b:id="field_course_title"
+								ui:field="field_course_title"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="cg_course_description">
+						<b:ControlLabel for="cl_course_description">Course Description</b:ControlLabel>
+						<b:Controls>
+							<b:TextArea placeholder="About the Course..."
+								ui:field="field_course_desciption"></b:TextArea>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="cg_commitment">
+						<b:ControlLabel for="cl_course_description">Commitment</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox placeholder="i.e. 6 weeks of study, 2-4 hours/week"
+								ui:field="field_commitment"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+
+					<b:ControlGroup ui:field="cg_languages">
+						<b:ControlLabel for="cl_course_description">Languages</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox
+								placeholder="i.e. Type languages of the course separated by comma (',') i.e English, Chinese... "
+								ui:field="field_languages">English</b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="cg_folder_name">
+						<b:ControlLabel for="cl_folder_name">Course Folder Name</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox placeholder="Type the Folder Name..."
+								title="This is the base folder of the training course" ui:field="field_folder_name"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="cg_created_by">
+						<b:ControlLabel for="cl_created_by">Created By</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox placeholder="Type the Creator Name..."
+								title="This is the Creator name" ui:field="field_creator_name"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+				</b:Fieldset>
+			</b:Form>
+		</g:HTMLPanel>
+		<b:Pager left="&larr; Older" right="Create Course" aligned="true"
+			ui:field="pager" />
+	</g:FlowPanel>
+</ui:UiBinder> 

@@ -1,0 +1,16 @@
+
+v. 1.1.2 (14-05-2010)
+		* Adding and publishing gHN profile also in VRE scopes
+		
+v. 1.1.1 (30-10-2009)
+		* porting on gCore 0.6.0 (scheduledHandler)
+		
+v. 1.1.0 (27-05-2009)
+        * Porting on gCore0.5.0
+        * Shutdown operation
+
+v. 1.0.2 (26-09-2008)
+        * Integration with the new Scope Model of gcore0.4.0, minor bug fixing activity
+
+v. 1.0.0 (28-07-2008)
+        * First release

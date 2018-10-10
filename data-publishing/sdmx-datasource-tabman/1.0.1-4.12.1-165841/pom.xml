@@ -1,0 +1,216 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<groupId>org.gcube.data.publishing</groupId>
+	<artifactId>sdmx-datasource-tabman</artifactId>
+	<version>1.0.1-4.12.1-165841</version>
+
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+
+	<scm>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-publishing/sdmx-datasource/sdmx-datasource-tabman</url>
+	</scm>
+	
+	<repositories>
+		<repository>
+			<id>sdmxsource</id>
+			<url>http://maven.research-infrastructures.eu/nexus/content/repositories/MTRepo/</url>
+		</repository>
+	</repositories>
+	
+	<properties>
+		<sdmxsource.version>1.5.6.6</sdmxsource.version>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<configuration>
+						<descriptors>
+							<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+						</descriptors>
+					</configuration>
+					<executions>
+						<execution>
+							<id>servicearchive</id>
+							<phase>package</phase>
+							<goals>
+								<goal>single</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.codehaus.mojo</groupId>
+										<artifactId>aspectj-maven-plugin</artifactId>
+										<versionRange>[1.0,)</versionRange>
+										<goals>
+											<goal>test-compile</goal>
+											<goal>compile</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+					<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>aspectj-maven-plugin</artifactId>
+				<version>1.8</version>
+				<configuration>
+					<complianceLevel>1.8</complianceLevel>
+					<aspectLibraries>
+						<aspectLibrary>
+							<groupId>org.springframework</groupId>
+							<artifactId>spring-aspects</artifactId>
+						</aspectLibrary>
+					</aspectLibraries>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>test-compile</goal>
+						</goals>
+
+					</execution>
+
+				</executions>
+			</plugin>
+		
+		</plugins>
+	</build>
+	
+
+	
+		<dependencyManagement>
+			<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-smartgears-bom</artifactId>
+				<version>2.0.1-4.12.1-148595</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			</dependencies>
+		</dependencyManagement>
+
+	<dependencies>
+		<!-- SDMXSource deps -->
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxApi</artifactId>
+			<version>${sdmxsource.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxDataParser</artifactId>
+			<version>${sdmxsource.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxStructureParser</artifactId>
+			<version>${sdmxsource.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.sdmxsource</groupId>
+			<artifactId>SdmxStructureRetrieval</artifactId>
+			<version>${sdmxsource.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.publishing</groupId>
+			<artifactId>sdmx-datasource-core</artifactId>
+			<version>1.0.0-4.12.1-161854</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.analysis</groupId>
+			<artifactId>tabular-data-sdmx-utils</artifactId>
+			<version>1.0.0-4.12.1-161833</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.6</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>service-client-impl</artifactId>
+			<version>2.6.1-4.12.1-144782</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.publishing</groupId>
+			<artifactId>sdmx-registry-client</artifactId>
+			<version>5.1.0-4.12.1-161818</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.publishing</groupId>
+			<artifactId>sdmxsource-utils</artifactId>
+			<version>4.0.0-4.12.1-161824</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.7</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.8.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>4.3.2.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>4.3.2.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.1.7</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-smartgears</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-smartgears-app</artifactId>
+		</dependency>
+	</dependencies>
+</project>

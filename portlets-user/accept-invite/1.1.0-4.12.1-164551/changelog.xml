@@ -1,0 +1,12 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.accept-invite.1-1-0"
+		date="2018-02-22">
+			<Change>The created account now automatic set email as verified
+			</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.accept-invite.1-0-0"
+		date="2017-12-06">
+		<Change>First release
+		</Change>
+	</Changeset>
+</ReleaseNotes>

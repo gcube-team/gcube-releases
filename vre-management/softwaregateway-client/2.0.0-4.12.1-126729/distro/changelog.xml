@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.vre-management.softwaregateway-client.2-0-0" date="2013-09-30">
+		<Change>first release without CLI based on FWS</Change>	
+	</Changeset>
+</ReleaseNotes>

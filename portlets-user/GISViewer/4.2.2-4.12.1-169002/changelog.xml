@@ -1,0 +1,176 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.GISViewer.4-2-2"
+		date="2018-06-08">
+		<Change>[Task #11352] Another fix regarding print out of password in clear
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.4-2-1"
+		date="2018-03-07">
+		<Change>[Task #11352] Removed print out password as plaintext
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.4-2-0"
+		date="2017-12-19">
+		<Change>[Feature #10612] Extend GISViewer's zoom range
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.4-1-0"
+		date="2017-06-28">
+		<Change>Changed maven compiler at 1.8
+		</Change>
+		<Change>[Feature #5164] Upgraded to gwt 2.7.0
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.4-0-0"
+		date="2016-09-26">
+		<Change>[Feature #5148] Removed dependency 'geoserverinterface' and
+			changed interface
+		</Change>
+		<Change>[Feature #5164] Upgraded to gwt 2.7.0
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-10-2"
+		date="2016-09-16">
+		<Change>[Release #5037] Fixed Etics dependency
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-10-1"
+		date="2016-04-28">
+		<Change>Bug Fixing for method getValueOfParameter
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-10-0"
+		date="2016-02-15">
+		<Change>[Feature: #2034] Added method to get gcube token for WPS
+			service
+		</Change>
+		<Change>[Feature: #2087] Integrated with geo-utility
+		</Change>
+		<Change>[Feature #2143] WPS x,y resolutions as function of the zoom
+			level
+		</Change>
+		<Change>[Feature #2232] Added Z-Axis for ncWMS layers
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-9-0"
+		date="2016-01-04">
+		<Change>[Task: #1283] Added code to manage ncWMS layers
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-8-0"
+		date="2015-09-25">
+		<Change>Bug #427. Validation of the datestamp read from metadata
+			retrieved;
+			GisViewer upgrade to OpenLayers 2.11
+		</Change>
+		<Change>Feature #452. Added property file to read the base
+			configurations to work outside gcube infrastructure
+		</Change>
+		<Change>[Feature #784] Gcube Geoexplorer: workspace explorer
+			integration
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-7-0"
+		date="2015-03-13">
+		<Change>Feature #203. Updated transect invocation</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-6-2"
+		date="2015-03-13">
+		<Change>Changed css
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-6-1"
+		date="2015-02-10">
+		<Change>Fixed True Marble
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-5-1"
+		date="2014-09-01">
+		<Change>Fixed support #832: z-index too high
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-5-0"
+		date="2014-09-01">
+		<Change>Updated to support display of layers stored on Map Server
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-4-0"
+		date="2014-06-04">
+		<Change>Updated to support new portal bom configurations
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-3-0"
+		date="2013-10-21">
+		<Change>#Ticket 2223. This project was enhancements to gwt 2.5.1
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-2-0"
+		date="2013-09-16">
+		<Change>New methods are added to read "describe feature type" used for
+			trunsect functionality
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-1-0"
+		date="2013-05-29">
+		<Change>#497 Fixed issue</Change>
+		<Change>New method - add wms layers</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.3-0-0"
+		date="2013-03-05">
+		<Change># 1272 Gis Viewer was mavenized</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.2-1-3"
+		date="2012-11-30">
+		<Change>Update</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.2-1-2"
+		date="2012-10-25">
+		<Change>Update</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.2-1-1"
+		date="2012-09-03">
+		<Change>Update</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.2-1-0"
+		date="2012-07-24">
+		<Change>WFS performance improvement</Change>
+		<Change>Advanced click data interface</Change>
+		<Change>Enabling workspace image exporting</Change>
+		<Change>Interface enhancement</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.2-0-0"
+		date="2012-05-04">
+		<Change>Code optimizing</Change>
+		<Change>Interface Enhancement</Change>
+		<Change>Implementation of an additional panel interface version
+			besides a window interface
+		</Change>
+		<Change>Openlayers toolbar reimplementation</Change>
+		<Change>Added a set of external Base Layers using OpenLayers</Change>
+		<Change>CSV data export</Change>
+		<Change>Advanced data request: box rectangular area selection</Change>
+		<Change>Snapshot with external layers</Change>
+		<Change>Pluggable Layers from WMS links</Change>
+		<Change>Delete Search Button</Change>
+		<Change>Optimize map preview</Change>
+		<Change>Filter on Workspace</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.1-4-0"
+		date="2012-02-17">
+		<Change>Most of the code has been refactorized</Change>
+		<Change>Unused files and libraries have been removed</Change>
+		<Change>Added generic parameters retrieving system</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.1-2"
+		date="2011-07-09">
+		<Change>release with minor changes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.1-1-1"
+		date="2011-12-07">
+		<Change>release with minor changes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.GISViewer.1-1-0"
+		date="2011-02-02">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

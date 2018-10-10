@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="XQueryAccess" targetNamespace="http://gcube-system.org/namespaces/informationsystem/collector/XQueryAccess" 
+	xmlns:tns="http://gcube-system.org/namespaces/informationsystem/collector/XQueryAccess"
+	xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"  
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"	
+	xmlns:wsrlw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl" 
+	xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor" 	
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" 	
+	xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" 	
+	xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+	<wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+
+  <!--============================================================
+
+                      T Y P E S
+                      
+  ============================================================-->
+  
+  <wsdl:types>
+  	<xsd:schema targetNamespace="http://gcube-system.org/namespaces/informationsystem/collector/XQueryAccess"
+    	xmlns:tns="http://gcube-system.org/namespaces/informationsystem/collector/XQueryAccess"
+    	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+	
+	
+	<xsd:element name="XQueryExecuteRequest">
+		<xsd:complexType>
+				<xsd:sequence>
+					<xsd:element name="XQueryExpression" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+				</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+			
+	<xsd:element name="XQueryExecuteResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Dataset" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="Size" type="xsd:long" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+		
+	<xsd:element name="XQueryFaultType">
+	 	<xsd:complexType>
+              <xsd:complexContent>
+                    <xsd:extension base="corefaults:GCUBEUnrecoverableFault">
+                        <xsd:sequence/>                        
+                    </xsd:extension>
+                </xsd:complexContent>
+    	</xsd:complexType>
+	</xsd:element>
+	</xsd:schema>
+	  
+
+  </wsdl:types>
+  
+  <!--============================================================
+
+                       M E S S A G E S
+                      
+  ============================================================-->
+  <wsdl:message name="XQueryExecuteInputMessage">
+        <part name="parameters" element="tns:XQueryExecuteRequest"/>        
+  </wsdl:message>
+  
+  <wsdl:message name="XQueryExecuteOutputMessage">
+        <part name="parameters" element="tns:XQueryExecuteResponse"/>
+  </wsdl:message>
+  
+  <wsdl:message name="XQueryFaultTypeMessage">
+	   <part name="fault" element="tns:XQueryFaultType"/>
+  </wsdl:message>
+  
+  
+
+<!--============================================================
+
+                       P O R T T Y P E
+                      
+  ============================================================-->
+  
+  <wsdl:portType name="XQueryAccessPortType">
+     <wsdl:operation name="XQueryExecute">
+            <wsdl:input message="tns:XQueryExecuteInputMessage"/>            
+            <wsdl:output message="tns:XQueryExecuteOutputMessage"/>
+            <wsdl:fault name="fault" message="tns:XQueryFaultTypeMessage"/>
+     </wsdl:operation>     
+  </wsdl:portType>
+
+</wsdl:definitions>

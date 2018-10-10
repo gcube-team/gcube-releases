@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><Resource version="0.4.x">
+    <ID>ec876e30-57f8-11e1-8910-9a257cc7674c</ID>
+    <Type>Service</Type>
+    <Profile>
+        <Description>desc</Description>
+        <Class>Class</Class>
+        <Name>Name</Name>
+        <Version>1.00.00</Version>
+        <Packages>
+            <Software>
+                <Name>ISPublisher</Name>
+                <Version>1.05.00</Version>
+                <RepositoryLocation>
+                    <Coordinate>
+                        <Name>groupid</Name>
+                        <Value>org.gcube</Value>
+                    </Coordinate>
+                    <Coordinate>
+                        <Name>artifactid</Name>
+                        <Value>publisher</Value>
+                    </Coordinate>
+                    <Coordinate>
+                        <Name>version</Name>
+                        <Value>1.5</Value>
+                    </Coordinate>
+                </RepositoryLocation>
+                <Shareable level="VO"/>
+                <Type>library</Type>
+                <Files>
+                    <File>file.jar</File>
+                </Files>
+            </Software>
+            
+        </Packages>
+    </Profile>
+</Resource>

@@ -1,0 +1,39 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.important {
+		font-weight: bold;
+	}
+	
+	.toInfo {
+		padding-left: 5px;
+		border-top: 1px solid #eee;
+	}
+	
+	.moreInfo {
+		padding: 15px;
+	}
+	</ui:style>
+
+	<g:SimplePanel>
+		<b:Row addStyleNames="{style.toInfo}">
+			<b:Column size="8">
+				<g:HTMLPanel ui:field="more_info" addStyleNames="{style.moreInfo}">
+				</g:HTMLPanel>
+			</b:Column>
+			<b:Column size="4">
+				<g:VerticalPanel>
+					<b:Button icon="DOWNLOAD_ALT" type="LINK" size="LARGE"
+						ui:field="btn_download">Download</b:Button>
+					<b:Button icon="REMOVE_SIGN" type="LINK" size="LARGE"
+						ui:field="btn_delete">Delete</b:Button>
+					<b:Button icon="LIST_ALT" type="LINK" size="LARGE"
+						ui:field="btn_add_questionnaire">Associate Questionnaire</b:Button>
+					<b:Button icon="YOUTUBE_PLAY" type="LINK" size="LARGE"
+						ui:field="btn_add_video">Associate Video</b:Button>
+				</g:VerticalPanel>
+			</b:Column>
+		</b:Row>
+	</g:SimplePanel>
+</ui:UiBinder> 

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 6.2.0//EN" "http://www.liferay.com/dtd/liferay-display_6_2_0.dtd">
+
+<display>
+	<category name="PerformFISH Apps">
+		<portlet id="manage-company-users"></portlet>
+		<portlet id="manage-company-admins"></portlet>
+		<portlet id="company-repository"></portlet>
+		<portlet id="associate-users-to-company"></portlet>
+		<portlet id="promote-administrators"></portlet>
+		<portlet id="empty-forms-documents-display"></portlet>
+		<portlet id="submitted-form-validation"></portlet>
+		<portlet id="manage-companies"></portlet>
+		<portlet id="add-new-company"></portlet>
+		<portlet id="manage-farms"></portlet>
+		<portlet id="manage-farm-administratos"></portlet>
+		<portlet id="promote-farm-administrators"></portlet>
+		<portlet id="manage-farm-users"></portlet>
+		<portlet id="associate-users-to-farm"></portlet>
+		<portlet id="set-company-administrators-super-user"></portlet>
+		<portlet id="set-farm-administrators"></portlet>
+		<portlet id="company-private-repository"></portlet>
+	</category>
+</display>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-catalogue.ckan-util-library.2-7-0" date="${buildDate}">
+		<Change>Added the possibility to deny social post on catalogue-ws #12514</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.ckan-util-library.2-6-0" date="2018-07-18">
+		<Change>Enhance timeout in requests to CKAN in ckan-util-library #12050</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.ckan-util-library.2-5-0"
+		date="2018-02-28">
+		<Change>Code cleanup</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.ckan-util-library.2-4-2"
+		date="2018-02-28">
+		<Change>Portlet url is built on the fly (#11294)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.ckan-util-library.2-4-1"
+		date="2018-01-10">
+		<Change>Minor fix for delegates</Change>
+		<Change>Added support for statistics (requires solrj)</Change>
+		<Change>Added method for retrieving main landing pages</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.ckan-util-library.2-4-0"
+		date="2017-11-01">
+		<Change>Added delegate roles method</Change>
+		<Change>Added search methods for datasets</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.ckan-util-library.2-3-2"
+		date="2017-08-01">
+		<Change>Minor fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.ckan-util-library.2-3-1"
+		date="2017-07-01">
+		<Change>Mime type fix for resources</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.ckan-util-library.2-3-0"
+		date="2017-05-01">
+		<Change>Pom fixes</Change>
+		<Change>Moved to java 8</Change>
+		<Change>Added method to add a dataset to a group and its parents (if
+			any)
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.ckan-util-library.2-2-1"
+		date="2017-04-01">
+		<Change>Some minor changes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.ckan-util-library.2-2-0"
+		date="2017-02-01">
+		<Change>Added method to delete/purge group</Change>
+		<Change>Project structure and so packages are changed (gwt-widget like
+			structure)
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.ckan-util-library.2-1-0"
+		date="2016-12-01">
+		<Change>Product creation methods improved</Change>
+		<Change>Added method to get the group list</Change>
+		<Change>Added methods to manage groups</Change>
+		<Change>Added method to patch product/resource</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.ckan-util-library.2-0-0"
+		date="2016-11-01">
+		<Change>Added support for datasets's relationships (create, delete,
+			retrieve methods)
+		</Change>
+		<Change>Added Factory in order to reduce the number of created
+			instances of the utils class(cache)
+		</Change>
+		<Change>Added code to discover a new Application Profile (see ticket
+			#4925)
+		</Change>
+		<Change>Added methods to manage group creation, assing a user/product
+			to a group
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.ckan-util-library.1-0-0"
+		date="2016-06-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

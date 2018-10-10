@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.distribution.gcube-bom.1-1-0" date="2018-10-09">
+		<Change>Added Jackson libraries #9835</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.gcube-bom.1-0-2" date="2017-06-06">
+		<Change>Changed version of accounting-lib and document-store-lib</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.gcube-bom.1-0-1" date="2016-11-22">
+		<Change>Removed wrong scope on dependency declaration</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.gcube-bom.1-0-0" date="2016-10-28">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

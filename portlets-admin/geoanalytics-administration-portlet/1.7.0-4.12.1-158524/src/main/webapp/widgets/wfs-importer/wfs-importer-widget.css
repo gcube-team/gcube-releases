@@ -1,0 +1,53 @@
+.aui #layerInfoModal .formui-checkbox {
+	display: inline;
+}
+
+.aui #layerInfoModal label.formui-checkbox:before {
+	width: 15px;
+	height: 15px;
+	font-size: 15px;
+	line-height: 17px;
+}
+
+.aui #layerInfoModal label.modalLayerNameError, .aui #layerInfoModal label.modalLayerStyleError {
+	color: #b94a48;
+	font-size: 12px;
+	display: none;
+	text-align: left;
+}
+
+.aui label#urlInputError {
+	color: #b94a48;
+	font-size: 12px;
+	display: none;
+	padding-left: 4px
+}
+
+.aui .adminContainer #firstV {
+	line-height: 0px;
+	padding: 10px;
+}
+
+.aui #layerInfoModal {
+	width: 40%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	padding-bottom: 0;
+}
+
+.aui #layerInfoModal h4 {
+	text-align: center;
+}
+
+.aui #layerInfoModal textarea {
+	resize: vertical;
+}
+
+.aui #fetchLayersWfs, .aui #fetchLayers {
+	margin: 0px;
+}
+
+.aui #wfs-importer-version {
+	width: 80px;
+}

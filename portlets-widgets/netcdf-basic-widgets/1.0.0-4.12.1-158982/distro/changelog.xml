@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="${groupId}.${artifactId}.1-0-0" date="2017-11-09">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='gCubeCkanDataCatalog'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Inherit the default GWT style sheet. You can change -->
+	<!-- the theme of your GWT application by uncommenting -->
+	<!-- any one of the following lines. -->
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+	<!-- <inherits name='com.google.gwt.user.theme.standard.Standard' /> -->
+	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
+
+	<!-- Other module inherits -->
+	<inherits name="com.google.gwt.json.JSON" />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.gcubeckan.gcubeckandatacatalog.client.GCubeCkanDataCatalog' />
+
+	<!-- Inherits widget -->
+	<inherits
+		name='org.gcube.portlets_widgets.catalogue_sharing_widget.ShareCatalogue' />
+	<inherits
+		name='org.gcube.portlets.widgets.ckandatapublisherwidget.CKanMetadataPublisher' />
+	<inherits name='org.gcube.datacatalogue.grsf_manage_widget.GRSFManageWidget' />
+	<inherits name='org.gcube.datacatalogue.ckanutillibrary.CkanUtilLibrary' />
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

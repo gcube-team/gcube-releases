@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.vre-management.resourcemanager-client.1-0-0" date="2013-10-15">
+		<Change>ported to maven</Change>	
+	</Changeset>
+</ReleaseNotes>

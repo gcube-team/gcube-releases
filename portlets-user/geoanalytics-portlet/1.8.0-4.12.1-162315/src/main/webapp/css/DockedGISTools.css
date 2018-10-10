@@ -1,0 +1,69 @@
+/*************************************************** button **********************************************************/
+#dockedGISContainer{
+	bottom: 0px;
+	left: 40px;
+}
+#dockedGIS {
+	padding: 0px 5px;
+	text-align: center;
+}
+.rotate-north {
+	bottom:0px;
+	right: 0.5em;
+}
+.rotate-north i {
+	color: #fff !important;
+}
+#dockedGIS i.fa-caret-down {
+	margin-left: 0px !important;
+	color: #fff;
+}
+div#DecisionSupportSystem .controlsWrapper a{
+	white-space: nowrap;
+	position: relative;
+}
+div#DecisionSupportSystem .controlsWrapper i{
+	left: -12px;
+	position: absolute;
+	top: 3px;
+}
+div#DecisionSupportSystem div#dockedGISTools {
+	z-index: 33;
+	background: #fff;
+	background-color: #fff;
+	width: 55px;
+	height: 18px;
+	position: absolute;
+	bottom: 0;
+	left: 68%;
+	border: 2px solid #e5e5e5;
+}
+div#DecisionSupportSystem div.triangle-up {
+    width: 0;
+    height: 0;
+    border-bottom: 7px solid #fff;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 33;
+    right: 0px;
+    top: 0px;
+    margin: auto;
+}
+div#DecisionSupportSystem div.triangle-up-border {
+	width: 0;
+	height: 0;
+	border-bottom: 12px solid #e5e5e5;
+	border-left: 17px solid transparent;
+	border-right: 17px solid transparent;
+	display: inline-block;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	position: absolute;
+	margin: auto;
+}

@@ -1,0 +1,60 @@
+<ResourceProperties
+	xmlns:ns1="http://gcube-system.org/namespaces/opensearch/OpenSearchService"
+	xmlns:ns10="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:ns11="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:ns2="http://gcube-system.org/namespaces/opensearch/OpenSearchService"
+	xmlns:ns3="http://gcube-system.org/namespaces/opensearch/OpenSearchService"
+	xmlns:ns4="http://gcube-system.org/namespaces/opensearch/OpenSearchService"
+	xmlns:ns5="http://gcube-system.org/namespaces/opensearch/OpenSearchService"
+	xmlns:ns6="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:ns7="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:ns8="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns:ns9="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+	xmlns="">
+
+	<ns1:AdaptorID xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:ns1="http://gcube-system.org/namespaces/opensearch/OpenSearchService"
+		xsi:type="xsd:string">98f54690-fed3-11df-88a7-93625fddeb27</ns1:AdaptorID>
+
+	<ns2:CollectionID xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:ns2="http://gcube-system.org/namespaces/opensearch/OpenSearchService"
+		xsi:type="xsd:string">9b11d2d0-dad5-11df-90dc-c704f281f2f7</ns2:CollectionID>
+	<ns3:DescriptionDocumentURI xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:ns3="http://gcube-system.org/namespaces/opensearch/OpenSearchService"
+		xsi:type="xsd:string">http://88.197.20.212:8280/web/openSearchDescriptor
+	</ns3:DescriptionDocumentURI>
+	<ns4:Templates xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:ns4="http://gcube-system.org/namespaces/opensearch/OpenSearchService"
+		xsi:type="xsd:string">http://88.197.20.212:8280/web/showResults.action?referer=showResults&amp;query={http%3A%2F%2Fa9.com%2F-%2Fspec%2Fopensearch%2F1.1%2F:searchTerms}&amp;page={http%3A%2F%2Fa9.com%2F-%2Fspec%2Fopensearch%2F1.1%2F:startPage}&amp;size={http%3A%2F%2Fa9.com%2F-%2Fspec%2Fopensearch%2F1.1%2F:count}&amp;view=comm&amp;format=rss
+	</ns4:Templates>
+	<ns5:OpenSearchResource xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">5f8a0680-dad3-11df-b94e-b5f66b8b8a02
+	</ns5:OpenSearchResource>
+	<ns6:GHN xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:ns6="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		xsi:type="xsd:string">9cf3d690-fbc1-11df-b541-a45b627e2d64</ns6:GHN>
+	<ns7:RI xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:ns7="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		xsi:type="xsd:string">89ecbd90-feba-11df-887f-93625fddeb27</ns7:RI>
+	<ns8:ServiceClass xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:ns8="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		xsi:type="xsd:string">OpenSearch</ns8:ServiceClass>
+	<ns9:Scope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:ns9="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		xsi:type="xsd:string">/d4science.research-infrastructures.eu/Ecosystem/DRIVER
+	</ns9:Scope>
+	<ns10:ServiceID xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:ns10="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+		xsi:type="xsd:string">89dcdf10-feba-11df-887f-93625fddeb27</ns10:ServiceID>
+	<ns11:ServiceName xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">OpenSearchService
+	</ns11:ServiceName>
+</ResourceProperties>

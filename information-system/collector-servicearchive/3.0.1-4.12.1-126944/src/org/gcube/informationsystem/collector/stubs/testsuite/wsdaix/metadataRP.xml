@@ -1,0 +1,12 @@
+<ResourceProperties>
+<ns1:MetadataCollectionID xmlns:ns1="http://gcube-system.org/namespaces/metadatamanagement/metadatamanager">2ae39110-f1e3-11dd-a231-93c15428dfa9</ns1:MetadataCollectionID>
+<ns2:LastUpdateTime xmlns:ns2="http://gcube-system.org/namespaces/metadatamanagement/metadatamanager">2010-10-13T10:10:42.666Z</ns2:LastUpdateTime>
+<ns3:TerminationTime xmlns:ns3="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+<ns4:CurrentTime xmlns:ns4="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.xsd">2010-10-25T15:29:58.796Z</ns4:CurrentTime>
+<ns5:GHN xmlns:ns5="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider">2f23c380-6e56-11df-a68f-9633095c689f</ns5:GHN>
+<ns6:RI xmlns:ns6="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider">6ce2bae0-73d9-11df-9fc3-9b632b18ef39</ns6:RI>
+<ns7:ServiceClass xmlns:ns7="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider">MetadataManagement</ns7:ServiceClass>
+<ns8:Scope xmlns:ns8="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider">/d4science.research-infrastructures.eu/FARM/FCPPS</ns8:Scope>
+<ns9:ServiceID xmlns:ns9="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider">70cc7a90-c49e-11df-a87e-a036f71a9955</ns9:ServiceID>
+<ns10:ServiceName xmlns:ns10="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider">MetadataManager</ns10:ServiceName>
+</ResourceProperties>

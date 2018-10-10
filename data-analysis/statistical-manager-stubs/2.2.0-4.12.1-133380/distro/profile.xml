@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Class>DataAnalysis</Class>
+		<Name>statistical-manager-gcubews</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Main>
+				<Name>${serviceArtifactId}</Name>
+				<Version>${project.version}</Version>
+				<MavenCoordinates>
+					<groupId>${project.groupId}</groupId>	
+					<artifactId>${serviceArtifactId}</artifactId>
+    				<version>${project.version}</version>
+				</MavenCoordinates>
+				<GARArchive>${serviceArtifactId}-${project.version}.gar</GARArchive>
+				
+				<PortType>
+					<Name>gcube/data/analysis/statisticalmanager/statisticalmanagerfactory</Name>
+				</PortType>
+				
+				<PortType>
+					<Name>gcube/data/analysis/statisticalmanager/statisticalmanagerservice</Name>
+				</PortType>
+				
+				<PortType>
+					<Name>gcube/data/analysis/statisticalmanager/statisticalmanagerdataspace</Name>
+				</PortType>
+				
+				
+			</Main>
+			<Software>
+				<Name>${stubsArtifactId}</Name>
+				<Version>${project.version}</Version>
+				<MavenCoordinates>	
+				 	<groupId>${project.groupId}</groupId>
+				 	<artifactId>${stubsArtifactId}</artifactId>
+    				<version>${project.version}</version>
+				</MavenCoordinates>
+				<Type>library</Type>
+				<Files>
+					<File>${stubsArtifactId}-${project.version}.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

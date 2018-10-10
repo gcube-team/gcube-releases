@@ -1,0 +1,14 @@
+<module rename-to='reporting'>>
+
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='org.gcube.portlets.d4sreporting.common.client.Reporting' />
+
+	<!-- Specify the application specific style sheet. -->
+	<stylesheet src='Reporting.css' />
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+</module>

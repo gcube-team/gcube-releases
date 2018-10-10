@@ -1,0 +1,37 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:m="urn:import:org.gcube.portlets.user.shareupdates.client.view">
+	<ui:style>
+	.important {
+		font-weight: bold;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<table class="link-previewer">
+			<tr>
+				<td width="60px;" align="middle">
+					<m:ImageSwitcher ui:field="switcher"></m:ImageSwitcher>
+				</td>
+				<td width="100%" valign="TOP">
+					<div class="link-title">
+						<g:HTML styleName="" ui:field="titleArea" />
+					</div>
+					<div class="link-url">
+						<g:HTML styleName="" ui:field="urlText" />
+					</div>
+					<div class="link-desc">
+						<g:HTML styleName="" ui:field="descText" />
+						<div class="hide-description">
+								<b:CheckBox ui:field="hideImageCheckBox">Hide Image</b:CheckBox>
+								<b:CheckBox ui:field="hideCheckBox">Hide Description</b:CheckBox>
+						</div>
+					</div>
+				</td>
+				<td valign="top" class="linkpreview-bgcolor">
+					<g:HTML height="15px" width="15px" ui:field="closeImage"></g:HTML>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

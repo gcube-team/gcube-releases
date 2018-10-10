@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="TrainingCourse">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.user.trainingcourse.TrainingCourse' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/TrainingCourse/greet" class="org.gcube.portlets.user.trainingcourse.server.GreetingServiceImpl" />
+
+</module>

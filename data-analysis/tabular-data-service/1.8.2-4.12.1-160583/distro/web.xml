@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+
+	<listener>
+		<listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>querymanager</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>historymanager</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>tabularresourcemanager</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>externalresourcemanager</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>operationmanager</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>taskmanager</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>templatemanager</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>rulemanager</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>mobileinterface</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>querymanager</servlet-name>
+		<url-pattern>/querymanager</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>historymanager</servlet-name>
+		<url-pattern>/historymanager</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>tabularresourcemanager</servlet-name>
+		<url-pattern>/tabularresourcemanager</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>operationmanager</servlet-name>
+		<url-pattern>/operationmanager</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>taskmanager</servlet-name>
+		<url-pattern>/taskmanager</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>externalresourcemanager</servlet-name>
+		<url-pattern>/externalresourcemanager</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>templatemanager</servlet-name>
+		<url-pattern>/templatemanager</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>rulemanager</servlet-name>
+		<url-pattern>/rulemanager</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>mobileinterface</servlet-name>
+		<url-pattern>/mobileinterface</url-pattern>
+	</servlet-mapping>
+</web-app>

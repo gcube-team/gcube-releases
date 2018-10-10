@@ -1,0 +1,42 @@
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+	<id>bundle</id>
+	<formats>
+		<format>tar.gz</format>
+	</formats>
+	<baseDirectory>/</baseDirectory>
+	<fileSets>
+		<fileSet>
+			<directory>data</directory>
+			<outputDirectory>/data</outputDirectory>
+			<useDefaultExcludes>true</useDefaultExcludes>
+			<fileMode>755</fileMode>
+		</fileSet>
+		<fileSet>
+			<directory>deploy</directory>
+			<outputDirectory>/deploy</outputDirectory>
+			<useDefaultExcludes>true</useDefaultExcludes>
+			<fileMode>755</fileMode>
+		</fileSet>
+		<fileSet>
+			<directory>gCube</directory>
+			<outputDirectory>/gCube</outputDirectory>
+			<useDefaultExcludes>true</useDefaultExcludes>
+			<fileMode>755</fileMode>
+		</fileSet>
+		<fileSet>
+			<directory>license</directory>
+			<outputDirectory>/license</outputDirectory>
+			<useDefaultExcludes>true</useDefaultExcludes>
+			<fileMode>755</fileMode>
+		</fileSet>
+		<fileSet>
+			<directory>tomcat-7.0.62</directory>
+			<outputDirectory>/tomcat-7.0.62</outputDirectory>
+			<useDefaultExcludes>true</useDefaultExcludes>
+			<fileMode>755</fileMode>
+		</fileSet>
+	</fileSets>
+</assembly>

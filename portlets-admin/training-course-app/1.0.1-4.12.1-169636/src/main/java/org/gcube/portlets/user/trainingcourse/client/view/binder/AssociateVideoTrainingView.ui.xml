@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.noBorder {
+		border: 0px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="form_unit_fields">
+			<b:Form type="HORIZONTAL">
+				<b:Fieldset styleName="{style.noBorder}">
+					<b:ControlGroup ui:field="cg_video_title">
+						<b:ControlLabel for="cl_video_url">Video Title</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox placeholder="Type the Video Title...."
+								title="This is the Video Title" b:id="field_video_title"
+								ui:field="field_video_title"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlGroup ui:field="cg_video_description">
+						<b:ControlLabel for="cl_video_description">Video Description</b:ControlLabel>
+						<b:Controls>
+							<b:TextArea placeholder="Type a Description...." title="This is the Description."
+								b:id="field_video_description" ui:field="field_video_description"></b:TextArea>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlGroup ui:field="cg_video_url">
+						<b:ControlLabel for="cl_video_url">Video URL</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox placeholder="i.e. https://youtu.be/ABCDEFGH" title="Type the Video URL: i.e. https://youtu.be/ABCDEFGH"
+								b:id="field_video_url" ui:field="field_video_url"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+				</b:Fieldset>
+			</b:Form>
+		</g:HTMLPanel>
+		<b:Pager left="Older" right="Associate Video" aligned="true"
+			ui:field="pager" />
+		<g:HTMLPanel ui:field="field_html_panel">
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

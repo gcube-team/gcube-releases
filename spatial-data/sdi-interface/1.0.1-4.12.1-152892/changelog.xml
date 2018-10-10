@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.spatial.data.sdi-interface.1-0-0" date="2016-06-27">
+			<Change>First release of the component</Change>
+	</Changeset>	
+</ReleaseNotes>

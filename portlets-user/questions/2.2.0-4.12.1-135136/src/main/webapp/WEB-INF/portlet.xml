@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app version="2.0"
+    xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+    <portlet>
+        <portlet-name>VRESettings</portlet-name>
+        <display-name>VRE Settings</display-name>
+        <portlet-class>org.gcube.portlets.user.questions.server.portlet.VREManagersPortlet</portlet-class>
+        <init-param>
+            <name>view-jsp</name>
+            <value>/view.jsp</value>
+        </init-param>
+        <expiration-cache>0</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <portlet-info>
+            <title>VRE Managers and Groups</title>
+            <short-title>VRE Managers and Groups</short-title>
+            <keywords>VRE, VRE Managers, Groups</keywords>
+        </portlet-info>
+        <portlet-preferences>
+            <preference>
+                <name>portletSetupShowBorders</name>
+                <value>true</value>
+            </preference>
+        </portlet-preferences>
+        <security-role-ref>
+            <role-name>administrator</role-name>
+        </security-role-ref>
+    </portlet>   
+</portlet-app>

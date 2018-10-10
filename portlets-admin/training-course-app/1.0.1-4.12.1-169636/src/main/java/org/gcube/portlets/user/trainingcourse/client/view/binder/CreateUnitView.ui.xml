@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.noBorder {
+		border: 0px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="form_unit_fields">
+			<b:Form type="HORIZONTAL">
+				<b:Fieldset styleName="{style.noBorder}">
+					<b:ControlGroup ui:field="cg_unit_title">
+						<b:ControlLabel for="cl_unit_title">Unit Title</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox placeholder="Type the Unit Title..." b:id="field_unit_title"
+								ui:field="field_unit_title"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="cg_unit_description">
+						<b:ControlLabel for="cl_course_description">Unit Description</b:ControlLabel>
+						<b:Controls>
+							<b:TextArea placeholder="Type the Unit Description..."
+								b:id="field_unit_desciption" ui:field="field_unit_desciption"></b:TextArea>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="cg_folder_name">
+						<b:ControlLabel for="cl_folder_name">Unit Folder Name</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox placeholder="Type the Folder Name..."
+								title="This is the base folder of the training course" b:id="field_folder_name"
+								ui:field="field_folder_name"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+				</b:Fieldset>
+			</b:Form>
+		</g:HTMLPanel>
+		<b:Pager left="Older" right="Create Unit"
+			aligned="true" ui:field="pager" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

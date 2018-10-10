@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+
+	<g:FlowPanel>
+		<b:FluidRow ui:field="top_container">
+		</b:FluidRow>
+		<b:FluidRow ui:field="base_container">
+		</b:FluidRow>
+		<b:FluidRow ui:field="bottom_container">
+		</b:FluidRow>
+	</g:FlowPanel>
+</ui:UiBinder> 

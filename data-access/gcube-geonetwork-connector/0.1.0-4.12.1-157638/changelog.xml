@@ -1,0 +1,5 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data.access.geonetwork.gcube-geonetwork-connector.0.1.0-4.12.1-157638" date="2017-10-26"> 
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

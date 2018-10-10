@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-access.storagehub-webapp.1.0.0"
+		date="2015-07-01">
+		<Change>First commit</Change>
+	</Changeset>
+</ReleaseNotes>

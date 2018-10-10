@@ -1,0 +1,8 @@
+{{GATEWAY_NAME}}
+----------------------------------
+Hi {{REQUESTING_USER_FIRST_NAME}},
+
+we regret to inform you that {{USER_FULLNAME}} has revoked your access to {{SELECTED_VRE_NAME}} VRE.
+                       
+---
+You received this email because you were a member of {{SELECTED_VRE_NAME}} VRE on {{GATEWAY_NAME}}.

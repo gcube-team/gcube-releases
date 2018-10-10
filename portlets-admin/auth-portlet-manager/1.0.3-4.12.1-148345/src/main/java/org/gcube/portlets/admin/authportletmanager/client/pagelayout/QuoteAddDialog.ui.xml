@@ -1,0 +1,123 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.panel {
+		background-color: #d9e2e8;
+		padding: 10px;
+		border-left: 2px solid #888;
+		border-right: 2px solid #888;
+		border-bottom: 2px solid #888;
+		/*
+					border-radius: 4px;
+					border: 2px solid #888;
+					width: 80%;
+					margin-left: 10%;
+				*/
+	}
+	
+	.panel_text {
+		background-color: #F3F7FB;
+		border-radius: 4px;
+		border: 1px solid #ccc;
+		padding: 10px;
+	}
+	
+	.r_loader_space {
+		/*margin-top:10px;*/
+		text-align: center;
+		height: 30px;
+		margin-bottom: 10px;
+		margin-right: 20px;
+	}
+	
+	.row_element {
+		margin-top: 10px;
+	}
+	
+	.footer_dialog {
+		padding-right: 20px;
+		text-align: right;
+	}
+	
+	.button_dialog {
+		margin-left: 10px;
+	}
+	</ui:style>
+
+	<g:FlowPanel styleName="{style.panel}">
+		<b:FluidRow>
+			<b:Column size="12">
+				<g:FlowPanel styleName="{style.panel_text}" ui:field="idAddCallerQuote">
+
+					<!-- CALLER -->
+					<b:FluidRow styleName="{style.row_element}">
+						<b:ControlLabel>Caller</b:ControlLabel>
+					</b:FluidRow>
+					<b:Row styleName="{style.row_element}">
+						<b:ButtonGroup toggle="checkbox" ui:field="b_caller_checkbox">
+							<b:Button ui:field="b_caller_all_user">All Users</b:Button>
+						</b:ButtonGroup>
+						<b:ButtonGroup toggle="checkbox">
+							<b:Button ui:field="b_caller_all_role">All Role</b:Button>
+						</b:ButtonGroup>
+						<b:ButtonGroup toggle="checkbox">
+							<b:Button ui:field="b_caller_except">Except</b:Button>
+						</b:ButtonGroup>
+					</b:Row>
+					<b:Row styleName="{style.row_element}">
+						<g:FlowPanel ui:field="text_caller_quota">
+						</g:FlowPanel>
+					</b:Row>
+					<b:Row styleName="{style.row_element}">
+						<b:Tooltip text='Add Caller'>
+							<b:Button addStyleNames="btn btn_add" ui:field="b_add_multiple_caller">Add
+								Caller</b:Button>
+						</b:Tooltip>
+					</b:Row>
+				</g:FlowPanel>
+				<g:FlowPanel styleName="{style.panel_text}" ui:field="idAddTimeQuote">
+
+
+
+					<!-- TIME INTERVAL -->
+					<b:Row styleName="{style.row_element}">
+						<b:ControlLabel>Time</b:ControlLabel>
+						<b:ListBox ui:field="l_time_interval_quota">
+						</b:ListBox>
+					</b:Row>
+				</g:FlowPanel>
+				<g:FlowPanel styleName="{style.panel_text}" ui:field="idAddTypeQuote">
+					<!-- TYPE INTERVAL -->
+					<b:Row styleName="{style.row_element}">
+						<b:ControlLabel>Type</b:ControlLabel>
+						<b:ListBox ui:field="l_type_quota">
+						</b:ListBox>
+					</b:Row>
+
+				</g:FlowPanel>
+				<g:FlowPanel styleName="{style.panel_text}" ui:field="idAddValueQuote">
+
+					<!-- VALUE QUOTA -->
+					<b:Row styleName="{style.row_element}">
+						<b:ControlLabel>Quota</b:ControlLabel>
+						<b:TextBox ui:field="t_value_quota"></b:TextBox>
+
+
+					</b:Row>
+				</g:FlowPanel>
+			</b:Column>
+			<b:Column size="12">
+				<b:Row ui:field="r_loader_space" addStyleNames='{style.r_loader_space}'>
+
+				</b:Row>
+			</b:Column>
+			<b:Column size="6" offset="6" addStyleNames='{style.footer_dialog}'>
+				<b:Button ui:field="b_save_quota" type="PRIMARY"
+					addStyleNames='{style.button_dialog}'>Save</b:Button>
+				<b:Button ui:field="b_exit_dialog_quota" type="DANGER"
+					addStyleNames='{style.button_dialog}'>Close</b:Button>
+			</b:Column>
+		</b:FluidRow>
+	</g:FlowPanel>
+</ui:UiBinder>

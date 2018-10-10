@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+.ribbon {
+	line-height: 13px;
+	font-size: 11px;
+}
+
+.workAreaPanel {
+	background-color: white;
+}
+
+.logo {
+	margin: auto;
+	max-width: 600px !important;
+    max-height: 308px !important;
+    display: block;
+}

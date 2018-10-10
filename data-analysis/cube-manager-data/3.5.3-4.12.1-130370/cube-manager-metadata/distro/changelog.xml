@@ -1,0 +1,11 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data.analysis.tabulardata.cube-manager-metadata.3.5.2" date="2016-03-21">
+		<Change>Bug fixing</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data.analysis.tabulardata.cube-manager-metadata.2.0.0" date="2013-10-21"> 
+		<Change>Lazy mechanism for DB connection init</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data.analysis.tabulardata.cube-manager-metadata.1.0.0" date="2013-07-16"> 
+		<Change>First version</Change>
+	</Changeset>
+</ReleaseNotes>

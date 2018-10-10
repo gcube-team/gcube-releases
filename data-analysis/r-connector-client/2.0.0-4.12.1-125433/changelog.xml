@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="r-connector-client-1.0.0" date="2013-02-11">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="r-connector-client-2.0.0" date="2016-03-15">
+		<Change>Added the method connect with empty arguments</Change>
+		<Change>Readme file changed</Change>
+	</Changeset>
+</ReleaseNotes>

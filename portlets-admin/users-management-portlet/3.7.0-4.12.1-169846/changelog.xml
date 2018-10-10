@@ -1,0 +1,30 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.users-management-portlet.3-0-0" date="2016-06-20">
+		<Change>First release of the redesigned portlet</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.users-management-portlet.3-1-0" date="2016-09-24">
+		<Change>UI usability improvements</Change>
+		<Change>Added more options in handling users and/or groups/roles</Change>
+		<Change>Fixed minor bugs concerning user deletion from VRE and scroll bars in modals</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.users-management-portlet.3-2-0" date="2016-11-09">
+		<Change>VRE Managers are informed for acceptance or rejection of requests</Change>
+		<Change>Fixed a bug in the request's grid causing grid not to be refreshed after an action</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.users-management-portlet.3-3-0" date="2017-02-28">
+		<Change>Displaying rejected requests</Change>
+		<Change>Improved modals' labels</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.users-management-portlet.3-4-0" date="2017-04-06">
+		<Change>Fixed a scroll bar issue</Change>
+		<Change>Updated the label for unregistering users from a VRE</Change>
+		<Change>Fixed a bug which preventing the display of the requests for registration</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.users-management-portlet.3-6-0" date="2017-08-23">
+		<Change>Fixed date sorting in table</Change>
+		<Change>Added notification for group membership</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.users-management-portlet.3-7-0" date="2018-07-19">
+		<Change>Removed acceptance admin column in table</Change>
+	</Changeset>
+</ReleaseNotes>
