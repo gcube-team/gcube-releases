@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:style>
+	.left {
+		float: right;
+	}
+	</ui:style>
+
+
+	<g:FlowPanel ui:field="main" styleName="btn btn-lg">
+		<g:FocusPanel ui:field="close">
+			<g:HTMLPanel>
+				<span class="btn btn-danger btn-sm {style.left}">
+					<i class="fa fa-times-circle"></i>
+				</span>
+			</g:HTMLPanel>
+		</g:FocusPanel>
+			<g:FocusPanel ui:field="button">
+				<g:HTMLPanel ui:field="label">
+					<a>
+						<i class="fa fa-flag fa-2x pull-left">
+						</i>
+						Font Awesome Version 4.5.0
+					</a>
+				</g:HTMLPanel>
+			</g:FocusPanel>
+	</g:FlowPanel>
+
+</ui:UiBinder> 

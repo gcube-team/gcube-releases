@@ -1,0 +1,7 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-widgets.ws-task-executor-widget.0-1-0"
+		date="2018-07-30">
+		<Change>[Bug #12269] Fixing key parameter for type FILE</Change>
+		<Change>first release</Change>
+	</Changeset>
+</ReleaseNotes>

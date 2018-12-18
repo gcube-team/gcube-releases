@@ -1,0 +1,39 @@
+<module rename-to="accountingdashb">
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name="com.google.gwt.http.HTTP" />
+	<inherits name="com.google.gwt.resources.Resources" />
+	<inherits name="com.google.gwt.logging.Logging" />
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+	<inherits name='com.github.gwtbootstrap.datetimepicker.Datetimepicker' />
+
+	<!--pay attention in this part -->
+	<!-- <replace-with class="org.gcube.portlets.user.cmemsschedulermanager.client.resources.ThemeConfigurator"> 
+		<when-type-is class="com.github.gwtbootstrap.client.ui.config.Configurator" 
+		/> </replace-with> -->
+
+
+	<inherits name="com.gwtplatform.mvp.MvpWithEntryPoint" />
+
+	<extend-configuration-property name="gin.ginjector.modules"
+		value="org.gcube.portlets.user.accountingdashboard.client.gin.AccountingDashBoardClientModule" />
+	<!-- Specify the paths for translatable code -->
+	<source path="client" />
+	<source path="shared" />
+
+	<set-configuration-property name="CssResource.enableGss"
+		value="true" />
+	<set-configuration-property name="CssResource.conversionMode"
+		value="strict" />
+
+	<!-- <set-property name="gwt.logging.logLevel" value="SEVERE" /> <set-property 
+		name="gwt.logging.enabled" value="TRUE" /> -->
+
+	<set-property name="gwt.logging.logLevel" value="FINE" />
+	<set-property name="gwt.logging.enabled" value="TRUE" />
+	<set-property name="gwt.logging.consoleHandler" value="ENABLED" />
+
+</module>
+
+

@@ -1,0 +1,24 @@
+#geoadmin-import-monitor-modal {
+	width: 80%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+
+#geoadmin-import-monitor {
+	display: inline-block;
+	float: right;
+}
+
+#importOptions {
+	display: inline-block;
+	width: 100%;
+}
+
+#geoadmin-import-monitor-modal-refresh, #geoadmin-import-monitor-modal-clear {
+	float: left;
+}
+
+.aui .legend-import-form {
+	padding: 10px;
+}

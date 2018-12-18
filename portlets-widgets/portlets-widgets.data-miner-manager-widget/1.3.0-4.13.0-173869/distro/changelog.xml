@@ -1,0 +1,19 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.widgets.data-miner-manager-widget.1-3-0"
+		date="2018-10-01">
+		<Change>Updated to support download by StorageHub[ticket #11879]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.data-miner-manager-widget.1-2-0"
+		date="2018-07-01">
+		<Change>Updated to support StorageHub[ticket #11879]</Change>
+		<Change>Added support to netcdf files</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.data-miner-manager-widget.1-1-0"
+		date="2017-06-12">
+		<Change>Support Java 8 compatibility [ticket #8471]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.data-miner-manager-widget.1-0-0"
+		date="2017-03-31">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

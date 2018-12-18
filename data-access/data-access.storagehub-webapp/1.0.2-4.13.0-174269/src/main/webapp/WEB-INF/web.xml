@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<context-param>
+		<param-name>admin-username</param-name>
+		<param-value>workspacerep.imarine</param-value>
+	</context-param>
+	<context-param>
+		<param-name>admin-pwd</param-name>
+		<param-value>gcube2010*onan</param-value>
+	</context-param>
+	<context-param>
+		<param-name>resolver-basepath</param-name>
+		<param-value>https://data-d.d4science.org/shub</param-value>
+	</context-param>
+	<servlet>
+		<servlet-name>org.gcube.data.access.storagehub.StorageHub</servlet-name>
+		
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>org.gcube.data.access.storagehub.StorageHub</servlet-name>
+		<url-pattern>/workspace/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>

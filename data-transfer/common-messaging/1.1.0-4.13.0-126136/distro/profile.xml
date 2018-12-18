@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ID/>
+    <Type>Service</Type>
+    <Profile>
+    	<Description>The gCube Data Transfer  Common Messaging</Description>
+        <Class>DataTransfer</Class>
+        <Name>${artifactId}</Name>
+        <Version>1.0.0</Version>
+        <Packages>
+            <Software>
+            	<Description>Messaging Classes for Data Transfer</Description>
+            	<Name>${artifactId}</Name>
+				<Version>${version}</Version>
+				<MavenCoordinates>
+					<groupId>${groupId}</groupId>
+					<artifactId>${artifactId}</artifactId>
+					<version>${version}</version>
+				</MavenCoordinates>
+				<MultiVersion value="true"/>
+				<Mandatory level="GHN"/>
+				<Shareable level="VO"/>
+				<GHNRequirements>
+					<Requirement category="Site" operator="ge" requirement="string" value="java1.5"/>
+				</GHNRequirements>
+				<SpecificData>text</SpecificData>
+				<Type>library</Type>
+				<Files>
+					<File>${build.finalName}.jar</File>
+				</Files>
+			</Software> 
+        </Packages>
+    </Profile>
+</Resource>
+

@@ -1,0 +1,64 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.noBorder {
+		border: 0px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="html_panel_field">
+			<b:Form type="HORIZONTAL">
+				<b:Fieldset styleName="{style.noBorder}" ui:field="form_unit_fields">
+
+					<b:ControlGroup ui:field="cg_select_vre">
+						<b:ControlLabel for="cl_select_vre">Execute in the VRE</b:ControlLabel>
+						<b:Controls>
+							<b:ListBox name="Select a VRE..." b:id="field_select_scope"
+								ui:field="field_select_scope" addStyleNames="my-external-select-width">
+							</b:ListBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="cg_select_task_id">
+						<b:ControlLabel for="cl_select_task_id">The Algorithm</b:ControlLabel>
+						<b:Controls>
+							<b:ListBox name="Select the Algorithm..." b:id="field_select_task_id"
+								ui:field="field_select_task_id" addStyleNames="my-external-select-width">
+							</b:ListBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+<!-- 					<b:ControlGroup ui:field="cg_input_task_id"> -->
+<!-- 						<b:ControlLabel for="cl_input_task_id">The Algorithm Id</b:ControlLabel> -->
+<!-- 						<b:Controls> -->
+<!-- 							<b:TextBox -->
+<!-- 								placeholder="The Operator ID indexed in the DataMiner service provided by e-Infrastructure" -->
+<!-- 								title="This is the Operator ID that will be executed" b:id="field_task_id" -->
+<!-- 								ui:field="field_task_id" addStyleNames="my-external-input-width"></b:TextBox> -->
+<!-- 						</b:Controls> -->
+<!-- 					</b:ControlGroup> -->
+					<b:ControlGroup ui:field="cg_input_task_descritption">
+						<b:ControlLabel for="cl_input_task_descritption">Description</b:ControlLabel>
+						<b:Controls>
+							<b:TextArea placeholder="Type the Task Description..."
+								title="Type the Task Description..." b:id="field_task_description"
+								ui:field="field_task_description" addStyleNames="my-external-input-width"></b:TextArea>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlGroup ui:field="cg_parameters_control">
+						<b:Controls ui:field="task_parameters_control">
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlLabel for="cl_parameters_control">Add Parameter</b:ControlLabel>
+					<b:Controls>
+						<b:Button icon="PLUS_SIGN" title="Add Parameter"
+							ui:field="addCustomFieldButton"></b:Button>
+					</b:Controls>
+				</b:Fieldset>
+			</b:Form>
+		</g:HTMLPanel>
+		<b:Pager left="Go back" right="Create Configuration" aligned="true"
+			ui:field="pager" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

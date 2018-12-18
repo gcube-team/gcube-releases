@@ -1,0 +1,178 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@external x-toolbar-mark;
+
+
+@def tbborderRadius value('theme.toolbar.buttonOverride.borderRadius','px');
+@def tbborderColor value('theme.toolbar.buttonOverride.border.color');
+@def tbborderStyle value('theme.toolbar.buttonOverride.border.style');
+@def tbborderWidth value('theme.toolbar.buttonOverride.border.toString');
+
+@def tbgradient value('theme.toolbar.buttonOverride.gradient');
+@def tboverGradient value('theme.toolbar.buttonOverride.overGradient');
+@def tbpressedGradient value('theme.toolbar.buttonOverride.pressedGradient');
+
+/*
+@def tbpadding value('theme.toolbar.buttonOverride.padding.toString');
+*/
+
+@def tbfontSize value('theme.toolbar.buttonOverride.font.size','px');
+@def tbfontFamily value('theme.toolbar.buttonOverride.font.family');
+@def tbfontWeight value('theme.toolbar.buttonOverride.font.weight');
+@def tbfontColor value('theme.toolbar.buttonOverride.font.color');
+
+
+@def tbsmallFontSize value('theme.toolbar.buttonOverride.smallFontSize','px');
+@def tbmediumFontSize value('theme.toolbar.buttonOverride.mediumFontSize','px');
+@def tblargeFontSize value('theme.toolbar.buttonOverride.largeFontSize','px');
+@def tbsmallLineHeight value('theme.toolbar.buttonOverride.smallLineHeight','px');
+@def tbmediumLineHeight value('theme.toolbar.buttonOverride.mediumLineHeight','px');
+@def tblargeLineHeight value('theme.toolbar.buttonOverride.largeLineHeight','px');
+
+/*
+@def tbsmallFontSize 10px;
+@def tbmediumFontSize 11px;
+@def tblargeFontSize 12px;
+@def tbsmallLineHeight 14px;
+@def tbmediumLineHeight 15px;
+@def tblargeLineHeight 16px;
+*/
+
+@def tbcss3Leftover value('theme.button.radiusMinusBorderWidth.toString');
+
+.x-toolbar-mark .button {
+  border-radius: tbborderRadius;
+  border-width: tbborderWidth;
+  border-style: tbborderStyle;
+  border-color: tbborderColor;
+  background-color: #d0f4f7;
+
+  background: -webkit-linear-gradient(top, tbgradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, tbgradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, tbgradient); /* IE10+ */
+  background: linear-gradient(to bottom, tbgradient); /* W3C */
+
+  padding: 0px;
+  cursor: pointer;
+  outline: none;
+}
+
+.x-toolbar-mark .buttonInner {
+  padding: 0px;
+  text-align: center;
+  font-size: tbfontSize;
+  color: tbfontColor;
+  font-weight: tbfontWeight;
+  font-family: tbfontFamily;
+}
+
+.x-toolbar-mark .over {
+  background: -webkit-linear-gradient(top, tboverGradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, tboverGradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, tboverGradient); /* IE10+ */
+  background: linear-gradient(to bottom, tboverGradient); /* W3C */
+}
+
+.x-toolbar-mark .pressed {
+  background: -webkit-linear-gradient(top, tbpressedGradient) !important; /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, tbpressedGradient) !important; /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, tbpressedGradient) !important; /* IE10+ */
+  background: linear-gradient(to bottom, tbpressedGradient) !important; /* W3C */
+}
+
+.x-toolbar-mark .focused {
+  background: -webkit-linear-gradient(top, tboverGradient); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, tboverGradient); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, tboverGradient); /* IE10+ */
+  background: linear-gradient(to bottom, tboverGradient); /* W3C */
+}
+
+
+.x-toolbar-mark .small {
+  line-height: tbsmallLineHeight;
+  font-size: tbsmallFontSize;
+}
+
+.x-toolbar-mark .medium {
+  line-height: tbmediumLineHeight;
+  font-size: tbmediumFontSize;
+}
+
+.x-toolbar-mark .large {
+  line-height: tblargeLineHeight;
+  font-size: tblargeFontSize;
+}
+
+
+.x-toolbar-mark .iconLeft {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 2px;
+}
+
+.x-toolbar-mark .iconRight {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+.x-toolbar-mark .iconTop {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2px;
+}
+
+.x-toolbar-mark .iconBottom {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2px;
+}
+
+.x-toolbar-mark .noText .iconLeft {
+  margin-right: 0px;
+}
+
+.x-toolbar-mark .noText .iconRight {
+  margin-left: 0px;
+}
+
+@sprite .x-toolbar-mark .split {
+  gwt-image: 'toolBarSplit';
+  width: auto;
+  height: auto;
+  background-position: right center;
+  padding-right: 20px;
+  background-repeat: no-repeat;
+}
+
+@sprite .x-toolbar-mark .splitBottom {
+  gwt-image: 'toolBarSplitBottom';
+  width: auto;
+  height: auto;
+  background-position: center bottom;
+  padding-bottom: 14px;
+  background-repeat: no-repeat;
+}
+
+@sprite .x-toolbar-mark .arrow {
+  gwt-image: 'toolBarArrow';
+  width: auto;
+  height: auto;
+  padding-right: 10px;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+@sprite .x-toolbar-mark .arrowBottom {
+  gwt-image: 'toolBarArrowBottom';
+  width: auto;
+  height: auto;
+  padding-bottom: 14px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}

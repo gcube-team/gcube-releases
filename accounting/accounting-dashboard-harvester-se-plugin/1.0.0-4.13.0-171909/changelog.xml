@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.accounting.accounting-dashboard-harvester-se-plugin.1.0.0" date="2018-11-29">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

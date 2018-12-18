@@ -1,0 +1,30 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel styleName="wizardPanel">
+		<div class="wizardTitle">
+			Server Error!
+		</div>
+		<div class="wizardText">
+			We're sorry, there was an error we could not identify.
+
+		</div>
+		<div class="wizardText">
+			If you are installing the bundle
+			then you may try to
+			stop tomcat, drop
+			the database, create it new, and try again.
+		</div>
+		<div class="wizardText">
+			You might also check your server log.
+		</div>
+		<div class="wizardText">
+			You can email us for support at the following address: <a href="mailto:support@gcube-system.org"> support@gcube-system.org</a>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='GcubeReleasesApp'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name="com.github.gwtbootstrap.datepicker.Datepicker" />
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+
+
+	<!-- <inherits name="org.gwtbootstrap3.GwtBootstrap3" /> -->
+	<!-- <inherits name="org.gwtbootstrap3.extras.bootbox.Bootbox"/> -->
+	<!-- <inherits name="org.gwtbootstrap3.extras.growl.Growl"/> -->
+	<!-- <inherits name="org.gwtbootstrap3.extras.respond.Respond"/> -->
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
+
+	<inherits name="com.google.gwt.logging.Logging" />
+	<set-property name="gwt.logging.enabled" value="FALSE" />
+	<set-property name="gwt.logging.logLevel" value="INFO" />
+	<!-- <set-property name="gwt.logging.consoleHandler" value="DISABLED"/> -->
+
+
+	<entry-point
+		class="org.gcube.portlets.admin.gcubereleases.client.GcubeReleasesApp" />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

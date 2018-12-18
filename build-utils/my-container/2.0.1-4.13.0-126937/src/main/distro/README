@@ -1,0 +1,38 @@
+The gCube System - My Container
+------------------------------------------------------------
+
+This work is partially funded by the European Commission in the
+context of the D4Science II project (www.d4science.eu), under the 1st call of FP7 IST priority.
+
+Authors
+-------
+
+* Fabio Simeoni (fabio.simeoni@cis.strath.ac.uk), University of Strathclyde, Department of Computer & Information Sciences, Glasgow UK
+
+
+Version and Release Date
+------------------------
+1.0.0-SNAPSHOT, 01/09/2011
+
+Description
+-----------
+
+Runtime support for embedding my-container installations
+
+Download information
+--------------------
+
+Source code is available from SVN:
+http://svn.research-infrastructures.eu/public/d4science/gcube/trunk/common/my-container
+
+Binaries can be downloaded from:
+
+
+Documentation 
+-------------
+
+
+Licensing
+---------
+
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.

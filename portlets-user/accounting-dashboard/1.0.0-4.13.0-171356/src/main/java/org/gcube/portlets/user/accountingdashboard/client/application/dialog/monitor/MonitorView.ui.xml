@@ -1,0 +1,23 @@
+<!-- @Author Giancarlo Panichi -->
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:with field="res"
+		type="org.gcube.portlets.user.accountingdashboard.client.resources.AppResources" />
+
+	<!-- styleName="{style.popup}" -->
+	<g:DialogBox ui:field="dialogBox" styleName="{res.uiDataCss.uiDataMonitorPopup}"
+		glassStyleName="{res.uiDataCss.uiDataMonitorPopupGlass}" glassEnabled="true">
+		<g:caption>
+			<span class="{res.uiDataCss.uiDataPopupCaption}">Please wait...</span>
+		</g:caption>
+		<g:HTMLPanel width="300px"
+			styleName="{res.uiDataCss.uiDataMonitorPopupProgress}">
+			<hr class="{res.uiDataCss.uiDataPopupHr}" />
+			<b:ProgressBar type="ANIMATED" percent="100" text="In progress..." />
+		</g:HTMLPanel>
+	</g:DialogBox>
+</ui:UiBinder>
+
+
+	

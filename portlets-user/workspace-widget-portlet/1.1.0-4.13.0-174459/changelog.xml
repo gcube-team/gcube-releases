@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.workspace-widget-portlet.1-1-0"
+		date="2018-06-12">
+		<Change>Added mazimise feature</Change>
+	</Changeset>
+	<Changeset component="org.gcube.workspace-widget-portlet.1-0-0"
+		date="2018-05-17">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

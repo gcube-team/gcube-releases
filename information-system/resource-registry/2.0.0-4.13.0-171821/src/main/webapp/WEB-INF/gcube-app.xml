@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<application mode='online'>
+		<name>resource-registry</name>
+		<group>InformationSystem</group>
+		<version>2.0.0-4.13.0-171821</version>
+		<description>Resource Registry</description>
+		<local-persistence location='target' />
+</application>
+

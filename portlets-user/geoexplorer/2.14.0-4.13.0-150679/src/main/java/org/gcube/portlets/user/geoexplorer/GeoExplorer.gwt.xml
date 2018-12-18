@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='geoexplorer'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+
+	<inherits name='com.extjs.gxt.ui.GXT' />
+
+	<inherits name='org.gcube.portlets.widgets.sessionchecker.SessionChecker' />
+
+	<stylesheet src='geoExplorer.css' />
+
+	<source path='client' />
+
+</module>

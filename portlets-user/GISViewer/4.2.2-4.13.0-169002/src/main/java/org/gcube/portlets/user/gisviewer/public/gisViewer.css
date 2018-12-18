@@ -1,0 +1,522 @@
+.myToolbar {
+	/*border-style:solid;
+    border-width:0 0 1px 0;
+    border-color:gray;*/
+	display: block;
+	padding: 2px;
+	background: repeat-x top left;
+	position: relative;
+	left: 0;
+	top: 0;
+	zoom: 1;
+	overflow: hidden;
+}
+
+/*
+.myToolbar {
+  border-color: #a9bfd3;
+  /*background-color: #d0def0;
+   background-image: url(../images/default/toolbar/bg.gif); 
+}
+*/
+.myToolbar td, .myToolbar span, .myToolbar input, .myToolbar div,
+	.myToolbar select, .myToolbar label {
+	font: normal 11px arial, tahoma, helvetica, sans-serif;
+}
+
+.myToolbar .x-float-right {
+	margin-right: 4px;
+}
+
+.x-tab-panel-bbar .myToolbar {
+	border: 1px solid;
+	border-top: 0 none;
+	overflow: hidden;
+	padding: 2px;
+}
+
+.x-tab-panel-tbar .myToolbar {
+	border: 1px solid;
+	border-top: 0 none;
+	overflow: hidden;
+	padding: 2px;
+}
+
+.myToolbar .x-item-disabled .x-btn-icon {
+	opacity: .35;
+	-moz-opacity: .35;
+	filter: alpha(opacity = 35);
+}
+
+.myToolbar td {
+	vertical-align: middle;
+}
+
+.myToolbar td, .myToolbar span, .myToolbar input, .myToolbar div,
+	.myToolbar select, .myToolbar label {
+	white-space: nowrap;
+}
+
+.myToolbar .x-item-disabled {
+	cursor: default;
+	opacity: .6;
+	-moz-opacity: .6;
+	filter: alpha(opacity = 60);
+}
+
+.myToolbar .x-item-disabled * {
+	cursor: default;
+}
+
+.myToolbar .myToolbar-cell {
+	vertical-align: middle;
+}
+
+.myToolbar .x-btn-tl, .myToolbar .x-btn-tr, .myToolbar .x-btn-tc,
+	.myToolbar .x-btn-ml, .myToolbar .x-btn-mr, .myToolbar .x-btn-mc,
+	.myToolbar .x-btn-bl, .myToolbar .x-btn-br, .myToolbar .x-btn-bc {
+	background-position: 500px 500px;
+}
+
+.myToolbar .x-btn-over .x-btn-tl {
+	background-position: -6px 0;
+}
+
+.myToolbar .x-btn-over .x-btn-tr {
+	background-position: -9px 0;
+}
+
+.myToolbar .x-btn-over .x-btn-tc {
+	background-position: 0 -9px;
+}
+
+.myToolbar .x-btn-over .x-btn-ml {
+	background-position: -6px -24px;
+}
+
+.myToolbar .x-btn-over .x-btn-mr {
+	background-position: -9px -24px;
+}
+
+.myToolbar .x-btn-over .x-btn-mc {
+	background-position: 0 -2168px;
+}
+
+.myToolbar .x-btn-over .x-btn-bl {
+	background-position: -6px -3px;
+}
+
+.myToolbar .x-btn-over .x-btn-br {
+	background-position: -9px -3px;
+}
+
+.myToolbar .x-btn-over .x-btn-bc {
+	background-position: 0 -18px;
+}
+
+.myToolbar .x-btn-click .x-btn-tl, .myToolbar .x-btn-menu-active .x-btn-tl,
+	.myToolbar .x-btn-pressed .x-btn-tl {
+	background-position: -12px 0;
+}
+
+.myToolbar .x-btn-click .x-btn-tr, .myToolbar .x-btn-menu-active .x-btn-tr,
+	.myToolbar .x-btn-pressed .x-btn-tr {
+	background-position: -15px 0;
+}
+
+.myToolbar .x-btn-click .x-btn-tc, .myToolbar .x-btn-menu-active .x-btn-tc,
+	.myToolbar .x-btn-pressed .x-btn-tc {
+	background-position: 0 -12px;
+}
+
+.myToolbar .x-btn-click .x-btn-ml, .myToolbar .x-btn-menu-active .x-btn-ml,
+	.myToolbar .x-btn-pressed .x-btn-ml {
+	background-position: -12px -24px;
+}
+
+.myToolbar .x-btn-click .x-btn-mr, .myToolbar .x-btn-menu-active .x-btn-mr,
+	.myToolbar .x-btn-pressed .x-btn-mr {
+	background-position: -15px -24px;
+}
+
+.myToolbar .x-btn-click .x-btn-mc, .myToolbar .x-btn-menu-active .x-btn-mc,
+	.myToolbar .x-btn-pressed .x-btn-mc {
+	background-position: 0 -3240px;
+}
+
+.myToolbar .x-btn-click .x-btn-bl, .myToolbar .x-btn-menu-active .x-btn-bl,
+	.myToolbar .x-btn-pressed .x-btn-bl {
+	background-position: -12px -3px;
+}
+
+.myToolbar .x-btn-click .x-btn-br, .myToolbar .x-btn-menu-active .x-btn-br,
+	.myToolbar .x-btn-pressed .x-btn-br {
+	background-position: -15px -3px;
+}
+
+.myToolbar .x-btn-click .x-btn-bc, .myToolbar .x-btn-menu-active .x-btn-bc,
+	.myToolbar .x-btn-pressed .x-btn-bc {
+	background-position: 0 -21px;
+}
+
+.myToolbar div.xtb-text {
+	padding: 2px 2px 0;
+	line-height: 16px;
+	display: block;
+}
+
+.myToolbar .xtb-sep {
+	background-position: center;
+	background-repeat: no-repeat;
+	display: block;
+	font-size: 1px;
+	height: 16px;
+	width: 4px;
+	overflow: hidden;
+	cursor: default;
+	margin: 0 2px 0;
+	border: 0;
+}
+
+.myToolbar .xtb-spacer {
+	width: 2px;
+}
+
+.x-tbar-page-number {
+	width: 24px;
+	height: 14px;
+}
+
+.myToolbar-ct {
+	width: 100%;
+}
+
+.myToolbar-more .x-btn-small .x-btn-text {
+	height: 16px;
+	width: 12px;
+}
+
+.myToolbar-more em.x-btn-arrow {
+	display: inline;
+	background: transparent;
+	padding-right: 0;
+}
+
+.myToolbar-more .x-btn-mc em.x-btn-arrow {
+	background-image: none;
+}
+
+div.myToolbar-no-items {
+	color: gray !important;
+	padding: 5px 10px !important;
+}
+
+.x-grid3-topbar .myToolbar {
+	border-right: 0 none;
+}
+
+.x-grid3-bottombar .myToolbar {
+	border-right: 0 none;
+	border-bottom: 0 none;
+	border-top: 1px solid;
+}
+
+.x-combo-list .myToolbar {
+	border-top: 1px solid;
+	border-bottom: 0 none;
+}
+
+.x-panel-bbar .myToolbar, .x-panel-tbar .myToolbar {
+	border: 1px solid;
+	border-top: 0 none;
+	overflow: hidden;
+	padding: 2px;
+}
+
+.x-panel-tbar-noheader .myToolbar, .x-panel-mc .x-panel-tbar .myToolbar
+	{
+	border-top: 1px solid;
+	border-bottom: 0 none;
+}
+
+.x-plain-bbar .myToolbar {
+	overflow: hidden;
+	padding: 2px;
+}
+
+.x-plain-tbar .myToolbar {
+	overflow: hidden;
+	padding: 2px;
+}
+
+.x-panel-btns-center .myToolbar-ct {
+	margin: 0 auto;
+	text-align: left;
+	width: auto;
+}
+
+.x-panel-fbar td.myToolbar-cell {
+	padding: 0px;
+}
+
+.x-panel-fbar .myToolbar-cell {
+	vertical-align: middle;
+}
+
+.x-window-tbar .myToolbar, .x-window-bbar .myToolbar {
+	border-left: 0 none;
+	border-right: 0 none;
+}
+
+.x-window-bbar .myToolbar {
+	border-top: 1px solid;
+	border-bottom: 0 none;
+}
+
+.x-html-editor-tb .myToolbar {
+	position: static !important;
+}
+
+.x-panel-noborder .x-panel-tbar-noborder .myToolbar {
+	border-width: 0 0 1px;
+	border-style: solid;
+}
+
+.x-panel-noborder .x-panel-bbar-noborder .myToolbar {
+	border-width: 1px 0 0 0;
+	border-style: solid;
+}
+
+.x-tab-panel-bbar-noborder .myToolbar {
+	border-width: 1px 0 0 0;
+	border-style: solid;
+}
+
+.x-tab-panel-tbar-noborder .myToolbar {
+	border-width: 0 0 1px;
+	border-style: solid;
+}
+
+.x-tab-panel-bbar .myToolbar, .x-tab-panel-tbar .myToolbar {
+	border-color: #99bbe8;
+}
+
+.myToolbar .x-item-disabled {
+	color: gray;
+}
+
+.myToolbar .x-item-disabled * {
+	color: gray;
+}
+
+.myToolbar .x-btn-mc em.x-btn-split {
+	background-image: url(../images/default/button/s-arrow-noline.gif);
+}
+
+.myToolbar .x-btn-over .x-btn-mc em.x-btn-split, .myToolbar .x-btn-click .x-btn-mc em.x-btn-split,
+	.myToolbar .x-btn-menu-active .x-btn-mc em.x-btn-split, .myToolbar .x-btn-pressed .x-btn-mc em.x-btn-split
+	{
+	background-image: url(../images/default/button/s-arrow-o.gif);
+}
+
+.myToolbar .x-btn-mc em.x-btn-split-bottom {
+	background-image: url(../images/default/button/s-arrow-b-noline.gif);
+}
+
+.myToolbar .x-btn-over .x-btn-mc em.x-btn-split-bottom, .myToolbar .x-btn-click .x-btn-mc em.x-btn-split-bottom,
+	.myToolbar .x-btn-menu-active .x-btn-mc em.x-btn-split-bottom,
+	.myToolbar .x-btn-pressed .x-btn-mc em.x-btn-split-bottom {
+	background-image: url(../images/default/button/s-arrow-bo.gif);
+}
+
+/*
+.myToolbar .xtb-sep {
+  background-image: url(../images/default/grid/grid-blue-split.gif);
+}
+*/
+.myToolbar-more-icon {
+	background-image: url(../images/default/toolbar/more.gif) !important;
+}
+
+.x-grid3-bottombar .myToolbar {
+	border-top-color: #a9bfd3;
+}
+
+.x-combo-list .myToolbar {
+	border-top-color: #98c0f4;
+}
+
+.x-panel-bbar .myToolbar, .x-panel-tbar .myToolbar {
+	border-color: #99bbe8;
+}
+
+.x-panel-tbar-noheader .myToolbar, .x-panel-mc .x-panel-tbar .myToolbar
+	{
+	border-top-color: #99bbe8;
+}
+
+.x-window-bbar .myToolbar {
+	border-top-color: #99bbe8;
+}
+
+.x-panel-noborder .x-panel-tbar-noborder .myToolbar {
+	border-bottom-color: #99bbe8;
+}
+
+.x-panel-noborder .x-panel-bbar-noborder .myToolbar {
+	border-top-color: #99bbe8;
+}
+
+.x-tab-panel-bbar-noborder .myToolbar {
+	border-top-color: #99bbe8;
+}
+
+.x-tab-panel-tbar-noborder .myToolbar {
+	border-bottom-color: #99bbe8;
+}
+
+/* MENU */
+.gisViewerMenu {
+	background-color: #F0F0F0;
+	background-image: url("images/default/menu/menu.gif");
+	border-color: #718BB7;
+}
+
+.gisViewerMenu a, .gisViewerMenuButton button {
+	font-size: 10px;
+}
+
+.gisViewerMenu .x-menu-item-icon {
+	border: 0 none;
+	height: 16px;
+	padding: 0;
+	vertical-align: top;
+	width: 16px;
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	margin: 0;
+	background-position: center;
+}
+
+/* BUTTONS 
+.bt_exportSnapshot {
+	background: transparent url(images/exportSnapshot.gif) no-repeat;
+	height: 25px;
+	width: 25px;
+}
+
+.bt_exportSnapshotDisabled {
+	background: transparent url(images/exportSnapshotDisabled.gif) no-repeat;
+	height: 25px;
+	width: 25px;
+}
+
+.bt_saveSnapshot {
+	background: transparent url(images/save.png) no-repeat;
+	height: 25px;
+	width: 25px;
+}
+
+.bt_saveSnapshotDisabled {
+	background: transparent url(images/saveDisabled.png) no-repeat;
+	height: 25px;
+	width: 25px;
+}*/
+/*
+.iconOpenlayersToolbar img {
+	margin-top: -3px;
+}*/
+/* LAYERS PANEL */
+.layersPanel1 {
+	background: url(images/layersPanel/layerspanel7.png) no-repeat;
+}
+
+.layerToolbarFunctionality {
+	/* 	background: url(images/layersPanel/layerspanel8.png) no-repeat; */
+	/* 	background-position: 0px -1px; */
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border: 1px solid #99BBE8;
+	border-top: none;
+	margin-left: 18px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	width: 80%;
+}
+
+.layersPanel1 :HOVER {
+	cursor: move;
+}
+
+.imgCql{
+	max-width: none !important;
+}
+
+.imgCql:hover {
+	cursor: pointer;
+	max-width: none !important;
+}
+
+.imgCursor{
+	max-width: none !important;
+}
+
+.imgCursor:hover {
+	cursor: pointer;
+	max-width: none !important;
+}
+
+.cqlPropertiesText {
+	border: solid 1px #99bbe8;
+	background-color: #ced9e7;
+	width: 380px;
+	overflow-x: auto;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	font-size: 12px;
+}
+
+/* OPENLAYERS */
+.olLayerGoogleCopyright {
+	visibility: hidden;
+}
+
+/* OVERRIDE DEFAULT OPENLAYERS STYLES*/
+.olControlLayerSwitcher .layersDiv {
+	background-color: #4B79B4 !important;
+	font-size: 12px;
+}
+
+.olControlLayerSwitcher .layersDiv>div>span {
+	/*     background-color: #4B79B4 !important; */
+	
+}
+
+.olControlLayerSwitcher .layersDiv span {
+	padding: 5px;
+}
+
+.olControlLayerSwitcher>div>span {
+	background-color: #4B79B4 !important;
+}
+
+table.tablelegend {
+	table-layout: fixed;
+	text-align: center;
+	padding: 5px;
+	margin: 5px;
+	border: none !important;
+	font-size: 12px;
+	border-bottom: 1px solid #024e68;
+}
+
+table.tablelegend > tbody > tr > td{
+	background-color: #FFF;
+	border-bottom: 1px solid #024e68;
+	padding: 3px;
+}

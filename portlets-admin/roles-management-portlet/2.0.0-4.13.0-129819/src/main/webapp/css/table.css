@@ -1,0 +1,298 @@
+#RolesManagementContainer {
+	background-color : #eeeeee;
+	background: #eeeeee;
+}
+#RolesManagementContainer i.icon-search {
+	-ms-transform: scale(1.2,1.4) !important; /* IE 9 */
+    -webkit-transform: scale(1.2,1.4) !important; /* Safari */
+    transform: sscale(1.2,1.4) !important;
+    display :inline-block !important;
+}
+#RolesManagementContainer table#CurrentRolesTable tbody {
+	background-color : rgba(234, 236, 240, 1);
+	background: rgba(234, 236, 240, 1);
+}
+#RolesManagementContainer table#CurrentRolesTable thead > tr {
+	border-bottom-color : white;
+}
+#RolesManagementContainer table#CurrentRolesTable thead > tr {
+	border: none;
+}
+#RolesManagementContainer table#CurrentRolesTable thead > tr th{
+	border: none;
+}
+#RolesManagementContainer table#CurrentRolesTable thead > tr th:first-of-type{
+	width:15px !important;
+}
+#RolesManagementContainer table#CurrentRolesTable tbody  tr:last-of-type{
+	border: none;
+}
+#RolesManagementContainer table#CurrentRolesTable tbody {
+	border: none;
+}
+#RolesManagementContainer table#CurrentRolesTable {
+	border: none;
+}
+#RolesManagementContainer table#CurrentRolesTable tr td:first-of-type {
+	cursor:pointer;
+	color:white;
+}
+#RolesManagementContainer table#CurrentRolesTable tr.selected td div {
+	background-color : rgb(42, 170, 230);
+	background : rgb(42, 170, 230);
+	color : #fff;
+}
+#RolesManagementContainer table#CurrentRolesTable tr:not(.selected):hover td div {
+	background: #4cb5d2;
+	background-color: #4cb5d2;
+	color: white;
+}
+#RolesManagementContainer table#CurrentRolesTable tr td:first-of-type {
+	padding-top: 4px;
+}
+#RolesManagementContainer table#CurrentRolesTable tr:hover td div i.icon-ok {
+	color: #4cb5d2;
+}
+#RolesManagementContainer table#CurrentRolesTable tr td div i.icon-ok.whiteFont {
+	color: white;
+}
+#RolesManagementContainer div#contentDiv {
+ 	/* background-color: rgba(234, 236, 240, 1); */
+}
+#RolesManagementContainer #portlet_UsersManagementPortlet_WAR_UsersManagementPortletportlet .portlet-content {
+	background-color: #eeeeee;
+}
+#RolesManagementContainer table#CurrentRolesTable tbody tr {
+	background:#eeeeee;
+	background-color:#eeeeee;
+}
+#RolesManagementContainer table#CurrentRolesTable tbody tr td {
+	padding: 0px 3px;
+	text-align: center;
+}
+#RolesManagementContainer table#CurrentRolesTable thead th {
+	text-align: left;
+}
+#RolesManagementContainer table#CurrentRolesTable tbody tr div {
+	background:white;
+	background-color:white;
+	padding:2px;
+	text-align: left;
+	height: 1.5em;
+	line-height : 1.5em;
+	overflow : hidden;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width:inherit;
+}
+#RolesManagementContainer table#usersRequestsTable tbody tr div {
+	background:white;
+	background-color:white;
+	padding:2px;
+	text-align: left;
+	height: 1.5em;
+	line-height : 1.5em;
+	overflow : hidden;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width:inherit;
+}
+#RolesManagementContainer table#CurrentRolesTable tbody tr td:first-of-type div {
+	display:inline-block;
+	width : 1.5em;
+	text-align: center;
+}
+#RolesManagementContainer div.dataTables_info, #RolesManagementContainer div.dataTables_length label, #RolesManagementContainer table#CurrentRolesTable > thead > tr > th {
+	color : #4cb5d2 !important;
+	font-weight: normal !important;
+	padding-left: 5px;
+}
+#RolesManagementContainer table#CurrentRolesTable > tbody > tr > td.dataTables_empty, #RolesManagementContainer table#usersRequestsTable  > tbody > tr > td.dataTables_empty {
+	color : rgb(13, 99, 200) !important;
+}
+#RolesManagementContainer div.dataTables_info, #RolesManagementContainer div.dataTables_filter {
+	margin-bottom: 10px;
+}
+#RolesManagementContainer div.dataTables_filter {
+	padding-right : 15px;
+}
+#RolesManagementContainer div.dataTables_info {
+	padding-left : 15px;
+}
+#RolesManagementContainer div.dataTables_length, #RolesManagementContainer div.dataTables_paginate.paging_simple_numbers {
+	margin-top: 10px;
+}
+#RolesManagementContainer div.dataTables_length label > select {
+	width : 65px !important;
+	height: 25px;
+}
+#RolesManagementContainer table#usersRequestsTable thead > tr th{
+	border: none;
+}
+#RolesManagementContainer table#usersRequestsTable tbody {
+	border: none;
+}
+#RolesManagementContainer table#usersRequestsTable {
+	border: none;
+}
+#RolesManagementContainer table#usersRequestsTable tbody  tr:last-of-type{
+	border: none;
+}
+#RolesManagementContainer table#usersRequestsTable thead > tr {
+	border-bottom-color : white;
+}
+#RolesManagementContainer table#usersRequestsTable thead > tr {
+	border: none;
+}
+#RolesManagementContainer table#usersRequestsTable {
+	text-align: center;
+}
+#RolesManagementContainer table#usersRequestsTable i.icon-ok {
+	color : rgb(234, 234, 234);
+}
+#RolesManagementContainer table#usersRequestsTable tr:hover td div i.icon-ok.whiteFont {
+	color: white;
+}
+#RolesManagementContainer table#usersRequestsTable tr td div {
+	background-color : #e7e7e7;
+	background : #e7e7e7;
+}
+#RolesManagementContainer table#usersRequestsTable tbody tr td {
+	padding: 0px 4px;
+}
+#RolesManagementContainer table#usersRequestsTable tbody tr td div{
+	padding: 2px;
+}
+#RolesManagementContainer table#usersRequestsTable tr td:first-of-type {
+	cursor:pointer;
+	color:white !important;
+}
+#RolesManagementContainer table#usersRequestsTable tr.selected {
+	background-color : white;
+	background : white;
+}
+#RolesManagementContainer table#usersRequestsTable tr.selected td div {
+	background-color : rgb(42, 170, 230);
+	background : rgb(42, 170, 230);
+	padding: 2px;
+	color : #fff;
+}
+#RolesManagementContainer table#usersRequestsTable th {
+	text-align : left;
+}
+#RolesManagementContainer table#usersRequestsTable tr.selected td:first-of-type div {
+	text-align: center;
+}
+#RolesManagementContainer table#usersRequestsTable tr:not(.selected):hover td div {
+	background: rgb(42, 170, 210);
+	background-color: rgb(42, 170, 210);
+	color: white;
+}
+#RolesManagementContainer table#usersRequestsTable tr td:first-of-type div {
+	width: 1.5em;
+	display : inline-block;
+}
+#RolesManagementContainer table#usersRequestsTable tr td:first-of-type {
+	text-align: center;
+	padding-top : 4px;
+}
+#RolesManagementContainer table#usersRequestsTable thead th:first-of-type {
+	width : 15px !important;
+}
+#RolesManagementContainer table#usersRequestsTable tr:hover td div i.icon-ok {
+	color: rgb(42, 170, 210);
+}
+#RolesManagementContainer table#usersRequestsTable tr:hover{
+	background-color : white;
+	background : white;
+}
+#RolesManagementContainer table#usersRequestsTable tr td:not(:first-of-type) {
+	color : black;
+}
+#RolesManagementContainer table#usersRequestsTable > thead > tr > th {
+	font-weight: normal;
+}
+#RolesManagementContainer div.dataTables_filter label {
+	color : #0271be !important
+}
+#RolesManagementContainer a#currentUsersTableRefresh {
+	font-size: 14px;
+    background-color: #7EAB10;
+    background: #7EAB10;
+    color: white;
+    display: inline;
+    border-radius: 50%;
+    padding: 6px 9px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+#RolesManagementContainer div#auxilliaryDiv {
+	padding: 0px 15px;
+}
+#RolesManagementContainer div#changeUsersRolesModal div.modal-body {
+	display:inline;
+}
+#RolesManagementContainer div.text-dropdown.text-position-below{
+	top:initial !important;
+}
+#RolesManagementContainer span#rolesArrow {
+	display: inline-block;
+    width: 0;
+    height: 0;
+    /* background: red; */
+    border-style: solid;
+    border-width: 15px 0px 10px 10px;
+	border-color: transparent transparent transparent #fff;
+    position: absolute;
+    bottom : 50%;
+    left: 100%;
+}
+#RolesManagementContainer span#roles {
+	display : inline-block;
+    position: relative;
+    text-align: left;
+}
+#RolesManagementContainer span#onHoverUser {
+    color : rgb(42, 170, 210);
+    padding-left : 35px;
+    padding-top : 10px;
+}
+#RolesManagementContainer span#rolesContainer {
+	display : inline-block;
+	background-color : #fff;
+	background : #fff;
+	z-index : 3;
+	position : absolute;
+    bottom: 0%;
+    right: 100%;
+    border-radius : 8px;
+    box-shadow: 0px 9px 20px grey;
+	transform: translateY(50%);
+}
+#RolesManagementContainer table#CurrentRolesTable , #RolesManagementContainer table#usersRequestsTable{
+	table-layout: fixed;
+}
+#RolesManagementContainer ul#rolesList {
+	list-style-type: none;
+	margin : 0px;
+	padding : 5px 20px 20px 20px;
+}
+#RolesManagementContainer ul#rolesList li {
+	margin : 0px;
+	padding : 0px 15px;
+}
+#RolesManagementContainer ul#rolesList li:hover {
+	background : #eeeeee;
+	background-color : #eeeeee;
+}
+#RolesManagementContainer td.relative {
+	position : relative;
+}
+#RolesManagementContainer #RolesManagementContainer {
+	background-color : #eeeeee;
+	background : #eeeeee;
+}

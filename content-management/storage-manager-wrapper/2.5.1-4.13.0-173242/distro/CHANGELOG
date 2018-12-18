@@ -1,0 +1,16 @@
+v 2.2.0 (21-04-2015)
+		* change smp protocol
+v 2.1.0 (01-04-2014)
+		* support MongoDB backend with authentication
+v 2.0.1 (29-05-2013)
+		* bug fix incident: connection pending #606
+v 2.0.0 (19-05-2013)
+		* added move, copy and link operations
+		*FWS integration
+v 1.0.2 (15-01-2013)
+		* Integration with new gCube release 2.12.0 version system
+v 1.0.1 (11-10-2012)
+		* added VOLATILE area				
+v. 1.0.0 (04-05-2012)
+        * First release
+

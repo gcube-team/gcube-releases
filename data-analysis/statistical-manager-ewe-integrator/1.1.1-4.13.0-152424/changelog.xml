@@ -1,0 +1,7 @@
+<ReleaseNotes>
+<Changeset component="statistical-manager-ewe-integrator.1-1-1" date="2017-08-02">
+  <Change>Fixed wrong imported java packages </Change>
+  <Change>Added changelog.xml</Change>
+  <Change>Introduced some properties in pom.xml</Change>
+</Changeset>
+</ReleaseNotes>

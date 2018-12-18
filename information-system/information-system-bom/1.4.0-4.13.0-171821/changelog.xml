@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.information-system-bom.1-4-0" date="2018-11-28">
+		<Change></Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-bom.1-3-0" date="2017-12-20">
+		<Change>Updated OrientDB Version to 2.2.30</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-bom.1-2-0" date="2017-06-07">
+		<Change>Updated OrientDB Version to 2.2.18</Change>
+		<Change>Removed uneeded dependecies declaration (thinkerpopo frames)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-bom.1-1-0" date="2017-03-16">
+		<Change>Updated OrientDB Version to 2.2.17</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.information-system.information-system-bom.1-0-0" date="2016-12-16">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

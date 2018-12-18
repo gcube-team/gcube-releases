@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<b:Controls>
+		<b:InputAddOn prependText="Key:" ui:field="keyFieldPrepend">
+			<b:TextBox />
+		</b:InputAddOn>
+		<b:InputAddOn prependText="Value:" ui:field="valueFieldPrepend">
+			<b:TextBox />
+		</b:InputAddOn>
+		<b:Button icon="REMOVE_SIGN" title="Remove field" ui:field="removeCustomField"></b:Button>
+	</b:Controls>
+</ui:UiBinder> 

@@ -1,0 +1,11 @@
+<application mode="online">
+
+	<group>geoanalytics</group>
+	<name>geoanalytics-gos</name>
+	<version>0.0.2</version>
+
+	<description>Geoanalytics Geospatial Operation service (shape service node)</description>
+
+	<exclude>/resources/</exclude>
+
+</application>

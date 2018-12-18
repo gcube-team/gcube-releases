@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>   
+	<Changeset component="org.gcube.accounting.accounting-lib-persistence-no-insert.1-2-0" date="2018-11-29">
+		<Change>Creating uber-jar instead of jar-with-dependencies #10155</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-lib-persistence-no-insert.1-1-0" date="2017-10-09">
+		<Change>Implemented isConnectionActive() added in PersistenceBackend</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-lib-persistence-no-insert.1-0-0" date="2017-06-07">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

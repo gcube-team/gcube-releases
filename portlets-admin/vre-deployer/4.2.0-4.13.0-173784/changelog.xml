@@ -1,0 +1,44 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.vre-deploy.4-2-0"
+		date="2018-10-23">
+		<Change>Changed the imports of information system model due to its refactoring</Change>
+		</Changeset>
+	<Changeset component="org.gcube.portlets-admin.vre-deploy.4-1-0"
+		date="2017-12-06">
+		<Change>Feature #5729, send email to infraManagers upon new VRE
+			cretions</Change>
+		<Change>Task #10052, send email to infraManagers upon new VRE cretions
+		</Change>
+		<Change>Feature #6315, remove the mandatory node in creation phase</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.vre-deploy.4-0-1"
+		date="2016-10-04">
+		<Change>Fixed pom dependency for registry publisher</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.vre-deploy.4-0-0"
+		date="2016-06-30">
+		<Change>Ported to Liferay 6.2 API</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.vre-deploy.3-4-0"
+		date="2015-10-05">
+		<Change>Fix for bug #712, VRE Folder not created if manager and
+			designer are the same user</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.vre-deploy.3-3-0"
+		date="2014-06-06">
+		<Change>Added creation of New Layout including Register Users Portlet
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.vre-deploy.3-1-0"
+		date="2014-02-14">
+		<Change>Added creation of VRE Group Folder in Home Library</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.vre-deploy.3-0-0"
+		date="2013-10-21">
+		<Change>Moved to FWS</Change>
+		<Change>Integrated Social Notifications for VRE Designer</Change>
+		<Change>Ported to Feather Weight Stack</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+</ReleaseNotes>

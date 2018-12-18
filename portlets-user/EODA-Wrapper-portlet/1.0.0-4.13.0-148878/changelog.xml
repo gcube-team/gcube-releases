@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlet.user.EODA-Wrapper-portlet.1-0-0"
+		date="2017-05-18">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

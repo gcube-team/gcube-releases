@@ -1,0 +1,8 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data.analysis.tabulardata.cube-manager-api.3.5.2" date="2016-03-21">
+		<Change>Bug fixing</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data.analysis.tabulardata.cube-manager-api.2.0.0" date="2013-10-21"> 
+		<Change>First version</Change>
+	</Changeset>
+</ReleaseNotes>

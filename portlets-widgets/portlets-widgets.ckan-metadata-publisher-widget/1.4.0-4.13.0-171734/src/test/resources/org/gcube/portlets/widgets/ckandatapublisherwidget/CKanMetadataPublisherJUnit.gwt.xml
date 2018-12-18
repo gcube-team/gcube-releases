@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="CKanMetadataPublisher">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.widgets.ckandatapublisherwidget.CKanMetadataPublisher' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/CKanMetadataPublisher/greet" class="org.gcube.portlets.widgets.ckandatapublisherwidget.server.GreetingServiceImpl" />
+
+</module>

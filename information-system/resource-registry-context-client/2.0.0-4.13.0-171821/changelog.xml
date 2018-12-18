@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.information-system.resource-registry-client.2-0-0" date="2018-11-29">
+		<Change>Using new resource-registry REST interface #11905</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.resource-registry-client.1-0-0" date="2017-12-20">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

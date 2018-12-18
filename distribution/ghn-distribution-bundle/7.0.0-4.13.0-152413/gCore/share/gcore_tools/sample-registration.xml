@@ -1,0 +1,31 @@
+<ServiceGroupRegistrationParameters
+    xmlns:sgc="http://mds.globus.org/servicegroup/client"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"
+    xmlns:agg="http://mds.globus.org/aggregator/types"
+    xmlns="http://mds.globus.org/servicegroup/client">
+    
+    
+    <!-- Specifies that the registration will be renewed every S seconds -->
+    <RefreshIntervalSecs>S</RefreshIntervalSecs>
+    
+    
+    <!-- <Content> specifies registration specific information -->
+    <Content xsi:type="agg:AggregatorContent">
+        
+        <agg:AggregatorConfig>
+            <agg:GetMultipleResourcePropertiesPollType xmlns:MYNAMSPACE="mynamespace">
+                <agg:PollIntervalMillis>60000</agg:PollIntervalMillis>                
+                <agg:ResourcePropertyNames>MYNAMSPACE:MyResourceProperty1</agg:ResourcePropertyNames>
+                <agg:ResourcePropertyNames>MYNAMSPACE:MyResourceProperty2</agg:ResourcePropertyNames>
+                ...
+                <agg:ResourcePropertyNames>MYNAMSPACE:MyResourcePropertyN</agg:ResourcePropertyNames>
+            </agg:GetMultipleResourcePropertiesPollType>
+        </agg:AggregatorConfig>
+        
+        <agg:AggregatorData/>
+        
+    </Content>
+    
+</ServiceGroupRegistrationParameters>

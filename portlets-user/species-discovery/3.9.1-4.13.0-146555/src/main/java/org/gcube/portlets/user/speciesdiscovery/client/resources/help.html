@@ -1,0 +1,348 @@
+<div>
+<h3><span class="info-title">Examples</span></h3>
+
+<p class="info-query-description">Search all the products about the scientific name 'sarda sarda' in all available datasources.</p>
+<p class="info-query-text">SEARCH BY SN 'sarda sarda' RETURN Occurrence</p>
+
+<p class="info-query-description">Search all the products about 'sarda sarda' and its synonyms in WoRMS, in all available datasources.</p>
+<p class="info-query-text">SEARCH BY SN 'sarda sarda' EXPAND WITH WoRMS RETURN Occurrence</p>
+
+<p class="info-query-description">Search all the products about 'sarda sarda' and its synonyms found in WoRMS, in GBIF datasource.</p>
+<p class="info-query-text">SEARCH BY SN 'sarda sarda' EXPAND WITH WoRMS IN GBIF RETURN Occurrence</p>
+
+<p class="info-query-description">Search all the Taxa about 'sarda sarda' and its synonyms found in WoRMS, in ITIS datasource.</p>
+<p class="info-query-text">SEARCH BY SN 'sarda sarda' EXPAND WITH WoRMS IN ITIS RETURN TAXON</p>
+
+<p class="info-query-description">Search all the products about the scientific names retrieved searching the common 'shark' in the datasource WoRMS and mapping it into a scientific name using ITIS. Accept only the results with coordinate less or equals to (15.12, 16.12).</p>
+<p class="info-query-text">SEARCH BY CN 'shark' RESOLVE WITH WoRMS EXPAND WITH ITIS WHERE coordinate &lt;= 15.12, 16.12 RETURN Occurrence</p>
+
+<p class="info-query-description">Search all the products about the scientific names 'sarda sarda' and 'Carcharodon carcharias' expanded with synonyms from datasource WoRMS, found in ITIS and with an event date between 2000 and 2005.</p>
+<p class="info-query-text">SEARCH BY SN 'sarda sarda', 'Carcharodon carcharias' EXPAND WITH WoRMS IN ITIS WHERE eventDate &gt;= '2000' AND eventDate &lt;= '2005' RETURN Occurrence</p>
+
+<p class="info-query-description">Search all the products about the scientific names retrieved searching the common 'shark' in the datasource OBIS and mapping it into a scientific name using ITIS. Accept only the results with coordinate less or equals to (15.12, 16.12). Results are post filtered using the xpath expression "//product[type='TAXON' and counter&gt;0]".</p>
+<p class="info-query-text">SEARCH BY CN 'shark' RESOLVE WITH OBIS EXPAND WITH ITIS WHERE coordinate &lt;= 15.12, 16.12 RETURN Occurrence HAVING xpath("//product[type='TAXON' and counter&gt;0]")</p>
+
+<p class="info-query-description">Search all the Taxa in CatalogueOfLife, OBIS, WoRDSS, WoRMS unfolding 'cervidae' using CatalogueOfLife and expanding the results with synonyms retrieved from datasource WoRMS</p>
+<p class="info-query-text">SEARCH BY SN 'cervidae' UNFOLD WITH CatalogueOfLife EXPAND WITH WoRMS IN CatalogueOfLife, OBIS, WoRDSS, WoRMS RETURN Taxon</p>
+
+
+<h3><span class="info-title">Synopsis </span></h3>
+
+<code>
+<pre>SEARCH BY <i><b>term</b></i> [, ...]
+      [ IN <i><b>datasource</b></i> [, ...] ]
+      [ WHERE <i><b>condition</b></i> [AND <i><b>condition</b></i>] ]
+      RETURN {OCCURRENCE | TAXON}
+      [ HAVING <i><b>having expression</b></i> ]
+</pre></code>
+<p class="info-padding"></p>
+<p>Where <i><b>term</b></i> can be one of:</p>
+
+<code>
+<pre>CN <i>'common name'</i> [, ...] RESOLVE [ WITH <i><b>datasource</b></i> [, ...] ] [EXPAND [ WITH <i><b>datasource</b></i> [, ...] ] ]
+SN <i>'scientific name'</i> [, ...] [UNFOLD [ WITH <i><b>datasource</b></i> ]] [EXPAND [ WITH <i><b>datasource</b></i> [, ...] ] ]
+</pre>
+</code>
+<p class="info-padding"></p>
+<p>Where <i><b>condition</b></i> can be one of:</p>
+<code>
+<pre>coordinate {&lt; | &lt;= | == | =&gt; | &gt;} LAT, LONG
+eventDate {&lt; | &lt;= | == | =&gt; | &gt;} DATE
+</pre>
+</code>
+<p class="info-padding"></p>
+<p>Where <i><b>having condition</b></i> is a boolean expression composed by those elements:</p>
+<code>
+<pre>item expression&nbsp;: <i><b>item property</b></i> {&lt; | &lt;= | == |&nbsp;!= | =&gt; | &gt;} value
+function call: xpath(<i><b>xpath expression</b></i>) | exl(<i><b>exl expression</b></i>)
+</pre>
+</code>
+<p class="info-padding"></p>
+<h3><span class="info-title">Description</span></h3>
+<p>The <i>Search by</i> query retrieves all the available elements from the species service.
+The general processing of <i>Search by</i> is as follows:
+</p>
+<p class="info-padding"></p>
+<ol><li> All the <i><b>term</b></i> are elaborated depending on the specified type:
+<ul><li> <b>CN</b> case:
+<ul><li> all the specified <i>common name</i>s are mapped into <i>scientific name</i>s using the specified datasources or all the available datasources if no one as been specified
+</li><li> if the EXPAND clause is specified the <i>scientific name</i>s are expanded using the synonyms provided by the specified datasources or using all the available datasources if no one as been specified
+</li></ul>
+</li><li> <b>SN</b> case: 
+<ul><li> if the UNFOLD clause is specified all the specified <i>scientific name</i>s are expanded using their descendants provided by the specified datasource (only one)
+</li>
+<li> if the EXPAND clause is specified all the specified <i>scientific name</i>s  are expanded using the synonyms provided by the specified datasources or using all the available datasources if no one as been specified
+</li></ul>
+</li></ul>
+</li><li> The <i>scientific name</i>s retrieved from the <i><b>term</b></i> elaboration are used for the retrieving of the specified elements in the RETURN clause (if no element is specified PRODUCT are returned).
+</li><li> If the WHERE clause is specified, all the elements that do not satisfy the condition are eliminated from the output (filtering made inside the Datasource).
+</li><li> If the HAVING clause is specified, all the elements that do not satisfy the <i><b>having expression</b></i> are eliminated from the output (the filtering is made outside the Datasource).
+</li></ol>
+<p class="info-padding"></p>
+<h4><span class="info-title">Date format </span></h4>
+<p>Accepted DATE formats are:</p>
+<ul><li> "yyyy"
+</li><li> "MM-yyyy"
+</li><li> "MM/yyyy"
+</li><li> "yyyyMMdd"
+</li><li> "dd-MM-yyyy"
+</li><li> "yyyy-MM-dd"
+</li><li> "MM/dd/yyyy"
+</li><li> "yyyy/MM/dd"
+</li><li> "dd MMM yyyy"
+</li><li> "dd MMMM yyyy"
+</li><li> "yyyyMMddHHmm"
+</li><li> "yyyyMMdd HHmm"
+</li><li> "dd-MM-yyyy HH:mm"
+</li><li> "yyyy-MM-dd HH:mm"
+</li><li> "MM/dd/yyyy HH:mm"
+</li><li> "yyyy/MM/dd HH:mm"
+</li><li> "dd MMM yyyy HH:mm"
+</li><li> "dd MMMM yyyy HH:mm"
+</li><li> "yyyyMMddHHmmss"
+</li><li> "yyyyMMdd HHmmss"
+</li><li> "dd-MM-yyyy HH:mm:ss"
+</li><li> "yyyy-MM-dd HH:mm:ss"
+</li><li> "MM/dd/yyyy HH:mm:ss"
+</li><li> "yyyy/MM/dd HH:mm:ss"
+</li><li> "dd MMM yyyy HH:mm:ss"
+</li><li> "dd MMMM yyyy HH:mm:ss"
+</li></ul>
+<p class="info-padding"></p>
+<h4><span class="info-title">Item properties </span></h4>
+<p>Based on query returns type the post-filtering expression can access single item properties.
+</p>
+<h5><span class="info-title">Taxon </span></h5>
+<table border="1" style="border-collapse:collapse;width:500px;">
+
+<tbody><tr>
+<th> Property name </th><th> Value Type
+</th></tr>
+<tr>
+<td> author </td><td> String
+</td></tr>
+<tr>
+<td> citation </td><td> String
+</td></tr>
+<tr>
+<td> credits </td><td> String
+</td></tr>
+<tr>
+<td> id </td><td> String
+</td></tr>
+<tr>
+<td> lsid </td><td> String
+</td></tr>
+<tr>
+<td> parent </td><td> Taxon</td></tr>
+<tr>
+<td> rank </td><td> String
+</td></tr>
+<tr>
+<td> scientificName </td><td> String
+</td></tr></tbody></table>
+<p class="info-padding"></p>
+<h5><span class="info-title">Occurrence </span></h5>
+<table border="1" style="border-collapse:collapse;width:1000px;">
+
+<tbody><tr>
+<th> Property name </th><th> Value Type
+</th></tr>
+<tr>
+<td> author </td><td> String
+</td></tr>
+<tr>
+<td> basisOfRecord </td><td> enumeration {PreservedSpecimen, FossilSpecimen, LivingSpecimen, HumanObservation, MachineObservation}
+</td></tr>
+<tr>
+<td> catalogueNumber </td><td> String
+</td></tr>
+<tr>
+<td> citation </td><td> String
+</td></tr>
+<tr>
+<td> collectionCode </td><td> String
+</td></tr>
+<tr>
+<td> coordinateUncertaintyInMeters </td><td> String
+</td></tr>
+<tr>
+<td> country </td><td> String
+</td></tr>
+<tr>
+<td> credits </td><td> String
+</td></tr>
+<tr>
+<td> dataSet </td><td> DataSet</td></tr>
+<tr>
+<td> decimalLatitude </td><td> double
+</td></tr>
+<tr>
+<td> decimalLongitude </td><td> double
+</td></tr>
+<tr>
+<td> eventDate </td><td> Calendar
+</td></tr>
+<tr>
+<td> family </td><td> String
+</td></tr>
+<tr>
+<td> id </td><td> String
+</td></tr>
+<tr>
+<td> institutionCode </td><td> String
+</td></tr>
+<tr>
+<td> kingdom </td><td> String
+</td></tr>
+<tr>
+<td> locality </td><td> String
+</td></tr>
+<tr>
+<td> maxDepth </td><td> double
+</td></tr>
+<tr>
+<td> minDepth </td><td> double
+</td></tr>
+<tr>
+<td> modified </td><td> Calendar
+</td></tr>
+<tr>
+<td> properties </td><td> List
+</td></tr>
+<tr>
+<td> provider </td><td> String
+</td></tr>
+<tr>
+<td> recordedBy </td><td> String
+</td></tr>
+<tr>
+<td> scientificName </td><td> String
+</td></tr></tbody></table>
+<p class="info-padding"></p>
+<h6><span class="info-title">DataSet </span></h6>
+<table border="1" style="border-collapse:collapse;width:300px;">
+<tbody><tr>
+<th> Property name </th><th> Value Type
+</th></tr>
+<tr>
+<td> citation </td><td> String
+</td></tr>
+<tr>
+<td> dataProvider </td><td> DataProvider</td></tr>
+<tr>
+<td> id </td><td> String
+</td></tr>
+<tr>
+<td> name </td><td> String
+</td></tr></tbody></table>
+<p class="info-padding"></p>
+<h6><span class="info-title">DataProvider </span></h6>
+<table border="1" style="border-collapse:collapse;width:300px;">
+
+<tbody><tr>
+<th> Property name </th><th> Value Type
+</th></tr>
+<tr>
+<td> id </td><td> String
+</td></tr>
+<tr>
+<td> name </td><td> String
+</td></tr></tbody></table>
+<p><br>
+</p>
+<p class="info-padding"></p>
+<h5><span class="info-title">Product </span></h5>
+<table border="1" style="border-collapse:collapse;width:300px;">
+
+<tbody><tr>
+<th> Property name </th><th> Value Type
+</th></tr>
+<tr>
+<td> author </td><td> String
+</td></tr>
+<tr>
+<td> citation </td><td> String
+</td></tr>
+<tr>
+<td> commonNames </td><td> List of CommonName</td></tr>
+<tr>
+<td> credits </td><td> String</td></tr>
+<tr>
+<td> dataSet </td><td> DataSet</td></tr>
+<tr>
+<td> id </td><td> String
+</td></tr>
+<tr>
+<td> lsid </td><td> String
+</td></tr>
+<tr>
+<td> parent </td><td> Taxon</td></tr>
+<tr>
+<td> products </td><td> List of Product</td></tr>
+<tr>
+<td> properties </td><td> List of ElementProperty</td></tr>
+<tr>
+<td> provider </td><td> String
+</td></tr>
+<tr>
+<td> rank </td><td> String
+</td></tr>
+<tr>
+<td> scientificName </td><td> String
+</td></tr></tbody></table>
+<p class="info-padding"></p>
+<h6><span class="info-title">CommonName </span></h6>
+<table border="1" style="border-collapse:collapse;width:300px;">
+
+<tbody><tr>
+<th> Property name </th><th> Value Type
+</th></tr>
+<tr>
+<td> language </td><td> String
+</td></tr>
+<tr>
+<td> locality </td><td> String
+</td></tr>
+<tr>
+<td> name </td><td> String
+</td></tr></tbody></table>
+<p class="info-padding"></p>
+<h6><span class="info-title">Product </span></h6>
+<table border="1" style="border-collapse:collapse;width:700px;">
+
+<tbody><tr>
+<th> Property name </th><th> Value Type
+</th></tr>
+<tr>
+<td> count </td><td> int
+</td></tr>
+<tr>
+<td> key </td><td> String
+</td></tr>
+<tr>
+<td> type </td><td> enumeration {Classification, NamesMapping, Occurences, Synonims}
+</td></tr></tbody></table>
+<p><br>
+</p>
+<p class="info-padding"></p>
+<h6><span class="info-title">ElementProperty </span></h6>
+<table border="1" style="border-collapse:collapse;width:300px;">
+
+<tbody><tr>
+<th> Property name </th><th> Value Type
+</th></tr>
+<tr>
+<td> name </td><td> String
+</td></tr>
+<tr>
+<td> value </td><td> String
+</td></tr></tbody></table>
+<p class="info-padding"></p>
+<h4><span class="info-title">Functions </span></h4>
+<p>Currently the supported functions are:
+</p>
+<ul><li> <b>xpath</b>: a XPath expression returning a boolean value;
+</li><li> <b>exl</b>: a <a rel="nofollow" title="http://commons.apache.org/proper/commons-jexl/reference/syntax.html" class="external text" href="http://commons.apache.org/proper/commons-jexl/reference/syntax.html">JExl</a> expression returning a boolean value.
+</li></ul>
+</div>

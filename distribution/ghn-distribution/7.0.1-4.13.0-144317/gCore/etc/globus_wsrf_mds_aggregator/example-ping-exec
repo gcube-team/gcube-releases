@@ -1,0 +1,32 @@
+#!/usr/bin/env perl
+
+use strict;
+
+# This is an example of using the aggregator execution source API to
+# determine if a remote host is pingable or not.
+
+# it extracts the hostname to ping from the supplied URL, which is 
+# assumed to be in the format 
+# http://myhost.globus.org:8080/wsrf/services/MyService
+
+my $host= $ARGV[0];
+
+$host =~ s|^http://([^:/]*)[:/].*|\1|;
+my $pingresult = "FAIL";
+
+my $pid = fork();
+if ($pid == 0) {
+# should we redirect stderr as well?
+    open(STDOUT, ">/dev/null");
+    exec("ping", "-c", "3", "-w", "10", $host);
+} else {
+    wait();
+    if ($? == 0) {
+	$pingresult = "SUCCESS";
+    }
+}
+
+printf("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+printf("<examplePingInformation>\n");
+printf("$pingresult\n");
+printf("</examplePingInformation>\n");

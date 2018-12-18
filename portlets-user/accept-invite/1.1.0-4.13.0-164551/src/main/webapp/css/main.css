@@ -1,0 +1,6 @@
+.has-error {
+    color: red !important;
+}
+.has-success {
+    color: green !important;
+}

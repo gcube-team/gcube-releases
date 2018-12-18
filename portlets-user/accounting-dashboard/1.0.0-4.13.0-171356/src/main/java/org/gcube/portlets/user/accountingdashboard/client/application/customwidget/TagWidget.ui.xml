@@ -1,0 +1,42 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field="res"
+		type="org.gcube.portlets.user.accountingdashboard.client.resources.AppResources" />
+
+
+	<ui:style>
+	.cmsTagLabelText {
+		font-weight: bold;
+	}
+	
+	.cmsTagLabelButton {
+		border-radius: 10px;
+		border-bottom-style: inset;
+		background-color: white;
+		font-weight: normal;
+		font-size: small;
+		padding: 2px;
+		margin: 1px;
+		line-height: 11px!important;
+		vertical-align: baseline;
+		color: #5a5a5a;
+	}
+	
+	.csmTagLabelPanel {
+		color: white;
+		font-weight: bold;
+		background-color: #00ace2;
+		border-radius: 8px;
+		padding: 3px;
+		margin: 2px;
+		width: auto;
+		display: inline-block;
+		word-wrap: break-word;
+	}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.csmTagLabelPanel}">
+		<span ui:field="tagLabel" styleName="{style.cmsTagLabelText}" />
+		<g:Button styleName="{style.cmsTagLabelButton}" ui:field="button" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

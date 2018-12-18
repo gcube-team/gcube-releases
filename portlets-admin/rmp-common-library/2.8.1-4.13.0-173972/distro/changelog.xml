@@ -1,0 +1,68 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="org.gcube.portlets-admin.rmp-common-library.2-8-1"
+		date="2018-10-14">
+		<Change>Feature #12726 update resource at vo level rather than vre level</Change>
+		<Change>Feature #11788 ContextManager class added</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.rmp-common-library.2-7-1"
+		date="2017-02-24">
+		<Change>Changed codes for AuthZ framework</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.rmp-common-library.2-6-0"
+		date="2015-11-24">
+		<Change>Added support for new AuthZ framework, Feature #1496</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.rmp-common-library.2-5-0"
+		date="2015-09-28">
+		<Change>Refactored code to promote reuse of sweeper features</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.rmp-common-library.2-4-0"
+		date="2015-08-04">
+		<Change>Implemented Feature #187, remove scope operation with Report</Change>
+		<Change>Implemented Feature #446 Show SmartGearsDistribution version instead of SmartGearsDistributionBundle version for Distro Version</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.rmp-common-library.2-3-0"
+		date="2015-06-09">
+		<Change>Fix for Incident #187, remove scope operation not passing
+			through Resource Manager</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.rmp-common-library.2-2-1"
+		date="2014-05-25">
+		<Change>Fix for Incident #148, Resource Sweeper does not sweep GHN
+			Resources
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.rmp-common-library.2-2-0"
+		date="2014-12-09">
+		<Change>Modified xqueries for showing SmartGears and SmarGearsBundle
+			version
+		</Change>
+		<Change>Updated label names for the gHN grid columns</Change>
+		<Change>Modified xquery to fix bug about wrong scoped generic resource
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.rmp-common-library.2-1-0"
+		date="2014-12-09">
+		<Change>Modified xquery to get also the hostname info about service
+			endpoints in a given scope
+		</Change>
+		<Change>Modified the Resource detail model class to in shared package
+			to support the change explained above
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.rmp-common-library.2-0-0"
+		date="2013-10-21">
+		<Change>Ported to Feather Weight Stack</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.rmp-common-library.1-2-0"
+		date="2013-04-19">
+		<Change>Create valid request for TM-plugins</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.rmp-common-library.1-0-0"
+		date="2010-10-15">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

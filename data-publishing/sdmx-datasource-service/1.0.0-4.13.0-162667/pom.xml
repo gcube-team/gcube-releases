@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.gcube.data.publishing</groupId>
+	<artifactId>sdmx-datasource-service</artifactId>
+	<version>1.0.0-4.13.0-162667</version>
+	<packaging>war</packaging>
+
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<scm>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-publishing/sdmx-datasource/sdmx-datasource-service</url>
+	</scm>
+
+
+	<build>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<configuration>
+						<descriptors>
+							<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+						</descriptors>
+					</configuration>
+					<executions>
+						<execution>
+							<id>servicearchive</id>
+							<phase>package</phase>
+							<goals>
+								<goal>single</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencyManagement>
+			<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-smartgears-bom</artifactId>
+				<version>2.0.1-4.13.0-148595</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			</dependencies>
+		</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.data.publishing</groupId>
+			<artifactId>sdmx-datasource-tabman</artifactId>
+			<version>1.0.1-4.13.0-165841</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.publishing</groupId>
+			<artifactId>sdmx-datasource-core</artifactId>
+			<version>1.0.0-4.13.0-161854</version>
+		</dependency>
+ 
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-smartgears</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-smartgears-app</artifactId>
+		</dependency>
+	</dependencies>
+</project>

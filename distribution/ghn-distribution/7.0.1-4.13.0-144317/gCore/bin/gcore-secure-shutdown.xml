@@ -1,0 +1,23 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+	<S:Header>
+		<scope xmlns="http://gcube-system.org/namespaces/scope">/gcube</scope>
+		<serviceClass xmlns="http://gcube-system.org/namespaces/scope">VREManagement</serviceClass>
+		<serviceName xmlns="http://gcube-system.org/namespaces/scope">GHNManager</serviceName>
+		<caller xmlns="http://gcube-system.org/namespaces/caller">146.48.85.73</caller>
+		<To xmlns="http://schemas.xmlsoap.org/ws/2004/03/addressing">http://rcirillo-cnr:8080/wsrf/services/gcube/common/vremanagement/GHNManager
+		</To>
+		<Action xmlns="http://schemas.xmlsoap.org/ws/2004/03/addressing">http://gcube-system.org/namespaces/common/vremanagement/ghnmanager/GHNManagerPortType/shutdownRequest
+		</Action>
+		<ReplyTo xmlns="http://schemas.xmlsoap.org/ws/2004/03/addressing">http://www.w3.org/2005/08/addressing/anonymous\n
+		</ReplyTo>
+		<MessageID xmlns="http://schemas.xmlsoap.org/ws/2004/03/addressing">uuid:02bb6d1c-ec53-4628-8b13-a7d0b8b407e8
+		</MessageID>
+	</S:Header>
+	<S:Body>
+		<ns2:shutdown
+			xmlns:ns2="http://gcube-system.org/namespaces/common/vremanagement/ghnmanager">
+			<restart xmlns="">false</restart>
+			<clean xmlns="">false</clean>
+		</ns2:shutdown>
+	</S:Body>
+</S:Envelope>

@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.vre-management.whnmanager-client.1-0-0" date="2013-xx-xx">
+		<Change>First release</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.common.vre-management.whnmanager-client.2-0-0" date="2016-09-30">
+		<Change>porting to WhnManager 2.0.0</Change>	
+	</Changeset>
+</ReleaseNotes>

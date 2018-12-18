@@ -1,0 +1,161 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<description>The implementation of the API for interacting with Geoserver and Geonetwork.</description>
+	
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+	
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>gr.cite.geoanalytics</groupId>
+	<artifactId>dataaccess-geoserverbridgeprovider-gsmanager</artifactId>
+	<version>2.5.0-4.13.0-174459</version>
+	<packaging>jar</packaging>
+	
+	
+	<scm>
+		<connection>scm:svn:http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/geoanalytics-dataaccess-geoserverbridge-gsmanager</connection>
+		<developerConnection>scm:http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/geoanalytics-dataaccess-geoserverbridge-gsmanager</developerConnection>
+		<url>http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/geoanalytics-dataaccess-geoserverbridge-gsmanager</url>
+	</scm>
+
+	<repositories>
+		<repository>
+			<id>geo-solutions</id>
+			<name>GeoSolutions</name>
+			<url>http://maven.geo-solutions.it/</url>
+		</repository>
+	</repositories>
+
+	<name>geoanalytics-dataaccess-geoserverbridgeprovider-gsmanager</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<gr.cite.geoanalytics.dataaccess-geoserverbridge.version>[2.0.0-SNAPSHOT,3.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-geoserverbridge.version>
+		<gr.cite.geoanalytics.common.version>[2.0.0-SNAPSHOT,3.0.0-SNAPSHOT)</gr.cite.geoanalytics.common.version>
+		<it.geosolutions.geoservermanager.version>1.7.0</it.geosolutions.geoservermanager.version>
+		<org.slf4j.version>1.7.7</org.slf4j.version>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>common</artifactId>
+			<version>${gr.cite.geoanalytics.common.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>dataaccess-geoserverbridge</artifactId>
+			<version>${gr.cite.geoanalytics.dataaccess-geoserverbridge.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>${org.slf4j.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>it.geosolutions</groupId>
+			<artifactId>geoserver-manager</artifactId>
+			<version>${it.geosolutions.geoservermanager.version}</version>
+		</dependency>
+		
+<!-- 		<dependency> -->
+<!-- 		  <groupId>org.gcube.spatial.data</groupId> -->
+<!-- 		  <artifactId>geonetwork</artifactId> -->
+<!-- 		  <version>${org.gcube.spatial.data.version}</version> -->
+<!-- 		</dependency> -->
+		
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api --> 
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>${org.slf4j.version}</version>
+		</dependency>
+		
+ 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 --> 
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-log4j12</artifactId>
+		    <version>${org.slf4j.version}</version>
+		</dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>4.3.8.RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- 	    <dependency> -->
+<!-- 			<groupId>org.slf4j</groupId> -->
+<!-- 			<artifactId>slf4j-simple</artifactId> -->
+<!-- 			<version>${org.slf4j.version}</version> -->
+<!-- 		</dependency> -->
+ 	</dependencies>
+
+
+<!-- 	<distributionManagement> -->
+<!-- 		<repository> -->
+<!-- 			<id>archiva.internal</id> -->
+<!-- 			<name>Internal Release Repository</name> -->
+<!-- 			<url>http://maven.local.cite.gr:8080/repository/internal/</url> -->
+<!-- 		</repository> -->
+<!-- 		<snapshotRepository> -->
+<!-- 			<id>archiva.snapshots</id> -->
+<!-- 			<name>Internal Snapshot Repository</name> -->
+<!-- 			<url>http://maven.local.cite.gr:8080/repository/snapshots/</url> -->
+<!-- 		</snapshotRepository> -->
+<!-- 	</distributionManagement> -->
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

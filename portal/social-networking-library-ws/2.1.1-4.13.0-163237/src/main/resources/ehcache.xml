@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true"
+	monitoring="autodetect" dynamicConfig="true">
+
+	<!-- 43200000 is 12 hours -->
+	<cache name="social_networking_site_cache" maxEntriesLocalHeap="100"
+		eternal="false" timeToIdleSeconds="43200000" timeToLiveSeconds="43200000"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+
+	<cache name="users_cache" maxEntriesLocalHeap="100" eternal="false"
+		timeToIdleSeconds="43200000" timeToLiveSeconds="43200000"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+
+	<cache name="groups_cache" maxEntriesLocalHeap="100" eternal="false"
+		timeToIdleSeconds="43200000" timeToLiveSeconds="43200000"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+
+</ehcache>

@@ -1,0 +1,25 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.vre-management.softwaregateway.1-1-5" date="2014-01-29">
+		<Change>update XPath in queries to IS</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.softwaregateway.1-1-4" date="2013-10-29">
+		<Change>changed discovery resource: from GenericResource to RuntimeResource</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.softwaregateway.1-1-3" date="2013-05-29">
+		<Change>added maven-bom</Change>
+		<Change>added runtime dependencies</Change>
+		<Change>added check on service version #1654</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.softwaregateway.1-1-2" date="2013-01-16">
+		<Change>Integration with gCube release 2.12.0 version system</Change>
+	</Changeset>
+		<Changeset component="org.gcube.vre-management.softwaregateway.1-1-1" date="2012-04-26">
+		<Change>bugfix: version in resolved dependencies</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.softwaregateway.1-1-0" date="2012-08-30">
+		<Change>Integration with Maven 3</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vre-management.softwaregateway.1-1-0" date="2012-04-26">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

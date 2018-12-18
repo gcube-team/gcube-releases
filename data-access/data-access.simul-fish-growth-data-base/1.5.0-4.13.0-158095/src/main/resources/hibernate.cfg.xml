@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- PostgreSQL - @localhost -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/bbridge</property>
+		<property name="hibernate.connection.username">bbridge</property>
+		<property name="hibernate.connection.password">bbridgefoobar</property>
+
+		<!-- Sessions and transactions -->
+
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Mappings -->
+<!-- 		<mapping resource="entities.hbm.xml" /> -->
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.gcube.common</groupId>
+	<artifactId>database-resource-api</artifactId>
+	<version>1.0.0-4.13.0-126037</version>
+	<name>Database Reosurce API</name>
+	<description>Database Reosurce API module</description>
+
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	
+	<scm>
+		<connection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/trunk/Common/database-resource-api/</connection>
+		<developerConnection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/trunk/Common/database-resource-api/</developerConnection>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/Common/database-resource-api/</url>
+	</scm>
+
+	<properties>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+		<configDirectory>${project.basedir}/config</configDirectory>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

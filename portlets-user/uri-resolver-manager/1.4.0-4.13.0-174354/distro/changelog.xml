@@ -1,0 +1,20 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.uri-resolver-manager.1-3-0" date="2016-09-27">
+		<Change>[Bug #4941] Removed jumps of scope</Change>
+	</Changeset>
+		<Changeset component="org.gcube.portlets.user.uri-resolver-manager.1-2-0" date="2016-06-28">
+		<Change></Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.uri-resolver-manager.1-1-0" date="2016-06-24">
+		<Change>Removed maven-portal-bom as dependency
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.uri-resolver-manager.1-1-0" date="2015-05-04">
+		<Change>Updated to support several Access Point for each Resolver
+		</Change>
+		<Change>Introduced Entry Names in Uri-Resolver-Map</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.uri-resolver-manager.1-0-0" date="2014-10-13">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

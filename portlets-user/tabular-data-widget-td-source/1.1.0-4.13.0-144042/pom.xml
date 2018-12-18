@@ -1,0 +1,172 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<!-- POM file generated with GWT webAppCreator -->
+	<groupId>org.gcube.portlets.user</groupId>
+	<artifactId>tabular-data-widget-td-source</artifactId>
+	<version>1.1.0-4.13.0-144042</version>
+
+	<name>tabular-data-widget-td-source</name>
+	<description>tabular-data-widget-td-source allows access to tabular data service</description>
+
+	<scm>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/portlets/user/tabular-data-widget-td-source</url>
+	</scm>
+
+	<developers>
+		<developer>
+			<name>Giancarlo Panichi</name>
+			<email>g.panichi@isti.cnr.it</email>
+			<organization>CNR Pisa, Istituto di Scienza e Tecnologie dell'Informazione "A. Faedo"</organization>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<properties>
+		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+		<distroDirectory>distro</distroDirectory>
+		<configDirectory>config</configDirectory>
+
+		<!-- Convenience property to set the GWT version -->
+		<gwtVersion>2.5.1</gwtVersion>
+		<!-- To make this work on gwt-run you need to set up global env vars. on 
+			MacOSX edit this file /etc/launchd.conf and put "setenv GLOBUS_LOCATION /Users/massi/portal/Portal-Bundle/gCore" 
+			on Linux? -->
+		<GLOBUS_LOCATION>${env.GLOBUS_LOCATION}</GLOBUS_LOCATION>
+		<!-- GWT needs at least java 1.5 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>localRun</id>
+			<dependencies>
+				<dependency>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+					<scope>compile</scope>
+				</dependency>
+				<dependency>
+					<groupId>ch.qos.logback</groupId>
+					<artifactId>logback-classic</artifactId>
+					<version>1.0.1</version>
+					<scope>runtime</scope>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.portlets.user</groupId>
+			<artifactId>tabular-data-widget</artifactId>
+			<version>2.3.0-4.13.0-125985</version>
+		</dependency>
+		
+		<!-- Service Client -->
+		<dependency>
+			<groupId>org.gcube.data.analysis.tabulardata</groupId>
+			<artifactId>service-client-impl</artifactId>
+			<version>2.6.1-4.13.0-144782</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20090211</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.applicationsupportlayer</groupId>
+			<artifactId>aslcore</artifactId>
+		</dependency>
+
+		<!-- LOGGING -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			
+		</dependency>
+
+
+
+		<!-- JUnit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<!-- Generate compiled stuff in the folder used for developing mode -->
+		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.16</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+				<!-- TODO check if needed -->
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.surefire</groupId>
+						<artifactId>surefire-junit47</artifactId>
+						<version>2.16</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+		
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+		</plugins>
+
+	</build>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-portal-bom</artifactId>
+				<version>3.4.0-4.13.0-169455</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

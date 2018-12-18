@@ -1,0 +1,111 @@
+#wrapper {
+	font: 11px/1.5 "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana,
+		sans-serif;
+	margin: 0 auto;
+	width: 92% !important;
+}
+
+#footer {
+	width: 100% !important;
+}
+
+.x-menubar {
+	background: #FFF url(images/bg-pattern.png) repeat;
+}
+
+.x-panel {
+	border-color: transparent;
+}
+
+.x-panel-body,.x-panel-body-noheader {
+	border-color: transparent;
+}
+
+.x-border-layout-ct {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.x-toolbar {
+	border-color: #226599;
+	background: #FFF url(images/bg-pattern.png) repeat;
+}
+
+.x-panel-mc {
+	padding-top: 5px;
+	background: #FFF url(images/bg-pattern.png) repeat;
+	border-color: #226599;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.x-panel-bc {
+	
+}
+
+.ext-el-mask-msg {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-width: 2px;
+	background-color: #FFF;
+}
+
+.ext-el-mask-msg div {
+	border-color: transparent;
+	background-color: transparent;
+}
+
+.loading-indicator {
+	background-position: 5px 50%;
+	background-image: url("images/loader.gif");
+	}
+
+.x-panel-header {
+	background-color: #d0def0;
+	/* Mozilla Firefox */
+	background-image: -moz-linear-gradient(top, #DFEAF8 0%, #d0def0 100%);
+	/* Webkit (Safari/Chrome 10) */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #DFEAF8),
+		color-stop(1, #d0def0));
+	/* Webkit (Chrome 11+) */
+	background-image: -webkit-linear-gradient(top, #DFEAF8 0%, #d0def0 100%);
+	/* W3C Markup, IE10 Release Preview */
+	background-image: linear-gradient(to bottom, #DFEAF8 0%, #d0def0 100%);
+	/* IE10 Consumer Preview */
+	background-image: -ms-linear-gradient(top, #DFEAF8 0%, #052045 100%);
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.x-toolbar .xtb-sep {
+	background-image: none !important;
+	background-color: transparent;
+}
+
+.x-accordion-hd {
+	background-position: 0 0px;
+}
+
+.x-status-text {
+	color: #226599;
+	font-weight: bold !important;
+}
+
+.x-status-text-panel {
+	border-color: transparent;
+}
+
+.x-component {
+	color: #226599;
+}
+
+.x-btn button {
+	color: #226599;
+	font-weight: bold !important;
+}

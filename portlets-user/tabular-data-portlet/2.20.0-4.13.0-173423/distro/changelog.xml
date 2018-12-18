@@ -1,0 +1,255 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-20-0"
+		date="2018-10-01">
+		<Change>Updated the support to StorageHub [task #11879]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-19-0"
+		date="2018-07-01">
+		<Change>Updated to StorageHub [task #11879]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-18-0"
+		date="2018-01-12">
+		<Change>Added Excel Dataset Export support [ticket #9944]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-17-0"
+		date="2017-12-13">
+		<Change>Enable SDMX export operation for DataSet only for the tables
+			already shared with the whole VRE [ticket #10586]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-16-0"
+		date="2017-06-12">
+		<Change>Support Java 8 compatibility [ticket #8580]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-15-0"
+		date="2017-04-01">
+		<Change>Updated to DataMiner [ticket #6078]</Change>
+		<Change>Added support for template export in SDMX [issue #8033]
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-14-0"
+		date="2017-02-15">
+		<Change>Updated to PortalContext [ticket #6548]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-13-0"
+		date="2016-12-01">
+		<Change>Fixed Portal compatibility</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-12-0"
+		date="2016-10-01">
+		<Change>Fixed Replace by External [issue #4883]</Change>
+		<Change>Updated to Auth 2.0</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-11-0"
+		date="2016-07-15">
+		<Change>Updated to Liferay 6.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-10-0"
+		date="2016-05-01">
+		<Change>Fixed back button behavior [issue #3249]</Change>
+		<Change>Fixed share of rules [issue #3483]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-9-0"
+		date="2015-10-15">
+		<Change>Added support to WorkspaceExplorer [issue #428]</Change>
+		<Change>Updated i18N support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-8-0"
+		date="2015-07-03">
+		<Change>Added Delete Validations</Change>
+		<Change>Added expression on table [issue #81]</Change>
+		<Change>Added ListView widget to show the resources [issue #209]
+		</Change>
+		<Change>Added Notifications [issue #197]</Change>
+		<Change>Added support to Storage Id [issue #180]</Change>
+		<Change>Added different colors for columns of different type [issue
+			#251]
+		</Change>
+		<Change>Added to long text [issue #108]</Change>
+		<Change>Updated Templates</Change>
+		<Change>Updated Commons Event</Change>
+		<Change>Updated Toolbox</Change>
+		<Change>Updated Ribbon</Change>
+		<Change>Updated GwtService</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-7-0"
+		date="2015-04-30">
+		<Change>Added column position</Change>
+		<Change>Added downscale C-Square</Change>
+		<Change>Added JobClassifier</Change>
+		<Change>Added rules support</Change>
+		<Change>Updated expression to support Soundex, Levenshtein,
+			Similarity, MD5, Upper and Lower
+		</Change>
+		<Change>Updated replace panel to support template</Change>
+		<Change>Updated Inline Filter to support soundex, text begin and text
+			end
+		</Change>
+		<Change>Update operation for open from ribbon [issue #3154]</Change>
+		<Change>Updated Add Column now support expression</Change>
+		<Change>Updated Duplicate</Change>
+		<Change>Updated Monitor</Change>
+		<Change>Updated Commons Event</Change>
+		<Change>Updated Toolbox</Change>
+		<Change>Updated Ribbon</Change>
+		<Change>Updated GwtService</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-6-0"
+		date="2015-02-16">
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+		<Change>Added creation of Geospatial C-Square and Ocean Area</Change>
+		<Change>Added creation of Geometry Point</Change>
+		<Change>Added support to formats on Change Column Type [issue #3233]
+		</Change>
+		<Change>Added Extract Codelist and automatically attach the codelist
+			extracted [issue #3235]
+		</Change>
+		<Change>R-Studio support [issue #3236]</Change>
+		<Change>Support Tabular Resource on Multi Scope [issue #3237]</Change>
+		<Change>Strengthen tabular-data-widgetx [issue #3238]</Change>
+		<Change>Strengthen on Replace By Expression [issue #3239]</Change>
+		<Change>Added Chart</Change>
+		<Change>Added editing on multiline [issue #3219]</Change>
+		<Change>Fixed open tabular resources on different scope</Change>
+		<Change>Updated monitor</Change>
+		<Change>Updated Commons Event</Change>
+		<Change>Updated Toolbox</Change>
+		<Change>Updated Ribbon</Change>
+		<Change>Updated GwtService</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-5-0"
+		date="2014-10-31">
+		<Change>Added Export JSON</Change>
+		<Change>Added multi tabular resources management</Change>
+		<Change>Added Main Box</Change>
+		<Change>Added flows support</Change>
+		<Change>Added template share</Change>
+		<Change>Added Resources management</Change>
+		<Change>Added Statistical Widget</Change>
+		<Change>Added Map creation</Change>
+		<Change>Added Resume UI state</Change>
+		<Change>Added Time Aggregation</Change>
+		<Change>Fixed Final and Lock errors</Change>
+		<Change>Fixed template diplay</Change>
+		<Change>Fixed JAXP jdk.xml.entityExpansionLimit error</Change>
+		<Change>Updated monitor</Change>
+		<Change>Updated Commons Event</Change>
+		<Change>Updated Toolbox</Change>
+		<Change>Updated Ribbon</Change>
+		<Change>Updated GwtService</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-4-0"
+		date="2014-09-12">
+		<Change>Added validation from and validation until to</Change>
+		<Change>Added licences</Change>
+		<Change>Added union</Change>
+		<Change>Added replace by expression</Change>
+		<Change>Added background tasks</Change>
+		<Change>Fixed edit row</Change>
+		<Change>Fixed add row</Change>
+		<Change>Updated clone</Change>
+		<Change>Updated expression</Change>
+		<Change>Updated validation tasks</Change>
+		<Change>Updated extract codelist</Change>
+		<Change>Updated split column</Change>
+		<Change>Updated merge column</Change>
+		<Change>Updated monitor</Change>
+		<Change>Updated Commons Event</Change>
+		<Change>Updated Toolbox</Change>
+		<Change>Updated Ribbon</Change>
+		<Change>Updated GwtService</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-3-0"
+		date="2014-07-04">
+		<Change>Added GroupBy</Change>
+		<Change>Added Column Mapping</Change>
+		<Change>Added context menu to Validations</Change>
+		<Change>Added Security Exception</Change>
+		<Change>Added Normalize</Change>
+		<Change>Added Denormalize</Change>
+		<Change>Added Share for groups</Change>
+		<Change>Updated Extract Codelist</Change>
+		<Change>Updated Codelist Mapping Import</Change>
+		<Change>Updated informations properties</Change>
+		<Change>Updated open tabular resource</Change>
+		<Change>Updated replace column</Change>
+		<Change>Updated grid, added error colored lines</Change>
+		<Change>Updated grid, now shows single view column</Change>
+		<Change>Updated Open Tabular Resource</Change>
+		<Change>Updated context menu of grid</Change>
+		<Change>Updated header column menu of grid</Change>
+		<Change>Updated TabularDataController</Change>
+		<Change>Updated Commons Event</Change>
+		<Change>Updated Toolbox</Change>
+		<Change>Updated Ribbon</Change>
+		<Change>Updated GwtService</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-2-0"
+		date="2014-06-05">
+		<Change>Added Replace Bacth</Change>
+		<Change>Added History</Change>
+		<Change>Added Validations</Change>
+		<Change>Added Inline Filter</Change>
+		<Change>Added Extract Codelist</Change>
+		<Change>Added Codelist Mapping Import</Change>
+		<Change>Added Add Column</Change>
+		<Change>Added Merge Column</Change>
+		<Change>Added Split Column</Change>
+		<Change>Added Add Row</Change>
+		<Change>Added Edit Row</Change>
+		<Change>Updated Commons Event</Change>
+		<Change>Updated Toolbox</Change>
+		<Change>Updated CSV Export</Change>
+		<Change>Updated SDMX Export</Change>
+		<Change>Updated CSV Import</Change>
+		<Change>Updated SDMX Import</Change>
+		<Change>Updated Open Tabular Resource</Change>
+		<Change>Updated context menu of grid</Change>
+		<Change>Updated header column menu of grid</Change>
+		<Change>Updated TabularDataController</Change>
+		<Change>Updated Ribbon</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-1-0"
+		date="2014-04-04">
+		<Change>Added Clone</Change>
+		<Change>Added Share</Change>
+		<Change>Added New, Delete and Apply Template</Change>
+		<Change>Added HelpPanel</Change>
+		<Change>Added LabelColumnPanel</Change>
+		<Change>Added ChangeTableTypePanel</Change>
+		<Change>Added DuplicatesRowsPanel</Change>
+		<Change>Added Filter column</Change>
+		<Change>Added Replace Value</Change>
+		<Change>Updated Commons Event</Change>
+		<Change>Updated Toolbox</Change>
+		<Change>Updated CSV Export</Change>
+		<Change>Updated SDMX Export</Change>
+		<Change>Updated CSV Import</Change>
+		<Change>Updated SDMX Import</Change>
+		<Change>Updated Open Tabular Resource</Change>
+		<Change>Updated context menu of grid</Change>
+		<Change>Updated header column menu of grid</Change>
+		<Change>Updated TabularDataController</Change>
+		<Change>Updated Ribbon</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.2-0-0"
+		date="2014-02-01">
+		<Change>Added Timeline</Change>
+		<Change>Added Menù to grid</Change>
+		<Change>Added Common Event</Change>
+		<Change>Added Toolbox</Change>
+		<Change>Added tooltip information to grid</Change>
+		<Change>Added column delete operation</Change>
+		<Change>Added column change type operation</Change>
+		<Change>Added CSV Export</Change>
+		<Change>Added SDMX Export</Change>
+		<Change>Updated CSV Import</Change>
+		<Change>Updated SDMX Import</Change>
+		<Change>Updated information on tabular resources</Change>
+		<Change>Fixed rows display on grid</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-portlet.1-0-0"
+		date="2013-10-18">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

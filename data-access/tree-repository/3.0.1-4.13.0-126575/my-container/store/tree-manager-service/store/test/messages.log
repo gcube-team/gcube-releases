@@ -1,0 +1,204 @@
+2018-11-28 19:57:22.010+0100: Creating new db @ /home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/my-container/store/tree-manager-service/store/test/neostore
+2018-11-28 19:57:22.217+0100: Opened [/home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/my-container/store/tree-manager-service/store/test/nioneo_logical.log.1] clean empty log, version=0, lastTxId=1
+2018-11-28 19:57:22.233+0100: TM new log: tm_tx_log.1
+2018-11-28 19:57:22.256+0100: --- CONFIGURATION START ---
+2018-11-28 19:57:22.256+0100: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1543431442017, id:1918392930017822304, store version: 13561656364791302]
+2018-11-28 19:57:22.256+0100: Physical mem: 9991MB, Heap size: 2220MB
+2018-11-28 19:57:22.258+0100: Kernel version: Neo4j - Graph Database Kernel 1.5
+2018-11-28 19:57:22.259+0100: Neo4j component versions:
+2018-11-28 19:57:22.259+0100:   Neo4j - Graph Database Kernel 1.5
+2018-11-28 19:57:22.259+0100: Store versions:
+2018-11-28 19:57:22.259+0100:   NeoStore v0.A.0
+2018-11-28 19:57:22.259+0100:   NodeStore v0.A.0
+2018-11-28 19:57:22.260+0100:   RelationshipStore v0.A.0
+2018-11-28 19:57:22.260+0100:   RelationshipTypeStore v0.A.0
+2018-11-28 19:57:22.260+0100:   PropertyStore v0.A.0
+2018-11-28 19:57:22.260+0100:   PropertyIndexStore v0.A.0
+2018-11-28 19:57:22.260+0100:   StringPropertyStore v0.A.0
+2018-11-28 19:57:22.260+0100:   ArrayPropertyStore v0.A.0
+2018-11-28 19:57:22.262+0100: Process id: 17657@eticsbuild2.research-infrastructures.eu
+2018-11-28 19:57:22.262+0100: Operating System: Linux; version: 2.6.32-5-xen-amd64; arch: amd64; cpus: 6
+2018-11-28 19:57:22.263+0100: Max number of file descriptors: 10000
+2018-11-28 19:57:22.263+0100: Number of open file descriptors: 95
+2018-11-28 19:57:22.264+0100: Total Physical memory: 9.76 GB
+2018-11-28 19:57:22.264+0100: Free Physical memory: 52.57 MB
+2018-11-28 19:57:22.265+0100: Committed virtual memory: 5.11 GB
+2018-11-28 19:57:22.265+0100: Total swap space: 2.00 GB
+2018-11-28 19:57:22.265+0100: Free swap space: 1.07 GB
+2018-11-28 19:57:22.266+0100: Byte order: LITTLE_ENDIAN
+2018-11-28 19:57:22.266+0100: VM Name: Java HotSpot(TM) 64-Bit Server VM
+2018-11-28 19:57:22.266+0100: VM Vendor: Oracle Corporation
+2018-11-28 19:57:22.266+0100: VM Version: 24.51-b03
+2018-11-28 19:57:22.266+0100: JIT compiler: HotSpot 64-Bit Tiered Compilers
+2018-11-28 19:57:22.271+0100: Class Path:
+2018-11-28 19:57:22.271+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/common-encryption/1.0.3-4.13.0-142751/common-encryption-1.0.3-4.13.0-142751.jar
+2018-11-28 19:57:22.271+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/target/test-classes
+2018-11-28 19:57:22.271+0100:    [loader.1] file:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/lib/ext/sunec.jar
+2018-11-28 19:57:22.271+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/access/tree-manager-stubs/3.0.3-4.13.0-125718/tree-manager-stubs-3.0.3-4.13.0-125718.jar
+2018-11-28 19:57:22.271+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/access/tree-manager-service/3.0.3-4.13.0-125718/tree-manager-service-3.0.3-4.13.0-125718.jar
+2018-11-28 19:57:22.271+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/asm/asm/3.3.1/asm-3.3.1.jar
+2018-11-28 19:57:22.271+0100:    [bootstrap] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/lib/sunrsasign.jar
+2018-11-28 19:57:22.271+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/common-scope-maps/1.0.9-4.13.0-171240/common-scope-maps-1.0.9-4.13.0-171240.jar
+2018-11-28 19:57:22.271+0100:    [loader.1] file:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/lib/ext/sunjce_provider.jar
+2018-11-28 19:57:22.271+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/common/common-uri/1.0.1-4.13.0-126034/common-uri-1.0.1-4.13.0-126034.jar
+2018-11-28 19:57:22.271+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/mockito/mockito-core/1.8.5/mockito-core-1.8.5.jar
+2018-11-28 19:57:22.272+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/cglib/cglib/2.2.2/cglib-2.2.2.jar
+2018-11-28 19:57:22.272+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar
+2018-11-28 19:57:22.272+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/common/authorization-client/2.0.2-4.13.0-164657/authorization-client-2.0.2-4.13.0-164657.jar
+2018-11-28 19:57:22.272+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/objenesis/objenesis/1.0/objenesis-1.0.jar
+2018-11-28 19:57:22.272+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/common-configuration-scanner/1.0.0-4.13.0-144261/common-configuration-scanner-1.0.0-4.13.0-144261.jar
+2018-11-28 19:57:22.272+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/gcf/1.7.1-4.13.0-2880/gcf-1.7.1-4.13.0-2880.jar
+2018-11-28 19:57:22.272+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/slf4j/slf4j-simple/1.6.4/slf4j-simple-1.6.4.jar
+2018-11-28 19:57:22.272+0100:    [bootstrap] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/lib/rt.jar
+2018-11-28 19:57:22.272+0100:    [bootstrap] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/lib/jfr.jar
+2018-11-28 19:57:22.272+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/com/fasterxml/jackson/core/jackson-databind/2.6.0/jackson-databind-2.6.0.jar
+2018-11-28 19:57:22.272+0100:    [loader.1] file:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/lib/ext/dnsns.jar
+2018-11-28 19:57:22.272+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/access/streams/2.0.2-4.13.0-126131/streams-2.0.2-4.13.0-126131.jar
+2018-11-28 19:57:22.272+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/target/classes
+2018-11-28 19:57:22.273+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/neo4j/neo4j-kernel/1.5/neo4j-kernel-1.5.jar
+2018-11-28 19:57:22.273+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar
+2018-11-28 19:57:22.273+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/common-clients/2.1.0-4.13.0-125748/common-clients-2.1.0-4.13.0-125748.jar
+2018-11-28 19:57:22.273+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.0/jackson-annotations-2.6.0.jar
+2018-11-28 19:57:22.273+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/tools/my-container/2.0.1-4.13.0-126937/my-container-2.0.1-4.13.0-126937.jar
+2018-11-28 19:57:22.273+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/access/trees/1.4.2-4.13.0-126454/trees-1.4.2-4.13.0-126454.jar
+2018-11-28 19:57:22.273+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/access/tree-manager-framework/3.0.1-4.13.0-125723/tree-manager-framework-3.0.1-4.13.0-125723.jar
+2018-11-28 19:57:22.273+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/com/fasterxml/jackson/core/jackson-core/2.6.0/jackson-core-2.6.0.jar
+2018-11-28 19:57:22.273+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/common/common-authorization/2.0.2-4.13.0-144378/common-authorization-2.0.2-4.13.0-144378.jar
+2018-11-28 19:57:22.273+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/common-gcore-stubs/1.2.2-4.13.0-132342/common-gcore-stubs-1.2.2-4.13.0-132342.jar
+2018-11-28 19:57:22.273+0100:    [bootstrap] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/classes
+2018-11-28 19:57:22.273+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/execution/madgikcommonslibrary/1.5.0-4.13.0-124895/madgikcommonslibrary-1.5.0-4.13.0-124895.jar
+2018-11-28 19:57:22.273+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/net/sf/ehcache/ehcache-core/2.5.1/ehcache-core-2.5.1.jar
+2018-11-28 19:57:22.273+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/common-fw-clients/1.1.0-4.13.0-125753/common-fw-clients-1.1.0-4.13.0-125753.jar
+2018-11-28 19:57:22.274+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/common-scope/1.2.0-4.13.0-125717/common-scope-1.2.0-4.13.0-125717.jar
+2018-11-28 19:57:22.274+0100:    [bootstrap] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/lib/charsets.jar
+2018-11-28 19:57:22.274+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/com/thoughtworks/xstream/xstream/1.4.4/xstream-1.4.4.jar
+2018-11-28 19:57:22.274+0100:    [bootstrap] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/lib/jsse.jar
+2018-11-28 19:57:22.274+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/resources/discovery/ic-client/1.0.4-4.13.0-162683/ic-client-1.0.4-4.13.0-162683.jar
+2018-11-28 19:57:22.274+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/publishing/document-store-lib/2.4.0-4.13.0-169982/document-store-lib-2.4.0-4.13.0-169982.jar
+2018-11-28 19:57:22.274+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/accounting/accounting-lib/3.4.0-4.13.0-169979/accounting-lib-3.4.0-4.13.0-169979.jar
+2018-11-28 19:57:22.274+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/resources/discovery/discovery-client/1.0.1-4.13.0-125857/discovery-client-1.0.1-4.13.0-125857.jar
+2018-11-28 19:57:22.274+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/access/tree-manager-library/3.0.1-4.13.0-125728/tree-manager-library-3.0.1-4.13.0-125728.jar
+2018-11-28 19:57:22.274+0100:    [loader.1] file:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/lib/ext/zipfs.jar
+2018-11-28 19:57:22.274+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar
+2018-11-28 19:57:22.274+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/execution/grs2library/2.1.2-4.13.0-126238/grs2library-2.1.2-4.13.0-126238.jar
+2018-11-28 19:57:22.274+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/resources/common-gcore-resources/1.3.4-4.13.0-162605/common-gcore-resources-1.3.4-4.13.0-162605.jar
+2018-11-28 19:57:22.274+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/access/tree-repository-requests/1.0.0-4.13.0-125750/tree-repository-requests-1.0.0-4.13.0-125750.jar
+2018-11-28 19:57:22.275+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+2018-11-28 19:57:22.275+0100:    [bootstrap] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/lib/jce.jar
+2018-11-28 19:57:22.275+0100:    [bootstrap] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/lib/resources.jar
+2018-11-28 19:57:22.275+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/junit/junit/4.8.2/junit-4.8.2.jar
+2018-11-28 19:57:22.275+0100:    [loader.1] file:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/lib/ext/localedata.jar
+2018-11-28 19:57:22.275+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/distribution/ghn-core-runtime/1.0.0/ghn-core-runtime-1.0.0.jar
+2018-11-28 19:57:22.275+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar
+2018-11-28 19:57:22.275+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar
+2018-11-28 19:57:22.275+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar
+2018-11-28 19:57:22.275+0100:    [loader.1] file:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/lib/ext/sunpkcs11.jar
+2018-11-28 19:57:22.275+0100:    [loader.0] file:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/target/surefire/surefirebooter1079985041944546464.jar
+2018-11-28 19:57:22.275+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar
+2018-11-28 19:57:22.275+0100:    [classpath] /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
+2018-11-28 19:57:22.276+0100: Library Path:
+2018-11-28 19:57:22.276+0100:   /usr/java/packages/lib/amd64
+2018-11-28 19:57:22.276+0100:   /usr/lib64
+2018-11-28 19:57:22.276+0100:   /lib64
+2018-11-28 19:57:22.276+0100:   /lib
+2018-11-28 19:57:22.276+0100:   /usr/lib
+2018-11-28 19:57:22.276+0100: Garbage Collector: PS Scavenge: [PS Eden Space, PS Survivor Space]
+2018-11-28 19:57:22.276+0100: Garbage Collector: PS MarkSweep: [PS Eden Space, PS Survivor Space, PS Old Gen, PS Perm Gen]
+2018-11-28 19:57:22.277+0100: Memory Pool: Code Cache (Non-heap memory): committed=2.44 MB, used=2.23 MB, max=48.00 MB, threshold=0.00 B
+2018-11-28 19:57:22.278+0100: Memory Pool: PS Eden Space (Heap memory): committed=78.00 MB, used=75.49 MB, max=820.00 MB, threshold=?
+2018-11-28 19:57:22.278+0100: Memory Pool: PS Survivor Space (Heap memory): committed=6.50 MB, used=5.72 MB, max=6.50 MB, threshold=?
+2018-11-28 19:57:22.279+0100: Memory Pool: PS Old Gen (Heap memory): committed=104.00 MB, used=96.04 kB, max=1.63 GB, threshold=0.00 B
+2018-11-28 19:57:22.279+0100: Memory Pool: PS Perm Gen (Non-heap memory): committed=29.00 MB, used=28.56 MB, max=82.00 MB, threshold=0.00 B
+2018-11-28 19:57:22.279+0100: VM Arguments: []
+2018-11-28 19:57:22.280+0100: System properties:
+2018-11-28 19:57:22.280+0100:   sun.boot.library.path = /home/gbuilder/workspace.org.gcube.4-13-0-gcore/repository/externals/jdk/1.7.0_51/linux_x86_64/jre/lib/amd64
+2018-11-28 19:57:22.280+0100:   storage.root = /home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/my-container/store
+2018-11-28 19:57:22.280+0100:   path.separator = :
+2018-11-28 19:57:22.280+0100:   file.encoding.pkg = sun.io
+2018-11-28 19:57:22.280+0100:   user.country = US
+2018-11-28 19:57:22.280+0100:   sun.java.launcher = SUN_STANDARD
+2018-11-28 19:57:22.280+0100:   sun.os.patch.level = unknown
+2018-11-28 19:57:22.280+0100:   maven.deploy.skip = true
+2018-11-28 19:57:22.280+0100:   user.dir = /home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository
+2018-11-28 19:57:22.280+0100:   basedir = /home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository
+2018-11-28 19:57:22.280+0100:   surefire.real.class.path = /home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/target/surefire/surefirebooter1079985041944546464.jar
+2018-11-28 19:57:22.280+0100:   sun.jnu.encoding = UTF-8
+2018-11-28 19:57:22.281+0100:   altDeploymentRepository = gcube-releases::default::http://maven.research-infrastructures.eu:8081/nexus/content/repositories/gcube-releases-gcore/
+2018-11-28 19:57:22.281+0100:   surefire.test.class.path = /home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/target/test-classes:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/target/classes:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/access/tree-repository-requests/1.0.0-4.13.0-125750/tree-repository-requests-1.0.0-4.13.0-125750.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/access/tree-manager-framework/3.0.1-4.13.0-125723/tree-manager-framework-3.0.1-4.13.0-125723.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/access/streams/2.0.2-4.13.0-126131/streams-2.0.2-4.13.0-126131.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/execution/grs2library/2.1.2-4.13.0-126238/grs2library-2.1.2-4.13.0-126238.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/execution/madgikcommonslibrary/1.5.0-4.13.0-124895/madgikcommonslibrary-1.5.0-4.13.0-124895.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/net/sf/ehcache/ehcache-core/2.5.1/ehcache-core-2.5.1.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/com/thoughtworks/xstream/xstream/1.4.4/xstream-1.4.4.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/access/trees/1.4.2-4.13.0-126454/trees-1.4.2-4.13.0-126454.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/common/common-uri/1.0.1-4.13.0-126034/common-uri-1.0.1-4.13.0-126034.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/common-scope/1.2.0-4.13.0-125717/common-scope-1.2.0-4.13.0-125717.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/common-configuration-scanner/1.0.0-4.13.0-144261/common-configuration-scanner-1.0.0-4.13.0-144261.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/neo4j/neo4j-kernel/1.5/neo4j-kernel-1.5.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/access/tree-manager-library/3.0.1-4.13.0-125728/tree-manager-library-3.0.1-4.13.0-125728.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/common-fw-clients/1.1.0-4.13.0-125753/common-fw-clients-1.1.0-4.13.0-125753.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/common-clients/2.1.0-4.13.0-125748/common-clients-2.1.0-4.13.0-125748.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/resources/discovery/ic-client/1.0.4-4.13.0-162683/ic-client-1.0.4-4.13.0-162683.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/common-gcore-stubs/1.2.2-4.13.0-132342/common-gcore-stubs-1.2.2-4.13.0-132342.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/resources/discovery/discovery-client/1.0.1-4.13.0-125857/discovery-client-1.0.1-4.13.0-125857.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/resources/common-gcore-resources/1.3.4-4.13.0-162605/common-gcore-resources-1.3.4-4.13.0-162605.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/junit/junit/4.8.2/junit-4.8.2.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/mockito/mockito-core/1.8.5/mockito-core-1.8.5.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/objenesis/objenesis/1.0/objenesis-1.0.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/slf4j/slf4j-simple/1.6.4/slf4j-simple-1.6.4.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/access/tree-manager-service/3.0.3-4.13.0-125718/tree-manager-service-3.0.3-4.13.0-125718.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/access/tree-manager-stubs/3.0.3-4.13.0-125718/tree-manager-stubs-3.0.3-4.13.0-125718.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/tools/my-container/2.0.1-4.13.0-126937/my-container-2.0.1-4.13.0-126937.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/gcf/1.7.1-4.13.0-2880/gcf-1.7.1-4.13.0-2880.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/common/authorization-client/2.0.2-4.13.0-164657/authorization-client-2.0.2-4.13.0-164657.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/common/common-authorization/2.0.2-4.13.0-144378/common-authorization-2.0.2-4.13.0-144378.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/data/publishing/document-store-lib/2.4.0-4.13.0-169982/document-store-lib-2.4.0-4.13.0-169982.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/com/fasterxml/jackson/core/jackson-databind/2.6.0/jackson-databind-2.6.0.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.0/jackson-annotations-2.6.0.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/accounting/accounting-lib/3.4.0-4.13.0-169979/accounting-lib-3.4.0-4.13.0-169979.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/com/fasterxml/jackson/core/jackson-core/2.6.0/jackson-core-2.6.0.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/cglib/cglib/2.2.2/cglib-2.2.2.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/asm/asm/3.3.1/asm-3.3.1.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/common-encryption/1.0.3-4.13.0-142751/common-encryption-1.0.3-4.13.0-142751.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/core/common-scope-maps/1.0.9-4.13.0-171240/common-scope-maps-1.0.9-4.13.0-171240.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/org/gcube/distribution/ghn-core-runtime/1.0.0/ghn-core-runtime-1.0.0.jar:/home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:
+2018-11-28 19:57:22.281+0100:   sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+2018-11-28 19:57:22.281+0100:   maven.repo.local = /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository
+2018-11-28 19:57:22.281+0100:   generateDistribution = true
+2018-11-28 19:57:22.281+0100:   user.home = /home/gbuilder
+2018-11-28 19:57:22.281+0100:   user.timezone = Europe/Rome
+2018-11-28 19:57:22.281+0100:   file.encoding = UTF-8
+2018-11-28 19:57:22.281+0100:   java_version = 1.7
+2018-11-28 19:57:22.281+0100:   user.name = gbuilder
+2018-11-28 19:57:22.281+0100:   sun.java.command = /home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/target/surefire/surefirebooter1079985041944546464.jar /home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/target/surefire/surefire4128946324555270198tmp /home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/target/surefire/surefire_46631744682536980034tmp
+2018-11-28 19:57:22.281+0100:   sun.arch.data.model = 64
+2018-11-28 19:57:22.281+0100:   user.language = en
+2018-11-28 19:57:22.282+0100:   awt.toolkit = sun.awt.X11.XToolkit
+2018-11-28 19:57:22.282+0100:   localRepository = /home/gbuilder/workspace.org.gcube.4-13-0-gcore/m2/repository
+2018-11-28 19:57:22.282+0100:   file.separator = /
+2018-11-28 19:57:22.282+0100:   sun.io.unicode.encoding = UnicodeLittle
+2018-11-28 19:57:22.282+0100:   sun.cpu.endian = little
+2018-11-28 19:57:22.282+0100:   GLOBUS_LOCATION = /home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/my-container
+2018-11-28 19:57:22.282+0100:   sun.cpu.isalist = 
+2018-11-28 19:57:22.282+0100: Neo4j Kernel properties:
+2018-11-28 19:57:22.282+0100:   store_dir=/home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/my-container/store/tree-manager-service/store/test
+2018-11-28 19:57:22.282+0100:   use_memory_mapped_buffers=true
+2018-11-28 19:57:22.282+0100:   rebuild_idgenerators_fast=true
+2018-11-28 19:57:22.282+0100:   logical_log=/home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/my-container/store/tree-manager-service/store/test/nioneo_logical.log
+2018-11-28 19:57:22.282+0100:   neostore.propertystore.db.index.keys.mapped_memory=1M
+2018-11-28 19:57:22.283+0100:   neostore.propertystore.db.strings.mapped_memory=130M
+2018-11-28 19:57:22.283+0100:   neostore.propertystore.db.arrays.mapped_memory=130M
+2018-11-28 19:57:22.283+0100:   neo_store=/home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/my-container/store/tree-manager-service/store/test/neostore
+2018-11-28 19:57:22.283+0100:   neostore.relationshipstore.db.mapped_memory=100M
+2018-11-28 19:57:22.283+0100:   node_auto_indexing=false
+2018-11-28 19:57:22.283+0100:   neostore.propertystore.db.index.mapped_memory=1M
+2018-11-28 19:57:22.283+0100:   create=true
+2018-11-28 19:57:22.283+0100:   neostore.propertystore.db.mapped_memory=90M
+2018-11-28 19:57:22.283+0100:   relationship_auto_indexing=false
+2018-11-28 19:57:22.283+0100:   neostore.nodestore.db.mapped_memory=20M
+2018-11-28 19:57:22.283+0100: Storage files:
+2018-11-28 19:57:22.284+0100:   messages.log: 25.83 kB
+2018-11-28 19:57:22.284+0100:   neostore: 45.00 B
+2018-11-28 19:57:22.284+0100:   neostore.id: 9.00 B
+2018-11-28 19:57:22.284+0100:   neostore.nodestore.db: 9.00 B
+2018-11-28 19:57:22.285+0100:   neostore.nodestore.db.id: 9.00 B
+2018-11-28 19:57:22.285+0100:   neostore.relationshipstore.db: 0.00 B
+2018-11-28 19:57:22.285+0100:   neostore.relationshipstore.db.id: 9.00 B
+2018-11-28 19:57:22.285+0100:   neostore.propertystore.db: 0.00 B
+2018-11-28 19:57:22.285+0100:   neostore.propertystore.db.id: 9.00 B
+2018-11-28 19:57:22.285+0100:   neostore.propertystore.db.strings: 128.00 B
+2018-11-28 19:57:22.286+0100:   neostore.propertystore.db.strings.id: 9.00 B
+2018-11-28 19:57:22.286+0100:   neostore.propertystore.db.index: 0.00 B
+2018-11-28 19:57:22.286+0100:   neostore.propertystore.db.index.id: 9.00 B
+2018-11-28 19:57:22.286+0100:   neostore.propertystore.db.index.keys: 38.00 B
+2018-11-28 19:57:22.286+0100:   neostore.propertystore.db.index.keys.id: 9.00 B
+2018-11-28 19:57:22.286+0100:   neostore.propertystore.db.arrays: 128.00 B
+2018-11-28 19:57:22.287+0100:   neostore.propertystore.db.arrays.id: 9.00 B
+2018-11-28 19:57:22.287+0100:   neostore.relationshiptypestore.db: 0.00 B
+2018-11-28 19:57:22.287+0100:   neostore.relationshiptypestore.db.id: 9.00 B
+2018-11-28 19:57:22.287+0100:   neostore.relationshiptypestore.db.names: 38.00 B
+2018-11-28 19:57:22.287+0100:   neostore.relationshiptypestore.db.names.id: 9.00 B
+2018-11-28 19:57:22.288+0100:   lock: 0.00 B
+2018-11-28 19:57:22.288+0100:   nioneo_logical.log.1: 16.00 B
+2018-11-28 19:57:22.288+0100:   nioneo_logical.log.active: 4.00 B
+2018-11-28 19:57:22.288+0100:   active_tx_log: 11.00 B
+2018-11-28 19:57:22.288+0100:   tm_tx_log.1: 0.00 B
+2018-11-28 19:57:22.288+0100: Id usage:
+2018-11-28 19:57:22.289+0100:   NodeStore: used=1 high=0
+2018-11-28 19:57:22.289+0100:   RelationshipStore: used=0 high=-1
+2018-11-28 19:57:22.289+0100:   RelationshipTypeStore: used=0 high=-1
+2018-11-28 19:57:22.289+0100:   PropertyStore: used=0 high=-1
+2018-11-28 19:57:22.289+0100:   PropertyIndexStore: used=0 high=-1
+2018-11-28 19:57:22.289+0100:   StringPropertyStore: used=1 high=0
+2018-11-28 19:57:22.290+0100:   ArrayPropertyStore: used=1 high=0
+2018-11-28 19:57:22.291+0100: Schedulers:   noop anticipatory deadline [cfq] 
+  noop anticipatory deadline [cfq] 
+
+2018-11-28 19:57:22.291+0100: --- CONFIGURATION END ---
+2018-11-28 19:57:23.414+0100: Closed log /home/gbuilder/workspace.org.gcube.4-13-0-gcore/tree-repository/my-container/store/tree-manager-service/store/test/nioneo_logical.log
+2018-11-28 19:57:23.472+0100: NeoStore closed
+2018-11-28 19:57:23.472+0100: NeoStore closed
+2018-11-28 19:57:23.473+0100: TM shutting down
