@@ -1,0 +1,57 @@
+<metadataformat type="Dataset">
+	<metadatafield>
+		<fieldName>spatial</fieldName>
+		<mandatory>false</mandatory>
+		<dataType>GeoJSON</dataType>
+		<maxOccurs>1</maxOccurs>
+		<note>Insert a geoJSON characterising the spatial coverage of the
+			dataset.
+		</note>
+	</metadatafield>
+	<metadatafield>
+		<fieldName>timeField</fieldName>
+		<mandatory>false</mandatory>
+		<dataType>Time</dataType>
+		<maxOccurs>1</maxOccurs>
+		<note>Insert a time value characterising the temporal coverage of the
+			dataset.
+		</note>
+	</metadatafield>
+	<metadatafield>
+		<fieldName>timeIntervalField</fieldName>
+		<mandatory>false</mandatory>
+		<dataType>Time_Interval</dataType>
+		<maxOccurs>1</maxOccurs>
+		<note>Insert a time interval value characterising the temporal
+			coverage of the dataset.
+		</note>
+	</metadatafield>
+	<metadatafield>
+		<fieldName>timeListField</fieldName>
+		<mandatory>false</mandatory>
+		<dataType>Times_ListOf</dataType>
+		<maxOccurs>1</maxOccurs>
+		<note>Insert a time list characterising the temporal coverage of the
+			dataset.
+		</note>
+	</metadatafield>
+	<metadatafield>
+		<fieldName>GACSTerms</fieldName>
+		<mandatory>true</mandatory>
+		<dataType>String</dataType>
+		<maxOccurs>*</maxOccurs>
+		<note>Select one or more terms</note>
+		<vocabulary isMultiSelection="true">
+			<vocabularyField>GACS.Term1</vocabularyField>
+			<vocabularyField>GACS.Term2</vocabularyField>
+			<vocabularyField>GACS.Term3</vocabularyField>
+			<vocabularyField>GACS.Term4</vocabularyField>
+			<vocabularyField>GACS.Term5</vocabularyField>
+			<vocabularyField>GACS.Term6</vocabularyField>
+			<vocabularyField>GACS.Term7</vocabularyField>
+			<vocabularyField>GACS.Term8</vocabularyField>
+			<vocabularyField>GACS.Term9</vocabularyField>
+		</vocabulary>
+		<tagging create="true">onValue</tagging>
+	</metadatafield>
+</metadataformat>

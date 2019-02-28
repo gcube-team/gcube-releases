@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+
+.image-pointer{
+	
+	opacity: 0.5;
+}
+
+.image-pointer:HOVER{
+	
+	cursor: pointer;
+	opacity: 1;
+}

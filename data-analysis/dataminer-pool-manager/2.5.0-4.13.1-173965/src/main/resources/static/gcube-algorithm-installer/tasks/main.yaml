@@ -1,0 +1,32 @@
+#---
+
+#- name: remove previous installer (if any)
+#  file:
+#    path: /home/gcube/algorithmInstaller
+#    state: absent
+    
+#- name: remove previous installer.zip (if any)
+#  file:
+#    path: /home/dpm/algorithmInstaller.zip
+#    state: absent
+
+#- name: download the installer zip
+#  get_url:
+#    url: https://svn.research-infrastructures.eu/public/d4science/gcube/trunk/data-analysis/DataminerAlgorithmsInstaller/package/algorithmInstaller.zip
+#    dest: /home/dpm/algorithmInstaller.zip
+#    validate_certs: no
+
+#- name: download and unzip the package  
+#  unarchive:
+#    src: https://svn.research-infrastructures.eu/public/d4science/gcube/trunk/data-analysis/DataminerAlgorithmsInstaller/package/algorithmInstaller1_1.zip
+##    src: http://maven.research-infrastructures.eu:8081/nexus/service/local/artifact/maven/redirect?r=gcube-snapshots&g=org.gcube.dataanalysis&a=dataminer-algorithms-importer&v=1.1.1-SNAPSHOT&e=tar.gz
+#    dest: /home/gcube
+#    remote_src: yes
+#    validate_certs: no
+
+#- name: change flags
+#  file: 
+#    path: /home/gcube/algorithmInstaller
+#    mode: 0777
+#    state: directory
+#    recurse: yes

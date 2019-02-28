@@ -1,0 +1,72 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.noBorder {
+		border: 0px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="form_unit_fields">
+			<b:Form type="HORIZONTAL">
+				<b:Fieldset styleName="{style.noBorder}">
+					<b:ControlGroup ui:field="cg_folder_status">
+						<b:ControlLabel for="cl_folder_status">Sync Status</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox b:id="field_folder_status" ui:field="field_folder_status"
+								readOnly="true"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlGroup ui:field="cg_folder_path">
+						<b:ControlLabel for="cl_folder_path">Folder Path</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox b:id="field_catalogue_name" ui:field="field_folder_path"
+								readOnly="true"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlGroup ui:field="cg_folder_locked">
+						<b:ControlLabel for="cl_folder_locked">Locked</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox b:id="field_folder_locked" ui:field="field_folder_locked"
+								readOnly="true"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlGroup ui:field="cg_catalogue_name">
+						<b:ControlLabel for="cl_catalogue_name">Catalogue Name</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox b:id="field_catalogue_name" ui:field="field_catalogue_name"
+								readOnly="true"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="cg_unit_description">
+						<b:ControlLabel for="cl_course_description">Published in the Scope</b:ControlLabel>
+						<b:Controls>
+							<b:ListBox b:id="field_select_scope" ui:field="field_select_scope">
+							</b:ListBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="cg_remote_path">
+						<b:ControlLabel for="cl_remote_path">Remote Path</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox b:id="field_remote_path" ui:field="field_remote_path"
+								readOnly="true"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+<!-- 					<b:ControlGroup ui:field="cg_last_sync"> -->
+<!-- 						<b:ControlLabel for="cl_last_sync">Last Sync Time</b:ControlLabel> -->
+<!-- 						<b:Controls> -->
+<!-- 							<b:TextBox b:id="field_last_sync" ui:field="field_last_sync" -->
+<!-- 								readOnly="true"></b:TextBox> -->
+<!-- 						</b:Controls> -->
+<!-- 					</b:ControlGroup> -->
+				</b:Fieldset>
+			</b:Form>
+		</g:HTMLPanel>
+		<b:Button type="LINK" ui:field="button_do_unsync" visible="false">Delete Synchronize</b:Button>
+		<b:Pager left="Update Configuration" right="Do Synchronize"
+			aligned="true" ui:field="pager" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

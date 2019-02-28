@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- IC deployment descriptor's file -->
+<deployment name="InformationCollector" 
+    xmlns="http://xml.apache.org/axis/wsdd/"     
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+    
+    <service name="gcube/informationsystem/collector/wsdaix/XMLCollectionAccess" provider="Handler" use="literal" style="document">
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/> 
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="className" value="org.gcube.informationsystem.collector.impl.porttypes.wsdaix.XMLCollectionAccess"/>
+        <parameter name="loadOnStartup" value="false"/>
+        <wsdlFile>share/schema/org.gcube.informationsystem.collector/wsdaix/XMLCollectionAccessPT_service.wsdl</wsdlFile>
+    </service>
+     
+    <service name="gcube/informationsystem/collector/XMLStorageAccess" provider="Handler" use="literal" style="document">
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/> 
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="className" value="org.gcube.informationsystem.collector.impl.porttypes.XMLStorageAccess"/>
+        <parameter name="loadOnStartup" value="false"/>
+        <wsdlFile>share/schema/org.gcube.informationsystem.collector/XMLStorageAccess_service.wsdl</wsdlFile>
+    </service>
+     
+    <service name="gcube/informationsystem/collector/XQueryAccess" provider="Handler" use="literal" style="document">
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/> 
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="className" value="org.gcube.informationsystem.collector.impl.porttypes.XQueryAccess"/>
+        <parameter name="loadOnStartup" value="true"/>
+        <wsdlFile>share/schema/org.gcube.informationsystem.collector/XQueryAccess_service.wsdl</wsdlFile>
+    </service>
+    
+    <service name="gcube/informationsystem/collector/SinkEntry" provider="Handler" use="literal" style="document">
+        <parameter name="providers" 
+                   value="GetRPProvider
+                          GetMRPProvider
+                          QueryRPProvider
+                          SetTerminationTimeProvider"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="className" value="org.gcube.informationsystem.collector.impl.porttypes.SinkEntry"/>        
+        <parameter name="loadOnStartup" value="false"/>
+        <wsdlFile>share/schema/org.gcube.informationsystem.collector/SinkEntry_service.wsdl</wsdlFile>
+    </service>
+
+
+    <service name="gcube/informationsystem/collector/Sink" provider="Handler"
+        use="literal" style="document">
+        <parameter name="providers" 
+                   value="org.globus.wsrf.impl.servicegroup.ServiceGroupRegistrationProvider 
+                          GetRPProvider
+                          GetMRPProvider 
+                          QueryRPProvider
+                          DestroyProvider 
+                          SetTerminationTimeProvider 
+                          SubscribeProvider 
+                          GetCurrentMessageProvider"/>
+        <parameter name="handlerClass" value="org.globus.axis.providers.RPCProvider"/>
+        <parameter name="scope" value="Application"/>
+        <parameter name="allowedMethods" value="*"/>
+        <parameter name="className" value="org.gcube.informationsystem.collector.impl.porttypes.Sink"/>
+        <parameter name="loadOnStartup" value="false"/>
+        <wsdlFile>share/schema/org.gcube.informationsystem.collector/Sink_service.wsdl</wsdlFile>
+    </service>
+
+
+</deployment>

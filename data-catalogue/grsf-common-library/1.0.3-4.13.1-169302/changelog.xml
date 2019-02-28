@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-catalogue.grsf-common-library.1-0-3" date="2019-02-27">
+		<Change>Added 'With Similarities'-'No Similarities' tag to GRSF Records #11749</Change>
+		<Change>Added 'Connected'-'Not Connected' tag to GRSF Records #11766</Change>
+		<Change>Add group for SDG flag #11767</Change>
+		<Change>Added citation field #11811</Change>
+		<Change>Changed 'State and trend of Marine Resource' to 'State and Trend' #11968</Change>
+		<Change>Changed 'Scientific advice' to 'Scientific Advice' #11969</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-common-library.1-0-2"
+		date="2018-03-21">
+		<Change>Fixing issue: #11487</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-common-library.1-0-1"
+		date="2017-12-23">
+		<Change>Minor fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-common-library.1-0-0"
+		date="2017-11-05">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

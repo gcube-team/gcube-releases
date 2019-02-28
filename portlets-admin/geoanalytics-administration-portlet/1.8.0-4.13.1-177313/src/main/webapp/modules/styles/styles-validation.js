@@ -1,0 +1,122 @@
+(function() {
+	'use strict';
+
+	$('#geoadmin-create-style-form').validate({
+	    rules : {
+		    styleName : {
+		    	minlength: 2,
+			    required : true
+		    },
+		    browseStyleFiles : {
+		    	extension: "xml",
+			    required : true
+		    }
+	    },
+	    messages: {
+	    	browseStyleFiles: "Please upload a file with .xml extension",
+	    },
+	    highlight : function(element) {
+		    $(element).closest('.control-group').addClass('error');		
+	    },
+	    success : function(label, element) {
+		    $(element).closest('.control-group').removeClass('error');
+		    label.remove();
+	    },
+	    errorPlacement : function(error, element) {
+	    	if(element.attr('id') === 'geoadmin-create-style-content-browseButton'){
+				error.appendTo(element.closest('.control-group').find('.help-inline'));	
+			}else{
+				error.appendTo($(element).siblings('.help-inline'));
+			}
+	    }
+	});
+
+	$('#geoadmin-edit-style-form').validate({
+	    rules : {
+		    styleName : {
+			    required : true,
+		    }
+	    },
+	    highlight : function(element) {
+		    $(element).closest('.control-group').addClass('error');
+	    },
+	    success : function(label, element) {
+		    $(element).closest('.control-group').removeClass('error');
+		    label.remove();
+	    },
+	    errorPlacement : function(error, element) {
+		    error.appendTo($(element).siblings('.help-inline'));
+	    }
+	});
+
+	$('#geoadmin-create-style-editor-form').validate({
+    	    rules : {
+    		    styleNameEditor : {
+    		    	minlength: 2,
+    			    required : true
+    		    }
+    	    },
+    	    messages: {
+    	    	browseStyleFiles: "Please fill a style name",
+    	    },
+    	    highlight : function(element) {
+    		    $(element).closest('.control-group').addClass('error');
+    	    },
+    	    success : function(label, element) {
+    		    $(element).closest('.control-group').removeClass('error');
+    		    label.remove();
+    	    },
+    	    errorPlacement : function(error, element) {
+    	    	if(element.attr('id') === 'geoadmin-create-style-content-browseButton'){
+    				error.appendTo(element.closest('.control-group').find('.help-inline'));
+    			}else{
+    				error.appendTo($(element).siblings('.help-inline'));
+    			}
+    	    }
+    	});
+
+
+//	$('#geoadmin-import-legend-form').validate({
+//        rules : {
+//            file-upload: {
+//              require_from_group: [1, ".file-import"]
+//            },
+//            file-editor: {
+//              require_from_group: [1, ".file-import"]
+//            },
+//            legend-url: {
+//              require_from_group: [1, ".file-import"]
+//            }
+//        },
+//        highlight : function(element) {
+//            $(element).closest('.control-group').addClass('error');
+//        },
+//        success : function(label, element) {
+//            $(element).closest('.control-group').removeClass('error');
+//            label.remove();
+//        },
+//        errorPlacement : function(error, element) {
+//            error.appendTo($(element).siblings('.help-inline'));
+//        }
+//    });
+
+
+	$('#geoadmin-create-style-form input, #geoadmin-edit-style-form input').bind('input', function() {
+		var valid = $(this).closest("form").validate().checkForm();
+		$(this).closest(".modal").find(".modal-footer").find("button[type='button']").attr("disabled", !valid);
+	});
+
+	$("#geoadmin-create-style-editor-form input").bind('input', function() {
+        var valid = $(this).closest("form").validate().checkForm();
+        $(this).closest(".modal").find(".modal-footer").find("button[type='button']").attr("disabled", !valid);
+	});
+
+	$('#geoadmin-edit-style-form input, #geoadmin-edit-style-form textarea').bind('input', function() {
+		var selectedRowData = window.styles.dataTable.getSelectedRowData();
+		var name = $("#geoadmin-edit-style-name").val();
+		var description = $("#geoadmin-edit-style-description").val();
+		var valid = (selectedRowData.name !== name || selectedRowData.description !== description) && $(this).closest("form").validate().checkForm();
+//		$(this).closest(".modal").find(".modal-footer").find("button[type='button']").attr("disabled", !valid);
+	});
+
+})();

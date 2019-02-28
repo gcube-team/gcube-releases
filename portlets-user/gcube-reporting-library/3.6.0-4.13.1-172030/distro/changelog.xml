@@ -1,0 +1,16 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.reporting-library.3-6-0"
+		date="2018-10-08">
+		<Change>Ported to Java 8</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.reporting-library.3-5-0"
+		date="2014-02-10">
+		<Change>Adapted to support VME-DB Write Scenario</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.reporting-library.3-3-0"
+		date="2013-10-21">
+		<Change>Adapted to the new GWT 2.5.1</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+</ReleaseNotes>

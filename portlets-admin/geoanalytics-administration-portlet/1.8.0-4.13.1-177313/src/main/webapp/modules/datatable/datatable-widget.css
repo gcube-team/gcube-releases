@@ -1,0 +1,289 @@
+table.dataTable.portlet-datatable{
+	width:100%;
+	table-layout: fixed;
+}
+
+table.dataTable.portlet-datatable tbody tr td {
+	word-wrap: break-word;
+	word-break: break-all;
+	color: #595959;
+}
+
+table.dataTable.portlet-datatable tbody tr {
+	background-color: #ffffff;
+}
+
+table.dataTable.portlet-datatable tbody .portlet-datatable-cell {
+	border-right: 6px solid white;
+	border-bottom: 6px solid white;
+	border-top: none;
+	text-align: left;
+}
+
+table.dataTable.portlet-datatable tbody tr:hover .portlet-datatable-cell {
+	background-color: #4cb5d2;
+	color: white;
+	cursor: pointer;
+}
+
+table.dataTable.portlet-datatable tbody tr.selected td,
+table.dataTable.portlet-datatable tbody tr.selected:hover td {
+	background-color: #019ad3;
+	color: white;
+	cursor: pointer;
+}
+
+table.dataTable.portlet-datatable td {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-left: 2px;
+	margin-right: 2px;
+	background-color: #eeeeee;
+}
+
+table.dataTable.portlet-datatable tbody th, 
+table.dataTable.portlet-datatable tbody td {
+    padding: 2px 4px;
+}
+
+table.dataTable.portlet-datatable.hover tbody tr:hover, 
+table.dataTable.portlet-datatable.display tbody tr:hover {
+	background-color: white;
+}
+
+table.dataTable.portlet-datatable th {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: clip;
+	position: relative;
+	border-bottom: 0px;
+	color: #0271be;
+	font-size: small;
+	font-weight: 500;
+	text-align: left;
+	margin: 0px;
+	padding: 6px;
+}
+
+table.dataTable.portlet-datatable th, button {
+	outline: none;
+}
+
+table.dataTable.portlet-datatable.no-footer {
+	border-bottom: none;
+}
+
+.portlet-datatable-toolbar {
+	display: inline-block;
+    border-radius: 30px;
+    border: 1px solid white;
+    width: 100%;
+	background-color: #eeeeee;
+}
+
+.portlet-datatable-toolbar .dataTables_filter{
+	margin: 0px;
+}
+
+.portlet-datatable-toolbar .dataTables_filter label > input {
+	margin: 0px;
+	border-radius: 30px;
+	font-style: italic;
+	font-size: 0.9em;
+	text-indent: 10px;
+	width:250px;
+}
+
+.portlet-datatable-toolbar .dataTables_filter label {
+	margin: 5.5px 20px;
+}
+
+.portlet-datatable-toolbar > .portlet-datatable-buttons  {
+	margin: 10px 20px;
+	font-size: 0.9em;
+	float: left;
+}
+
+.portlet-datatable-toolbar > .portlet-datatable-buttons button {
+	color: #0271be;
+	background: none;
+	border: none;
+	border-right: 1.25px solid hsla(0, 0%, 0%, 0.15);
+	padding-right:0.8em;
+}
+
+.portlet-datatable-toolbar>.portlet-datatable-buttons button:disabled ,
+.portlet-datatable-toolbar>.portlet-datatable-buttons button:disabled i {
+	opacity: 0.5;
+}
+
+.dataTables_wrapper table.dataTable.portlet-datatable ~ .dataTables_paginate {
+	margin: 10px;
+}
+
+.dataTables_wrapper .dataTables_scroll ~ .dataTables_paginate {
+    margin: 10px
+}
+
+.dataTables_wrapper table.dataTable.portlet-datatable ~ .dataTables_paginate .paginate_button {
+	border: none;
+	background: #eeeeee;
+	color: #595959;
+	margin: 2px;
+	outline: 0;
+}
+
+.dataTables_wrapper .dataTables_scroll ~ .dataTables_paginate .paginate_button {
+	border: none;
+	background: #eeeeee;
+	color: #595959;
+	margin: 2px;
+	outline: 0;
+}
+
+.dataTables_wrapper table.dataTable.portlet-datatable ~ .dataTables_paginate .paginate_button {
+	font-size: 0.9em;
+}
+
+.dataTables_wrapper .dataTables_scroll ~ .dataTables_paginate .paginate_button {
+	font-size: 0.9em;
+}
+
+.dataTables_wrapper table.dataTable.portlet-datatable ~ .dataTables_paginate .paginate_button.first {
+	border-bottom-left-radius: 20px;
+	width: 50px;
+}
+
+.dataTables_wrapper .dataTables_scroll ~ .dataTables_paginate .paginate_button.first {
+	border-bottom-left-radius: 20px;
+	width: 50px;
+}
+
+.dataTables_wrapper table.dataTable.portlet-datatable ~ .dataTables_paginate .paginate_button.last {
+	border-bottom-right-radius: 20px;
+	width: 50px;
+}
+
+.dataTables_wrapper .dataTables_scroll ~ .dataTables_paginate .paginate_button.last {
+	border-bottom-right-radius: 20px;
+	width: 50px;
+}
+
+.dataTables_wrapper table.dataTable.portlet-datatable ~ .dataTables_paginate .paginate_button:hover {
+    border: none;
+	background: #4cb5d2;
+	color: white !important;
+	outline: 0;
+}
+
+.dataTables_wrapper .dataTables_scroll ~ .dataTables_paginate .paginate_button:hover {
+    border: none;
+	background: #4cb5d2;
+	color: white !important;
+	outline: 0;
+}
+
+.dataTables_wrapper table.dataTable.portlet-datatable ~ .dataTables_paginate .paginate_button.previous:focus,
+.dataTables_wrapper table.dataTable.portlet-datatable ~ .dataTables_paginate .paginate_button.next:focus,
+.dataTables_wrapper table.dataTable.portlet-datatable ~ .dataTables_paginate .paginate_button.current{
+	border: 1px solid lightgray; 
+	background: #0271be;
+	color:white !important;
+	outline:0;
+}
+
+.dataTables_wrapper .dataTables_scroll ~ .dataTables_paginate .paginate_button.previous:focus,
+.dataTables_wrapper .dataTables_scroll ~ .dataTables_paginate .paginate_button.next:focus,
+.dataTables_wrapper .dataTables_scroll ~ .dataTables_paginate .paginate_button.current{
+	border: 1px solid lightgray; 
+	background: #0271be;
+	color:white !important;
+	outline:0;
+}
+
+table.dataTable.portlet-datatable thead .sorting,
+table.dataTable.portlet-datatable thead .sorting_asc,
+table.dataTable.portlet-datatable thead .sorting_desc {
+    background-image: none;
+}
+
+table.dataTable.portlet-datatable thead tr th.sorting:after {
+	content: "\f0dc";
+	font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+	position: relative;
+	left: 5px;
+}
+
+.dataTables_scrollBody thead tr th:after {
+	display:none;
+}
+
+table.dataTable.portlet-datatable thead tr th.sorting_asc:after {
+	content: "\f0de";
+	font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+	position: relative;
+	left: 5px;
+}
+
+table.dataTable.portlet-datatable thead tr th.sorting_desc:after {
+	content: "\f0dd";
+	position: relative;
+	font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+	left: 5px;
+}
+
+table.dataTable.portlet-datatable th.checkbox, table.portlet-datatable tbody td.portlet-datatable-cell.checkbox {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	text-align:center;
+}
+
+table.dataTable.portlet-datatable th>input.datatable-select-all-checkbox[type="checkbox"] {
+	padding: 4px 0px;
+	margin: 0px;
+	float: none;
+	transform: scale(1.25);
+}
+
+table.dataTable.portlet-datatable th>input.datatable-select-all-checkbox[type="checkbox"]:before {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: 22px;
+	content: "\f096";
+	background: #fff;
+	font-weight: normal;
+	position: relative;
+}
+
+table.dataTable.portlet-datatable th >input.datatable-select-all-checkbox[type="checkbox"]:checked:after {
+	content: "\2714";
+	font-weight: bold;
+	left: 3px;
+	position: absolute;
+	color: #0271be;
+	font-size: 15px;
+}
+
+table.dataTable.portlet-datatable tbody tr:hover .portlet-datatable-cell {
+	background-color: #4cb5d2;
+	color: white;
+	cursor: pointer;
+}
+
+table.dataTable.portlet-datatable .portlet-datatable-cell.white,
+table.dataTable.portlet-datatable tbody tr:hover .portlet-datatable-cell.white,
+table.dataTable.portlet-datatable tbody tr:focus .portlet-datatable-cell.white{
+	background:white;
+}
+
+.dataTables_wrapper .dataTables_scroll .dataTables_scrollBody {
+	border: none;
+}

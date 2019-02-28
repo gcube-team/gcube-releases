@@ -1,0 +1,65 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-widgets.workspace-uploader.2-0-1"
+		date="2019-02-27">
+		<Change>[Bug #13232] Fixing it
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.workspace-uploader.2-0-0"
+		date="2018-09-19">
+		<Change>[Feature #11722] Workspace Uploader - Update to StorageHUB
+		</Change>
+		<Change>In case of 100% added the message "Finalising the upload of
+			[filename]"
+		</Change>
+		<Change>[Task #12470] Check uploading of files in the Workpace by the
+			drag and drop facility on Windows Operating System
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.workspace-uploader.1-8-0"
+		date="2017-03-27">
+		<Change>[Task #7820] DaD and Browse: create new version of existing
+			items added
+		</Change>
+		<Change>Removed currUserId parameter from client-side</Change>
+		<Change>Updated message displaying also version of file after upload
+			completed
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.workspace-uploader.1-7-0"
+		date="2017-02-23">
+		<Change>Removed currUserId parameter from client-side</Change>
+		<Change>[Feature #6153] Improve error messages</Change>
+		<Change>Integrated with file versioning</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.workspace-uploader.1-6-0"
+		date="2016-12-01">
+		<Change>Feature #5901 Remove ASL Dependency from workspace-uploader
+			Widget
+		</Change>
+		<Change>Bug #6096 Fixed</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.workspace-uploader.1-4-0"
+		date="2016-05-31">
+		<Change>[Feature #4128] Migration to Liferay 6.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.workspace-uploader.1-3-0"
+		date="2016-05-18">
+		<Change>[Feature #4055] DnD multiple instances</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.workspace-uploader.1-2-0"
+		date="2016-05-09">
+		<Change>[Feature #3962] Sequential upload status</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.workspace-uploader.1-1-0"
+		date="2016-01-08">
+		<Change>Bug Fixed #1333</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.workspace-uploader.1-0-1"
+		date="2015-12-16">
+		<Change>Bug Fixed - https://support.d4science.org/issues/1824</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.workspace-uploader.1-0-0"
+		date="2015-08-07">
+		<Change>first release</Change>
+	</Changeset>
+</ReleaseNotes>

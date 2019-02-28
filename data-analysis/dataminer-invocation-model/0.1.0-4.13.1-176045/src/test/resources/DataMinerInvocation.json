@@ -1,0 +1,20 @@
+{
+  "dataminer-invocation": {
+    "operator-id": "[THE_OPERATOR_ID]",
+    "action": "RUN",
+    "parameters": {
+      "input": {
+        "param": [
+          {
+            "key": "[key2]",
+            "value": "[value2]"
+          },
+          {
+            "key": "fileId",
+            "value": "http://publicLinkToFile"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,706 @@
+package org.gcube.portets.user.message_conversations.client.autocomplete;
+
+import com.google.gwt.dom.client.Document;
+import com.google.gwt.event.dom.client.*;
+import com.google.gwt.event.logical.shared.*;
+import com.google.gwt.event.shared.HandlerRegistration;
+import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.ui.*;
+import com.google.gwt.user.client.ui.SuggestOracle.Suggestion;
+import gwt.material.design.addins.client.MaterialAddins;
+import gwt.material.design.addins.client.autocomplete.constants.AutocompleteType;
+import gwt.material.design.addins.client.base.constants.AddinsCssName;
+import gwt.material.design.client.MaterialDesignBase;
+import gwt.material.design.client.base.*;
+import gwt.material.design.client.base.mixin.*;
+import gwt.material.design.client.constants.CssName;
+import gwt.material.design.client.constants.IconType;
+import gwt.material.design.client.constants.ProgressType;
+import gwt.material.design.client.ui.MaterialChip;
+import gwt.material.design.client.ui.MaterialLabel;
+import gwt.material.design.client.ui.html.Label;
+import gwt.material.design.client.ui.html.ListItem;
+import gwt.material.design.client.ui.html.UnorderedList;
+
+import java.util.*;
+import java.util.Map.Entry;
+
+/**
+ *
+ * @author kevzlou7979
+ * @author gilberto-torrezan
+ * @author M. Assante, CNR-ISTI
+ * @see <a href="http://gwtmaterialdesign.github.io/gwt-material-demo/#!autocomplete">Material AutoComplete</a>
+ */
+// @formatter:on
+public class MaterialAutoComplete extends AbstractValueWidget<List<? extends Suggestion>> implements HasPlaceholder,
+        HasProgress, HasType<AutocompleteType>, HasSelectionHandlers<Suggestion>, HasReadOnly {
+
+    static {
+        if (MaterialAddins.isDebug()) {
+            MaterialDesignBase.injectCss(MaterialAutocompleteDebugClientBundle.INSTANCE.autocompleteCssDebug());
+        } else {
+            MaterialDesignBase.injectCss(MaterialAutocompleteClientBundle.INSTANCE.autocompleteCss());
+        }
+    }
+
+    private Map<Suggestion, Widget> suggestionMap = new LinkedHashMap<>();
+    private Label placeholderLabel = new Label();
+
+    private List<ListItem> itemsHighlighted = new ArrayList<>();
+    private FlowPanel panel = new FlowPanel();
+    private UnorderedList list = new UnorderedList();
+    private SuggestOracle suggestions;
+    private TextBox itemBox = new TextBox();
+    private SuggestBox suggestBox;
+    private int limit = 0;
+    private MaterialLabel errorLabel = new MaterialLabel();
+    private final ProgressMixin<MaterialAutoComplete> progressMixin = new ProgressMixin<>(this);
+
+    private String selectedChipStyle = "blue white-text";
+    private boolean directInputAllowed = true;
+    private MaterialChipProvider chipProvider = new DefaultMaterialChipProvider();
+
+    private final ErrorMixin<AbstractValueWidget, MaterialLabel> errorMixin = new ErrorMixin<>(this, errorLabel, list, placeholderLabel);
+
+    private FocusableMixin<MaterialWidget> focusableMixin;
+    private ReadOnlyMixin<MaterialAutoComplete, TextBox> readOnlyMixin;
+
+    public final CssTypeMixin<AutocompleteType, MaterialAutoComplete> typeMixin = new CssTypeMixin<>(this, this);
+
+    /**
+     * Use MaterialAutocomplete to search for matches from local or remote data
+     * sources.
+     */
+    public MaterialAutoComplete() {
+        super(Document.get().createDivElement(), AddinsCssName.AUTOCOMPLETE, CssName.INPUT_FIELD);
+        add(panel);
+    }
+
+    public MaterialAutoComplete(AutocompleteType type) {
+        this();
+        setType(type);
+    }
+
+    public MaterialAutoComplete(String placeholder) {
+        this();
+        setPlaceholder(placeholder);
+    }
+
+    /**
+     * Use MaterialAutocomplete to search for matches from local or remote data
+     * sources.
+     *
+     * @see #setSuggestions(SuggestOracle)
+     */
+    public MaterialAutoComplete(SuggestOracle suggestions) {
+        this();
+        build(suggestions);
+    }
+
+    /**
+     * Generate and build the List Items to be set on Auto Complete box.
+     */
+    protected void build(SuggestOracle suggestions) {
+        list.setStyleName(AddinsCssName.MULTIVALUESUGGESTBOX_LIST);
+        this.suggestions = suggestions;
+        final ListItem item = new ListItem();
+
+        item.setStyleName(AddinsCssName.MULTIVALUESUGGESTBOX_INPUT_TOKEN);
+        suggestBox = new SuggestBox(suggestions, itemBox);
+        setLimit(this.limit);
+        String autocompleteId = DOM.createUniqueId();
+        itemBox.getElement().setId(autocompleteId);
+
+        item.add(suggestBox);
+        item.add(placeholderLabel);
+        list.add(item);
+
+        list.addDomHandler(event -> suggestBox.showSuggestionList(), ClickEvent.getType());
+
+        itemBox.addBlurHandler(blurEvent -> {
+            if (getValue().size() > 0) {
+                placeholderLabel.addStyleName(CssName.ACTIVE);
+            }
+        });
+
+        itemBox.addKeyDownHandler(event -> {
+            boolean changed = false;
+
+            switch (event.getNativeKeyCode()) {
+                case KeyCodes.KEY_ENTER:
+                    if (directInputAllowed) {
+                        String value = itemBox.getValue();
+                        if (value != null && !(value = value.trim()).isEmpty()) {
+                            gwt.material.design.client.base.Suggestion directInput = new gwt.material.design.client.base.Suggestion();
+                            directInput.setDisplay(value);
+                            directInput.setSuggestion(value);
+                            changed = addItem(directInput);
+                            if (getType() == AutocompleteType.TEXT) {
+                                itemBox.setText(value);
+                            } else {
+                                itemBox.setValue("");
+                            }
+                            itemBox.setFocus(true);
+                        }
+                    }
+                    break;
+                case KeyCodes.KEY_BACKSPACE:
+                    if (itemBox.getValue().trim().isEmpty()) {
+                        if (itemsHighlighted.isEmpty()) {
+                            if (suggestionMap.size() > 0) {
+                                ListItem li = (ListItem) list.getWidget(list.getWidgetCount() - 2);
+
+                                if (tryRemoveSuggestion(li.getWidget(0))) {
+                                    li.removeFromParent();
+                                    changed = true;
+                                }
+                            }
+                        }
+                    }
+                case KeyCodes.KEY_DELETE:
+                    if (itemBox.getValue().trim().isEmpty()) {
+                        for (ListItem li : itemsHighlighted) {
+                            if (tryRemoveSuggestion(li.getWidget(0))) {
+                                li.removeFromParent();
+                                changed = true;
+                            }
+                        }
+                        itemsHighlighted.clear();
+                    }
+                    itemBox.setFocus(true);
+                    break;
+            }
+
+            if (changed) {
+                ValueChangeEvent.fire(MaterialAutoComplete.this, getValue());
+            }
+        });
+
+        itemBox.addClickHandler(event -> suggestBox.showSuggestionList());
+
+        suggestBox.addSelectionHandler(selectionEvent -> {
+            Suggestion selectedItem = selectionEvent.getSelectedItem();
+            itemBox.setValue("");
+            if (addItem(selectedItem)) {
+                ValueChangeEvent.fire(MaterialAutoComplete.this, getValue());
+            }
+            itemBox.setFocus(true);
+        });
+
+        panel.add(list);
+        panel.getElement().setAttribute("onclick",
+            "document.getElementById('" + autocompleteId + "').focus()");
+        panel.add(errorLabel);
+        suggestBox.setFocus(true);
+    }
+
+    protected boolean tryRemoveSuggestion(Widget widget) {
+        Set<Entry<Suggestion, Widget>> entrySet = suggestionMap.entrySet();
+        for (Entry<Suggestion, Widget> entry : entrySet) {
+            if (widget.equals(entry.getValue())) {
+                if (chipProvider.isChipRemovable(entry.getKey())) {
+                    suggestionMap.remove(entry.getKey());
+                    return true;
+                }
+                return false;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Adding the item value using Material Chips added on auto complete box
+     */
+    public boolean addItem(final Suggestion suggestion) {
+        SelectionEvent.fire(MaterialAutoComplete.this, suggestion);
+        if (getLimit() > 0) {
+            if (suggestionMap.size() >= getLimit()) {
+                return false;
+            }
+        }
+
+        if (suggestionMap.containsKey(suggestion)) {
+            return false;
+        }
+
+        final ListItem displayItem = new ListItem();
+        displayItem.setStyleName(AddinsCssName.MULTIVALUESUGGESTBOX_TOKEN);
+
+        if (getType() == AutocompleteType.TEXT) {
+            suggestionMap.clear();
+            itemBox.setText(suggestion.getDisplayString());
+        } else {
+            final MaterialChip chip = chipProvider.getChip(suggestion);
+            if (chip == null) {
+                return false;
+            }
+
+            chip.addClickHandler(event -> {
+                if (chipProvider.isChipSelectable(suggestion)) {
+                    if (itemsHighlighted.contains(displayItem)) {
+                        chip.removeStyleName(selectedChipStyle);
+                        itemsHighlighted.remove(displayItem);
+                    } else {
+                        chip.addStyleName(selectedChipStyle);
+                        itemsHighlighted.add(displayItem);
+                    }
+                }
+            });
+
+            if (chip.getIcon() != null) {
+                chip.getIcon().addClickHandler(event -> {
+                    if (chipProvider.isChipRemovable(suggestion)) {
+                        suggestionMap.remove(suggestion);
+                        list.remove(displayItem);
+                        itemsHighlighted.remove(displayItem);
+                        ValueChangeEvent.fire(MaterialAutoComplete.this, getValue());
+                        suggestBox.showSuggestionList();
+                    }
+                });
+            }
+
+            suggestionMap.put(suggestion, chip);
+            displayItem.add(chip);
+            list.insert(displayItem, list.getWidgetCount() - 1);
+        }
+        return true;
+    }
+
+    /**
+     * Clear the chip items on the autocomplete box
+     */
+    public void clear() {
+        itemBox.setValue("");
+        placeholderLabel.removeStyleName(CssName.ACTIVE);
+
+        Collection<Widget> values = suggestionMap.values();
+        for (Widget widget : values) {
+            Widget parent = widget.getParent();
+            if (parent instanceof ListItem) {
+                parent.removeFromParent();
+            }
+        }
+        suggestionMap.clear();
+
+        clearErrorOrSuccess();
+    }
+
+    @Override
+    protected FocusableMixin<MaterialWidget> getFocusableMixin() {
+        if (focusableMixin == null) {
+            focusableMixin = new FocusableMixin<>(new MaterialWidget(itemBox.getElement()));
+        }
+        return focusableMixin;
+    }
+
+    /**
+     * @return the item values on autocomplete
+     * @see #getValue()
+     */
+    public List<String> getItemValues() {
+        Set<Suggestion> keySet = suggestionMap.keySet();
+        List<String> values = new ArrayList<>(keySet.size());
+        for (Suggestion suggestion : keySet) {
+            values.add(suggestion.getReplacementString());
+        }
+        return values;
+    }
+
+    /**
+     * @param itemValues the itemsSelected to set
+     * @see #setValue(Object)
+     */
+    public void setItemValues(List<String> itemValues) {
+        setItemValues(itemValues, false);
+    }
+
+    /**
+     * @param itemValues the itemsSelected to set
+     * @param fireEvents will fire value change event if true
+     * @see #setValue(Object)
+     */
+    public void setItemValues(List<String> itemValues, boolean fireEvents) {
+        if (itemValues == null) {
+            clear();
+            return;
+        }
+        List<Suggestion> list = new ArrayList<>(itemValues.size());
+        for (String value : itemValues) {
+            Suggestion suggestion = new gwt.material.design.client.base.Suggestion(value, value);
+            list.add(suggestion);
+        }
+        setValue(list, fireEvents);
+        if (itemValues.size() > 0) {
+            placeholderLabel.addStyleName(CssName.ACTIVE);
+        }
+    }
+
+    /**
+     * @return the itemsHighlighted
+     */
+    public List<ListItem> getItemsHighlighted() {
+        return itemsHighlighted;
+    }
+
+    /**
+     * @param itemsHighlighted the itemsHighlighted to set
+     */
+    public void setItemsHighlighted(List<ListItem> itemsHighlighted) {
+        this.itemsHighlighted = itemsHighlighted;
+    }
+
+    /**
+     * @return the suggestion oracle
+     */
+    public SuggestOracle getSuggestions() {
+        return suggestions;
+    }
+
+    /**
+     * Sets the SuggestOracle to be used to provide suggestions. Also setups the
+     * component with the needed event handlers and UI elements.
+     *
+     * @param suggestions the suggestion oracle to set
+     */
+    public void setSuggestions(SuggestOracle suggestions) {
+        this.suggestions = suggestions;
+        build(suggestions);
+    }
+
+    public void setSuggestions(SuggestOracle suggestions, AutocompleteType type) {
+        setType(type);
+        setSuggestions(suggestions);
+    }
+
+    public int getLimit() {
+        return limit;
+    }
+
+    public void setLimit(int limit) {
+        this.limit = limit;
+        if (this.suggestBox != null) {
+            this.suggestBox.setLimit(limit);
+        }
+    }
+
+    /**
+     * Set the number of suggestions to be displayed to the user. This differs from
+     * setLimit() which set both the suggestions displayed AND the limit of values
+     * allowed within the autocomplete.
+     * @param limit
+     */
+    public void setAutoSuggestLimit(int limit) {
+        if (this.suggestBox != null) {
+            this.suggestBox.setLimit(limit);
+        }
+    }
+
+    @Override
+    public String getPlaceholder() {
+        return placeholderLabel.getText();
+    }
+
+    @Override
+    public void setPlaceholder(String placeholder) {
+        placeholderLabel.setText(placeholder);
+    }
+
+    /**
+     * Gets the current {@link MaterialChipProvider}. By default, the class uses
+     * an instance of {@link DefaultMaterialChipProvider}.
+     */
+    public MaterialChipProvider getChipProvider() {
+        return chipProvider;
+    }
+
+    /**
+     * Sets a {@link MaterialChipProvider} that can customize how the
+     * {@link MaterialChip} is created for each selected {@link Suggestion}.
+     */
+    public void setChipProvider(MaterialChipProvider chipProvider) {
+        this.chipProvider = chipProvider;
+    }
+
+    /**
+     * When set to <code>false</code>, only {@link Suggestion}s from the
+     * SuggestionOracle are accepted. Direct input create by the user is
+     * ignored. By default, direct input is allowed.
+     */
+    public void setDirectInputAllowed(boolean directInputAllowed) {
+        this.directInputAllowed = directInputAllowed;
+    }
+
+    /**
+     * @return if {@link Suggestion}s created by direct input from the user
+     * should be allowed. By default directInputAllowed is
+     * <code>true</code>.
+     */
+    public boolean isDirectInputAllowed() {
+        return directInputAllowed;
+    }
+
+    /**
+     * Sets the style class applied to chips when they are selected.
+     * <p>
+     * Defaults to "blue white-text".
+     * </p>
+     *
+     * @param selectedChipStyle The class or classes to be applied to selected chips
+     */
+    public void setSelectedChipStyle(String selectedChipStyle) {
+        this.selectedChipStyle = selectedChipStyle;
+    }
+
+    /**
+     * Returns the style class applied to chips when they are selected.
+     * <p>
+     * Defaults to "blue white-text".
+     * </p>
+     */
+    public String getSelectedChipStyle() {
+        return selectedChipStyle;
+    }
+
+    @Override
+    public void showProgress(ProgressType type) {
+        progressMixin.showProgress(ProgressType.INDETERMINATE);
+    }
+
+    @Override
+    public void setPercent(double percent) {
+        progressMixin.setPercent(percent);
+    }
+
+    @Override
+    public void hideProgress() {
+        progressMixin.hideProgress();
+    }
+
+    @Override
+    public HandlerRegistration addKeyUpHandler(final KeyUpHandler handler) {
+        return itemBox.addKeyUpHandler(event -> {
+            if (isEnabled()) {
+                handler.onKeyUp(event);
+            }
+        });
+    }
+
+    @Override
+    public void setType(AutocompleteType type) {
+        typeMixin.setType(type);
+    }
+
+    @Override
+    public AutocompleteType getType() {
+        return typeMixin.getType();
+    }
+
+    @Override
+    public HandlerRegistration addSelectionHandler(final SelectionHandler<Suggestion> handler) {
+        return addHandler(new SelectionHandler<Suggestion>() {
+            @Override
+            public void onSelection(SelectionEvent<Suggestion> event) {
+                if (isEnabled()) {
+                    handler.onSelection(event);
+                }
+            }
+        }, SelectionEvent.getType());
+    }
+
+    public ReadOnlyMixin<MaterialAutoComplete, TextBox> getReadOnlyMixin() {
+        if (readOnlyMixin == null) {
+            readOnlyMixin = new ReadOnlyMixin<>(this, itemBox);
+        }
+        return readOnlyMixin;
+    }
+
+    @Override
+    public void setReadOnly(boolean value) {
+        getReadOnlyMixin().setReadOnly(value);
+        if (value) {
+            setEnabled(false);
+        }
+    }
+
+    @Override
+    public boolean isReadOnly() {
+        return getReadOnlyMixin().isReadOnly();
+    }
+
+    @Override
+    public void setToggleReadOnly(boolean toggle) {
+        getReadOnlyMixin().setToggleReadOnly(toggle);
+    }
+
+    @Override
+    public boolean isToggleReadOnly() {
+        return getReadOnlyMixin().isToggleReadOnly();
+    }
+
+    /**
+     * Interface that defines how a {@link MaterialChip} is created, given a
+     * {@link Suggestion}.
+     *
+     * @see MaterialAutoComplete#setChipProvider(MaterialChipProvider)
+     */
+    public static interface MaterialChipProvider {
+
+        /**
+         * Creates and returns a {@link MaterialChip} based on the selected
+         * {@link Suggestion}.
+         *
+         * @param suggestion the selected {@link Suggestion}
+         * @return the created MaterialChip, or <code>null</code> if the
+         * suggestion should be ignored.
+         */
+        MaterialChip getChip(Suggestion suggestion);
+
+        /**
+         * Returns whether the chip defined by the suggestion should be selected when the user clicks on it.
+         * <p>
+         * <p>
+         * Selecion of chips is used to batch remove suggestions, for example.
+         * </p>
+         *
+         * @param suggestion the selected {@link Suggestion}
+         * @see MaterialAutoComplete#setSelectedChipStyle(String)
+         */
+        boolean isChipSelectable(Suggestion suggestion);
+
+        /**
+         * Returns whether the chip defined by the suggestion should be removed from the autocomplete when clicked on its icon.
+         * <p>
+         * <p>
+         * Override this method returning <code>false</code> to implement your own logic when the user clicks on the chip icon.
+         * </p>
+         *
+         * @param suggestion the selected {@link Suggestion}
+         */
+        boolean isChipRemovable(Suggestion suggestion);
+    }
+
+    /**
+     * Default implementation of the {@link MaterialChipProvider} interface,
+     * used by the {@link MaterialAutoComplete}.
+     * <p>
+     * <p>
+     * By default all chips are selectable and removable. The default {@link IconType} used by the chips provided is the {@link IconType#CLOSE}.
+     * </p>
+     *
+     * @see MaterialAutoComplete#setChipProvider(MaterialChipProvider)
+     */
+    public static class DefaultMaterialChipProvider implements MaterialChipProvider {
+
+        @Override
+        public MaterialChip getChip(Suggestion suggestion) {
+            final MaterialChip chip = new MaterialChip();
+
+            String imageChip = suggestion.getDisplayString();
+            String textChip = imageChip;
+
+            String s = "<img src=\"";
+            if (imageChip.contains(s)) {
+                int ix = imageChip.indexOf(s) + s.length();
+                imageChip = imageChip.substring(ix, imageChip.indexOf("\"", ix + 1));
+                chip.setUrl(imageChip);
+                textChip = textChip.replaceAll("[<](/)?img[^>]*[>]", "");
+            }
+            chip.setText(textChip);
+            chip.setIconType(IconType.CLOSE);
+
+            return chip;
+        }
+
+        @Override
+        public boolean isChipRemovable(Suggestion suggestion) {
+            return true;
+        }
+
+        @Override
+        public boolean isChipSelectable(Suggestion suggestion) {
+            return true;
+        }
+    }
+
+    @Override
+    public HandlerRegistration addValueChangeHandler(final ValueChangeHandler<List<? extends Suggestion>> handler) {
+        return addHandler(new ValueChangeHandler<List<? extends Suggestion>>() {
+            @Override
+            public void onValueChange(ValueChangeEvent<List<? extends Suggestion>> event) {
+                if (isEnabled()) {
+                    handler.onValueChange(event);
+                }
+            }
+        }, ValueChangeEvent.getType());
+    }
+
+    @Override
+    public HandlerRegistration addBlurHandler(BlurHandler handler) {
+        return itemBox.addHandler(blurEvent -> {
+            if (isEnabled()) {
+                handler.onBlur(blurEvent);
+            }
+        }, BlurEvent.getType());
+    }
+
+    @Override
+    public HandlerRegistration addFocusHandler(FocusHandler handler) {
+        return itemBox.addHandler(focusEvent -> {
+            if (isEnabled()) {
+                handler.onFocus(focusEvent);
+            }
+        }, FocusEvent.getType());
+    }
+
+    /**
+     * Returns the selected {@link Suggestion}s. Modifications to the list are
+     * not propagated to the component.
+     *
+     * @return the list of selected {@link Suggestion}s, or empty if none was
+     * selected (never <code>null</code>).
+     */
+    @Override
+    public List<? extends Suggestion> getValue() {
+        return new ArrayList<>(suggestionMap.keySet());
+    }
+
+    @Override
+    public void setValue(List<? extends Suggestion> value, boolean fireEvents) {
+        clear();
+        if (value != null) {
+            placeholderLabel.addStyleName(CssName.ACTIVE);
+            for (Suggestion suggestion : value) {
+                addItem(suggestion);
+            }
+        }
+        super.setValue(value, fireEvents);
+    }
+
+    @Override
+    public void setEnabled(boolean enabled) {
+        super.setEnabled(enabled);
+        itemBox.setEnabled(enabled);
+    }
+
+    @Override
+    public ErrorMixin<AbstractValueWidget, MaterialLabel> getErrorMixin() {
+        return errorMixin;
+    }
+
+    public Label getPlaceholderLabel() {
+        return placeholderLabel;
+    }
+
+    public TextBox getItemBox() {
+        return itemBox;
+    }
+
+    public MaterialLabel getErrorLabel() {
+        return errorLabel;
+    }
+
+    public SuggestBox getSuggestBox() {
+        return suggestBox;
+    }
+}

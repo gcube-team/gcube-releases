@@ -1,0 +1,1 @@
+<authorization-endpoint priority="10" infrastructure="pred4s"><host>auth-pre.d4science.org</host><secure>false</secure><port>80</port></authorization-endpoint>

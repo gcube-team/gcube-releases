@@ -1,0 +1,7 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.remove-account-portlet.1-0-0"
+		date="2017-11-27">
+		<Change>First release
+		</Change>
+	</Changeset>
+</ReleaseNotes>

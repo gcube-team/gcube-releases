@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.widgets.netcdf-basic-widgets.1-1-0" date="2018-10-01">
+		<Change>Removed HomeLibrary dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.netcdf-basic-widgets.1-0-0" date="2017-11-09">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

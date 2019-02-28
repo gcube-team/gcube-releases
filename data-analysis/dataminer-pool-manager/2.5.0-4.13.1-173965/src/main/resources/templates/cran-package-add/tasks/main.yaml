@@ -1,0 +1,4 @@
+# tasks file for r
+---
+- name: Install algorithm <name>
+  command: Rscript -e "install.packages('<name>', repos=c('http://ftp.heanet.ie/mirrors/cran.r-project.org/'))"

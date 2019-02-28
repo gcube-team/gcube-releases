@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.margin {
+		margin-bottom: 0 !important;
+		margin-top: -15px !important;
+	}
+	</ui:style>
+	<g:HTMLPanel ui:field="mainPanel">
+		<b:NavPills addStyleNames="{style.margin}">
+			<b:NavLink disabled="true">Show sorted by:</b:NavLink>
+			<b:Dropdown ui:field="sortByDD"	text="newest Post">
+				<b:NavLink disabled="true" ui:field="allUpdatesLink">newest Post</b:NavLink>
+				<b:NavLink ui:field="recentCommentsLink">newest Comment</b:NavLink>
+			</b:Dropdown>
+		</b:NavPills>
+	</g:HTMLPanel>
+</ui:UiBinder> 

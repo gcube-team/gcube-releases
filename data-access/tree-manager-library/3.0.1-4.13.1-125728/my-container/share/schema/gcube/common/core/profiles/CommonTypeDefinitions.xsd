@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		elementFormDefault="qualified" attributeFormDefault="unqualified">
+		
+	<xs:annotation>
+		<xs:documentation xml:lang="en">
+	     	XML Schema for GCUBE Datatypes Version 1.2 Last modified: 29/02/2008 Contact: http://www.gcube-system.org
+		</xs:documentation>
+	</xs:annotation>
+	
+	<xs:element name="Resource" type="ResourceType" />
+
+	<xs:complexType name="ResourceType">
+			<xs:sequence>
+				<xs:element name="ID" type="xs:string"/>
+				<xs:element name="Type" type="xs:string"/>
+				<xs:element name="Scopes" minOccurs="0"> 
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Scope" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Profile" type="ProfileType"/>
+			</xs:sequence>
+	</xs:complexType>	
+	
+	<xs:complexType name="ProfileType">
+		<xs:sequence>
+			<xs:any namespace="##any" processContents="strict" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="BooleanValueType">
+		<xs:attribute name="value" type="xs:boolean" use="required"/>
+	</xs:complexType>
+	
+	<xs:complexType name="FreeXMLType">
+    <xs:sequence>
+	    <xs:any processContents="skip" maxOccurs="unbounded" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="FileListType">
+		<xs:sequence>
+			<xs:element name="File" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="FreeTextType" mixed="true">
+		<xs:complexContent mixed="true">
+			<xs:restriction base="xs:anyType">
+				<xs:sequence>
+					<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="identity">
+		<xs:sequence>
+			<xs:element name="subject" type="xs:string"/>
+			<xs:element name="CASubject" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

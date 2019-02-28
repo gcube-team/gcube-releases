@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="WsThreddsWidget">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.widgets.wsthreddssync.WsThreddsWidget' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/WsThreddsWidget/greet" class="org.gcube.portlets.widgets.wsthreddssync.server.ThreddsWorkspaceSyncServiceImpl" />
+
+</module>

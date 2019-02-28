@@ -1,0 +1,2 @@
+org.gcube.data.transfer.plugins.thredds.sis.SISPluginFactory
+org.gcube.data.transfer.plugins.thredds.catalog.RegisterCatalogPluginFactory

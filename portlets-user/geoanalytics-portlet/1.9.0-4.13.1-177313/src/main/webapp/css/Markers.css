@@ -1,0 +1,9 @@
+#DecisionSupportSystem .marker {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	font-size: 24px;
+	z-index: 123;
+	left: 50%;
+	bottom: -15px;
+}

@@ -1,0 +1,8 @@
+<ReleaseNotes>
+    <Changeset component="storagehub-client-1.0.3" date="2019-01-14">
+		<Change>Update for the new StorageHub method</Change>
+	</Changeset>
+	<Changeset component="storagehub-client-1.0.0" date="2018-05-15">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

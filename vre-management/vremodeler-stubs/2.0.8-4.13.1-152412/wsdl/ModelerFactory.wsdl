@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="ModelerFactoryService"
+    targetNamespace="http://gcube-system.org/namespaces/vremanagement/vremodeler"
+    xmlns:tns="http://gcube-system.org/namespaces/vremanagement/vremodeler"
+  	xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" 
+    xmlns:vretypes="http://gcube-system.org/namespaces/vremanagement/vremodeler/types">
+     
+    <import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+    
+    
+	<!--============================================================
+
+                      			T Y P E S
+
+	============================================================-->
+
+	<types>
+		<xsd:schema targetNamespace="http://gcube-system.org/namespaces/vremanagement/vremodeler"
+    		xmlns:tns="http://gcube-system.org/namespaces/vremanagement/vremodeler"
+    		xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		 
+		 <xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>	
+		 <xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+		 <xsd:import namespace="http://gcube-system.org/namespaces/vremanagement/vremodeler/types" schemaLocation="VRETypes.xsd"/>
+			<!-- REQUESTS AND RESPONSES -->
+			
+						
+			<xsd:element name="createResource" type="coretypes:VOID"/>
+			
+			<xsd:element name="createResourceResponse" type="wsa:EndpointReferenceType"/>
+			
+			
+			<xsd:element name="getAllVREsMessageResponse" type="vretypes:ReportList"/>
+    		<xsd:element name="getAllVREsMessageRequest" type="coretypes:VOID"/>
+				
+			
+    		
+    		<xsd:element name="initDBRequestMessage" type="coretypes:VOID"/>
+				
+			<xsd:element name="initDBResponseMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="removeVRERequestMessage" type="xsd:string"/>
+				
+			<xsd:element name="removeVREResponseMessage" type="coretypes:VOID"/>
+			
+			<xsd:element name="getEPRbyIdRequestMessage" type="xsd:string"/>
+				
+			<xsd:element name="getEPRbyIdResponseMessage" type="wsa:EndpointReferenceType"/>
+			
+			
+			<xsd:element name="getExistingNamesResponseMessage">
+			 <xsd:complexType>
+               	<xsd:sequence>
+                      <xsd:element name="names" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+              	</xsd:sequence>
+        	</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="getExistingNamesRequestMessage" type="coretypes:VOID"/>
+			
+    	</xsd:schema>
+	</types>
+
+
+
+	<!--============================================================
+
+                       M E S S A G E S
+                      
+  	============================================================-->
+  	<message name="CreateResourceRequest">
+		<part name="request" element="tns:createResource"/>
+	</message>
+	<message name="CreateResourceResponse">
+		<part name="response" element="tns:createResourceResponse"/>
+	</message>
+    <message name="GetAllVREsRequest">
+		<part name="request" element="tns:getAllVREsMessageRequest"/>
+	</message>
+	<message name="GetAllVREsResponse">
+		<part name="response" element="tns:getAllVREsMessageResponse"/>
+	</message>
+	<message name="InitDBInputMessage">
+		<part name="request" element="tns:initDBRequestMessage"/>
+	</message>
+	<message name="InitDBOutputMessage">
+		<part name="response" element="tns:initDBResponseMessage"/>
+	</message>
+	<message name="RemoveVREInputMessage">
+		<part name="request" element="tns:removeVRERequestMessage"/>
+	</message>
+	<message name="RemoveVREOutputMessage">
+		<part name="response" element="tns:removeVREResponseMessage"/>
+	</message>
+	<message name="GetExistingNamesInputMessage">
+		<part name="request" element="tns:getExistingNamesRequestMessage"/>
+	</message>
+	<message name="GetExistingNamesOutputMessage">
+		<part name="response" element="tns:getExistingNamesResponseMessage"/>
+	</message>
+	<message name="GetEPRbyIdInputMessage">
+		<part name="request" element="tns:getEPRbyIdRequestMessage"/>
+	</message>
+	<message name="GetEPRbyIdOutputMessage">
+		<part name="response" element="tns:getEPRbyIdResponseMessage"/>
+	</message>
+
+	<!--============================================================
+
+                       P O R T T Y P E
+                      
+	============================================================-->
+
+	<portType name="ModelerFactoryPortType">
+		<operation name="createResource">
+			<input message="tns:CreateResourceRequest"/>
+			<output message="tns:CreateResourceResponse"/>
+		</operation>
+		<operation name="getAllVREs">
+			<input message="tns:GetAllVREsRequest"/>
+			<output message="tns:GetAllVREsResponse"/>
+		</operation>
+	
+		<operation name="initDB">
+			<input message="tns:InitDBInputMessage"/>
+			<output message="tns:InitDBOutputMessage"/>
+		</operation>
+		
+		<operation name="getExistingNamesVREs">
+			<input message="tns:GetExistingNamesInputMessage"/>
+			<output message="tns:GetExistingNamesOutputMessage"/>
+		</operation>
+		
+		<operation name="removeVRE">
+			<input message="tns:RemoveVREInputMessage"/>
+			<output message="tns:RemoveVREOutputMessage"/>
+		</operation>
+		
+		<operation name="getEPRbyId">
+			<input message="tns:GetEPRbyIdInputMessage"/>
+			<output message="tns:GetEPRbyIdOutputMessage"/>
+		</operation>
+		
+	</portType>
+
+
+
+</definitions>

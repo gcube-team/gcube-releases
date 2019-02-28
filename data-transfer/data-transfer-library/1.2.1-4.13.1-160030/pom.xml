@@ -1,0 +1,123 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>LATEST</version>
+	</parent>
+	<groupId>org.gcube.data.transfer</groupId>
+	<artifactId>data-transfer-library</artifactId>
+	<version>1.2.1-4.13.1-160030</version>
+	<name>DataTransfer-library</name>
+	<description>Data Transfer Service client library</description>
+
+	<properties>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+		<svnBaseUrl>http://svn.research-infrastructures.eu/d4science/gcube/trunk/data-transfer/${project.artifactId}</svnBaseUrl>
+		<jersey-version>2.14</jersey-version>
+	</properties>
+
+
+	<scm>
+		<connection>scm:svn:${svnBaseUrl}/${project.artifactId}</connection>
+		<developerConnection>scm:svn:${svnBaseUrl}/${project.artifactId}</developerConnection>
+		<url>${svnBaseUrl}/${project.artifactId}</url>
+	</scm>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>gcube-bom</artifactId>
+				<version>1.2.1-4.13.1-176441</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+
+		<!-- GCUBE -->
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>authorization-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-gcube-calls</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.data.transfer</groupId>
+			<artifactId>data-transfer-model</artifactId>
+			<version>1.2.4-4.13.1-165138</version>
+		</dependency>
+
+		<!-- STORAGE -->
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-core</artifactId>
+			<version>2.9.0-4.13.1-174054</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-wrapper</artifactId>
+			<version>2.5.1-4.13.1-173242</version>
+		</dependency>
+
+
+
+		<!-- EXTERNAL -->
+		<!-- lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.14.8</version>
+		</dependency>
+
+		<!-- JERSEY -->
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+<!-- 			<version>2.22.2</version> -->
+<version>${jersey-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+<!-- 			<version>2.22.2</version>			 -->
+<version>${jersey-version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+
+		<!-- TEST -->
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+
+
+
+
+		<!-- Test log binding -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.13</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+
+</project>

@@ -1,0 +1,24 @@
+<!-- @Author Giancarlo Panichi -->
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+
+	<ui:with field="res"
+		type="org.gcube.portlets.user.accountingdashboard.client.resources.AppResources" />
+
+	<ui:with field="tokens"
+		type="org.gcube.portlets.user.accountingdashboard.client.place.NameTokens" />
+
+	<g:HTMLPanel>
+		<b:Navbar>
+			<b:Brand>Accounting Dashboard</b:Brand>
+			
+			<b:Nav ui:field="nav">
+				<!-- <b:NavLink text="Batch" targetHistoryToken="{tokens.getBatchCollect}">Batch</b:NavLink> -->
+				<!-- <b:NavLink text="Help" targetHistoryToken="{tokens.getHelp}">Help</b:NavLink> -->
+				<b:NavLink href="http://wiki.gcube-system.org/gcube/Accounting_Dashboard" target="_blank">Help</b:NavLink> 			
+			</b:Nav>
+		</b:Navbar>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

@@ -1,0 +1,9 @@
+<ReleaseNotes>
+    <Changeset component="storagehub-model-1.0.0" date="2019-01-14">
+		<Change>Added StorageBackand interfaces</Change>
+		<Change>Changed propertyMap name field to metadata in Item class</Change>
+	</Changeset>
+	<Changeset component="storagehub-model-1.0.0" date="2018-05-15">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

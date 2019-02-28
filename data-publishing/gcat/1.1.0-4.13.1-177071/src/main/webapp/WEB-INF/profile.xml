@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Resource>
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>This service allows any client to publish on the gCube Catalogue.</Description>
+		<Class>DataPublishing</Class>
+		<Name>gcat</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Main>
+				<Description>This service allows any client to publish on the gCube Catalogue.</Description>
+				<Name>gcat</Name>
+				<Version>1.1.0-4.13.1-177071</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.data-publishing</groupId>
+					<artifactId>gcat</artifactId>
+					<version>1.1.0-4.13.1-177071</version>
+				</MavenCoordinates>
+				<Files>
+					<File>gcat-1.1.0-4.13.1-177071.war</File>
+				</Files>
+			</Main>
+		</Packages>
+	</Profile>
+</Resource>

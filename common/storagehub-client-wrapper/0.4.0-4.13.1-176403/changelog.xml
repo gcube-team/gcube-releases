@@ -1,0 +1,31 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.storagehubwrapper.0-4-0"
+		date="2019-02-27">
+		<Change>Updated to new SHub interface</Change>
+		<Change>Added method getMetadata</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.storagehubwrapper.0-3-0"
+		date="2019-02-27">
+		<Change>[Task #12059] added delete item</Change>
+		<Change>[Task #12533] added trash operations</Change>
+		<Change>[Task #12556] added download facility</Change>
+		<Change>[Task #12601] added download folder facility</Change>
+		<Change>[Task #12604] added Move operation to StorageHub</Change>
+		<Change>[Task #12603] added Copy operation to StorageHub</Change>
+		<Change>[Task #12603] added Rename facility to StorageHub</Change>
+		<Change>[Task #12603] added Public Link facility to StorageHub
+		</Change>
+		<Change>[Task #12664] added Versions facility to StorageHub
+		</Change>
+		<Change>[Task #12720] added Image Preview to StorageHub
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.storagehubwrapper.0-2-0"
+		date="2018-06-20">
+		<Change>minor fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.storagehubwrapper.0-1-0"
+		date="2018-06-20">
+		<Change>[Task #12059] first release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Other module inherits -->
+	<inherits name="org.gcube.portlets.user.gisviewer.GisViewer" />
+	<inherits name='org.gcube.portlets.widgets.wsexplorer.WorkspaceExplorer' />
+</module>

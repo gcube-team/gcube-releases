@@ -1,0 +1,89 @@
+#! /bin/sh
+
+gCorePID=`ps -fwww -u $LOGNAME | grep "org.globus.wsrf.container.ServiceContainer" | grep -v grep | grep -v $$ |  awk '{print $2}'`
+
+if [ "$gCorePID" = "" ]; then
+        echo "No gCore Container is running."
+        exit 1;
+fi
+
+kill=false
+if [ -e $GLOBUS_LOCATION/config/GHNConfig.xml ]; then
+        scopeString=`grep -A 1 infrastructure $GLOBUS_LOCATION/config/GHNConfig.xml | grep value`
+        scopeString=${scopeString#*\"}
+        scopeString=${scopeString%*\"}
+else 
+        kill=true
+fi
+
+security=false
+if [ -e $GLOBUS_LOCATION/config/GHNConfig.xml ]; then
+        secString=`grep -A 1 securityenabled $GLOBUS_LOCATION/config/GHNConfig.xml | grep value`
+        secString=${secString#*\"}
+        secString=${secString%*\"}
+        security=${secString}
+fi
+
+hostname=localhost
+if [ -e $GLOBUS_LOCATION/etc/globus_wsrf_core/server-config.wsdd ]; then
+        hostString=`grep logicalHost $GLOBUS_LOCATION/etc/globus_wsrf_core/server-config.wsdd | grep value`
+        hostString=${hostString#*value=\"}
+        hostString=${hostString%*\"\/>}
+        hostname=${hostString}
+
+fi
+
+if [ -e $GLOBUS_LOCATION/config/GHNProfile.xml ]; then
+        portString=`cat $GLOBUS_LOCATION/config/GHNProfile.xml`
+        portString=${portString#*<Name>}
+        portString=${portString%</Name><ActivationTime>*}
+        portString=${portString#*:}
+else 
+        kill=true
+fi
+
+if [ "$kill" = "false" ]; then
+        . $GLOBUS_LOCATION/bin/gcore-load-env
+        if [ "X$JAVA_HOME" = "X" ] ; then
+                _RUNJAVA=java
+        else 
+                _RUNJAVA="$JAVA_HOME"/bin/java
+        fi              
+        
+         if [ "$portString" = "443" ] || [ "$portString" = "8443" ] ; then
+
+		    cert=/etc/grid-security/hostcert.pem
+			key=/etc/grid-security/hostkey.pem
+
+			if [ -e $GLOBUS_LOCATION/etc/globus_wsrf_core/global_security_descriptor.xml ]; then
+	
+		        key=`grep -A 1 key-file $GLOBUS_LOCATION/etc/globus_wsrf_core/global_security_descriptor.xml | grep value`
+		        key=${key#*value=\"}
+		        key=${key%%\"*}
+		
+		        cert=`grep -A 1 cert-file $GLOBUS_LOCATION/etc/globus_wsrf_core/global_security_descriptor.xml | grep value`
+		        cert=${cert#*value=\"}
+		        cert=${cert%%\"*}
+
+			fi       	 
+
+           curl -ks --request POST  --header "Content-Type: text/xml;charset=UTF-8"  --data @$GLOBUS_LOCATION/bin/gcore-secure-shutdown.xml  --cert $cert --key $key --silent https://$hostname:$portString/wsrf/services/gcube/common/vremanagement/GHNManager > /dev/null
+       	 
+       	 else
+       	 
+            $_RUNJAVA org.gcube.common.vremanagement.ghnmanager.testsuite.Shutdown http://$hostname:$portString /$scopeString false false false
+         
+         fi
+        
+		if [ $? = "0" ]; then
+                echo "Container stopped"
+        else
+                echo "Warning! The container could not be stopped"
+        fi
+else 
+        $gCorePID | xargs -n1 kill -9 1>/dev/null 2>&1
+        echo "Container killed"
+fi
+
+sleep 1
+ps -efwww | grep "gcore-start-container" | grep $LOGNAME | grep -v grep | grep -v $$ |  awk '{print $2}' | xargs -n1 kill -9 1>/dev/null 2>&1

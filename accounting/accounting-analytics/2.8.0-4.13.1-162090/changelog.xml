@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.accounting.accounting-analytics.2-8-0" date="2019-02-27">
+		<Change></Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-analytics.2-7-0" date="2017-11-29">
+		<Change>Allowing to specify a limit when querying values for suggestion. refs #9943</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-analytics.2-6-0" date="2017-10-09">
+		<Change>Implemented isConnectionActive() api</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-analytics.2-5-0" date="2017-06-07">
+		<Change>Added api to sum StorageUsage values got from MapReduce avoiding the client to perform such a computation.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-analytics.2-4-0" date="2016-03-16">
+		<Change>Different management of query filters</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-analytics.2-3-0" date="2016-12-15">
+		<Change>Added apis to support quota service.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-analytics.2-2-0" date="2016-11-07">
+		<Change>Improved the way the library return the querable key for a specific Usage Record</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-analytics.2-1-0" date="2016-07-28">
+		<Change>Added getUsageValue() api</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-analytics.2-0-0" date="2016-05-18">
+		<Change>Reorganized apis and added new api to get top values #2253</Change>
+	</Changeset>
+   <Changeset component="org.gcube.accounting.accounting-analytics.1-2-0" date="2016-04-08">
+		<Change>Ready for ScopeProvider Removal #2194</Change>
+	</Changeset>
+   <Changeset component="org.gcube.accounting.accounting-analytics.1-1-0" date="2016-02-08">
+		<Change>Internal Changes due to Accounting Lib generalization #1746</Change>
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-analytics.1-0-0" date="2015-12-09">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

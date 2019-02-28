@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.shibboleth.1-1-0" date="2016-10-26">
+		<Change>Adapted to the EGI Checkin EOSC AAI Service</Change>
+	</Changeset>
+	<Changeset component="gr.cite.shibboleth.1-0-0" date="2016-08-30">
+		<Change>First release of shibboleth login hook</Change>
+	</Changeset>
+</ReleaseNotes>

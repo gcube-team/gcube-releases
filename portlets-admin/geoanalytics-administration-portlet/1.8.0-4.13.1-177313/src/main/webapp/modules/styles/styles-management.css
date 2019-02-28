@@ -1,0 +1,233 @@
+#geoadmin-styles .geoadmin-modal-header,
+#geoadmin-styles .geoadmin-modal-header p{
+	color: white;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+#geoadmin-styles .modal textarea{
+	resize:none;
+	color: #0271be;
+}
+
+#geoadmin-styles .modal input{
+	color: #0271be;
+}
+
+#geoadmin-create-style-content-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    
+    height: 33px;
+    line-height: 30px;
+    opacity: -0.9;
+    width: 121px;
+    background-color: antiquewhite;
+}
+
+.aui #geoadmin-create-style-content {
+    cursor: text;
+    background: white;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+#geoadmin-create-style-content-browseButton{
+    background-color: #0271be;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    height: 28px;
+}
+
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#styleUpload {
+	position: relative;
+    overflow: hidden;
+    background-color: #0271be;
+}
+
+.aui #geoadmin-styles #geoadmin-create-style-modal .modal-body .control-group .fileUpload {
+	color: white;
+    background-color: #0271be;
+    background-repeat: repeat-x;
+    
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    
+    webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    border-radius: 5px !important;
+    
+}
+
+.discard-btn{
+    text-align: center;
+}
+
+#geoadmin-raw-legend-editor{
+    margin-bottom:1em;
+}
+
+.legend-inputs{
+    margin: 2em;
+}
+
+ol#files-list{
+padding:5px;
+margin-top:5px;
+margin-bottom:5px;
+background:#efefef;
+color:rgb(59,121,173);
+max-width:400px;
+max-height:200px;
+overflow-y:auto;
+word-wrap: break-word;
+}
+ol#files-list li.placeholder {
+  position: relative;
+  /** More li styles **/
+}
+ol#files-list li.placeholder:before {
+  position: absolute;
+  /** Define arrowhead **/
+}
+ol#files-list li:hover {
+    cursor: move;
+}
+
+ol#files-list li {
+    list-style: decimal inside;
+    display: list-item;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 32px;
+
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(14px);
+  -ms-transform: translateX(14px);
+  transform: translateX(14px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.modal-header .control-label{
+    color:white;
+}
+
+.modal-header .control-group{
+    padding-bottom: 0.1em;
+}
+
+.input-color {
+    position: relative;
+}
+.input-color input {
+    padding-left: 20px;
+}
+.input-color .color-box {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #ccc;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+.centered{
+    margin: auto;
+    text-align: center;
+}
+
+.adminContainer .modal-body select{
+    margin-bottom:7px;
+}
+
+.rule-close-btn{
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    display: inline;
+    color: black;
+}
+
+.file-icon{
+	position: relative;
+    overflow: hidden;
+    background-color: #0271be;
+}

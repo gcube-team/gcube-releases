@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-widgets.ws-thredds-sync-widget.1-0-0"
+		date="2018-03-16">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

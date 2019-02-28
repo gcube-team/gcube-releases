@@ -1,0 +1,25 @@
+v 2.4.0 (21-04-2015)
+		* upgrade mongo-java-driver to version 3.0.3
+v 2.2.0 (21-04-2015)
+		* change smp protocol
+		* id as remote identifier for RFile methods
+v 2.1.2 (31-10-2014)
+		* added methods for folder and user storage calculation
+v 2.1.0 (01-04-2014)
+		* added metadata for every remote file in agreement with storage-manager-trigger module
+v 2.0.3 (24-10-2013)
+		* added mongoOption for reinforce nwtwork failover  #245 openBio
+v 2.0.2 (19-06-2013)
+		* bug fix input stream with replace flag #208 openBio
+v 2.0.1 (29-05-2013)
+		* bug fix incident: connection pending #606
+v 2.0.0 (19-05-2013)
+		* added move, copy and link operations
+		*FWS integration
+v 1.0.2 (15-01-2013)
+		* Integration with new gCube release 2.12.0 version system
+v 1.0.1 (11-10-2012)
+		* added VOLATILE area				
+v. 1.0.0 (04-05-2012)
+        * First release
+

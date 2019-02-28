@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='shareupdates'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+
+	<inherits name="org.jsonmaker.gwt.Gwt_jsonmaker" />
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+	<!-- inherits GCUBE Widgets -->
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+	<inherits name='org.gcube.portlets.widgets.switchbutton.SwitchButton' />
+	<!-- Responsive design -->
+	<set-property name="bootstrap.responsiveDesign" value="true" />
+
+	<!-- To Comment out -->
+	<!-- <set-property name="user.agent" value="safari,gecko1_8,ie10" /> -->
+
+	<!-- Other module inherits -->
+
+	<inherits name='org.gcube.portal.databook.GCubeSocialNetworking' />
+	<inherits name='org.gcube.portlets.widgets.pickitem.PickItem' />
+	<inherits name='org.gcube.portlets.widgets.fileupload.FileUpload' />
+	<!-- Specify the app entry point class. -->
+	<entry-point class='org.gcube.portlets.user.shareupdates.client.ShareUpdates' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+	<add-linker name="xsiframe" />
+</module>

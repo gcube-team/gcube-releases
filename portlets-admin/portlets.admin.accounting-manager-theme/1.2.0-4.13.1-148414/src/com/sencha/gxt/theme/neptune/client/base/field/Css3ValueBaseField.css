@@ -1,0 +1,84 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def backgroundColor value('theme.field.backgroundColor');
+
+@def fieldColor value('theme.field.text.color');
+@def fontSize value('theme.field.text.size');
+@def fontFamily value('theme.field.text.family');
+@def fontWeight value('theme.field.text.weight');
+@def emptyTextColor value('theme.field.emptyTextColor');
+
+@def height value('theme.field.height', 'px');
+@def lineHeight value('theme.field.lineHeight');
+
+@def borderColor value('theme.field.borderColor');
+@def borderWidth value('theme.field.borderWidth', 'px');
+
+@def focusColor value('theme.field.focusBorderColor');
+
+@def invalidBackgroundColor value('theme.field.invalidBackgroundColor');
+@def invalidBorderColor value('theme.field.invalidBorderColor');
+@def invalidBorderWidth value('theme.field.invalidBorderWidth', 'px');
+
+
+.focus {}
+.invalid {}
+
+.focus .wrap {
+  border-color: focusColor;
+}
+
+.invalid .wrap {
+  background-color: invalidBackgroundColor;
+  border: solid invalidBorderColor;
+  border-width: invalidBorderWidth;
+}
+
+.wrap {
+  zoom: 1;
+  white-space: nowrap;
+  text-align: left;
+  width: auto;
+  position: relative;
+  background-color: backgroundColor;
+
+  border-color: borderColor;
+  border-width: borderWidth;
+  border-style: solid;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.field {
+  color: fieldColor;
+  font-size: fontSize;
+  font-family: fontFamily;
+  font-weight: fontWeight;
+
+  border: 0px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.field::-ms-clear {
+  display: none;
+}
+
+.empty {
+  color: emptyTextColor;
+}
+
+.readonly {}
+

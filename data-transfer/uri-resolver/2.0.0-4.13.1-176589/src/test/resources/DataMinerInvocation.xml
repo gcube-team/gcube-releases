@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataminer-invocation>
+    <operator-id>THE_OPERATOR_ID</operator-id>
+    <parameters>
+        <input>
+            <param>
+                <key>key1</key>
+                <value>value1</value>
+            </param>
+            <param>
+                <key>key2</key>
+                <value>value2</value>
+            </param>
+        </input>
+        <output/>
+    </parameters>
+</dataminer-invocation>

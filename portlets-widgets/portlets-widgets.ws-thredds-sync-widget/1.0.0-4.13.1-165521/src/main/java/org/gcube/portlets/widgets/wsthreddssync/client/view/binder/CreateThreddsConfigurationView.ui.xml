@@ -1,0 +1,63 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.noBorder {
+		border: 0px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="form_unit_fields">
+			<b:Form type="HORIZONTAL">
+				<b:Fieldset styleName="{style.noBorder}">
+
+					<b:ControlGroup ui:field="cg_select_vre">
+						<b:ControlLabel for="cl_select_vre">Publish in the Scope</b:ControlLabel>
+						<b:Controls>
+							<b:ListBox name="Select a VRE..." b:id="field_select_scope"
+								ui:field="field_select_scope">
+							</b:ListBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="cg_select_catalogue_name">
+						<b:ControlLabel for="cl_select_catalogue_name">Publish in the Catalogue</b:ControlLabel>
+						<b:Controls>
+							<b:ListBox name="Select a Catalogue Name..." b:id="field_select_catalogue_name"
+								ui:field="field_select_catalogue_name">
+							</b:ListBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="cg_folder_name">
+						<b:ControlLabel for="cl_folder_name">As Catalogue Entry</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox placeholder="Type the Catalogue Entry..."
+								title="This is the Catalogue Entry" b:id="field_folder_name"
+								ui:field="field_folder_name"></b:TextBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+
+					<b:Button ui:field="butt_create_new_catalogue" text="Create New Catalogue"
+						type="LINK"></b:Button>
+					<b:Fieldset ui:field="fieldset_add_catalogue_bean"
+						visible="false">
+						<b:ControlGroup ui:field="cg_catalogue_name">
+							<b:ControlLabel for="cl_catalogue_name">Catalogue Name</b:ControlLabel>
+							<b:Controls>
+								<b:InputAddOn>
+									<b:TextBox placeholder="Type the Catalogue Name..."
+										b:id="field_catalogue_name" ui:field="field_catalogue_name"></b:TextBox>
+									<b:Button ui:field="butt_add_catalogue">Add Catalogue</b:Button>
+								</b:InputAddOn>
+							</b:Controls>
+						</b:ControlGroup>
+					</b:Fieldset>
+				</b:Fieldset>
+			</b:Form>
+		</g:HTMLPanel>
+		<b:Pager left="Older" right="Create Configuration and Do Sync"
+			aligned="true" ui:field="pager" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

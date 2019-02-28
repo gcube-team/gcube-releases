@@ -1,0 +1,50 @@
+/**
+*
+*/
+.progressWrapRed {
+	border: 1px solid #cf656f;
+	overflow: hidden;
+}
+
+@sprite .progressInnerRed {
+	background-color: #f3e0e2;
+	gwt-image: 'innerBarRed';
+	height: auto;
+	position: relative;
+}
+
+@sprite .progressBarRed {
+	background-color: #ee9ca4;
+	gwt-image: 'barRed';
+	background-repeat: repeat-x;
+	background-position: left center;
+	height: 18px;
+	border-top-color: #fdd1d5;
+	border-bottom-color: #e47f88;
+	border-right-color: #e47f88;
+}
+
+.progressTextRed {
+	color: #fff;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	font-family: sans-serif;
+	padding: 1px 5px;
+	overflow: hidden;
+	position: absolute;
+	z-index: 99;
+}
+
+.progressTextBackRed {
+	color: #953941 !important;
+	z-index: 9 !important;
+}
+
+@if user.agent ie6 ie8 ie9 {
+	.progressTextBackRed {
+		line-height: 15px;
+		color: #953941 !important;
+		z-index: 9 !important;
+	}
+}

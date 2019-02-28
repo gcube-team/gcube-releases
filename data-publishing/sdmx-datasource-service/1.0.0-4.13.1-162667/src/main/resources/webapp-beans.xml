@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://cxf.apache.org/jaxrs
+		http://cxf.apache.org/schemas/jaxrs.xsd">
+
+	<context:spring-configured />
+	<context:component-scan base-package="org.sdmxsource" />
+
+
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    <!-- <import resource="classpath:META-INF/cxf/cxf-extension-jaxrs-binding.xml"/> -->
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+
+    <!-- Apache CXF Server Configuration -->
+
+    <jaxrs:server id="sdmxDataSourceService" address="/">
+        <jaxrs:serviceBeans>
+            <ref bean="sdmxDataSource"/>
+        </jaxrs:serviceBeans>
+    </jaxrs:server>
+
+	<bean id="sdmxDataSource"  class="org.gcube.datapublishing.sdmx.datasource.SDMXDataProvider">
+		<property name="configurationManager" ref="configurationManager"/>
+
+	</bean>
+	
+	<bean name="configurationManager" class="org.gcube.datapublishing.sdmx.datasource.tabman.config.ContainerTokenBasedDatasourceConfigurationManager">
+		<!-- <property name="proxyAuthenticator" ref="proxyAuthentication"/> -->  
+		<property name="dataTypeManager" ref="dataTypeManager"/>
+		<property name="excludedQueryParameters">
+					<array>
+						<value>gcube-token</value>
+					</array>
+		</property>
+	</bean>
+	
+	
+	<bean id="dataTypeManager" class="org.gcube.datapublishing.sdmx.datasource.datatype.DataTypeManagerImpl">
+		<property name="dataTypes">
+			<map>
+			<entry key="application/vnd.sdmx.genericdata+xml;version=2.1"><util:constant static-field="org.sdmxsource.sdmx.api.constants.DATA_TYPE.GENERIC_2_1_XS"/></entry>
+			<entry key="application/vnd.sdmx.structurespecificdata+xml;version=2.1"><util:constant static-field="org.sdmxsource.sdmx.api.constants.DATA_TYPE.COMPACT_2_1_XS"/></entry>
+			<entry key="application/vnd.sdmx.generictimeseriesdata+xml;version=2.1"><util:constant static-field="org.sdmxsource.sdmx.api.constants.DATA_TYPE.GENERIC_2_1"/></entry>
+			<entry key="application/vnd.sdmx.structurespecifictimeseriesdata+xml;version=2.1"><util:constant static-field="org.sdmxsource.sdmx.api.constants.DATA_TYPE.COMPACT_2_1"/></entry>
+			<entry key="application/vnd.sdmx.structurespecificdata+xml;version=2.0"><util:constant static-field="org.sdmxsource.sdmx.api.constants.DATA_TYPE.CROSS_SECTIONAL_2_0"/></entry>
+			<entry key="application/vnd.sdmx.generictimeseriesdata+xml;version=2.0"><util:constant static-field="org.sdmxsource.sdmx.api.constants.DATA_TYPE.GENERIC_2_0"/></entry>
+			<entry key="application/vnd.sdmx.structurespecifictimeseriesdata+xml;version=2.0"><util:constant static-field="org.sdmxsource.sdmx.api.constants.DATA_TYPE.COMPACT_2_0"/></entry>
+			</map>
+		</property>
+		<property name="priorities">
+			<map>
+			<!-- <entry key="application/vnd.sdmx.genericdata+xml;version=2.1" value="4"/> NOT SUPPORTED -->
+			<!-- <entry key="application/vnd.sdmx.structurespecificdata+xml;version=2.1" value="5"/> NOT SUPPORTED -->
+			<entry key="application/vnd.sdmx.generictimeseriesdata+xml;version=2.1" value="6"/>
+			<entry key="application/vnd.sdmx.structurespecifictimeseriesdata+xml;version=2.1"  value="7"/>
+			<entry key="application/vnd.sdmx.structurespecificdata+xml;version=2.0"  value="1"/>
+			<entry key="application/vnd.sdmx.generictimeseriesdata+xml;version=2.0"  value="2"/>
+			<entry key="application/vnd.sdmx.structurespecifictimeseriesdata+xml;version=2.0"  value="3"/>
+			</map>
+		</property>
+		<property name="defaultResponseType" value="application/vnd.sdmx.generictimeseriesdata+xml;version=2.1">
+		</property>	
+		
+		
+	</bean>
+
+	<bean id="readableDataLocationFactory" class="org.sdmxsource.util.factory.SdmxSourceReadableDataLocationFactory" />
+	<bean id="writeableDataLocationFactory" class="org.sdmxsource.util.factory.SdmxSourceWriteableDataLocationFactory" />
+
+
+
+	<!-- REST DATA QUERY MANAGER -->
+	<bean id="restDataQueryManager"
+		class="org.sdmxsource.sdmx.dataparser.rest.RestDataQueryManagerImpl">
+		<property name="dataRetrievalWithWriter" ref="dataRetrievalFromTabman" />
+		<property name="beanRetrievalManager" ref="beanRetrievalFromFusionAndIS" />
+	</bean>
+
+	<!-- REST STRUCTURE QUERY MANAGER -->
+	<bean id="restStructureQueryManager"
+		class="org.sdmxsource.sdmx.structureparser.manager.rest.RestStructureQueryManagerImpl">
+		<property name="beanRetrievalManager" ref="beanRetrievalFromFusionAndIS" />
+	</bean>
+
+
+
+	<!-- DATA FROM DATABASE -->
+	<!-- 
+	<bean id="dataRetrievalFromDatabase" class="org.gcube.datapublishing.sdmx.datasource.database.SqlDatabaseDataRetrievalManager" >
+	<property name="dataSource" ref="dataSource"/>
+	<property name="dataRetrieverFactoryMap">
+	<map>
+		<entry key="areapopulation" value-ref="sqlDataRetrieverFactory"/>
+	</map>
+	</property>
+	</bean>
+ -->
+	<bean id="beanRetrievalFromFusionAndIS" class="org.gcube.datapublishing.sdmx.datasource.tabman.querymanager.ISRESTSdmxBeanRetrievalManager">
+		<constructor-arg>
+			<value>120000</value>
+		</constructor-arg>
+	</bean>
+	
+	
+	
+	<!-- 
+
+	<bean id="beanRetrievalFromFusion" class="org.sdmxsource.sdmx.structureretrieval.manager.RESTSdmxBeanRetrievalManager">
+		<constructor-arg value="http://node8.d.d4science.research-infrastructures.eu:8080/FusionRegistry/ws/rest" />
+		<property name="serviceRetrievalManager" ref="serviceRetrievalManager" />
+	</bean>
+
+
+	 STRUCTURE FROM FILE
+	<bean id="beanRetrievalFromFile" class="org.sdmxsource.sdmx.structureretrieval.manager.InMemoryRetrievalManager">
+		<constructor-arg ref="structureLocation" />
+		<property name="serviceRetrievalManager" ref="serviceRetrievalManager" />
+	</bean>
+
+
+
+	<bean id="structureLocation" class="org.sdmxsource.util.io.ReadableDataLocationTmp">
+		<constructor-arg value="classpath:structures_full.xml" />
+	</bean>
+	
+	<bean id="serviceRetrievalManager" class="org.sdmxsource.sdmx.structureretrieval.manager.DefaultServiceRetrievalManager">
+		<property name="baseUrl" value="http://localhost:8080/DemoWebApp/ws/rest" />
+	</bean>
+	
+ -->		
+	
+	<bean id="tabmanQuery" class="org.gcube.datapublishing.sdmx.datasource.tabman.querymanager.impl.TabmanQueryImpl" scope="prototype">
+	<property name="dataFactoryMap" ref="dataFactoryMap"/>
+	<property name="dateConverterMap" ref="dateConverterMap"/>
+	<property name="configurationManager" ref="configurationManager"/>
+	</bean>	
+
+	
+ 
+ 	<bean id="dataFactoryMap" class="org.gcube.datapublishing.sdmx.datasource.tabman.querymanager.impl.data.impl.DataFactoryMapImpl">
+ 	<property name="dataFactoryMap">
+ 	<map>
+ 	<entry key="Date" value-ref="dateFactory"/>
+ 	<entry key="Integer" value-ref="integerFactory"/>
+ 	<entry key="Text" value-ref="textFactory"/>
+ 	<entry key="Boolean" value-ref="booleanFactory"/>
+ 	<entry key="Numeric" value-ref="numericFactory"/>	
+ 	
+ 	</map>
+ 	</property>
+ 	</bean>
+
+
+	<bean id="dateFactory" class="org.gcube.datapublishing.sdmx.datasource.tabman.querymanager.impl.data.impl.factories.DateDataFactory"/>
+	<bean id="integerFactory" class="org.gcube.datapublishing.sdmx.datasource.tabman.querymanager.impl.data.impl.factories.IntegerDataFactory"/>
+	<bean id="textFactory" class="org.gcube.datapublishing.sdmx.datasource.tabman.querymanager.impl.data.impl.factories.StringDataFactory"/>
+    <bean id="booleanFactory" class="org.gcube.datapublishing.sdmx.datasource.tabman.querymanager.impl.data.impl.factories.BooleanDataFactory"/>
+    <bean id="numericFactory" class="org.gcube.datapublishing.sdmx.datasource.tabman.querymanager.impl.data.impl.factories.NumericDataFactory"/>
+
+
+	<bean id="dateConverterMap" class="org.gcube.datapublishing.sdmx.datasource.tabman.querymanager.impl.data.impl.DateConverterMapImpl">
+	<property name="dateConverters">
+	<map>
+	<entry key="Date" value-ref="dateConverter"/>
+	</map>
+	</property>
+	<property name="defaultDateConverter" ref="stringConverter"/>
+	</bean>
+
+
+	<bean id="dateConverter" class="org.gcube.datapublishing.sdmx.datasource.tabman.querymanager.impl.data.impl.converters.DateDateConverter"/>
+	<bean id="stringConverter" class="org.gcube.datapublishing.sdmx.datasource.tabman.querymanager.impl.data.impl.converters.StringDateConverter"/>
+	
+	<!--  DATA  FROM TABMAN -->
+
+	<bean id="dataRetrievalFromTabman" class="org.gcube.datapublishing.sdmx.datasource.tabman.TabularDataRetrievalManager" />
+
+
+
+</beans>
+
+
+

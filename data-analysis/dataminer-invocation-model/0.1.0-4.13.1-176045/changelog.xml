@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.data-analysis.dataminer-invocation-model.0-1-0"
+		date="2019-02-27">
+		<Change>[Task 12975] First version
+		</Change>
+	</Changeset>
+</ReleaseNotes>

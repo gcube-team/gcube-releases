@@ -1,0 +1,34 @@
+<ReleaseNotes>
+	<Changeset component="gr.cite.geoanalytics.geoanalytics.1-0-0" date="2016-07-29">
+		<Change>First release</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.geoanalytics.1-1-0" date="2016-11-25">
+		<Change>improved the functionality for data importing</Change>
+		<Change>performance improvements</Change>
+		<Change>groups support</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.geoanalytics.1-2-0" date="2017-03-03">
+		<Change>Layer tags functionality</Change>
+		<Change>Shape import improvements</Change>
+		<Change>Layers management improvements </Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.geoanalytics.2-1-0" date="2017-04-21">
+		<Change>Style management logic</Change>
+		<Change>Shape import improvements</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.geoanalytics.2-2-0" date="2017-05-24">
+		<Change>Plugins logic</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.geoanalytics.2-3-0" date="2017-07-12">
+		<Change>Attributes management logic</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.geoanalytics.2-4-0" date="2017-09-26">
+		<Change>Plugin functionalities</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.geoanalytics.2-5-0" date="2017-09-26">
+		<Change>Plugin functionalities</Change>
+	</Changeset>
+	<Changeset component="gr.cite.geoanalytics.geoanalytics.2-6-0" date="2018-01-18">
+		<Change>Layer attribute visualization bug fix</Change>
+	</Changeset>
+</ReleaseNotes>

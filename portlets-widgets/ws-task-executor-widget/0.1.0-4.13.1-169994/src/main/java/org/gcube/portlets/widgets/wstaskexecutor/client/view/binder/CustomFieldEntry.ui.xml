@@ -1,0 +1,40 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<g:HTMLPanel>
+		<b:ControlGroup ui:field="cg_parameter">
+			<b:ControlLabel>Parameter</b:ControlLabel>
+			<b:Controls>
+				<b:InputAddOn prependText="Type:" addStyleNames="my-prepend-width">
+					<b:ListBox name="Select the Type of Parameter..." b:id="field_select_parameter"
+						ui:field="field_select_parameter" addStyleNames="my-select-width">
+					</b:ListBox>
+				</b:InputAddOn>
+			</b:Controls>
+			<b:Controls>
+				<b:InputAddOn prependText="Key:" ui:field="keyFieldPrepend"
+					addStyleNames="my-prepend-width">
+					<b:TextBox addStyleNames="my-input-width" />
+				</b:InputAddOn>
+			</b:Controls>
+			<b:Controls ui:field="control_input_value">
+				<b:InputAddOn addStyleNames="my-prepend-width"
+					prependText="Value:" ui:field="valueFieldPrepend">
+					<b:TextBox ui:field="field_input_value" addStyleNames="my-input-width" />
+				</b:InputAddOn>
+			</b:Controls>
+			<b:Controls ui:field="control_select_value">
+				<b:InputAddOn addStyleNames="my-prepend-width"
+					prependText="Values:" ui:field="valuesSelectPrepend">
+					<b:ListBox name="Select the value of Parameter..." b:id="field_select_value"
+						ui:field="field_select_value" addStyleNames="my-input-width">
+					</b:ListBox>
+				</b:InputAddOn>
+			</b:Controls>
+			<b:Controls>
+				<b:Button icon="REMOVE_SIGN" title="Remove Parameter" text="Remove Parameter"
+					ui:field="removeCustomField" type="LINK"></b:Button>
+			</b:Controls>
+		</b:ControlGroup>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Stateful"
+    targetNamespace="http://acme.org/sample"
+    xmlns:tns="http://acme.org/sample"
+  	xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+    xmlns:coretypes="http://gcube-system.org/namespaces/common/core/types"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider">
+    
+    <import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" location="../gcube/common/core/providers/GCUBEProvider.wsdl"/>
+    <import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+    
+ 	<types>
+	<xsd:schema targetNamespace="http://acme.org/sample">    	
+	    <xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+	    	
+  		<xsd:element name="visit" type="coretypes:VOID" />
+		<xsd:element name="visitResponse" type="xsd:string" />		
+		
+		<xsd:element name="Name" type="xsd:string"/>
+        <xsd:element name="Visits" type="xsd:int"/>
+        
+            <!-- <xsd:element name="StatefulResourceProperties">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns:Name" minOccurs="1" maxOccurs="1"/>
+                        <xsd:element ref="tns:Visits" minOccurs="1" maxOccurs="1"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>  -->	
+            
+	</xsd:schema>
+	</types>
+
+	<message name="visitInputMessage">
+		<part name="request" element="tns:visit"/>
+	</message>
+	<message name="visitOutputMessage">
+		<part name="response" element="tns:visitResponse"/>
+	</message>
+
+	<portType name="StatefulPortType" wsdlpp:extends="provider:GCUBEProvider">
+        
+		<operation name="visit">
+			<input message="tns:visitInputMessage"/>
+			<output message="tns:visitOutputMessage"/>
+		<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+	</operation>	
+	</portType>
+
+</definitions>

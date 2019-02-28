@@ -1,0 +1,215 @@
+@media (max-width: 569px) {
+	.custom-row{
+		display: table-row;
+	}
+	
+	.techno-economic-analysis-portlet .tea_input_currency{
+		width: calc(10px + 30vw);
+		margin:0;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_production_model{
+		width: calc(80px + 30vw);
+	} 
+	
+	.techno-economic-analysis-portlet .tea_input_percent{
+		width: calc(64px + 30vw);
+	}	
+	.techno-economic-analysis-portlet .tea_currency{
+		width: 50px;
+	}		
+}
+
+@media (min-width: 570px) and (max-width: 679px) {
+	.custom-row{
+		display: table-row;
+	}
+	
+	.techno-economic-analysis-portlet .tea_input_currency{
+		width: calc(10px + 40vw);
+		margin:0;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_production_model{
+		width: calc(80px + 40vw);
+	} 
+	
+	.techno-economic-analysis-portlet .tea_input_percent{
+		width: calc(64px + 40vw);
+	}	
+	.techno-economic-analysis-portlet .tea_currency{
+		width: 50px;
+	}	
+}
+
+@media (min-width: 680px) and (max-width: 929px) {
+	.custom-row{
+		display: table-row;
+	}
+	
+	.techno-economic-analysis-portlet .tea_input_currency{
+		width: calc(10px + 50vw);
+		margin:0;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_production_model{
+		width: calc(80px + 50vw);
+	} 
+	
+	.techno-economic-analysis-portlet .tea_input_percent{
+		width: calc(64px + 50vw);
+	}	
+	.techno-economic-analysis-portlet .tea_currency{
+		width: 50px;
+	}	
+}
+
+@media (min-width:930px) and (max-width: 1199px) {
+	.custom-container{  
+		display: table-row;
+		width:100%;clear: both;
+	}	
+	.custom-col{
+	 	display: table-cell;	 	
+	 	width:55%;
+	}	
+	
+	.custom-col:nth-child(3){
+		display:block;
+	}
+	
+	.custom-row{
+		display: table-row;
+		width:100%;
+	}	 
+
+	.techno-economic-analysis-portlet .tea_input_currency{
+		width: 10vw;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_production_model{
+		width: calc(14px + 15.5vw);
+	} 
+	
+	.techno-economic-analysis-portlet .tea_input_percent{
+		width: 15.5vw;
+	}
+ 
+	.techno-economic-analysis-portlet .tea_currency{
+		width:5vw;
+	}	
+}
+
+@media (min-width: 1200px) and (max-width: 1289px) {
+	.custom-container{  
+		display: table;
+		width:100%;
+	}	
+	
+	.custom-col{
+		display: table-cell;
+		width:20%;
+	}
+		
+	.custom-row{
+		display: table-row;
+		width:100%;
+	}	
+
+ 	.techno-economic-analysis-portlet .tea_input_currency{
+		width: 5vw;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_production_model{
+		width: calc(14px + 10vw);
+	} 
+	
+	.techno-economic-analysis-portlet .tea_input_percent{
+		width: 10vw;
+	}
+ 
+	.techno-economic-analysis-portlet .tea_currency{
+		width:45px;
+	}	
+}
+
+@media (min-width: 1290px) {
+	.custom-container{  
+		display: table;
+		width:100%;
+	}	
+	
+	.custom-col{
+		display: table-cell;
+		width:20%;
+	}
+		
+	.custom-row{
+		display: table-row;
+		width:100%;
+	}		
+
+	.techno-economic-analysis-portlet .tea_input_currency{
+		width: 5vw;
+	} 
+	
+	.techno-economic-analysis-portlet #tea_production_model{
+		width: calc(14px + 9vw);
+	} 
+	
+	.techno-economic-analysis-portlet .tea_input_percent{
+		width: 9vw;
+	}
+	.techno-economic-analysis-portlet .tea_currency{
+		width:3.75vw;
+	}
+}
+
+@media (min-width: 800px) and (max-width: 1389px){
+	.aui input[type="color"], 
+	.aui input[type="date"], 
+	.aui input[type="datetime"], 
+	.aui input[type="datetime-local"], 
+	.aui input[type="email"], 
+	.aui input[type="month"], 
+	.aui input[type="number"], 
+	.aui input[type="password"], 
+	.aui input[type="search"], 
+	.aui input[type="tel"], 
+	.aui input[type="text"], 
+	.aui input[type="time"], 
+	.aui input[type="url"], 
+	.aui input[type="week"], 
+	.aui select, 
+	.aui textarea, 
+	.aui .input-prepend .add-on, 
+	.aui .navbar-search .search-query, 
+	.aui .uneditable-input ,
+	.aui label {
+	    font-size: 13px;
+	}
+}
+
+@media (min-width: 200px) and (max-width: 799px){
+	.aui input[type="color"], 
+	.aui input[type="date"], 
+	.aui input[type="datetime"], 
+	.aui input[type="datetime-local"], 
+	.aui input[type="email"], 
+	.aui input[type="month"], 
+	.aui input[type="number"], 
+	.aui input[type="password"], 
+	.aui input[type="search"], 
+	.aui input[type="tel"], 
+	.aui input[type="text"], 
+	.aui input[type="time"], 
+	.aui input[type="url"], 
+	.aui input[type="week"], 
+	.aui select, 
+	.aui textarea, 
+	.aui .input-prepend .add-on, 
+	.aui .navbar-search .search-query, 
+	.aui .uneditable-input {
+	    font-size: 16px;
+	}
+}

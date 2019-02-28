@@ -1,0 +1,11 @@
+/*************************************************
+*
+* SPECIFIC CSS FOR WORKSPACE EXPLORER
+* 
+*
+* See: org.gcube.portlets.widgets.wsexplorer.resources.BootstrapOverrideResources
+*
+**************************************************/
+div.ExpLeftPanel li {
+	 list-style-type: none;
+}

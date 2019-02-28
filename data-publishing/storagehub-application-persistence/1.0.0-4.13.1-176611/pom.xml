@@ -1,0 +1,110 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.gcube.tools</groupId>
+    <artifactId>maven-parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  
+  <groupId>org.gcube.data-publishing</groupId>
+  <artifactId>storagehub-application-persistence</artifactId>
+  <version>1.0.0-4.13.1-176611</version>
+  <packaging>jar</packaging>
+  <description>
+  	This library allows any application to persist in the workspace home
+  	any file. The library organizes the documents creating one folder per context
+  	and save the files under a tree created using the file mimetype.
+  </description>
+  
+  
+  <properties>
+		<version.jersey>2.24.1</version.jersey>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<webappDirectory>${project.basedir}/src/main/webapp/WEB-INF</webappDirectory>
+		<!-- webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory -->
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+		<serviceClass>DataPublishing</serviceClass>
+	</properties>
+
+	<scm>
+		<connection>scm:https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-publishing/${project.artifactId}</connection>
+		<developerConnection>scm:https://svn.d4science.research-infrastructures.eu/gcube//trunk/data-publishing/${project.artifactId}</developerConnection>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-publishing/${project.artifactId}</url>
+	</scm>
+  
+  <dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>gcube-bom</artifactId>
+				<version>1.2.1-4.13.1-176441</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>gcube-smartgears-bom</artifactId>
+				<version>1.0.1-4.13.1-176574</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+  	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>storagehub-client-library</artifactId>
+			<version>1.0.3-4.13.1-176597</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+  			<artifactId>gxHTTP</artifactId>
+		</dependency>
+
+		<!-- Home Library dependencies MUST be removed when the storagehub add missing features -->
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library-jcr</artifactId>
+			<version>2.11.5-4.13.1-169333</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library</artifactId>
+			<version>2.10.2-4.13.1-164488</version>
+		</dependency>
+		<!-- END of  Home Library dependencies -->
+  		<!-- Test libraries -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.11</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>make-servicearchive</id>
+						<phase>package</phase>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.ToU-Portlet.1-0-1"
+		date="2017-10-25">
+		<Change>Fixed tou url</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.ToU-Portlet.1-0-0"
+		date="2017-04-25">
+		<Change>First version</Change>
+	</Changeset>
+</ReleaseNotes>

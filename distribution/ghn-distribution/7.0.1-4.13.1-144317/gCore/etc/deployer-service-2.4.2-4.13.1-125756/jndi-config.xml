@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+
+	<service name="gcube/common/vremanagement/Deployer/service">
+		<environment 
+			name="configDir" 
+		 	value="etc/deployer-service-2.4.2-4.13.1-125756" 
+		 	type="java.lang.String"
+		 	override="false" />	
+		 	
+		 	<environment 
+			name="gcore-filelist" 
+		 	value="gcore-filelist.txt" 
+		 	type="java.lang.String"
+		 	override="false" />		 		 	 	
+	 	
+	 </service>
+	 
+	<service name="gcube/common/vremanagement/Deployer">
+	
+		<environment 
+			name="name" 
+		 	value="Deployer" 
+		 	type="java.lang.String"
+		 	override="false" />
+		 	
+		<environment 
+				name="RPDName"
+				value="DeployerResourceProperties"
+				type="java.lang.String"
+				override="false"/>
+							
+		<!-- 14/4/09: so far, none exploits the information published by the Deployer and it's an overhead to publish them...
+						may be in the future, they will be useful outside the GHN too
+		<resource name="publicationProfile" type="org.gcube.common.core.state.GCUBEPublicationProfile">	
+				<resourceParams>
+					<parameter>
+						<name>factory</name>
+						<value>org.globus.wsrf.jndi.BeanFactory</value>
+					</parameter>
+					<parameter>
+						<name>mode</name>
+						<value>pull</value>
+					</parameter>
+					<parameter>
+						<name>fileName</name>
+						<value>registration.xml</value>
+					</parameter>
+				</resourceParams>
+		</resource>
+			 -->		
+		<resource name="home" type="org.gcube.common.vremanagement.deployer.impl.state.DeployerResourceHome">				
+					<resourceParams>
+						<parameter>
+							<name>factory</name>
+							<value>org.globus.wsrf.jndi.BeanFactory</value>
+						</parameter>
+						<parameter>
+							<name>resourceClass</name>
+							<value>org.gcube.common.vremanagement.deployer.impl.state.DeployerResource</value>
+						</parameter>						
+						<parameter>
+							<name>persistenceDelegateClass</name>
+							<value>org.gcube.common.vremanagement.deployer.impl.persistence.DeployerPersistenceDelegate</value>
+						</parameter>											
+					</resourceParams>
+					
+			</resource>	
+	
+	</service>	
+	
+</jndiConfig>

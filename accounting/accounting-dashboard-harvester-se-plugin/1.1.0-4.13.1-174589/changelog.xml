@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.accounting.accounting-dashboard-harvester-se-plugin.1.1.0" date="2019-02-27">
+		<Change>Fixed scope of dependencies #12985</Change>	
+	</Changeset>
+	<Changeset component="org.gcube.accounting.accounting-dashboard-harvester-se-plugin.1.0.0" date="2018-10-10">
+		<Change>First Release</Change>	
+	</Changeset>
+</ReleaseNotes>

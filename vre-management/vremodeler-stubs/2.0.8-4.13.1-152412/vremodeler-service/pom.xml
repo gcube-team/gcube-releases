@@ -1,0 +1,135 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>vremodeler</artifactId>
+		<groupId>org.gcube.resourcemanagement</groupId>
+		<version>2.0.8-4.13.1-152412</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<artifactId>vremodeler-service</artifactId>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-bom</artifactId>
+				<version>2.2.1-4.13.1-148648</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>gcf</artifactId>
+                        <scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resourcemanagement</groupId>
+			<artifactId>vremodeler-stubs</artifactId>
+			<version>2.0.8-4.13.1-152412</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resourcemanagement</groupId>
+			<artifactId>resource-manager-stubs</artifactId>
+                        <scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.vremanagement</groupId>
+			<artifactId>vremodeler-utils</artifactId>
+			<version>1.0.1-4.13.1-126571</version>
+		</dependency>
+		<dependency>
+			<groupId>com.j256.ormlite</groupId>
+			<artifactId>ormlite-core</artifactId>
+			<version>4.40</version>
+		</dependency>
+		<dependency>
+			<groupId>com.j256.ormlite</groupId>
+			<artifactId>ormlite-jdbc</artifactId>
+			<version>4.40</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>1.8.0.10</version>
+			<scope>runtime</scope>
+		</dependency>
+	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>local-deploy</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.gcube.tools</groupId>
+						<artifactId>maven-service-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>local-deploy</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<build>
+
+		<plugins>
+
+			<!-- builds Gar at install time -->
+			<plugin>
+				<groupId>org.gcube.tools</groupId>
+				<artifactId>maven-service-plugin</artifactId>
+				<configuration>
+					<fullGar>true</fullGar>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-gar</id>
+						<goals>
+							<goal>gar-gen</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>

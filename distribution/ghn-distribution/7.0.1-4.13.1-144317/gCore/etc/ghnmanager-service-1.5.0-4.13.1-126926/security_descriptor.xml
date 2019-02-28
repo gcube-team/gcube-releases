@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<securityConfig xmlns="http://www.globus.org" >
+        <authz value="none"/>   
+        
+        <method name="addRIToScope">
+                <auth-method>
+                        <none/>
+                </auth-method>
+        </method>
+        
+        <method name="removeRIFromScope">
+                <auth-method>
+                        <none/>
+                </auth-method>
+        </method>
+        
+        <method name="addScope">
+                <auth-method>
+                        <none/>
+                </auth-method>
+        </method>
+        
+        <method name="shutdown">
+                <auth-method>
+                        <GSISecureConversation/>
+                </auth-method>
+        </method>
+        
+        <method name="removeScope">
+                <auth-method>
+                        <none/>
+                </auth-method>
+        </method>
+        
+        <method name="queryResourceProperties">
+                <auth-method>
+                        <none/>
+                </auth-method>
+        </method>
+        
+        <method name="subscribe">
+                <auth-method>
+                        <none/>
+                </auth-method>
+        </method>
+        
+        <method name="getCurrentMessage">
+                <auth-method>
+                        <none/>
+                </auth-method>
+        </method>
+
+<!--operates with delegation of caller's credentials-->
+<run-as>
+        <caller-identity/>
+</run-as>
+
+
+</securityConfig>

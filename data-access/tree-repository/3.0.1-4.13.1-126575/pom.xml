@@ -1,0 +1,293 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>org.gcube.data.access</groupId>
+	<artifactId>tree-repository</artifactId>
+	<version>3.0.1-4.13.1-126575</version>
+
+	<name>Tree Repository</name>
+	<description>A plugin of the Tree Manager service that offers native tree storage</description>
+
+
+	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/trunk/data-access/${project.artifactId}</connection>
+		<developerConnection>scm:svn:https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-access/${project.artifactId}</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/trunk/data-access/${project.artifactId}</url>
+	</scm>
+
+	<properties>
+		<distroDirectory>distro</distroDirectory>
+		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
+		<build.date>${maven.build.timestamp}</build.date>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>tree-repository-requests</artifactId>
+			<version>1.0.0-4.13.1-125750</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>tree-manager-framework</artifactId>
+			<version>3.0.1-4.13.1-125723</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>trees</artifactId>
+			<version>1.4.2-4.13.1-126454</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.neo4j</groupId>
+			<artifactId>neo4j-kernel</artifactId>
+			<version>1.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.6.4</version>
+			<scope>compile</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>tree-manager-library</artifactId>
+			<version>3.0.1-4.13.1-125728</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>1.8.5</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.6.4</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- depend on service impl for integration tests -->
+ 		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>tree-manager-service</artifactId>
+			<version>3.0.3-4.13.1-125718</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- import service gar for integration tests (using a copy-dependencies 
+			instead of copy allows to specify ranges) -->
+		<dependency>
+			<groupId>org.gcube.data.access</groupId>
+			<artifactId>tree-manager-service</artifactId>
+			<type>gar</type>
+			<version>3.0.3-4.13.1-125718</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.tools</groupId>
+			<artifactId>my-container</artifactId>
+			<version>2.0.1-4.13.1-126937</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- my-container distribution for integration testing -->
+		<dependency>
+			<groupId>org.gcube.tools</groupId>
+			<artifactId>my-container</artifactId>
+			<version>2.0.1-4.13.1-126937</version>
+			<type>tar.gz</type>
+			<classifier>distro</classifier>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>local-deploy</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.gcube.tools</groupId>
+						<artifactId>maven-service-plugin</artifactId>
+						<version>1.0.0</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>local-deploy</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+	</profiles>
+
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>profile.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<configuration>
+							<descriptors>
+								<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+							</descriptors>
+						</configuration>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>standalone</id>
+						<configuration>
+							<descriptors>
+								<descriptor>${distroDirectory}/standalone.xml</descriptor>
+							</descriptors>
+						</configuration>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.3</version>
+				<executions>
+					<execution>
+						<id>install-service</id>
+						<phase>generate-test-resources</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<includeArtifactIds>tree-manager-service</includeArtifactIds>
+							<overWriteSnapshots>true</overWriteSnapshots>
+							<includeTypes>gar</includeTypes>
+							<excludeTransitive>true</excludeTransitive>
+							<outputDirectory>src/test/resources</outputDirectory>
+							<stripVersion>true</stripVersion>
+						</configuration>
+					</execution>
+					<execution>
+						<id>install-my-container</id>
+						<phase>generate-test-resources</phase><!-- runs before tests -->
+						<configuration>
+							<includeArtifactIds>my-container</includeArtifactIds>
+							<includeTypes>tar.gz</includeTypes>
+							<overWriteIfNewer>false</overWriteIfNewer>
+							<outputDirectory>${project.basedir}</outputDirectory>
+							<markersDirectory>${project.basedir}</markersDirectory>
+						</configuration>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+
+
+		<pluginManagement>
+
+			<plugins>
+
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-dependency-plugin</artifactId>
+										<versionRange>[2.3,)</versionRange>
+										<goals>
+											<goal>copy-dependencies</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+
+		</pluginManagement>
+
+
+	</build>
+
+</project>

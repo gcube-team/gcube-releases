@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.2-2-2" date="${buildDate}">
+		<Change>Using gcube-bom and gcube-smartgears-bom instead of maven-smartgears-bom</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.2-2-1" date="2017-02-15">
+		<Change>Fixed changelog</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.2-2-0" date="2017-02-15">
+		<Change>Changed log level from FATAL to ERROR #9708</Change>
+		<Change>Added document-store-lib-accounting-service in place of document-store-lib-couchbase</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.2-1-3" date="2017-10-09">
+		<Change>Added logback 1.11 to support Time and Size rolling of logs</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.2-1-2" date="2017-05-02">
+		<Change>common-smartgear-utils re-adedd to the distribution</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.2-1-0" date="2017-02-01">
+		<Change>Fixed distro files</Change>
+		<Change>Added data-transfer service as part of the distribution</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.2-0-0" date="2016-02-08">
+		<Change>Added new Authorization Mechanism based on token</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.1-2-6" date="2016-01-08">
+		<Change>smartgears-distribution 1.2.6: set default log level to WARN (refs #2145)</Change>
+		<Change>smartgears-distribution 1.2.6: distribution field on monitor is missing when a smartgears node is upgraded (refs #1268)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.1-2-5" date="2015-07-31">
+		<Change>Added smartgear-distribution (this project) version on ghn profile.</Change>
+		<Change>Added accounting and authorization libs</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.1-2-4" date="2015-07-22">
+		<Change>Added possibility to use WEB_CONTAINER_HOME to specify the container folder. This environment variable has priority over CATALINA_HOME in the install script.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.1-2-3" date="2015-06-18">
+		<Change>Stripped version from name of the included war</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.1-2-2" date="2015-04-28">
+		<Change>Moved libs and war directories under target to make mvn clean properly working. The generated tar.gz remain the same</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.1-2-1" date="2015-04-15">
+		<Change>smartgear-distribution-bundle version is published on ghn profile</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.1-2-0" date="2014-04-04">
+		<Change>included smartgears-utils</Change>
+		<Change>upgraded clean scripts to clean the IS</Change>
+		<Change>added symlink for shared libs</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.1-1-0" date="2014-01-31">
+		<Change>JAVA 7 Release</Change>
+		<Change>Included wHN manager service</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.smartgears-distribution.1-0-0" date="2013-10-24">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

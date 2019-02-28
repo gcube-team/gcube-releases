@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.data-miner-executor.1-0-0" date="2019-01-31">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

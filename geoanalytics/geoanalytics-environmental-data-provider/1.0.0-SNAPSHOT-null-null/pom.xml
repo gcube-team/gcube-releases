@@ -7,7 +7,7 @@
 	<groupId>gr.cite.geoanalytics</groupId>
 	<artifactId>environmental-data-provider</artifactId>
 	<packaging>jar</packaging>
-	<version>1.1.0-4.13.0-154550</version>
+	<version>1.1.0-4.13.1-154550</version>
 	<name>geoanalytics-environmental-data-provider</name>
 	<url>http://maven.apache.org</url>
 

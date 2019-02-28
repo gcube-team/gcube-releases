@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="RegistryFactory"
+    targetNamespace="http://gcube-system.org/namespaces/informationsystem/registry"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor"
+    xmlns:tns="http://gcube-system.org/namespaces/informationsystem/registry"
+    xmlns:provider="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider"
+    xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd"
+    xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl"
+    xmlns:wsntw="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl"
+    xmlns:corefaults="http://gcube-system.org/namespaces/common/core/faults"
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"	
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<wsdl:import namespace="http://gcube-system.org/namespaces/common/core/porttypes/GCUBEProvider" location="../gcube/common/core/providers/GCUBEProvider.wsdl"/>
+
+<wsdl:import namespace="http://docs.oasis-open.org/wsn/2004/06/wsn-WS-BaseNotification-1.2-draft-01.wsdl" location="../wsrf/notification/WS-BaseN.wsdl"/>
+    
+<wsdl:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" location="../wsrf/properties/WS-ResourceProperties.wsdl" />
+
+<wsdl:import namespace="http://gcube-system.org/namespaces/common/core/faults" location="../gcube/common/core/faults/GCUBEFaults.wsdl"/>
+	
+<!--===========================================================
+                      T Y P E S      
+  ============================================================-->
+<types>
+	<xsd:schema targetNamespace="http://gcube-system.org/namespaces/informationsystem/registry"
+    xmlns:tns="http://gcube-system.org/namespaces/informationsystem/registry"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<xsd:import namespace="http://gcube-system.org/namespaces/common/core/types" schemaLocation="../gcube/common/core/types/GCUBETypes.xsd"/>
+    <xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" schemaLocation="../ws/addressing/WS-Addressing.xsd" />
+
+
+	<!-- REQUESTS AND RESPONSES -->
+
+
+	<xsd:complexType name="UpdateResourceMessage">
+		<xsd:sequence>
+			<xsd:element name="uniqueID" type="xsd:string"/>
+			<xsd:element name="type" type="xsd:string"/>
+			<xsd:element name="xmlProfile" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+
+	<xsd:complexType name="CreateResourceMessage">
+			<xsd:sequence>
+				<xsd:element name="profile" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="type" type="xsd:string"/>
+				<xsd:element name="scopes" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="RemoveResourceMessage">
+			<xsd:sequence>
+				<xsd:element name="uniqueID" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="type" type="xsd:string" minOccurs="1" maxOccurs="1" />
+			</xsd:sequence>
+	</xsd:complexType>		
+
+	 <xsd:element name="createResource" type="tns:CreateResourceMessage"/>
+	
+ 	 <xsd:element name="createResourceResponse" type="xsd:string"/>
+ 	
+	 <xsd:element name="updateResource" type="tns:UpdateResourceMessage"/>
+		
+	 <xsd:element name="updateResourceResponse">
+		<xsd:complexType/>
+	 </xsd:element>
+	 	
+	 <xsd:element name="removeResource" type="tns:RemoveResourceMessage"/>
+	
+	 <xsd:element name="removeResourceResponse">
+		<xsd:complexType/>
+	 </xsd:element>		 	
+	
+	<!-- RESOURCE PROPERTIES  -->
+	
+	<xsd:complexType name="RegistryProperty">	
+		<xsd:sequence>
+				<xsd:element name="uniqueID" type="xsd:string" nillable="true"/>
+				<xsd:element name="profile" type="xsd:string" nillable="true"/>  
+		  		<xsd:element name="operationType" type="xsd:string" nillable="true"/> 
+		  		<xsd:element name="changeTime" type="xsd:dateTime" nillable="true"/>
+		  		<xsd:element name="invocationScope" type="xsd:string" nillable="true"/>  
+		 </xsd:sequence>
+  	</xsd:complexType>
+  	
+  	
+	<xsd:element name="RunningInstance" type="tns:RegistryProperty"/>
+	
+	<xsd:element name="ExternalRunningInstance" type="tns:RegistryProperty"/>
+	
+	<xsd:element name="Service" type="tns:RegistryProperty"/>
+	
+	<xsd:element name="Collection" type="tns:RegistryProperty"/>
+			
+	<xsd:element name="GHN" type="tns:RegistryProperty"/>
+						
+	<xsd:element name="gLiteSE" type="tns:RegistryProperty"/>
+		
+	<xsd:element name="gLiteCE" type="tns:RegistryProperty"/>
+		
+	<xsd:element name="gLiteSite" type="tns:RegistryProperty"/>
+
+	<xsd:element name="gLiteService" type="tns:RegistryProperty"/>
+	
+	<xsd:element name="VRE" type="tns:RegistryProperty"/>
+	
+	<xsd:element name="MetadataCollection" type="tns:RegistryProperty"/>
+	
+	<xsd:element name="GenericResource" type="tns:RegistryProperty"/>
+	
+	<xsd:element name="RuntimeResource" type="tns:RegistryProperty"/>
+	
+		
+	<xsd:element name="RegistryFactoryResourceProperties">
+        <xsd:complexType>
+               <xsd:sequence>                          
+                      <xsd:element ref="tns:RunningInstance" minOccurs="1" maxOccurs="1"/>
+                      <xsd:element ref="tns:ExternalRunningInstance" minOccurs="1" maxOccurs="1"/>
+                      <xsd:element ref="tns:Service" minOccurs="1" maxOccurs="1"/>
+                      <xsd:element ref="tns:Collection" minOccurs="1" maxOccurs="1"/>
+                      <xsd:element ref="tns:GHN" minOccurs="1" maxOccurs="1"/>
+                      <xsd:element ref="tns:gLiteSE" minOccurs="1" maxOccurs="1"/>
+                      <xsd:element ref="tns:gLiteCE" minOccurs="1" maxOccurs="1"/>
+                      <xsd:element ref="tns:gLiteSite" minOccurs="1" maxOccurs="1"/>
+                      <xsd:element ref="tns:gLiteService" minOccurs="1" maxOccurs="1"/>
+                      <xsd:element ref="tns:VRE" minOccurs="1" maxOccurs="1"/>
+                      <xsd:element ref="tns:MetadataCollection" minOccurs="1" maxOccurs="1"/>
+                      <xsd:element ref="tns:GenericResource" minOccurs="1" maxOccurs="1"/>
+                      <xsd:element ref="tns:RuntimeResource" minOccurs="1" maxOccurs="1"/>
+              </xsd:sequence>
+        </xsd:complexType>
+     </xsd:element>
+
+	<!--  FAULT DEFINITIONS  -->
+ 	<xsd:element name="schemaValidationFault" type="tns:schemaValidationFault" />
+    
+    <xsd:complexType name="schemaValidationFault">
+              <xsd:complexContent>
+                    <xsd:extension base="corefaults:GCUBEUnrecoverableFault">
+                        <xsd:sequence>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+    </xsd:complexType>
+            
+    
+ 	<xsd:element name="profileAlreadyRegisteredFault" type="tns:profileAlreadyRegisteredFault" />
+    
+    <xsd:complexType name="profileAlreadyRegisteredFault">
+              <xsd:complexContent>
+                    <xsd:extension base="corefaults:GCUBEUnrecoverableFault">
+                        <xsd:sequence/>                        
+                    </xsd:extension>
+                </xsd:complexContent>
+    </xsd:complexType>
+
+ 	<xsd:element name="resourceNotAcceptedFault">    
+    	<xsd:complexType>
+              <xsd:complexContent>
+                    <xsd:extension base="corefaults:GCUBEUnrecoverableFault">
+                        <xsd:sequence/>
+                    </xsd:extension>
+                </xsd:complexContent>
+    	</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>
+
+</types>
+
+
+<!--============================================================
+                       M E S S A G E S                
+  ============================================================-->
+
+<message name="CreateResourceRequest">
+	<part name="request" element="tns:createResource"/>
+</message>
+<message name="CreateResourceResponse">
+	<part name="response" element="tns:createResourceResponse"/>
+</message>
+
+<message name="UpdateResourceRequest">
+	<part name="request" element="tns:updateResource"/>
+</message>
+<message name="UpdateResourceResponse">
+	<part name="response" element="tns:updateResourceResponse"/>
+</message>
+
+<message name="RemoveResourceRequest">
+	<part name="request" element="tns:removeResource"/>
+</message>
+<message name="RemoveResourceResponse">
+	<part name="response" element="tns:removeResourceResponse"/>
+</message>
+
+<message name="schemaValidationFaultMessage">
+	   <part name="fault" element="tns:schemaValidationFault"/>
+</message>
+<message name="profileAlreadyRegisteredFaultMessage">
+	   <part name="fault" element="tns:profileAlreadyRegisteredFault"/>
+</message>
+
+<message name="resourceNotAcceptedFaultMessage">
+	   <part name="fault" element="tns:resourceNotAcceptedFault"/>
+</message>
+
+<!--============================================================
+                       P O R T T Y P E
+  ============================================================-->
+<portType name="RegistryFactoryPortType"
+	wsdlpp:extends="wsntw:NotificationProducer
+                    provider:GCUBEProvider"
+  wsrp:ResourceProperties="tns:RegistryFactoryResourceProperties">
+  
+ <operation name="createResource">
+		<input message="tns:CreateResourceRequest"/>
+		<output message="tns:CreateResourceResponse"/>
+ 		<fault name="fault" message="tns:profileAlreadyRegisteredFaultMessage"></fault>
+ 		<fault name="fault" message="tns:schemaValidationFaultMessage"></fault>
+ 		<fault name="fault" message="tns:resourceNotAcceptedFaultMessage"></fault>
+	</operation>
+	<operation name="updateResource">
+		<input message="tns:UpdateResourceRequest"/>
+		<output message="tns:UpdateResourceResponse"/>
+		<fault name="fault" message="tns:schemaValidationFaultMessage"></fault>
+		<fault name="fault" message="tns:resourceNotAcceptedFaultMessage"></fault>
+	</operation>
+	<operation name="removeResource">
+		<input message="tns:RemoveResourceRequest"/>
+		<output message="tns:RemoveResourceResponse"/>
+		<fault name="fault" message="corefaults:GCUBEFaultMessage"></fault>
+	</operation>	
+	
+</portType>
+
+</definitions>

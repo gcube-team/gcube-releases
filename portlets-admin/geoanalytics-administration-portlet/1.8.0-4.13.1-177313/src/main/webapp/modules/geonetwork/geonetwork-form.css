@@ -1,0 +1,40 @@
+.aui .geonetwork-publisher-metadata-form .validation-error-color-red {
+	color: #b94a48;
+}
+
+.aui .geonetwork-publisher-metadata-form .validation-error-color-red label {
+	color: #b94a48;
+}
+
+.aui .geonetwork-publisher-metadata-form {
+	padding: 10px;
+}
+
+.aui .geonetwork-publisher-metadata-form .control-group {
+	margin-bottom: 0px;
+}
+
+.aui .geonetwork-publisher-metadata-form .control-group label.control-label {
+	text-align: left;
+}
+
+.aui .geonetwork-publisher-metadata-form .control-group .controls textarea {
+	float: right;
+	resize: none;
+}
+
+.aui .geonetwork-publisher-metadata-form .control-group .controls .help-inline {
+	float: right;
+}
+
+.aui .geonetwork-publisher-metadata-form .makeMeOrange {
+	color: #f89406;
+	margin: 5px;
+	float: right;
+}
+
+.aui .geonetwork-publisher-metadata-form .header-description {
+	color: #bfbfbf;
+	text-align: left;
+	margin: 0px;
+}

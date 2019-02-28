@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<securityConfig xmlns="http://www.globus.org">
+    <credential>
+        <key-file value="/etc/grid-security/containerkey.pem"/>
+        <cert-file value="/etc/grid-security/containercert.pem"/>
+    </credential>
+    <context-timer-interval value="300000"/>
+    <!-- <gridmap value="/etc/grid-security/grid-mapfile"/> -->
+</securityConfig>

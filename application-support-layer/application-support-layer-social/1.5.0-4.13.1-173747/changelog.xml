@@ -1,0 +1,160 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.1-5-0"
+		date="2018-10-08">
+		<Change>Feature #12613, Replace use of "$" character with "_" when sending notification emails about posts and messages</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.1-4-0"
+		date="2018-06-19">
+		<Change>Added support for storage hub model in workspace related notifications</Change>
+		<Change>Feature #11739, Revise posts and comments notification emails</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.1-3-0"
+		date="2017-01-16">
+		<Change>partially removed portal context dependency (where possible)</Change>
+		<Change>added support to job notifications</Change>
+		<Change>added support for ticket #6342</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.1-1-0"
+		date="2016-09-29">
+		<Change>Revised notification text</Change>
+		<Change>Vre's name is now reported in email's subject</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-16-0"
+		date="2016-02-29">
+		<Change>Added original discussion in email's body</Change>
+		<Change>Vre's name is now reported in email's subject</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-15-0"
+		date="2015-10-09">
+		<Change>Added message body in notifications for messages
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-14-0"
+		date="2015-07-15">
+		<Change>Added Support for user reply via mail to post and comment
+			notifications
+		</Change>
+		<Change>Added Support for user subscribe/favorite via mail to post
+			notifications
+		</Change>
+		<Change>Added Notifications support for Tabular Data Manager</Change>
+		<Change>Revised the way we shorten posts' text when this is very long,
+			better heuristic used
+		</Change>
+		<Change>Revised the way we format mail notification messages, user
+			text is now more clear and visible
+		</Change>
+		<Change>Revised the way we provide back links for posts, removed
+			assumption that News Feed is always present the default community
+			page
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-13-1"
+		date="2015-05-05">
+		<Change>Fix for incident #1081 Notification html email formatting
+			problems when post is favorited
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-13-0"
+		date="2014-11-03">
+		<Change>Integrated notifications for set/unset shared folder
+			administrator
+		</Change>
+		<Change>Integrated support for hashtags </Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-12-0"
+		date="2014-09-12">
+		<Change>Updated email format to actually send text plain emails
+			without garbling html
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-11-0"
+		date="2014-07-01">
+		<Change>Implemented direct email sending through an external SMTP
+			Server (if available in the infrastructure)
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-10-2"
+		date="2014-06-19">
+		<Change>Fixed bug when notifications involved error in the SMTP server
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-10-1"
+		date="2014-06-13">
+		<Change>Fixed bug when notifications involved groups and email buffer
+			was not cleared
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-10-0"
+		date="2014-05-22">
+		<Change>Updated email format to both text plain and html</Change>
+		<Change>Updated email sending with single smtp session</Change>
+		<Change>Personalized notifications in email subjects</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-9-1"
+		date="2014-04-02">
+		<Change>Updated email sender</Change>
+		<Change>Added notification when a shared folder is a group</Change>
+		<Change>Removed "notification" suffix in email subjects</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-8-0"
+		date="2014-02-10">
+		<Change>Update email notifications, added (configurable) sender as
+			normal text
+		</Change>
+		<Change>Added URI Resolver support classes</Change>
+		<Change>Added FTP Manager for uploading thumbnails when sharing files
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-7-1"
+		date="2013-10-21">
+		<Change>Ported to Feather Weight Stack</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-6-0"
+		date="2013-09-13">
+		<Change>Fix for #1874 Request for enhancement on shared folder
+			notifications
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-5-0"
+		date="2013-07-08">
+		<Change>Added support for Calendar Notifications</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-4-1"
+		date="2013-06-14">
+		<Change>Modified delete item notifications. Distinguished the move
+			from the delete in a shared folder
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-4-0"
+		date="2013-05-29">
+		<Change>Support new user notification preference retrieve method for
+			fine grained notifications
+		</Change>
+		<Change>Support for workspace notification items direct opening
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-3-0"
+		date="2013-04-19">
+		<Change>Extended support for Notifications</Change>
+		<Change>Added New Notification Types</Change>
+	</Changeset>
+	<Changeset component="org.gcube.applicationsupportlayer.aslsocial.0-1-0"
+		date="2013-02-17">
+		<Change>First Release</Change>
+	</Changeset>
+
+
+
+
+
+
+
+
+
+
+
+
+</ReleaseNotes>

@@ -1,0 +1,42 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		#important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:VerticalPanel>
+		<g:cell>
+			<g:HTMLPanel>
+				<div id="breadcrumb">
+					<ul>
+						<li>
+							<span>Infrastructure selection</span>
+						</li>
+						<li>
+							<span>VREs checkup</span>
+						</li>
+						<li class="final selected">
+							<span>Finalize</span>
+						</li>
+					</ul>
+				</div>
+			</g:HTMLPanel>
+		</g:cell>
+		<g:cell>
+			<g:HTMLPanel styleName="wizardPanel">
+				<div class="wizardTitle">
+					Congratulations, your Portal is now installed, thank you for using
+					<a href="http://www.gcube-system.org/" target="_blank">gCube!</a>
+				</div>
+				<div class="wizardText">
+					Restarting tomcat is
+					<span id="important">recommended</span>
+					, however you can now
+					<a href="/group/data-e-infrastructure-gateway">start using the portal.</a>
+				</div>
+			</g:HTMLPanel>
+		</g:cell>
+	</g:VerticalPanel>
+</ui:UiBinder> 
