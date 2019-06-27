@@ -1,0 +1,7 @@
+<application mode='online'>
+		<name>perform-service</name>
+		<group>Application</group>
+		<version>1.0.0-SNAPSHOT</version>
+		<description>Service for Farm Perform Data Management</description>		
+		<local-persistence location='target' />
+</application>

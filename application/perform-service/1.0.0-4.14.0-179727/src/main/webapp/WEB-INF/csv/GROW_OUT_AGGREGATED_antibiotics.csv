@@ -1,0 +1,25 @@
+farmid,area,date_dd_mm_yy,species,disease,name_of_antibiotic_active_compound,quantity_g_of_active_compound_used_for_the_treatment,specify_if_other_is_selected_in_name_column_e
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43551.0,S.aurata,Photobacterium damselae piscicida,Apramycin sulphate Apramycin,1500.0,unknown
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43552.0,D.labrax,Vibrio anguillarum,Erythromycin,2000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43553.0,S.aurata,Tenacibaculum maritimum,Chlortetracycline or tetracycline,3000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43584.0,D.labrax,Tenacibaculum maritimum,Enrofloxacin (quinolone compound),2000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43616.0,S.aurata,Tenacibaculum maritimum,Florfenicol,1000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43916.0,S.aurata,Enteromyxum leei,Florfenicol,1500.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43917.0,S.aurata,Sparicotyle chrysophrii,Sarafloxacin,2000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43918.0,S.aurata,Photobacterium damselae piscicida,Apramycin sulphate Apramycin,3000.0,unknown
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43949.0,D.labrax,Vibrio anguillarum,Erythromycin,2000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43981.0,S.aurata,Tenacibaculum maritimum,Chlortetracycline or tetracycline,1000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44281.0,D.labrax,Tenacibaculum maritimum,Enrofloxacin (quinolone compound),1500.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44282.0,S.aurata,Tenacibaculum maritimum,Florfenicol,2000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44283.0,S.aurata,Enteromyxum leei,Florfenicol,3000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44314.0,S.aurata,Sparicotyle chrysophrii,Sarafloxacin,2000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44346.0,S.aurata,Photobacterium damselae piscicida,Apramycin sulphate Apramycin,1000.0,unknown
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44646.0,D.labrax,Vibrio anguillarum,Erythromycin,1500.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44647.0,S.aurata,Tenacibaculum maritimum,Chlortetracycline or tetracycline,2000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44648.0,D.labrax,Tenacibaculum maritimum,Enrofloxacin (quinolone compound),3000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44648.0,S.aurata,Tenacibaculum maritimum,Florfenicol,2000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44679.0,S.aurata,Enteromyxum leei,Florfenicol,1000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44711.0,S.aurata,Sparicotyle chrysophrii,Sarafloxacin,1500.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44222.0,S.aurata,Other,Ampicilin,23000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43493.0,D.labrax,Other,Ampicilin,23001.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43494.0,D.labrax,Tenacibaculum maritimum,Sulphonamides Potentiated with Trimethoprin,56000.0,0

@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset component="authorization-library-1.0.0" date="2015-05-18">
+		<Change>First Release</Change>
+	</Changeset>
+		<Changeset component="authorization-library-2.0.0" date="2016-09-30">
+		<Change>new model for auth2</Change>
+	</Changeset>
+	<Changeset component="authorization-library-2.0.2" date="2017-02-27">
+		<Change>added set and reset of scope in AuthorizedTask</Change>
+	</Changeset>
+	<Changeset component="authorization-library-2.1.3" date="2019-01-14">
+		<Change>added the support for authorization control library</Change>
+	</Changeset>
+</ReleaseNotes>

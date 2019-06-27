@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID></ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>Storage Hub Webapp</Description>
+		<Class>DataAccess</Class>
+		<Name>storagehub</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Name>storagehub</Name>
+				<Version>1.0.5-4.14.0-179916</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.data.access</groupId>
+					<artifactId>storagehub</artifactId>
+					<version>1.0.5-4.14.0-179916</version>
+				</MavenCoordinates>
+				<Files>
+					<File>storagehub.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

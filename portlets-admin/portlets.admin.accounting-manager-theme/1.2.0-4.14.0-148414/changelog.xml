@@ -1,0 +1,11 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.admin.accounting-manager-theme.1-2-0" date="2017-06-12">
+		<Change>Support Java 8 compatibility [ticket #8460]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.accounting-manager-theme.1-1-0" date="2016-01-31">
+		<Change>Updated icon</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.admin.accounting-manager-theme.1-0-0" date="2015-10-15">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

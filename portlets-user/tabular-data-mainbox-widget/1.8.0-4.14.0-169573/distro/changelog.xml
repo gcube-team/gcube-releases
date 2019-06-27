@@ -1,0 +1,43 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.tabular-data-mainbox-widget.1-8-0"
+		date="2018-07-01">
+		<Change>Updated to StorageHub [task #11879]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-mainbox-widget.1-7-0"
+		date="2017-07-01">
+		<Change>Updated resources management [Ticket #9056]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-mainbox-widget.1-6-0"
+		date="2017-06-12">
+		<Change>Support Java 8 compatibility [ticket #8580]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-mainbox-widget.1-5-0"
+		date="2017-02-15">
+		<Change>Updated to PortalContext [issue #6548]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-mainbox-widget.1-4-0"
+		date="2015-10-15">
+		<Change>Updated i18N support</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-mainbox-widget.1-3-0"
+		date="2015-07-03">
+		<Change>Added Resources support as ListView[issue #209]</Change>
+		<Change>Fixed Layout</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-mainbox-widget.1-2-0"
+		date="2015-04-30">
+		<Change>Updated i18n support</Change>
+		<Change>Added Downscale to menu</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-mainbox-widget.1-1-0"
+		date="2015-02-16">
+		<Change>Updated to GWT 2.6.1</Change>
+		<Change>Updated to GXT 3.1.1</Change>
+		<Change>Added support Tabular Resource on Multi Scope [issue #3237]
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.tabular-data-mainbox-widget.1-0-0"
+		date="2014-10-31">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

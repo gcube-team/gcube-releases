@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel ui:field="the_panel_container">
+			<g:HorizontalPanel ui:field="the_panel_error"></g:HorizontalPanel>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

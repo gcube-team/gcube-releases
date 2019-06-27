@@ -1,0 +1,5 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data.access.api.gcube-geofence-library.1.0.0-4.14.0-160024" date="2017-10-26"> 
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

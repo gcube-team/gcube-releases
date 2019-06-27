@@ -1,0 +1,112 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>maven-parent</artifactId>
+    <groupId>org.gcube.tools</groupId>
+    <version>1.0.0</version>
+  </parent>
+  
+  <groupId>org.gcube.datatransfer</groupId>
+  <artifactId>vfs-provider-smp</artifactId>
+  <version>1.1.1-4.14.0-126204</version>
+  <name>SMP Provider</name>
+  <description>SMP Provider</description>
+  
+	<properties>
+		<distroDirectory>distro</distroDirectory>
+	</properties>
+	
+	<repositories>
+		<repository>
+			<id>apache</id>
+			<url>http://maven.research-infrastructures.eu/nexus/content/repositories/apache-snapshots/</url>
+		</repository>
+	</repositories>
+  
+  
+  <dependencies>
+  		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-wrapper</artifactId>
+			<version>2.5.3-4.14.0-178634</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-core</artifactId>
+			<version>2.9.0-4.14.0-174054</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-nop</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-vfs2</artifactId>
+			<version>2.1-SNAPSHOT</version>
+		</dependency>		
+
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>3.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+	</dependencies>
+	
+	<build>
+	<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>profile.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			</plugins>
+			</build>
+</project>

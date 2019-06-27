@@ -1,0 +1,306 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>org.gcube.data.transfer</groupId>
+	<artifactId>uri-resolver</artifactId>
+	<version>2.1.0-4.14.0-179508</version>
+	<packaging>war</packaging>
+	<description>The URI Resolver is an HTTP URI resolver implemented as an REST service which gives access trough HTTP to different gcube Resolvers and gCube Applications. </description>
+
+	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/trunk/data-transfer/${project.artifactId}</connection>
+		<developerConnection>scm:https://svn.d4science.research-infrastructures.eu/gcube/trunk/data-transfer/${project.artifactId}</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/trunk/data-transfer/${project.artifactId}</url>
+	</scm>
+
+	<properties>
+		<distroDirectory>distro</distroDirectory>
+		<jersey.version>2.24.1</jersey.version>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<!-- <additionalparam>-Xdoclint:none</additionalparam> -->
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-smartgears-bom</artifactId>
+				<version>2.0.2-4.14.0-176582</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-smartgears</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-smartgears-app</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>common-authorization</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-wrapper</artifactId>
+			<version>2.5.3-4.14.0-178634</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.contentmanagement</groupId>
+			<artifactId>storage-manager-core</artifactId>
+			<version>2.9.0-4.14.0-174054</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-nop</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data-publishing</groupId>
+			<artifactId>storagehub-application-persistence</artifactId>
+			<version>1.1.0-4.14.0-178966</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.analysis</groupId>
+			<artifactId>dataminer-invocation-model</artifactId>
+			<version>0.2.0-4.14.0-178579</version>
+		</dependency>
+
+		<!-- TODO REMOVE THIS IMPORT -->
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>gxHTTP</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- //TO BE ADDED THE VERSION 18.0
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+		</dependency>
+		-->
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-encryption</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>discovery-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>authorization-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>storagehub-client-library</artifactId>
+			<version>1.0.4-4.14.0-179734</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet</artifactId>
+			<version>${jersey.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${jersey.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- <dependency> -->
+		<!-- <groupId>com.sun.jersey</groupId> -->
+		<!-- <artifactId>jersey-server</artifactId> -->
+		<!-- <version>1.19.4</version> -->
+		<!-- </dependency> -->
+
+		<!-- weld -->
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet</artifactId>
+			<version>2.2.10.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss</groupId>
+			<artifactId>jandex</artifactId>
+			<version>1.2.2.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20140107</version>
+			<scope>compile</scope>
+		</dependency>
+
+
+
+		<!-- GIS RESOLVER DEPENDENCIES -->
+		<dependency>
+			<groupId>org.gcube.spatial.data</groupId>
+			<artifactId>geonetwork</artifactId>
+			<version>3.2.3-4.14.0-173231</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+
+
+		<!-- DOM -->
+		<dependency>
+			<groupId>org.w3c</groupId>
+			<artifactId>dom</artifactId>
+			<version>2.3.0-jaxb-1.0.6</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data-catalogue</groupId>
+			<artifactId>ckan-util-library</artifactId>
+			<version>2.10.0-4.14.0-179851</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- END GIS RESOLVER DEPENDENCIES -->
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<finalName>${artifactId}</finalName>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>profile.xml</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+	</build>
+</project>

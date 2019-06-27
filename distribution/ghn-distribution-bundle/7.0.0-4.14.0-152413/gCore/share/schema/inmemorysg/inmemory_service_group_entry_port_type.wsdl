@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Portions of this file Copyright 1999-2005 University of Chicago
+Portions of this file Copyright 1999-2005 The University of Southern California.
+
+This file or a portion of this file is licensed under the
+terms of the Globus Toolkit Public License, found at
+http://www.globus.org/toolkit/download/license.html.
+If you redistribute this file, with or without
+modifications, you must include this notice in the file.
+-->
+<wsdl:definitions name="InMemoryServiceGroupEntry" targetNamespace="http://mds.globus.org/inmemory/2004/07/13" xmlns:wssg="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ServiceGroup-1.2-draft-01.xsd" xmlns:wsrp="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.xsd" xmlns:wsbfw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.wsdl" xmlns:tns="http://mds.globus.org/inmemory/2004/07/13" xmlns:wsrpw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" xmlns:wsdlpp="http://www.globus.org/namespaces/2004/10/WSDLPreprocessor" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wssgw="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ServiceGroup-1.2-draft-01.wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-BaseFaults-1.2-draft-01.wsdl" location="../wsrf/faults/WS-BaseFaults.wsdl"/>
+  <wsdl:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceLifetime-1.2-draft-01.wsdl" location="../wsrf/lifetime/WS-ResourceLifetime.wsdl"/>
+  <wsdl:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties-1.2-draft-01.wsdl" location="../wsrf/properties/WS-ResourceProperties.wsdl"/>
+  <wsdl:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ServiceGroup-1.2-draft-01.wsdl" location="../wsrf/servicegroup/WS-ServiceGroup.wsdl"/>
+  <wsdl:types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://mds.globus.org/inmemory/2004/07/13" xmlns:tns="http://mds.globus.org/inmemory/2004/07/13" xmlns:wssg="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ServiceGroup-1.2-draft-01.xsd">
+<xsd:import namespace="http://schemas.xmlsoap.org/ws/2004/03/addressing" schemaLocation="../ws/addressing/WS-Addressing.xsd"/>
+
+<xsd:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ServiceGroup-1.2-draft-01.xsd" schemaLocation="../wsrf/servicegroup/WS-ServiceGroup.xsd"/>
+
+       <xsd:import namespace="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ServiceGroup-1.2-draft-01 .xsd" schemaLocation="../wsrf/servicegroup/WS-ServiceGroup.xsd"/>
+
+        <xsd:element name="InMemoryEntryRP">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element maxOccurs="1" minOccurs="1" ref="wssg:ServiceGroupEPR"/>
+              <xsd:element maxOccurs="1" minOccurs="1" ref="wssg:MemberEPR"/>
+              <xsd:element maxOccurs="1" minOccurs="1" ref="wssg:Content"/>
+            
+            <xsd:element maxOccurs="1" minOccurs="1" ref="wssg:MemberEPR"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="wssg:Content"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="wssg:ServiceGroupEPR"/>
+          </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+
+
+  </xsd:schema>
+  </wsdl:types>
+  <wsdl:portType name="InMemoryServiceGroupEntryPortType" wsrp:ResourceProperties="tns:InMemoryEntryRP">
+    <wsdl:operation name="GetMultipleResourceProperties">
+      <wsdl:input name="GetMultipleResourcePropertiesRequest" message="wsrpw:GetMultipleResourcePropertiesRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetMultipleResourceProperties"/>
+      <wsdl:output name="GetMultipleResourcePropertiesResponse" message="wsrpw:GetMultipleResourcePropertiesResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetMultipleResourcePropertiesResponse"/>
+      <wsdl:fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <wsdl:fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceProperty">
+      <wsdl:input name="GetResourcePropertyRequest" message="wsrpw:GetResourcePropertyRequest" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourceProperty"/>
+      <wsdl:output name="GetResourcePropertyResponse" message="wsrpw:GetResourcePropertyResponse" wsa:Action="http://docs.oasis-open.org/wsrf/2004/06/wsrf-WS-ResourceProperties/GetResourcePropertyResponse"/>
+      <wsdl:fault name="InvalidResourcePropertyQNameFault" message="wsrpw:InvalidResourcePropertyQNameFault"/>
+      <wsdl:fault name="ResourceUnknownFault" message="wsrpw:ResourceUnknownFault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

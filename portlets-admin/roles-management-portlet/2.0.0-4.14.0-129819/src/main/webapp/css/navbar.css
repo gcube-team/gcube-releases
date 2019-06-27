@@ -1,0 +1,45 @@
+#RolesManagementContainer ul#myTab {
+	background: #1273c7;
+	background-color: #1273c7;
+	border-radius : 7px;
+}
+#RolesManagementContainer ul#myTab li  a{
+	color : white;
+}
+#RolesManagementContainer ul#myTab li  a:hover{
+	color : #1273c7;
+	background: white;
+	background-color: white;
+}
+#RolesManagementContainer ul#myTab li.active a{
+	color : white;
+	background: rgb(42, 170, 230);
+	background-color: rgb(42, 170, 230);
+}
+#RolesManagementContainer ul#myTab li.active a{
+	color : white;
+	background: rgb(42, 170, 230);
+	background-color: rgb(42, 170, 230);
+}
+#RolesManagementContainer ul#myTab li.active {
+}
+#RolesManagementContainer div.searchDiv {
+	background: #0271be;
+	background-color: #0271be;
+	cursor:pointer;
+	padding: 7px 10px 3px 10px;
+	border-radius:50%;
+	color: white;
+	display:inline-block;
+	float:right;
+	height: 25px;
+}
+#RolesManagementContainer #CurrentRolesTable_filter label, #RolesManagementContainer #usersRequestsTable_filter label {
+	display : inline-block;
+}
+#RolesManagementContainer div.dataTables_filter label > input {
+	margin-bottom: 0px !important;
+}
+#RolesManagementContainer .hideMe {
+	display:none !important;
+}

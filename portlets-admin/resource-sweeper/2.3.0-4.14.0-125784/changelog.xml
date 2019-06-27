@@ -1,0 +1,12 @@
+<ReleaseNotes>
+
+<Changeset component="org.gcube.portlets-admin.resource-sweeper.2-3-0" date="2015-09-28">
+<Change>Refactored code to promote reuse of sweeper features</Change>
+</Changeset>
+<Changeset component="org.gcube.portlets-admin.resource-sweeper.2-2-0" date="2015-04-17">
+<Change>Upgrade to GWT 2.7.0 completed</Change>
+</Changeset>
+<Changeset component="org.gcube.portlets-admin.resource-sweeper.0-1-0" date="2012-02-17">
+<Change>First Release</Change>
+</Changeset>
+</ReleaseNotes>

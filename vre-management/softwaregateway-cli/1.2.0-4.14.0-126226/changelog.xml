@@ -1,0 +1,13 @@
+<ReleaseNotes>
+	<ReleaseNotes>
+	<Changeset component="org.gcube.vre-management.softwaregateway-cli.1-2-0" date="2013-10-19">
+		<Change>ported to maven</Change>	
+	</Changeset>
+	<Changeset component="softwaregateway_cli-1.2.0-4.14.0-126226" date="2012-05-04">
+		<Change>update pom version of softwaregateway-stubs dependency</Change>
+	</Changeset>
+	<Changeset component="softwaregateway_cli-1.2.0-4.14.0-126226" date="2012-05-04">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>
+</ReleaseNotes>

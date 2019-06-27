@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.data-publishing.gCat-Feeder</groupId>
+		<artifactId>gCat-Feeder-Suite</artifactId>
+		<version>1.0.0-4.14.0-180036</version>
+	</parent>
+	<artifactId>DataMinerAlgorithmsCrawler</artifactId>
+	<name>DataMinerAlgorithmsCrawler</name>
+	<description>Plugin for gCat-Feeder for DataMiner Algorithms publishing</description>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>gcube-bom</artifactId>
+				<version>1.3.0-4.14.0-177330</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>common-authorization</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-scope</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data-publishing.gCat-Feeder</groupId>
+			<artifactId>collectors-plugin-framework</artifactId>
+			<version>1.0.0-4.14.0-180036</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.analysis</groupId>
+			<artifactId>data-miner-manager-cl</artifactId>
+			<version>1.7.0-4.14.0-178773</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<!-- TEST -->
+		<dependency>
+			<groupId>org.gcube.data-publishing.gCat-Feeder</groupId>
+			<artifactId>test-commons</artifactId>
+			<version>1.0.0-4.14.0-180036</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+			<scope>test</scope>
+		</dependency>
+
+
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>make-uberjar</id>
+						<phase>package</phase>
+					</execution>
+					<execution>
+						<id>make-servicearchive</id>
+						<phase>package</phase>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>

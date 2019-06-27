@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-publishing.gcat.1-3-0" date="2019-06-27">
+		<Change>Removed the requirement of providing the id of an item in update #16740</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.gcat.1-2-0" date="2019-06-27">
+		<Change>Separated REST class for Profile management from the logic which effectively manage profile on IS</Change>
+		<Change>Tags are now properly created/added according to profile definition #16182</Change>
+		<Change>Groups are now properly created/added according to profile definition #16183</Change>
+		<Change>Fixed bug on getting responses from social service #16330</Change>
+		<Change>Setting format in resources #16347</Change>
+		<Change>Validated provided LicenseId for Item #16354</Change>
+		<Change>Capacity field is removed from the provided item content if any #16410</Change>
+		<Change>Fixed bug on social post creation #16322</Change>
+		<Change>Added the possibility to disable social post on item creation #16322</Change>
+		<Change>Improved social post message #16322</Change>
+		<Change>Added support to publish in specific organizations when the request is not performed at VRE level #16635</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.gcat.1-1-0" date="2019-02-26">
+		<Change>Added Item URL via URI Resolver in extras field #13309</Change>
+		<Change>The final URL is retrieved only URI resolver pointing to Storage Hub #13303</Change>
+		<Change>Enforched items to be searchable in 'extras' field #13306</Change>
+		<Change>Switched item listing to use package_search in place of package_list #13307</Change>
+		<Change>Refactor service to use storage-hub-persistence library #13076</Change>
+		<Change>Added Create/Update/Delete in Profile Collection #13079</Change>
+		<Change>Fixed issues in Resource collection</Change>
+		<Change>Refatore to use gcat-api library</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.gcat.1-0-0" date="2018-12-07">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

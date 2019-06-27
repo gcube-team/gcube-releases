@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.workspace-task-executor-library.1-0-0"
+		date="2018-05-04">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

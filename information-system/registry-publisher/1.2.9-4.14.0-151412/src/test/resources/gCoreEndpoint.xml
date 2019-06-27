@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Resource version="0.4.x">
+<ID>5d244ab0-9d79-11e3-af18-dd5904b11dd6</ID>
+   <Type>RunningInstance</Type>
+   <Scopes>
+   </Scopes>
+   <Profile>
+      <Description>Test</Description>
+      <Version>3.1.0</Version>
+      <GHN UniqueID="5c647d20-9d79-11e3-af16-dd5904b11aaa" />
+      <Service UniqueID="050f6160-9fc3-11e3-b0a8-f86cfdccaaa" />
+      <ServiceName>ResultSetService</ServiceName>
+      <ServiceClass>Search</ServiceClass>
+      <DeploymentData>
+         <ActivationTime value="2014-02-27T16:22:50+01:00" />
+         <Status>ready</Status>
+      </DeploymentData>
+      <AccessPoint>
+         <RunningInstanceInterfaces>
+            <Endpoint EntryName="gcube/common/test/test">http://nodetest.isti.cnr.it:8080/wsrf/services/gcube/common/test/test</Endpoint>
+         </RunningInstanceInterfaces>
+      </AccessPoint>
+   </Profile>
+</Resource>

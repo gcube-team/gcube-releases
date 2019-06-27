@@ -1,0 +1,81 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.data-publishing.gCat-Feeder</groupId>
+		<artifactId>gCat-Feeder-Suite</artifactId>
+		<version>1.0.0-4.14.0-180036</version>
+	</parent>
+	<artifactId>commons</artifactId>
+	<name>commons</name>
+	<description>Common utilities for gCatFeeder logic</description>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>gcube-bom</artifactId>
+				<version>1.3.0-4.14.0-177330</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.resourcemanagement</groupId>
+			<artifactId>resourcemanager-client</artifactId>
+			<version>1.0.0-4.14.0-126036</version>
+		</dependency>
+
+
+
+		<!-- GCUBE -->
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-generic-clients</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-gcube-calls</artifactId>
+		</dependency>
+
+
+
+		<!-- JERSEY -->
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>authorization-client</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-encryption</artifactId>
+		</dependency>
+
+	</dependencies>
+
+</project>

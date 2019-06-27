@@ -1,0 +1,25 @@
+<ReleaseNotes>
+<Changeset component="portlets-widgets.pickitem-widget.1-3-0"
+		date="2018-03-19">
+		<Change>Enhanced information passed when an item is selected, now passing more info such as if the item is a group or not and the item id 
+		</Change>
+	</Changeset>
+	<Changeset component="portlets-widgets.pickitem-widget.1-2-0"
+		date="2016-06-30">
+		<Change>Fix for Incident #4246, in some cases notification email
+			resulting from posts are "broken"</Change>
+		<Change>Fix for hashtags not allowing to use enter after picked one
+		</Change>
+	</Changeset>
+	<Changeset component="portlets-widgets.pickitem-widget.1-1-0"
+		date="2015-07-14">
+		<Change>Ported to GWT 2.7.0</Change>
+		<Change>Fix for Bug #320, Users tagging does not work if @ is in the
+			middle of already typed text
+		</Change>
+	</Changeset>
+	<Changeset component="portlets-widgets.pickitem-widget.1-0-0"
+		date="2013-10-21">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

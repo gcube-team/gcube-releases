@@ -1,0 +1,20 @@
+<ReleaseNotes>
+	<Changeset component="${build.finalName}" date="2019-03-20">
+		<Change>added new prproduction servicemap</Change>
+	</Changeset>
+	<Changeset component="${build.finalName}" date="2018-08-30">
+		<Change>added d4os servicemap</Change>
+	</Changeset>
+	<Changeset component="${build.finalName}" date="2018-07-05">
+		<Change>added pred4s servicemap</Change>
+	</Changeset>
+	<Changeset component="${build.finalName}" date="2017-02-13">
+		<Change>added openAIRE servicemap</Change>
+	</Changeset>
+	<Changeset component="${build.finalName}" date="2013-01-11">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="${build.finalName}" date="2014-06-06">
+		<Change>added maps for Social ISTI</Change>
+	</Changeset>
+</ReleaseNotes>

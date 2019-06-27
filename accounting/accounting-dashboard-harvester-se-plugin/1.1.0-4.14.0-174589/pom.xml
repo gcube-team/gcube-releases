@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.gcube.accounting</groupId>
+	<artifactId>accounting-dashboard-harvester-se-plugin</artifactId>
+	<version>1.1.0-4.14.0-174589</version>
+	<name>Accounting Dashboard Harvester SmartExecutor Plugin</name>
+	<description>Accounting Dashboard Harvester SmartExecutor Plugin</description>
+
+	<scm>
+		<connection>scm:https://svn.d4science.research-infrastructures.eu/gcube/trunk/accounting/${project.artifactId}</connection>
+		<developerConnection>scm:https://svn.d4science.research-infrastructures.eu/gcube/trunk/accounting/${project.artifactId}</developerConnection>
+		<url>https://svn.d4science.research-infrastructures.eu/gcube/trunk/accounting/${project.artifactId}</url>
+	</scm>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<distroDirectory>distro</distroDirectory>
+		<serviceClass>Accounting</serviceClass>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>gcube-bom</artifactId>
+				<version>1.3.0-4.14.0-177330</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>gcube-smartgears-bom</artifactId>
+				<version>1.0.1-4.14.0-176574</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.gcube.vremanagement</groupId>
+			<artifactId>smart-executor-api</artifactId>
+			<version>1.7.0-4.14.0-162078</version>
+			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>com.fasterxml.jackson.core</groupId>
+					<artifactId>jackson-databind</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.vremanagement</groupId>
+			<artifactId>smart-executor-client</artifactId>
+			<version>1.7.0-4.14.0-174574</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+  			<artifactId>commons-lang</artifactId>
+  			<version>2.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-encryption</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.portlets.admin</groupId>
+			<artifactId>rmp-common-library</artifactId>
+			<version>2.8.2-4.14.0-178536</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-analyticsreporting</artifactId>
+			<version>v4-rev124-1.23.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.http-client</groupId>
+			<artifactId>google-http-client-gson</artifactId>
+			<version>1.21.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library</artifactId>
+			<version>2.10.2-4.14.0-164488</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>home-library-jcr</artifactId>
+			<version>2.11.5-4.14.0-169333</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data-catalogue</groupId>
+			<artifactId>ckan-util-library</artifactId>
+			<version>2.10.0-4.14.0-179851</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Dependencies force to provided -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources</groupId>
+			<artifactId>common-gcore-resources</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>authorization-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>common-authorization</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-gcore-stubs</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-scope-maps</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<!-- END Dependencies force to provided -->
+		
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>ic-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resources</groupId>
+			<artifactId>registry-publisher</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.gcube.accounting</groupId>
+			<artifactId>accounting-analytics</artifactId>
+			<version>2.8.0-4.14.0-162090</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.accounting</groupId>
+			<artifactId>accounting-analytics-persistence-couchbase</artifactId>
+			<version>1.7.0-4.14.0-162091</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.gcube.accounting</groupId>
+			<artifactId>accounting-lib</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.gcube.accounting</groupId>
+			<artifactId>accounting-summary-access</artifactId>
+			<version>1.0.0-4.14.0-171289</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20171018</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<!-- Test Dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.13</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>make-uberjar</id>
+						<phase>install</phase>
+					</execution>
+					<execution>
+						<id>make-servicearchive</id>
+						<phase>install</phase>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

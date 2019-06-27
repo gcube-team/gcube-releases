@@ -1,0 +1,71 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:b2="urn:import:com.github.gwtbootstrap.datepicker.client.ui">
+
+	<g:HTMLPanel>
+		<g:VerticalPanel ui:field="verticalPanel">
+
+			<!-- Question Survey -->
+			<g:HorizontalPanel ui:field="horizontalPanel">
+				<b:WellForm ui:field="questionSurvey">
+					<!-- Question Survey TextBox -->
+					<b:Controls>
+						<b:TextBox ui:field="questionSurveyTextBox" placeholder="question..." />
+						<b:ListBox ui:field="typeSurvey" />
+					</b:Controls>
+
+					<!-- TextBox Survey -->
+					<b:Controls ui:field="textBoxSurveyAnswerControls">
+						<b:TextBox ui:field="answerTextBox" placeholder="Answer..." />
+					</b:Controls>
+
+					<!-- TextArea Survey -->
+					<b:Controls ui:field="textAreaSurveyAnswerControls">
+						<b:TextArea ui:field="answerTextArea" placeholder="Answer..." />
+					</b:Controls>
+
+					<!-- Multiple Choice Survey -->
+					<b:Controls ui:field="multipleChoiceSurveyAnswerControls">
+						<b:Button icon="PLUS_SIGN" ui:field="addAnswerXSurveyButton"
+							addStyleNames="btn" />
+					</b:Controls>
+
+					<!-- Date Survey -->
+					<b:Controls ui:field="dateAnswerSurveyControls">
+						<b2:DateBoxAppended ui:field="dateAnswerSurvey"
+							format="dd/mm/yyyy" autoClose="true" icon="CALENDAR" />
+					</b:Controls>
+
+					<!-- Time Survey -->
+					<b:Controls ui:field="timeAnswerSurveyControls">
+						<b:TextBox ui:field="timeHourAnswerSurvey" />
+						<b:Label ui:field="timeAnswerSurveyControlsLabelFrom" />
+						<b:TextBox ui:field="timeMinuteAnswerSurvey" />
+					</b:Controls>
+
+					<!-- Scale Survey -->
+					<b:Controls ui:field="scaleAnswerSurveyControls">
+						<b:ControlLabel ui:field="scaleAnswerSurveyControlLabelFrom">From</b:ControlLabel>
+						<b:ListBox ui:field="scaleFromSurveyListBox" />
+						<b:ControlLabel ui:field="scaleAnswerSurveyControlLabelTo">To</b:ControlLabel>
+						<b:ListBox ui:field="scaleToSurveyListBox" />
+						<b:TextBox ui:field="scaleFromSurveyTextBox"
+							placeholder="Start label (Optional)" />
+						<b:TextBox ui:field="scaleToSurveyTextBox" placeholder="End label (Optional)" />
+					</b:Controls>
+					<b:Controls ui:field="controlRadioControls">
+						<b:RadioButton ui:field="radioButtonScaleSurvey"
+							b:id="controlRadio" name="controlRadio"></b:RadioButton>
+					</b:Controls>
+
+					<b:Controls ui:field="checkBoxMandatoryControls">
+						<b:CheckBox ui:field="checkBoxMandatory">Mandatory</b:CheckBox>
+					</b:Controls>
+				</b:WellForm>
+			</g:HorizontalPanel>
+
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 
+

@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.2.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_6_2_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>6.2.5+</version>
+	</compatibility>
+	<theme id="generic-configurable" name="generic-configurable-theme">
+		<settings>
+			<setting configurable="true" key="show-powered-d4science" type="checkbox" value="false" />
+			<setting configurable="true" key="show-eu-flag" type="checkbox"	value="true" />
+			<setting configurable="true" key="header-background-css-attributes"	type="textarea" />
+			<setting configurable="true" key="div-wrapper-css-attributes"	type="textarea" />
+			<setting configurable="true" key="div-wrapper-image-name" type="text" />
+			<setting configurable="true" key="portlet-topper-css-attributes" type="textarea" />
+			<setting configurable="true" key="footer-website-name" type="text" />
+			<setting configurable="true" key="footer-website-url" type="text" />
+			<setting configurable="true" key="footer-website-name" type="text" />
+			<setting configurable="true" key="footer-text-about" type="text" />	
+			<setting configurable="true" key="body-background-color">
+   					<![CDATA[
+					AUI().ready(
+						'aui-color-picker-popover',
+						function(A) {
+							var AllControls = A.all("#regularlayoutsAdminLookAndFeelSettingsPanelContent .control-group");
+							AllControls.setStyle('marginBottom', '5px');
+
+							var nodePicker = A.one("#[@NAMESPACE@]body-background-color");
+
+							nodePicker.ancestor().setStyle('float', 'left');
+							nodePicker.ancestor().setStyle('marginRight', '10px');
+
+							nodePicker.setStyle('width', '74px');
+							nodePicker.setStyle('borderLeftWidth', '30px');
+							nodePicker.setStyle('borderLeftColor', nodePicker.get('value'));
+							
+
+							var colorPicker = new A.ColorPickerPopover({
+						        trigger: nodePicker,
+						        zIndex: 99
+							}).render();
+
+							colorPicker.on('select', function(event) {
+								var color = event.color;
+								event.trigger.set('value', color);
+								nodePicker.setStyle('borderLeftColor', color);
+							});
+						}
+					);
+				]]>
+   			</setting>
+			<setting configurable="true" key="navbar-background-color"
+				type="text">
+						<![CDATA[
+					AUI().ready(
+						'aui-color-picker-popover',
+						function(A) {
+							var AllControls = A.all("#regularlayoutsAdminLookAndFeelSettingsPanelContent .control-group");
+							AllControls.setStyle('marginBottom', '5px');
+
+							var nodePicker = A.one("#[@NAMESPACE@]navbar-background-color");
+
+							nodePicker.ancestor().setStyle('float', 'left');
+							nodePicker.ancestor().setStyle('marginRight', '10px');
+
+							nodePicker.setStyle('width', '74px');
+							nodePicker.setStyle('borderLeftWidth', '30px');
+							nodePicker.setStyle('borderLeftColor', nodePicker.get('value'));
+							
+
+							var colorPicker = new A.ColorPickerPopover({
+						        trigger: nodePicker,
+						        zIndex: 99
+							}).render();
+
+							colorPicker.on('select', function(event) {
+								var color = event.color;
+								event.trigger.set('value', color);
+								nodePicker.setStyle('borderLeftColor', color);
+							});
+						}
+					);
+				]]>
+			</setting>
+			<setting configurable="true" key="navbar-tabselected-color"
+				type="text">
+				<![CDATA[
+					AUI().ready(
+						'aui-color-picker-popover',
+						function(A) {
+							var AllControls = A.all("#regularlayoutsAdminLookAndFeelSettingsPanelContent .control-group");
+							AllControls.setStyle('marginBottom', '5px');
+
+							var nodePicker = A.one("#[@NAMESPACE@]navbar-tabselected-color");
+
+							nodePicker.ancestor().setStyle('float', 'left');
+							nodePicker.ancestor().setStyle('marginRight', '10px');
+
+							nodePicker.setStyle('width', '74px');
+							nodePicker.setStyle('borderLeftWidth', '30px');
+							nodePicker.setStyle('borderLeftColor', nodePicker.get('value'));
+							
+
+							var colorPicker = new A.ColorPickerPopover({
+						        trigger: nodePicker,
+						        zIndex: 99
+							}).render();
+
+							colorPicker.on('select', function(event) {
+								var color = event.color;
+								event.trigger.set('value', color);
+								nodePicker.setStyle('borderLeftColor', color);
+							});
+						}
+					);
+				]]>
+			</setting>
+			<setting configurable="true" key="navbar-tabhover-color"
+				type="text">
+				<![CDATA[
+					AUI().ready(
+						'aui-color-picker-popover',
+						function(A) {
+							var AllControls = A.all("#regularlayoutsAdminLookAndFeelSettingsPanelContent .control-group");
+							AllControls.setStyle('marginBottom', '5px');
+
+							var nodePicker = A.one("#[@NAMESPACE@]navbar-tabhover-color");
+
+							nodePicker.ancestor().setStyle('float', 'left');
+							nodePicker.ancestor().setStyle('marginRight', '10px');
+
+							nodePicker.setStyle('width', '74px');
+							nodePicker.setStyle('borderLeftWidth', '30px');
+							nodePicker.setStyle('borderLeftColor', nodePicker.get('value'));
+							
+
+							var colorPicker = new A.ColorPickerPopover({
+						        trigger: nodePicker,
+						        zIndex: 99
+							}).render();
+
+							colorPicker.on('select', function(event) {
+								var color = event.color;
+								event.trigger.set('value', color);
+								nodePicker.setStyle('borderLeftColor', color);
+							});
+						}
+					);
+				]]>
+			</setting>
+			<setting configurable="true" key="login-button-color" type="text">
+			<![CDATA[
+					AUI().ready(
+						'aui-color-picker-popover',
+						function(A) {
+							var AllControls = A.all("#regularlayoutsAdminLookAndFeelSettingsPanelContent .control-group");
+							AllControls.setStyle('marginBottom', '5px');
+
+							var nodePicker = A.one("#[@NAMESPACE@]login-button-color");
+
+							nodePicker.ancestor().setStyle('float', 'left');
+							nodePicker.ancestor().setStyle('marginRight', '10px');
+
+							nodePicker.setStyle('width', '74px');
+							nodePicker.setStyle('borderLeftWidth', '30px');
+							nodePicker.setStyle('borderLeftColor', nodePicker.get('value'));
+							
+
+							var colorPicker = new A.ColorPickerPopover({
+						        trigger: nodePicker,
+						        zIndex: 99
+							}).render();
+
+							colorPicker.on('select', function(event) {
+								var color = event.color;
+								event.trigger.set('value', color);
+								nodePicker.setStyle('borderLeftColor', color);
+							});
+						}
+					);
+				]]>
+			</setting>
+			<setting configurable="true" key="footer-background-color"	type="text" value="#555">
+			<![CDATA[
+					AUI().ready(
+						'aui-color-picker-popover',
+						function(A) {
+							var AllControls = A.all("#regularlayoutsAdminLookAndFeelSettingsPanelContent .control-group");
+							AllControls.setStyle('marginBottom', '5px');
+
+							var nodePicker = A.one("#[@NAMESPACE@]footer-background-color");
+
+							nodePicker.ancestor().setStyle('float', 'left');
+							nodePicker.ancestor().setStyle('marginRight', '10px');
+
+							nodePicker.setStyle('width', '74px');
+							nodePicker.setStyle('borderLeftWidth', '30px');
+							nodePicker.setStyle('borderLeftColor', nodePicker.get('value'));
+							
+
+							var colorPicker = new A.ColorPickerPopover({
+						        trigger: nodePicker,
+						        zIndex: 99
+							}).render();
+
+							colorPicker.on('select', function(event) {
+								var color = event.color;
+								event.trigger.set('value', color);
+								nodePicker.setStyle('borderLeftColor', color);
+							});
+						}
+					);
+				]]>
+			</setting>			
+		</settings>
+	</theme>
+</look-and-feel>

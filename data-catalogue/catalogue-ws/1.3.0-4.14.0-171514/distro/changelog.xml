@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-catalogue.catalogue-ws.1-3-0"	date="${buildDate}">
+		<Change>Complete refactoring of code</Change>
+		<Change>Item Port type is now RESTful (old methods are still allowed)</Change>
+		<Change>Added update support for Item #11516</Change>
+		<Change>Changed caching mechanism from ehcache API to JSR-107. Ehcache is still used as runtime library.</Change>
+		<Change>Solved random NullPointer Exception on catalogue-ws related to old caching mechanism #11466</Change>
+		<Change>Fixed normalization of the organization name #12506</Change>
+		<Change>Added the possibility to deny social post on catalogue-ws #12514</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.catalogue-ws.1-1-1"
+		date="2018-01-11">
+		<Change>Item purge method enhanced</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.catalogue-ws.1-1-0"
+		date="2017-06-20">
+		<Change>Minor fixes while checking user's permissions</Change>
+		<Change>Namespaces are no longer transparently managed</Change>
+		<Change>Fixed 'default' value for metadata</Change>
+		<Change>Improved exception handling</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.catalogue-ws.1-0-0"
+		date="2017-05-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

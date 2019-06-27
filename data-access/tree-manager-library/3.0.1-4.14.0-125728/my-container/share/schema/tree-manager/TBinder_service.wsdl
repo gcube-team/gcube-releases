@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="T-Binder" targetNamespace="http://gcube-system.org/namespaces/data/tm/service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:binding="http://gcube-system.org/namespaces/data/tm/bindings" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:import namespace="http://gcube-system.org/namespaces/data/tm/bindings" location="TBinder_bindings.wsdl"/>
+  <wsdl:service name="T-BinderService">
+    <wsdl:port name="TBinderPortTypePort" binding="binding:TBinderPortTypeSOAPBinding">
+      <soap:address location="http://localhost:8080/wsrf/services/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

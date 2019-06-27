@@ -1,0 +1,19 @@
+log4j.rootCategory=TRACE, FILE, CONSOLE
+
+# Direct log messages to a log file
+log4j.appender.FILE=org.apache.log4j.RollingFileAppender
+#Redirect to Tomcat logs folder
+#log4j.appender.FILE.File=C:\\logging.log
+log4j.appender.FILE.File=${catalina.home}/webapps/accounting-manager/logs/AccountingManagerLog4j.log
+log4j.appender.FILE.MaxFileSize=10MB
+log4j.appender.FILE.MaxBackupIndex=10
+log4j.appender.FILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.FILE.layout.ConversionPattern=%d{ABSOLUTE} %-5p [%c{1}:%L] %m%n
+
+# Console log
+log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender
+log4j.appender.CONSOLE.Target=System.out
+log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout
+log4j.appender.CONSOLE.layout.ConversionPattern=%d{ABSOLUTE} %-5p [%c{1}:%L] %m%n
+ 
+ 

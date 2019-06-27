@@ -1,0 +1,67 @@
+
+
+.users-photo {
+	display: block;
+	padding: 2px;
+	border: 1px solid #E6E6E6;
+}
+
+span.user-selection-link {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 16x;
+	line-height: 18px;
+	color: #3B5998;
+}
+
+span.user-selection-link, span.user-selection-link:visited {
+	cursor: pointer;
+	cursor: hand;
+	font-size: 16x;
+	text-decoration: none;
+	color: #3B5998;
+}
+
+span.user-selection-link:hover {
+	opacity: 0.8;
+	font-size: 16x;
+	text-decoration: underline;
+}
+
+
+/*  TABLES */
+.users-table-400 {
+	display: table;
+
+	border-collapse: separate !important;
+	border-spacing: 0;
+
+	width: 400px;
+	background-clip: border-box;
+	background-image: none;
+	background-origin: padding-box;
+	border-bottom-color: #DADADA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	padding: 12px 7px 3px 7px;
+}
+
+
+.users-table-row {
+	display: table-row;
+	text-align: left;
+}
+
+.users-table-col {
+	display: table-cell;
+	text-align: left;
+}
+
+.users-content {
+	padding-left: 10px;
+	vertical-align: top;
+}
+
+
+.users-smallphoto {
+	width: 40px;
+}

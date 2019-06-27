@@ -1,0 +1,60 @@
+KPI CODE,KPI NAME - LEVEL 1,KPI NAME - LEVEL 2,KPI NAME - LEVEL 3
+,Hatchery Total Productivity KPIs
+,,Weaned fish
+H1,,,Weaned fish (%)
+,,Discarded deformed fish
+H2_1_1,,,Discarded fish for head deformities - at 1200dd (%)
+H2_1_2,,,Discarded fish for head deformities - at 1800dd (%)
+H2_1_3,,,Discarded fish for head deformities - at 2400dd (%)
+H2_2_1,,,Discarded fish for spinal deformities - at 1200dd (%)
+H2_2_2,,,Discarded fish for spinal deformities - at 1800dd (%)
+H2_2_3,,,Discarded fish for spinal deformities - at 2400dd (%)
+H2_3_1,,,Discarded fish for fin deformities - at 1200dd (%)
+H2_3_2,,,Discarded fish for fin deformities - at 1800dd (%)
+H2_3_3,,,Discarded fish for fin deformities - at 2400dd (%)
+H7,,,Total discarded deformed fish - at 2400dd (%)
+,,Discarded slow grower fish
+H3_1,,,Discarded slow grower fish - at 1200dd (%)
+H3_2,,,Discarded slow grower fish - at 1800dd (%)
+H3_3,,,Discarded slow grower fish - at 2400dd (%)
+,,Fish produced
+H4,,,Fish produced - at 2400dd (%)
+,,Fish produced per FTE employees
+H5_1_1,,,Number fish/FTE employees in 2018
+H5_1_2,,,Number fish/FTE employees in 2019
+H5_1_3,,,Number fish/FTE employees in 2020
+,,Survival estimation
+H6_1,,,Survival estimation - at 1200dd (%)
+H6_2,,,Survival estimation - at 1800dd (%)
+H6_3,,,Survival estimation - at 2400 dd (%)
+,,Vaccinated fish by disease
+H15_1,,,Vaccinated fish against P. damselae - at 2400dd (%)
+H15_2,,,Vaccinated fish against V. anguillarum - at 2400dd (%)
+H15_3,,,Vaccinated fish against Betanodavirus - at 2400dd (%)
+,Fish Deformities KPIs
+,,Head deformities
+H7_1,,,Alive fish with head deformities - at 2400dd (%)
+H7_2,,,Alive fish with head deformities - at end of weaning (%)
+,,Spinal deformities
+H8,,,Alive fish with spinal deformities - at 2400dd (%)
+H8_1,,,Alive fish with spinal deformities - at end of weaning (%)
+,,Fin deformities
+H9,,,Alive fish with fin deformities - at 2400dd (%)
+H9_1,,,Alive fish with fin deformities - at end of weaning (%)
+,,Swim bladder non inflation
+H10,,,Swim bladder non inflation - at 500dd (%)
+,Fish Growth KPIs
+,,Average Body Weight (ABW)
+H11_1,,,Average body weight (BW) - at weaning (g)
+H11_2,,,Average body weight (BW) - at 1200dd (g)
+H11_3,,,Average body weight (BW) - at 1800dd (g)
+H11_4,,,Average body weight (BW) - at 2400dd (g)
+,,Specific Growth Rate (SGR)
+H12_1,,,Specific Growth Rate (SGR) - at 1200dd (% day^-1)
+H12_2,,,Specific Growth Rate (SGR) - at 1800dd (% day^-1)
+H12_3,,,Specific Growth Rate (SGR) - at 2400dd (% day^-1)
+,Live Feed Requirement KPIs
+,,Artemia requirement
+H13,,,Artemia requirement - at 2400dd (Kg of Artemia/million fish)
+,,Rotifer requirement
+H14,,,Rotifers requirement - at 2400dd (Billions rotifer/million fish)

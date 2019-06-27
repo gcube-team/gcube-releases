@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+    <global>    
+    
+	  	<environment
+                        name="securityenabled"
+                        value="false"
+                        type="java.lang.Boolean"
+                        override="false" />
+		<environment
+                        name="mode"
+                        value="STANDALONE"
+                        type="java.lang.String"
+                        override="false" />
+     	<environment
+                        name="startScopes"
+                        value="devsec"
+                        type="java.lang.String"
+                        override="false" />
+		 <environment
+                        name="allowedScopes"
+                        value=""
+                        type="java.lang.String"
+                        override="false" />
+
+		 <environment
+                        name="infrastructure"
+                        value="gcube"
+                        type="java.lang.String"
+                        override="false" />
+		<environment
+                        name="labels"
+                        value="GHNLabels.xml"
+                        type="java.lang.String"
+                        override="false" />		
+		<environment
+                        name="GHNtype"
+                        value="DYNAMIC"
+                        type="java.lang.String"
+                        override="false" />
+ 		<environment
+                        name="localProxy"
+                        value="/home/globus/..."
+                        type="java.lang.String"
+                        override="false" />
+		<environment
+                        name="coordinates"
+                        value="55.885728,-4.342378"
+                        type="java.lang.String"
+                        override="false" />
+		<environment
+                        name="country"
+                        value="uk"
+                        type="java.lang.String"
+                        override="false" />
+		<environment
+                        name="location"
+                        value="Glasgow"
+                        type="java.lang.String"
+                        override="false" />
+		<environment
+                        name="updateInterval"
+                        value="60"
+                        type="java.lang.Long"
+                        override="false" />
+
+		<environment
+                        name="trustedGHNSynchInterval"
+                        value="600"
+                        type="java.lang.Long"
+                        override="false" />  
+    </global>
+</jndiConfig>

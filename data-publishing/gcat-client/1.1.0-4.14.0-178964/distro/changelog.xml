@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-publishing.gcat-client.1-1-0" date="${buildDate}">
+		<Change>Added the possibility to enforce gCat service URL</Change>
+		<Change>Added the possibility to disable social post #16322</Change>
+		<Change>Added the possibility to get a porfile as JSON</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.gcat-client.1-0-0" date="2019-02-26">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

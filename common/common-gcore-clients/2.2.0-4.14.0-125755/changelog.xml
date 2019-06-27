@@ -1,0 +1,17 @@
+<ReleaseNotes>
+	<Changeset component="common-gcore-clients-1.0.0" date="2012-04-27">
+		<Change>First Release</Change>
+	</Changeset>
+	<Changeset component="common-gcore-clients-2.0.0" date="2012-09-01">
+		<Change>Rewritten as a framework for the implementation of client libraries for gCore services which comply with the CL Design Model</Change>
+	</Changeset>
+	<Changeset component="common-gcore-clients-2.0.1" date="2012-11-30">
+		<Change>Fixed W3CEndpointReference->EndpointReferenceType conversion util</Change>
+	</Changeset>
+	<Changeset component="common-gcore-clients-2.1.0" date="2013-01-11">
+		<Change>Aligns with gCF 1.6.0+ and eliminates dependencies on legacy scope handling mechanisms</Change>
+	</Changeset>
+	<Changeset component="common-gcore-clients-2.2.0-4.14.0-125755" date="2013-10-10">
+		<Change>internal refactoring</Change>
+	</Changeset>
+</ReleaseNotes>

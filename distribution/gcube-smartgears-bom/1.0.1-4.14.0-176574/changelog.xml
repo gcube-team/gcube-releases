@@ -1,0 +1,9 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.distribution.gcube-smartgears-bom.1-0-1" date="2019-06-26">
+		<Change>Added common-smartgears-utils dependency</Change>
+		<Change>Added gxHTTP dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.gcube-smartgears-bom.1-0-0" date="">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

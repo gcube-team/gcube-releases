@@ -1,0 +1,6 @@
+#! /bin/sh
+
+. ${GLOBUS_LOCATION}/etc/globus-devel-env.sh
+
+
+

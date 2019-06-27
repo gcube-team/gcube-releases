@@ -1,0 +1,27 @@
+<project default="undeploy" basedir=".">
+
+
+<property environment="env"/>
+<property file="build.properties"/>
+<property file="${user.home}/build.properties"/>
+<property name="env.GLOBUS_LOCATION" value="../../.."/>
+<property name="deploy.dir" value="${env.GLOBUS_LOCATION}"/>
+
+
+<target name="undeploy">
+  <delete verbose="true" dir="${deploy.dir}/etc/tree-manager-service"/>
+  <delete verbose="true" file="${deploy.dir}/lib/tree-manager-service-3.0.3-4.14.0-125718.jar"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/tree-manager/TBinder.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/tree-manager/TBinder_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/tree-manager/TBinder_flattened.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/tree-manager/TBinder_service.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/tree-manager/TReader.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/tree-manager/TReader_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/tree-manager/TReader_flattened.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/tree-manager/TReader_service.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/tree-manager/TWriter.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/tree-manager/TWriter_bindings.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/tree-manager/TWriter_flattened.wsdl"/>
+  <delete verbose="true" file="${deploy.dir}/share/schema/tree-manager/TWriter_service.wsdl"/>
+</target>
+</project>

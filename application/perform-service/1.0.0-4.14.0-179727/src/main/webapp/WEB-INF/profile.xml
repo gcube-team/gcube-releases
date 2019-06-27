@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>Service for Farm Perform Data Management</Description>
+		<Class>Application</Class>
+		<Name>perform-service</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Name>perform-service</Name>
+				<Version>1.0.0-SNAPSHOT</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.application</groupId>
+					<artifactId>perform-service</artifactId>
+					<version>1.0.0-SNAPSHOT</version>
+				</MavenCoordinates>
+				<Files>
+					<File>perform-service.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>
+
+

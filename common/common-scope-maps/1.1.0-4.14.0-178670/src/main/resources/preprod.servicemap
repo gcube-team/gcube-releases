@@ -1,0 +1,5 @@
+<service-map scope='/pred4s/preprod' version="${project.version}">
+	<services>
+		<service name='XQueryAccessService' endpoint='http://collector-preprod.pre.d4science.org:8080/wsrf/services/gcube/informationsystem/collector/XQueryAccess' />
+	</services>
+</service-map>

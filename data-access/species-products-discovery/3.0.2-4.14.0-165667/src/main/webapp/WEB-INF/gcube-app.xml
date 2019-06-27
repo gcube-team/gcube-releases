@@ -1,0 +1,11 @@
+<application mode='online'>
+		<name>SpeciesProductsDiscovery</name>
+		<group>DataAccess</group>
+		<version>3.0.2-4.14.0-165667</version>
+		<description>SpeciesProductsDiscovery service</description>
+		<local-persistence location='target' />
+		
+		<exclude>/gcube/service/resultset/*</exclude>
+
+</application>
+

@@ -1,0 +1,12 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-analysis.service-client-api.1.0.0" date="2013-10-23"> 
+		<Change>First version</Change>
+	</Changeset>
+	<ReleaseNotes> 
+	<Changeset component="org.gcube.data-analysis.service-client-api.2.0.0" date="2014-2-7"> 
+		<Change>Changes in the interface</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.service-client-api.2.5.4" date="2015-6-30"> 
+		<Change>Changes in the interface</Change>
+	</Changeset>
+</ReleaseNotes>

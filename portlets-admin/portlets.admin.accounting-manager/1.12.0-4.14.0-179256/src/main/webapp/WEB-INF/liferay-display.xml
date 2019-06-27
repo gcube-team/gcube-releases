@@ -1,0 +1,5 @@
+<display>
+	<category name="gCube Applications">
+		<portlet id="AccountingManager" />
+	</category>
+</display>

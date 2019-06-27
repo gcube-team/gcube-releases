@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="VreDefinition">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portlets.admin.vredefinition.VreDefinition' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/VreDefinition/greet" class="org.gcube.portlets.admin.vredefinition.server.GreetingServiceImpl" />
+
+</module>

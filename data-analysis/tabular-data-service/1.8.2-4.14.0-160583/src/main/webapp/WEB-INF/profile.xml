@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource>
+    <ID/>
+    <Type>Service</Type>
+    <Profile>
+    	<Description>${description}</Description>
+        <Class>DataAnalysis</Class>
+        <Name>tabular-data-manager</Name>
+		<Version>1.0.0</Version>
+        <Packages>
+            <Software>
+                <Name>tabular-data-manager</Name>
+				<Version>1.8.2-4.14.0-160583</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.data.analysis.tabulardata</groupId>
+					<artifactId>tabular-data-manager</artifactId>
+					<version>1.8.2-4.14.0-160583</version>
+				</MavenCoordinates>
+				<Files>
+					<File>tabular-data-manager.war</File>
+				</Files>
+			</Software>                 
+        </Packages>
+    </Profile>
+</Resource>
+
+

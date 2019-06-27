@@ -1,0 +1,24 @@
+farmid,area,date_dd_mm_yy_1,species_1,disease_1,name_of_antiparasitic_active_compound,quantity_g_of_active_compound_used_for_the_treatment_1,specify_if_other_is_selected_in_name_column_l
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43610.0,S.aurata,Sparicotyle chrysophrii,Ivermectine,25000.0,unknown
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43598.0,D.labrax,Crustaceans,Ivermectine,3000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43641.0,S.aurata,Enteromyxum leei,Ivermectine,23000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43619.0,D.labrax,Crustaceans,Ivermectine,12900.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43691.0,S.aurata,Microsporidia,Ivermectine,1234.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43942.0,D.labrax,Crustaceans,Ivermectine,4000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43963.0,D.labrax,Crustaceans,Ivermectine,5600.0,unknown
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43996.0,S.aurata,Sparicotyle chrysophrii,Formalin (aqueous solution of formaldehyde),3400.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43960.0,D.labrax,Crustaceans,Ivermectine,13200.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44005.0,S.aurata,Enteromyxum leei,Mebandazole,675.0,unknown
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,43916.0,D.labrax,Crustaceans,Mebandazole,8926.949169174011,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44328.0,S.aurata,Microsporidia,Ivermectine,7850.444694571251,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44336.0,D.labrax,Crustaceans,Ivermectine,3822.458690289339,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44400.0,D.labrax,Crustaceans,Ivermectine,242.63630595605434,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44423.0,S.aurata,Sparicotyle chrysophrii,Ivermectine,3818.977196021143,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44729.0,D.labrax,Crustaceans,Levamisol,5843.977036169958,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44657.0,S.aurata,Enteromyxum leei,Ivermectine,1860.9531386954204,unknown
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44666.0,D.labrax,Crustaceans,Fenbendazole,9776.993074884664,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44689.0,S.aurata,Microsporidia,Ivermectine,2746.1986816858584,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44768.0,D.labrax,Crustaceans,Ivermectine,4523.62678849358,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44797.0,D.labrax,Crustaceans,Ivermectine,2502.2267238027584,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44423.0,D.labrax,Other Vibrionaceae,Ivermectine,30000.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,44140.0,D.labrax,Crustaceans,Mebandazole,25000.0,0

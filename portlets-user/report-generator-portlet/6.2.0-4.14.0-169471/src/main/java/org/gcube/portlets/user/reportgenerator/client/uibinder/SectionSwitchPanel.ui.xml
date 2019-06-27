@@ -1,0 +1,12 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel>
+		<table>
+			<tr>
+				<td><g:Image ui:field="prevButton" styleName="sectionSwitch-button"></g:Image></td>
+				<td><g:HTML styleName="sectionSwitch" ui:field="display"></g:HTML></td>
+				<td><g:Image ui:field="nextButton" styleName="sectionSwitch-button"></g:Image></td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

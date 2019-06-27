@@ -1,0 +1,107 @@
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers a.paginate_button#CurrentRolesTable_previous {
+	background: #0271be !important;
+	background-color: #0271be !important;
+	color: white !important;
+	border:0px;
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+	text-align: center;
+}
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers a.paginate_button#CurrentRolesTable_previous:after {
+	content: "\f04a";
+	font-family: FontAwesome;
+}
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers a.paginate_button#CurrentRolesTable_previous:not(.disabled):hover {
+	background: rgb(42, 170, 210)) !important;
+	background-color: rgb(42, 170, 210) !important;
+	color: white !important;
+	border:0px;
+}
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers a.paginate_button#CurrentRolesTable_next {
+	background: #0271be !important;
+	background-color: #0271be !important;
+	color: white !important;
+	border:0px;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers a.paginate_button#CurrentRolesTable_next:after {
+	content: "\f04e";
+	font-family: FontAwesome;
+}
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers a.paginate_button#CurrentRolesTable_next:not(.disabled):hover {
+	background: rgb(42, 170, 210) !important;
+	background-color: rgb(42, 170, 210)!important;
+	color: white !important;
+	border:0px;
+}
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers span a.paginate_button.current{
+	background: rgb(41, 131, 173) !important;
+	background-color: rgb(41, 131, 173) !important;
+	color: white !important;
+	border:0px;
+}
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers a.paginate_button {
+	color: white !important;
+	background: #0271be !important;
+	background-color: #0271be !important;
+	border:0px;
+	height: 2.4em;
+	font-size: 0.9em;
+}
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers a.paginate_button:hover{
+	border:0px !important;
+	color: white !important;
+	background: rgb(42, 170, 210) !important;
+	background-color: rgb(42, 170, 210) !important;
+}
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers a.paginate_button.current:hover {
+	border:0px !important;
+	color: white !important;
+}
+#RolesManagementContainer .btn-default.moreInfo {
+	border : none;
+	background: rgb(1, 95, 126);
+	background-color: rgb(1, 95, 126);
+	color : white;
+}
+#RolesManagementContainer .btn-default.moreInfo:hover {
+	border : none;
+	background: #327A8A;
+	background-color: #327A8A;
+	color : white;
+}
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers a.paginate_button#usersRequestsTable_previous {
+	background: #0271be !important;
+	background-color: #0271be !important;
+	color: white !important;
+	border:0px;
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers a.paginate_button#usersRequestsTable_previous:not(.disabled):hover {
+	background: rgb(42, 170, 210)) !important;
+	background-color: rgb(42, 170, 210) !important;
+	color: white !important;
+	border:0px;
+}
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers a.paginate_button#usersRequestsTable_next {
+	background: #0271be !important;
+	background-color: #0271be !important;
+	color: white !important;
+	border:0px;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers a.paginate_button#usersRequestsTable_next:not(.disabled):hover {
+	background: rgb(42, 170, 210) !important;
+	background-color: rgb(42, 170, 210)!important;
+	color: white !important;
+	border:0px;
+}
+#RolesManagementContainer div.dataTables_paginate.paging_simple_numbers a.paginate_button#usersRequestsTable_next:not(.disabled):hover {
+	background: rgb(42, 170, 210) !important;
+	background-color: rgb(42, 170, 210)!important;
+	color: white !important;
+	border:0px;
+}

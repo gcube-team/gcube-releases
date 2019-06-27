@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>org.gcube.portlets.gcubeckan</groupId>
+	<artifactId>gcube-ckan-datacatalog</artifactId>
+	<packaging>war</packaging>
+	<version>1.6.1-4.14.0-179239</version>
+	<name>gCube CKAN Data Catalog</name>
+	<description>The gCube CKAN Data Catalog portlet</description>
+
+	<properties>
+		<!-- Convenience property to set the GWT version -->
+		<gwtVersion>2.7.0</gwtVersion>
+		<distroDirectory>distro</distroDirectory>
+		<!-- GWT needs at least java 1.6 -->
+		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<scm>
+		<connection>scm:svn:http://svn.d4science.research-infrastructures.eu/gcube/trunk/portlets/user/${project.artifactId}</connection>
+		<developerConnection>scm:https://svn.d4science.research-infrastructures.eu/gcube/trunk/portlets/user/${project.artifactId}</developerConnection>
+		<url>http://svn.d4science.research-infrastructures.eu/gcube/trunk/portlets/user/${project.artifactId}</url>
+	</scm>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-portal-bom</artifactId>
+				<version>3.4.0-4.14.0-169455</version>
+				<type>pom</type>
+				<scope>import</scope>
+				<exclusions>
+					<exclusion>
+						<artifactId>gwt-user</artifactId>
+						<groupId>com.google.gwt</groupId>
+					</exclusion>
+					<exclusion>
+						<groupId>com.google.gwt</groupId>
+						<artifactId>gwt-servlet</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+		</dependencies>
+
+	</dependencyManagement>
+
+	<dependencies>
+		<!-- <dependency> -->
+		<!-- <groupId>xerces</groupId> -->
+		<!-- <artifactId>xercesImpl</artifactId> -->
+		<!-- <version>2.9.1</version> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<scope>provided</scope>
+			<!-- <scope>compile</scope> -->
+			<version>${gwtVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.gwtbootstrap</groupId>
+			<artifactId>gwt-bootstrap</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<!-- FWS -->
+		<dependency>
+			<groupId>org.gcube.resources.discovery</groupId>
+			<artifactId>ic-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-scope-maps</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<!-- END FWS -->
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-encryption</artifactId>
+		</dependency>
+
+		<!-- share link widget -->
+		<dependency>
+			<groupId>org.gcube.portlets-widgets</groupId>
+			<artifactId>catalogue-sharing-widget</artifactId>
+			<version>1.0.1-4.14.0-148899</version>
+		</dependency>
+
+		<!-- Metadata publisher widget -->
+		<dependency>
+			<groupId>org.gcube.portlets.widgets</groupId>
+			<artifactId>grsf-manage-widget</artifactId>
+			<version>1.4.0-4.14.0-178653</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.portlets.widgets</groupId>
+			<artifactId>ckan-metadata-publisher-widget</artifactId>
+			<version>1.5.0-4.14.0-179006</version>
+			<scope>compile</scope>
+		</dependency>
+
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.gcube.portlets.widgets</groupId> -->
+<!-- 			<artifactId>session-checker</artifactId> -->
+<!-- 			<version>[1.0.0-SNAPSHOT, 2.0.0-SNAPSHOT)</version> -->
+<!-- 			<scope>provided</scope> -->
+<!-- 		</dependency> -->
+
+		<dependency>
+			<groupId>org.gcube.resources</groupId>
+			<artifactId>registry-publisher</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>authorization-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>common-authorization</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.common.portal</groupId>
+			<artifactId>portal-manager</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>portal-service</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.dvos</groupId>
+			<artifactId>usermanagement-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+		</dependency>
+
+		<!-- LOGGER -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-configuration-scanner</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<!-- Output classes directly into the webapp, so that IDEs and "mvn process-classes" 
+			update them in DevMode -->
+		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
+
+		<plugins>
+
+			<!-- GWT Maven Plugin -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>${gwtVersion}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<!-- <goal>test</goal> -->
+							<!-- <goal>generateAsync</goal> -->
+						</goals>
+					</execution>
+				</executions>
+				<!-- Plugin configuration. There are many available options, see gwt-maven-plugin 
+					documentation at codehaus.org -->
+				<configuration>
+					<runTarget>GCubeCkanDataCatalog.html</runTarget>
+					<hostedWebapp>${webappDirectory}</hostedWebapp>
+				</configuration>
+			</plugin>
+			<!-- Copy static web files before executing gwt:run -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>exploded</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<webappDirectory>${webappDirectory}</webappDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+			</plugin>
+			<!-- SA Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

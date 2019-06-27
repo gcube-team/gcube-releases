@@ -1,0 +1,56 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-user.join-vre.3.6.1" date="2018-11-09">
+		<Change>Fixed minor glitch border 5px on the body</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.3.5.0" date="2018-03-13">
+		<Change>Feature #11434, Explore VREs use preloaders while loading VREs list</Change>
+		<Change>Ported to GWT 2.8.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.3.5.0" date="2017-11-08">
+		<Change>Added support for optional layout via TabPages and browsing VREs by Organisations and Category</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.3.4.0" date="2017-07-05">
+		<Change>Ported to GWT 2.8.1</Change>
+		<Change>Added support for Terms of Use Display</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.3.3.0" date="2017-05-15">
+		<Change>Ported to Java8</Change>
+		<Change>Added support for template emails</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.3.2.0" date="2016-11-17">
+		<Change>Removed ASL Session</Change>
+		<Change>Implemented Feature #4877 remove VRE association to single Category constraint</Change>
+		<Change>Info Button redircets to VRE Public page (if a public page exists for the VRE)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.3.1.0"
+		date="2016-10-03">
+		<Change>Added support for invite-only closed groups</Change>
+		<Change>Fix for Bug #4877 Email Notification sent multiple times
+			sometimes</Change>
+			<Change>Logo VRE was not updated in the portlet due to liferay versioning of Document Library</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.3.0.0"
+		date="2016-03-28">
+		<Change>Ported to Liferay 6.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.2.0.0"
+		date="2015-10-22">
+		<Change>Refactored to support virtual groups and related descriptions
+			through LR Custom Field
+		</Change>
+		<Change>Refactored with GWT Bootstrap, new look and feel</Change>
+		<Change>Added support for showing external hosted VREso, see Feature
+			#755
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.1.1.0"
+		date="2015-04-28">
+		<Change>Redesigned and restyles the way vre description is shown to
+			end users
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-user.join-vre.1.0.0"
+		date="2015-03-02">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

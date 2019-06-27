@@ -1,0 +1,9 @@
+<metadataformat type="EmptyProfile">
+	<metadatafield>
+		<fieldName>test</fieldName>
+		<mandatory>false</mandatory>
+		<dataType>String</dataType>
+		<maxOccurs>1</maxOccurs>
+		<note>Test Field</note>
+	</metadatafield>
+</metadataformat>

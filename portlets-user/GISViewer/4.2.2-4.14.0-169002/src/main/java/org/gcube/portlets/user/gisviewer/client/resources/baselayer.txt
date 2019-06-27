@@ -1,0 +1,1 @@
+http://geoserver1.d4science.org/geoserver/aquamaps/wms?layers=aquamaps:TrueMarble.16km.2700x1350

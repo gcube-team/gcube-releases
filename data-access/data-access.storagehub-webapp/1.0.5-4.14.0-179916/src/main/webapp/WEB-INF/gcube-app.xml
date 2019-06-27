@@ -1,0 +1,14 @@
+<application mode='online'>
+		<name>StorageHub</name>
+		<group>DataAccess</group>
+		<version>1.0.5-4.14.0-179916</version>
+		<description>Storage Hub webapp</description>
+		
+		<!-- <proxy protocol="https">
+                <hostname>workspace-repository.dev.d4science.org</hostname>
+				<port>443</port>	 
+         </proxy>  --> 
+
+		
+		<local-persistence location='target' />
+</application>

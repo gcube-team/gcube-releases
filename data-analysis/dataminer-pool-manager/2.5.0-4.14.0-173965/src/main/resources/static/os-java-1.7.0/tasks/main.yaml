@@ -1,0 +1,7 @@
+---
+
+- name: adding OS Package java-1.7.0
+  package: 
+    name: java-1.7.0-openjdk
+    state: "{{os_package_state}}"
+  become: true

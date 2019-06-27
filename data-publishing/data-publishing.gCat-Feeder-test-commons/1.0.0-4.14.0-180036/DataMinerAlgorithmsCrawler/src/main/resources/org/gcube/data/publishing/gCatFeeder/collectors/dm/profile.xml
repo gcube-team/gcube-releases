@@ -1,0 +1,45 @@
+<metadataformat type="DataMiner Process">
+	<metadatafield>
+		<fieldName>Input Parameter</fieldName>
+		<mandatory>false</mandatory>
+		<dataType>String</dataType>
+		<note>Input parameter expected for the execution of the process</note>
+	</metadatafield>	
+	<metadatafield>
+		<fieldName>Output Parameter</fieldName>
+		<mandatory>false</mandatory>
+		<dataType>String</dataType>
+		<note>Output parameter expected from the execution of the process
+		</note>
+	</metadatafield>
+	<metadatafield>
+		<fieldName>Process Author</fieldName>
+		<mandatory>false</mandatory>
+		<dataType>String</dataType>
+		<maxOccurs>*</maxOccurs>
+		<defaultValue />
+		<note>The name of the author, with email and ORCID. The format should
+			be: family, given[, email][, ORCID]. Example: Smith, John,
+			js@acme.org, orcid.org/0000-0002-1825-0097</note>
+		<validator>
+			<regularExpression>^[a-zA-ZÀ-ÿ .'-]+, [a-zA-ZÀ-ÿ .'-]+[,
+				]*([a-zA-Z0-9_!#$%’*+=?`{|}~^.-]+@[a-zA-Z0-9À-ÿ.-]+)?[,
+				]*(orcid.org\/0000-000(1-[5-9]|2-[0-9]|3-[0-4])\d\d\d-\d\d\d[\dX])?$</regularExpression>
+		</validator>
+	</metadatafield>
+	<metadatafield>
+		<fieldName>Process Maintainer</fieldName>
+		<mandatory>false</mandatory>
+		<dataType>String</dataType>
+		<maxOccurs>*</maxOccurs>
+		<defaultValue />
+		<note>The name of the author, with email and ORCID. The format should
+			be: family, given[, email][, ORCID]. Example: Smith, John,
+			js@acme.org, orcid.org/0000-0002-1825-0097</note>
+		<validator>
+			<regularExpression>^[a-zA-ZÀ-ÿ .'-]+, [a-zA-ZÀ-ÿ .'-]+[,
+				]*([a-zA-Z0-9_!#$%’*+=?`{|}~^.-]+@[a-zA-Z0-9À-ÿ.-]+)?[,
+				]*(orcid.org\/0000-000(1-[5-9]|2-[0-9]|3-[0-4])\d\d\d-\d\d\d[\dX])?$</regularExpression>
+		</validator>
+	</metadatafield>
+</metadataformat>

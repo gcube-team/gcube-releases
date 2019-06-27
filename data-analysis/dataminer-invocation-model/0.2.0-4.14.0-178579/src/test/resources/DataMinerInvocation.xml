@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataminer-invocation>
+   <operator-id>[THE_OPERATOR_ID]</operator-id>
+   <action>RUN</action>
+   <parameters>
+      <input>
+         <param>
+            <key>[key2]</key>
+            <value>[value2]</value>
+         </param>
+         <param>
+            <key>fileId</key>
+            <value>http://publicLinkToFile</value>
+         </param>
+      </input>
+   </parameters>
+</dataminer-invocation>

@@ -1,0 +1,13 @@
+farmid,area,year,type_of_animal,number_of_lethal_incidents,specify_if_other_is_selected_in_type_column_r
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,2019.0,Birds,3.0,unknown
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,2019.0,Fish,6.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,2019.0,Sea turtles,4.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,2020.0,Birds,10.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,2020.0,Marine mammals,3.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,2020.0,Fish,7.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,2021.0,Sea turtles,8.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,2021.0,Fish,5.0,unknown
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,2022.0,Fish,9.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,2021.0,Birds,13.0,unknown
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,2022.0,Marine mammals,21.0,0
+Farm_b5d7c07b-45f1-4387-81f9-6659e9af637f,G2,2022.0,Sea turtles,5.0,0

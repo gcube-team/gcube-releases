@@ -1,0 +1,59 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.noBorder {
+		border: 0px;
+	}
+	
+	.marginToError {
+		margin-left: 180px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="form_unit_fields">
+			<g:VerticalPanel ui:field="errorPanel" styleName="{style.marginToError}">
+			</g:VerticalPanel>
+			<b:Form type="HORIZONTAL">
+				<b:Fieldset styleName="{style.noBorder}">
+
+					<b:ControlGroup ui:field="cg_select_population_type">
+						<b:ControlLabel for="cl_select_population_type">Batch Type</b:ControlLabel>
+						<b:Controls>
+							<b:ListBox name="Select a Population Type..." b:id="field_select_population_type"
+								ui:field="field_select_population_type" addStyleNames="the_select_custom">
+							</b:ListBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="cg_select_population">
+						<b:ControlLabel for="cl_select_population">Level</b:ControlLabel>
+						<b:Controls>
+							<b:ListBox name="Select a Population..." b:id="field_select_population"
+								ui:field="field_select_population" addStyleNames="the_select_custom">
+							</b:ListBox>
+						</b:Controls>
+					</b:ControlGroup>
+
+					<b:ControlGroup ui:field="cg_select_year">
+						<b:ControlLabel for="cl_select_year">Year</b:ControlLabel>
+						<b:Controls>
+							<b:InputAddOn>
+								<b:ListBox name="Select Year..." b:id="field_select_year"
+									ui:field="field_select_year" multipleSelect="true"
+									addStyleNames="the_select_custom">
+								</b:ListBox>
+								<b:appendWidget>
+									<b:CheckBox ui:field="uib_check_all_year" title="Select/Unselect All" />
+								</b:appendWidget>
+							</b:InputAddOn>
+						</b:Controls>
+					</b:ControlGroup>
+
+				</b:Fieldset>
+			</b:Form>
+		</g:HTMLPanel>
+		<!-- <b:Pager left="Older" right="Submit Request" aligned="true" ui:field="pager" 
+			/> -->
+	</g:HTMLPanel>
+</ui:UiBinder> 

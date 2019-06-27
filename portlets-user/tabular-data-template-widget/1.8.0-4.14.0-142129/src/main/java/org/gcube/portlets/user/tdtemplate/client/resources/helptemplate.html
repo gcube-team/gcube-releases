@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Template Helper</title>
+<style type="text/css">
+#templateHelper {
+	width: 390px;
+	font-family: Arial, Verdana, sans-serif;
+	/* 	color: #665544; */
+	font-size: 12px;
+	margin: 5px !important;
+	padding: 5px !important;
+}
+
+.templateHelperClass {
+	background-color: #efefef;
+	padding: 10px;
+}
+
+.paddingLeft {
+	padding-left: 15px;
+}
+
+.paddingLeft10 {
+	padding-left: 10px;
+}
+
+#templateHelper p {
+	width: 370px;
+}
+
+#templateHelper li {
+	width: 350px;
+	padding-left: 20px;
+}
+
+.templatediv {
+	margin-top: 5px !important;
+}
+</style>
+</head>
+<body id="templateHelper">
+	<h3 class="templateHelperClass">Templates</h3>
+	<div class="templatediv">
+		<ol class="paddingLeft10" type=”i”>
+			<li>A table template defines:</li>
+			<ul class="paddingLeft" type=”disc”>
+				<li>Table definition</li>
+				<li>Columns definition</li>
+				<li>A set of table operations (not yet in this release)</li>
+
+				<li>A set of validation rules</li>
+			</ul>
+			<li>It can be applied to any dataset</li>
+			<li>It can be modified and shared among people</li>
+
+		</ol>
+	</div>
+	<div class="templatediv">
+		<p>A table template can be applied to:</p>
+
+		<ol class="paddingLeft10" type=”i”>
+			<li style="font-weight: bold;">Generic table:</li>
+			<ul class="paddingLeft" type=”disc”>
+				<li>any (un)typed tabular dataset</li>
+			</ul>
+
+			<li style="font-weight: bold;">Codelist:</li>
+			<ul class="paddingLeft" type=”disc”>
+				<li>Must have one (and only one) code column</li>
+				<li>Codes must be unique</li>
+				<li>May have one or more attributes</li>
+				<li>May have one or more annotations</li>
+			</ul>
+
+			<li style="font-weight: bold;">Dataset:</li>
+			<ul class="paddingLeft" type=”disc”>
+				<li>At least one dimension (reference to a codelist)</li>
+				<li>Must have at least one value column</li>
+				<li>May have one or more attributes</li>
+			</ul>
+
+		</ol>
+	</div>
+
+	<div class="templatediv">
+		<p>In case of error one policy of the following policies has to be
+			selected:</p>
+
+		<ol class="paddingLeft10" type=”i”>
+			<li style="font-weight: bold;">DISCARD:</li>
+			<ul class="paddingLeft" type=”disc”>
+				<li>The records that don’t pass the Validation Rules are
+					deleted</li>
+
+			</ul>
+
+			<li style="font-weight: bold;">SAVE:</li>
+			<ul class="paddingLeft" type=”disc”>
+				<li>The records that don’t pass the Validation Rules are saved
+					in a separate table and removed from the resource</li>
+			</ul>
+
+			<li style="font-weight: bold;">ASK:</li>
+			<ul class="paddingLeft" type=”disc”>
+				<li>The records that don’t pass the Validation Rules are
+					identified and the user has to take corrective actions and then
+					repeat the validation phase</li>
+			</ul>
+		</ol>
+	</div>
+</body>
+</html>

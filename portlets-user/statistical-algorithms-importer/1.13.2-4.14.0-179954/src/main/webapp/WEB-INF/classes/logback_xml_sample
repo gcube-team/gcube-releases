@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!-- Insert the current time formatted as "yyyyMMdd'T'HHmmss" under the 
+		key "bySecond" into the logger context. This value will be available to all 
+		subsequent configuration elements. -->
+	<timestamp key="byDay" datePattern="yyyyMMdd" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</Pattern>
+		</layout>
+	</appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+		<file>${CATALINA_HOME}/webapps/statistical-runner/logs/StatisticalRunnerLogBack.log
+		</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<fileNamePattern>StatisticalRunner.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+			<!-- keep 30 days' worth of history -->
+			<maxHistory>30</maxHistory>
+			
+		</rollingPolicy>
+
+		<!-- 
+		<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+			<layout class="ch.qos.logback.classic.html.HTMLLayout">
+				<pattern>%d%thread%-5level%logger%msg</pattern>
+			</layout>
+		</encoder> -->
+
+		
+		<encoder>
+			<pattern>%d [%thread] %-5level %logger{35} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<root level="TRACE">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>

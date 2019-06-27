@@ -1,0 +1,108 @@
+.tea-workspace-container > #tea-workspace{
+	font-size: 13px;
+}
+
+/* root folders styling */
+
+.tea-workspace-container > #tea-workspace > ul > li > a{
+	background: rgb(2,113, 192);
+    color: white;
+    margin-right: 2px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    width: 92%;
+    outline:none;
+}
+
+/* hides icons of root folders */
+
+.tea-workspace-container > #tea-workspace > ul > li > a > i{
+	display:none;
+}
+
+.aui .tea-workspace-container.nav.nav-list ul{
+	margin:0px;
+}
+
+.aui .tea-workspace-container.nav.nav-list .nav-header{
+	text-align:center;
+}
+
+#tea-workspace .pdf-icon{
+	background: url(../../img/pdf.png) no-repeat;
+	background-position: center center;
+	background-size: 20px;
+}
+
+#tea-workspace .word-icon{
+	background: url(../../img/word.png) no-repeat;
+	background-position: center center;
+	background-size: 20px;	
+}
+
+#tea-workspace .excel-icon{
+	background: url(../../img/excel.png) no-repeat;
+	background-position: center center;
+	background-size: 20px;	
+}
+
+#tea-workspace .powerpoint-icon{
+	background: url(../../img/powerpoint.png) no-repeat;
+	background-position: center center;
+	background-size: 20px;
+}
+
+#tea-workspace .image-icon{
+	background: url(../../img/image.png) no-repeat ;
+	background-position: center center;
+	background-size: 18px 20px;
+}
+
+#tea-workspace .text-icon{
+	background: url(../../img/text.png) no-repeat ;
+	background-position: center center;
+	background-size: 20px;
+}
+
+#tea-workspace .chart-icon{
+	background: url(../../img/chart.png) no-repeat ;
+	background-position: center center;
+	background-size: 20px;
+}
+
+#tea-workspace .text-icon{
+	background: url(../../img/text.png) no-repeat ;
+	background-position: center center;
+	background-size: 20px;
+}
+
+#tea-workspace .folder-icon{
+	background: url(../../img/folder.png) no-repeat ;
+	background-position: center center;
+	background-size: 20px;
+}
+
+#tea-workspace .archive-icon{
+	background: url(../../img/archive.png) no-repeat ;
+	background-position: center center;
+	background-size: 20px;
+}
+
+#tea-workspace .csv-icon{
+	background: url(../../img/csv.png) no-repeat ;
+	background-position: center center;
+	background-size: 24px 20px;
+}
+
+#tea-workspace .war-icon{
+	background: url(../../img/war.png) no-repeat ;
+	background-position: center center;
+	background-size: 20px;
+}
+
+#tea-workspace .empty-file-icon{
+	background: url(../../img/empty-file.png) no-repeat ;
+	background-position: center center;
+	background-size: 20px;
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-9-0" date="${buildDate}">
+		<Change>refers_to can be null while publishing legacy records refs #13347</Change>
+		<Change>Removed the non-ascii clean from extra fields refs #12421</Change>
+		<Change>Properly supporting UTF-8 characters refs #12421</Change>
+		<Change>Title is updated according to Stock/Fishery Name refs #16395</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-8-0" date="2019-02-26">
+		<Change>The sources in GRSF VRE are calculated using 'database_sources' field #12861</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-7-0" date="2018-10-10">
+		<Change>Fixed pom to exclude libraries already provided by the container #12510</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-6-0" date="2018-07-18">
+		<Change>Added biomass timeseries support to stock data #11464</Change>
+		<Change>Added 'With Similarities'-'No Similarities' tag to GRSF Records #11749</Change>
+		<Change>Added Tag for 'Fishing Gears' and 'Flag State' fields #11748</Change>
+		<Change>Added 'Connected'-'Not Connected' tag to GRSF Records #11766</Change>
+		<Change>Added group for SDG flag #11767</Change>
+		<Change>Added citation field #11811</Change>
+		<Change>Added sub-groups support for available time series related to GRSF Type "Assessment Unit" #11832</Change>
+		<Change>Added Biomass group #11967</Change>
+		<Change>Changed 'State and trend of Marine Resource' to 'State and Trend' #11968</Change>
+		<Change>Changed 'Scientific advice' to 'Scientific Advice' #11969</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-5-0"
+		date="2017-01-10">
+		<Change>Model enhancements</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-4-0"
+		date="2017-11-02">
+		<Change>Some fixes and improvements: added a common library between
+			service and management widget
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-3-0"
+		date="2017-08-01">
+		<Change>Model upgrade</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-2-0"
+		date="2017-07-01">
+		<Change>Model changed #8719</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-1-2"
+		date="2017-05-15">
+		<Change>Minor fixes</Change>
+		<Change>Updates for ticket 8719</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-1-1"
+		date="2017-04-02">
+		<Change>Minor fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-1-0"
+		date="2017-02-28">
+		<Change>Model update</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-0-1"
+		date="2017-02-10">
+		<Change>Minor fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-catalogue.grsf-publisher-ws.1-0-0"
+		date="2016-12-10">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,7 @@
+<application mode='online'>
+		<name>gCat-Feeder</name>
+		<group>DataPublishing</group>
+		<version>1.0.0-SNAPSHOT</version>
+		<description>gFeed service</description>		
+		<local-persistence location='target' />
+</application>

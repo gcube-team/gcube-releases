@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>LATEST</version>
+	</parent>
+	<groupId>org.gcube.data-publishing.gCat-Feeder</groupId>
+	<artifactId>gCat-Feeder-Suite</artifactId>
+	<version>1.0.0-4.14.0-180036</version>
+	<packaging>pom</packaging>
+	<name>gCat-Feeder Suite</name>
+	<description>gCat-Feeder Suite of components : service, plugin framework, plugins</description>
+
+
+	<modules>
+		<module>gCat-Feeder</module>
+		<module>collectors-plugin-framework</module>
+		<module>DataMinerAlgorithmsCrawler</module>
+		<module>commons</module>
+		<module>catalogue-plugin-framework</module>
+		<module>gCat-Controller</module>
+		<module>test-commons</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>gcube-smartgears-bom</artifactId>
+				<version>1.0.1-4.14.0-176574</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>gcube-bom</artifactId>
+				<version>1.3.0-4.14.0-177330</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>			
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+
+		
+
+		
+		<!-- TEST -->
+		
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.13</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+</project>

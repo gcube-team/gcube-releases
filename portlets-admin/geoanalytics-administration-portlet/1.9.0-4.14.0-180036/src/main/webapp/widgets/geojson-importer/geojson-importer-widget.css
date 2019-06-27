@@ -1,0 +1,489 @@
+#geojson-importer-container #geojson-importer-general-form-container {
+	padding: 10px;
+}
+#geojson-importer-container #geojson-importer-general-description{
+    margin-bottom: 20px;
+}
+
+#geojson-importer-container .formui-checkbox {
+	display: inherit;
+	margin: auto;
+	left: 113px;
+}
+
+#geojson-importer-container label.formui-checkbox:before {
+	width: 15px;
+	height: 15px;
+	font-size: 15px;
+	line-height: 17px;
+}
+
+#geojson-importer-container{
+	display: inline-block;	
+	padding-left:0px;
+	left:0px;
+	right:0px;
+	margin:auto;
+	min-width: calc(100% - 2px) ;
+}
+
+.geojson-importer-container-button{
+	min-width: 700px ;
+	border-top-left-radius:11px;	
+	border-top-right-radius:11px;	
+	border: 1px solid black;
+	-webkit-box-shadow: 3px 4px 15px -2px rgba(0,0,0,0.74);
+	-moz-box-shadow: 3px 4px 15px -2px rgba(0,0,0,0.74);
+	box-shadow: 3px 4px 15px -2px rgba(0,0,0,0.74);	
+}
+
+#geojson-importer-container #geojson-importer-modal-body{
+	padding:0px;
+ 	display:table;
+ 	width:100% ;
+}
+
+#geojson-importer-container #geojson-importer-modal-body .geojson-importer-row{
+	padding:0px;
+ 	display:table-row;
+}
+
+#geojson-importer-container #geojson-importer-modal-body .geojson-importer-row.scrollable{
+ 	display:inline-block;
+}
+
+#geojson-importer-container #geojson-importer-modal-body.scrollable{
+	padding:0px;
+    overflow-y:scroll;
+    display:inline-block;
+	//max-height: calc(100vh - 350px);
+}
+
+
+#geojson-importer-container #geojson-importer-modal-header{
+	border-radius: 9px 9px 0px 0px;
+	border-color:black;
+	margin-bottom:10px;
+}
+
+#geojson-importer-container #geojson-importer-modal-header >  h5{
+	font-size:16px;
+	margin-bottom:15px;
+	margin-top:15px;
+}
+
+#geojson-importer-container .control-label{
+	cursor:default;
+	font-weight:bold;
+	font-size:13px;
+}
+
+#geojson-importer-container h5{
+	margin-bottom:30px;
+	text-align:center;
+}
+
+#geojson-importer-container select{
+	min-height: 30px;
+    max-height: 20px;
+    outline: 0;
+    min-width: 160px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+}
+
+#geojsonimporter #geojson-importer-show-button{
+	background: rgb(2, 113, 190);
+	color:white;
+	margin-left: 0px;
+	margin-top: 10px;
+	display:inline-block;
+	padding: 20px 20px;
+	font-size: 15px;
+	cursor: pointer;	
+}
+
+#geojsonimporter #geojson-importer-show-button:hover{
+	background: rgb(4, 133, 220);
+	color:white;
+}
+
+#geojsonimporter #geojson-importer-show-button:focus{
+	background: rgb(2,93, 170);
+	color:white;
+	outline:0;
+}
+
+#geojson-importer-container #geojson-importer-modal-header{
+	background: rgb(2, 113, 190);
+	color:white;
+}
+
+#geojson-importer-container #geojson-importer-close-button{
+    float:right; 
+    cursor:pointer;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    background: none;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;      
+	outline:0;
+	margin-top:15px;
+}
+
+#geojson-importer-container #geojson-importer-close-button:before {
+    content: "Γ—";
+}
+
+#geojson-importer-container #geojson-importer-div-purpose{
+	margin-top:25px;
+}
+
+ #geojson-importer-container #geojson-importer-browsefiles-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.aui #geojson-importer-container #geojson-importer-cancel,
+.aui #geojson-importer-container #geojson-importer-import-button{
+	text-shadow: 0px 0px 2px rgba(151, 151, 151, 1);
+    color: white;
+    margin: 0 0px 0 60px;
+    outline: 0;
+    background: #0271be;
+    border: none;
+    height: 35px;
+    width:120px;
+    display: inline-block;
+}
+
+.aui #geojson-importer-container #geojson-importer-cancel:hover,
+.aui #geojson-importer-container #geojson-importer-import-button:hover{
+	background: #4cb5d2;
+}
+
+.aui #geojson-importer-container #geojson-importer-patch-browsefiles button{
+	height:28px;
+}
+
+
+#geojson-importer-container #geojson-importer-div-submit{
+	display:inline-block;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+#geojson-importer-container .numberCircle {
+  display:inline-block;
+  line-height:0px;
+  
+  border-radius:50%;
+  border:2px solid rgb(2, 113, 190);
+  
+  font-size:14px;
+}
+
+#geojson-importer-container .numberCircle span {
+  display:inline-block;
+
+  padding-top:50%;
+  padding-bottom:50%;
+
+  margin-left:8px;
+  margin-right:8px;
+}
+
+#geojson-importer-container .border-between > [class*='col-']:before {
+	 background: #e3e3e3;
+	 bottom: 0;
+	 content: " ";
+	 left: 0;
+	 position: absolute;
+	 width: 1px;
+	 top: 0;
+}
+
+#geojson-importer-container .border-between > [class*='col-']:first-child:before {
+	display: none;
+}
+
+
+#geojson-importer-container .help-inline label, #geojson-importer-container .help-inline{
+	font-size:12px;
+}
+
+/************************************************* jQuery Tags Input *************************************************/
+
+#geojson-importer-container div.tagsinput {
+	background:white;
+	overflow-y:auto;
+	padding:5px;
+	width:auto !important;
+	min-height:55px !important;
+	max-height:55px !important;	
+	margin-bottom: 6px;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    color: rgb(2, 113, 190);
+}
+
+#geojson-importer-container div#geojson-importer-tagsinput_addTag.error {
+	border:0;
+}
+
+#geojson-importer-container div.tagsinput span.tag {
+	border-radius: 7px 7px 7px 7px;
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border: 2px solid white;
+	display:block;
+	float:left;
+	background:black;
+	color:white;
+	font-size:13px;
+	font-weight:bold;
+	padding:2px 5px 2px 5px;
+	margin-right:5px;
+	margin-bottom:5px;
+}
+
+#geojson-importer-container div.tagsinput span.tag a {
+	font-weight:100;
+	color:white;
+	font-size:13px;
+}
+
+#geojson-importer-container div.tagsinput input {
+	width:80px;
+	font-family:helvetica;
+	font-size:13px;
+	border:1px solid transparent;
+	background:transparent;
+	color:#000;
+	outline:0;
+	margin:0 5px 5px 0;
+	padding:5px;
+}
+
+#geojson-importer-container div.tagsinput div {
+	display:block;
+	float:left;
+}
+
+#geojson-importer-container .tags_clear {
+	clear:both;
+	width:100%;
+	height:0;
+}
+
+#geojson-importer-container .not_valid {
+	background:#FBD8DB	!important;
+	color:#90111A	!important;
+}
+
+.aui #contentOfImporter #geojson-importer-container .geojson-importer-color-red {
+	color:#b94a48;
+}
+
+.aui #contentOfImporter #geojson-importer-container .geojson-importer-color-red > label {
+	color:#b94a48;
+	margin-left:5px;
+}
+
+@media (min-width: 200px){
+	.aui #geojson-importer-container input[type="color"], 
+	.aui #geojson-importer-container input[type="date"], 
+	.aui #geojson-importer-container input[type="datetime"], 
+	.aui #geojson-importer-container input[type="datetime-local"], 
+	.aui #geojson-importer-container input[type="email"], 
+	.aui #geojson-importer-container input[type="month"], 
+	.aui #geojson-importer-container input[type="number"], 
+	.aui #geojson-importer-container input[type="password"], 
+	.aui #geojson-importer-container input[type="search"], 
+	.aui #geojson-importer-container input[type="tel"], 
+	.aui #geojson-importer-container input[type="text"], 
+	.aui #geojson-importer-container input[type="time"], 
+	.aui #geojson-importer-container input[type="url"], 
+	.aui #geojson-importer-container input[type="week"], 
+	.aui #geojson-importer-container .input-prepend .add-on, 
+	.aui #geojson-importer-container .navbar-search .search-query, 
+	.aui #geojson-importer-container .uneditable-input{
+		font-size:14px;
+		margin-bottom:0px;
+		height:20px;
+	}
+}
+
+.aui #geojson-importer-container #geojson-importer-patch-browsefiles {  
+    position: relative;
+    overflow: hidden;
+	font-size:14px;
+}
+
+.aui #geojson-importer-container #geojson-importer-selected-file{
+	cursor: text;
+	background:white;
+	border-top-right-radius:0px;
+	border-bottom-right-radius:0px;
+	margin-bottom: 6px;
+    border-radius: 5px;
+}
+
+#geojson-importer-patch-browsefiles button {
+    background-color: #0271be;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+
+.aui #contentOfImporter #geojson-importer-container #geojson-importer-modal-body textarea {
+    margin-bottom: 6px;
+    border-radius: 5px;
+    resize:vertical ;
+}
+
+.aui #contentOfImporter #geojson-importer-container #geojson-importer-modal-body input[type="checkbox"] {
+	width:30px;
+	height:30px;
+	margin-top:0px;
+	margin-bottom: 6px;	
+	display: none;
+}
+
+.aui #contentOfImporter #geojson-importer-container #geojson-importer-modal-body input[type="checkbox"]:not(:checked) + label::before,
+.aui #contentOfImporter #geojson-importer-container #geojson-importer-modal-body input[type="checkbox"]:checked + label::before
+ {
+	 content: '';
+	 position: absolute;
+	 width: 1.95em; height: 1.85em;
+	 border: 1px solid #ccc;
+	 background: #fff;
+	 border-radius: 4px;
+	 box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+
+.aui #contentOfImporter #geojson-importer-container #geojson-importer-modal-body input[type="checkbox"]:not(:checked)+ label::after,
+.aui #contentOfImporter #geojson-importer-container #geojson-importer-modal-body input[type="checkbox"]:checked+ label::after
+ {
+	content: '\2714';
+	position: absolute;
+	font-size: 2.1em;
+	line-height: 1.06;
+    padding-left: 4px;
+	color: #ffc000;
+	transition: all .2s;
+}
+
+.aui #contentOfImporter #geojson-importer-container #geojson-importer-modal-body input[type="checkbox"]:not(:checked)+ label::after
+ {
+	opacity: 0;
+	transform: scale(0);
+}
+
+.aui #contentOfImporter #geojson-importer-container #geojson-importer-modal-body input[type="checkbox"]:checked+ label::after
+ {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.aui #contentOfImporter #geojson-importer-container label {
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.aui #contentOfImporter #geojson-importer-container label .makeMeOrange {
+	float: right;
+}
+
+.aui #contentOfImporter #geojson-importer-container textarea::-webkit-input-placeholder {
+	color: #ccc !important;
+	font-size: 13px;
+    font-weight: 200;
+}
+ 
+.aui #contentOfImporter #geojson-importer-container textarea:-moz-placeholder { /* Firefox 18- */
+	color: #ccc !important;  
+	font-size: 13px;
+    font-weight: 200;
+}
+ 
+.aui #contentOfImporter #geojson-importer-container textarea::-moz-placeholder {  /* Firefox 19+ */
+	color: #ccc !important;  
+	font-size: 13px;
+    font-weight: 200;
+}
+ 
+.aui #contentOfImporter #geojson-importer-container textarea:-ms-input-placeholder {  
+	color: #ccc !important;  
+	font-size: 13px;
+    font-weight: 200;
+}
+
+#geojson-importer-browsefiles-button {
+	height: 33px;
+    line-height: 30px;
+    position: relative;
+    opacity: -0.9;
+    cursor: pointer;
+    width: 121px;
+    background-color: antiquewhite;
+}
+
+.adminContainer .navbarTop #geojson-importer-container hr {
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+.adminContainer .navbarTop .headerDescription {
+	color: #bfbfbf;
+}	
+
+@media (max-width: 979px){
+	.aui .btn {
+	    padding: 4px 12px;
+	    font-size: 14px;
+	}
+}
+
+@media (max-width: 979px){
+	.aui input[type="color"], 
+	.aui input[type="date"], 
+	.aui input[type="datetime"], 
+	.aui input[type="datetime-local"], 
+	.aui input[type="email"], 
+	.aui input[type="month"], 
+	.aui input[type="number"], 
+	.aui input[type="password"], 
+	.aui input[type="search"], 
+	.aui input[type="tel"], 
+	.aui input[type="text"], 
+	.aui input[type="time"], 
+	.aui input[type="url"], 
+	.aui input[type="week"], 
+	.aui select, 
+	.aui textarea, 
+	.aui .input-prepend .add-on, 
+	.aui .navbar-search .search-query, 
+	.aui .uneditable-input {
+	    font-size: 14px;
+	    height: auto;
+	    line-height: normal;
+	}
+}
+
+@media (max-width: 767px) and (max-width: 979px){
+	.aui .btn {
+	    display: inline-block;
+	}
+}

@@ -1,0 +1,19 @@
+<metadataformat type="TestProfile">
+	<metadatafield>
+		<fieldName>test</fieldName>
+		<mandatory>false</mandatory>
+		<dataType>String</dataType>
+		<maxOccurs>1</maxOccurs>
+		<note>Test Field</note>
+	</metadatafield>
+	<metadatafield categoryref="FSKX_model_scope">
+		<fieldName>Population</fieldName>
+		<mandatory>false</mandatory>
+		<dataType>String</dataType>
+		<maxOccurs>*</maxOccurs>
+		<defaultValue/>
+		<note>The population of the model</note>
+		<tagging create="true" separator=" ">onValue</tagging>
+		<grouping create="true">onFieldName_onValue</grouping>
+	</metadatafield>
+</metadataformat>

@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="${groupId}.${artifactId}.1-1-0" date="2019-03-13">
+		<Change>Added automatic run [ticket #16155]</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1-0-0" date="2019-01-31">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

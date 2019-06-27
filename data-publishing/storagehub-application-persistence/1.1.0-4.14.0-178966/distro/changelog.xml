@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.data-publishing.storagehub-application-persistence.1-1-0" date="${buildDate}">
+		<Change>Catching new exceptions raised from Storage Hub clients</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-publishing.storagehub-application-persistence.1-0-0" date="2019-02-26">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

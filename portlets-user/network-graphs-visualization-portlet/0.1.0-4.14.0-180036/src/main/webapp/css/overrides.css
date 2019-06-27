@@ -1,0 +1,124 @@
+/* Liferay overrides */
+.ui.form input[type=text] {
+    height: 38px
+}
+
+.chart-header label {
+    display: inline
+}
+
+.menu {
+    position: relative;
+    width: auto;
+}
+
+.aui .container-fluid {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.sidebar-controls .jss315{
+       position: absolute;
+       left: 0px;
+       z-index: 10000;
+       top: -9px;
+       height: calc(100% - 80px);
+       padding:5px;
+}
+
+.top-n{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.top-n-button {
+    margin-right: 1em;
+
+}
+
+.playerbar-controls .jss352{
+    position: absolute;
+    left: 31px;
+    bottom:53px;
+    width: calc(100% - 61px);
+}
+
+.player-controls input {
+    max-width: 53px;
+    margin: 10px;
+}
+
+.top-n-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.ui.grid .upload-button-fix {
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+.ui.grid .data-import-fix{
+    width:100%;
+    padding-right:0;
+}
+
+.input-file {
+    min-height: 50px;
+    width: 100%;
+}
+
+input[type=file] {
+    min-height: 50px;
+    width: 100%;
+}
+
+input#standard-bare{
+    min-height: 40px;
+    max-width: 80px;
+    border-left-color: #e8e8e8;
+
+}
+
+.aui ul, .aui ol .content .topMenu h6{
+    margin:0;
+}
+
+.aui .topMenu form {
+    margin:0;
+}
+
+.aui .topMenu h6 {
+    margin:0;
+}
+
+ .form-inline label, .aui .form-search .btn-group, .aui .form-inline .btn-group .main-content {
+    color: white;
+    font-size:20px;
+}
+
+  .main-content .App-style .topMenu .form-inline .aui form  {
+    margin:0;
+}
+
+.aui .content {
+}
+
+.main-content {
+    display:flex;
+}
+
+
+.aui .sidebar-controls button {
+    margin:2em;
+}
+
+.playerbar-controls input {
+   margin:1em;
+   max-width:63px;
+}
+
+.player {
+    margin:auto;
+}

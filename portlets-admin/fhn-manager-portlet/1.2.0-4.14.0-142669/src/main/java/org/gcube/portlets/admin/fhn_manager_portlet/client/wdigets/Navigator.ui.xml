@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">	
+	<b:WellNavList>		
+		<b:NavHeader>Resources</b:NavHeader>
+		<b:Divider/>
+		<b:NavLink active="false" icon="HDD" ui:field="nodesButton"></b:NavLink>		
+		<b:NavLink active="false" icon="TAG" ui:field="profilesButton"></b:NavLink>
+		<b:NavLink active="false" icon="COGS" ui:field="templatesButton"></b:NavLink>
+ 		<b:NavLink active="false" icon="GLOBE" ui:field="providersButton"></b:NavLink>
+	</b:WellNavList>
+</ui:UiBinder> 

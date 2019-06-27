@@ -1,0 +1,3 @@
+create table updates (id serial NOT NULL PRIMARY KEY, date date);
+create table taxon(taxonid varchar(15) NOT NULL PRIMARY KEY, scientificname varchar(255), scientificnameauthorship varchar(255), genus varchar(60), specificepithet varchar(60), family varchar(60), taxonrank varchar(15), taxonomicstatus varchar(100), nomenclaturalstatus varchar(100), nameaccordingto varchar(150), originalnameusageid varchar(15), namepublishedin varchar(500), acceptednameusageid varchar(15), parentnameusage varchar(100), parentnameusageid varchar(15), taxonremarks varchar(500), modified varchar(10), nomenclaturalcode varchar(10), name varchar(255));
+create table speciesprofile(taxon_id varchar(15) NOT NULL references taxon(taxonid), isextinct varchar(5), ismarine varchar(5));

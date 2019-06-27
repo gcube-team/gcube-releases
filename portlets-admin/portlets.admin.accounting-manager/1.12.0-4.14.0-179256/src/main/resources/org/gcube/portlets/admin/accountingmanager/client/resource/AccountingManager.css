@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+
+.ribbon {
+	line-height: 13px;
+	font-size: 11px;	
+}
+
+.scopeListView {
+	overflow-x: auto!important;
+	width: 580px!important;
+}
+

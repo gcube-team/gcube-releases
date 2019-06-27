@@ -1,0 +1,36 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.geoanalytics.service-layer-commons.0-0-1" date="2016-09-30">
+		<Change>Initial release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.geoanalytics.service-layer-commons.0-0-2" date="2016-11-24">
+		<Change>added functionality for the retrieval of a project's bounding box</Change>
+	</Changeset>
+	<Changeset component="org.gcube.geoanalytics.service-layer-commons.0-3-0" date="2017-03-03">
+		<Change>Updated TSV importer to support the database changes (GeocodeSystem and Geocode)".</Change>
+		<Change>TaxonomyManager changed to GeocodeManager</Change>
+		<Change>Changed word "scope" to "tenant".</Change>
+		<Change>Fixed rollback for tsv imports.</Change>
+		<Change>FeautureType name now gets Layer id</Change>
+		<Change>Improve wfs importer functionality</Change>
+	</Changeset>
+	<Changeset component="org.gcube.geoanalytics.service-layer-commons.2-1-0" date="2017-04-21">
+		<Change>Remove ShapeImport references</Change>
+		<Change>Remove trash comments</Change>
+		<Change>Cluster logic has been added</Change>
+		<Change>Remove TaxonomyLayer</Change>
+		<Change>Logic for style management and environment initializer has been added</Change>
+	</Changeset>
+	<Changeset component="org.gcube.geoanalytics.service-layer-commons.2-2-0" date="2017-05-24">
+		<Change>Fixed the gos insertion bug when # of gos >=2</Change>
+		<Change>Dropwizard references have been removed</Change>
+		<Change>Removed javax.ws.rs.api-2.0.1 to resolve conflict with Jersey Client 1.x.x</Change>
+		<Change>Added removeLayerConfig</Change>
+	</Changeset>
+	<Changeset component="org.gcube.geoanalytics.service-layer-commons.2-4-0" date="2017-09-26">
+		<Change>Removed rendudant files</Change>
+	</Changeset>
+	<Changeset component="org.gcube.geoanalytics.service-layer-commons.2-9-0" date="2019-06-17">
+		<Change>Logback integration</Change>
+	</Changeset>
+</ReleaseNotes>
+

@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.data-analysis.dataminer-invocation-model.0-2-0"
+		date="2019-06-27">
+		<Change>[Feature #16263] Added 'SHOW' value to ActionType enum
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.data-analysis.dataminer-invocation-model.0-1-0"
+		date="2019-06-27">
+		<Change>[Task #12975] First version
+		</Change>
+	</Changeset>
+</ReleaseNotes>

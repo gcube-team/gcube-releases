@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.performfish.PerformFISH-Apps.1-2-0"
+		date="2018-12-18">
+		<Change>UUID Field Valorisation upon new Association, Company and Farms creation</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.performfish.PerformFISH-Apps.1-1-0"
+		date="2018-10-10">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

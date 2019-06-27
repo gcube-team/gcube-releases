@@ -1,0 +1,55 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.vo-management.usermanagement-core.2-4-1"
+		date="2019-02-28">
+			Feature #16190, avoid returning Liferay Site Roles in UserManagement Core Library
+	</Changeset>
+
+	<Changeset component="org.gcube.vo-management.usermanagement-core.2-4-0"
+		date="2018-03-08">
+		<Change>Create user method automatic set email as verified
+		</Change>
+		<Change>Added list users methods by range
+		</Change>
+		<Change>Added search users method by groupId and Keywords
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vo-management.usermanagement-core.2-3-2"
+		date="2017-12-01">
+		<Change>Added user number to group model.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vo-management.usermanagement-core.2-3-1"
+		date="2017-08-01">
+		<Change>Improvements on Liferay's APIs.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vo-management.usermanagement-core.2-3-1"
+		date="2017-07-01">
+		<Change>Improvements on Liferay's APIs.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vo-management.usermanagement-core.2-3-0"
+		date="2017-02-01">
+		<Change>Added partial support to Liferay's JSON apis.
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vo-management.usermanagement-core.2-2-0"
+		date="2016-12-06">
+		<Change>Added method to read VirtualGroups associated to sites
+		</Change>
+		<Change>Fix for bug #6115
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vo-management.usermanagement-core.2-1-0"
+		date="2016-09-28">
+		<Change>Added efficient method to retireve VRE logo URLs</Change>
+		<Change>Replaced logging from liferay so that it is possible to
+			change
+			level at runtime
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.vo-management.usermanagement-core.2-0-0"
+		date="2016-06-23">
+		<Change>First release after upgrading to Liferay 6.2</Change>
+	</Changeset>
+</ReleaseNotes>

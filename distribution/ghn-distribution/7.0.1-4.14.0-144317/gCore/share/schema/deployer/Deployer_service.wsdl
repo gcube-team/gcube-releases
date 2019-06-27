@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Deployer" targetNamespace="http://gcube-system.org/namespaces/vremanagement/deployer/service" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:binding="http://gcube-system.org/namespaces/vremanagement/deployer/bindings" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:import namespace="http://gcube-system.org/namespaces/vremanagement/deployer/bindings" location="Deployer_bindings.wsdl"/>
+  <wsdl:service name="DeployerService">
+    <wsdl:port name="DeployerPortTypePort" binding="binding:DeployerPortTypeSOAPBinding">
+      <soap:address location="http://localhost:8080/wsrf/services/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

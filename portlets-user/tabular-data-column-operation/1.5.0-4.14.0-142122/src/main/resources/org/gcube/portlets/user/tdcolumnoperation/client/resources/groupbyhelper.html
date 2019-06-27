@@ -1,0 +1,16 @@
+<div>
+	<p style="font-size: 14px; font-weight: bold;">Group By Operation:</p>
+	<p>Group rows by selected columns, applying the specified
+		aggregation functions to relative selected member columns</p>
+	<p>The operation result expected is similar to:</p>
+	<p style="font-style: italic; font-family: sans-serif; font-size: 11px;">
+		SELECT K,K',...,f(X),f'(X'),...,CONST,CONST'... 
+		<br />FROM [TARGET_TABLE] 
+		<br />GROUP BY K,K',...
+	
+		<br />	<br />where: 
+		<br />K,K'... are the columns to group by 
+		<br />f(X),f'(X')... are the aggregation functions to apply to selected columns
+		<br />CONST,CONST'... are constant default values for remaining columns
+	</p>
+</div>

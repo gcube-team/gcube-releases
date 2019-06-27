@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.distribution.gcube-bom.1-3-0" date="${buildDate}">
+		<Change>Added gxREST Dependency</Change>
+		<Change>Added gxJRS Dependency</Change>
+		<Change>Imported jersey-bom</Change>
+		<Change>Added javax.ws.rs-api compatible with defined jersey version</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.gcube-bom.1-2-1" date="2019-02-26">
+		<Change>Upgraded slf4j-api from 1.7.5 to 1.7.25</Change>
+		<Change>Added gxHTTP Dependency</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.gcube-bom.1-2-0" date="2018-11-20">
+		<Change>Updated resource-registry related clients and libraries #11941</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.gcube-bom.1-1-0" date="2017-11-29">
+		<Change>Added Jackson libraries #9835</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.gcube-bom.1-0-2" date="2017-06-06">
+		<Change>Changed version of accounting-lib and document-store-lib</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.gcube-bom.1-0-1" date="2016-11-22">
+		<Change>Removed wrong scope on dependency declaration</Change>
+	</Changeset>
+	<Changeset component="org.gcube.distribution.gcube-bom.1-0-0" date="2016-10-28">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

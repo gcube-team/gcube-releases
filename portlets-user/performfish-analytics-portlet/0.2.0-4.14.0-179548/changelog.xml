@@ -1,0 +1,7 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.portlets-user.performfish-analytics-portlet.0-1-0"
+		date="2019-03-08">
+		<Change>first release</Change>
+	</Changeset>
+</ReleaseNotes>

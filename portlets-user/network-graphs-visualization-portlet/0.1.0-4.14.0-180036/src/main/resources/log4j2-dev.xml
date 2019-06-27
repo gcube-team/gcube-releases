@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{ISO8601} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Logger name="org.hibernate" level="info" additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="org.springframework" level="info" additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="gr.uoa.di.madgik.visualization-network-graphs" level="debug" additivity="false">
+			<AppenderRef ref="File"/>
+		</Logger>
+		<Root level="info">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>

@@ -1,0 +1,7 @@
+<application mode='online'>
+		<name>${artifactId}</name>
+		<group>Application</group>
+		<version>${version}</version>
+		<description>${description}</description>		
+		<local-persistence location='target' />
+</application>

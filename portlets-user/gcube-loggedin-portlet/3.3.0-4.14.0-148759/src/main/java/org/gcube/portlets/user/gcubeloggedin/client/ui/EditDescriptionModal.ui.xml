@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<g:HTMLPanel>
+		<b:Modal ui:field="modal" backdrop="STATIC"
+			keyboard="true" animation="true">
+			<b:TextArea ui:field="text2Edit">Modal Content!</b:TextArea>
+			<b:Paragraph ui:field="loadingContainer" styleName="loading-text" visible="false">
+				<b:Paragraph ui:field="loadingText">Saving VRE Description please wait ...	</b:Paragraph>	
+				<b:Icon type="COG" size="FOUR_TIMES" spin="true"  ui:field="loading"/>		
+			</b:Paragraph>			
+			<b:ModalFooter>
+				<b:Button type="DEFAULT" ui:field="cancel">Close</b:Button>
+				<b:Button icon="FILE" type="PRIMARY" ui:field="save">Save</b:Button>
+			</b:ModalFooter>
+		</b:Modal>
+	</g:HTMLPanel>
+</ui:UiBinder> 

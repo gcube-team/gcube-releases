@@ -1,0 +1,10 @@
+<ReleaseNotes>
+    <Changeset component="org.gcube.data-access.storagehub-webapp.1.0.5"
+		date="2019-04-04">
+		<Change>Active wait for lock in case of item creation added</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-access.storagehub-webapp.1.0.0"
+		date="2015-07-01">
+		<Change>First commit</Change>
+	</Changeset>
+</ReleaseNotes>

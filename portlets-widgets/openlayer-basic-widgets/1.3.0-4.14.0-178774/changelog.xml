@@ -1,0 +1,19 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.widgets.openlayer-basic-widgets.1-3-0"
+		date="2019-04-01">
+		<Change>Added location and zoom support [ticket #11708]</Change>
+		<Change>Added coordinates EPSG:4326 and EPSG:3857 support [ticket #11710]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.openlayer-basic-widgets.1-2-0"
+		date="2017-06-12">
+		<Change>Support Java 8 compatibility [ticket #8471]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.openlayer-basic-widgets.1-1-0"
+		date="2016-12-01">
+		<Change>Updated to support EPSG 4326</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.openlayer-basic-widgets.1-0-0"
+		date="2016-10-01">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

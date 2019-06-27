@@ -1,0 +1,49 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-admin.runtime-resource-creator.2-5-0"
+		date="2019-04-15">
+		<Change>Just updated service map configuration file</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.runtime-resource-creator.2-4-0"
+		date="2018-11-05">
+		<Change>Feature #12726
+			Infrastructure-monitor: update resource at vo level rather than vre level</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.runtime-resource-creator.2-3-0"
+		date="2017-06-28">
+		<Change>Added map for ParthenosVO</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.runtime-resource-creator.2-2-0"
+		date="2017-02-22">
+		<Change>Fixed a bug that was causing some service endpoint editing problems</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.runtime-resource-creator.2-0-0"
+		date="2016-06-23">
+		<Change>ported to Liferay 6.2</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.runtime-resource-creator.1-7-0"
+		date="2015-11-23">
+		<Change>Feature #1506, Enhance Service Endpoint editor portlet to support new AuthZ framework</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.runtime-resource-creator.1-6-0"
+		date="2014-06-05">
+		<Change>Ported to the gCore free Portal</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.runtime-resource-creator.1-4-0"
+		date="2013-10-21">
+		<Change>Ported to Feather Weight Stack</Change>
+		<Change>Removed GCF Dependency</Change>
+		<Change>Logging with sl4j Enabled</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.runtime-resource-creator.1-3-0"
+		date="2013-05-29">
+		<Change>Fix for Encrypted fields Lost #1748</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.runtime-resource-creator.1-2-0"
+		date="2013-04-19">
+		<Change>Removed password re entering feature, see #990</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-admin.runtime-resource-creator.1-1-0"
+		date="2012-05-04">
+		<Change>Edit feature added</Change>
+	</Changeset>
+</ReleaseNotes>

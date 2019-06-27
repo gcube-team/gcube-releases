@@ -1,0 +1,5 @@
+div.vre-app-integration-portlet > div.portlet-borderless-container {
+    background: transparent;
+    padding: 4px 10px 0;
+    border-radius: 5px;
+}

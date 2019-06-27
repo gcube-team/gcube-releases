@@ -1,0 +1,340 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def borderWidth value('theme.datePicker.border.toString');
+@def borderStyle value('theme.datePicker.border.style');
+@def borderColor value('theme.datePicker.border.color');
+@def backgroundColor value('theme.datePicker.backgroundColor');
+
+@def datePickerWidth value('theme.datePicker.width');
+
+@def headerPadding value('theme.datePicker.headerPadding.toString');
+@def headerBackgroundColor value('theme.datePicker.headerBackgroundColor');
+
+@def headerFontColor value('theme.datePicker.headerText.color');
+@def headerFontFamily value('theme.datePicker.headerText.family');
+@def headerFontSize value('theme.datePicker.headerText.size');
+@def headerFontWeight value('theme.datePicker.headerText.weight');
+@def headerTextPadding value('theme.datePicker.headerTextPadding.toString');
+
+@def columnHeaderColor value('theme.datePicker.dayOfWeekText.color');
+@def columnHeaderFontFamily value('theme.datePicker.dayOfWeekText.family');
+@def columnHeaderFontSize value('theme.datePicker.dayOfWeekText.size');
+@def columnHeaderFontWeight value('theme.datePicker.dayOfWeekText.weight');
+@def columnHeaderBackgroundColor value('theme.datePicker.dayOfWeekBackgroundColor');
+@def columnHeaderLineHeight value('theme.datePicker.dayOfWeekLineHeight');
+@def columnHeaderPadding value('theme.datePicker.dayOfWeekPadding.toString');
+
+@def dayBorderWidth value('theme.datePicker.dayBorder.toString');
+@def dayBorderStyle value('theme.datePicker.dayBorder.style');
+@def dayBorderColor value('theme.datePicker.dayBorder.color');
+@def dayColor value('theme.datePicker.dayText.color');
+@def dayFontFamily value('theme.datePicker.dayText.family');
+@def dayFontSize value('theme.datePicker.dayText.size');
+@def dayFontWeight value('theme.datePicker.dayText.weight');
+@def dayLineHeight value('theme.datePicker.dayLineHeight');
+@def dayPadding value('theme.datePicker.dayPadding.toString');
+
+@def dayDisabledBackgroundColor value('theme.datePicker.dayDisabledBackgroundColor');
+@def dayDisabledColor value('theme.datePicker.dayDisabledText.color');
+@def dayDisabledFontFamily value('theme.datePicker.dayDisabledText.family');
+@def dayDisabledFontSize value('theme.datePicker.dayDisabledText.size');
+@def dayDisabledFontWeight value('theme.datePicker.dayDisabledText.weight');
+
+@def dayNextBackgroundColor value('theme.datePicker.dayNextBackgroundColor');
+@def dayNextColor value('theme.datePicker.dayNextText.color');
+@def dayNextFontFamily value('theme.datePicker.dayNextText.family');
+@def dayNextFontSize value('theme.datePicker.dayNextText.size');
+@def dayNextFontWeight value('theme.datePicker.dayNextText.weight');
+
+@def dayPreviousBackgroundColor value('theme.datePicker.dayPreviousBackgroundColor');
+@def dayPreviousColor value('theme.datePicker.dayPreviousText.color');
+@def dayPreviousFontFamily value('theme.datePicker.dayPreviousText.family');
+@def dayPreviousFontSize value('theme.datePicker.dayPreviousText.size');
+@def dayPreviousFontWeight value('theme.datePicker.dayPreviousText.weight');
+
+@def itemOverColor value('theme.datePicker.itemOverColor');
+@def itemOverBackgroundColor value('theme.datePicker.itemOverBackgroundColor');
+
+@def itemSelectedBorderWidth value('theme.datePicker.itemSelectedBorder.toString');
+@def itemSelectedBorderStyle value('theme.datePicker.itemSelectedBorder.style');
+@def itemSelectedBorderColor value('theme.datePicker.itemSelectedBorder.color');
+@def itemSelectedBackgroundColor value('theme.datePicker.itemSelectedBackgroundColor');
+
+@def itemSelectedColor value('theme.datePicker.itemSelectedText.color');
+@def itemSelectedFontFamily value('theme.datePicker.itemSelectedText.family');
+@def itemSelectedFontSize value('theme.datePicker.itemSelectedText.size');
+@def itemSelectedFontWeight value('theme.datePicker.itemSelectedText.weight');
+
+@def todayBorderWidth value('theme.datePicker.todayBorder.toString');
+@def todayBorderStyle value('theme.datePicker.todayBorder.style');
+@def todayBorderColor value('theme.datePicker.todayBorder.color');
+
+@def footerPadding value('theme.datePicker.footerPadding.toString');
+@def footerBackgroundColor value('theme.datePicker.footerBackgroundColor');
+
+@def buttonMargin value('theme.datePicker.buttonMargin.toString');
+
+.datePicker {
+  border-width: borderWidth;
+  border-style: borderStyle;
+  border-color: borderColor;
+  background-color: backgroundColor;
+  -moz-outline: 0 none;
+  outline: 0 none;
+  width: datePickerWidth;
+}
+
+  /* header */
+.header {
+  padding: headerPadding;
+  text-align: center;
+  background-image: none;
+  background-color: headerBackgroundColor;
+}
+
+@sprite .monthLeftButton {
+  gwt-image: "leftButton";
+  cursor: pointer;
+}
+
+.monthButton {
+  cursor: pointer;
+}
+
+.monthLeft {
+}
+
+.middle {
+  width: 100%;
+}
+
+.monthRight {
+}
+
+@sprite .downIcon {
+  gwt-image: "downIcon";
+}
+
+@sprite .monthRightButton {
+  gwt-image: "rightButton";
+  cursor: pointer;
+}
+
+.monthButtonText {
+  color: headerFontColor;
+  font-size: headerFontSize;
+  font-weight: headerFontWeight;
+  font-family: headerFontFamily;
+  padding: headerTextPadding;
+}
+
+  /* end header */
+
+  /* calendar */
+.daysWrap {
+}
+
+.columnHeader {
+  color: columnHeaderColor;
+  font-family: columnHeaderFontFamily;
+  font-size: columnHeaderFontSize;
+  font-weight: columnHeaderFontWeight;
+  text-align: right;
+  background-image: none;
+  background-color: columnHeaderBackgroundColor;
+}
+
+.columnHeaderInner {
+  line-height: columnHeaderLineHeight;
+  padding: columnHeaderPadding;
+}
+
+.date {
+  padding: 0;
+
+  text-align: right;
+  border-width: dayBorderWidth;
+  border-style: dayBorderStyle;
+  border-color: dayBorderColor;
+}
+
+.dateAnchor {
+  display: block;
+  zoom: 1;
+  text-decoration: none;
+
+  padding: dayPadding;
+  color: dayColor;
+  font-family: dayFontFamily;
+  font-size: dayFontSize;
+  font-weight: dayFontWeight;
+
+  cursor: pointer;
+  line-height: dayLineHeight;
+}
+
+.dateActive {
+}
+
+.dateNext .dateAnchor {
+  background-color: dayNextBackgroundColor;
+  color: dayNextColor;
+  font-family: dayNextFontFamily;
+  font-size: dayNextFontSize;
+  font-weight: dayNextFontWeight;
+}
+
+.dateOver .dateAnchor {
+  color: itemOverColor;
+  background-color: itemOverBackgroundColor;
+}
+
+.datePrevious .dateAnchor {
+  background-color: dayPreviousBackgroundColor;
+  color: dayPreviousColor;
+  font-family: dayPreviousFontFamily;
+  font-size: dayPreviousFontSize;
+  font-weight: dayPreviousFontWeight;
+}
+
+.dateDisabled .dateAnchor {
+  background-color: dayDisabledBackgroundColor;
+  cursor: default;
+  color: dayDisabledColor;
+  font-family: dayDisabledFontFamily;
+  font-size: dayDisabledFontSize;
+  font-weight: dayDisabledFontWeight;
+}
+
+.dateSelected {
+  border-style: itemSelectedBorderStyle;
+  border-color: itemSelectedBorderColor;
+  border-width: itemSelectedBorderWidth;
+}
+
+.dateSelected .dateAnchor {
+  background-color: itemSelectedBackgroundColor;
+  color: itemSelectedColor;
+  font-family: itemSelectedFontFamily;
+  font-size: itemSelectedFontSize;
+  font-weight: itemSelectedFontWeight;
+}
+
+.dateToday {
+  border-color: todayBorderColor;
+  border-style: todayBorderStyle;
+  border-width: todayBorderWidth;
+}
+
+  /* end calendar */
+
+  /* footer */
+.bottom {
+  padding: footerPadding;
+  background-image: none;
+  background-color: footerBackgroundColor;
+  text-align: center;
+}
+
+  /* end footer */
+
+  /* month picker */
+.monthPicker {
+  border-width: borderWidth;
+  border-style: borderStyle;
+  border-color: borderColor;
+  background-color: backgroundColor;
+}
+
+@sprite .leftYearIcon {
+  gwt-image: "leftIcon";
+  cursor: pointer;
+}
+
+@sprite .rightYearIcon {
+  gwt-image: "rightIcon";
+  cursor: pointer;
+}
+
+.monthPickerItem {
+  /*margin: 5px 0 5px;
+  padding: 5px 0 5px;*/
+  font-family: dayFontFamily;
+  font-size: dayFontSize;
+  font-weight: dayFontWeight;
+  text-align: center;
+  width: 25%; /* 4 columns */
+}
+
+.monthPickerItemInner {
+  display: block;
+  text-decoration: none;
+
+  margin: 0 5px 0 5px;
+  color: dayColor;
+  border-width: dayBorderWidth;
+  border-style: dayBorderStyle;
+  border-color: dayBorderColor;
+  line-height: dayLineHeight;
+  cursor: pointer;
+}
+
+.monthPickerItemInner:hover {
+  background-color: itemOverBackgroundColor;
+}
+
+.month {
+
+}
+
+.monthSep {
+  border-right-width: 1px;
+  border-right-style: borderStyle;
+  border-right-color: borderColor;
+}
+
+.monthSelected .monthPickerItemInner {
+  background-color: itemSelectedBackgroundColor;
+  border-width: itemSelectedBorderWidth;
+  border-style: itemSelectedBorderStyle;
+  border-color: itemSelectedBorderColor;
+  color: itemSelectedColor;
+  font-family: itemSelectedFontFamily;
+  font-size: itemSelectedFontSize;
+  font-weight: itemSelectedFontWeight;
+}
+
+.year {
+
+}
+
+.yearButton {
+
+}
+
+.monthButtons {
+  width: 100%;
+
+  background-image: none;
+  background-color: footerBackgroundColor;
+  text-align: center;
+}
+
+.cancel {
+  display: inline;
+  margin: buttonMargin;
+}
+
+.ok {
+  display: inline;
+  margin: buttonMargin;
+}
+
+  /* end month picker */
+
+

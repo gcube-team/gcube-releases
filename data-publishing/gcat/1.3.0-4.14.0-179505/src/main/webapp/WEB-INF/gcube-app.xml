@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<application mode='online'>
+		<name>gcat</name>
+		<group>DataPublishing</group>
+		<version>1.3.0-4.14.0-179505</version>
+		<description>This service allows any client to publish on the gCube Catalogue.</description>
+		<local-persistence location='target' />
+</application>
+

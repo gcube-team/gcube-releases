@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.common.gxHTTP.1-1-0" date="${buildDate}">
+		<Change>Separated plaing HTTP requests from gxRest</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.gxHTTP.1-0-0" date="2018-12-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

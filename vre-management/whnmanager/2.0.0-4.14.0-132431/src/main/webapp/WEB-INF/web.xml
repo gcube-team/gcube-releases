@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<listener>
+		<listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+	</listener>
+<!--  
+	<listener>
+		<listener-class>org.gcube.data.analysis.tabulardata.context.MyContext</listener-class>
+	</listener>
+
+
+	<listener>
+		<listener-class>org.gcube.common.ghn.service.ApplicationListener</listener-class>
+	</listener>
+	-->
+	
+	<servlet>
+		<servlet-name>whnmanager</servlet-name>
+		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>whnmanager</servlet-name>
+		<url-pattern>/gcube/vremanagement/ws/whnmanager</url-pattern>
+	</servlet-mapping>
+<!--  	
+	<filter>
+    <filter-name>scopeFilter</filter-name>
+    <filter-class>org.gcube.data.analysis.tabulardata.context.MySoapFilter</filter-class>
+    </filter>
+	
+	
+	<filter-mapping>
+    <filter-name>scopeFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>-->
+	
+</web-app>

@@ -1,0 +1,8 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data-analysis.operation-tester.2-0-0" date="2013-02-18"> 
+		<Change>first release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.data-analysis.operation-tester.2-0-4" date="2015-05-18"> 
+		<Change>Integration fixes</Change>
+	</Changeset>
+</ReleaseNotes>

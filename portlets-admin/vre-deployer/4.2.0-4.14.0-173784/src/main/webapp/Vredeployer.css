@@ -1,0 +1,40 @@
+/** Add css rules here for your application. */
+
+
+.info-icon { 
+   background-image:url(images/icons/information.png) !important; 
+}
+.content-icon { 
+   background-image:url(images/icons/content.png) !important; 
+}
+.collections-icon { 
+   background-image:url(images/icons/collections.png) !important; 
+}
+.metadata-icon { 
+   background-image:url(images/icons/metadata.png) !important; 
+}
+.functionality-icon { 
+   background-image:url(images/icons/functionality.png) !important; 
+}
+.functionality-add-icon { 
+   background-image:url(images/icons/functionality_add.png) !important; 
+}
+.architecture-icon { 
+   background-image:url(images/icons/architecture.png) !important; 
+}
+.report-icon { 
+   background-image:url(images/icons/report.png) !important; 
+}
+.play-icon { 
+   background-image:url(images/icons/play.png) !important; 
+}
+.runninginstance-icon {
+	 background-image:url(images/icons/runninginstance.png) !important; 
+}
+.missing-ri {
+	 background-image:url(images/cog_error.png) !important; 
+}
+
+.extres-icon {
+	 background-image:url(images/icons/ext_resource.png) !important; 
+}

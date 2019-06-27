@@ -1,0 +1,8 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portal.oauth.1-0-1"	date="2019-03-21">
+		<Change>oauth2 fully compatible reading client_id and client_secret from Basic authorization</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portal.oauth.1-0-0"	date="2017-01-31">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>
