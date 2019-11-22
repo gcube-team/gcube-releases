@@ -1,0 +1,46 @@
+<div>
+	<p style="font-size: 14px; font-weight: bold;">Split Operation:</p>
+	<p>The operation divides the values of a target column into two
+		values compiling two separate columns.</p>
+	<p>The split can be performed:</p>
+
+
+	<dl>
+		<dt>
+			<a name="schrs">* by Char Sequence:</a>
+		</dt>
+		<dd>
+			i.e. the target value is divided by the first occurrence of a
+			specific character or sequence of characters
+			<p>for instance, if the target value is "Fis-12345” and the split
+				string is “-“ then the operation produces “Fis” and "-12345”</p>
+		</dd>
+		<dt>
+			<a name="sind">* by Index</a>
+		</dt>
+		<dd>
+			i.e. the target value is divided by the n-th character
+			<p>for instance, if the target value is "Fis-12345” and the index
+				string is “2“ then the operation produces “F” and “is-12345”;</p>
+
+		</dd>
+		<dt>
+			<a name="sreg">* by Regex</a>
+		</dt>
+		<dd>
+			i.e. the target value is divided by the first occurrence of the given
+			Regex
+			<!-- 			<p>for instance, </p> -->
+		</dd>
+	</dl>
+</div>
+
+<div>
+	<p style="font-size: 14px; font-weight: bold;">Merge Operation:</p>
+	<p>The operation combines the values of two target columns into a
+		single value compiling a new column. The values are managed as strings
+		and the new value is produce by appending the second value to the
+		first. It is possible to specify a separator string.</p>
+	<p>For instance, if the values to be merged are “Fis” and “12345”
+		and the separator is “-“, then the operation produces "Fis-12345”</p>
+</div>

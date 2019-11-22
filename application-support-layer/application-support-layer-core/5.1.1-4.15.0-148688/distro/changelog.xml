@@ -1,0 +1,42 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-core.2-2-3" date="2010-07-16">
+		<Change>Removed ASL Session expiration</Change>
+		<Change>Included declarations for OAI-PMH caches in ehcache configuration file</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-core.2-3-0" date="2010-09-03">
+		<Change>Added class ASLGroupModel, used by portlets</Change>
+		<Change>Added class SchemaFieldPair, used by OAI-PMH extension</Change>
+		<Change>Added session constants</Change>
+		<Change>Added new ehcache declaration</Change>
+		<Change>Added methods in ASLSession for retrieving groupModel infos</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-core.2-3-1" date="2010-10-21">
+		<Change>Added check when setting the scope, because of the custom portal handler</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-core.2-4-0" date="2010-01-14">
+		<Change>Added method for separating user login through the login portlet from the one from bookmarks</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-core.2-5-0" date="2010-05-06">
+		<Change>Added ServiceUtils method for retrieving a service epr.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-core.3-1-0" date="2010-05-06">
+		<Change>Extended API of ASLGroupModel.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-core.3-1-2" date="2012-05-04">
+		<Change>Changed ehCache configuration to disable multicast.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-core.3-2-0" date="2012-08-29">
+		<Change>Added methods to session for easy retrieval of user information.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-core.3-2-1" date="2013-02-07">
+		<Change>Added necessary dependencies.</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-core.3-2-2" date="2013-03-04">
+		<Change>Usage of latest version of ehCache</Change>
+		<Change>Fixed a bug related to the updated of ehcache</Change>
+	</Changeset>
+	<Changeset component="org.gcube.application-support-layer.application-support-layer-core.3-3-0" date="2013-04-19">
+		<Change>Changed the place where scope provider is set</Change>
+		<Change>Bug fixes</Change>
+	</Changeset>
+</ReleaseNotes>

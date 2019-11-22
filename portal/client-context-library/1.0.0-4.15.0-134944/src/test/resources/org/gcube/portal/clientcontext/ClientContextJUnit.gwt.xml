@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="ClientContext">
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='org.gcube.portal.clientcontext.ClientContext' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/ClientContext/greet" class="org.gcube.portal.clientcontext.server.GreetingServiceImpl" />
+
+</module>

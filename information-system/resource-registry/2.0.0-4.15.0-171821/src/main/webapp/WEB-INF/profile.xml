@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Resource>
+	<ID />
+	<Type>Service</Type>
+	<Profile>
+		<Description>Resource Registry</Description>
+		<Class>InformationSystem</Class>
+		<Name>resource-registry</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Main>
+				<Description>Resource Registry</Description>
+				<Name>resource-registry</Name>
+				<Version>2.0.0-4.15.0-171821</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.information-system</groupId>
+					<artifactId>resource-registry</artifactId>
+					<version>2.0.0-4.15.0-171821</version>
+				</MavenCoordinates>
+				<Files>
+					<File>resource-registry-2.0.0-4.15.0-171821.war</File>
+				</Files>
+			</Main>
+		</Packages>
+	</Profile>
+</Resource>

@@ -1,0 +1,43 @@
+<Execute service="WPS" version="1.0.0" xmlns="http://www.opengis.net/wps/1.0.0" xmlns:ns="http://www.opengis.net/ows/1.1" xmlns:xlin="http://www.w3.org/1999/xlink">
+  <ns:Identifier>org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.clusterers.DBSCAN</ns:Identifier>
+  <DataInputs>
+    <Input>
+      <ns:Identifier>OccurrencePointsTable</ns:Identifier>
+      <Reference xlin:href="http://data-d.d4science.org/OFlqaitIUWMwZ0xWVzJiZkRqZUFrT2hxemc5WERUZWlHbWJQNStIS0N6Yz0" mimeType="text/xml"/>
+    </Input>
+    <Input>
+      <ns:Identifier>FeaturesColumnNames</ns:Identifier>
+      <Data>
+        <LiteralData dataType="xs:string">depthmean|sstmnmax|salinitymean</LiteralData>
+      </Data>
+    </Input>
+    <Input>
+      <ns:Identifier>OccurrencePointsClusterLabel</ns:Identifier>
+      <Data>
+        <LiteralData dataType="xs:string">test</LiteralData>
+      </Data>
+    </Input>
+    <Input>
+      <ns:Identifier>epsilon</ns:Identifier>
+      <Data>
+        <LiteralData dataType="xs:int">10</LiteralData>
+      </Data>
+    </Input>
+    <Input>
+      <ns:Identifier>min_points</ns:Identifier>
+      <Data>
+        <LiteralData dataType="xs:int">1</LiteralData>
+      </Data>
+    </Input>
+  </DataInputs>
+  <ResponseForm>
+    <ResponseDocument>
+      <Output>
+        <ows:Identifier xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">OutputTable</ows:Identifier>
+      </Output>
+      <Output>
+        <ows:Identifier xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">non_deterministic_output</ows:Identifier>
+      </Output>
+    </ResponseDocument>
+  </ResponseForm>
+</Execute>

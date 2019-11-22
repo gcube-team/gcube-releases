@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ExecuteResponse xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ows="http://www.opengis.net/ows/1.1" xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsExecute_response.xsd" serviceInstance="http://dataminer1-proto.d4science.org:80//wps/WebProcessingService" xml:lang="en-US" service="WPS" version="1.0.0">
+  <wps:Process wps:processVersion="1.1.0">
+    <ows:Identifier>org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.transducerers.PERFORMFISH_ANALYSIS</ows:Identifier>
+    <ows:Title>PERFORMFISH_ANALYSIS</ows:Title>
+  </wps:Process>
+  <wps:Status creationTime="2019-01-23T16:31:36.974+01:00">
+    <wps:ProcessSucceeded>Process successful</wps:ProcessSucceeded>
+  </wps:Status>
+  <wps:ProcessOutputs>
+    <wps:Output>
+      <ows:Identifier>non_deterministic_output</ows:Identifier>
+      <ows:Title>NonDeterministicOutput</ows:Title>
+      <wps:Data>
+        <wps:ComplexData schema="http://schemas.opengis.net/gml/2.1.2/feature.xsd" mimeType="text/xml; subtype=gml/2.1.2">
+          <ogr:FeatureCollection xmlns:ogr="http://ogr.maptools.org/" xmlns:gml="http://www.opengis.net/gml" xmlns:d4science="http://www.d4science.org" xsi:schemaLocation="http://ogr.maptools.org/ result_8751.xsd">
+            <gml:featureMember>
+              <ogr:Result fid="F0">
+                <d4science:Data>http://data.d4science.org/cEhyd3ZDQ0pkeFd5dUc0YnV2REpmeFpUand4d09aR0JHbWJQNStIS0N6Yz0-VLT</d4science:Data>
+                <d4science:Description>Log of the computation</d4science:Description>
+                <d4science:MimeType>text/csv</d4science:MimeType>
+              </ogr:Result>
+              <ogr:Result fid="F1">
+                <d4science:Data>http://data.d4science.org/cEhyd3ZDQ0pkeFd5dUc0YnV2REpmKzdWYU5FOXp3bGxHbWJQNStIS0N6Yz0-VLT</d4science:Data>
+                <d4science:Description>outputCharts</d4science:Description>
+                <d4science:MimeType>application/d4science</d4science:MimeType>
+              </ogr:Result>
+            </gml:featureMember>
+          </ogr:FeatureCollection>
+        </wps:ComplexData>
+      </wps:Data>
+    </wps:Output>
+  </wps:ProcessOutputs>
+</wps:ExecuteResponse>

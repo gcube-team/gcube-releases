@@ -1,0 +1,57 @@
+{
+    "profileID": "DataMiner Process",
+    "profile": "<metadataformat type=\"DataMiner Process\">\n\t<metadatafield>\n\t\t<fieldName>Input Parameter</fieldName>\n\t\t<mandatory>false</mandatory>\n\t\t<dataType>String</dataType>\n\t\t<note>Input parameter expected for the execution of the process</note>\n\t</metadatafield>\n\t<metadatafield>\n\t\t<fieldName>Process Description</fieldName>\n\t\t<mandatory>false</mandatory>\n\t\t<dataType>String</dataType>\n\t\t<note>Input parameter expected for the execution of the process</note>\n\t</metadatafield>\n\t<metadatafield>\n\t\t<fieldName>Output Parameter</fieldName>\n\t\t<mandatory>false</mandatory>\n\t\t<dataType>String</dataType>\n\t\t<note>Output parameter expected from the execution of the process\n\t\t</note>\n\t</metadatafield>\n\t<metadatafield>\n\t\t<fieldName>Process Author</fieldName>\n\t\t<mandatory>false</mandatory>\n\t\t<dataType>String</dataType>\n\t\t<maxOccurs>*</maxOccurs>\n\t\t<defaultValue />\n\t\t<note>The name of the author, with email and ORCID. The format should\n\t\t\tbe: family, given[, email][, ORCID]. Example: Smith, John,\n\t\t\tjs@acme.org, orcid.org/0000-0002-1825-0097</note>\n\t\t<validator>\n\t\t\t<regularExpression>^[a-zA-ZÀ-ÿ .'-]+, [a-zA-ZÀ-ÿ .'-]+[,\n\t\t\t\t]*([a-zA-Z0-9_!#$%’*+=?`{|}~^.-]+@[a-zA-Z0-9À-ÿ.-]+)?[,\n\t\t\t\t]*(orcid.org\\/0000-000(1-[5-9]|2-[0-9]|3-[0-4])\\d\\d\\d-\\d\\d\\d[\\dX])?$</regularExpression>\n\t\t</validator>\n\t</metadatafield>\n\t<metadatafield>\n\t\t<fieldName>Process Maintainer</fieldName>\n\t\t<mandatory>false</mandatory>\n\t\t<dataType>String</dataType>\n\t\t<maxOccurs>*</maxOccurs>\n\t\t<defaultValue />\n\t\t<note>The name of the author, with email and ORCID. The format should\n\t\t\tbe: family, given[, email][, ORCID]. Example: Smith, John,\n\t\t\tjs@acme.org, orcid.org/0000-0002-1825-0097</note>\n\t\t<validator>\n\t\t\t<regularExpression>^[a-zA-ZÀ-ÿ .'-]+, [a-zA-ZÀ-ÿ .'-]+[,\n\t\t\t\t]*([a-zA-Z0-9_!#$%’*+=?`{|}~^.-]+@[a-zA-Z0-9À-ÿ.-]+)?[,\n\t\t\t\t]*(orcid.org\\/0000-000(1-[5-9]|2-[0-9]|3-[0-4])\\d\\d\\d-\\d\\d\\d[\\dX])?$</regularExpression>\n\t\t</validator>\n\t</metadatafield>\n</metadataformat>",
+    "item":
+    {
+        "name": "timeextraction_in_prevre",
+        "title": "Timeextraction in preVRE",
+        "version": null,
+        "license_id": "CC-BY-NC-SA-4.0",
+        "author": null,
+        "maintainer": null,
+        "tags": [
+        {
+            "name": "Geo Processing"
+        },
+        {
+            "name": "preVRE"
+        },
+        {
+            "name": "WPS"
+        },
+        {
+            "name": "Analytics"
+        }],
+        "extras": [
+        {
+            "key": "system:type",
+            "value": "DataMiner Process"
+        },
+        {
+            "key": "DataMiner Process:Process Description",
+            "value": "An algorithm to extract a time series of values associated to a geospatial features repository (e.g. NETCDF, ASC, GeoTiff files etc. ). The algorithm analyses the time series and automatically searches for hidden periodicities. It produces one chart of the time series, one table containing the time series values and possibly the spectrogram."
+        },
+        {
+            "key": "DataMiner Process:Process Author",
+            "value": "Sinibaldi,Fabio"
+        },
+        {
+            "key": "DataMiner Process:Process Maintainer",
+            "value": "Sinibaldi,Fabio"
+        }],
+        "private": true
+    },
+    "resources": [
+    {
+        "name": "Gateway Link",
+        "url": "https://pre.d4science.org/group/prevre/dataminer-manager?OperatorId=org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.transducerers.TIMEEXTRACTION",
+        "format": "HTTP",
+        "description": "Link to the GUI designed to operate with DataMiner"
+    },
+    {
+        "name": "WPS Link",
+        "url": "https://dataminer1-pre.d4science.org/wps/WebProcessingService?Request=DescribeProcess&Version=1.0.0&Service=WPS&Identifier=org.gcube.dataanalysis.wps.statisticalmanager.synchserver.mappedclasses.transducerers.TIMEEXTRACTION",
+        "format": "WPS",
+        "description": "WPS Link to the DataMiner Process"
+    }]
+}

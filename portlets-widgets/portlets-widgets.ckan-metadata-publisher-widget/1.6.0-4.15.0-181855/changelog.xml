@@ -1,0 +1,100 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-6-0"
+		date="2019-11-12">
+		<Change>[Feature #11331] Field repeatability: support for catalogue
+			widget
+		</Change>
+		<Change>[Task #12480] Data Catalogue Publishing widget: filter the
+			VREs for the working gateway widget
+		</Change>
+		<Change>[Feature #17577] Modify ckan-metadata-publisher-widget posts
+			to cite people with @username
+		</Change>
+		<Change>[Support #13188] Fixed some logs
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-5-0"
+		date="${buildDate}">
+		<Change>[Feature #13074] Integrated with 'openlayer-basic-widgets'
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-4-1"
+		date="2018-11-20">
+		<Change>[Bug #12914] The form to add/choice the resources to
+			publishing remains frozen
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-4-0"
+		date="2018-09-28">
+		<Change>[Incident #12563] Error when trying to publish the content of
+			a workspace folder into the catalogue
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-3-3"
+		date="2018-03-02">
+		<Change>Minor update</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-3-2"
+		date="2018-02-26">
+		<Change>Minor update due to interface changed</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-3-1"
+		date="2017-06-26">
+		<Change>External Url files are properly managed as resources</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-3-0"
+		date="2017-05-05">
+		<Change>Metadata model v.3 supported</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-2-3"
+		date="2017-04-05">
+		<Change>Some bug fixes</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-2-2"
+		date="2017-02-27">
+		<Change>Some minor terms changed</Change>
+		<Change>added support for ticket #7207</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-2-1"
+		date="2017-02-02">
+		<Change>Minor fixes to speed up role retrievals</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-2-0"
+		date="2016-12-11">
+		<Change>A post is automatically created by the Product Catalogue user
+			every time someone publishes
+		</Change>
+		<Change>The user now can select all files in the hierarchy and publish
+			them
+		</Change>
+		<Change>The user can now associate the product to the available groups
+		</Change>
+		<Change>Removed ASL session dependency</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-1-0"
+		date="2016-10-11">
+		<Change>Creation of a group is now supported</Change>
+		<Change>Association of a dataset to a group is now supported</Change>
+		<Change>Products are copied to .catalogue area when publishing is
+			performed from workspace
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-widgets.ckan-metadata-publisher-widget.1-0-0"
+		date="2016-06-01">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

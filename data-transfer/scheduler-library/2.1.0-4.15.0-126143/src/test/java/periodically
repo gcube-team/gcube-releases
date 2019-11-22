@@ -1,0 +1,26 @@
+<org.gcube.datatransfer.scheduler.library.obj.SchedulerObj>
+  <typeOfSchedule>
+    <directedScheduled>false</directedScheduled>
+    <periodicallyScheduled>
+  	  <startInstanceString>07.09.12-09.46</startInstanceString>
+      <frequency>
+        <__value__>perMinute</__value__>
+      </frequency>
+    </periodicallyScheduled>
+  </typeOfSchedule>
+  <typeOfTransfer>FileBasedTransfer</typeOfTransfer>
+  <scope>/gcube/devsec/</scope>
+  <unzipFile>false</unzipFile>
+  <overwrite>true</overwrite>
+  <syncOp>false</syncOp>
+  <agentHostname>pcitgt1012.cern.ch</agentHostname>
+  <inputUrls>
+    <string>http://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Views_of_Geneva.jpg/480px-Views_of_Geneva.jpg</string>
+    <string>http://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Switzerland_location_map.svg/800px-Switzerland_location_map.svg.png</string>
+    <string>http://upload.wikimedia.org/wikipedia/commons/5/54/Geneva_Steel_Mill_1942_by_Andreas_Feininger.jpg</string>
+  </inputUrls>
+  <destinationFolder>/home/nick/Downloads/test</destinationFolder>
+  <storageType>
+    <__value__>LocalGHN</__value__>
+  </storageType>
+</org.gcube.datatransfer.scheduler.library.obj.SchedulerObj>

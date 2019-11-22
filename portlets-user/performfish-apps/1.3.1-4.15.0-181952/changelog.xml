@@ -1,0 +1,23 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.portlets.user.performfish.PerformFISH-Apps.1-3-1"
+		date="2019-10-09">
+		<Change>Fix for Bug #16599, Validation portlet not dealing with angular parenthesis signs</Change>
+		<Change>Feature #16621 Validation portlet: users should be warned if
+			run analysis is performed on non up-to-data anonymised data
+		</Change>
+		<Change>Enabled annual data analysis</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets.user.performfish.PerformFISH-Apps.1-2-0"
+		date="2018-12-18">
+		<Change>UUID Field Valorisation upon new Association, Company and
+			Farms creation
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets.user.performfish.PerformFISH-Apps.1-1-0"
+		date="2018-10-10">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

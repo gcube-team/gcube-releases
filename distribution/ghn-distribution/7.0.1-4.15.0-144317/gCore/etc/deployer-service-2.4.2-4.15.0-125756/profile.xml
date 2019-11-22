@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:p1="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID>24175c70-997f-11dd-b66d-82c61f8d0a26</ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>Perform local deployment/undeployment of GCUBE packages</Description>
+		<Class>VREManagement</Class>
+		<Name>Deployer</Name>
+		<Version>1.00.00</Version>
+		<Packages>
+			<Main deployable="false">
+				<Description>Allow deployment/undeployment operations of gCube packages in the local gHN</Description>
+				<Name>deployer-service</Name>
+				<Version>2.4.2-4.15.0-125756</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.resourcemanagement</groupId>
+					<artifactId>deployer-service</artifactId>
+					<version>2.4.2-4.15.0-125756</version>
+				</MavenCoordinates>
+				<Mandatory level="GHN"/>
+				<Shareable level="VO"/>
+				<GHNRequirements>
+					<Requirement category="Site"  requirement="string" value="java1.6_*" operator="ge"/>
+				</GHNRequirements>
+				<GARArchive>deployer-service-2.4.2-4.15.0-125756.gar</GARArchive>
+				<PortType>
+						<Name>gcube/common/vremanagement/Deployer</Name>
+						<Security/>			
+						<WSDL/>
+					</PortType>					
+			</Main>
+			<Software>
+				<Description>Stubs for Deployer Service: provide facilities to interact with a Deployer instance</Description>
+				<Name>deployer-stubs</Name>
+				<Version>2.4.2-4.15.0-125756</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.resourcemanagement</groupId>
+					<artifactId>deployer-stubs</artifactId>
+					<version>2.4.2-4.15.0-125756</version>
+				</MavenCoordinates>				
+				<MultiVersion value="true"/>
+				<Mandatory level="GHN"/>
+				<Shareable level="VO"/>
+				<GHNRequirements>
+					<Requirement category="Site" operator="ge" requirement="string" value="java1.5"/>
+				</GHNRequirements>
+				<Type>library</Type>
+				<Files>
+					<File>deployer-stubs-2.4.2-4.15.0-125756.jar</File>
+				</Files>
+			</Software>
+			<Software>
+				<Description>Test-suite for Deployer: provide sample usages of interaction with a Deployer instance</Description>
+				<Name>deployer-test-suite</Name>
+				<Version>2.4.2-4.15.0-125756</Version>
+				<MavenCoordinates>
+					<groupId>org.gcube.resourcemanagement</groupId>
+					<artifactId>deployer-test-suite</artifactId>
+					<version>2.4.2-4.15.0-125756</version>
+				</MavenCoordinates>		
+				<MultiVersion value="true"/>				
+				<Shareable level="VO"/>
+				<GHNRequirements>
+					<Requirement category="Site" operator="ge" requirement="string" value="java1.5"/>
+				</GHNRequirements>
+				<Type>application</Type>
+				<Files>
+					<File>deployer-test-suite-2.4.2-4.15.0-125756.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

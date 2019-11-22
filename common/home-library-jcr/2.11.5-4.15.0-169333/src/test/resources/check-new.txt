@@ -1,0 +1,335 @@
+1cc81f70-30ed-433e-a939-68114abd721c	/Share/2e23fc95-eac6-4d73-bfa9-b46a8b5c0087	pasquale.pagano	false	{}
+9a48f1de-d5fa-4d72-b3a5-76bd7da2a521	/Share/02c9a384-cf5b-4838-9834-9972ae70c02e	pasquale.pagano	false	{}
+c2fec3b2-3021-41f8-a225-f079e4bc80d2	/Share/5e69cec3-8c72-41f7-9cc5-a18d31f0e5ae	antonio.gioia	false	{ADMINISTRATOR=[antonio.gioia]}
+e1bcd7f9-c9fb-423c-bdb0-19a643c81f4f	/Share/a799c0a1-e246-4395-a6da-7cf6ea349c32	gianpaolo.coro	false	{}
+d2c1cbdf-a036-4959-a310-d100565d732b	/Share/43619403-21d7-423e-b9a9-38fdaca4fe91	gianpaolo.coro	false	{}
+6f7efb47-e26c-4346-89ba-44e37a247790	/Share/af6661d7-bb38-4c92-8a4e-fde654f5d658	massimiliano.assante	false	{}
+a36015d3-5796-48ce-b753-3a6ee87ef794	/Share/71956f73-f456-4c42-9aed-3f4384b00bed	francesco.mangiacrapa	false	{}
+74a89b42-2c1b-4ec9-ba40-507b419e88b7	/Share/71a9c73f-4fd1-42cd-858a-481de661b85b	pasquale.pagano	false	{}
+94083580-3bd5-48ca-ba58-bfd977591f10	/Share/f06c5084-bcd5-4652-b68c-40da10deee5a	pasquale.pagano	false	{}
+d5e9603c-4832-4295-bfae-bd45cd2fed31	/Share/71f52169-92eb-4489-ab5e-fe603ba64df9	massimiliano.assante	false	{}
+acb446c3-8640-478f-af32-88085429107d	/Share/8f135fc4-bdae-41de-82e4-c3bbee05d9b9	fabio.sinibaldi	false	{ADMINISTRATOR=[fabio.sinibaldi]}
+2393c01b-e304-46bc-8047-30e025a6e0aa	/Share/ea74894a-7b31-4592-95ca-c1226d9cb2de	anton.ellenbroek	false	{}
+07f93124-2f8a-4026-95cc-ad739a55130d	/Share/a52d1374-ef91-482c-a10b-0fb63a305be0	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+e9f7152b-e430-4088-b781-923c868c2824	/Share/59a00f1e-262d-4185-9aab-a98f6e16f27a	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+e52e5eae-a3ad-4478-bdfa-0e7f3bb12384	/Share/571eb3c1-8f6d-4901-bbc0-f9b08b3a8c9d	andrea.manzi	false	{}
+913f5af9-76b0-4e61-b3a0-6b0fccfdcd23	/Share/5244a968-c663-419b-8a02-d4318b0cdced	massimiliano.assante	false	{}
+60011400-865f-4314-9f86-98a6f8d0b018	/Share/436da54e-e0b3-420b-a457-4260cda55efe	federico.defaveri	false	{ADMINISTRATOR=[federico.defaveri]}
+d609669d-fff5-4e48-97e0-01c0e9c8a212	/Share/58293afc-b73a-4fe7-aa11-efd1064ccad7	francisco.quevedo	false	{ADMINISTRATOR=[francisco.quevedo]}
+571c340e-db14-4ad6-94e6-47c7da52b8f0	/Share/6ed65e81-a541-4b65-8821-82867e2f8966	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+14f2fa9a-e66f-4666-9e0b-b298304f5b6c	/Share/8b44c661-f6f5-403d-a287-f6c94c706587	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+a5c383c9-3590-45a6-a4d6-eb6fc1bbed58	/Share/ef956857-c1a3-431d-9a8e-8866169c6a3c	anton.ellenbroek	false	{}
+3a60c5db-e399-4b47-8d1e-ed4b4a10453e	/Share/b39227fd-357a-47c6-881d-b62c9e98fad3	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+d8d1b4f1-69d2-41d7-b00b-286dac5e9f83	/Share/380b2014-927d-4bab-8f8c-92b6547f54d4	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+901bd6f4-e9a9-4dde-b1ac-f6e9fd41213f	/Share/c4a16329-9314-42c6-bd26-344357f98576	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+d90053da-5714-4a1e-94dc-fe0ed57bce64	/Share/89e3c849-edd0-4e81-812d-78ce8827f884	nikolaos.drakopoulos	false	{ADMINISTRATOR=[nikolaos.drakopoulos]}
+9d00062d-6423-40f5-8b40-fcc7c78f8adf	/Share/52a193d8-00bd-4bd4-8e2d-c39faf923c2d	pasquale.pagano	false	{}
+6fdb5617-83d8-4572-a387-ad9495b539d8	/Share/e49f5a2d-c6d3-4b38-b6d5-529ef5635bc8	andrea.manzi	false	{ADMINISTRATOR=[andrea.manzi]}
+6d9b6d29-cc3e-4718-82cc-8267927a63d3	/Share/8cadd9ac-f845-4fb3-8327-aa750b3bc205	angela.italiano	false	{ADMINISTRATOR=[angela.italiano]}
+4247c7a8-d429-4d54-9111-c7f669586669	/Share/34084b1c-b0f5-4719-8435-8282b830708c	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+4e98f6f1-61c4-45d6-9ec0-1bf219281594	/Share/c8569e1e-3fc8-4cbe-aa36-511727125f13	massimiliano.assante	false	{ADMINISTRATOR=[massimiliano.assante]}
+21a04c2e-daf5-4987-9628-584271b13910	/Share/2cc8b9da-3830-40a9-9738-c22d11a42ea3	ermanno.travaglino	false	{ADMINISTRATOR=[ermanno.travaglino]}
+2e545747-adc9-4bd2-b85c-378d096c9f67	/Share/fd0f27d8-1579-4290-9f65-5b4aa1a351cc	massimiliano.assante	false	{ADMINISTRATOR=[massimiliano.assante]}
+be659d3e-0b4f-4ed2-a04c-50f042f8bffd	/Share/24766b7a-9f7f-410a-81a3-ee0f6e97f2d5	franco.zoppi	false	{ADMINISTRATOR=[franco.zoppi]}
+d06a4874-a7a6-4913-9d4b-816f8ca519d4	/Share/f8b979e9-138c-42aa-86ac-c60e9d0684de	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+9562b92f-7c68-42fa-be19-2cd75506f538	/Share/15e747f6-e672-4180-a2b9-21cc547a5f14	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+4a2854e1-bb8e-4865-8038-1861f3af7922	/Share/1d0d87cb-fb90-4df3-bce8-593601c587c4	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+1d5a19ca-bed4-4202-9774-b23287077412	/Share/0fb55955-c972-4acd-bcd9-e57bef2ea4da	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+18e10dd5-fc42-4816-bd09-22ccb4a24f4a	/Share/bf33e65d-570c-4db9-af06-f1961a89af0d	pasquale.pagano	false	{}
+edf21eeb-bc72-43e0-8f2b-9333f529b6a2	/Share/e9615e78-f6cb-4f1b-9119-ad7ca9ab5091	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek], WRITE_OWNER=[pasquale.pagano, valentina.marioli, luigi.fortunati, emmanuel.blondel, leonardo.candela, lucio.lelii, gianpaolo.coro, roberto.cirillo]}
+b3841df4-61de-40eb-ace7-86b945637931	/Share/4c61a682-3f2c-4e80-b228-4caca9ddbbf7	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+f54386fe-bdcf-4190-9bc5-268dbca647c8	/Share/b2e023a2-72db-4cbb-ba4d-00a921ee5535	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+9b791a22-5f1c-4559-933e-ecff7f6f8e3b	/Share/6cd2d153-46b5-4b0b-a79b-dd6ad3c6aa7e	massimiliano.assante	false	{ADMINISTRATOR=[massimiliano.assante]}
+9f70b0ab-1276-4faf-acca-452c5dd39965	/Share/5e06e84e-584e-4cd4-bc54-7501b276e871	massimiliano.assante	false	{}
+6b9cb412-c584-4067-a247-1a1e0314f694	/Share/89971b8f-a993-4e7b-9a95-8d774cb68a99	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+0481cd4f-65d4-4dcb-b522-14cc6b6203cb	/Share/48814b18-84e3-4847-8fd7-9e2e05529457	leonardo.candela	false	{}
+cc167538-85e3-4cb7-9f9f-4a14788d2a5d	/Share/2842fbe7-93c9-4ff6-b105-4b82f3a37eac	leonardo.candela	false	{}
+5d6c58c5-32f3-41eb-9640-3eaca18ace9f	/Share/2353c836-e408-48d9-bc50-48bab1ad272a	leonardo.candela	false	{}
+dcace2f4-e238-44fd-a34a-d5f159a0a371	/Share/fb94a55d-3dd0-4cdb-ad29-80c665c3993e	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+5092074a-ff7d-4010-bc28-17b11f98669f	/Share/2564dcaa-bc34-4bf2-a362-322d895b79fa	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+6030a543-4ae5-43ea-8f63-f1d52832f899	/Share/83583cc0-0118-4363-ad69-572c8401a160	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela, pasquale.pagano, jessica.michel, donatella.castelli], WRITE_OWNER=[philippe.rohou, massimiliano.assante, sonia.arrighini, andrea.manzi, panagiota.koltsida, josephine.barile, tommaso.piccioli, ocorcho, nikolas.laskaris, vanderlei.canhos, catherine.bosio, fabio.sinibaldi, carlo.allocca, julien.barde, fabriani, kostas.kakaletris, gianpaolo.coro, ciccioce83, fabio.simeoni, herve.caumont, francesco.cerasuolo, pilar.bravoderueda, ioannis.kitsos, pedro.goncalves, serge-michel.garcia, giancarlo.panichi, marc.taconet, angela.italiano, john.gerbesiotis, kathleen.reyes, asymeon, george.kakaletris, florida.estrella, alex.antoniadi, aureliano.gentile, emmanuel.blondel, edward.vberghe, hilary.hanahoe, antonio.savini, gerasimos.farantatos, cucichr, yann.laurent, andrea.manieri, cristina.garilao, pavlos.fafalios, maria.dfborges, yannis.tzitzikas, franco.zoppi, anton.ellenbroek, caselyn.aldemita, claudio.baldassarre, stephanie.parker, sara.garavelli, federico.defaveri, antonio.gioia, erik.vaningen, silvana.muscella, roberto.cirillo, sara.pittonet, valentina.marioli, warda, alex.delis, yannis.marketakis, loredana.liccardo, nicolas.bailly, gabriele.giammatteo, fabrice.brito, ermanno.travaglino, alessandro.nardi, ciro.formisano, lucio.lelii, yannis.ioannidis, katerina.papadaki]}
+c0adae04-8eba-4b93-828c-7089cecb1826	/Share/2b192120-399c-4e24-8d4e-a181d4795ab0	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+8546adf8-1d45-41f9-b836-befa275deb3a	/Share/3ef7265f-8aea-4ac4-bfd3-5747210bfaf9	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+d5220faa-c433-4a2f-b7d6-079f449ae579	/Share/9b2dea62-414a-41b6-99c9-524a58bc6d56	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+3c8160ec-33bc-4c1d-930b-1d74857f3fb9	/Share/9b6b9b35-044e-41b6-a193-79ab970c450f	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+39304c5b-9259-4fdb-879d-3606accc819f	/Share/c77f02dc-e30e-4bd8-a434-166fcd00395f	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek], WRITE_OWNER=[pasquale.pagano, edward.vberghe, nicolas.bailly, miles, fabrice.brito, gianpaolo.coro]}
+61790b7e-2369-4424-887f-fc80c95acc81	/Share/6006c8d4-764c-4613-a7b0-840a5f8d2883	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+978f43fb-8efe-40f0-9c82-bb8be944be79	/Share/6476811e-3928-4d94-8101-98917e962a1c	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+8a926fe9-b118-4dc1-964f-b372da9457f9	/Share/9c4c9e76-02da-42e0-9d05-3e66d1090d03	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+fd87a00e-6dba-4e21-8936-a4bc4a20457b	/Share/fe4435b8-a00a-45da-b58b-8cade7a95f79	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+c2ca537e-c430-43a7-9522-be1c502cafa5	/Share/9bd59c51-c4e2-423b-85c2-5ae63d56faae	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+316823da-b5f2-4895-8262-7fd79ba5e697	/Share/0085e547-5482-4b35-8ead-94730055e494	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+25307046-48c6-4051-8ae0-f49fe8d3ecb6	/Share/94ad44f6-976d-4f63-a762-5a1739354337	valentina.marioli	false	{}
+2390ced1-7f04-412b-8ac7-4891f139cdc4	/Share/dd41c289-ffac-4281-befd-3a0109218540	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+142b2505-1438-4050-a0a0-686be5626ff4	/Share/eae77de1-af93-4d9b-9d4f-2b7eb540ed84	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+5b53b78f-dd89-41d8-97f0-f7548ccecfcf	/Share/8976c312-9531-43af-98e5-41a376e3fea6	test.user	false	{}
+4d5f7782-facf-4e98-b16b-8a416de35f11	/Share/4f3889d3-2feb-49ef-af60-5c20af57960a	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+391bd55c-a275-424b-ad8c-893df560fa6e	/Share/a9843468-b8d1-4a84-91d4-b0c4a24feed4	giancarlo.panichi	false	{ADMINISTRATOR=[giancarlo.panichi]}
+afec1795-0e42-41a1-8fdf-b6b254b2868c	/Share/f619d22b-0758-44ff-9e08-76d34e8412a8	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+9ef87bfc-1d92-42a7-ac1a-2edcc52bd644	/Share/afbb388c-e7f6-4597-8b63-38b1b1d8cd58	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+36131996-894d-4cd3-a7f7-5dc731781b4b	/Share/cde110f7-2b8a-4d71-a834-4933644b7de6	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+5901a719-ec20-42ac-ad49-6076b7eb36e8	/Share/792dd9db-292c-4a66-95d5-0063b1fdc2cb	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+9641143e-cade-4145-b899-bf822d76bfe6	/Share/819c2a3a-5377-4849-acb2-3a5288b02b55	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+7409c3eb-e016-4c9f-beae-5d3d8c9730be	/Share/5aec33a2-d8d1-44da-be3f-dba34f009b99	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+8ef2013a-4d2f-4253-970c-85b063738127	/Share/1b217c4b-63d2-4b5a-94e9-fb43a20b92ce	massimiliano.assante	false	{}
+efff213d-b45e-4f3e-946e-2bacb0d7fe15	/Share/150cd7f2-b776-4800-b729-244ff3e0eb9b	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+d27a7c79-b222-456d-a007-c6f8534238df	/Share/a19e58f9-308e-41df-bb65-873f27bb291f	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+50ecf86a-d5d9-42ca-a63c-a47be443ef5e	/Share/e171f327-7ae2-4f58-bf65-293a7fc0077f	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+66ef6178-1637-4996-b7bd-e00163815d47	/Share/3057692f-cbea-45a0-a87b-423cef537ce4	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+3efae48b-21bb-4e6e-9085-276ea2ab7a2f	/Share/13131ce8-272a-4adc-98c2-018ee5277587	edward.vberghe	false	{ADMINISTRATOR=[edward.vberghe]}
+7698cad0-201a-48ff-8580-48b00534b05b	/Share/6615e152-3aea-4d7a-b88a-e4a073e944b7	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+a35bda16-f725-476f-b84e-51401ccb3960	/Share/f2dd0831-9830-4522-8e06-28716a3a3119	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+0440259d-d6c1-4b58-8fc5-9244e3d53bc9	/Share/e5f62f36-a969-4aab-8645-2ca2c7f3dae1	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+e1461a98-d629-4930-9b4a-d720a3412229	/Share/d7e5478e-7b2d-4961-9220-ab2e3e8ee04a	massimiliano.assante	false	{ADMINISTRATOR=[massimiliano.assante]}
+9e4c8725-9364-490a-b979-606e6df51285	/Share/31d436af-f933-4afc-89e3-2e09d2ecb994	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+94a53625-4802-4006-a7e8-7001c4569338	/Share/91797de7-8124-47e4-b5d1-cdb562de00c8	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+0b25e97f-14e6-41f7-be4a-e1f756176359	/Share/5fee10b7-8ad3-4a51-8f66-ddbc7cf95218	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+6c0e3bca-0d59-4c65-8927-27ad22dbead0	/Share/384bf153-5b19-47b3-be6f-d804ad60a433	aureliano.gentile	false	{ADMINISTRATOR=[aureliano.gentile]}
+3f6339ff-952b-460d-9651-efa4be595272	/Share/9317a585-99af-4d8b-9c3c-1d3e888cf219	yann.laurent	false	{ADMINISTRATOR=[yann.laurent]}
+ccd668c1-55bf-4802-b891-777bce2599e5	/Share/fcf02bba-59e2-4d73-923b-7a0535ddfcb4	yann.laurent	false	{ADMINISTRATOR=[yann.laurent]}
+6a51522f-6e97-4dd0-ae28-69f8b0684a5b	/Share/2cdd657d-a137-4ecc-9f6d-f4482ffd49a7	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+98604aa9-bd7a-43d9-8102-dd25880c41c1	/Share/c2d2e221-9208-45e1-8c96-e90a3b6f000f	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+534c06ba-2e26-4253-97fc-035e8ec26d70	/Share/158d8b58-daed-447d-a5d5-883b90adf5cc	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+5bccdc8f-5d39-4eb3-8e13-fccae48b190c	/Share/0e1ec079-733c-4282-a963-99adf6afdec0	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+1bcbe997-a1bd-48f9-ad68-d2b779b2d519	/Share/ce84cebc-bf39-4b94-acbc-d21a62944900	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+6d979831-7756-4a81-acf5-6713a77fe4ba	/Share/e18741b5-0f15-4991-beb1-f8219c3f7f95	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+c50fbbaa-6bcb-4f9a-84fb-ebc9f917a1fe	/Share/8828bb56-938f-4bd4-a05e-90015aa28619	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+dbc86945-3758-460b-a047-0f69ff725b20	/Share/ec6e4fd5-a559-49fa-8fd6-978bbf405146	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+c622ada9-7d0c-4342-b861-94423c754ba1	/Share/aa3e4812-7daa-463d-87bb-3edf06e96278	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+cdf6fc63-6a33-44ac-b4bf-d79ec390a7ae	/Share/8a47fe80-bc93-48d5-b39d-7d0b1a9a0d56	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+2895e0d4-f920-41ef-b1f2-d1ff85792575	/Share/8fb23b2a-bac3-473d-a142-55461cfe3a38	luigi.fortunati	false	{ADMINISTRATOR=[luigi.fortunati]}
+1dfc212a-5fe1-4102-b593-1be1c33b1718	/Share/ac2816d5-4f6e-4823-a238-2d2916da17a6	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+09e4480a-f4d1-4ea2-b776-38d62aee97c3	/Share/2094e03a-2919-49f9-9a80-6c12f8df1088	leonardo.candela	false	{}
+da3ba6e5-84b5-455b-a835-83d35074ee8c	/Share/f24b32a9-3fa3-4b48-ba62-9bf21c815efe	leonardo.candela	false	{}
+c123a9ba-5a23-4140-b3dd-668290100951	/Share/3053cb3d-46ea-444a-b024-31b7cbf7075e	leonardo.candela	false	{}
+8a97bcd4-ad5f-4549-9d10-3d60dc3297d9	/Share/4a2d16a8-3f69-4f24-9f2b-ee51e61ded74	leonardo.candela	false	{}
+fb736f03-a800-4b1f-9d3f-872113d4604f	/Share/30f98438-9f30-4d46-86b9-7d8b9fde97a3	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+6418f04e-4035-4563-9642-5655ee4dfe4e	/Share/47a5ac3e-066b-4615-afdc-f2f035d191fb	massimiliano.assante	false	{}
+9614fa79-a870-432a-937e-3787d794a45a	/Share/cd74160c-957c-400e-8988-4707ecdd8d88	anton.ellenbroek	false	{}
+b777565f-588d-4470-a4b3-722dd43b5880	/Share/6c67006c-ca2d-42ff-a458-bc72e3c06c2b	valentina.marioli	false	{}
+343ba856-de5b-4717-a3ba-e9a0b46b5ebb	/Share/0a0c4dba-c6ea-4d62-8285-6ec08763d4e0	leonardo.candela	false	{}
+6c608c80-4d22-4ab9-89e6-fd2f744da79a	/Share/61c2685e-5905-492c-88b3-6605789bee53	erik.torres	false	{ADMINISTRATOR=[erik.torres]}
+e950ce64-3e0b-4cd6-bb0f-c963cb81369d	/Share/2cfaac3c-05a2-404b-81c9-a160ad2d8e3c	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+244f4c8c-4e37-4e5c-b01b-e654086578f5	/Share/9fec3d19-2247-40e0-9ec7-d056e85d1752	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+7539ce84-d2b8-437c-afb6-7e74ad5edd47	/Share/22be181b-95b4-46c0-a8fe-76006f4e0d65	leonardo.candela	false	{}
+21587c99-3d6c-4001-a194-af7e87f56c35	/Share/b9e62a18-6810-402d-afdd-7db253aea41f	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+501d4301-434e-4916-94d0-e24a7f1af6f5	/Share/8178a4ad-6d63-4f70-b669-9a2b89ed1cf6	emmanuel.blondel	false	{}
+b4a82422-80c5-44bf-b5fb-af4a66552149	/Share/9cbcd11b-5950-4fd1-a419-753c5b2ed40c	anton.ellenbroek	false	{}
+04336f6f-b3ee-454b-83b7-5e79eaabf2ac	/Share/ab5e4aee-3e60-4af4-97ef-794926a14c92	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+71eb5144-c434-40a4-91cd-639bb0b85e24	/Share/5beea66d-2ca1-4114-ac3b-8b6e5b801ea3	massimiliano.assante	false	{}
+db5e6176-b65c-4cb7-890b-211fcf8f8a50	/Share/fc260d8e-df42-4224-b2d1-f2efe0dd194a	valentina.marioli	false	{}
+c6925c8b-e553-449c-8a0f-7e21811eb378	/Share/d84bc69f-0bd5-42ca-928d-4a089cecaa50	valentina.marioli	false	{}
+372cbc80-b7fc-4694-a2dd-be433a5567b6	/Share/52fba4fb-90f7-4f68-ae96-2fd03e7d4e13	valentina.marioli	false	{}
+db68a76d-470e-4fe9-bace-36442f5429e8	/Share/63fc21c3-f7fe-46de-8b87-11c8b5bda984	valentina.marioli	false	{}
+128a28f1-768e-41db-8d69-6d8f25729cc9	/Share/8ef7abf8-5345-46bf-a4b0-64fd117956f8	valentina.marioli	false	{}
+8c4cbdcf-c299-4c6e-84f5-a24ee70bff21	/Share/76fee1fb-91f9-4651-a1a8-3515d52b0c4d	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+ca6e53b4-a63e-4064-9381-2151fd8efe99	/Share/8d6e433c-8438-4bff-a95b-9c5335ffaa1e	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+42a37524-6bea-461d-9344-b70a81ece5fb	/Share/f7945013-635e-47fa-994d-d64aa0318d59	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+e39580f9-31da-44ff-8fbc-54620cfb2458	/Share/0d4cc9cc-82f1-4c25-8bc4-db167f52e5b5	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+9c47248a-054b-49ac-bbdd-bfd201cb3bf4	/Share/6ec11cee-6e19-42d5-bf42-9e8a2e6006a3	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+6a108f6f-2159-47f0-a230-6a314780ddf1	/Share/a81747fa-2359-4f14-90dc-a1a7e7c6c970	massimiliano.assante	false	{ADMINISTRATOR=[massimiliano.assante]}
+430b2051-38f1-460b-a757-1e1d89855a5d	/Share/bbde1149-d271-4d51-aec2-dac776e82349	anton.ellenbroek	false	{}
+4c377d62-4e67-436e-b2c5-52e53c85fbcd	/Share/e1f821e0-12ba-45d7-afcf-3160c393b294	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+21689461-31dd-4300-bcc6-73fd4df43c75	/Share/9b8aaf98-aad7-4334-a425-d6dfe4363292	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+f55b1b93-6391-4d03-970c-af76deb1d94d	/Share/59467975-3d19-4aea-aea6-49d1069e4940	emmanuel.blondel	false	{ADMINISTRATOR=[emmanuel.blondel]}
+0c02995b-8cd3-4682-ba3d-c0b3b19085c5	/Share/b2696ac9-eb9d-4c00-a560-55a9934d3cdb	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+6e3a449d-717c-4f50-ab3e-3227303d4ff4	/Share/69d268a2-737e-4fb4-93a3-42fa57757259	panagiota.koltsida	false	{ADMINISTRATOR=[panagiota.koltsida]}
+328e9f0f-c8af-49b6-8bc5-486a5f666253	/Share/8dcb83d9-19c6-4191-81b2-51d845ab6d13	tony.jarrett	false	{ADMINISTRATOR=[tony.jarrett]}
+6be551fd-5fb7-4e10-a980-987210c0350b	/Share/c53f0526-d7c0-4443-9605-6c2ce5235a9d	nicolas.bailly	false	{ADMINISTRATOR=[nicolas.bailly]}
+83ed414f-ee34-483a-9d3e-e95dbf86d6b5	/Share/e577afa7-e996-4027-a144-05377897792d	luigi.fortunati	false	{ADMINISTRATOR=[luigi.fortunati]}
+7e89e2cd-1b77-4ea9-af3f-57e86c65e8c4	/Share/af384142-4762-4b3d-b69b-f2a20cffaf51	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+4f0ff79d-3c1e-4d2a-bc74-6f731edcac98	/Share/09c54446-969d-4e9a-9ef5-7669b95a4832	nicolas.bailly	false	{ADMINISTRATOR=[nicolas.bailly]}
+cbfd2989-de49-4cc8-a9a7-7228b5f03be8	/Share/e390e864-296a-4781-b441-5466166cc9b8	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+3708332f-c8d8-426f-94bd-cb08d32aae54	/Share/b5d13dc9-4232-4294-8c1f-27ebe0c7dcd1	ermanno.travaglino	false	{ADMINISTRATOR=[ermanno.travaglino]}
+2f114949-f706-42f1-ac78-39338c8c8ebc	/Share/ac5755b4-20b9-4024-b7a2-fe9b75b53ceb	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+40fc5353-611b-41ec-b2f2-d875c833de03	/Share/257d9df7-679d-46c7-9648-0764d2a08013	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek], WRITE_OWNER=[pasquale.pagano, luigi.fortunati, leonardo.candela, giancarlo.panichi, gianpaolo.coro]}
+37efe1a8-ca42-4a9d-9539-1b1d77603a6c	/Share/3f247331-0ca4-4fa0-afe4-222c9ad9e445	nicolas.bailly	false	{ADMINISTRATOR=[nicolas.bailly]}
+96d970d0-6408-434f-8f3d-076ad66b34dc	/Share/5d977050-ad24-479c-b841-4c0187e979f6	nicolas.z	false	{ADMINISTRATOR=[nicolas.z]}
+5ec35071-a844-4efe-93d3-0a512694ca55	/Share/c1f81264-2666-4d70-86df-b086927faf0b	spn	false	{ADMINISTRATOR=[spn]}
+2c124b40-91bd-46c7-b69a-412bd9e33ab9	/Share/f5c2b5dd-0d98-4aeb-be51-4ae862d038c8	fredosh	false	{ADMINISTRATOR=[fredosh]}
+11311afc-ae79-4076-a322-c7f080e7a99d	/Share/9e8d140f-f6ce-4e36-8fa5-0ad5c3c5306a	nicos	false	{ADMINISTRATOR=[nicos]}
+1772d8fa-366e-4d58-b24f-d0955943aa86	/Share/0f1fd316-9077-42db-b8f8-f691f5f3b209	nicolas.z	false	{ADMINISTRATOR=[nicolas.z]}
+ace2d38e-2ad2-4a2d-903a-faf5b7e66b44	/Share/4f76c91e-21f2-46da-a505-280be6f23706	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+5f2debe4-6172-4770-9c11-b656fae0ffd7	/Share/360abac1-ee2c-46b8-afbe-ef5cd5e61e69	donatella.castelli	false	{ADMINISTRATOR=[donatella.castelli]}
+df25639d-5fd0-4778-a234-52e7067f8232	/Share/2c7fb347-6571-4d31-a450-2899a1a00c4f	mbarbieux	false	{}
+a93300c2-21a1-46e1-96a3-b22e9e7c8a37	/Share/ca40d501-1dcb-415c-921c-cfd050497ec1	silmag	false	{ADMINISTRATOR=[silmag]}
+17ee4f54-6847-4eb3-8d00-1a8aabd7fa57	/Share/9f3d9d0d-aea7-4a16-962e-cdb3ed6b1670	guilhem.marre	false	{ADMINISTRATOR=[guilhem.marre]}
+04896355-636d-41c2-a68c-0ee6e878c4cd	/Share/2d3a6949-20ea-4eab-b71d-8746b3096759	carole	false	{ADMINISTRATOR=[carole]}
+e435a369-2484-41ac-963c-2ea9bd25e25e	/Share/f1356992-dbc2-460f-9a3e-8327a18fe9e4	flodebett	false	{ADMINISTRATOR=[flodebett]}
+8a0ac59f-91f7-4aef-9988-db50b66d8a50	/Share/417094f4-d606-4e84-9363-cdcb72e38357	koubbi	false	{ADMINISTRATOR=[koubbi]}
+45ae008f-4c33-41be-8a32-47d861c5859d	/Share/c153efe7-9db5-42a8-b6bc-62e7d6ec7928	claraislief	false	{ADMINISTRATOR=[claraislief]}
+3c44645f-8f36-4e45-a564-9d5523ed651e	/Share/121b777d-c248-4013-96ec-df48a4a92fc6	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+028a638e-6057-429e-9118-0ba75812f82b	/Share/580a3684-6216-4816-b6a5-c684f298474d	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+32cd30cd-2d3c-42fb-ab0a-fa51cf11cfe6	/Share/99ad65cb-4388-4e3a-84fb-0e3b4a4b52e4	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+94fd77c7-cfe9-4624-a766-33855f657f5d	/Share/dfb0b9a2-b49f-40a2-b978-dd1a62ef7054	massimiliano.assante	false	{ADMINISTRATOR=[massimiliano.assante]}
+17039d15-e474-4a4c-bccc-769ef55a4035	/Share/c4d5b723-b308-4596-a64c-097adcf53a97	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+6c4a738a-58af-48a4-b603-4a40daa29d90	/Share/c80e555e-97b2-4f2f-8fdd-752508fc3cb7	leonardo.candela	false	{}
+904a5874-82d1-4297-8efa-fd2079b6378a	/Share/8bda7f09-cbd7-48d5-9369-629dadc995c5	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela], WRITE_OWNER=[pasquale.pagano, peppedemarco, andrea.dellamico, piccolo, claudio.atzori, paskiss, donatella.castelli, paolo.manghi]}
+61cdf8bf-9366-45d7-ad20-204fd158f26b	/Share/f88c8fb5-4e2d-42bc-884f-804103551e79	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+bad4bf28-b218-47a5-89c1-bfbf11e53474	/Share/042d0545-6e1b-4492-9b0d-15fef7990589	leonardo.candela	false	{}
+8e1421c4-a22e-4e1b-9d51-689803bcf920	/Share/b18207e2-37cc-4bd7-b088-b8069e727a7a	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+640b37a3-ab06-4bea-ad49-16c13c9010c0	/Share/03b342a3-f540-4ee0-bff9-be2cf1573ab1	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+2d61c4f0-b908-4c61-a233-cff6283f41bb	/Share/e382e141-84a6-4cb8-9fe1-fb4c19217e1e	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+ab92c284-f821-4690-8d85-f1571c1690ca	/Share/7806f08f-f4e3-4010-91d0-0b5f7a078ea2	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+ab0b6a36-50e5-40b3-a876-0c548c180b79	/Share/8fe4ba62-583f-4e4e-90b4-731055a82469	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+696c9451-7026-4238-a343-e050c922a6ef	/Share/96e8fe2b-5099-4b8c-b896-dd3a926214e4	fabio.sinibaldi	false	{}
+44b9493b-b730-4bab-aaf8-461e09ab4dfb	/Share/9286bc6e-0b2d-4569-834d-5b7189e6c2c9	fabio.sinibaldi	false	{}
+beda64e8-ac87-4492-8fe0-3abe56071753	/Share/b6e5dae3-9993-413f-8e1f-e8ff1cbba3a2	gianpaolo.coro	false	{}
+79924942-09c2-4fac-a384-a80b8afcdebb	/Share/e8fd1fed-78b1-4a45-8b76-5a751b75da7b	gianpaolo.coro	false	{}
+5ff3c3c6-fc20-4fe5-99f5-e2a909a06b75	/Share/d140df1c-1abb-490e-bd9b-14f5ee80ebab	valentina.marioli	false	{}
+4c68d9ca-2a28-4f1b-a55a-6e03408369bb	/Share/38ed819e-97ad-4d08-889f-10a7049a28b3	valentina.marioli	false	{}
+6f4ecee9-dc2e-4d66-a876-a9711328946b	/Share/5e27e1c8-ba5c-48d2-9498-7e2ebf663fc5	valentina.marioli	false	{}
+d3c44015-5544-4cb2-b7a6-41e075b40be8	/Share/7c42b9ae-232e-4c5b-82ea-ec47225401ab	valentina.marioli	false	{}
+e9a386be-cbc6-4637-8700-658963e0ad8a	/Share/cef2bc07-f362-40f5-9fd0-6e772a8a3776	valentina.marioli	false	{}
+4125536c-4397-474a-a37f-0f06f99854a5	/Share/c7f1b7e7-9abe-4b2e-bbf3-c8e0cd690ac6	valentina.marioli	false	{}
+24187f49-5b33-447a-8a14-5bd534150e5a	/Share/a8358b09-fff4-4d82-a751-0b3a43ca9cfa	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+1b528ffe-39d4-43ee-b82f-009702f9127c	/Share/f87def4e-598f-40a8-b1eb-d99d628b862a	gianpaolo.coro	true	{WRITE_OWNER=[d4science.research-infrastructures.eu-FARM-AquaMaps]}
+80b545de-c98b-42d7-9efa-74b6b918814e	/Share/90cfd539-5b2f-4f5e-aba6-8949f2ea2410	anton.ellenbroek	true	{}
+97047ff5-3e9a-4a30-8f91-0403c453f20f	/Share/0e3a5658-54d6-4414-903a-a2b3d4736819	aureliano.gentile	true	{WRITE_OWNER=[d4science.research-infrastructures.eu-FARM-FishFinderVRE]}
+558782c0-5f09-4688-87b5-d40ce3367e40	/Share/0a097057-15aa-4b1a-b9a7-cef7877afaf6	anton.ellenbroek	true	{WRITE_OWNER=[d4science.research-infrastructures.eu-FARM-ICIS]}
+8aff7315-d1ff-4db7-b74e-ace1e4165630	/Share/c8e24a94-84cb-4e14-9286-51ca4453af1b	anton.ellenbroek	true	{WRITE_OWNER=[d4science.research-infrastructures.eu-FARM-iMarineBoardVRE]}
+5694bafa-ef5b-4f9b-9ee3-1ca7e744e8ec	/Share/a911b331-8361-4baf-b782-52cda8641a1f	pasquale.pagano	true	{}
+74c7e4a7-0a61-4b9e-b9cf-6463a25fa26e	/Share/a6530a91-3d11-4420-b2e0-7def25150379	leonardo.candela	true	{WRITE_OWNER=[d4science.research-infrastructures.eu-FARM-TBTI_VRE]}
+f1383720-6aa6-440b-872c-117d1f9421b6	/Share/287b4044-1c8c-4279-a075-a7d2b5648fac	anton.ellenbroek	true	{ADMINISTRATOR=[massimiliano.assante], WRITE_OWNER=[d4science.research-infrastructures.eu-FARM-VME-DB]}
+7c5468af-6230-4e74-887b-345baa99e925	/Share/7041da88-b0d7-4aa4-a688-488184fca48c	pasquale.pagano	true	{ADMINISTRATOR=[massimiliano.assante]}
+fd9d9fe0-a2f7-4e32-98c0-5b81ee9296c6	/Share/700aeb81-e0ef-4f60-abe3-2b23daeba7f8	leonardo.candela	true	{ADMINISTRATOR=[massimiliano.assante, gianpaolo.coro], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-BiodiversityLab]}
+872b880c-a2bd-435e-90f9-5f52f115de10	/Share/f35f8197-ce31-4354-87f3-09a025307e96	leonardo.candela	true	{ADMINISTRATOR=[massimiliano.assante], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-DocumentsWorkflow]}
+b749b09f-1ee8-4d2a-b27d-a6c50327a374	/Share/f67ae218-7789-4ffa-abac-f1de5744e88e	leonardo.candela	true	{WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-EcologicalModelling]}
+56027023-fb25-4820-9e82-82a8d4d6d96c	/Share/40ab8a26-02b9-47b0-b161-e00ca95e16cc	andrea.manzi	true	{ADMINISTRATOR=[panagiota.koltsida, roberto.cirillo], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-iSearch]}
+b1af73cc-8124-436d-99db-fd5ca6e6d9e1	/Share/6069d533-85cd-44e1-9541-65be8fdedaf7	pasquale.pagano	true	{ADMINISTRATOR=[gianpaolo.coro], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-ScalableDataMining]}
+b7c25cf0-5d11-475e-93c0-76eee43c96fd	/Share/ad3f95a0-8762-45de-b120-a8d4dfe6338e	andrea.manzi	true	{ADMINISTRATOR=[massimiliano.assante], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-TCom]}
+dbf99dca-b58d-48cf-9a8b-36e3e901856f	/Share/7aca634f-cb73-43d1-acb4-a7f87b1881f5	andrea.manzi	true	{}
+85fa022a-b067-4d0f-8dfb-ad760230c5a8	/Share/541f85dc-abba-4bcb-bf38-bcd184743b64	andrea.manzi	true	{ADMINISTRATOR=[gianpaolo.coro], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-VesselActivitiesAnalyzer]}
+642235ca-ac74-4b90-b942-83b20f219e86	/Share/f9f4530f-aa81-45b3-a77a-81ec747234b6	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela], WRITE_OWNER=[pasquale.pagano, donatella.castelli, gianpaolo.coro]}
+58c9ffbe-1ada-419c-a1db-a27194b7995a	/Share/1d3929a1-1429-44e6-853c-652b9aae3b6d	massimiliano.assante	true	{ADMINISTRATOR=[massimiliano.assante, fabio.simeoni, francesco.mangiacrapa, panagiota.koltsida], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-gCube]}
+344f5e99-4cdb-4773-a445-ae1de3ef5cd8	/Share/0b96a966-2983-43b0-b645-0c025fead1bf	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek], WRITE_OWNER=[pasquale.pagano, leonardo.candela, nicolas.bailly, gianpaolo.coro]}
+aa76e96c-8ceb-4e1d-bea3-1ea01b566cbe	/Share/d1ae97b9-6b39-4afa-94a2-0a6cb86ebc2e	leonardo.candela	true	{ADMINISTRATOR=[pasquale.pagano, leonardo.candela, nicolas.bailly, gianpaolo.coro], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-BiOnym]}
+c57fd182-b09f-4e56-8d24-dde791bd7d8b	/Share/4024bb92-a159-41fb-ae3a-17e13218a654	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek], WRITE_OWNER=[cmspinto, fabio.fiorellato]}
+01093125-87cc-43d9-8d3f-088b117c4276	/Share/d70fb29c-a0b0-4f6e-a2e4-4bd3dcfbeb8d	leonardo.candela	false	{ADMINISTRATOR=[leonardo.candela]}
+0091460f-ed18-4454-8f53-db9889e4ee1f	/Share/6a7f84e7-65f1-46f4-92e8-c18e9dd533f0	georgeseafo	false	{ADMINISTRATOR=[georgeseafo], READ_ONLY=[neilnafo]}
+c2e5841f-192a-48e5-8ebd-83295d053821	/Share/54dd3d4e-bf54-4c38-bda3-74986c3ba6ec	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+80ce225b-9cc6-434b-9fa4-87ace320971d	/Share/f32a9add-4e85-43cd-a3e5-fab2c4b4a8e3	valentina.marioli	false	{}
+20ca578e-9ca1-41d3-b3ad-8006f3f784e0	/Share/57a4ad7e-d898-4a5c-9e22-150bc7d9d846	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek], WRITE_OWNER=[pasquale.pagano, aureliano.gentile, ydjong, marc.taconet, donatella.castelli]}
+5bd77f49-5618-498f-bc47-2e82b02b7b0c	/Share/5ef8b465-f3ab-4979-845e-b4f4aa4cca57	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+826bd9a0-8419-49e7-a49c-0c036c6c581a	/Share/259c18c0-833d-446f-95c8-ea901e1a9645	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek], WRITE_OWNER=[pasquale.pagano, cmspinto, neil, fabio.fiorellato, gianpaolo.coro]}
+0607e9d6-44b2-46d3-a271-27668ba1f36b	/Share/c4b79f85-85e9-4138-968f-cbb8dcf729bb	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek], WRITE_OWNER=[pasquale.pagano, aureliano.gentile, georgeseafo, emostarda, davidramm, paolov, george-campanis, ikingma]}
+9ee203c8-497f-473e-ae6f-ad6e99fa0602	/Share/a49a8a67-eb57-4819-9a96-4214ba98fba0	donatella.castelli	false	{ADMINISTRATOR=[donatella.castelli], WRITE_OWNER=[pasquale.pagano, anton.ellenbroek, marc.taconet, leonardo.candela]}
+18c4c684-9c3b-4eb6-b696-740284af2a33	/Share/3dbfc4e7-b9a5-4e1a-8811-6e5490244e19	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+7d6bcab1-da54-41f6-9e77-c772fba9c6d0	/Share/45ecdf3f-7d2e-4493-8dc9-0d633778653a	lucio.lelii	true	{ADMINISTRATOR=[pasquale.pagano, leonardo.candela, massimiliano.assante, lucio.lelii], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-TabularDataLab]}
+5cced9e4-c783-41e0-88c8-8991c4993c29	/Share/32788e6f-bd51-4a5b-a05a-b0ca33192a5e	leonardo.candela	true	{ADMINISTRATOR=[eugenio, gianpaolo.coro], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-EGIP]}
+248376f0-cadf-440a-b79a-8fc81e7d5b38	/Share/6963c919-5f04-42d4-a5ce-9658ed166271	massimiliano.assante	false	{ADMINISTRATOR=[massimiliano.assante]}
+b7884f79-dcd5-4e3b-8b97-e4f091ec0acf	/Share/f8b7538d-7336-4af2-b0b1-4b92a5ad1f53	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek], WRITE_OWNER=[pasquale.pagano, fabio.sinibaldi, lucio.lelii, yann.laurent]}
+dfe4b7a4-0fe4-47b3-b41f-8c1ec727bcbd	/Share/ca64f9a2-375d-4daa-8d96-196a502f5693	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli], WRITE_OWNER=[fabio.fiorellato, gianpaolo.coro], READ_ONLY=[guest]}
+b026c8e6-3f66-44ff-82e4-b08fa65eea48	/Share/a3fd76d1-3e1a-4bc5-8223-4123edb36415	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+88b09079-108f-41c9-ae2c-bff35879b0b0	/Share/809174f5-3b36-469a-af93-825ffd9398a5	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek], WRITE_OWNER=[agentuk]}
+bac1535f-31f7-41a7-9dd4-364572229da7	/Share/f5d54b15-5e8b-4ed3-8795-03befc78ccff	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek], WRITE_OWNER=[pasquale.pagano, lucio.lelii, gianpaolo.coro]}
+dde57ba5-177b-495b-af50-3e3c6a421595	/Share/1b2bd984-5c28-4df7-9d72-9e9299e46460	lucio.lelii	false	{ADMINISTRATOR=[lucio.lelii], WRITE_OWNER=[pasquale.pagano, fabio.sinibaldi, giancarlo.panichi]}
+a7ae6e68-7502-477c-8067-ec43a2839f95	/Share/3caf9aaa-60a6-44ca-a51e-8787c4d6d106	francesco.mangiacrapa	false	{ADMINISTRATOR=[francesco.mangiacrapa]}
+fb838c64-0924-48b4-9b45-de9be39ba860	/Share/8bb7dcbb-57ca-4374-ad04-62cb8877bf96	francesco.mangiacrapa	false	{ADMINISTRATOR=[francesco.mangiacrapa]}
+39614a6d-4ed8-452c-8efe-396cfde9dfe6	/Share/19d90e99-2f58-4043-8cbf-c1197be562cf	panagiota.koltsida	false	{ADMINISTRATOR=[panagiota.koltsida], READ_ONLY=[nikolas.laskaris]}
+ed125036-ce05-4258-a0d2-fe0d7a0c8fb1	/Share/da356275-ac69-438f-8b1f-e25781ebc46e	aureliano.gentile	false	{ADMINISTRATOR=[aureliano.gentile]}
+a7de7f48-6730-4222-bd02-ec151ca13368	/Share/dcef0f9b-cc68-4139-aa44-1d33177d760a	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek], WRITE_OWNER=[pasquale.pagano, marc.taconet, massimiliano.assante, elena]}
+012f369b-aaba-4eb3-b606-7cada334eadc	/Share/0faef038-47be-4529-9767-5a747a02d13f	francesco.mangiacrapa	false	{ADMINISTRATOR=[francesco.mangiacrapa]}
+81e0e770-1e96-42b1-933d-ef91652b7f77	/Share/c11e2e29-3caa-40fa-9945-3e665fc431f9	ygerbe	false	{ADMINISTRATOR=[ygerbe], WRITE_OWNER=[john.gerbesiotis]}
+b9b90dc4-2db9-4756-b5f8-d736b79a400b	/Share/04fed69c-14d5-4475-bbb1-d2c0e85bdb19	massimiliano.assante	false	{ADMINISTRATOR=[massimiliano.assante]}
+82cef91a-3a86-4749-953c-6fbce8a40adf	/Share/fa4b4207-775b-48c6-9c5f-2279da4c5f3b	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+e6db233e-4109-47ef-9704-cf4242f404c2	/Share/6c51c151-4905-4d9f-b747-a54cd1d1d8e2	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek], WRITE_OWNER=[aureliano.gentile, emmanuel.blondel, marc.taconet, yann.laurent]}
+8b07d9b9-5a8f-4d20-92ff-bf13627398f2	/Share/bc8a8502-2989-44f3-9ef6-206d95685885	magliozzi	false	{ADMINISTRATOR=[magliozzi], WRITE_OWNER=[gianpaolo.coro]}
+5dad8e7b-7e1c-4805-ba5f-b7fe58a6ff32	/Share/d243a692-079e-4450-9a49-0b61dc216afb	massimiliano.assante	true	{ADMINISTRATOR=[pasquale.pagano, leonardo.candela], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-BlueBridgeProject]}
+1b3c1469-7b73-4608-93c3-0f5aedbd4077	/Share/0f6e731a-70fb-4c65-826f-1b99a4c67301	pasquale.pagano	true	{ADMINISTRATOR=[anton.ellenbroek, yann.laurent], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-FAO_TunaAtlas]}
+b02ed5c8-c78c-4306-a795-614b7e270632	/Share/c497e298-0991-4e42-9fc6-a7916b3871b6	pasquale.pagano	true	{ADMINISTRATOR=[anton.ellenbroek], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-BOBLME_HilsaAWG]}
+d6558bfd-23c0-4c67-8cd7-e278b370be5b	/Share/077d47e5-ea91-456f-ab5f-8ef55813d06f	magliozzi	false	{ADMINISTRATOR=[magliozzi], WRITE_OWNER=[gianpaolo.coro]}
+6f41e3db-7204-477e-bc5e-7eb4ab026966	/Share/3d28df98-4e4a-4d65-9f69-bca6b5e2d9a6	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+a578c5f1-14c9-4a75-b12f-58a07d98e065	/Share/5d2462f6-dd59-440c-b749-01c346fa1023	magliozzi	false	{ADMINISTRATOR=[magliozzi]}
+b3e305e0-a42e-4f3b-9853-43b7b38ff99c	/Share/e15cf609-5661-4b21-9a08-809937780d60	magliozzi	false	{ADMINISTRATOR=[magliozzi]}
+c1077dcf-df3b-42ee-ac0b-4d7f9ffc7d29	/Share/09582950-0834-41b9-8744-f1de4ad7d56a	massimiliano.assante	false	{ADMINISTRATOR=[massimiliano.assante]}
+822bf20b-9e90-4ac0-aeaa-c0186eae1d68	/Share/f93596d1-0c25-4ddd-9e71-f8b66c9382b3	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+32f54575-f26b-4c7e-9cbd-eaf395cb0b39	/Share/9eb8f6cd-b643-4951-a31e-6433e0c9d5a2	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+16d087fd-ec67-49c0-b0bf-b32ab9e89717	/Share/332a07c0-664f-4c9f-bb6a-71de64a8b81b	leonardo.candela	true	{WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-SoBigData.eu_VirtualAccess]}
+fd222ee9-68e8-4f8c-a3c6-e2be04630c3b	/Share/34e7eb42-a354-4e5e-b59b-87a552ba6131	magliozzi	false	{ADMINISTRATOR=[magliozzi]}
+df6392a7-291f-4415-a7ca-9cf23a0ab6b0	/Share/f346ee37-e380-4097-aa27-9a501b263764	valentina.marioli	false	{}
+befa376b-f3bb-4108-affc-adc4b84551e6	/Share/4db78746-9029-4666-838e-dc50d0dccb7c	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+dd54a5ab-f735-4bce-b2e4-1c4ad315a3ac	/Share/d0e20827-32c2-4514-bd41-b1bceaad347a	anton.ellenbroek	false	{ADMINISTRATOR=[anton.ellenbroek]}
+b23a8278-65af-4225-b1a4-52b0ac3d8b14	/Share/4f773e59-3d53-40c1-85bd-f282c71532cf	alice.tani	false	{ADMINISTRATOR=[alice.tani], WRITE_OWNER=[leonardo.candela, bruna.baldacci, donatella.castelli]}
+be941ee1-cef4-494f-93aa-daec47ce6c07	/Share/6b8a9554-7837-4638-bc21-15b990c622b5	magliozzi	false	{ADMINISTRATOR=[magliozzi]}
+d59738f7-9821-4424-807d-2cc41bae012e	/Share/17421521-834b-4bb7-a926-d8fe1b42581f	imma	false	{ADMINISTRATOR=[imma]}
+eb9d3b6c-cc9a-4fbb-9582-cde7151eb862	/Share/e89064ed-a5dd-4e2a-9b5c-5b370920c657	pasquale.pagano	true	{ADMINISTRATOR=[pasquale.pagano, leonardo.candela]}
+63fa52e2-f9e7-4407-8fe0-c720587e57df	/Share/dc301101-3d22-45b5-8916-d069755bac0f	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+8406b776-2af7-4bd9-963e-8193a487a3df	/Share/0f21641f-1cdc-42a5-b80e-ca414a2bec5e	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+dad49277-8760-4cd3-90f8-b9c74b457cfa	/Share/a374d099-b1a0-44b3-ad5c-73e4a278faf9	andrea.rossi	true	{ADMINISTRATOR=[valentina.marioli, andrea.rossi], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-Wed8AprTest]}
+6a759abb-0798-472b-9af7-1289cdf6bbc2	/Share/4fe84b9e-2f01-44f2-a3d4-ee79dd86e81c	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro], WRITE_OWNER=[rpalama, andrea.mannocci, gsignori, phdunipi, andreacimino, caf]}
+e6be7ebc-5cff-42b7-aaf9-6d8471c0a571	/Share/eb0fa5b9-411f-44f5-9292-1021b064820c	pasquale.pagano	true	{ADMINISTRATOR=[pasquale.pagano, rodrigues], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-PGFA-UFMT]}
+7fa1159a-cd66-4469-836a-8ac54e5eee19	/Share/014e99df-7a0a-4577-8dbb-065a77469338	massimiliano.assante	true	{ADMINISTRATOR=[massimiliano.assante], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-ENVRI]}
+927c9944-a4e2-45d4-958c-a8e05fb1766b	/Share/da599b6f-a537-4a86-a6ba-0431f4940a3c	giovannialestra	false	{ADMINISTRATOR=[giovannialestra], WRITE_OWNER=[gianpaolo.coro]}
+16c045f8-ba8e-49ef-a3c3-32eed31fce94	/Share/e88a792d-0dcd-4737-bc93-d43dd5227cd8	andrea.manieri	false	{ADMINISTRATOR=[andrea.manieri]}
+8174f1bd-06d1-438b-9725-62451ad40144	/Share/195e65cb-8d13-466f-8681-01f6f8e1a7be	pasquale.pagano	true	{ADMINISTRATOR=[pasquale.pagano, achille]}
+474ca16e-ab75-4a9c-88f1-c11df47f3bcb	/Share/0f19f9c5-6377-4801-a16c-fa39d8daf502	pasquale.pagano	true	{ADMINISTRATOR=[ruggero.bertani, pasquale.pagano, eugenio, adele], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-DESCRAMBLE]}
+db7661b8-b9d8-45bb-a0a2-80da7ac9bef4	/Share/3f3dac41-2808-4d45-bbe1-be13afdd5eec	massimiliano.assante	false	{ADMINISTRATOR=[massimiliano.assante], WRITE_OWNER=[francesco.mangiacrapa]}
+b9141ff7-eb94-412c-9ee4-eefee5153602	/Share/eef943e3-af98-4561-a31c-834de96cab81	leonardo.candela	true	{ADMINISTRATOR=[leonardo.candela, achille], WRITE_OWNER=[d4science.research-infrastructures.eu-gCubeApps-ARIADNE]}
+ce8f71b3-3962-4dc3-9818-b5a0e6fac177	/Share/08e73814-1796-4900-8022-90d5ef0a1b35	pasquale.pagano	false	{ADMINISTRATOR=[pasquale.pagano]}
+099aaf08-21ad-4bc0-b62c-aac73a8a4f1f	/Share/b8f65e1c-3f32-49ac-b719-42e7eefbd418	francesco.mangiacrapa	false	{ADMINISTRATOR=[francesco.mangiacrapa], WRITE_OWNER=[pasquale.pagano, massimiliano.assante, lucio.lelii, roberto.cirillo]}
+5d2af057-1089-4b34-9dbd-265694288d95	/Share/e928e533-2a9d-4541-884f-606738f987bd	francesco.mangiacrapa	false	{ADMINISTRATOR=[francesco.mangiacrapa], WRITE_OWNER=[valentina.marioli, massimiliano.assante]}
+dca7f7b9-e149-4063-8cc0-093416dced78	/Share/0a621b92-bacb-41f2-820a-29a72d8e083d	francesco.mangiacrapa	false	{ADMINISTRATOR=[pasquale.pagano, francesco.mangiacrapa], WRITE_OWNER=[valentina.marioli, massimiliano.assante]}
+670627b9-7fd7-40b2-bfde-4d8c748dc8d4	/Share/fc559683-ad6c-4558-8436-60edc07a1da3	francesco.mangiacrapa	false	{ADMINISTRATOR=[francesco.mangiacrapa]}
+195254a3-3bf1-4e06-91d6-bb18f1537bc0	/Share/78765fb6-6e71-42e1-80c9-dfc5b09f6de9	francesco.mangiacrapa	false	{ADMINISTRATOR=[francesco.mangiacrapa]}
+b801c629-361d-4c99-8618-433c70898e22	/Share/1229f0fa-96b5-473e-8ef2-efff9fb9ddc9	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+bdef1910-85c5-48e2-849f-fcd331500980	/Share/0dc4d275-61dd-4769-8b2e-4b18f5724d8f	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+7b6ff55d-d3c3-44f5-b291-cee72bc68faa	/Share/8b7da6c3-5eda-4753-8a14-fce8e080f2be	massimiliano.assante	true	{ADMINISTRATOR=[massimiliano.assante], WRITE_OWNER=[d4science.research-infrastructures.eu-Ecosystem-July202015at15e57]}
+7d2ed6cd-73db-474a-a0aa-75d1ec402580	/Share/79873158-fe7e-4b0e-a53b-4691d623a58a	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+71826684-a9c1-472c-b7f7-b97026880916	/Share/1351b8b4-33e3-4eba-b10d-7cc0b79d3db8	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+4d097791-23d2-411b-9070-905b3ebddcc5	/Share/b58a8605-42af-4692-b6ac-db0bb767cecd	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+24278ed8-807c-4e2e-9c83-e88d2902266a	/Share/a43eee43-c249-4e81-865b-3b93dd378b12	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+cdec2d2c-26db-4066-b732-345ab750870d	/Share/c5d9a3c6-9acd-44f5-b9a4-714f878c9121	francesco.mangiacrapa	false	{ADMINISTRATOR=[francesco.mangiacrapa], READ_ONLY=[valentina.marioli, roberto.cirillo]}
+a5bdf110-0ba2-4240-9409-8852ea284836	/Share/87c216df-fbb3-4bcb-ad35-79070d3da92a	francesco.mangiacrapa	false	{ADMINISTRATOR=[francesco.mangiacrapa], WRITE_OWNER=[pasquale.pagano]}
+d5a0bde0-94be-4853-9c1f-2a12f3f07113	/Share/08e75cbe-13c8-4b47-af23-5f012b06e1df	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli], READ_ONLY=[massimiliano.assante, francesco.mangiacrapa]}
+3a5f823a-b6a3-4e71-b172-61dd643b956e	/Share/19f941ce-25e6-4ae7-9f86-d27ea5336a7b	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+24145890-ba07-4b48-bc46-388964278265	/Share/b1bf0e1e-aebd-42b8-afe0-d3e4d52c3c7d	massimiliano.assante	true	{ADMINISTRATOR=[massimiliano.assante, mister.pink], WRITE_OWNER=[d4science.research-infrastructures.eu-Ecosystem-preprodVRE]}
+1a8394ad-668b-488f-993a-f82fe006af17	/Share/7e079920-072e-4d46-b4fa-1c26ac52a168	gianpaolo.coro	false	{ADMINISTRATOR=[gianpaolo.coro]}
+f958d6a4-7d73-42c3-94fb-002c8ffff8aa	/Share/d63782e0-3a27-43f2-ae85-46598fb73d89	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+3d31fe94-8609-4862-b72a-6e2423b9115f	/Share/aca1e7b3-1258-429a-89e7-c9b8804edc9d	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+b081ace7-5fa2-4928-8e72-1652dda438ae	/Share/765cb95c-e4ec-4967-bbf3-1ea909d5b91f	valentina.marioli	false	{WRITE_OWNER=[valentina.marioli, francesco.mangiacrapa]}
+6f0f7dbc-4b3f-4ebe-8207-6141a1de6615	/Share/bceaa21a-8f73-4295-8523-76f8702c098d	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+518ed955-c33f-4086-9320-85af87f485ee	/Share/b612429d-09c1-423c-aad1-6de304bf94b2	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli], WRITE_OWNER=[francesco.mangiacrapa], READ_ONLY=[guest]}
+bc0ca369-f216-482b-a585-aa9122ac630f	/Share/a25725ed-7f73-4905-8156-dfbbe6552059	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+6c5c58e5-5864-48bc-863f-01ba4f2e85e2	/Share/72560c39-23d2-4794-b60e-b09bd5836aa7	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+32cc7d80-83a8-4178-b933-a590931625ad	/Share/a52bf673-fdd8-49e1-935f-3b6e4bce7f9c	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+8a0b270b-217d-4e80-bfb0-f55dc522db9b	/Share/68e3147e-a845-4e53-bb9e-c6508abf28ac	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+4824b521-1b92-4db9-a79f-1ac0a4979a69	/Share/aa4508a5-fe23-4973-8c5b-8d6b9e4a46b0	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+71676a4a-6f06-4986-83d4-47e10fd90795	/Share/28fd8d29-fa34-46ba-bd50-436d916b0382	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+26e7c65b-a33a-4006-86fb-8576f8f647a9	/Share/c0019997-a669-4f2d-8cc9-880d6d683899	francesco.mangiacrapa	false	{ADMINISTRATOR=[francesco.mangiacrapa]}
+f6e252e1-1527-4549-8c91-57f005c5df71	/Share/5fcabf8e-67bd-44fd-8364-1ab6a660b78b	valentina.marioli	false	{}
+5cb32c60-2d0c-41b8-b465-ac875126940d	/Share/65295596-b1fb-4207-9127-a4cab1f69947	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+69523843-ffc9-41ff-b35a-f000b55ccd42	/Share/d825639a-4f52-4ec4-ab86-c4b53021c3b7	francesco.mangiacrapa	false	{ADMINISTRATOR=[pasquale.pagano, leonardo.candela, francesco.mangiacrapa]}
+db4da77d-ef83-4f9a-a37d-9a363fbf1b5d	/Share/dac272d0-397f-4730-94ef-6d6192f12f2e	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+6fdf4405-1ab9-415c-8827-da49d01d10b8	/Share/32142785-4747-44c7-96da-12704db61f91	fabio.sinibaldi	false	{}
+a181aacd-ed7c-4059-b84e-05bf03deccd6	/Share/b0a6c42d-b88d-45d2-9d3b-ffe588a0139b	test-0	false	{ADMINISTRATOR=[test-0]}
+b5be6b02-032c-4261-8d2c-9f796b127e4b	/Share/770b26a0-2907-4e4a-a1bb-44a3d60ede04	test-0	false	{ADMINISTRATOR=[test-0]}
+c44fe61f-3f5e-47bd-8f2d-8f7e714c5f99	/Share/ed098fc8-c2a9-4c7c-aa57-4db5e1cd6342	test-1	false	{ADMINISTRATOR=[test-1]}
+1876b36e-b301-4cdb-ba4f-e8700b02c5c5	/Share/d001b57c-a4f0-4abb-ad10-9246b3d5ff95	test-5	false	{ADMINISTRATOR=[test-5]}
+cd0ec4a6-d175-46f6-b69d-a16d0b4fa0fc	/Share/6d241b76-f9e2-4b35-ac76-ff634adb4a28	test-10	false	{ADMINISTRATOR=[test-10]}
+3af75e8f-e5a0-4019-b404-7091d20e3432	/Share/57b27721-7218-4b26-825b-f1c1c83f60ba	test-20	false	{ADMINISTRATOR=[test-20]}
+c9fee631-a06c-4dfe-81a5-5cdb85fb7dac	/Share/b6a8ea91-576e-46eb-9e8d-d5d7e8238be4	test-50	false	{ADMINISTRATOR=[test-50]}
+b3612c3c-f6e7-4612-9787-fef15325bf48	/Share/3c09da61-dd5f-4dd3-9775-ce229001bcad	test-0	false	{ADMINISTRATOR=[test-0]}
+ef1c6c5b-f6a0-45d2-96f7-8ee1abf5a7f2	/Share/2bc3844d-dc74-4017-8b07-4629466959c8	test-0	false	{ADMINISTRATOR=[test-0]}
+f7b760e3-091f-4b13-af71-6b3440f7cc56	/Share/fb79a761-6d12-4c58-ada4-59e908bf6773	test-0	false	{ADMINISTRATOR=[test-0]}
+c350e6fe-0389-44bb-b4b9-6bc1e14a9b16	/Share/e3e5ec12-bcb2-4c89-b874-dca35b85126e	massimiliano.assante	true	{ADMINISTRATOR=[testone, massimiliano.assante, andrea.rossi], WRITE_OWNER=[gcube-preprod-preVRE]}
+02d9e87c-ca5a-48f1-9579-b96a12ccc248	/Share/826f360d-d98b-4b39-bae1-a722b88ef962	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+fdafcc9b-9dc5-46e3-abad-51f33cc1db33	/Share/ad3189bc-6138-48d2-a9c2-669a13370e14	denispyr	false	{}
+c2441798-283f-472a-b097-9aa21926f649	/Share/19faa51a-b6a8-4331-878e-aa5a2283d433	levi.westerveld	false	{ADMINISTRATOR=[levi.westerveld]}
+5797057d-f99e-4b94-b2df-7cba1673e6cd	/Share/b4a7efb6-1458-442e-9a14-42620bb2a229	andrea.rossi	true	{ADMINISTRATOR=[andrea.rossi], WRITE_OWNER=[gcube-preprod-KingsLanding]}
+e11fcf12-37f6-4bc9-a82c-b523092556a1	/Share/69ae6839-778a-402f-bac0-05174e296042	massimiliano.assante	true	{ADMINISTRATOR=[massimiliano.assante], WRITE_OWNER=[gcube-preprod-CastleBlack]}
+710facb9-9036-4ba1-ba52-b10ca8c36c5c	/Share/067816e8-7bdc-4e6e-ac77-450acd53b127	andrea.rossi	true	{ADMINISTRATOR=[andrea.rossi], WRITE_OWNER=[gcube-preprod-Dorne]}
+4ce64491-0c39-4352-9c8b-2c2fabb87c0d	/Share/6016a5ef-ca8d-4513-aaea-310f5bd1ba1c	denispyr	false	{}
+694bb4c3-b287-48d9-bb63-5ded4443acf3	/Share/694bb4c3-b287-48d9-bb63-5ded4443acf3	valentina.marioli	false	{}
+9d004662-2f41-4408-a269-07037de0cab4	/Share/9d004662-2f41-4408-a269-07037de0cab4	massimiliano.assante	false	{ADMINISTRATOR=[massimiliano.assante]}
+341885a6-5c2f-481f-a7dd-0e44daf0ecdd	/Share/5e610566-3787-4950-91bf-2d216ca6cc8a	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli], WRITE_OWNER=[francesco.mangiacrapa]}
+46e28482-2ae6-4fb1-9261-96e8c7e50207	/Share/46e28482-2ae6-4fb1-9261-96e8c7e50207	massimiliano.assante	false	{ADMINISTRATOR=[massimiliano.assante], READ_ONLY=[francesco.mangiacrapa, andrea.rossi]}
+d7b0ab33-60ea-42b5-86eb-0fe4677d8afe	/Share/d7b0ab33-60ea-42b5-86eb-0fe4677d8afe	valentina.marioli	false	{}
+632c7e2b-7f58-47ea-9bff-09cc859e22f0	/Share/632c7e2b-7f58-47ea-9bff-09cc859e22f0	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+ef210511-7c63-4de6-b080-3cc51cf40085	/Share/ef210511-7c63-4de6-b080-3cc51cf40085	francesco.mangiacrapa	false	{}
+19dfbc20-c6e7-40c5-8ebb-af0060676207	/Share/19dfbc20-c6e7-40c5-8ebb-af0060676207	francesco.mangiacrapa	false	{}
+837987ca-b817-4921-b1f9-a38a0ae19846	/Share/837987ca-b817-4921-b1f9-a38a0ae19846	francesco.mangiacrapa	false	{}
+484e3c51-746c-40d2-b9b0-b961721d3403	/Share/484e3c51-746c-40d2-b9b0-b961721d3403	francesco.mangiacrapa	false	{ADMINISTRATOR=[francesco.mangiacrapa], WRITE_OWNER=[fabio.sinibaldi, valentina.marioli]}
+98b8041c-cd26-4475-9bcd-54b7a67fe1cc	/Share/98b8041c-cd26-4475-9bcd-54b7a67fe1cc	valentina.marioli	false	{ADMINISTRATOR=[valentina.marioli]}
+debd9120-8ff0-418c-9864-a16905b25c10	/Share/debd9120-8ff0-418c-9864-a16905b25c10	francesco.mangiacrapa	false	{ADMINISTRATOR=[francesco.mangiacrapa]}
+44c8f5ca-2a7a-48c6-84dc-3688f4bdfd6c	/Share/90c4db02-4ce5-4def-8396-bac2e5ef7993	massimiliano.assante	true	{ADMINISTRATOR=[mister.brown], WRITE_OWNER=[gcube-preprod-Wed15March17_1845]}

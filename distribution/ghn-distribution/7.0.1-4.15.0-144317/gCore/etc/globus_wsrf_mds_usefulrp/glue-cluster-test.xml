@@ -1,0 +1,5 @@
+<Cluster name="hi" xmlns="http://mds.globus.org/glue/ce/1.1">
+<SubCluster name="skl">
+<Host name="ho" />
+</SubCluster>
+</Cluster>

@@ -1,0 +1,43 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.widgets.data-miner-manager-widget.1-5-0"
+		date="2019-10-01">
+		<Change>Added service info [ticket #12594]</Change>
+		<Change>Added support to show log information [ticket #11711]</Change>
+		<Change>Added support to show files html, json, pdf, txt [ticket
+			#17106]
+		</Change>
+		<Change>Updated information show to the user when a computation is
+			submitted [ticket #17030]
+		</Change>
+		<Change>Added Item Id support [ticket #16503]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.data-miner-manager-widget.1-4-0"
+		date="2019-04-01">
+		<Change>Added location and zoom support [ticket #11708]</Change>
+		<Change>Added coordinates EPSG:4326 and EPSG:3857 support [ticket
+			#11710]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.data-miner-manager-widget.1-3-1"
+		date="2018-10-01">
+		<Change>Updated to support Metadata by StorageHub[ticket #11879]
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.data-miner-manager-widget.1-3-0"
+		date="2018-10-01">
+		<Change>Updated to support download by StorageHub[ticket #11879]
+		</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.data-miner-manager-widget.1-2-0"
+		date="2018-07-01">
+		<Change>Updated to support StorageHub[ticket #11879]</Change>
+		<Change>Added support to netcdf files</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.data-miner-manager-widget.1-1-0"
+		date="2017-06-12">
+		<Change>Support Java 8 compatibility [ticket #8471]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.widgets.data-miner-manager-widget.1-0-0"
+		date="2017-03-31">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

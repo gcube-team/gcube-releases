@@ -1,0 +1,12 @@
+{{GATEWAY_NAME}}
+----------------------------------
+{{USER_FULLNAME}} has self registered to {{SELECTED_VRE_NAME}} VRE.
+
+
+Further info about {{USER_FULLNAME}}:
+
+Email: {{USER_EMAIL}}
+Username: {{USER_ID}}
+
+
+You received this email because you are a manager of {{SELECTED_VRE_NAME}}.

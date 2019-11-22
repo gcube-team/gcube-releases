@@ -1,0 +1,24 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.margin-left-max-occurrs {
+		padding-left: 50px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel
+			ui:field="panelMetaDataFieldsSkeleton" width="100%">
+		</g:VerticalPanel>
+		<b:ControlGroup>
+			<b:Controls addStyleNames="{style.margin-left-max-occurrs}">
+				<b:Label ui:field="repeatabilityLabel" visible="false">Repeatable field</b:Label>
+				<b:Button icon="MINUS_SIGN" title="Remove Latest Field"
+					ui:field="removeFieldButton" visible="false"></b:Button>
+				<b:Button icon="PLUS_SIGN" title="Add Another Field"
+					ui:field="addFieldButton" visible="false"></b:Button>
+			</b:Controls>
+		</b:ControlGroup>
+	</g:HTMLPanel>
+</ui:UiBinder> 

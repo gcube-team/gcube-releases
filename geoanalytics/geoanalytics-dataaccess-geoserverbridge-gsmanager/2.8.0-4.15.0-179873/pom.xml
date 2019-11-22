@@ -1,0 +1,183 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<description>The implementation of the API for interacting with Geoserver and Geonetwork.</description>
+	
+	<parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+	</parent>
+	
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>gr.cite.geoanalytics</groupId>
+	<artifactId>dataaccess-geoserverbridgeprovider-gsmanager</artifactId>
+	<version>2.8.0-4.15.0-179873</version>
+	<packaging>jar</packaging>
+	
+	
+	<scm>
+		<connection>scm:svn:http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/geoanalytics-dataaccess-geoserverbridge-gsmanager</connection>
+		<developerConnection>scm:http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/geoanalytics-dataaccess-geoserverbridge-gsmanager</developerConnection>
+		<url>http://svn.cite.gr/code-bluebridge/geospatial-platform/trunk/geoanalytics-dataaccess-geoserverbridge-gsmanager</url>
+	</scm>
+
+	<repositories>
+		<repository>
+			<id>geo-solutions</id>
+			<name>GeoSolutions</name>
+			<url>http://maven.geo-solutions.it/</url>
+		</repository>
+	</repositories>
+
+	<name>geoanalytics-dataaccess-geoserverbridgeprovider-gsmanager</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<gr.cite.geoanalytics.dataaccess-geoserverbridge.version>[2.0.0-SNAPSHOT,3.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-geoserverbridge.version>
+		<gr.cite.geoanalytics.common.version>[2.0.0-SNAPSHOT,3.0.0-SNAPSHOT)</gr.cite.geoanalytics.common.version>
+		<it.geosolutions.geoservermanager.version>1.7.0</it.geosolutions.geoservermanager.version>
+		<org.glassfish.jersey.version>2.27</org.glassfish.jersey.version>
+		<com.fasterxml.jackson.core.version>2.9.8</com.fasterxml.jackson.core.version>
+		<!--<com.sun.jersey.jersey-client.version>1.19.1</com.sun.jersey.jersey-client.version>-->
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+		<!--Logging-->
+		<org.slf4j.version>1.7.25</org.slf4j.version>
+		<logback.version>1.2.3</logback.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>common</artifactId>
+			<version>${gr.cite.geoanalytics.common.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>dataaccess-geoserverbridge</artifactId>
+			<version>${gr.cite.geoanalytics.dataaccess-geoserverbridge.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>it.geosolutions</groupId>
+			<artifactId>geoserver-manager</artifactId>
+			<version>${it.geosolutions.geoservermanager.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>jcl-over-slf4j</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- Logging -->
+		
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api --> 
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>${org.slf4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>4.3.8.RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
+		<!-- jersey 2.x-->
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>${org.glassfish.jersey.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
+			<version>${org.glassfish.jersey.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+			<version>${org.glassfish.jersey.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${com.fasterxml.jackson.core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${com.fasterxml.jackson.core.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+			<version>${com.fasterxml.jackson.core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.5</version>
+			<scope>compile</scope>
+		</dependency>
+ 	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<descriptors>
+						<descriptor>${distroDirectory}/descriptor.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>servicearchive</id>
+						<phase>install</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

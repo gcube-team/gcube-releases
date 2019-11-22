@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="common-encryption.1-1-0" date="${buildDate}">
+		<Change>SymmetricKey is now a public class</Change>
+		<Change>Fixed StringEncrypted decrypt/encrypt signatures. Deprecated olds ones</Change>
+		<Change>Added the facility to store a key in a file in KeySerialization class</Change>
+		<Change>SymmetricKey is now a public class</Change>
+		<Change>Made public the fuctions used to crreates keys in KeyFactory class</Change>
+	</Changeset>
+	<Changeset component="common-encryption.1-0-1" date="04-05-2012">
+		<Change>Compliancy with the new Maven-based release procedure</Change>
+	</Changeset>
+	<Changeset component="common-encryption.1-0-0" date="14-02-2012">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

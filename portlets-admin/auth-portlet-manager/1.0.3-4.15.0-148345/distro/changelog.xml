@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.admin.authportletmanager.1-0-0" date="2015-10-15">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,334 @@
+/*-----Portlet topper-----*/
+.portlet-title-text{
+	/* display:none; */
+}
+/*------------------------*/
+div#usersManagementPortletContainer span#numOfSelectedRowsUserReqs,
+ div#usersManagementPortletContainer span#numOfSelectedRows {
+	padding-right: 4px;
+}
+div#usersManagementPortletContainer #usersManagementDiv {
+	font-size: 15px;
+	color : #4cb5d2;
+	display : inline;
+	/* padding-right: 15px; */
+	float: right;
+}
+div#usersManagementPortletContainer div#userRequestsNotifications.notificationsHidden {
+	font-size: 14px;
+	background-color : #d8d8d8;
+	background : #d8d8d8;
+	color: white;
+	display: inline-block;
+	border-radius : 50%;
+	height: 25px;
+	width: 25px;
+	margin-top: 4px;
+	text-align: center;
+	pointer-events: none;
+}
+
+div#usersManagementPortletContainer div#userRequestsNotificationsTabletView.notificationsHidden {
+	font-size: 14px;
+	background-color : #d8d8d8;
+	background : #d8d8d8;
+	color: white;
+	display: inline-block;
+	border-radius : 50%;
+	height: 25px;
+	width: 25px;
+/* 	margin-top: 4px; */
+	text-align: center;
+	pointer-events: none;
+}
+div#usersManagementPortletContainer div#userRequestsNotifications:after {
+	/* content: 'No pending requests'; */
+	color:#808080;
+	font-size 0.8em;
+}
+div#usersManagementPortletContainer div#userRequestsNotifications.notificationsShown {
+	font-size: 14px;
+	background-color : #c00000;
+	background : #c00000;
+	color: white;
+	display: inline-block;
+	border-radius : 50%;
+	/* padding: 6px 9px; */
+	cursor : pointer;
+	float: right;
+	position: relative;
+	height: 25px;
+	width: 25px;
+	margin-top: 6px;
+	text-align: center;
+}
+#userRequestsNotificationsTabletView {
+	font-size: 14px;
+	background-color : #c00000;
+	background : #c00000;
+	color: white;
+	display: inline-block;
+	border-radius : 50%;
+	cursor : pointer;
+	float: left;
+	position: relative;
+	height: 25px;
+	width: 25px;
+	margin-top: 1em;
+	text-align: center;
+	border: 1px solid #ddd;
+	left: 7px;
+	z-index: 1039;
+}
+div#usersManagementPortletContainer div#toolbarHr,div.toolbarHr {
+	border-bottom: 4px solid #019ad3;
+	display:block !important;
+	padding: 0px !important;
+	margin: 0 !important;
+	height: 0 !important;
+}
+div#usersManagementPortletContainer div#toolbar.hiddenToolbar {
+	display: none;
+}
+div#usersManagementPortletContainer div#toolbar.shownToolbar {
+	background : #eeeeee;
+	background-color : #eeeeee;
+}
+div#usersManagementPortletContainer div#toolbar.shownToolbar > div#displaySelected {
+	cursor : default !important;
+	float : right;
+	/* margin-right: 10px; */
+	color: #808080;
+	/* border-right:1px solid #ddd; */
+}
+div#usersManagementPortletContainer div.toolbarContainer {
+	/* padding: 0px 0px 2px 0px; */
+}
+div#usersManagementPortletContainer div#toolbar div.insideToolbar {
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top : 10px;
+	color: #0271be;
+	display : inline-block;
+	height : 2em;
+	cursor : pointer;
+}
+div#usersManagementPortletContainer div#toolbar div.insideToolbar:hover {
+	background: #4cb5d2;
+	background-color: #4cb5d2;
+	color : #fff;
+}
+div#usersManagementPortletContainer div#toolbar.shownToolbar:hover div.insideToolbar:last-of-type {
+	background-color : #eeeeee;
+	background : #eeeeee;
+	color : #4cb5d2;
+}
+div#usersManagementPortletContainer div#toolbar.hiddenToolbar div.insideToolbar {
+	background-color : #fff;
+	background : #fff;
+	color : #fff;
+} 
+div#usersManagementPortletContainer div#toolbar.hiddenToolbar:hover div.insideToolbar {
+	background-color : #fff;
+	background : #fff;
+	color : #fff;
+	cursor : default;
+}
+div#usersManagementPortletContainer div#usersRequestsTableToolbarContainer div {
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top : 10px;
+	color: #0271be;
+	display : inline-block;
+	height : 2em;
+	cursor : pointer;
+}
+div#usersManagementPortletContainer div#usersRequestsTableToolbarContainer div:not(#displaySelectedUserReqs):hover {
+	background: #4cb5d2;
+	background-color: #4cb5d2;
+	color : white;
+}
+div#usersManagementPortletContainer div#usersRequestsTableToolbarContainer.hiddenToolbar div:hover {
+	background: white;
+	background-color: white;
+	color : white;
+}
+div#usersManagementPortletContainer div#usersRequestsTableToolbarContainer.shownToolbar > div#displaySelectedUserReqs {
+	cursor : default !important;
+	float : right;
+}
+/* div#usersManagementPortletContainer div#usersRequestsTableToolbarContainer.shownToolbar:hover div:last-of-type {
+	background-color : #eeeeee;
+	background : #eeeeee;
+	color : rgb(13, 99, 200);
+} */
+div#usersManagementPortletContainer div#usersRequestsTableToolbarContainer {
+	background-color : #eeeeee;
+	background : #eeeeee;
+	margin-bottom : 10px;
+}
+div#usersManagementPortletContainer div#usersRequestsTableToolbarContainer.hiddenToolbar,
+ div#usersRequestsTableToolbarContainer.hiddenToolbar div {
+	background-color : white;
+	background : white;
+	color : white !important;
+	cursor : default !important;
+}
+div#usersManagementPortletContainer div#usersRequestsModal div.modal-body {
+	padding-top : 0px !important;
+}
+div#usersManagementPortletContainer div#requestsAcceptanceToolbar i, 
+div#usersManagementPortletContainer span:not(.grantDenyClass):not(.denyClass) {
+	display : inline-block;
+}
+#elementBubbletittle{
+	display:inline-block;
+}
+div#usersManagementPortletContainer div#requestsAcceptanceToolbar {
+	background : rgb(234, 234, 234);
+	background-color : rgb(234, 234, 234);
+	display : block;
+}
+div#usersManagementPortletContainer div#requestsAcceptanceToolbar i{
+	transform : scale(1.5,1.5);
+	-webkit-transform : scale(1.5,1.5);
+}
+div#usersManagementPortletContainer span#toolbarText {
+	margin-left: 10px;
+}
+div#usersManagementPortletContainer #currentUsersTableRefresh,
+div#usersManagementPortletContainer  #reloadUsersRequestsTable {
+	border : none;
+}
+div#usersManagementPortletContainerSiteTeamsEditMode div#groupTeamsTableToolbarContainer.hiddenToolbar > div:not(#addSiteTeam) {
+	background: #fff;
+    background-color: #fff;
+    color: #fff;
+    cursor : default;
+}
+div#usersManagementPortletContainerSiteTeamsEditMode div#groupTeamsTableToolbarContainer {
+    background: #eeeeee;
+    background-color: #eeeeee;
+}
+
+div#usersManagementPortletContainerSiteTeamsEditMode div#groupTeamsTableToolbarContainer.hiddenToolbar {
+    background: #fff;
+    background-color: #fff;
+}
+div#usersManagementPortletContainerSiteTeamsEditMode div#groupTeamsTableToolbarContainer.hiddenToolbar #deleteSiteTeam,
+div#usersManagementPortletContainerSiteTeamsEditMode div#groupTeamsTableToolbarContainer.hiddenToolbar #editSiteTeam{
+	background: #fff;
+    background-color: #fff;
+}
+div#usersManagementPortletContainerSiteTeamsEditMode div#groupTeamsTableToolbarContainer div {
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top : 10px;
+	color: #0271be;
+	display : inline-block;
+	height : 2em;
+	cursor : pointer;
+}
+div#usersManagementPortletContainerSiteTeamsEditMode div#groupTeamsTableToolbarContainer div:hover {
+	background: #4cb5d2;
+	background-color: #4cb5d2;
+	color : #fff;
+}
+div.shownToolbar div#usersManagementDiv {
+    float:right;
+}
+
+div#toolbar div#userRequestsNotifications {
+    float:right;
+}
+div#notificationsNumberPlaceHolder {
+	text-align: center;
+	display: inline-block;
+	padding: 3px 0px 0px 0px;
+}
+div#notificationsNumberPlaceHolderTabletView {
+	text-align: center;
+	display: inline-block;
+	padding: 3px 0px 0px 0px;
+}
+div#notificationsNumberPlaceHolder:before {
+	/* content: 'Pending Requests:'; */
+	white-space: nowrap;
+	margin-left: -135px;
+	position: absolute;
+	color:#808080;
+	font-size 0.8em;
+}
+div#notificationsNumberPlaceHolder:hover:before {
+	cursor: default;
+}
+#notificationsTextDiv{
+    float: right;
+    margin-top: 8px;
+    padding-left: 2px;
+    color:#808080;
+    font-size 0.8em;
+}
+#notificationsTextDivTabletView{
+    padding-top: 3px;
+    padding-left: 2px;
+    color:#808080;
+    font-size 0.8em;
+}
+#notificationsTextDivTabletView{
+	float: left;
+	margin-top: 0.9em;
+	padding-left: 13px;
+	color:#808080;
+	font-size 0.8em;
+}
+div#addSiteTeam {
+    display: inline-block;
+    float: left;
+    color: #0271be;
+    height: 27px;
+    padding: 10px 15px 0px 15px;
+    background: #eeeeee;
+    background-color: #eeeeee;
+}
+div#addSiteTeam:hover {
+    color: #eeeeee;
+    background: #4cb5d2;
+    background-color: #4cb5d2;
+    cursor: pointer;
+}
+#newGroupPlusIcon {
+	margin-left: 5px;
+}
+#displaySelectedUserReqs{
+	color:#808080 !important;
+}
+
+@media only screen and (min-width:980px) and (max-width: 1012px)  {
+	#userRequestsNotifications{
+		display:none !important;
+	}
+	#notificationsTextDiv{
+		display:none !important;
+	}
+
+	#userRequestsNotificationsTabletView{
+		display:inline-block !important;
+	}
+	#notificationsTextDivTabletView{
+		display:inline-block !important;
+	}
+}
+@media only screen and (min-width:768px) and (max-width: 1012px)  {
+	
+	div#usersManagementPortletContainer div#toolbar.shownToolbar > div#displaySelected {
+		margin-right: 0px;
+		border-right:none;
+		padding-left: 0px;
+	}
+
+	div#usersManagementPortletContainer div.dataTables_filter label,
+	 div#usersManagementPortletContainerSiteTeamsEditMode div.dataTables_filter label {
+	 	width: 250px;
+	 }
+}

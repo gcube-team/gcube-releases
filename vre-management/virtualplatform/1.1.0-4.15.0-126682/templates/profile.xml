@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:p1="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ID>24175c70-997f-11dd-b66d-82c61f8d0a26</ID>
+	<Type>Service</Type>
+	<Profile>
+		<Description>${project.description}</Description>
+		<Class>VREManagement</Class>
+		<Name>${project.artifactId}</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>${project.description}</Description>
+				<Name>${project.artifactId}</Name>
+				<Version>${project.version}</Version>
+				<MultiVersion value="true"/>
+				<Mandatory level="GHN"/>
+				<Shareable level="GHN"/>
+				<Type>library</Type>
+				<Files>
+					<File>${project.build.finalName}.${project.packaging}</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>

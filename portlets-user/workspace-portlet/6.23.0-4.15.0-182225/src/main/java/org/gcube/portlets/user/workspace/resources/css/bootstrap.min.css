@@ -1,0 +1,34 @@
+@CHARSET "UTF-8";
+
+.breadcrumb {
+	list-style: none outside none;
+	font-size: 12px;
+	margin-left: 2px;
+	margin-top: 2px;
+/* 	margin-bottom: 10px; */
+	padding: 5px !important;
+	font-family: Arial, "Times New Roman", Georgia, Serif;
+}
+
+.breadcrumb li {
+	display: inline-block;
+}
+
+.breadcrumb .active {
+	color: #999999;
+	text-decoration: none;
+}
+
+.breadcrumb .divider {
+	color: #AABBCC;
+	padding: 0 5px;
+}
+
+.breadcrumb a {
+	color: #226599;
+	text-decoration: none;
+}
+
+.breadcrumb a:HOVER {
+	text-decoration: underline;
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="service.xsd">
+	<ID/>
+	<Type>Service</Type>
+	<Profile>
+		<Description>Workspace Portlet Tree</Description>
+		<Class>Portal</Class>
+		<Name>WorkspacePortletTree</Name>
+		<Version>1.0.0</Version>
+		<Packages>
+			<Software>
+				<Description>WorkspaceTree</Description>
+				<Name>WorkspaceTree</Name>
+				<Version>5.1.0</Version>
+				<Dependencies>
+					<Dependency>
+						<Service>
+							<Class>ApplicationSupportLayer</Class>
+							<Name>ASLCore</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>ASLCore</Package>
+						<Version>[2.0.0,3.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>PortletsUser</Class>
+							<Name>HomeLibrary</Name>
+							<Version>1.0.0</Version>
+						</Service>
+						<Package>HomeLibrary</Package>
+						<Version>[5.0.0,6.0.0)</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+					<Dependency>
+						<Service>
+							<Class>ExternalSoftware</Class>
+							<Name>commons-fileupload</Name>
+							<Version>1.02.01</Version>
+						</Service>
+						<Package>commons-fileupload</Package>
+						<Version>1.02.01</Version>
+						<Scope level="GHN"/>
+						<Optional>false</Optional>
+					</Dependency>
+				</Dependencies>
+				<Files>
+					<File>lib/WorkspaceTree.jar</File>
+				</Files>
+			</Software>
+		</Packages>
+	</Profile>
+</Resource>
+

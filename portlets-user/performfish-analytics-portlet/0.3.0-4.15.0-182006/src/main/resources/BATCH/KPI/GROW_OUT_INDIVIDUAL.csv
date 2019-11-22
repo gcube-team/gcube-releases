@@ -1,0 +1,94 @@
+KPI CODE,KPI NAME - LEVEL 1,KPI NAME - LEVEL 2,KPI NAME - LEVEL 3
+,Fish Losses KPIs,,
+,,Mortalities - total,
+G1_1,,,Mortalities - total - Stocking-50g (%)
+G1_2,,,Mortalities - total - 50-150g (%)
+G1_3,,,Mortalities - total - 150-250g (%)
+G1_4,,,Mortalities - total - 250-400g (%)
+G1_5,,,Mortalities - total - 400-800/harvested batches (%)
+G1,,,Mortalities - total - Cumulated  Stocking-harvest (%)
+,,Mortalities – by disease  ,
+G2_1,,,Mortalities - by disease - Stocking-50g (%)
+G2_2,,,Mortalities - by disease - 50-150g (%)
+G2_3,,,Mortalities - by disease - 150-250g (%)
+G2_4,,,Mortalities - by disease - 250-400g (%)
+G2_5,,,Mortalities - by disease - 400-800/harvested batches (%)
+G2,,,Mortalities - by disease - Cumulated Stocking-harvest (%)
+,,Mortalities first 10 days after transport and stocking,
+G4,,,Mortalities first 10 days after transport and stocking - at day 10 (%)
+,,Unaccounted losses,
+G5,,,Unaccounted losses - at harvest (%)
+,,Total losses,
+G6,,,Total losses - at harvest (%)
+,,Discarded fish at slaughter,
+G7,,,Discarded fish at slaughter (%)
+,Dependency on treatments KPIs,,
+,,Number of antiparasitic treatments (total),
+G9,,,Total number of antiparasitic treatments - at harvest (n)
+,,Number of antibiotic treatments (total),
+G10,,,Total number of antibiotic treatments - at harvest  (n)
+,Fish Growth KPIs,,
+,,Specific Growth Rate (SGR),
+G13_1,,,Specific Growth Rate (SGR) - Stocking-50g (% day^-1)
+G13_6,,,Specific Growth Rate (SGR) - 50-150gr (% day^-1)
+G13_2,,,Specific Growth Rate (SGR) - 150-250gr (% day^-1)
+G13_3,,,Specific Growth Rate (SGR) - 250-400g (% day^-1)
+G13_4,,,Specific Growth Rate (SGR) - 400-800/harvested batches (% day^-1)
+G13_5,,,Specific Growth Rate (SGR) Cumulated Stocking-harvest (% day-1 )
+,,Grams per day (GPD),
+G14_6,,,Grams per day (GPD) - Stocking-50g (g day^-1)
+G14_1,,,Grams per day (GPD) - 50-150g (g day^-1)
+G14_2,,,Grams per day (GPD) - 150-250gr (g day^-1)
+G14_3,,,Grams per day (GPD) - 250-400g (g day^-1)
+G14_4,,,Grams per day (GPD- 400-800/harvested batches (g day^-1)
+G14_5,,,Grams per day (GPD) - Cumulated Stocking-harvest (g day^-1)
+,,Thermal Growth Coefficient (TGC),
+G15_6,,,Thermal Growth Coefficient (TGC) - Stocking-50g (g/degree days)
+G15_1,,,Thermal Growth Coefficient (TGC) - 50-150g (g/degree days)
+G15_2,,,Thermal Growth Coefficient (TGC) - 150-250gr (g/degree days)
+G15_3,,,Thermal Growth Coefficient (TGC) - 250-400g (g/degree days)
+G15_4,,,Thermal Growth Coefficient (TGC) - 400-800/harvested batches (g/degree days)
+G15_5,,,Thermal Growth Coefficient (TGC) - Cumulated Stocking-harvest (g/degree days)
+,Feed Efficiency KPIs,,
+,,Feed Conversion Ratio (FCR),
+G16_5,,,Feed Conversion Ratio (FCR) - Stocking-50g
+G16_1,,,Feed Conversion Ratio (FCR) - 50-150g
+G16_2,,,Feed Conversion Ratio (FCR) - 150-250g
+G16_3,,,Feed Conversion Ratio (FCR) - 250-400g
+G16_4,,,Feed Conversion Ratio (FCR) - 400-800/harvested batches
+G16,,,Feed Conversion Ratio (FCR) Cumulated from Stocking-harvest
+,,Biological Feed Conversion Ratio (FCRBIO),
+G17_5,,,Biological Feed Conversion Ratio (FCRBIO) - Stocking-50g
+G17_1,,,Biological Feed Conversion Ratio (FCRBio) - 50-150g
+G17_2,,,Biological Feed Conversion Ratio (FCRBio) - 150-250g
+G17_3,,,Biological Feed Conversion Ratio (FCRBio) - 250-400g
+G17_4,,,Biological Feed Conversion Ratio (FCRBio) - 400-800/harvested batches
+G17_6,,,Biological Feed Conversion Ratio (FCRBIO) Cumulated Stocking-harvest
+,Fish Welfare KPIs,,
+,,Mortalities - total,
+G1_1,,,Mortalities - total - Stocking-50g (%)
+G1_2,,,Mortalities - total - 50-150g (%)
+G1_3,,,Mortalities - total - 150-250g (%)
+G1_4,,,Mortalities - total - 250-400g (%)
+G1_5,,,Mortalities - total - 400-800/harvested batches (%)
+G1,,,Mortalities - total - Cumulated  Stocking-harvest (%)
+,,Mortalities first 3 days after transport and stocking,
+G3,,,Mortalities first 3 days after transport and stocking - at day 3 (%)
+,,Mortalities first 10 days after transport and stocking,
+G4,,,Mortalities first 10 days after transport and stocking - at day 10 (%)
+,,Vaccinated fish – by disease,
+G8_1,,,Vaccinated fish - against P. damselae - at stocking (%)
+G8_2,,,Vaccinated fish - against V. anguillarum - at stocking (%)
+G8_3,,,Vaccinated fish - against Betanodavirus - at stocking (%)
+,,Number of antiparasitic treatments (total),
+G9,,,Total number of antiparasitic treatments - at harvest (n)
+,,Number of antibiotic treatments (total),
+G10,,,Total number of antibiotic treatments - at harvest  (n)
+,,Feed Intake (FI),
+G18_5,,,Feed Intake (FI) - Stocking-50g (g fish^-1 day^-1)
+G18_1,,,Feed Intake (FI) - 50-150g (g fish^-1 day^-1)
+G18_2,,,Feed Intake (FI) - 150-250g (g fish^-1 day^-1)
+G18_3,,,Feed Intake (FI) - 250-400g (g fish^-1 day^-1)
+G18_4,,,Feed Intake (FI) - 400-800/harvested batches (g fish^-1 day^-1)
+,,Stocking density  ,
+G19,,,Stocking density at harvest (Kg/m^3)

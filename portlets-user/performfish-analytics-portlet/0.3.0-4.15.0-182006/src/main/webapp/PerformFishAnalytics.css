@@ -1,0 +1,334 @@
+/** Add css rules here for your application. */
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+	width: 400px;
+}
+
+.dialogVPanel {
+	margin: 5px;
+}
+
+.serverResponseLabelError {
+	color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+	margin: 15px 6px 6px;
+}
+/** JUST to override the gwt-boostrap body */
+body {
+	padding: 0px !important;
+}
+
+/** Add css rules here for your application. */
+.modal-result div.modal-body {
+	position: relative;
+	max-height: 900px !important;
+	padding: 15px;
+	overflow-y: auto;
+	width: 1024px;
+	margin: 0 auto;
+}
+
+table.simpletable {
+	font-family: verdana, arial, sans-serif;
+	font-size: 10px;
+	/*color:#333333;
+	border-width: 1px;
+	border-color: #999999;
+	*/
+	border-collapse: separate;
+	border-spacing: 2px;
+	border: 1px solid #e3e3e3;
+	margin-top: 20px;
+	background-color: #FFF;
+	/* 	margin: 5px 0 0 10px; */
+	text-align: center;
+}
+
+table.simpletable colgroup {
+	/* 	width: 30%; */ /* 	background-color: #D3E1F1; */
+	
+}
+
+table.simpletable td {
+	padding: 5px;
+}
+
+table.colgrouptable {
+	font-family: verdana, arial, sans-serif;
+	font-size: 10px;
+	/*color:#333333;
+	border-width: 1px;
+	border-color: #999999;
+	*/
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 1px solid #e3e3e3;
+	margin-top: 20px;
+	background-color: #FFF;
+	margin: 5px 0 0 10px;
+}
+
+table.colgrouptable colgroup {
+	background-color: #D3E1F1;
+}
+
+table.colgrouptable td {
+	padding: 5px;
+}
+
+.theSubTitle {
+	font-weight: bold;
+	font-size: 12px;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+table.ext-horizontal-panel {
+	border-collapse: separate;
+	border-spacing: 5px;
+	padding: 10px;
+	border: 1px solid #e3e3e3;
+	background-color: #FFF;
+	margin: 0 auto;
+}
+
+.the_margin {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.the_margin_top_bottom {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.no_border_margin_top {
+	border: 0px;
+	margin-top: 20px;
+}
+
+.the_margin_left {
+	margin-left: 10px !important;
+}
+
+.the_margin_bottom {
+	margin-bottom: 10px;
+}
+
+.the_margin_top {
+	margin-top: 10px;
+}
+
+.the_select_custom {
+	width: 360px !important;
+}
+
+.the_select_custom option {
+	margin-top: 3px !important;
+}
+
+table.fixedtable {
+	font-family: verdana, arial, sans-serif;
+	font-size: 10px;
+	border-collapse: separate;
+	border-spacing: 2px;
+	border: 1px solid #e3e3e3;
+	margin-top: 20px;
+	background-color: #FFF;
+	text-align: center;
+	table-layout: fixed;
+}
+
+table.fixedtable td {
+	padding: 2px;
+}
+
+table.fixedtable td {
+	overflow: hidden;
+	width: 200px !important;
+}
+
+.to-big-title {
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.the-minimun-height {
+	min-height: 300px;
+}
+
+.ext-margin-container {
+	margin-left: 20px;
+}
+
+.selected-kpi-panel {
+	overflow-wrap: break-word;
+}
+
+.form-horizontal .controls {
+	margin-left: 100px !important;
+}
+
+.form-horizontal .control-label {
+	width: 90px !important;
+}
+
+.the-central-table {
+	width: 100%;
+}
+
+the-central-table td {
+	padding: 2px;
+}
+
+table.synoptictable-batch {
+	font-family: verdana, arial, sans-serif;
+	font-size: 16px;
+	border-collapse: collapse;
+	margin-top: 20px;
+	background-color: #FFF;
+	text-align: center;
+}
+
+table.synoptictable-batch td {
+	padding: 5px;
+	border-left: 1px solid #e3e3e3;
+	border-right: 1px solid #e3e3e3;
+	font-size: 16px;
+}
+
+table.synoptictable-batch tr:first-child td {
+	border-left: none;
+	border-right: none;
+	font-size: 16px  
+}
+
+table.synoptictable-batch tr:first-child {
+	font-weight: bold; 
+	border-left: none;
+	border-right: none;
+}
+
+table.synoptictable-batch tr:nth-child(4n+0) {
+	background-color: #f2f2f2;
+}
+
+table.synoptictable-batch td:nth-child(3) {
+	font-weight: bold;
+}
+
+table.synoptictable-batch tr:nth-child(2) {
+	font-weight: bold;
+}
+
+table.synoptictable-batch tr:nth-child(3) {
+	font-weight: bold;
+}
+
+table.synoptictable-batch td:first-child {
+    border-left: none;
+}
+
+table.synoptictable-batch td:last-child {
+    border-right: none;
+}
+
+
+table.synoptictable-farm {
+	font-family: verdana, arial, sans-serif;
+	font-size: 16px;
+	border-collapse: collapse;
+	margin-top: 20px;
+	background-color: #FFF;
+	text-align: center;
+}
+
+table.synoptictable-farm td {
+	padding: 5px;
+	border-left: 1px solid #e3e3e3;
+	border-right: 1px solid #e3e3e3;
+	font-size: 16px;
+}
+
+table.synoptictable-farm tr:first-child td {
+	border-left: none;
+	border-right: none;
+	font-size: 16px  
+}
+
+table.synoptictable-farm tr:first-child {
+	font-weight: bold; 
+	border-left: none;
+	border-right: none;
+}
+
+table.synoptictable-farm tr:nth-child(4n+0) {
+	background-color: #f2f2f2;
+}
+
+table.synoptictable-farm td:nth-child(1) {
+	font-weight: bold;
+}
+
+table.synoptictable-farm tr:nth-child(2) {
+	font-weight: bold;
+}
+
+table.synoptictable-farm tr:nth-child(3) {
+	font-weight: bold;
+}
+
+table.synoptictable-farm td:first-child {
+    border-left: none;
+}
+
+table.synoptictable-farm td:last-child {
+    border-right: none;
+}
+
+.my-active-html {
+	cursor: pointer;
+	font-size: 18px;
+	color: #0066cc !important;
+/* 	text-decoration: underline; */
+}
+
+.my-active-html:hover{
+	color: #000 !important;
+}
+
+table.simpletable-synoptic {
+	border-collapse: separate;
+	font-family: verdana, arial, sans-serif;
+	border-spacing: 2px;
+	border: none;
+	margin-top: 20px;
+	background-color: #FFF;
+	text-align: center;
+}
+
+table.simpletable-synoptic td{
+	font-size: 16px;
+}
+
+table.simpletable-synoptic td:first-child{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.to-algorithms-descr {
+	margin: 20px;
+	font-size: 16px;
+	color: #888;
+	text-align: justify;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}

@@ -1,0 +1,20 @@
+STEP 1:
+
+open link “http://foundation.zurb.com/emails/inliner.html” and paste $yourfile.html code inside the textarea provided.
+Click on “Convert Email” button.
+
+Remove the complete <style> tag from $yourfile.html, we do not need <style> tag since all our css classes have been assigned to the HTML tags as inline styles.
+
+STEP 2:
+Encode everything Base64 with an online tool: e.g. https://www.base64encode.org
+
+Use the encoded string in the code then sthe like:
+
+		byte[] base64DecodedData = Base64.getDecoder().decode(encodedTemplate);
+		
+		String template = new String(base64DecodedData)
+				.replace("{{SELECTED_VRE_NAME}}", selectedVRE)
+				.replace("{{USER_NAME}}", name)
+				.replace("{{OPTIONAL_MESSAGE}}", optionalMessage);
+		
+		body.append(template);

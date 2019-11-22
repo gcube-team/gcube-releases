@@ -1,0 +1,1115 @@
+/****************************** All modals ******************************/
+#pickProjectContainer  .modal-header {
+	border-bottom: 0px;
+	background: #0271BE;
+	background-color: #0271BE;
+	color: #fff;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+}
+#pickProjectContainer  .modal-header .close:hover {
+	color: #aaeeff !important;
+}
+#pickProjectContainer  .modal-body {
+	background: #fff;
+	background-color: #fff;
+}
+#pickProjectContainer  #blueLineBottom button {
+	color: #fff;
+	opacity : 1;
+	font-size: 1.2em;
+}
+#pickProjectContainer  #blueLineBottom button:hover {
+	color: #eeeeee;
+}
+#pickProjectContainer .modal {
+	border-radius: 1.1em;
+	padding-bottom: 1em;
+	/* background: #fff; */
+	/* background-color: #fff; */
+}
+#pickProjectContainer #projectViewModal .viewDetailsLabels {
+	color: #0271be;
+}
+#pickProjectContainer #usersListViewDetails,
+	#pickProjectContainer #layersListViewDetails {
+	list-style-type: none;
+	display: inline-block;
+	margin-left: 0px;
+	/* height: 90px; */
+	/* overflow-y: scroll; */
+}
+#pickProjectContainer .viewModalProjectAttributes:not(#viewModalProjectLayerNames) {
+	margin-bottom: 1em;
+}
+#pickProjectContainer #RelateUsersToProjectModal {
+	width: 50%;
+	left:25%;
+	margin-left: 0%;
+	height: 65%;
+}
+@media (max-width:768px){
+	#pickProjectContainer #RelateUsersToProjectModal {
+		width: 90%;
+		left:5%;
+		margin-left: 0%;
+	}
+}
+#pickProjectContainer #RelateUsersToProjectModal .modal-footer {
+	height: 60px;
+}
+#pickProjectContainer #RelateUsersToProjectModal .modal-body {
+	height: 85%;
+	max-height: 100%;
+	overflow-y: scroll;
+}
+#pickProjectContainer .modal-footer {
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+	border-top: none;
+	/* position: absolute; */
+	display: block;
+	width: 100%;
+	padding: 0.5em 0em 1em 0em;
+	background: #fff;
+	background-color: #fff;
+	/* bottom: 0; */
+	/* right: 0; */
+}
+#pickProjectContainer .modal-footer button {
+	color : #fff;
+	background: #0271BE;
+	background-color: #0271BE;
+	border-radius: 0.4em;
+	padding: 0.4em;
+	margin-right: 1em;
+	font-weight: normal;
+	font-size: 17px;
+}
+@media (max-width:767px) {
+	#pickProjectContainer .modal-footer button {
+		margin: 0.2em 0 0 0;
+	}
+}
+#pickProjectContainer .modal-footer button:hover {
+	color : #0271BE;
+	background: #eeeeee;
+	background-color: #eeeeee;
+}
+.projectManagementButtons {
+	background: #0271be;
+	background-color: #0271be;
+	color: #fff;
+	border:none;
+	border-radius:0.5em;
+	padding:.3em .5em;
+	margin-right:.3em !important;
+}
+.projectManagementButtons:hover {
+    background: #4CB5D2 !important;
+	background-color: #4CB5D2 !important;
+}
+.projectManagementButtons.clicked {
+    background: #019ad3;
+	background-color: #019ad3;
+}
+/************************* InternalServerErrorModal *************************/
+#InternalServerErrorModal .modal-body {
+	/* height: 80px; */
+}
+/****************************** Wizard modals ******************************/
+#pickProjectContainer .modalBodyTitleContainer p {
+	margin: 0;
+}
+#pickProjectContainer .modalBodyTitle {
+	color : #0271BE;
+}
+#pickProjectContainer .modalBodyTitleSubheader {
+	color : #777;
+}
+/****************************** Create new project modal ******************************/
+#pickProjectContainer #BBOXModal {
+	width: 65%;
+	height: 80%;
+	left: 55%;
+	margin-left: -37.5%;
+}
+#pickProjectContainer #BBOXModal .modal-body{
+	max-height: 100%;
+	height: 90%;
+	/* overflow-y: visible; */
+	background: #fff;
+	background-color: #fff;
+}
+#pickProjectContainer #BBOXModal #mapContainer {
+	height: 70%;
+	margin-top: 0.5em;
+}
+#pickProjectContainer #BBOXModal #mapBBOX {
+	height: 100%;
+}
+#pickProjectContainer #bboxCoordsAndDrawButton {
+	margin-top: 0.5em;
+}
+#pickProjectContainer #boxCoordsTitle {
+    color: #0271BE;
+}
+#pickProjectContainer #drawShape,
+#pickProjectContainer #clearMap {
+    background-color: #0271BE;
+    background: #0271BE;
+    color: #fff;
+    border-radius : 0.4em;
+    border: none;
+    right: 1em;
+    position: absolute;
+}
+#pickProjectContainer #clearMap:active {
+	background: #ddd;
+    background-color: #ddd;
+}
+#pickProjectContainer #clearMap:hover {
+	background: #4CB5D2;
+    background-color: #4CB5D2;
+}
+#pickProjectContainer #drawShape {
+	display:none;
+}
+#pickProjectContainer #polygon {
+	background-image: url("../../../img/polygon_white.png");
+	display: inline-block;
+	background-size: 35px 15px;
+	background-repeat: no-repeat;
+	width: 35px;
+	height: 15px;
+}
+#pickProjectContainer .coordLabel {
+	border: 1px solid #777;
+	border-radius: 0.4em;
+	height: 3em;
+	text-align: center;
+	background: #DDDDDD;
+	opacity: 0.7;
+	cursor: default;
+}
+#pickProjectContainer .coordLabelContainer {
+	margin-bottom : 0.5em;
+	margin-top: 0.5em;
+}
+/****************************** Select layers modal ******************************/
+#pickProjectContainer #ChooseLayersModal {
+	width: 50%;
+	left: 25%;
+	margin-left: 0%;
+	height: 70%;
+}
+#pickProjectContainer #ChooseLayersModal .modal-footer {
+/* 	position: absolute; */
+	bottom: 0 !important;
+	margin-bottom:0;
+}
+#pickProjectContainer #ChooseLayersModal .modal-body {
+	min-height: 85%;
+}
+#appTabs{
+	border-bottom: 2px solid #019ad3;
+	margin-bottom: .3em;
+}
+#pickProjectContainer #treeviewLayers {
+	height: 250px;
+	overflow-y: hidden;
+}
+#pickProjectContainer #layerTabsContainer {
+	margin-top: 1em;
+}
+#pickProjectContainer .tabLink {
+	background: #0271be;
+	background-color: #0271be;
+	color: #fff;
+	border: none;
+	padding: 0.5em 1em;
+}
+#pickProjectContainer .tabLink:hover {
+	background: #4CB5D2;
+	background-color: #4CB5D2;
+}
+#pickProjectContainer .active .tabLink {
+	background: #019ad3;
+	background-color: #019ad3;
+}
+#pickProjectContainer #layerTabs {
+	padding-bottom: 1.3px;
+	border-bottom: 3px solid #019ad3;
+}
+#pickProjectContainer #treeviewLayers ul {
+	margin : 0;
+}
+#pickProjectContainer #modalLayerMapContainer {
+	height: 300px;
+	margin-bottom: 1.5em;
+}
+#pickProjectContainer #modalLayerMap {
+	height: 100%;
+}
+#availableLayers .fetchAllAvailableLayersLabelClass {
+	display: inline-block;
+}
+#fetchAllAvailableLayers {
+	cursor:pointer;
+	width: 2em;
+	display:inline-block;
+	margin-bottom: .2em;
+}
+#fetchAllAvailableLayers.clicked {
+	cursor:default;
+}
+/****************************** Relate Users To Project modal ******************************/
+#pickProjectContainer .dataTables_scrollHead th {
+	background-image: none !important;
+}
+#pickProjectContainer .dataTables_scrollHeadHeadInner thead th,
+#pickProjectContainer .dataTables_scrollBody {
+	border:none;
+}
+#pickProjectContainer .dataTables_scrollBody{
+	margin-bottom: 1em;
+}
+#pickProjectContainer #relateUsersToProjectsTable {
+	margin-bottom: 1em;
+}
+#pickProjectContainer #relateUsersToProjectsTable_filter input {
+	border-radius: 1em;
+}
+#pickProjectContainer .dataTables_scrollHead th {
+	background-image : none;
+	position: relative;
+	color: #0271be;
+	text-transform: capitalize;
+	font-weight:normal;
+	text-align: left;
+	margin:0;
+	padding-left: 0.8em;
+	border: none;
+}
+#pickProjectContainer .dataTables_scrollHead th.sorting_desc:after {
+	content: "\f0dd";
+	color: #0271be;
+	font-family: Fontawesome;
+	right: 0px;
+	position:absolute;
+}
+#pickProjectContainer .dataTables_scrollHead th.sorting:after {
+	content: "\f0dc";
+	color: #0271be;
+	font-family: Fontawesome;
+	right: 0px;
+	position:absolute;
+}
+#pickProjectContainer .dataTables_scrollHead th.sorting_asc:after {
+	content: "\f0de ";
+	color: #0271be;
+	font-family: Fontawesome;
+	right: 0px;
+	position:absolute;
+}
+#pickProjectContainer #relateUsersToProjectsTable thead th,
+	#pickProjectContainer #relateUsersToProjectsTable {
+	border: none;
+}
+#pickProjectContainer .tableTagsContainer {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+#pickProjectContainer #relateUsersToProjectsTable_length * {
+	color: #0271be;
+}
+#pickProjectContainer .selectedUsersHeader {
+	color: #0271be;
+	margin-bottom: 0.5em;
+}
+#pickProjectContainer .selectdUsersTagSection,
+#pickProjectContainer .selectdUsersGroupsTagSection {
+	border: 1px solid #dddddd;
+	min-height: 4em;
+	max-height: 6em;
+	border-radius: 0.4em;
+	overflow-y: scroll;
+}
+#pickProjectContainer .bootstrap-tagsinput input {
+	display:none !important;
+}
+#pickProjectContainer .bootstrap-tagsinput {
+	margin:.3em 0 .5em 0;
+	border: none;
+	height: 1.3em;
+}
+#pickProjectContainer .bootstrap-tagsinput .tag.label {
+	background: #0271be;
+	background-color: #0271be;
+	border-radius: 1em;
+	padding: 0.5em 0.8em;
+	margin-bottom: 0.5em;
+}
+#pickProjectContainer .relateUsersToProjectsButtons {
+	border-radius: 0.4em;
+	padding: 0.3em 1.2em;
+	border: none;
+	background-color: #0271be;
+	background: #0271be;
+	color: #fff;
+	width: 8em;
+}
+#pickProjectContainer .relateUsersToProjectsButtons i {
+	margin-top: 0.2em;
+}
+/************ Create Project Modal ************/
+#pickProjectContainer .projectAttributes {
+	margin-top: 1em;
+}
+#pickProjectContainer .projectAttributes label {
+	color: #0271be;
+}
+#pickProjectContainer .projectAttributes input,
+#pickProjectContainer .projectAttributes textarea {
+	border-radius: 0.2em;
+    border: 1px solid #d1d1d1;
+}
+#pickProjectContainer #onDeleteSure .modal-footer{
+	background:#fff;
+	background-color: #fff;
+}
+#pickProjectContainer #onDeleteSure .close{
+	color: #fff;
+	opacity: 1;
+}
+/************ Assign users to project modal ************/
+#groupsManipulation{
+	background: #0271BE;
+	background-color:#0271BE;
+	border: none;
+	color: #fff;
+	padding: 0.3em 1em;
+	border-radius: 0.5em;
+	margin-left: 1em;
+}
+/****************************** All modals ******************************/
+#pickProjectContainer  .modal-header {
+	border-bottom: 0px;
+	background: #0271BE;
+	background-color: #0271BE;
+	color: #fff;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+}
+#pickProjectContainer  .modal-header .close:hover {
+	color: #aaeeff !important;
+}
+#pickProjectContainer  .modal-body {
+	background: #fff;
+	background-color: #fff;
+}
+#pickProjectContainer  #blueLineBottom button {
+	color: #fff;
+	opacity : 1;
+	font-size: 1.2em;
+}
+#pickProjectContainer  #blueLineBottom button:hover {
+	color: #eeeeee;
+}
+#pickProjectContainer .modal {
+	border-radius: 1.1em;
+	padding-bottom: 1em;
+	/* background: #fff; */
+	/* background-color: #fff; */
+}
+#pickProjectContainer #projectViewModal .viewDetailsLabels {
+	color: #0271be;
+}
+#pickProjectContainer .viewModalProjectAttributes {
+	margin-left: 0px;
+}
+#pickProjectContainer #usersListViewDetails,
+	#pickProjectContainer #layersListViewDetails {
+	list-style-type: none;
+	display: inline-block;
+	margin-left: 0px;
+	max-height: 90px;
+	width: 100%;
+	overflow-y: scroll;
+}
+#pickProjectContainer .viewModalProjectAttributes:not(#viewModalProjectLayerNames) {
+	margin-bottom: 1em;
+	margin-left: 0px;
+}
+#pickProjectContainer #RelateUsersToProjectModal {
+	width: 50%;
+	left:25%;
+	margin-left: 0%;
+	height: 65%;
+}
+@media (max-width:768px){
+	#pickProjectContainer #RelateUsersToProjectModal {
+		width: 90%;
+		left:5%;
+		margin-left: 0%;
+	}
+}
+#pickProjectContainer #RelateUsersToProjectModal .modal-footer {
+	height: 60px;
+}
+#pickProjectContainer #RelateUsersToProjectModal .modal-body {
+	height: 85%;
+	max-height: 100%;
+	overflow-y: scroll;
+}
+#pickProjectContainer .modal-footer {
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+	border-top: none;
+	/* position: absolute; */
+	display: block;
+	width: 100%;
+	padding: 0.5em 0em 1em 0em;
+	background: #fff;
+	background-color: #fff;
+	/* bottom: 0; */
+	/* right: 0; */
+}
+#pickProjectContainer .modal-footer button,
+#newGroupCreateGroup, #goToPluginLibraryJAR {
+	color : #fff;
+	background: #0271BE;
+	background-color: #0271BE;
+	border-radius: 0.4em;
+	padding: 0.4em;
+	margin-right: 1em;
+	font-weight: normal;
+	font-size: 17px;
+	border:none;
+}
+@media (max-width:767px) {
+	#pickProjectContainer .modal-footer button {
+		margin: 0.2em 0 0 0;
+	}
+}
+#pickProjectContainer .modal-footer button:hover,
+#newGroupCreateGroup:hover {
+	color : #0271BE;
+	background: #eeeeee;
+	background-color: #eeeeee;
+}
+#newGroupCreateGroup{
+	position: absolute;
+	white-space: nowrap;
+	right: 0;
+}
+/************************* InternalServerErrorModal *************************/
+#InternalServerErrorModal .modal-body {
+	/* height: 80px; */
+}
+/****************************** Wizard modals ******************************/
+#pickProjectContainer .modalBodyTitleContainer p {
+	margin: 0;
+}
+#pickProjectContainer .modalBodyTitle {
+	color : #0271BE;
+}
+#pickProjectContainer .modalBodyTitleSubheader {
+	color : #777;
+}
+/****************************** Create new project modal ******************************/
+#pickProjectContainer #BBOXModal {
+	width: 65%;
+	height: 80%;
+	left: 55%;
+	margin-left: -37.5%;
+}
+#pickProjectContainer #BBOXModal .modal-body{
+	max-height: 100%;
+	height: 90%;
+	/* overflow-y: visible; */
+	background: #fff;
+	background-color: #fff;
+}
+#pickProjectContainer #BBOXModal #mapContainer {
+	height: 70%;
+	margin-top: 0.5em;
+}
+#pickProjectContainer #BBOXModal #mapBBOX {
+	height: 100%;
+}
+#pickProjectContainer #bboxCoordsAndDrawButton {
+	margin-top: 0.5em;
+}
+#pickProjectContainer #boxCoordsTitle {
+    color: #0271BE;
+}
+#pickProjectContainer #drawShape,
+#pickProjectContainer #clearMap {
+    background-color: #0271BE;
+    background: #0271BE;
+    color: #fff;
+    border-radius : 0.4em;
+    border: none;
+    right: 1em;
+    position: absolute;
+}
+#pickProjectContainer #clearMap:active {
+	background: #ddd;
+    background-color: #ddd;
+}
+#pickProjectContainer #clearMap:hover {
+	background: #4CB5D2;
+    background-color: #4CB5D2;
+}
+#pickProjectContainer #drawShape {
+	display:none;
+}
+#pickProjectContainer #polygon {
+	background-image: url("../../../img/polygon_white.png");
+	display: inline-block;
+	background-size: 35px 15px;
+	background-repeat: no-repeat;
+	width: 35px;
+	height: 15px;
+}
+#pickProjectContainer .coordLabel {
+	border: 1px solid #777;
+	border-radius: 0.4em;
+	height: 3em;
+	text-align: center;
+	background: #DDDDDD;
+	opacity: 0.7;
+	cursor: default;
+}
+#pickProjectContainer .coordLabelContainer {
+	margin-bottom : 0.5em;
+	margin-top: 0.5em;
+}
+/****************************** Select layers modal ******************************/
+.layers-toolbar {
+	display : inline-block;
+}
+.layers-toolbar.span3 {
+	margin-right : 2em;
+}
+#pickProjectContainer #ChooseLayersModal {
+	width: 70%;
+	left: 15%;
+	margin-left: 0%;
+	height: 80%;
+}
+#pickProjectContainer #ChooseLayersModal .modal-footer {
+/* 	position: absolute; */
+	bottom: 0 !important;
+	margin-bottom:0;
+}
+#pickProjectContainer #ChooseLayersModal .modal-body {
+	min-height: 85%;
+}
+#appTabs{
+	border-bottom: 2px solid #019ad3;
+	margin-bottom: .3em;
+}
+#pickProjectContainer #treeviewLayers {
+	margin-top : 1em;
+	height: 16em;
+	overflow-y: scroll;
+}
+#pickProjectContainer #layerTabsContainer {
+	margin-top: 1em;
+}
+#pickProjectContainer .tabLink {
+	background: #0271be;
+	background-color: #0271be;
+	color: #fff;
+	border: none;
+	padding: 0.5em 1em;
+}
+#pickProjectContainer .tabLink:hover {
+	background: #4CB5D2;
+	background-color: #4CB5D2;
+}
+#pickProjectContainer .active .tabLink {
+	background: #019ad3;
+	background-color: #019ad3;
+}
+#pickProjectContainer #layerTabs {
+	padding-bottom: 1.3px;
+	border-bottom: 3px solid #019ad3;
+}
+#pickProjectContainer #treeviewLayers ul {
+	margin : 0;
+}
+#pickProjectContainer #modalLayerMapContainer {
+	height: 300px;
+	margin-bottom: 1.5em;
+}
+#pickProjectContainer #modalLayerMap {
+	height: 100%;
+}
+input#searchbar-layers {
+	padding: 0px;
+	height: 35px;
+	padding-left: 13px;
+	border-radius: 7px;
+	border: 2px solid #e5e5e5;
+	z-index: 123;
+	margin:0 5% 0 5%;
+	width:90%;
+	color:black;
+}
+/****************************** Relate Users To Project modal ******************************/
+#pickProjectContainer .dataTables_scrollHead th {
+	background-image: none !important;
+}
+#pickProjectContainer .dataTables_scrollHeadHeadInner thead th,
+#pickProjectContainer .dataTables_scrollBody,
+#groupsTable,
+#pickProjectContainer #relateUsersGroupsToProjectsTable {
+	border:none;
+}
+#pickProjectContainer .dataTables_scrollBody,
+#groupsTable{
+	margin-bottom: 1em;
+}
+#pickProjectContainer #relateUsersToProjectsTable {
+	margin-bottom: 1em;
+}
+#pickProjectContainer #relateUsersToProjectsTable_filter input,
+#pickProjectContainer #groupsTable_filter input,
+#pickProjectContainer #relateUsersGroupsToProjectsTable_filter input,
+#pickProjectContainer #assignUsersToProjectGroupssTable_filter input {
+	border-radius: 1em;
+}
+
+#pickProjectContainer .dataTables_scrollHead th,
+#groupsTable th,
+#relateUsersGroupsToProjectsTable th {
+	background-image : none;
+	position: relative;
+	color: #0271be;
+	text-transform: capitalize;
+	font-weight:normal;
+	text-align: left;
+	margin:0;
+	padding-left: 0.8em;
+	border: none;
+}
+#pickProjectContainer .dataTables_scrollHead th.sorting_desc:after,
+#groupsTable th.sorting_desc:after,
+#relateUsersGroupsToProjectsTable th.sorting_desc:after  {
+	content: "\f0dd";
+	color: #0271be;
+	font-family: Fontawesome;
+	right: 0px;
+	position:absolute;
+}
+#pickProjectContainer .dataTables_scrollHead th.sorting:after,
+#groupsTable th.sorting:after,
+#relateUsersGroupsToProjectsTable th.sorting:after  {
+	content: "\f0dc";
+	color: #0271be;
+	font-family: Fontawesome;
+	right: 0px;
+	position:absolute;
+}
+#pickProjectContainer .dataTables_scrollHead th.sorting_asc:after,
+#groupsTable th.sorting_asc:after,
+#relateUsersGroupsToProjectsTable th.sorting_asc:after  {
+	content: "\f0de ";
+	color: #0271be;
+	font-family: Fontawesome;
+	right: 0px;
+	position:absolute;
+}
+
+
+#pickProjectContainer #relateUsersToProjectsTable thead th,
+	#pickProjectContainer #relateUsersToProjectsTable {
+	border: none;
+}
+#pickProjectContainer .tableTagsContainer {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+#pickProjectContainer #relateUsersToProjectsTable_length *,
+#pickProjectContainer #groupsTable_length * {
+	color: #0271be;
+}
+#pickProjectContainer .selectedUsersHeader {
+	color: #0271be;
+	margin-bottom: 0.5em;
+}
+#pickProjectContainer .selectdUsersTagSection,
+#pickProjectContainer .selectdUsersGroupsTagSection,
+#pickProjectContainer .assignedUsersTagSection {
+	border: 1px solid #dddddd;
+	min-height: 4em;
+	max-height: 6em;
+	border-radius: 0.4em;
+	overflow-y: scroll;
+}
+#pickProjectContainer .bootstrap-tagsinput input {
+	display:none !important;
+}
+#pickProjectContainer .bootstrap-tagsinput {
+	margin:.3em 0 .5em 0;
+	border: none;
+	height: 1.3em;
+}
+#pickProjectContainer .bootstrap-tagsinput .tag.label {
+	background: #0271be;
+	background-color: #0271be;
+	border-radius: 1em;
+	padding: 0.5em 0.8em;
+	margin-bottom: 0.5em;
+}
+#pickProjectContainer .relateUsersToProjectsButtons {
+	border-radius: 0.4em;
+	padding: 0.3em 1.2em;
+	border: none;
+	background-color: #0271be;
+	background: #0271be;
+	color: #fff;
+	width: 8em;
+}
+#pickProjectContainer .relateUsersToProjectsButtons i {
+	margin-top: 0.2em;
+}
+#pickProjectContainer .allRightsContainerInTableCell {
+	width: 150px;
+	text-align: left;
+}
+#pickProjectContainer .rightsContainerInTableCell {
+	display: inline;
+	position:relative;
+	cursor: default;
+	width: 32%;
+}
+#pickProjectContainer .RightsCheckboxes[type="checkbox"]:not(:checked),
+#pickProjectContainer .RightsCheckboxes[type="checkbox"]:checked,
+#fetchAllAvailableLayers[type="checkbox"]:checked,
+#fetchAllAvailableLayers[type="checkbox"]:not(:checked),
+#make-project-public[type="checkbox"]:checked,
+#make-project-public[type="checkbox"]:not(:checked),
+#show-public-projects[type="checkbox"]:checked,
+#show-public-projects[type="checkbox"]:not(:checked) {
+  /* position: absolute; */
+  /* left: -9999px; */
+  display: none;
+}
+#pickProjectContainer .RightsCheckboxes[type="checkbox"]:not(:checked) + label,
+#pickProjectContainer .RightsCheckboxes[type="checkbox"]:checked + label,
+#fetchAllAvailableLayers[type="checkbox"]:checked + label,
+#fetchAllAvailableLayers[type="checkbox"]:not(:checked) + label,
+#make-project-public[type="checkbox"]:checked + label,
+#make-project-public[type="checkbox"]:not(:checked) + label,
+#show-public-projects[type="checkbox"]:checked + label,
+#show-public-projects[type="checkbox"]:not(:checked) + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+/* checkbox aspect */
+#pickProjectContainer .RightsCheckboxes[type="checkbox"]:not(:checked) + label:before,
+#pickProjectContainer .RightsCheckboxes[type="checkbox"]:checked + label:before,
+#fetchAllAvailableLayers[type="checkbox"]:checked + label:before,
+#fetchAllAvailableLayers[type="checkbox"]:not(:checked) + label:before,
+#make-project-public[type="checkbox"]:checked + label:before,
+#make-project-public[type="checkbox"]:not(:checked) + label:before,
+#show-public-projects[type="checkbox"]:checked + label:before,
+#show-public-projects[type="checkbox"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left:0;
+  top: 2px;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #aaa;
+  background: #f8f8f8;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
+  background-color: #f8f8f8;
+}
+/* checked mark aspect */
+#pickProjectContainer .RightsCheckboxes[type="checkbox"]:not(:checked) + label:after,
+#pickProjectContainer .RightsCheckboxes[type="checkbox"]:checked + label:after,
+#fetchAllAvailableLayers[type="checkbox"]:checked + label:after,
+#fetchAllAvailableLayers[type="checkbox"]:not(:checked) + label:after,
+#make-project-public[type="checkbox"]:checked + label:after,
+#make-project-public[type="checkbox"]:not(:checked) + label:after,
+#show-public-projects[type="checkbox"]:checked + label:after,
+#show-public-projects[type="checkbox"]:not(:checked) + label:after {
+  content: '\f00c';
+  font-family: Fontawesome;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  font-size: 18px;
+  line-height: 0.8;
+  color: #0271be;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+#pickProjectContainer .RightsCheckboxes[type="checkbox"]:not(:checked) + label:after,
+#fetchAllAvailableLayers[type="checkbox"]:not(:checked) + label:after,
+#make-project-public[type="checkbox"]:not(:checked) + label:after,
+#show-public-projects[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+#pickProjectContainer .RightsCheckboxes[type="checkbox"]:checked + label:after,
+#fetchAllAvailableLayers[type="checkbox"]:checked + label:after,
+#make-project-public[type="checkbox"]:checked + lable:after,
+#show-public-projects[type="checkbox"]:checked + lable:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+#pickProjectContainer .RightsCheckboxes[type="checkbox"]:disabled:not(:checked) + label:before,
+#pickProjectContainer .RightsCheckboxes[type="checkbox"]:disabled:checked + label:before,
+#fetchAllAvailableLayers[type="checkbox"]:disabled:checked + label:before,
+#fetchAllAvailableLayers[type="checkbox"]:disabled:not(:checked) + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted blue;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #4778d9!important;
+}
+/************ Create Project Modal ************/
+#pickProjectContainer .projectAttributes {
+	margin-top: 1em;
+}
+#pickProjectContainer .projectAttributes label {
+	color: #0271be;
+}
+#pickProjectContainer .projectAttributes input,
+#pickProjectContainer .projectAttributes textarea {
+	border-radius: 0.2em;
+    border: 1px solid #d1d1d1;
+}
+#pickProjectContainer #onDeleteSure .modal-footer{
+	background:#fff;
+	background-color: #fff;
+}
+#pickProjectContainer #onDeleteSure .close{
+	color: #fff;
+	opacity: 1;
+}
+/************ Assign users to project modal ************/
+#groupsManipulation{
+	background: #0271BE;
+	background-color:#0271BE;
+	border: none;
+	color: #fff;
+	padding: 0.3em 1em;
+	border-radius: 0.5em;
+	margin-left: 1em;
+}
+#groupsManipulation:hover{
+	background: #eeeeee;
+	background-color:#eeeeee;
+	color: #0271be;
+}
+/*********** GroupsManipulationModal ***************/
+#groupName {
+	border-radius: 0.5em;
+}
+.newGroupContainer label{
+	margin-top:2px;
+	color: #0271be;
+}
+.createNewGroupContainer {
+	margin-top:1.5em;
+}
+.groupNamesEditButton i,
+.groupNamesDeleteButton i{
+	margin:.3em 0 0 0;
+}
+/********* Groups or Individuals modal *********/
+.groupOrIndividual {
+    background: #0271be;
+    background-color: #0271be;
+    margin-top: 1em;
+    cursor: pointer;
+    color: #fff;
+    padding: .3em 0 0 .5em;
+    border-radius: .5em;
+}
+.groupOrIndividual:hover {
+    background: #4CB5D2;
+	background-color: #4CB5D2;
+}
+.groupOrIndividual.clicked {
+    background: #019ad3;
+	background-color: #019ad3;
+}
+.relateUsersGroupsToProjectsButtons.projectManagementButtons{
+	padding: .3em 1.2em;
+	width: 102px;
+}
+.relateUsersGroupsToProjectsButtons.projectManagementButtons i {
+	margin: .2em 0 0 0;
+}
+#relateUsersGroupsToProjectsTable {
+	margin: 1em 0 1em 0;
+}
+/*********** AssignUsersToProjectGroupsModal ***********/
+#AssignUsersToProjectGroupsModal {
+	width: 50%;
+	left:25%;
+	margin-left:0;
+}
+#assignUsersToProjectGroupssTable_length select {
+	width:60px;
+}
+/*********** Assign ProjectGroups To Project Modal ***********/
+#RelateUsersGroupsToProjectModal {
+	width: 50%;
+	margin-left:0%;
+	left:25%;
+}
+/********************** Add Plugin modal ***********************/
+#modalLabel {
+	padding: 0;
+    margin: .3em;
+}
+#settingModal .modal-header {
+	border-bottom: 0px;
+    background: #0271BE;
+    background-color: #0271BE;
+    color: #fff;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+#addPluginModal.modal .modal-footer button {
+	color: #fff;
+}
+#addPluginModal {
+	width: 40%;
+	left: 30%;
+    margin-left: 0;
+}
+#addPluginModal .pluginLibrarySection .row-fluid,
+#addPluginModal .pluginsSection .row-fluid {
+	    margin: 1em 0 1em 0;
+}
+.asterisk {
+    margin-right: 1em;
+    color: #f89406;
+}
+.pluginsHeader {
+	text-align : center;
+}
+#addPlugin {
+	display:inline-block;
+	color: #0271be;
+	cursor: pointer;
+}
+#addPlugin:hover,
+#addPlugin:hover i {
+	color:#2AAAE6
+}
+#pluginLibraryJAR {
+	position:absolute;
+    right:333333em;
+}
+#goToPluginLibraryJAR:hover {
+	color: #2AAAE6;
+	background: #eeeeee;
+	background-color: #eeeeee;
+}
+#pluginFileName{
+	text-overflow: ellipsis;
+}
+.addPluginMessages {
+	text-align: center;
+	padding-top: .5em;
+	font-weight: bold;
+}
+.addPluginMessages.hidden {
+	display:none !important;
+}
+.addPluginMessages.validation,
+.addPluginMessages.failedUpload {
+	color : #FF0000;
+}
+.addPluginMessages.successfullUpload {
+	color:#008000;
+}
+#pluginFileName.red {
+	color : #FF0000; 
+}
+.pluginTiles {
+	height: 3em;
+	background: #0271be;
+    background-color: #0271be;
+    color: #fff;
+    text-align: center;
+    padding-top: 1em;
+    cursor:pointer;
+    border-radius:.5em .5em 0 0;
+}
+.pluginTiles:hover,
+.pluginTiles:hover i {
+	background: #0271be;
+	background-color:#2AAAE6
+}
+.pluginTiles i{
+    margin-left:.5em;
+}
+.pluginTiles.clicked,
+.pluginTiles.clicked i {
+	background: #eeeeee;
+	background-color: #eeeeee;
+	color:#2AAAE6;
+	border-radius:.5em .5em .5em .5em;
+}
+.pluginTiles.clicked:hover,
+.pluginTiles.clicked:hover i {
+	background: #2AAAE6;
+	background-color: #2AAAE6;
+	color:#eeeeee;
+}
+.pluginTiles.clicked .icon-chevron-down{
+    display:none;
+}
+.pluginTiles:not(.clicked) .icon-chevron-right{
+    display:none;
+}
+.pluginContainers {
+	position: relative;
+}
+.removePluginFromForm {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	background-color: transparent;
+	position: absolute;
+	top: .3em;
+	right: .3em;
+	background-image: url(../../../img/x-close.png);
+	background-size: 15px 15px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.removePluginFromForm:hover {
+	background-color:red;
+}

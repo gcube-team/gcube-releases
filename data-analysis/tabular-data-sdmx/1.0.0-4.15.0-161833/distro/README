@@ -1,0 +1,65 @@
+The gCube System - ${name}
+--------------------------------------------------
+ 
+${description}
+ 
+ 
+${gcube.description}
+ 
+${gcube.funding}
+ 
+ 
+Version
+--------------------------------------------------
+ 
+${version} (${buildDate})
+ 
+Please see the file named "changelog.xml" in this directory for the release notes.
+ 
+ 
+Authors
+--------------------------------------------------
+ 
+* Ciro Formisano (ciro.formisano@eng.it), ENG, Roma, Engineering Ingegneria Informatica S.p.A..
+
+ 
+Maintainers
+-----------
+ 
+* Ciro Formisano (ciro.formisano@eng.it), ENG, Roma, Engineering Ingegneria Informatica S.p.A..
+ 
+Download information
+--------------------------------------------------
+ 
+Source code is available from SVN: 
+    ${scm.url}
+ 
+Binaries can be downloaded from the gCube website: 
+   ${gcube.website}
+ 
+ 
+Installation
+--------------------------------------------------
+ 
+This component is part of tabular data management service
+    ${gcube.wikiRoot}/ServiceManager_Guide#Tabular_Data_Manager  
+ 
+Documentation 
+--------------------------------------------------
+ 
+Documentation is available on-line in the gCube Wiki:
+    ${gcube.wikiRoot}/Tabular_Data_Service    
+    ${gcube.wikiRoot}/Tabular_Data_Facilities 
+    ${gcube.wikiRoot}/GCube_SDMX_Statistical_Data_Dissemination_System 
+ 
+Support 
+--------------------------------------------------
+ 
+Bugs and support requests can be reported in the gCube issue tracking tool:
+    ${gcube.issueTracking}
+ 
+ 
+Licensing
+--------------------------------------------------
+ 
+This software is licensed under the terms you may find in the file named "LICENSE" in this directory.

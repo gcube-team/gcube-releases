@@ -1,0 +1,1 @@
+To hide the relese notes at startup use ?hide-notes=true

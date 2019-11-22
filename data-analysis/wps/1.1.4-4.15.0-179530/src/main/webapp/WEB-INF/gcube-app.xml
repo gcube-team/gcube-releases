@@ -1,0 +1,6 @@
+<application mode="online">
+<name>DataMiner</name>
+<group>WPS</group>
+<version>1.1.4-4.15.0-179530</version>
+<description>A service implementing a WPS provider in the D4Science e-Infrastructure</description>
+</application>

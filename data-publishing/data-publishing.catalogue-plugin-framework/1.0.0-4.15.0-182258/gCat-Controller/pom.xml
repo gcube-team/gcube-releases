@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.gcube.data-publishing.gCat-Feeder</groupId>
+    <artifactId>gCat-Feeder-Suite</artifactId>
+    <version>1.0.0-4.15.0-182258</version>
+  </parent>
+  <artifactId>gCat-Controller</artifactId>
+  <name>gCat Controller</name>
+  <description>Controller implementation for GCat Service</description>
+  
+  	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>gcube-bom</artifactId>
+				<version>LATEST</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+  
+  <dependencies>
+  		<dependency>
+			<groupId>org.gcube.common</groupId>
+			<artifactId>common-authorization</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-scope</artifactId>
+			<scope>provided</scope>
+		</dependency>
+  
+  		<dependency>
+			<groupId>org.gcube.data-publishing.gCat-Feeder</groupId>
+			<artifactId>catalogue-plugin-framework</artifactId>
+			<version>1.0.0-4.15.0-182258</version>
+		</dependency>
+  		
+  		
+  		<dependency>
+  			<groupId>org.gcube.data-publishing</groupId>
+    		<artifactId>gcat-client</artifactId>
+    		<version>1.2.0</version>
+  		</dependency>
+  		
+  		
+  		<dependency>
+  			<groupId>org.gcube.data-publishing.gCat-Feeder</groupId>
+    		<artifactId>test-commons</artifactId>
+    		<version>1.0.0-4.15.0-182258</version>
+    		<scope>test</scope>
+  		</dependency>
+  
+  
+  		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+  
+  </dependencies>
+  
+  <build>
+		<plugins>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>make-uberjar</id>
+						<phase>package</phase>
+					</execution>
+					<execution>
+						<id>make-servicearchive</id>
+						<phase>package</phase>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+  
+</project>

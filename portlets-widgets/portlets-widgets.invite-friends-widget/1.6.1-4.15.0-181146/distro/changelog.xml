@@ -1,0 +1,29 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets-widgets.invite-friends-widget.1-6-1"
+		date="2019-07-05">
+		<Change>Support #17063, modify confirmation text when invitation email has been sent</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.invite-friends-widget.1-5-0"
+		date="2017-11-29">
+		<Change>Ported to GWT 2.8.1</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.invite-friends-widget.1-4-0"
+		date="2017-05-12">
+		<Change>Ported to Java 8</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.invite-friends-widget.1-3-0"
+		date="2016-11-24">
+		<Change>Removed ASL session</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.invite-friends-widget.1-1-0"
+		date="2015-09-01">
+		<Change>fix for Bug #518 Wrong port in redirect email links (9090)
+		</Change>
+		<Change>Feature #520 Invite Friends widget to make user entered email
+			address lowercase</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets-widgets.invite-friends-widget.1-0-0"
+		date="2015-07-02">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

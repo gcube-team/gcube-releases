@@ -1,0 +1,19 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlets.user.data-miner-executor.1-2-0" date="2019-10-02">
+		<Change>Added service info [ticket #12594]</Change>
+		<Change>Added support to show log information [ticket #11711]</Change>
+		<Change>Added support to show files html, json, pdf, txt [ticket
+			#17106]
+		</Change>
+		<Change>Updated information show to the user when a computation is
+			submitted [ticket #17030]
+		</Change>
+		<Change>Added Item Id support [ticket #16503]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.data-miner-executor.1-1-0" date="2019-03-13">
+		<Change>Added automatic run [ticket #16155]</Change>
+	</Changeset>
+	<Changeset component="org.gcube.portlets.user.data-miner-executor.1-0-0" date="2019-01-31">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,21 @@
+KPI CODE,KPI NAME - LEVEL 1,KPI NAME – LEVEL 2,KPI NAME - LEVEL 3
+,Dependency on treatments KPIs,,
+,,Number of therapeutic treatments,
+G9,,,Total number of antiparasitic treatments (n)
+G10,,,Total number of antibiotic treatments (n)
+,Productivity KPIs,,
+G20,,Biomass produced per number of FTE employees (fish/FTE),
+G21,,Biomass produced per volumes of sea water used (ton produced/m^3),
+,Environmental KPIs,,
+,,Preservation of biodiversity and habitats KPIs,
+G22,,,Oxygen depletion persistence days (n)
+G23,,,Escapes - Number of episodes (n/ton produced)
+G24,,,Escapes - Estimated number of escaped fish (n/ton produced)
+,,Use of resources,
+G28,,,Marine space use for farming (ha/ton produced)
+G29,,,Land use (ha/ton produced)
+G30,,,Freshwater use (m^3/ton produced)
+G31,,,Energy use (kWh/ton produced)
+G32,,,Fuel (Diesel and Petrol) for transport (l/ton produced)
+G33,,,Fuel (Diesel and Petrol) for other uses (l/ton produced)
+G35,,,Use of renewable energy (%)

@@ -1,0 +1,121 @@
+/**
+ * 
+ */
+package org.gcube.portlets.user.td.gwtservice.server;
+
+import static org.gcube.data.analysis.rconnector.client.Constants.rConnector;
+
+import java.io.IOException;
+import java.net.URI;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.gcube.portlets.user.td.gwtservice.server.util.ServiceCredentials;
+import org.gcube.portlets.user.td.gwtservice.shared.Constants;
+import org.gcube.portlets.user.td.gwtservice.shared.exception.TDGWTServiceException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+/**
+ * Returns a RSTudio link
+ * 
+ * @author Giancarlo Panichi
+ *
+ *
+ */
+public class TDRStudioServlet extends HttpServlet {
+	private static final String TAB_RESOURCE_ID_PARAMETER = "TabResourceId";
+	// private static final String SECURITY_EXCEPTION_RIGHTS =
+	// "Security exception, you don't have the required rights!";
+
+	private static final long serialVersionUID = -1649268678733476057L;
+	private static Logger logger = LoggerFactory
+			.getLogger(TDRStudioServlet.class);
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		handleRequest(req, resp);
+	}
+
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		handleRequest(req, resp);
+	}
+
+	protected void handleRequest(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		try {
+			logger.info("TDRStudioServlet");
+			long startTime = System.currentTimeMillis();
+
+			HttpSession session = request.getSession();
+
+			if (session == null) {
+				logger.error("Error getting the session, no session valid found: "
+						+ session);
+				response.sendError(
+						HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
+						"ERROR-Error getting the user session, no session found "
+								+ session);
+				return;
+			}
+			logger.debug("TDRSTudioServlet session id: " + session.getId());
+
+			ServiceCredentials serviceCredentials;
+
+			String scopeGroupId = request.getHeader(Constants.CURR_GROUP_ID);
+			if (scopeGroupId == null || scopeGroupId.isEmpty()) {
+				scopeGroupId = request.getParameter(Constants.CURR_GROUP_ID);
+				if (scopeGroupId == null || scopeGroupId.isEmpty()) {
+					logger.error("CURR_GROUP_ID is null, it is a mandatory parameter in custom servlet: "
+							+ scopeGroupId);
+					throw new ServletException(
+							"CURR_GROUP_ID is null, it is a mandatory parameter in custom servlet: "
+									+ scopeGroupId);
+				}
+			}
+
+			try {
+				serviceCredentials = SessionUtil.getServiceCredentials(request,
+						scopeGroupId);
+
+			} catch (TDGWTServiceException e) {
+				logger.error(
+						"Error retrieving credentials:" + e.getLocalizedMessage(),
+						e);
+				throw new ServletException(e.getLocalizedMessage());
+			}
+
+			String tabResourceId = request
+					.getParameter(TAB_RESOURCE_ID_PARAMETER);
+			logger.debug("Request RStudio for TR: " + tabResourceId);
+
+			URI url = rConnector().build().connect(Long.valueOf(tabResourceId));
+			logger.debug("URL retrieved from rConnector: " + url.toString());
+
+			// response.setStatus(HttpServletResponse.SC_OK);
+			response.setStatus(HttpServletResponse.SC_MOVED_PERMANENTLY);
+			response.setHeader("Location", url.toString());
+			response.setHeader("gcube-scope", serviceCredentials.getScope());
+			// response.setHeader("Set-Cookie", "PippoPlutoPaperino");
+			// response.setHeader("Set-Cookie", cookieValue);
+
+			logger.debug("Response: " + response.toString());
+
+			logger.trace("Response in "
+					+ (System.currentTimeMillis() - startTime) + "ms");
+
+		} catch (Throwable e) {
+			logger.error("Error TDRStudio: " + e.getLocalizedMessage(), e);
+			response.sendError(
+					HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
+					"Error retrieving file from storage: "
+							+ e.getLocalizedMessage());
+			return;
+		}
+	}
+}

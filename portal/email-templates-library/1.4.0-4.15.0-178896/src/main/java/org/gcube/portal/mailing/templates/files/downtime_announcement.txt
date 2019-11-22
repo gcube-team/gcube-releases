@@ -1,0 +1,12 @@
+{{GATEWAY_NAME}}
+----------------------------------
+Dear {{GATEWAY_NAME}} user,
+
+we want to make you aware that this Monday, November 19th at 1:00pm CET, there will be scheduled down time for approximately 3 hours. 
+
+During this maintenance window, the Gateway may be inaccessible. 
+Operations will resume after the maintenance window, however we cannot guarantee the complete functioning of all services until 6:00pm CET.
+
+We appreciate your patience and understanding and will make every effort to minimize this maintenance window.						
+
+If you wish to know the progress follow D4Science on Twitter at https://twitter.com/d4science

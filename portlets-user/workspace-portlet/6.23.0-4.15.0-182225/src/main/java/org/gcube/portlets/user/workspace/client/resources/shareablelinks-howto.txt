@@ -1,0 +1,16 @@
+<div style='text-align:justify'>
+<span style='background-color:#3a87ad; color:white; font-weight:bold; padding: 3px'>Link To File</span><br/>
+<ul>
+<li style='font-weight:bold'>as Private</li>
+(Only the) Members of the group the folder is shared with are enacted to access the file and the shared folder content. Login required
+<li style='font-weight:bold'>as Public</li>
+Anyone with link can download it. No Login required
+</ul>
+<br/><span style='background-color:#3a87ad; color:white; font-weight:bold; padding: 3px'>Link To Folder</span><br/>
+<ul>
+<li style='font-weight:bold'>as Private</li>
+(Only the) Members of the group the folder is shared with are enacted to view the content. Login required
+<li style='font-weight:bold'>as Public</li>
+Anyone with link can view the content. No login required
+</ul>
+</div>

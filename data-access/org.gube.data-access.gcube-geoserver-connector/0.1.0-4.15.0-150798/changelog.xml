@@ -1,0 +1,5 @@
+<ReleaseNotes> 
+	<Changeset component="org.gcube.data.access.geoserver.gcube-geoserver-connector.0.1.0-4.15.0-150798" date="2017-06-23"> 
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

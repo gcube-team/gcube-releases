@@ -1,0 +1,196 @@
+div#DecisionSupportSystem div#searchBarCenter {
+	position: absolute;
+	max-height: 96%;
+	background-color: rgb(2,113,190);
+	background: rgb(2,113,190);
+	z-index: 33;
+	/* top: 5%; */
+	/* left: -1%; */
+	padding: 25px 0px 19px 20px;
+	margin: 0px;
+}
+@media (min-width: 300px) and (max-width: 1101px) {
+	div#DecisionSupportSystem div#searchBarCenter {
+		padding:14px 0px 2px 20px;
+	}
+}
+@media (min-width: 1102px) and (max-width: 1141px) {
+	div#DecisionSupportSystem div#searchBarCenter {
+		padding:24px 0px 2px 20px;
+	}
+}
+div#DecisionSupportSystem .pickViewport {
+	height: 20px;
+	width: 15px;
+	display: inline-block;
+	cursor: pointer;
+}
+div#DecisionSupportSystem .pickViewport .fa.fa-circle-o {
+	color: #fff;
+}
+div#DecisionSupportSystem .pickViewport .fa.fa-dot-circle-o {
+	color: #fff;
+}
+div#DecisionSupportSystem div#searchBarCenter:before,
+div#DecisionSupportSystem div#searchBarCenter:after {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid rgb(2,113,190);
+    bottom: -15px;
+    content: '';
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    color: #fff;
+    pointer-events: none;
+}
+div#DecisionSupportSystem ul#searchBarDropdown-menu {
+	z-index: 33;
+}
+div#DecisionSupportSystem input#DSSSearchbar {
+	padding: 0px;
+	height: 35px;
+	padding-left: 13px;
+	border-radius: 7px;
+	border: 2px solid #e5e5e5;
+	z-index: 123;
+	margin:0 5% 0 5%;
+	width:90%;
+	color:black;
+	/* background: transparent; */
+}
+div#searchbarInputContainer{
+    position: relative;
+}
+div#DecisionSupportSystem div#searchBarCenterElementsContainer div.btn-group.span3.row-fluid {
+	float:right;
+	left: -2.5941%;
+}
+div#DecisionSupportSystem button#DSSSearchbarDropdown,
+	div#DecisionSupportSystem button#submitSearch {
+	height: 35px;
+	background: #fff;
+	background-color: #fff;
+	border: 2px solid #e5e5e5;
+	z-index: 123;
+}
+div#DecisionSupportSystem button#submitSearch {
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+	font-size: 21px;
+	color: #e5e5e5;
+}
+/******************************************* Searchbar arrow **********************************************************/
+div#DecisionSupportSystem div.triangle-down {
+    width: 0;
+    height: 0;
+    border-top: 7px solid #fff;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 33;
+    right: 0px;
+    top: 0px;
+    margin: auto;
+}
+div#DecisionSupportSystem div.triangle-down-border {
+	width: 0;
+	height: 0;
+	border-top: 12px solid #e5e5e5;
+	border-left: 17px solid transparent;
+	border-right: 17px solid transparent;
+	display: inline-block;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	position: absolute;
+	margin: auto;
+}
+div#searchbar-triangle-container {
+	/* position: relative; */
+	/* height: 100%; */
+}
+ul#searchBarDropdown-menu.shown {
+	z-index: 33;
+}
+div#DecisionSupportSystem div#searchBarCenterElementsContainer {
+	margin: 0px;
+}
+div#DecisionSupportSystem div#searchBarRadioButtonsContainer {
+	margin: 0px;
+	color: #fff;
+	font-size: 14px;
+}
+div#DecisionSupportSystem div#searchBarRadioButtonsContainer {
+	white-space: normal;
+}
+div#DecisionSupportSystem span.radiobuttonSubheading {
+	font-size: 12px;
+	margin-left: 17px;
+	white-space: normal;
+}
+
+
+.autocomplete-item:hover {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffc578+0,fb9d23+100;Orange+3D+%233 */
+	background: #ffc578; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffc578 0%, #fb9d23 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #ffc578 0%,#fb9d23 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #ffc578 0%,#fb9d23 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc578', endColorstr='#fb9d23',GradientType=0 ); /* IE6-9 */
+	color:white;
+	border-radius:4px;
+	-webkit-box-shadow: 0px 10px 9px -5px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 10px 9px -5px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 10px 9px -5px rgba(0, 0, 0, 0.75);
+}
+
+.autocomplete-item{
+	font-size:18px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-left:7.5px;
+}
+.autocomplete-chars{
+	font-weight:bold;
+}	
+
+#autocomplete-hint{
+	height: 35px;
+	padding-left: 13px;
+	border-radius: 7px;
+	border: 2px solid #e5e5e5;
+	z-index: 122;
+	margin:0 5% 0 5%;
+	width:90%;
+	position: absolute;
+	left: 0;
+	display: none;
+}
+
+.ui-autocomplete {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.33s;
+    -moz-transition: opacity 0.33s;
+    -webkit-transition: opacity 0.33s;
+    -o-transition: opacity 0.33s;
+    border-radius:7px;
+	-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.72);
+	-moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.72);
+	box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.72);
+}
+
+@-webkit-keyframes image_blur {
+    0% { -webkit-filter: blur(0px);}
+    50% { -webkit-filter: blur(5px);}
+    100% { -webkit-filter: blur(0px);}
+}
+
+.ui-autocomplete.opened {
+    opacity: 1;
+    -webkit-animation: image_blur 0.33s; 
+}

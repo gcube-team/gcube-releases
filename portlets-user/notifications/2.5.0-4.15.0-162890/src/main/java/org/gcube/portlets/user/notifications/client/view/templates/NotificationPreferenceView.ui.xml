@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:e="urn:import:org.gcube.portlets.user.gcubewidgets.client.elements"
+	xmlns:w="urn:import:org.gcube.portlets.widgets.switchbutton.client"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HTMLPanel>
+		<b:Row>
+			<b:Column size="2">
+				<b:Paragraph styleName="user-notification" ui:field="prefType" > </b:Paragraph>
+			</b:Column>
+			<b:Column size="1">
+				<b:CheckBox ui:field="portalCheckbox">Portal</b:CheckBox>
+			</b:Column>
+			<b:Column size="1">
+				<b:CheckBox ui:field="emailCheckbox">Email</b:CheckBox>
+			</b:Column>
+			<b:Column size="2">
+				<w:SwitchButton ui:field="switchButton" />
+			</b:Column>
+			<b:Column size="3">
+				<b:Paragraph styleName="user-notification-comment" ui:field="prefDesc" ></b:Paragraph>
+			</b:Column>
+		</b:Row>
+	</g:HTMLPanel>
+</ui:UiBinder> 

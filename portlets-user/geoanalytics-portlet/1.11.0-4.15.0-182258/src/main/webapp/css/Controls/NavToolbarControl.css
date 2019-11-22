@@ -1,0 +1,129 @@
+#DecisionSupportSystem #map .custom-navtoolbarcontrol-container{
+	top: 100px;
+	left: 40px;
+}
+#DecisionSupportSystem .custom-navtoolbarcontrol-container i.fa{
+	color: #fff;
+}
+#DecisionSupportSystem .custom-navtoolbarcontrol-container {
+	width: 68px;
+	height: 68px
+}
+#DecisionSupportSystem .custom-navtoolbarcontrol-topbutton {
+	right: 34%;
+	position: absolute;
+}
+#DecisionSupportSystem .custom-navtoolbarcontrol-leftButton {
+	top: 35%;
+	left:0%;
+	position: absolute;
+}
+#DecisionSupportSystem .custom-navtoolbarcontrol-rightButton {
+	right: 0%;
+	top: 35%;
+	position: absolute;
+}
+#DecisionSupportSystem .custom-navtoolbarcontrol-bottomButton {
+	right: 34%;
+	bottom: 0%;
+	position: absolute;
+}
+/**************************** slider *************************/
+#DecisionSupportSystem span.ui-slider-handle {
+	border-radius: 50%;
+	height: 20px;
+	outline: none;
+	top: -7px;
+	cursor: pointer;
+}
+#DecisionSupportSystem .levelOfDetailSlider {
+	height: 5px;
+}
+#DecisionSupportSystem .levelOfDetailSlider .ui-slider-range{
+	background: #2AAAE6;
+	background-color: #2AAAE6;
+}
+/**************************** wizard toolbarcontrol *************************/
+#pickProjectContainer .custom-navtoolbarcontrol-container{
+	top: 10px;
+	left: .5em;
+}
+#pickProjectContainer .custom-navtoolbarcontrol-container i.fa{
+	color: #fff;
+}
+#pickProjectContainer #map .custom-navtoolbarcontrol-container {
+	width: 68px;
+	height: 68px
+}
+#pickProjectContainer #map .custom-navtoolbarcontrol-topbutton {
+	right: 34%;
+	position: absolute;
+}
+#pickProjectContainer #modalLayerMap .custom-navtoolbarcontrol-container,
+#pickProjectContainer #mapBBOX .custom-navtoolbarcontrol-container {
+	width: 68px;
+	height: 68px;
+	top:0.5em;
+	left: 3em;
+}
+#pickProjectContainer #modalLayerMap .custom-navtoolbarcontrol-topbutton,
+#pickProjectContainer #mapBBOX .custom-navtoolbarcontrol-topbutton {
+	right: 34%;
+	position: absolute;
+}
+#pickProjectContainer .custom-navtoolbarcontrol-leftButton {
+	top: 35%;
+	left:0%;
+	position: absolute;
+}
+#pickProjectContainer .custom-navtoolbarcontrol-rightButton {
+	right: 0%;
+	top: 35%;
+	position: absolute;
+}
+#pickProjectContainer .custom-navtoolbarcontrol-bottomButton {
+	right: 34%;
+	bottom: 0%;
+	position: absolute;
+}
+/**************************** wizard slider *************************/
+#pickProjectContainer .ol-zoom-out {
+	top:228px;
+	position: absolute;
+}
+#mapBBOX .ol-zoom.ol-unselectable.ol-control {
+	background: rgba(255,255,255,.4);
+	background-color: rgba(255,255,255,.4);
+	height: 251px;
+}
+#pickProjectContainer #mapAreaContainer .ol-zoom-out {
+	position:static;
+}
+#pickProjectContainer #map .ol-zoom-out {
+	top: 27px;
+	position: static;
+}
+#pickProjectContainer #map .ol-zoomslider {
+	top: 123px !important;
+	background: rgba(255,255,255,.4);
+	background-color: rgba(255,255,255,.4);
+}
+#pickProjectContainer #modalLayerMap .ol-zoomslider,
+#pickProjectContainer #mapBBOX .ol-zoomslider {
+	top: 2.15em !important;
+	background: transparent !important;
+	background-color: transparent;
+	/* height: 226px; */
+}
+#pickProjectContainer .ol-zoom ol-unselectable.ol-control{
+	background: red !important;
+	background-color:red !important;
+}
+#pickProjectContainer #map .ol-zoom.ol-unselectable.ol-control{
+	height: 248px;
+	top: 86px;
+}
+#pickProjectContainer #modalLayerMap .ol-zoom.ol-unselectable.ol-control{
+	height: 248px;
+	top: 0.5em;
+}

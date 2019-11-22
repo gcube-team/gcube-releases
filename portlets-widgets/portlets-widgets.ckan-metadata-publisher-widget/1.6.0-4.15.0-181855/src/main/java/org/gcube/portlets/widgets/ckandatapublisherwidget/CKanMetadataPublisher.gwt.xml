@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='CKanMetadataPublisher'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Other module inherits -->
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+	<!-- Responsive design -->
+	<set-property name="bootstrap.responsiveDesign" value="true" />
+	<inherits name='com.github.gwtbootstrap.datetimepicker.Datetimepicker' />
+	<inherits name='com.github.gwtbootstrap.datepicker.Datepicker' />
+	<inherits name='org.gcube.datacatalogue.ckanutillibrary.CkanUtilLibrary' />
+	<inherits name='org.gcube.portlets.user.gcubewidgets.WidgetFactory' />
+	
+	<inherits name='com.google.gwt.json.JSON'/>
+
+	<inherits
+		name='org.gcube.portlets.widgets.openlayerbasicwidgets.olbasicwidgets' />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.widgets.ckandatapublisherwidget.client.CKanMetadataPublisher' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+	<!-- Specify the application specific style sheet. -->
+	<stylesheet src='CKanMetadataPublisher.css' />
+
+</module>

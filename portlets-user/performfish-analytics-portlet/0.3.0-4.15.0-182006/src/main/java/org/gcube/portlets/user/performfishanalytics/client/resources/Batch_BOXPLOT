@@ -1,0 +1,2 @@
+The box plot represents the distribution of batch data in the VRE. Blue dots indicate the position of the selected batch data in the statistical range, and white dots indicate data outliers.
+Summary tables report descriptive statistics (i.e. mean, standard deviation, median, range and quartile) of the user's batch data and of all the batch data in the VRE, including anonymised data and user’s data. KPI summary statistics is calculated on the batches of fishes, so the batch is the statistical unit.

@@ -1,0 +1,63 @@
+KPI CODE,KPI NAME - LEVEL 1,KPI NAME - LEVEL 2,KPI NAME - LEVEL 3
+,Hatchery Total Productivity KPIs,,
+,,Weaned fish,
+H1,,,Weaned fish (%)
+,,Discarded deformed fish,
+H2_1_1,,,Discarded fish for head deformities - period EoW - 1200dd (% on 1dph)
+H2_1_2,,,Discarded fish for head deformities - period 1200dd - 1800dd (% on 1dph)
+H2_1_3,,,Discarded fish for head deformities - period 1800dd - 2400dd (% on 1dph)
+H2_2_1,,,Discarded fish for spinal deformities - period EoW - 1200dd (% on 1dph)
+H2_2_2,,,Discarded fish for spinal deformities - period 1200dd - 1800dd (% on 1dph)
+H2_2_3,,,Discarded fish for spinal deformities - period 1800dd - 2400dd (% on 1dph)
+H2_3_1,,,Discarded fish for fin deformities - period EoW - 1200dd (% on 1dph)
+H2_3_2,,,Discarded fish for fin deformities - period 1200dd - 1800dd (% on 1dph)
+H2_3_3,,,Discarded fish for fin deformities - period 1800dd - 2400dd (% on 1dph)
+H7,,,Total discarded deformed fish - at 2400dd (% on 1dph) (cumulated)
+,,Discarded slow grower fish,
+H3_1,,,Discarded slow grower fish - period EoW - 1200dd (% on 1dph)
+H3_2,,,Discarded slow grower fish - period 1200dd - 1800dd (% on 1dph)
+H3_3,,,Discarded slow grower fish - period 1800dd - 2400dd (% on 1dph)
+H3_4,,,Total discarded slow grower fish - at 2400dd (% on 1dph) (cumulated)
+,,Fish produced,
+H4,,,Fish produced - at 2400dd (% on 1dph)
+H4_1,,,Fish produced - at end of cycle  (% on 1dph)
+,,Fish produced per FTE employees,
+H5_1_1,,,Number fish/FTE employees in 2018
+H5_1_2,,,Number fish/FTE employees in 2019
+H5_1_3,,,Number fish/FTE employees in 2020
+,,Survival estimation,
+H6_1,,,Survival estimation - at 1200dd (% on 1dph)
+H6_2,,,Survival estimation - at 1800dd (% on 1dph)
+H6_3,,,Survival estimation - at 2400 dd (% on 1dph)
+,,Vaccinated fish by disease,
+H15_1,,,Vaccinated fish against P. damselae - at 2400dd (% on population)
+H15_2,,,Vaccinated fish against V. anguillarum - at 2400dd (% on population)
+H15_3,,,Vaccinated fish against Betanodavirus - at 2400dd (% on population)
+,Fish Deformities KPIs,,
+,,Head deformities,
+H7_1,,,Alive fish with head deformities - at 2400dd (% on 1dph)
+H7_2,,,Alive fish with head deformities - at end of weaning (% on 1dph)
+,,Spinal deformities,
+H8,,,Alive fish with spinal deformities - at 2400dd (% on 1dph)
+H8_1,,,Alive fish with spinal deformities - at end of weaning (% on 1dph)
+,,Fin deformities,
+H9,,,Alive fish with fin deformities - at 2400dd (% on 1 dph)
+H9_1,,,Alive fish with fin deformities - at end of weaning (% on 1dph)
+,,Swim bladder non inflation,
+H10,,,Swim bladder non inflation - at 500dd (% on 1dph)
+,Fish Growth KPIs,,
+,,Average Body Weight (ABW),
+H11_1,,,Average body weight (BW) - at end of weaning (g)
+H11_2,,,Average body weight (BW) - at 1200dd (g)
+H11_3,,,Average body weight (BW) - at 1800dd (g)
+H11_4,,,Average body weight (BW) - at 2400dd (g)
+,,Specific Growth Rate (SGR),
+H12_1,,,Specific Growth Rate (SGR) - period EoW - 1200dd  (% day^-1)
+H12_2,,,Specific Growth Rate (SGR) - period 1200dd - 1800dd (% day^-1)
+H12_3,,,Specific Growth Rate (SGR) -  period 1800dd - 2400dd (% day^-1)
+H12_4,,,Specific Growth Rate (SGR) -  Cumulated at 2400 dd (% day^-1)
+,Live Feed Requirement KPIs,,
+,,Artemia requirement,
+H13,,,Artemia requirement - at 2400dd (Kg of Artemia/million fish)
+,,Rotifer requirement,
+H14,,,Rotifers requirement - at 2400dd (Billions rotifer/million fish)

@@ -1,0 +1,100 @@
+
+/* Button */
+
+.aui .btn.portlet-button {
+	color: white;
+	border: none;
+	text-shadow: none;
+	margin: 5px 20px;
+	background: #0271be;
+	padding: 6px 12px;
+	width: 150px;
+	font-size: 14px;
+}
+
+.aui .btn.portlet-button:hover:enabled {
+	background: #4cb5d2;
+	border: none;
+	color: white;
+}
+
+.aui .btn.portlet-button:focus {
+	background: #019ad3;
+	border: none;
+	color: white;
+	outline: 0;
+}
+
+/* Validation Error Messages */
+
+.aui .control-group.error .help-inline {
+	color: #b50303;
+}
+
+.aui .control-group.error .help-inline>label {
+	color: #b50303;
+	font-size: 13px;
+}
+
+/* Select Box */
+
+.aui select.portlet-selectbox {
+	color: white;
+	border: none;
+	text-shadow: none;
+	margin: 5px 10px;
+	background: #0271be;
+	text-shadow: none;
+	padding: 6px 12px;
+	width: 150px;
+	font-size: 14px;
+	border-radius: 5px;
+}
+
+
+.aui select.portlet-selectbox:hover:enabled {
+	background: #4cb5d2;
+	border: none;
+	color: white;
+}
+
+.aui select.portlet-selectbox:hover:enabled option {
+	background: #0271be;
+	border: none;
+	color: white;
+}
+
+.aui select.portlet-selectbox:focus {
+	background: #019ad3;
+	border: none;
+	color: white;
+	outline: 0;
+}
+
+/* Size */
+
+.aui .btn.portlet-button.small {
+	padding: 4px 10px;
+	font-size: 12px;
+	width: 100px;
+	margin: 5px 10px !important;
+}
+
+.aui .btn.portlet-button.large {
+	padding: 8px 14px;
+	font-size: 16px;
+	width: 200px;
+	margin: 10px 30px !important;
+}
+
+.portlet-color-success {
+	color: green;
+}
+
+.portlet-color-error {
+	color: #b50303;
+}
+
+.portlet-color-neutral {
+	color: #0271be;
+}

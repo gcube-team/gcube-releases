@@ -1,0 +1,3 @@
+<div style='text-align:justify'>
+By sharing this link with your coworkers you will enact users (only the members belonging to the shared folder), after login, to access the content.
+</div>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='InvitesWidget'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.activity.Activity' />
+	<inherits name="com.github.gwtbootstrap.Bootstrap" />
+
+	<!-- Other module inherits -->
+	<inherits name="org.jsonmaker.gwt.Gwt_jsonmaker" />
+	<inherits name='org.gcube.portal.databook.GCubeSocialNetworking' />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point
+		class='org.gcube.portlets.widgets.inviteswidget.client.InvitesWidget' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

@@ -1,0 +1,8 @@
+<ReleaseNotes> 
+	<Changeset component="${groupId}.${artifactId}.1.1.0" date="2013-10-11"> 
+		<Change>#2272:Decoupling api from implementation</Change>
+	</Changeset>
+	<Changeset component="${groupId}.${artifactId}.1.0.0" date="30-06-2013"> 
+		<Change>First version</Change>
+	</Changeset>
+</ReleaseNotes>

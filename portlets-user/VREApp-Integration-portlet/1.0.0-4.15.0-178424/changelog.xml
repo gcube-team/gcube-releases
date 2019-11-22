@@ -1,0 +1,6 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.portlet.user.VREApp-Integration-portlet.1-0-0"
+		date="2019-01-10">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

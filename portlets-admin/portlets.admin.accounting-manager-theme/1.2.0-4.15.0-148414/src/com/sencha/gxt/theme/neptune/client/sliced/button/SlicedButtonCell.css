@@ -1,0 +1,51 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def padding value('theme.button.padding.toString');
+
+@def fontSize value('theme.button.font.size');
+@def fontFamily value('theme.button.font.family');
+@def fontWeight value('theme.button.font.weight');
+@def fontColor value('theme.button.font.color');
+
+@def smallFontSize value('theme.button.smallFontSize','px');
+@def mediumFontSize value('theme.button.mediumFontSize','px');
+@def largeFontSize value('theme.button.largeFontSize','px');
+@def smallLineHeight value('theme.button.smallLineHeight','px');
+@def mediumLineHeight value('theme.button.mediumLineHeight','px');
+@def largeLineHeight value('theme.button.largeLineHeight','px');
+
+
+.text {
+  padding: padding;
+  text-align: center;
+  font-size: fontSize;
+  color: fontColor;
+  font-weight: fontWeight;
+  font-family: fontFamily;
+}
+
+
+
+.small .text {
+  line-height: smallLineHeight;
+  font-size: smallFontSize;
+}
+
+.medium .text {
+  line-height: mediumLineHeight;
+  font-size: mediumFontSize;
+}
+
+.large .text {
+  line-height: largeLineHeight;
+  font-size: largeFontSize;
+}
+
+.iconWrap {
+  padding: 0px;
+}

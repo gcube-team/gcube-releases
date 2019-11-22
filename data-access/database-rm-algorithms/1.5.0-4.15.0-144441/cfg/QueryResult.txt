@@ -1,0 +1,3 @@
+1,AFD-Pul-1838,pinhead spot,English,USA,52836,7,0
+16,Alg-111,Piedra de mar,Spanish,Spain,52834,7,0
+17,Alg-111,Pierre vermiculée,French,France,52834,7,0

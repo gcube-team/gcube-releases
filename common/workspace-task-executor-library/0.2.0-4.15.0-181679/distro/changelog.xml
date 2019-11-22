@@ -1,0 +1,12 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.common.workspace-task-executor-library.0-2-0"
+		date="${buildDate}">
+		<Change>[Task #17349] Migrate ws-task-executor components to SHUB</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.common.workspace-task-executor-library.0-1-0"
+		date="2018-05-04">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

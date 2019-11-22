@@ -1,0 +1,30 @@
+/** Add css rules here for your application. */
+.ws-thredds-modal-body div.modal-body {
+	position: relative;
+	max-height: 600px !important;
+	padding: 15px;
+	overflow-y: auto;
+}
+
+.textAreaWidth {
+	width: 500px !important;
+}
+
+.myMarginLeft {
+	margin-left: 180px !important;
+}
+
+.myLittleWidth {
+	width: 40px !important;
+	padding-left: 20px !important;
+}
+
+.myFormWidth {
+	width: 750px !important;
+}
+
+.myLittleMarginLeft{
+	
+	margin-left: 25px !important;
+	
+}

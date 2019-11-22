@@ -1,0 +1,7 @@
+<application mode='online'>
+                <name>GcubeHttpProxy</name>
+                <group>DataAccess</group>
+                <version>0.0.1-SNAPSHOT</version>
+                <description>GCube HTTP Proxy</description>
+                <local-persistence location='target' />
+</application>

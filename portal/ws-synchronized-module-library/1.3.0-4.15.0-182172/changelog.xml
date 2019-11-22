@@ -1,0 +1,32 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.portal.ws-synchronized-module-library.1-3-0"
+		date="2019-11-12">
+		<Change>[Task #17348] Migrate ws-thredds-sync components to SHUB
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portal.ws-synchronized-module-library.1-2-0"
+		date="2019-11-12">
+		<Change>Only changed the call getPropertMap -> getMetadata.getMap
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portal.ws-synchronized-module-library.1-1-0"
+		date="2018-11-20">
+		<Change>[Task #12909] Reading the "WS-SYNCH.SYNCH-STATUS" property
+			from StorageHub instead of HL
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portal.ws-synchronized-module-library.1-0-1"
+		date="2018-09-04">
+		<Change>[Task #12302] Fix ws-thredds dependency on workspace
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portal.ws-synchronized-module-library.1-0-0"
+		date="2018-03-16">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

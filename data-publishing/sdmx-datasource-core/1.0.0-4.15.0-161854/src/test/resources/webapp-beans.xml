@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://cxf.apache.org/jaxrs
+		http://cxf.apache.org/schemas/jaxrs.xsd">
+
+	<context:spring-configured />
+	<context:component-scan base-package="org.sdmxsource" />
+
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    <!-- <import resource="classpath:META-INF/cxf/cxf-extension-jaxrs-binding.xml"/> -->
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+
+    <!-- Apache CXF Server Configuration -->
+
+    <jaxrs:server id="sdmxDataSourceService" address="/"
+                  beanNames="sdmxDataSource">
+        <jaxrs:serviceBeans>
+            <ref bean="sdmxDataSource"/>
+        </jaxrs:serviceBeans>
+    </jaxrs:server>
+
+	<bean id="sdmxDataSource"  class="org.gcube.datapublishing.sdmx.datasource.SDMXDataProvider">
+		<property name="dataFormat">
+			<util:constant static-field="org.sdmxsource.sdmx.api.constants.DATA_TYPE.GENERIC_2_0"/>
+		</property>
+	 	<property name="proxyAuthenticator" ref="proxyAuthentication"/>  
+	</bean>
+	
+
+	<bean id="readableDataLocationFactory" class="org.sdmxsource.util.factory.SdmxSourceReadableDataLocationFactory" />
+	<bean id="writeableDataLocationFactory" class="org.sdmxsource.util.factory.SdmxSourceWriteableDataLocationFactory" />
+
+
+
+	<!-- REST DATA QUERY MANAGER -->
+	<bean id="restDataQueryManager"
+		class="org.sdmxsource.sdmx.dataparser.rest.RestDataQueryManagerImpl">
+		<property name="dataRetrievalWithWriter" ref="dataRetrievalFromTabman" />
+		<property name="beanRetrievalManager" ref="beanRetrievalFromFusion" />
+	</bean>
+
+	<!-- REST STRUCTURE QUERY MANAGER -->
+	<bean id="restStructureQueryManager"
+		class="org.sdmxsource.sdmx.structureparser.manager.rest.RestStructureQueryManagerImpl">
+		<property name="beanRetrievalManager" ref="beanRetrievalFromFusion" />
+	</bean>
+
+	<!-- USED WHEN STUBS ARE REQUESTED FROM STRUCTURE SERVICE -->
+	<bean id="serviceRetrievalManager" class="org.sdmxsource.sdmx.structureretrieval.manager.DefaultServiceRetrievalManager">
+		<property name="baseUrl" value="http://localhost:8080/DemoWebApp/ws/rest" />
+	</bean>
+
+	<!-- DATA FROM DATABASE -->
+	<bean id="dataRetrievalFromDatabase" class="org.gcube.datapublishing.sdmx.datasource.database.SqlDatabaseDataRetrievalManager" >
+	<property name="dataSource" ref="dataSource"/>
+	<property name="dataRetrieverFactoryMap">
+	<map>
+		<entry key="areapopulation" value-ref="sqlDataRetrieverFactory"/>
+	</map>
+	</property>
+	</bean>
+
+	<bean id="beanRetrievalFromFusion" class="org.sdmxsource.sdmx.structureretrieval.manager.RESTSdmxBeanRetrievalManager">
+		<constructor-arg value="http://node8.d.d4science.research-infrastructures.eu:8080/FusionRegistry/ws/rest" />
+		<property name="serviceRetrievalManager" ref="serviceRetrievalManager" />
+	</bean>
+
+
+	<!-- STRUCTURE FROM FILE -->
+	<bean id="beanRetrievalFromFile" class="org.sdmxsource.sdmx.structureretrieval.manager.InMemoryRetrievalManager">
+		<constructor-arg ref="structureLocation" />
+		<property name="serviceRetrievalManager" ref="serviceRetrievalManager" />
+	</bean>
+
+	<bean id="structureLocation" class="org.sdmxsource.util.io.ReadableDataLocationTmp">
+		<constructor-arg value="classpath:structures_full.xml" />
+	</bean>
+	
+		
+		
+		<!-- Database -->
+	
+    
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/sdmxdata"/>
+        <property name="username" value="ciro"/>
+        <property name="password" value="ciro"/>
+    </bean>
+
+	<bean id="proxyAuthentication" class="org.gcube.datapublishing.sdmx.datasource.config.ProxyAuthenticator">
+		<property name="proxyUserName" value="username"/>
+		<property name="proxyPassword" value="password"/>
+		<property name="proxyHost" value="proxy.eng.it"/>
+		<property name="proxyPort" value="3128"/>
+	</bean>    
+
+	<!--  QUERY MANAGEMENT  -->
+
+
+
+	<bean id="sqlDataRetrieverFactory" class="org.gcube.datapublishing.sdmx.datasource.database.querymanager.factory.impl.SQLDataRetrieverFactoryImpl">
+		<property name="observationTimeColumn" value="year"/>
+		<property name="observationValueColumn" value="pop"/>
+		<property name="tableName" value="eng_areapopulation"/>
+		<property name="seriesKeyColumn" value="areaname"/>
+		<property name="dimensionsColumnMap">
+			<map>
+				<entry key="areaname" value="areaname"/>
+			</map>
+		</property>
+
+	</bean>
+	
+	
+	<!--  DATA  FROM TABMAN -->
+
+	<bean id="dataRetrievalFromTabman" class="org.gcube.datapublishing.sdmx.datasource.tabman.TabularDataRetrievalManager" >
+	<property name="scope" value="/d4science.research-infrastructures.eu/gCubeApps/TabularDataLab"/>
+	<property name="token" value="ciro.formisano"/>
+	<property name="dataRetrieverFactoryMap">
+	<map>
+		<entry key="DEFAULT" value-ref="tabmanDataRetrieverFactoryDatabase"/>
+	</map>
+	</property>
+	</bean>
+
+	<bean id="tabmanDataRetrieverFactory" class="org.gcube.datapublishing.sdmx.datasource.tabman.querymanager.factory.impl.TabmanDataRetrieverFactoryImpl">
+		<property name="tableId" value="453"/>
+		<property name="observationTimeColumn" value="9ec33132-54f6-43b5-bc27-7c2b6a423e4d"/> <!--  Year -->
+		<property name="observationValueColumn" value="16d594c7-f864-4f59-8faa-4dcc19156f2a"/> <!-- Population -->
+		<property name="seriesKeyColumn" value="e55decec-26a1-4ea9-81cc-74885b0d8b9c"/> <!-- Country -->
+		<property name="dimensionsColumnMap">
+			<map>
+				<entry key="Country" value="e55decec-26a1-4ea9-81cc-74885b0d8b9c"/>
+			</map>
+		</property>
+
+	</bean>
+
+	<bean id="tabmanDataRetrieverFactoryDatabase" class="org.gcube.datapublishing.sdmx.datasource.tabman.querymanager.factory.impl.TabmanDataRetrieverFactoryDatabaseImpl">
+	<property name="dataSource" ref="dataSource"/>
+	</bean>
+
+
+
+</beans>
+
+
+

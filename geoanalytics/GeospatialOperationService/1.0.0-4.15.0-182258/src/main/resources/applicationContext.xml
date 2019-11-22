@@ -1,0 +1,140 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans	
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder location="classpath:/gos.properties" />
+	
+	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+
+	<bean id="jpaDialect" class="org.springframework.orm.jpa.vendor.HibernateJpaDialect" />
+	
+	<bean id="remoteFileRepositoryHostname" class="java.lang.String" />	
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="emf" />
+		<property name="jpaDialect" ref="jpaDialect" />
+	</bean>
+	
+	<bean id="springApplicationContextGOS" class="gr.cite.geoanalytics.dataaccess.dao.SpringJpaDaoFactoryGOS.SpringApplicationContextGOS" />
+
+	<bean id="databaseColumnType"	class="gr.cite.geoanalytics.dataaccess.typedefinition.PostgreSQLDatabaseColumnType" />
+			
+	<bean id="emf" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="gr.cite.geoanalytics" />
+		 <property name="jpaProperties">
+	      <props>
+	        <prop key="javax.persistence.jdbc.driver">${gr.cite.geoanalytics.persistence.jdbc.driver}</prop>
+	        <prop key="javax.persistence.jdbc.url">${gr.cite.geoanalytics.persistence.jdbc.url}</prop>
+	        <prop key="hibernate.connection.username">${gr.cite.geoanalytics.persistence.dbusername}</prop>
+	        <prop key="hibernate.connection.password">${gr.cite.geoanalytics.persistence.dbpassword}</prop>
+	        <prop key="hibernate.show_sql">${gr.cite.geoanalytics.persistence.hibernate.show_sql}</prop>
+	        <prop key="hibernate.hbm2ddl.auto">${gr.cite.geoanalytics.persistence.hibernate.hbm2dll}</prop>
+	        <prop key="hibernate.dialect">${gr.cite.geoanalytics.persistence.hibernate.dialect}</prop>
+	        
+	        <prop key="hibernate.jdbc.batch_size">${gr.cite.geoanalytics.persistence.hibernate.jdbc.batch_size}</prop>
+	        <prop key="hibernate.order_inserts">${gr.cite.geoanalytics.persistence.hibernate.order_inserts}</prop>
+	        <prop key="hibernate.order_updates">${gr.cite.geoanalytics.persistence.hibernate.order_updates}</prop>
+	        <prop key="hibernate.jdbc.batch_versioned_data">${gr.cite.geoanalytics.persistence.hibernate.batch_versioned_data}</prop>
+	        <prop key="hibernate.connection.handling_mode">${gr.cite.geoanalytics.persistence.hibernate.jdbc.batch_versioned_data}</prop>
+	        <prop key="hibernate.connection.release_mode">on_close</prop>
+	        
+	        <prop key="hibernate.connection.provider_class">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.provider_class}</prop>
+	        <prop key="hibernate.c3p0.min_size">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.min_size}</prop>
+	        <prop key="hibernate.c3p0.max_size">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.max_size}</prop>
+	        <prop key="hibernate.c3p0.timeout">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.timeout}</prop>
+	        <prop key="hibernate.c3p0.max_statements">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.max_statements}</prop>
+	        <prop key="hibernate.c3p0.acquire_retry_attempts">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.acquire_retry_attempts}</prop>
+	        <prop key="hibernate.c3p0.acquire_retry_delay">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.acquire_retry_delay}</prop>
+	        <prop key="hibernate.c3p0.idle_test_period">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.idle_test_period}</prop>
+	        <prop key="hibernate.c3p0.break_after_acquire_failure">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.break_after_acquire_failure}</prop>
+	        <prop key="hibernate.c3p0.idle_connection_test_period">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.idle_connection_test_period}</prop>
+	        <prop key="hibernate.c3p0.test_connection_on_checkin">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.test_connection_on_checkin}</prop>
+	        <prop key="hibernate.c3p0.test_connection_on_checkout">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.test_connection_on_checkout}</prop>
+	        <prop key="hibernate.c3p0.preferred_test_query">${gr.cite.geoanalytics.persistence.hibernate.connectionpool.c3p0.preferred_test_query}</prop>
+	       
+	      </props>
+    	</property>
+	</bean>
+		
+	<context:annotation-config />
+
+	<context:component-scan base-package="gr.cite.geoanalytics.dataaccess.entities.shape" />	
+	<context:component-scan base-package="gr.cite.gos.resources" />
+	<context:component-scan base-package="gr.cite.gos.rest" />	
+	<context:component-scan base-package="gr.cite.gaap.servicelayer" />
+
+	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+
+	<bean id="dataMonitor" class="gr.cite.clustermanager.actuators.layers.DataMonitor" factory-method="getInstance">
+		 <constructor-arg value="${gr.cite.clustermanager.connectionString}" />
+	</bean>
+	
+	<bean id="dataCreator" class="gr.cite.clustermanager.actuators.layers.DataCreatorGos" factory-method="getInstance">
+		 <constructor-arg value="${gr.cite.clustermanager.connectionString}" />
+		 <constructor-arg value="${gr.cite.clustermanager.gosIdentifier}" />
+		 <constructor-arg value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.url}" />
+		 <constructor-arg value="${gr.cite.geoanalytics.gos.host}" />
+		 <constructor-arg value="${gr.cite.geoanalytics.gos.port}" />
+		 <constructor-arg value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.workspace}" />
+		 <constructor-arg value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.datastore}" />
+	</bean>
+	
+	<bean id="geoServerManagementResource" class="gr.cite.gos.resources.GeoServerManagementResource" autowire="constructor">
+		<constructor-arg ref="geoServerBridge"/>
+		<constructor-arg ref="geoServerBridgeConfig"/>
+	</bean>
+	
+	<bean id="environmentInitializer" class="gr.cite.gos.environment.EnvironmentInitializer" />
+	
+	<bean id="geoServerBridge" class="gr.cite.geoanalytics.dataaccess.geoserverbridge.geoservermanager.GSManagerGeoServerBridge">
+		<constructor-arg ref="geoServerBridgeConfig"/>
+	</bean>
+
+	<bean id="gwcClient" class="gr.cite.geoanalytics.dataaccess.geoserverbridge.geoservermanager.geowebcache.GwcClient">
+		<constructor-arg ref="geoServerBridgeConfig"/>
+	</bean>
+
+	<bean id="geoServerBridgeConfig" class="gr.cite.geoanalytics.context.GeoServerBridgeConfig">
+		<constructor-arg value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.url}" />
+		<constructor-arg value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.user}" />
+		<constructor-arg value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.pass}" />
+	</bean>	
+		
+	<bean id="sysConfigDao" class="gr.cite.geoanalytics.dataaccess.entities.sysconfig.dao.SysConfigDaoImpl" />
+	<bean id="geocodeSystemDao" class="gr.cite.geoanalytics.dataaccess.entities.geocode.dao.GeocodeSystemDaoImpl" />
+	<bean id="layerDao" class="gr.cite.geoanalytics.dataaccess.entities.layer.dao.LayerDaoImpl" />	
+	<bean id="shapeDao" class="gr.cite.geoanalytics.dataaccess.entities.shape.dao.ShapeDaoImpl" />
+	<bean id="coverageDao" class="gr.cite.geoanalytics.dataaccess.entities.coverage.dao.CoverageDaoImpl" />	
+	
+	<bean id="configuration" class="gr.cite.geoanalytics.context.Configuration" />	
+	<bean id="dataStoreConfig" class="gr.cite.geoanalytics.context.DataStoreConfig" />			
+	<bean id="dataLayerConfig" class="gr.cite.geoanalytics.context.DataLayerConfig" />
+	<bean id="applicationConfig" class="gr.cite.geoanalytics.context.ApplicationConfig" />
+	<bean id="smtpConfig" class="gr.cite.geoanalytics.context.SmtpConfig" />
+
+	<bean id="postgisDataStoreConfig" class="gr.cite.geoanalytics.context.DataStoreConfig">
+		<property name="dataStoreName" 	value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.postgisDatastore}" />
+		<property name="databaseName" 	value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.datastore.database}" />		
+		<property name="host"			value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.datastore.host}" />		
+		<property name="port"			value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.datastore.port}" />	
+		<property name="description" 	value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.datastore.description}" />
+		<property name="user"			value="${gr.cite.geoanalytics.dataaccess.dbUser}" />			
+		<property name="password"		value="${gr.cite.geoanalytics.dataaccess.dbPass}" />				
+	</bean>
+	
+	<bean id="geotiffDataStoreConfig" class="gr.cite.geoanalytics.context.DataStoreConfig">
+		<property name="dataStoreName" 	value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.geotiffDatastore}" />
+		<property name="databaseName" 	value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.datastore.database}" />		
+		<property name="host"			value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.datastore.host}" />
+		<property name="port"			value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.datastore.port}" />					
+		<property name="description" 	value="${gr.cite.geoanalytics.dataaccess.geoServerBridge.datastore.description}" />
+		<property name="user"			value="${gr.cite.geoanalytics.dataaccess.dbUser}" />			
+		<property name="password"		value="${gr.cite.geoanalytics.dataaccess.dbPass}" />				
+	</bean>	
+</beans>

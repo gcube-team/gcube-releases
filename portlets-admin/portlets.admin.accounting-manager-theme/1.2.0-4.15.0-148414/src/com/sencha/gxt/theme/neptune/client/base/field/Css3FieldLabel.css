@@ -1,0 +1,83 @@
+/**
+ * Sencha GXT 3.1.1 - Sencha for GWT
+ * Copyright(c) 2007-2014, Sencha, Inc.
+ * licensing@sencha.com
+ *
+ * http://www.sencha.com/products/gxt/license/
+ */
+@def textFamily value('theme.field.sideLabel.text.family');
+@def textWeight value('theme.field.sideLabel.text.weight');
+@def textSize value('theme.field.sideLabel.text.size');
+@def textColor value('theme.field.sideLabel.text.color');
+
+
+@def topTextFamily value('theme.field.topLabel.text.family');
+@def topTextWeight value('theme.field.topLabel.text.weight');
+@def topTextSize value('theme.field.topLabel.text.size');
+@def topTextColor value('theme.field.topLabel.text.color');
+
+
+@def padding value('theme.field.sideLabel.padding');
+@def labelPadding value('theme.field.sideLabel.labelPadding');
+@def fieldPadding value('theme.field.sideLabel.fieldPadding');
+@def textAlign value('theme.field.sideLabel.textAlign');
+
+@def topPadding value('theme.field.topLabel.padding');
+@def topLabelPadding value('theme.field.topLabel.labelPadding');
+@def topFieldPadding value('theme.field.topLabel.fieldPadding');
+@def topTextAlign value('theme.field.topLabel.textAlign');
+
+.fieldItem {
+  display: block;
+  padding:padding;
+  position: relative;
+}
+
+/*.fieldItem*/.fieldItemLabelTop {
+  padding: topPadding;
+}
+
+.fieldLabel {
+  font-family: textFamily;
+  font-size: textSize;
+  font-weight: textWeight;
+  color: textColor;
+  text-align: textAlign;
+  clear: left;
+  display: block;
+  float: left;
+  padding: labelPadding;
+  position: relative;
+  z-index: 2;
+  -moz-user-select: none;
+}
+
+.fieldItemLabelTop .fieldLabel {
+  font-family: topTextFamily;
+  font-size: topTextSize;
+  font-weight: topTextWeight;
+  color: topTextColor;
+
+  width: auto !important;
+  float: none !important;
+  clear: none;
+  position: static;
+
+  text-align: topTextAlign;
+  padding: topLabelPadding;
+}
+
+.fieldElement {
+  padding: fieldPadding;
+}
+.fieldItemLabelTop .fieldElement {
+  padding: topFieldPadding;
+}
+
+.clearLeft {
+  clear: left;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+}

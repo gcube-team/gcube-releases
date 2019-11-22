@@ -1,0 +1,68 @@
+<ReleaseNotes>
+    <Changeset component="common-smartgears-2.1.9" date="2019-03-21">
+		<Change>Support oauth2 protocol accepting token in the auhtorization header field</Change>
+	</Changeset> 
+    <Changeset component="common-smartgears-2.1.7" date="2017-01-16">
+		<Change>Added Proxy Address to Application Configuration</Change>
+		<Change>Added protocol to Container Configuration (http by default)</Change> 
+		<Change>Changed the logs in accounting handler to log error or success and eventually error code</Change>     
+	</Changeset>
+	<Changeset component="common-smartgears-2.1.5" date="2017-07-18">
+		<Change>Added ThreadLocal InnerMethodName to set method name from application</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-2.1.4" date="2017-05-30">
+		<Change>Validation handler for application split in 2 different handlers: 
+			- ContextRetriever that set Token and Scope 
+			- RequestValidation that does all the required checks  
+		</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-2.1.3" date="2017-05-12">
+		<Change>Added gcube bom dependency</Change>
+		<Change>Search for handlers in the root classpath</Change>	
+	</Changeset>
+	<Changeset component="common-smartgears-2.1.2" date="2017-03-22">
+		<Change>Modified the Authorization filter to accept also children 
+		scope when authorizeChildrenContext is enabled on ContianerConfiguration</Change>
+		<Change>Shutdown of Accounting thread added</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-2.1.1" date="2017-01-25">
+		<Change>Minor issue on filter exclusion fixed</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-2.1.0" date="2016-10-24">
+		<Change>proxy configuration added</Change>
+		<Change>solved a bug in events registration for ProfileManager</Change>
+		<Change>added a scheduler for period update of GCoreEnpoints</Change>
+		<Change>Exclude modified to support exclude for sub-group of handlers</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-2.0.0" date="2016-03-10">
+		<Change>integration with Authorization 2.0</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-1.2.6" date="2015-12-22">
+		<Change>Added flush of accounting data</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-1.2.5" date="2015-12-22">
+		<Change>Changed accounting version</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-1.2.4" date="2015-10-06">
+		<Change>Transparent accounting added on service calls</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-1.2.3" date="2015-07-27">
+		<Change>Authorization token control added</Change>
+		<Change>Added support to HTTP Basic authorization</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-1.2.2" date="2015-04-27">
+		<Change>Fixed available space information on ghn profile</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-1.2.1" date="2014-02-13">
+		<Change>scopes can be removed from container</Change>
+		<Change>node profile set to static</Change>
+		<Change>internal adjustments for move to Java 7</Change>
+		<Change>wildcard allowed in exclude directives</Change>
+		<Change>domain corrected derived in gHN profile</Change>
+		<Change>cleaner shutdown</Change>
+		<Change>further improvement in shutdown handling</Change>
+	</Changeset>
+	<Changeset component="common-smartgears-1.0.0" date="2013-10-24">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

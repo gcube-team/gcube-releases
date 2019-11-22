@@ -1,0 +1,17 @@
+<org.gcube.datatransfer.scheduler.library.obj.SchedulerObj>
+  <typeOfSchedule>
+    <directedScheduled>true</directedScheduled>
+  </typeOfSchedule>
+  <typeOfTransfer>LocalFileBasedTransfer</typeOfTransfer>
+  <scope>/gcube/devsec/</scope>
+  <unzipFile>false</unzipFile>
+  <overwrite>true</overwrite>
+  <syncOp>false</syncOp>
+  <agentHostname>pcitgt1012.cern.ch</agentHostname>
+  <inputUrls>
+    <string>file:/home/nick/Downloads/testTransferred.txt</string>
+    <string>file:/home/nick/Downloads/testTransferred2.txt</string>
+    <string>file:/home/nick/Downloads/testTransferred3.txt</string>
+  </inputUrls>
+  <destinationFolder>/home/nick/Downloads/test</destinationFolder>
+</org.gcube.datatransfer.scheduler.library.obj.SchedulerObj>

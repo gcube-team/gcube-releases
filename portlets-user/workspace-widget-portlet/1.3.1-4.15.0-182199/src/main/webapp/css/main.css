@@ -1,0 +1,159 @@
+.workspace-widget-portlet h1.portlet-title {
+	display: none;
+}
+
+.workspace-widget-portlet div.ws-breadcrumb-container > ul.breadcrumb {
+	padding-left: 0;
+	background-color: transparent;
+}
+
+.workspace-widget-portlet .ws-recents {
+	float: right;
+	text-align: right;
+}
+.workspace-widget-portlet .ws-recents a {
+	display: inline-flex;
+	vertical-align: middle;
+	align-items: center;
+	border-radius: 4px;
+	padding: 0 2px;
+}
+.workspace-widget-portlet .ws-recents a:hover {
+	cursor: pointer;
+	text-decoration: none;
+	background-color: #f1f1f1;
+	border: 1px solid #f1f1f1;
+}
+
+.workspace-widget-portlet table thead {
+	background: #f8f8f8;
+	color: #0a0a0a;
+	padding: 10px 18px;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.workspace-widget-portlet table.dataTable thead th, table.dataTable thead td
+	{
+	padding: 5px 10px;
+	border-bottom: none;
+}
+
+.workspace-widget-portlet table.dataTable {
+	clear: both;
+	margin: 0.5em 0 !important;
+	max-width: none !important;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.workspace-widget-portlet table tbody, table tfoot, table thead {
+	border: 1px solid #f1f1f1;
+	background-color: #fefefe;
+}
+
+.workspace-widget-portlet table.dataTable td, table.dataTable th {
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.workspace-widget-portlet table.dataTable thead th, table.dataTable tfoot th {
+	font-weight: 400;
+	font-size: 10px;
+}
+
+.workspace-widget-portlet table.dataTable thead th:first-child {
+	font-size: 12px;
+}
+
+.workspace-widget-portlet table tfoot td, table tfoot th, table thead td,
+	table thead th {
+	padding: .5rem .625rem .625rem;
+	font-weight: 400;
+	text-align: left;
+}
+
+.workspace-widget-portlet select, input[type="file"] {
+	line-height: 15px;
+	width: 150px;
+}
+
+.workspace-widget-portlet table.dataTable tbody>tr.selected, table.dataTable tbody>tr>.selected
+	{
+	background-color: #4285f4 !important;
+}
+
+.workspace-widget-portlet .strip1, .workspace-widget-portlet .strip2 {
+	background-color: white;
+	border-bottom: 1px solid #EFEFEF;
+	border-width: 1px 1px 1px 6px;
+}
+
+.workspace-widget-portlet table tfoot td, table tfoot th, table thead td,
+	table thead th {
+	font-weight: 400;
+}
+
+.workspace-widget-portlet div#userTable_paginate .pagination {
+	margin: 5px 0;
+}
+
+.workspace-widget-portlet .dataTables_wrapper .dataTables_info {
+	padding-top: 0;
+}
+
+.workspace-widget-portlet .dataTables_wrapper .dataTables_length {
+	padding-top: 15px;
+}
+
+.workspace-widget-portlet div.ws-breadcrumb-container>ul.breadcrumb {
+	margin-bottom: 0;
+}
+
+.workspace-widget-portlet .dataTables_wrapper .dataTables_paginate .paginate_button.current, 
+.workspace-widget-portlet .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+	background: #1779ba;
+	color: #fefefe !important;
+	cursor: default;
+	border: none;
+}
+
+.workspace-widget-portlet .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+	background: #ccc;
+	color: #1779ba;
+	cursor: default;
+	border: none;
+}
+
+.workspace-widget-portlet .dataTables_wrapper .dataTables_paginate .paginate_button.current a {
+	color: #fefefe;
+}
+
+.workspace-widget-portlet .dataTables_wrapper {
+	margin-left: -5px;
+	}
+
+/* .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover */
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none;
+	-webkit-touch-callout: none;
+	/* Non-prefixed version, currently supported by Chrome and Opera */
+	cursor: default;
+}
+
+#mydtwrap {
+	width: 100%;
+}
+
+.mydt-block {
+	display: inline-block;
+}
+
+.mydt-pagination {
+	float: right;
+}

@@ -1,0 +1,14 @@
+<ReleaseNotes>
+	<Changeset
+		component="org.gcube.portlets-widgets.ws-thredds-sync-widget.1-1-0"
+		date="2019-11-12">
+		<Change>
+			[Task #17348] Migrate ws-thredds-sync components to SHUB
+		</Change>
+	</Changeset>
+	<Changeset
+		component="org.gcube.portlets-widgets.ws-thredds-sync-widget.1-0-0"
+		date="2018-03-16">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>

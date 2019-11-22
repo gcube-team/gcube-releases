@@ -1,0 +1,52 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	/* Add CSS here. See the GWT docs on UI Binder for more details */
+	.background-tab {
+		background-color: #E5E5E5;
+	}
+	
+	.text-size {
+		font-size: 18px !important;
+	}
+	
+	.color-title {
+		color: #4DE1FF;
+	}
+	
+	.margin-panel {
+		margin: 20px;
+	}
+	</ui:style>
+	<b:TabPanel tabPosition="above"
+		ui:field="field_base_tabpanel">
+		<b:Tab heading="Manual" active="false" ui:field="field_manual"
+			icon="BOOK">
+			<g:HTMLPanel styleName="{style.margin-panel}">
+				<g:VerticalPanel>
+					<g:Image
+						url="https://services.d4science.org/image/layout_set_logo?img_id=77937416">
+					</g:Image>
+				</g:VerticalPanel>
+				<g:VerticalPanel>
+					<g:HorizontalPanel>
+						<g:HTML styleName="{style.text-size}">Go to &nbsp;</g:HTML>
+						<g:Anchor styleName="{style.text-size}" target="_blank"
+							href="https://docs.google.com/document/d/1QK-I9LwQ5yDJhmHi-cgWpgC3f1Qux05gYgwGYHks-zQ">KPIs VRE - User Manual</g:Anchor>
+					</g:HorizontalPanel>
+				</g:VerticalPanel>
+				<!-- <b:Heading size="5" styleName="{style.color-title}">Integrating 
+					Innovative -->
+				<!-- Approaches for Competitive and Sustainable Performance across the -->
+				<!-- Mediterranean Aquaculture Value Chain -->
+				<!-- </b:Heading> -->
+
+			</g:HTMLPanel>
+		</b:Tab>
+		<b:Tab heading="Create Analytics Request" active="true"
+			ui:field="field_create_analytics_request" icon="TASKS">
+		</b:Tab>
+	</b:TabPanel>
+</ui:UiBinder> 

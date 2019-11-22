@@ -1,0 +1,104 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.paddingLeft {
+		padding-left: 10px;
+	}
+	</ui:style>
+
+	<g:HTMLPanel ui:field="field_html_panel" addStyleNames="the_margin">
+
+		<g:VerticalPanel ui:field="field_parameters">
+			<g:VerticalPanel ui:field="field_parameters_container"
+				addStyleNames="the_margin_top_bottom">
+				<b:Label text="Parameters"></b:Label>
+			</g:VerticalPanel>
+		</g:VerticalPanel>
+
+		<g:VerticalPanel ui:field="field_results"
+			addStyleNames="the_margin_top_bottom">
+			<b:Label text="CORRELATION Matrix"></b:Label>
+			<g:HorizontalPanel addStyleNames="the_margin_top">
+				<g:Label ui:field="uib_label_focus_id">Focus ID</g:Label>
+				<b:ControlGroup ui:field="cg_focus_id_correlation">
+					<b:Controls>
+						<b:ListBox name="Select Focus ID" b:id="field_list_focus_id_correlation"
+							ui:field="field_list_focus_id_correlation" multipleSelect="false"
+							addStyleNames="the_margin_left">
+						</b:ListBox>
+					</b:Controls>
+				</b:ControlGroup>
+			</g:HorizontalPanel>
+			<g:VerticalPanel ui:field="uib_vp_correlation_results_container"
+				addStyleNames="the_margin_left">
+			</g:VerticalPanel>
+
+			<g:VerticalPanel ui:field="field_deanalanlysis_algorithm_request"
+				addStyleNames="the_margin_top_bottom" visible="false">
+				<b:Label text="DEA ANALYSIS Request"></b:Label>
+				<g:HorizontalPanel ui:field="uib_vp_deanalanlysis_request_container"
+					addStyleNames="the_margin_top_bottom the_margin_left">
+					<g:Label>Input KPI</g:Label>
+					<b:ControlGroup ui:field="cg_list_dea_input_kpi">
+						<b:Controls>
+							<b:InputAddOn>
+								<b:ListBox ui:field="list_dea_input_kpi"
+									multipleSelect="true" addStyleNames="the_margin_left the_select_custom"
+									height="100px">
+								</b:ListBox>
+								<b:appendWidget>
+									<b:CheckBox ui:field="uib_check_all_input_kpi"
+										title="Select/Unselect All" />
+								</b:appendWidget>
+							</b:InputAddOn>
+						</b:Controls>
+					</b:ControlGroup>
+					<g:Label addStyleNames="the_margin_left" styleName="{style.paddingLeft}">Output
+						KPI</g:Label>
+					<b:ControlGroup ui:field="cg_list_dea_output_kpi">
+						<b:Controls>
+							<b:InputAddOn>
+								<b:ListBox addStyleNames="the_margin_left the_select_custom"
+									ui:field="list_dea_output_kpi" multipleSelect="true" height="100px">
+								</b:ListBox>
+								<b:appendWidget>
+									<b:CheckBox ui:field="uib_check_all_output_kpi"
+										title="Select/Unselect All" />
+								</b:appendWidget>
+							</b:InputAddOn>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:Button type="DEFAULT" text="Submit DEA Analysis Request"
+						ui:field="button_dea_analys_request" addStyleNames="the_margin_left">
+					</b:Button>
+				</g:HorizontalPanel>
+			</g:VerticalPanel>
+
+
+			<g:VerticalPanel ui:field="field_unary_algorithm"
+				addStyleNames="the_margin_top_bottom" visible="false">
+				<b:Label text="BOXPLOT and SPEEDOMETER Results" type="INFO"></b:Label>
+				<g:VerticalPanel ui:field="field_unary_algorithm_container"
+					addStyleNames="the_margin">
+				</g:VerticalPanel>
+			</g:VerticalPanel>
+
+			<g:VerticalPanel ui:field="field_binary_algorithm"
+				addStyleNames="the_margin_top_bottom" visible="false">
+				<b:Label text="SCATTER and DEA_CHART Results" type="INFO"></b:Label>
+				<g:VerticalPanel ui:field="field_binary_algorithm_container"
+					addStyleNames="the_margin">
+				</g:VerticalPanel>
+			</g:VerticalPanel>
+
+			<g:VerticalPanel ui:field="uib_vp_deanalanlysis_algorithm"
+				addStyleNames="the_margin_top_bottom" visible="false">
+				<b:Label text="DEA ANALYSIS Results" type="INFO"></b:Label>
+				<g:VerticalPanel ui:field="uib_vp_deanalanlysis_algorithm_container"
+					addStyleNames="the_margin">
+				</g:VerticalPanel>
+			</g:VerticalPanel>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

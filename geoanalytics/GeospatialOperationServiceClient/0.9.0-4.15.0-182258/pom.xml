@@ -1,0 +1,240 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <description>Client used by Geoanalytics for establishing connections with each GeospatilaOperationService.</description>
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>gr.cite.gos</groupId>
+  <artifactId>GeospatialOperationServiceClient</artifactId>
+  <version>0.9.0-4.15.0-182258</version>
+  
+  
+    <parent>
+		<artifactId>maven-parent</artifactId>
+		<groupId>org.gcube.tools</groupId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+  
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jersey-client.version>2.26</jersey-client.version>
+		<com.fasterxml.jackson>2.9.8</com.fasterxml.jackson>
+		<gr.cite.gaap.datatransfer-objects.version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</gr.cite.gaap.datatransfer-objects.version>
+		<gr.cite.geoanalytics.dataaccess-model.version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-model.version>
+		<gr.cite.geoanalytics.dataaccess-model-dao.version>[2.0.0-SNAPSHOT, 3.0.0-SNAPSHOT)</gr.cite.geoanalytics.dataaccess-model-dao.version>
+		<gr.cite.clustermanager.version>[2.3.0-SNAPSHOT,3.0.0-SNAPSHOT)</gr.cite.clustermanager.version>
+		<geotools.version>16.2</geotools.version>
+		<org.springframework.version>4.3.8.RELEASE</org.springframework.version>
+        <com.fasterxml.jackson.dataformat.version>2.9.8</com.fasterxml.jackson.dataformat.version>
+        <!-- logging -->
+        <org.slf4j.version>1.7.25</org.slf4j.version>
+        <logback.version>1.2.3</logback.version>
+	</properties>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>osgeo</id>
+			<name>Open Source Geospatial Foundation Repository</name>
+			<url>http://download.osgeo.org/webdav/geotools/</url>
+		</repository>
+	</repositories>
+
+
+	<dependencies>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j.version}</version>
+		</dependency>
+
+		<!-- For cluster management -->
+		<dependency>
+			<groupId>gr.cite</groupId>
+			<artifactId>clustermanager</artifactId>
+			<version>${gr.cite.clustermanager.version}</version>
+		</dependency>
+
+
+		<!-- jersey client to handle the http calls to the service -->
+
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>${jersey-client.version}</version>
+        </dependency>
+
+        <dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet-core</artifactId>
+			<version>${jersey-client.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-multipart</artifactId>
+			<version>${jersey-client.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.bundles.repackaged</groupId>
+			<artifactId>jersey-guava</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		    <version>4.5.2</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.sun.jersey.contribs/jersey-apache-client4 -->
+		<!--<dependency>-->
+		    <!--<groupId>com.sun.jersey.contribs</groupId>-->
+		    <!--<artifactId>jersey-apache-client4</artifactId>-->
+		    <!--<version>1.19</version>-->
+		<!--</dependency>-->
+		
+		<!-- jackson json-->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${com.fasterxml.jackson}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${com.fasterxml.jackson}</version>
+		</dependency>
+
+		<!-- geoanalytics database models -->
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>dataaccess-model</artifactId>
+			<version>${gr.cite.geoanalytics.dataaccess-model.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-entitymanager</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-spatial</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-tools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.postgis</groupId>
+					<artifactId>postgis-jdbc</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>gr.cite.geoanalytics</groupId>
+			<artifactId>dataaccess-model-dao</artifactId>
+			<version>${gr.cite.geoanalytics.dataaccess-model-dao.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>gr.cite.gaap</groupId>
+					<artifactId>utilities</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>gr.cite.geoanalytics</groupId>
+					<artifactId>dataaccess-model</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>gr.cite.geoanalytics</groupId>
+					<artifactId>common</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-entitymanager</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	
+		<dependency>
+			<groupId>gr.cite.gaap</groupId>
+			<artifactId>datatransfer-objects</artifactId>
+			<version>${gr.cite.gaap.datatransfer-objects.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.opengis</groupId>
+					<artifactId>geoapi</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>gr.cite.geoanalytics</groupId>
+					<artifactId>dataaccess-model</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>gr.cite.geoanalytics</groupId>
+					<artifactId>dataaccess-model-dao</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>gr.cite.geoanalytics</groupId>
+					<artifactId>common</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+		  <groupId>org.geotools</groupId>
+		  <artifactId>gt-geojson</artifactId>
+		  <version>${geotools.version}</version>
+		</dependency>
+
+		<!-- added to support some deps after the exclusions done on Dataaccessmodel, Dataaccessmodel-dao and datatransfer objects  -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+    		<artifactId>spring-web</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+
+		<!-- for huge file-backed collections -->
+		<dependency>
+		    <groupId>org.mapdb</groupId>
+		    <artifactId>mapdb</artifactId>
+		    <version>3.0.5</version>
+		</dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+			<version>${com.fasterxml.jackson.dataformat.version}</version>
+            <scope>compile</scope>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
+<!--            <artifactId>jackson-core</artifactId>-->
+<!--            <version>2.9.7</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
+
+
+    </dependencies>
+  
+  
+</project>

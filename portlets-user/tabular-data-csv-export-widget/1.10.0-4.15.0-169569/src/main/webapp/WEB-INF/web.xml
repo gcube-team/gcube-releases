@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	
+	 <!-- Servlets -->
+	<servlet>
+		<servlet-name>TDGWTService</servlet-name>
+		<servlet-class>org.gcube.portlets.user.td.gwtservice.server.TDGWTServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<servlet-class>org.gcube.portlets.widgets.wsexplorer.server.WorkspaceExplorerServiceImpl</servlet-class>
+	</servlet>
+	
+
+	<!-- Servlets Mapping -->
+	<servlet-mapping>
+		<servlet-name>TDGWTService</servlet-name>
+		<url-pattern>/CSVExportWizardTD/TDGWTService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>jUnitHostImpl</servlet-name>
+		<url-pattern>/CSVExportWizardTD/junithost/*</url-pattern>
+	
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>workspaceExplorer</servlet-name>
+		<url-pattern>/CSVExportWizardTD/WorkspaceExplorerService</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>CSVExportWizardTD.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

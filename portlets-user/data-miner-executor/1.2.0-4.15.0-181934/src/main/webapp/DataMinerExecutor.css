@@ -1,0 +1,486 @@
+/* FIX FOR Portal Theme */
+/* OpenLayer Form fix */
+#wkt-geometry-text-area {
+	width: 400px !important;
+}
+
+#combo-geometry-type {
+	width: 406px !important;
+}
+
+.aui body {
+	color: #000;
+	font-weight: normal !important;
+}
+
+.aui input[type="text"], .aui select, .aui textarea, .aui .uneditable-input
+	{
+	margin-bottom: 1px !important;
+	padding: 0px !important;
+}
+
+.aui input[type="radio"], .aui input[type="checkbox"] {
+	margin: 0px !important;
+	width: 10px !important;
+}
+
+.aui input, .aui textarea, .aui .uneditable-input {
+	width: 100% !important;
+}
+
+.aui p {
+	margin: 0px !important;
+}
+
+#wrapper img {
+	vertical-align: baseline !important;
+}
+
+.aui fieldset {
+	padding: 9px !important;
+	/* margin: 0; */
+	border: 1px solid rgb(181, 184, 200) !important;
+}
+
+.aui legend {
+	margin-bottom: 0px !important;
+	width: auto !important;
+	border-bottom: none !important;
+}
+
+.aui ul, .aui ol {
+	margin: 0px !important;
+}
+
+/* Data Miner */
+.smLayoutContainer {
+	/* Blue
+	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 5px rgba(0, 28, 121, 1), 0px 0 40px
+		rgba(0, 28, 121, 0.15);
+	-moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 5px rgba(0, 28, 121, 1), 0px 0 40px
+		rgba(0, 28, 121, 0.15);
+	-webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 5px rgba(0, 28, 121, 1), 0px 0 40px
+		rgba(0, 28, 121, 0.15);
+	-o-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 5px rgba(0, 28, 121, 1), 71px 0 27px
+		rgba(0, 28, 121, 0.15);*/
+	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 5px rgba(196, 196, 196, 1), 0px 0 27px
+		rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 5px rgba(196, 196, 196, 1), 0px 0 27px
+		rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 5px rgba(196, 196, 196, 1), 0px 0 27px
+		rgba(0, 0, 0, 0.15);
+	-o-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 5px rgba(196, 196, 196, 1), 71px 0 27px
+		rgba(0, 0, 0, 0.15);
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-o-border-radius: 0;
+}
+
+.smMenu {
+	/*width: 720px !important;*/ /*height: 570px !important;*/
+	/*overflow: auto;
+	margin: auto;
+	margin-bottom: 20px;*/
+	
+}
+
+.layoutContainerArea {
+	margin-right: 20px;
+}
+
+.smMenuItem {
+	box-shadow: inset 0 0 99px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 5px rgba(196, 196, 196, 1), 0px 0 27px
+		rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: inset 0 0 99px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 5px rgba(196, 196, 196, 1), 0px 0 27px
+		rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: inset 0 0 99px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 5px rgba(196, 196, 196, 1), 0px 0 27px
+		rgba(0, 0, 0, 0.15);
+	-o-box-shadow: inset 0 0 99px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 5px rgba(196, 196, 196, 1), 71px 0 27px
+		rgba(0, 0, 0, 0.15);
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-o-border-radius: 0;
+	/*padding: 10px;*/
+/*margin-bottom: 30px;
+	margin-left: 200px;
+	width: 480px;*/
+}
+
+.smMenuItem:HOVER {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.smMenuItem img {
+	border: 1px solid #C0C0C0;
+	display: inline;
+}
+
+.smMenuItemText b {
+	display: block;
+	color: #225f97;
+	font-size: 20px;
+}
+
+.smMenuItemText {
+	font: 12px/1.5 "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana,
+		sans-serif;
+	display: block;
+	color: #606060;
+	/*margin-right: 10px;*/
+}
+
+/* OPERATORS PANEL */
+.opePanel {
+	
+}
+
+.opePanel:hover {
+	cursor: pointer;
+}
+
+.categoryItem {
+	margin-top: 10px;
+	margin-left: 5px;
+	font-size: 15px;
+	font-variant: small-caps;
+	font-weight: bolder;
+	border-bottom: 2px solid #505050;
+	margin-bottom: 5px;
+	background-image: url(images/triangle-right.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.categoryItem-Collapsed {
+	background-image: url(images/triangle-right.png);
+}
+
+.categoryItem-Expanded {
+	background-image: url(images/triangle-down.png);
+}
+
+.categoryItem:hover {
+	color: #3087d6;
+	cursor: pointer;
+}
+
+.filterResultText {
+	margin-top: 10px;
+	margin-left: 5px;
+	font-size: 15px;
+	font-variant: small-caps;
+	font-weight: bolder;
+	border-bottom: 2px solid #505050;
+	margin-bottom: 5px;
+}
+
+.categoryItem .counter, .filterResultText .counter {
+	font-size: 10px;
+	color: #555555;
+}
+
+.operatorPanel {
+	box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 1px rgba(196, 196, 196, 1), inset 0 0 1px
+		rgba(77, 77, 77, 1);
+	-moz-box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 1px rgba(196, 196, 196, 1), inset 0 0 1px
+		rgba(77, 77, 77, 1);
+	-webkit-box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 1px rgba(196, 196, 196, 1), inset 0 0 1px
+		rgba(77, 77, 77, 1);
+	-o-box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 1px rgba(196, 196, 196, 1), inset 0 0 1px
+		rgba(77, 77, 77, 1);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	margin: 0px 5px 5px 10px; /* top right bottom left*/
+	padding: 5px;
+	overflow: hidden;
+	height: 78px;
+}
+
+.operatorPanel-selected {
+	background-color: #e0e7f7;
+}
+
+.operatorPanel-title {
+	font-size: 13px;
+	font-weight: bolder;
+	color: #225f97;
+}
+
+.operatorPanel-title-selected {
+	color: #770000;
+}
+
+.operatorPanel-briefDescription {
+	font-size: 10px;
+	color: #505050;
+}
+
+.operatorPanel img {
+	float: right;
+}
+
+.operatorPanel img:hover {
+	cursor: pointer;
+	opacity: 0.6;
+}
+
+.tableImporter, .uploadMonitor {
+	box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 1px rgba(196, 196, 196, 1), inset 0 0 1px
+		rgba(77, 77, 77, 1);
+	-moz-box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 1px rgba(196, 196, 196, 1), inset 0 0 1px
+		rgba(77, 77, 77, 1);
+	-webkit-box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 1px rgba(196, 196, 196, 1), inset 0 0 1px
+		rgba(77, 77, 77, 1);
+	-o-box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 1px rgba(196, 196, 196, 1), inset 0 0 1px
+		rgba(77, 77, 77, 1);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	padding: 5px;
+	border: 1px solid black;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* WORKFLOW PANEL */
+.workflow {
+	box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 1px rgba(196, 196, 196, 1), inset 0 0 1px
+		rgba(77, 77, 77, 1);
+	-moz-box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 1px rgba(196, 196, 196, 1), inset 0 0 1px
+		rgba(77, 77, 77, 1);
+	-webkit-box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 1px rgba(196, 196, 196, 1), inset 0 0 1px
+		rgba(77, 77, 77, 1);
+	-o-box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.11), 0 0 0
+		rgba(255, 255, 255, 1), 0 0 1px rgba(196, 196, 196, 1), inset 0 0 1px
+		rgba(77, 77, 77, 1);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	/*padding: 5px;*/
+	border: 1px solid black;
+	/*margin-left: 5px;
+	margin-right: 5px;*/
+}
+
+.workflow-icon {
+	border: 1px solid black;
+	float: left;
+	position: relative;
+	left: 10px;
+	top: -20px;
+}
+
+.workflow-title {
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	color: #225f97;
+}
+
+.workflow-description {
+	font-size: 13px;
+	color: #505050;
+}
+
+.workflow-computation-title {
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 8px;
+}
+
+.workflow-fieldDescription {
+	font-size: 12px;
+	color: #505050;
+}
+
+.workflow-fieldValue {
+	border: 1px solid lightgray;
+	max-width: 490px;
+	padding: 2px;
+}
+
+.workflow-templatesList {
+	font-size: 9px;
+	color: #505050;
+	margin-top: 4px;
+}
+
+.workflow-parameters-description {
+	font-size: 10px;
+	color: #505050;
+	margin-top: 4px;
+}
+
+.workflow-parameters-tableDescription {
+	font-size: 12px;
+	/*	border: 1px solid gray;*/
+	color: white;
+	margin-right: 5px;
+	padding-right: 4px;
+	padding-left: 4px;
+	background-color: gray;
+}
+
+.workflow-parameters-preload {
+	display: block;
+	background: url('ajax-loader-big.gif') no-repeat;
+	width: 400px;
+	height: 180px;
+}
+
+/* TOOLTIP */
+.x-tip-mc {
+	padding: 6px;
+}
+
+.categoryItemTooltip {
+	height: 80px;
+}
+
+.categoryItemTooltip img {
+	border: 1px solid black;
+	float: left;
+	margin-right: 5px;
+}
+
+/* TABLE EXPLORER */
+.tableSelector-details {
+	margin-top: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.tableSelector-details img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+#computationGrid .x-grid3-cell {
+	vertical-align: middle;
+}
+
+.menuImgLogo:HOVER {
+	/*	cursor: pointer;*/
+	
+}
+
+.menuItemImage {
+	opacity: 0.5;
+	float: right;
+}
+
+.menuItemImage:HOVER {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.menuItemImage-selected {
+	opacity: 1;
+}
+
+.menuItemImage-selected:HOVER {
+	cursor: auto;
+}
+
+/*
+* Computation Execution
+*/
+.computationExcecutionPanel {
+	font-size: 12px;
+	color: black;
+}
+
+.computationStatusPanel {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.computationStatusTitle {
+	
+}
+
+.computationStatusDate {
+	
+}
+
+/**
+* Field
+*/
+.dataminer-textarea textarea {
+	height: 160px !important;
+	width: 360px !important;
+}
+
+/**
+* Computation Output 
+*/
+.computation-output-outputType {
+	background-color: #EEEEEE;
+	border: 1px solid #BDBDBD;
+	/*font-weight: bold;*/
+	padding: 5px;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.computation-output-groupTitle {
+	font-style: italic;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.computation-output-separator {
+	border-top: 2px solid #AAAAAA;
+	margin-top: 8px;
+	margin-bootm: 8px;
+
+	/* height: 30px;
+    margin: 8px auto auto;
+    width: 400px;
+    */
+}
+
+.computation-output-fileName {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+#netcdfSampleTextArea {
+	height: 318px;
+	width: 616px !important;
+	resize: none;
+}

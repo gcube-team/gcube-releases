@@ -1,0 +1,5 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.data.analysis.tabulardata.tabular-model-util.1.0.0" date="2013-07-16"> 
+		<Change>First version</Change>
+	</Changeset>
+</ReleaseNotes>

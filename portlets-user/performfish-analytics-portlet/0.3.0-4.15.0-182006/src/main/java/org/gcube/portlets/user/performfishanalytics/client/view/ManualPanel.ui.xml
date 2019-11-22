@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.important {
+		font-weight: bold;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Frame url="https://docs.google.com/document/d/1QK-I9LwQ5yDJhmHi-cgWpgC3f1Qux05gYgwGYHks-zQ" height="100%" width="100%"></g:Frame>
+	</g:HTMLPanel>
+</ui:UiBinder> 

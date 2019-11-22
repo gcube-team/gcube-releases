@@ -1,0 +1,28 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<g:HTMLPanel>
+		<b:Modal ui:field="m" title="My Modal" backdrop="STATIC"
+			keyboard="true" animation="true">
+			<b:Icon type="COG" size="FOUR_TIMES" spin="true" ui:field="loading"
+				visible="false" />
+			<b:ControlGroup>
+				<b:Controls>
+					<b:TextArea ui:field="optionalText" alternateSize="XLARGE" />
+					<b:HelpBlock ui:field="helpBlock">Your request will be reviewed by this VRE moderators, you will be notified via email about the result as soon as possible (tipically within a few hours).</b:HelpBlock>					
+					<b:HelpBlock ui:field="touGatewayBlock" visible="false">
+						By asking access to this VRE you agree to the terms indicated in
+						the
+						<a href="/terms-of-use" target="_blank">Terms of Use</a>
+						of this gateway.
+					</b:HelpBlock>
+					<g:HTML ui:field="touText"></g:HTML>
+				</b:Controls>
+			</b:ControlGroup>
+			<b:ModalFooter>
+				<b:Button type="PRIMARY" ui:field="confirmRequest">Confirm Request</b:Button>
+				<b:Button type="DEFAULT" ui:field="close">Close</b:Button>
+			</b:ModalFooter>
+		</b:Modal>
+	</g:HTMLPanel>
+</ui:UiBinder> 

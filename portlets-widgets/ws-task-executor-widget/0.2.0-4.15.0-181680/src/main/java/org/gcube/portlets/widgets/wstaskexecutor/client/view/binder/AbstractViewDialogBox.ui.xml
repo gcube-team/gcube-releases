@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	</ui:style>
+	<g:HTMLPanel ui:field="field_root_panel">
+		<g:ScrollPanel ui:field="scroll_panel">
+		</g:ScrollPanel>
+		<b:FluidRow ui:field="validator_field"></b:FluidRow>
+		<g:HorizontalPanel>
+			<b:Button type="LINK" ui:field="button_close_dialog" visible="false">Close</b:Button>
+		</g:HorizontalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,96 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	.form_search {
+		margin-bottom: 0px;
+		min-height: 20px;
+   		padding: 19px;
+   		background-color: #f5f5f5;
+    	border: 1px solid #e3e3e3;
+    	-webkit-border-radius: 4px;
+    	-moz-border-radius: 4px;
+    	border-radius: 4px;
+    	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    	box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    	border-bottom: 0px;
+ 	    border-radius: 0px;
+	}
+	.select{
+		padding-top: 20px;
+	    padding-bottom: 20px;
+	    height: 229px !important;
+	    border-radius: 0px;
+	    width: 291px;
+	    border: 0px;
+	    background: whitesmoke;
+	    overflow-y: auto;
+	}
+	</ui:style>
+	
+	<g:HTMLPanel>
+	
+	<b:WellForm type="SEARCH" ui:field="form_search" addStyleNames="{style.form_search}">
+		<g:Button addStyleNames="btn" ui:field="b_search_all_users">All Users</g:Button>
+		<g:Button addStyleNames="btn" ui:field="b_search_all_roles">All Roles</g:Button>
+		<b:ControlGroup>
+			<b:Controls>
+				<b:InputAddOn prependIcon="SEARCH">
+				<b:TextBox placeholder="User, Roles" />
+				</b:InputAddOn>
+			</b:Controls>
+		</b:ControlGroup>
+		
+		<!-- <b:Button  ui:field="ricerca">Ricerca</b:Button> -->
+		<!-- <b:SubmitButton addStyleNames="btn" >Ricerca</b:SubmitButton> -->
+	</b:WellForm>
+	
+	
+	<g:ListBox ui:field="list_panel" addStyleNames="{style.select}">
+	</g:ListBox>
+	
+	
+	<!-- 
+	<div id="scroll_panel">
+		<g:ScrollPanel width="100%" height="227px" >
+		
+		
+		
+		
+		
+	           <g:HTMLPanel>
+		        <div class="result_container">
+				<ul>
+					<li>Alessandro Pieve</li>
+					<li>Mario Rossi</li>
+					<li>Alessandro Pieve</li>
+					<li>Alessandro Pieve</li>
+					<li>Alessandro Pieve</li>
+					<li>Alessandro Pieve</li>
+					<li>Alessandro Pieve</li>
+					<li>Alessandro Pieve</li>
+					<li>Alessandro Pieve</li>
+					<li>Alessandro Pieve</li>
+					<li>Alessandro Pieve</li>
+					<li>Alessandro Pieve</li>
+					<li>Alessandro Pieve</li>
+					<li>Alessandro Pieve</li>
+					<li>Alessandro Pieve</li>
+				</ul>
+				</div>
+	           </g:HTMLPanel>
+		 
+		
+		
+	
+		</g:ScrollPanel>
+	</div>
+	-->
+	</g:HTMLPanel>
+	
+	
+ 
+     
+
+</ui:UiBinder> 

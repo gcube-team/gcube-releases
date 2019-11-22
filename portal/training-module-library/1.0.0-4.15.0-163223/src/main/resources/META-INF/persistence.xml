@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="PERSISTENCE_TRAINING_COURSES"
+		transaction-type="RESOURCE_LOCAL">
+		<class>org.gcube.portal.trainingmodule.dao.TrainingProject</class>
+		<class>org.gcube.portal.trainingmodule.dao.TrainingUnit</class>
+		<class>org.gcube.portal.trainingmodule.dao.TrainingUnitQuestionnaire</class>
+		<class>org.gcube.portal.trainingmodule.dao.TrainingVideo</class>
+		<class>org.gcube.portal.trainingmodule.dao.ProgressPerUnit</class>
+<!-- 		<class>org.gcube.portlets.user.trainingcourse.shared.TrainingProjectSharedWith</class> -->
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<!-- <property name="eclipselink.logging.level" value="ALL" /> -->
+			<property name="eclipselink.ddl-generation.output-mode" value="database" />
+<!-- 			<property name="eclipselink.ddl-generation" value="create-tables" /> -->
+			<property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
+		</properties>
+	</persistence-unit>
+</persistence> 

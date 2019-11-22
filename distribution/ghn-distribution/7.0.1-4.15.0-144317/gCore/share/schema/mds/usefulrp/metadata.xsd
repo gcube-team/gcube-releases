@@ -1,0 +1,49 @@
+<!--
+Portions of this file Copyright 1999-2005 University of Chicago
+Portions of this file Copyright 1999-2005 The University of Southern California.
+
+This file or a portion of this file is licensed under the
+terms of the Globus Toolkit Public License, found at
+http://www.globus.org/toolkit/download/license.html.
+If you redistribute this file, with or without
+modifications, you must include this notice in the file.
+-->
+<schema targetNamespace="http://mds.globus.org/metadata/2005/02"
+        xmlns:metric="http://mds.globus.org/metadata/2005/02"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        attributeFormDefault="qualified"
+        elementFormDefault="qualified"
+        xml:lang="en" >
+
+
+<element name="ServiceMetaDataInfo" type="metric:serviceMetaData" />
+
+<complexType name="serviceMetaData">
+  <annotation><documentation>
+    Metadata for the current service. Currently only the service start time 
+    and the service version number.
+  </documentation></annotation>
+  <sequence>
+    <element name="startTime" type="xsd:dateTime">
+      <annotation><documentation>
+        The time at which the service was activated (for example, when the
+        hosting container started)
+      </documentation></annotation>
+    </element>
+    <element name="version" type="xsd:string">
+      <annotation><documentation>
+      A string representing a version number of the service.
+      </documentation></annotation>
+    </element>
+    <element name="serviceTypeName" type="xsd:string">
+      <annotation><documentation>
+      An optional string representing the name or type of the service.
+      </documentation></annotation>
+    </element>    
+  </sequence>
+</complexType>
+
+
+</schema>
+

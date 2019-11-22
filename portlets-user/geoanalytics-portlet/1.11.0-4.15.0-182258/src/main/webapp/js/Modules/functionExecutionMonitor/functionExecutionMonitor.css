@@ -1,0 +1,30 @@
+#geoanalytics-functions-execution-monitor-modal {
+	width: 97%;
+	left: 0;
+	margin-left: 1.5%;
+}
+#geoanalytics-functions-execution-monitor-modal .modal-footer .btn {
+	color: #fff;
+}
+#geoanalytics-functions-execution-monitor-modal .modal-header * {
+	margin : 0;
+}
+#geoanalytics-functions-execution-monitor-datatable_filter label {
+	float : right;
+}
+#geoanalytics-functions-execution-monitor-datatable tbody tr:hover .portlet-datatable-cell {
+	background-color: #4cb5d2 !important;
+	color: white !important;
+	cursor: pointer !important;
+}
+.portlet-color-success {
+	color: green;
+}
+
+.portlet-color-error {
+	color: #b50303;
+}
+
+.portlet-color-neutral {
+	color: #0271be;
+}

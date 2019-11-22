@@ -1,0 +1,146 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
+	xmlns:citem="urn:import:org.gcube.portlets.widgets.switchbutton.client">
+	<ui:style>
+	.back-color-info {
+		background-color: #fafaff !important;
+	}
+	
+	.margin-bottom-20 {
+		margin-bottom: 20px;
+	}
+	
+	.padding-left-10 {
+		padding-left: 10px;
+	}
+	
+	.margin-left-5 {
+		margin-left: 5px;
+	}
+	
+	.text-bold {
+		font-weight: bold;
+	}
+	
+	.not-active {
+		pointer-events: none;
+		cursor: default;
+		opacity: .5;
+		padding-left: 10px;
+	}
+	
+	.font-size-14 {
+		font-size: 14px;
+	}
+	
+	.to-top-alignment {
+		vertical-align: top;
+		padding-top: 0px !important;
+	}
+	
+	.no-border {
+		border: 0px;
+	}
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<b:Form type="HORIZONTAL">
+			<b:Alert ui:field="actionAlert" close="false" type="INFO"
+				visible="false">
+				<b:Icon type="ROTATE_RIGHT" spin="true" />
+			</b:Alert>
+
+			<g:VerticalPanel ui:field="fieldPrivateSharing"
+				addStyleNames="{style.margin-bottom-20}">
+				<g:HorizontalPanel>
+					<b:Label type="INFO" addStyleNames="{style.font-size-14}">Link shareable with
+						coworkers</b:Label>
+					<citem:SwitchButton
+						ui:field="switchButtonPrivate" addStyleNames="{style.not-active}"
+						visible="false"></citem:SwitchButton>
+					<b:Button
+						addStyleNames="{style.padding-left-10} {style.to-top-alignment}"
+						type="LINK" ui:field="buttonShareSettings">Share settings</b:Button>
+				</g:HorizontalPanel>
+				<g:VerticalPanel
+					addStyleNames="{style.margin-left-5}">
+					<g:Label ui:field="labelLinkPrivateSharing">(Only the) Members of the group the
+						folder is shared with are enacted to view</g:Label>
+				</g:VerticalPanel>
+			</g:VerticalPanel>
+
+			<b:Fieldset ui:field="fieldSetPrivate"
+				styleName="{style.noBorder}">
+				<g:HTMLPanel>
+					<!-- <b:Legend>sharing....</b:Legend> -->
+					<b:ControlGroup ui:field="cgPrivateLink"
+						addStyleNames="my-control-group">
+
+						<b:Well ui:field="wellPrivateLinkDescription">
+							By sharing the following Private Link with
+							your
+							coworkers,
+							you will enact the users of the group
+							the folder is shared with to access the shared
+							folder content. Login required</b:Well>
+						<b:ControlLabel>Private Link</b:ControlLabel>
+						<b:Controls>
+							<b:InputAddOn prependIcon="LINK"
+								addStyleNames="my-prepend-width">
+								<b:TextBox ui:field="textPrivateLink" readOnly="true">
+								</b:TextBox>
+							</b:InputAddOn>
+						</b:Controls>
+					</b:ControlGroup>
+				</g:HTMLPanel>
+			</b:Fieldset>
+
+			<g:VerticalPanel ui:field="filedEnableDisableSharing"
+				addStyleNames="{style.margin-bottom-20}">
+				<g:HorizontalPanel>
+					<b:Label type="INFO" addStyleNames="{style.font-size-14}">Link shareable with
+						everyone</b:Label>
+					<citem:SwitchButton ui:field="switchButton"
+						addStyleNames="{style.padding-left-10}"></citem:SwitchButton>
+				</g:HorizontalPanel>
+				<g:VerticalPanel
+					addStyleNames="{style.margin-left-5}">
+					<g:Label ui:field="labelLinkSharing"></g:Label>
+				</g:VerticalPanel>
+			</g:VerticalPanel>
+
+
+			<b:Fieldset ui:field="fieldSetPublic">
+				<b:ControlGroup ui:field="cgPublicLink" addStyleNames="my-control-group">
+					<b:Well ui:field="alertFolderPublicLink" visible="false">By sharing
+						the following Public
+						Link, you will
+						enact anyone
+						with the
+						link to
+						view the
+						content. No login required</b:Well>
+					<b:Well ui:field="alertFilePublicLink" visible="false">By sharing
+						the following
+						Public Link, anyone with link can download it.
+						The link will always point to the
+						version
+						of the file at the
+						time of link creation. No login required</b:Well>
+					<b:ControlLabel>Public Link</b:ControlLabel>
+					<b:Controls>
+						<b:InputAddOn prependIcon="GLOBE"
+							addStyleNames="my-prepend-width">
+							<b:TextBox ui:field="textPublicLink" readOnly="true">
+							</b:TextBox>
+						</b:InputAddOn>
+					</b:Controls>
+				</b:ControlGroup>
+			</b:Fieldset>
+			<b:Alert close="false" ui:field="errorAlert" type="ERROR"
+				visible="false"></b:Alert>
+		</b:Form>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,49 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	/* Add CSS here. See the GWT docs on UI Binder for more details */
+	.thetitle {
+		font-weight: bold;
+		font-size: 18px;
+	}
+	
+	.theMarginTop50 {
+		margin-top: 50px;
+	}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel ui:field="recapPanel">
+			<g:Label styleName="{style.thetitle}"
+				addStyleNames="selected-kpi-panel">
+				Selected KPIs
+			</g:Label>
+		</g:VerticalPanel>
+		<g:VerticalPanel ui:field="errorPanelSubmit">
+		</g:VerticalPanel>
+		<g:VerticalPanel styleName="{style.theMarginTop50}">
+			<b:Button ui:field="uib_butt_descriptive_statistics"
+				text="Descriptive Statistics" name="BOXPLOT"
+				addStyleNames="the_margin_top" enabled="false"></b:Button>
+			<b:Button ui:field="uib_butt_speedometer" text="Performeter"
+				name="SPEEDOMETER" addStyleNames="the_margin_top" enabled="false"></b:Button>
+			<b:Button ui:field="uib_butt_scatter_plot"
+				text="Scatter Plot" name="SCATTER" addStyleNames="the_margin_top"
+				enabled="false"></b:Button>
+			<b:Button ui:field="uib_butt_correlation_analysis"
+				text="Correlation Analysis" name="CORRELATION"
+				addStyleNames="the_margin_top" enabled="false"></b:Button>
+		</g:VerticalPanel>
+		<g:VerticalPanel ui:field="synopsisPanel"
+			styleName="{style.theMarginTop50}">
+			<g:Label styleName="{style.thetitle}"
+				addStyleNames="selected-kpi-panel">
+				Synopsis
+			</g:Label>
+			<b:Button ui:field="uib_button_load_synoptic_table"
+				enabled="false" addStyleNames="the_margin_top" name="PERFORMFISH_SYNOPTICTABLE_BATCH">Generate Synoptic Table</b:Button>
+		</g:VerticalPanel>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

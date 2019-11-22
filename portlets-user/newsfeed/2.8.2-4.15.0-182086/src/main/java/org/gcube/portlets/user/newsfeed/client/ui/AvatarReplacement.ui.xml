@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	.avatar-frame {
+		border-radius: 2em;
+		border: 1px solid #E6E6E6;
+		padding: 2px;
+	}
+	
+	.avatar-replacement {
+		border-radius: 2em;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+			"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-weight: 300;
+		font-size: 22px;
+		padding: 0;
+		color: #FFF;
+	}
+	</ui:style>
+	<g:HTMLPanel width="40px" height="40px"
+		styleName="{style.avatar-frame}">
+		<g:HTML width="40px" height="40px"
+			styleName="{style.avatar-replacement}" ui:field="avatarBox"></g:HTML>
+	</g:HTMLPanel>
+</ui:UiBinder> 

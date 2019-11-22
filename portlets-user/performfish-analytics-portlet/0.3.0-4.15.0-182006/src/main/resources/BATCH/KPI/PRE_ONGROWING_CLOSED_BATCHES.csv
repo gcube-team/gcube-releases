@@ -1,0 +1,14 @@
+KPI CODE,KPI NAME - LEVEL 1,KPI NAME - LEVEL 2,KPI NAME - LEVEL 3
+,Pre-grow Total Productivity KPIs,,
+,,Deformed fish,
+P1,,,Deformed fish (%)
+,,Discarded slow grower fish,
+P2,,,Discarded slow grower fish (%)
+,,Mortalities - total,
+P3,,,Mortalities - total (%)
+,Fish Growth KPIs,,
+,,Specific Growth Rate (SGR),
+P4,,,Specific Growth Rate (SGR) (% day^-1)
+,Feed Efficiency KPIs,,
+,,Feed Conversion Ratio (FCR) ,
+P5,,,Feed Conversion Ratio (FCR)

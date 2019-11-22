@@ -1,0 +1,124 @@
+{
+	"profile": null,
+	"item": {
+		"name": "wiki_test",
+		"license_title": "Creative Commons Attribution Share-Alike 4.0",
+		"maintainer": null,
+		"searchable": "true",
+		"relationships_as_object": [],
+		"private": true,
+		"maintainer_email": null,
+		"num_tags": 2,
+		"metadata_created": "2019-03-19T15:03:28.482434",
+		"metadata_modified": "2019-03-19T15:03:30.676258",
+		"author": "luca_frosini",
+		"author_email": "luca.frosini@gcube.ckan.org",
+		"state": "active",
+		"version": null,
+		"creator_user_id": "287b2eec-4cd7-4e50-817f-e6dce19995c7",
+		"type": "dataset",
+		"tags": [
+			{
+				"vocabulary_id": null,
+				"state": "active",
+				"display_name": "Other",
+				"id": "8ca635e2-4f72-48ed-8460-6734e9070a00",
+				"name": "Other"
+			},
+			{
+				"vocabulary_id": null,
+				"state": "active",
+				"display_name": "REST",
+				"id": "3d481290-b3cd-466f-8142-51608c616e60",
+				"name": "REST"
+			}
+		],
+		"groups": [],
+		"license_id": "CC-BY-SA-4.0",
+		 "extras": [
+        {
+            "key": "FSKX_model_parameters:Input Parameter",
+            "value": "standard desviation of Temperatures( sdTemp): 2.9 °c( Double)"
+        },
+        {
+            "key": "FSKX_model_parameters:Output Parameter",
+            "value": ""
+        },
+        {
+            "key": "FSKX_model_scope:Hazard",
+            "value": ""
+        },
+        {
+            "key": "FSKX_model_scope:Population",
+            "value": ""
+        },
+        {
+            "key": "FSKX_model_scope:Product",
+            "value": ""
+        },
+        {
+            "key": "Item URL",
+            "value": "http://data.d4science.org/ctlg/AGINFRAplusDev/my_first_restful_transaction_model"
+        },
+        {
+            "key": "Model Author",
+            "value": ""
+        },
+        {
+            "key": "Model Creator",
+            "value": ""
+        },
+        {
+            "key": "Model ID",
+            "value": ""
+        },
+        {
+            "key": "Model Language",
+            "value": "Other"
+        },
+        {
+            "key": "Population",
+            "value": "Italian"
+        },
+        {
+            "key": "ReadMe",
+            "value": ""
+        },
+        {
+            "key": "Reference Description",
+            "value": ""
+        },
+        {
+            "key": "Related Identifier",
+            "value": ""
+        },
+        {
+            "key": "system:type",
+            "value": "SomeFakeProfile"
+        }
+    ]
+	},
+	"resources": [
+		{
+            "cache_last_updated": null,
+            "cache_url": null,
+            "mimetype_inner": null,
+            "hash": "",
+            "description": "",
+            "format": "",
+            "url": "https://data.d4science.org/shub/E_MHpyWDlKS2hPRGhKNk9ackxMY25pMDhZWEs1Z2dCTWEyNkNzbTdyMjZveDlON1RTWW9xa1FvVnprT3liSmRncA==",
+            "created": "2019-03-19T14:33:45.724709",
+            "state": "active",
+            "last_modified": null,
+            "mimetype": "application/pdf",
+            "url_type": null,
+            "position": 0,
+            "revision_id": "ad5fbd19-fe67-4141-ad44-cf41d90b95fb",
+            "size": null,
+            "datastore_active": false,
+            "resource_type": null,
+            "name": "RESTful Transaction Model"
+        },
+		null
+	]
+} 

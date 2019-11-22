@@ -1,0 +1,26 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel ui:field="the_panel_container">
+			<g:HorizontalPanel addStyleNames="the_margin_top">
+				<g:Label ui:field="uib_label_batch_id">BATCH ID</g:Label>
+				<b:ControlGroup ui:field="cg_batch_id">
+					<b:Controls>
+						<b:ListBox name="Select BATCH ID"
+							b:id="uib_list_batch_id" ui:field="uib_list_batch_id"
+							multipleSelect="false" addStyleNames="the_margin_left">
+						</b:ListBox>
+					</b:Controls>
+				</b:ControlGroup>
+				<b:Button active="false" enabled="false" text="Load Batches"
+					ui:field="uib_button_load_batches" addStyleNames="the_margin_left"></b:Button>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel ui:field="the_panel_error"></g:HorizontalPanel>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

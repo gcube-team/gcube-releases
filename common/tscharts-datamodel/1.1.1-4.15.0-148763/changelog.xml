@@ -1,0 +1,19 @@
+<ReleaseNotes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="xsd/changelog.xsd">
+	<Changeset component="org.gcube.common.tscharts-datamodel.1-1-1-1"
+		date="2019-11-12">
+		<Change>Fix build issue #8417</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.tscharts-datamodel.1-1-1"
+		date="2019-11-12">
+		<Change>Migration to Maven to build the project</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.tscharts-datamodel.1-1-0"
+		date="2011-03-23">
+		<Change>Added invert axes functionality</Change>
+	</Changeset>
+	<Changeset component="org.gcube.common.tscharts-datamodel.1-0-0"
+		date="2011-02-04">
+		<Change>First release</Change>
+	</Changeset>
+</ReleaseNotes>

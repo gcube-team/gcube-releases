@@ -1,0 +1,11 @@
+.divider {
+	width: 5px;
+	height: auto;
+	display: inline-block;
+}
+
+.buttons-alert-accept-or-leave {
+	font-weight: bold !important;
+	font-size: 18px;
+	color: #bf7900 !important;
+}

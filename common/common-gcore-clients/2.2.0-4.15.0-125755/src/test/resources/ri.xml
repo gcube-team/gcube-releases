@@ -1,0 +1,25 @@
+<Resource version="1.3.0">
+	<ID>575829a0-95f4-11e1-9a09-9eb8fdf43a40</ID>
+	<Type>RunningInstance</Type>
+	<Scopes>
+		<Scope>/gcube/devsec</Scope>
+		<Scope>/gcube</Scope>
+	</Scopes>
+	<Profile>
+		<Version>1.00.00</Version>
+		<GHN UniqueID="b9ca73f0-95f3-11e1-a793-be288ddac994" />
+		<Service UniqueID="5715a260-95f4-11e1-9a09-9eb8fdf43a40" />
+		<ServiceName>servicename</ServiceName>
+		<ServiceClass>serviceclass</ServiceClass>
+		<DeploymentData>
+			<ActivationTime value="2012-05-04T16:20:46+02:00" />
+			<Status>failed</Status>
+		</DeploymentData>
+		<AccessPoint>
+			<RunningInstanceInterfaces>
+				<Endpoint EntryName="name">http://acme.org/name</Endpoint>
+				<Endpoint EntryName="name2">http://acme.org/name2</Endpoint>
+			</RunningInstanceInterfaces>
+		</AccessPoint>
+	</Profile>
+</Resource>

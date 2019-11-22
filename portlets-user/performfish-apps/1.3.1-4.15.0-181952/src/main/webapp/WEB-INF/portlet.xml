@@ -1,0 +1,492 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	version="2.0">
+	<portlet>
+		<portlet-name>manage-company-users</portlet-name>
+		<display-name>Manage Company Users</display-name>
+		<portlet-class>org.gcube.portlets.user.performfish.ManageCompanyUsers</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/managecompanyusers/company_users.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Manage Company Regular Users</title>
+			<short-title>Manage Company Users</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>manage-company-admins</portlet-name>
+		<display-name>Manage Company Admins</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.performfish.ManageCompanyAdmins
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/managecompanyadmins/company_admins.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Manage Company Administrators</title>
+			<short-title>Manage Company Admins</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>company-repository</portlet-name>
+		<display-name>Company Farm Repository</display-name>
+		<portlet-class>org.gcube.portlets.user.performfish.CompanyFarmRepository</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/farmrepository/view_farm_repository.jsp</value>
+		</init-param>
+		<init-param>
+			<name>config-template</name>
+			<value>/html/farmrepository/config.jsp</value>
+		</init-param>
+		<init-param>
+			<name>add-process-action-success-action</name>
+			<value>false</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Company Farm Repository</title>
+			<short-title>Company Farm Repository</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>associate-users-to-company</portlet-name>
+		<display-name>Associate Users To Company</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.performfish.AssociateUsersToCompany</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/adduserstocompany/add_users_toCompany.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Associate Users To Company</title>
+			<short-title>Associate Users To Company</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>promote-administrators</portlet-name>
+		<display-name>Promote Company Administrators</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.performfish.PromoteCompanyAdministrators</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/adduserstocompany/promote_company_administrators.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Promote Company Administrators</title>
+			<short-title>Promote Company Administrators</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>empty-forms-documents-display</portlet-name>
+		<display-name>Empty Forms Documents Display</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.performfish.EmptyFormsDocumentsDisplay</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/emptyformsdocumentsdisplay/empty_forms_fileupload_display.jsp</value>
+		</init-param>
+		<init-param>
+			<name>config-template</name>
+			<value>/html/emptyformsdocumentsdisplay/empty_forms_config.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+			<portlet-mode>config</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Documents for initials submission with instructions and new
+				submissions</title>
+			<short-title>Empty Forms Documents Display</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>submitted-form-validation</portlet-name>
+		<display-name>Submitted form validation</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.performfish.SubmittedFormValidation</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/submittedformvalidation/validation.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Submitted Form Validation</title>
+			<short-title>Submitted Form Validation</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>portletSetupShowBorders</name>
+				<value>false</value>
+			</preference>
+		</portlet-preferences>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>manage-companies</portlet-name>
+		<display-name>Manage Companies</display-name>
+		<portlet-class>org.gcube.portlets.user.performfish.ManageCompanies</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/managecompanies/manage_companies.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Manage Companies</title>
+			<short-title>Manage Companies</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>add-new-company</portlet-name>
+		<display-name>Add New Company or Association</display-name>
+		<portlet-class>org.gcube.portlets.user.performfish.AddNewCompanyOrAssociation</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/addnewcompany_or_assoc/AddNewCompany.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Add New Company or Association</title>
+			<short-title>Add New Company</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>manage-farms</portlet-name>
+		<display-name>Manage Company Farms</display-name>
+		<portlet-class>org.gcube.portlets.user.performfish.ManageFarms</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/managefarms/managefarms_view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Manage Company Farms</title>
+			<short-title>Manage Farms</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>manage-farm-administratos</portlet-name>
+		<display-name>Manage Farm Administrators</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.performfish.ManageFarmAdministrators</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/managefarmadministratos/farm_admins.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Manage Farm Administrators</title>
+			<short-title>Manage Farm Administrators</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>promote-farm-administrators</portlet-name>
+		<display-name>Promote Farm Administrators</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.performfish.PromoteFarmAdministrators</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/adduserstocompany/promote_farm_administrators.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Promote Farm Administrators</title>
+			<short-title>Promote Farm Administrators</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>manage-farm-users</portlet-name>
+		<display-name>Manage Farm Users</display-name>
+		<portlet-class>org.gcube.portlets.user.performfish.ManageFarmUsers</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/managefarmusers/manage_farm_users_view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Manage Farm Users</title>
+			<short-title>Manage Farm Users</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>associate-users-to-farm</portlet-name>
+		<display-name>Associate Users To Farm</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.performfish.AssociateUsersToFarm</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/adduserstocompany/add_users_toFarm.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Associate Users To Farm</title>
+			<short-title>Associate Users To Farm</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>set-company-administrators-super-user</portlet-name>
+		<display-name>Set Company Administrators Super User</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.performfish.SetCompanyAdministratorsSuperUser</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/setcompanyadministratorssuperuser/set_company_admin.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Set Company Administrators Super User</title>
+			<short-title>Set Company Administrators Super User</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>set-farm-administrators</portlet-name>
+		<display-name>Set Farm Administrators</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.performfish.SetFarmAdministrators
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/setfarmadministrators/set_farm_admin.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Set Farm Administrators</title>
+			<short-title>Set Farm Administrators</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>company-private-repository</portlet-name>
+		<display-name>Company Private Repository</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.performfish.CompanyPrivateRepository
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/companyprivaterepository/company_private_repository.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Company Private Repository</title>
+			<short-title>Company Private Repository</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>manage-associations</portlet-name>
+		<display-name>Manage Associations</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.performfish.ManageAssociations
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/manageassociations/manage_associations_view.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Manage Associations</title>
+			<short-title>Manage Associations</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>associate-companies-to-association</portlet-name>
+		<display-name>Associate Companies To Association</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.performfish.AssociateCompaniesToAssociation
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>
+				/html/associatecompaniestoassociation/companies_to_ass_view.jsp
+			</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Associate Companies To Association</title>
+			<short-title>
+				Associate Companies To Association
+			</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+	<portlet>
+		<portlet-name>association-dashboard</portlet-name>
+		<display-name>Association Dashboard</display-name>
+		<portlet-class>
+			org.gcube.portlets.user.performfish.AssociationDashboard
+		</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/associationdashboard/association_dashboard.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<portlet-info>
+			<title>Association Dashboard</title>
+			<short-title>Association Dashboard</short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+	</portlet>
+</portlet-app>

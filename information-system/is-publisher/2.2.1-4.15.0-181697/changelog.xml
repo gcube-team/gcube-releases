@@ -1,0 +1,67 @@
+
+<ReleaseNotes>
+    <Changeset component="org.gcube.information-system.is-publisher.2-2-0" date="2012-05-04">
+		<Change>Solves a bug in the GcubeBulkPublisher (ArrayOutOfBoundException)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.2-2-0" date="2012-05-04">
+		<Change>Full Mavenization</Change>
+		<Change>Update resources now calls the Update operation on the IS-Registry</Change>
+		<Change>Operations in VRE scope are managed in that scope (previously the parent VO was used)</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.2-1-0" date="2012-02-15">
+		<Change>Mapping between RuntimeResource to the implementing class added in the internal state</Change>
+		<Change>Optional maven-based build</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.2-0-4" date="2011-08-25">
+		<Change>Adapting the interactions with the IS-Registry to the new security framework</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.2-0-3" date="2011-07-01">
+		<Change>Adding bulk methods to ISGenericPublisher implementations</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.2-0-2" date="2011-05-20">
+		<Change>Another fix on deletion of WSResources with the same ID: they were not removed from the queue and a subsequent re-registration failed</Change>
+		<Change>Fix for concurrent modification exception when managing the registration queue</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.2-0-1" date="2011-03-25">
+		<Change>XML Documents are now passed as any objs in the MessageElements</Change>
+		<Change>Fixing the handling of WSResources with the same ID and future tasks deletion</Change>
+		<Change>Managing RPs defined in different Namespaces in the same RP document</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.2-0-0" date="2011-02-07">
+		<Change>New publication pattern through WS-DAIX</Change>
+		<Change>Push mode</Change>	
+		<Change>Bulk publications</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.1-5-0" date="2010-07-16">
+		<Change>Single point of thread execution</Change>
+		<Change>Handlers for synch and asynch publications</Change>
+		<Change>Introducing configuration property file</Change>
+		<Change>Introducing ISPublisher context</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.1-4-1" date="2010-06-30">
+		<Change>Aggregator Content's type mappings registered per thread</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.1-4-0" date="2009-10-30">
+		<Change>New synchronous publications</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.1-3-0" date="2009-09-23">
+		<Change>Minor maintenance release</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.1-2-1" date="2009-09-01">
+		<Change>Fixings on RP Document unregistration</Change>
+		<Change>Some internal refactoring</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.1-2-0" date="2009-04-28">
+		<Change>New Service Map structure</Change>
+		<Change>Support for distributed and replicated ISRegistry instances and IS-sinks</Change>
+		<Change>Cleanup of old source code</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.1-1-0" date="2008-12-12">
+		<Change>Local event-based mechanism for GHN root nodes added</Change>
+		<Change>Improved logging</Change>
+		<Change>Loop of registration attempts</Change>
+	</Changeset>
+	<Changeset component="org.gcube.information-system.is-publisher.1-0-0" date="2008-06-26">
+		<Change>First release</Change>		
+	</Changeset>
+</ReleaseNotes>

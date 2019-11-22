@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<ReleaseNotes>
+	<Changeset component="org.gcube.resource-management.gcube-model.1-0-0" date="2019-11-13">
+		<Change>First Release. The component is a renaming of org.gcube.information-system.gcube-resources which should be 2.0.0</Change>	
+	</Changeset>
+</ReleaseNotes>

@@ -1,0 +1,138 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.gcube.tools</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>org.gcube.resourcemanagement</groupId>
+	<artifactId>whn-manager</artifactId>
+	<version>2.0.0-4.15.0-132431</version>
+	<packaging>war</packaging>
+	<properties>
+		<webappDirectory>${project.basedir}/src/main/webapp/WEB-INF</webappDirectory>
+		<distroDirectory>${project.basedir}/distro</distroDirectory>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.gcube.distribution</groupId>
+				<artifactId>maven-smartgears-bom</artifactId>
+				<version>2.0.2-4.15.0-176582</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.core</groupId>
+			<artifactId>common-smartgears</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency> 
+			<groupId>org.gcube.core</groupId> 
+			<artifactId>common-smartgears-app</artifactId> 
+		</dependency> 
+	
+		<dependency>
+			<groupId>com.sun.xml.ws</groupId>
+			<artifactId>jaxws-rt</artifactId>
+			<version>2.1.7</version>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.jboss.weld.servlet</groupId> -->
+		<!-- <artifactId>weld-servlet</artifactId> -->
+		<!-- <version>1.1.9.Final</version> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet-core</artifactId>
+			<version>2.0.4.Final</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>jboss-el-api_3.0_spec</artifactId>
+					<groupId>org.jboss.spec.javax.el</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<artifactId>jboss-el-api_3.0_spec</artifactId>
+			<groupId>org.jboss.spec.javax.el</groupId>
+			<version>1.0.0.Alpha1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.weld</groupId>
+			<artifactId>weld-core</artifactId>
+			<version>2.0.4.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.gcube.resourcemanagement</groupId>
+			<artifactId>whnmanager-api</artifactId>
+			<version>2.0.0-4.15.0-132447</version>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- interpolates profiles and copies from distribution location to configuration 
+				location, where it is need for embedding into stub artifact, gar generation, 
+				and service archive. -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>copy-profile</id>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<phase>process-resources</phase>
+						<configuration>
+							<outputDirectory>${webappDirectory}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${distroDirectory}</directory>
+									<includes>
+										<include>gcube-app.xml</include>
+									</includes>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<!-- <packagingExcludes>WEB-INF/lib/jaxws-rt-2.1.7.jar,WEB-INF/lib/jaxws-api-2.1.jar,WEB-INF/lib/jaxb-impl-2.1.11.jar,WEB-INF/lib/jaxb-api-2.1.jar</packagingExcludes> -->
+					<warName>whn-manager</warName>
+					<webXml>src\main\webapp\WEB-INF\web.xml</webXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

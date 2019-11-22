@@ -1,0 +1,10 @@
+<ReleaseNotes>
+	<Changeset component="org.gcube.socialnetworking.social-data-indexing-common.1-0-1"
+		date="2017-02-01">
+		<Change>Minor fixes</Change>
+	</Changeset>
+	<Changeset component="org.gcube.socialnetworking.social-data-indexing-common.1-0-0"
+		date="2016-02-29">
+		<Change>First Release</Change>
+	</Changeset>
+</ReleaseNotes>
